@@ -30,7 +30,6 @@
 #include <google/protobuf/repeated_field.h> // IWYU pragma: export
 #include <google/protobuf/unknown_field_set.h>
 #include "errorpb.pb.h"
-#include "gogoproto/gogo.pb.h"
 #include "kvrpcpb.pb.h"
 // @@protoc_insertion_point(includes)
 
@@ -396,7 +395,6 @@ public:
 
     // accessors -------------------------------------------------------
 
-    // bytes data = 1 [(.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/pingcap/tipb/sharedbytes.SharedBytes"];
     void                  clear_data();
     static const int      kDataFieldNumber = 1;
     const ::std::string & data() const;
@@ -775,7 +773,6 @@ inline const ::google::protobuf::RepeatedPtrField<::coprocessor::KeyRange> & Req
 
 // Response
 
-// bytes data = 1 [(.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/pingcap/tipb/sharedbytes.SharedBytes"];
 inline void Response::clear_data()
 {
     data_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());

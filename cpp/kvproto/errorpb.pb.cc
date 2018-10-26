@@ -405,7 +405,6 @@ void AddDescriptorsImpl()
     InitDefaults();
     static const char descriptor[] GOOGLE_PROTOBUF_ATTRIBUTE_SECTION_VARIABLE(protodesc_cold)
         = {"\n\rerrorpb.proto\022\007errorpb\032\014metapb.proto\032\024"
-           "gogoproto/gogo.proto\"<\n\tNotLeader\022\021\n\treg"
            "ion_id\030\001 \001(\004\022\034\n\006leader\030\002 \001(\0132\014.metapb.Pe"
            "er\"\017\n\rStoreNotMatch\"#\n\016RegionNotFound\022\021\n"
            "\tregion_id\030\001 \001(\004\"T\n\016KeyNotInRegion\022\013\n\003ke"
@@ -430,7 +429,6 @@ void AddDescriptorsImpl()
     ::google::protobuf::DescriptorPool::InternalAddGeneratedFile(descriptor, 901);
     ::google::protobuf::MessageFactory::InternalRegisterGeneratedFile("errorpb.proto", &protobuf_RegisterTypes);
     ::protobuf_metapb_2eproto::AddDescriptors();
-    ::protobuf_gogoproto_2fgogo_2eproto::AddDescriptors();
 }
 
 void AddDescriptors()

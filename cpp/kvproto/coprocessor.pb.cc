@@ -182,7 +182,6 @@ void AddDescriptorsImpl()
     InitDefaults();
     static const char descriptor[] GOOGLE_PROTOBUF_ATTRIBUTE_SECTION_VARIABLE(protodesc_cold)
         = {"\n\021coprocessor.proto\022\013coprocessor\032\rerrorp"
-           "b.proto\032\rkvrpcpb.proto\032\024gogoproto/gogo.p"
            "roto\"&\n\010KeyRange\022\r\n\005start\030\001 \001(\014\022\013\n\003end\030\002"
            " \001(\014\"m\n\007Request\022!\n\007context\030\001 \001(\0132\020.kvrpc"
            "pb.Context\022\n\n\002tp\030\002 \001(\003\022\014\n\004data\030\003 \001(\014\022%\n\006"
@@ -199,7 +198,6 @@ void AddDescriptorsImpl()
     ::google::protobuf::MessageFactory::InternalRegisterGeneratedFile("coprocessor.proto", &protobuf_RegisterTypes);
     ::protobuf_errorpb_2eproto::AddDescriptors();
     ::protobuf_kvrpcpb_2eproto::AddDescriptors();
-    ::protobuf_gogoproto_2fgogo_2eproto::AddDescriptors();
 }
 
 void AddDescriptors()
@@ -1180,7 +1178,6 @@ bool Response::MergePartialFromCodedStream(::google::protobuf::io::CodedInputStr
             goto handle_unusual;
         switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag))
         {
-        // bytes data = 1 [(.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/pingcap/tipb/sharedbytes.SharedBytes"];
         case 1:
         {
             if (static_cast<::google::protobuf::uint8>(tag) == static_cast<::google::protobuf::uint8>(10u /* 10 & 0xFF */))
@@ -1295,7 +1292,6 @@ void Response::SerializeWithCachedSizes(::google::protobuf::io::CodedOutputStrea
     ::google::protobuf::uint32 cached_has_bits = 0;
     (void)cached_has_bits;
 
-    // bytes data = 1 [(.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/pingcap/tipb/sharedbytes.SharedBytes"];
     if (this->data().size() > 0)
     {
         ::google::protobuf::internal::WireFormatLite::WriteBytesMaybeAliased(1, this->data(), output);
@@ -1352,7 +1348,6 @@ void Response::SerializeWithCachedSizes(::google::protobuf::io::CodedOutputStrea
     ::google::protobuf::uint32 cached_has_bits = 0;
     (void)cached_has_bits;
 
-    // bytes data = 1 [(.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/pingcap/tipb/sharedbytes.SharedBytes"];
     if (this->data().size() > 0)
     {
         target = ::google::protobuf::internal::WireFormatLite::WriteBytesToArray(1, this->data(), target);
@@ -1414,7 +1409,6 @@ size_t Response::ByteSizeLong() const
             (::google::protobuf::internal::GetProto3PreserveUnknownsDefault() ? _internal_metadata_.unknown_fields()
                                                                               : _internal_metadata_.default_instance()));
     }
-    // bytes data = 1 [(.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/pingcap/tipb/sharedbytes.SharedBytes"];
     if (this->data().size() > 0)
     {
         total_size += 1 + ::google::protobuf::internal::WireFormatLite::BytesSize(this->data());

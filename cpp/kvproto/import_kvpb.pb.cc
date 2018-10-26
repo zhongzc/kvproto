@@ -764,7 +764,6 @@ void AddDescriptorsImpl()
     InitDefaults();
     static const char descriptor[] GOOGLE_PROTOBUF_ATTRIBUTE_SECTION_VARIABLE(protodesc_cold)
         = {"\n\021import_kvpb.proto\022\013import_kvpb\032\022import"
-           "_sstpb.proto\032\024gogoproto/gogo.proto\"V\n\021Sw"
            "itchModeRequest\022\017\n\007pd_addr\030\001 \001(\t\0220\n\007requ"
            "est\030\002 \001(\0132\037.import_sstpb.SwitchModeReque"
            "st\"\024\n\022SwitchModeResponse\"!\n\021OpenEngineRe"
@@ -810,7 +809,6 @@ void AddDescriptorsImpl()
     ::google::protobuf::DescriptorPool::InternalAddGeneratedFile(descriptor, 1722);
     ::google::protobuf::MessageFactory::InternalRegisterGeneratedFile("import_kvpb.proto", &protobuf_RegisterTypes);
     ::protobuf_import_5fsstpb_2eproto::AddDescriptors();
-    ::protobuf_gogoproto_2fgogo_2eproto::AddDescriptors();
 }
 
 void AddDescriptors()

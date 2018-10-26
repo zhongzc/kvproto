@@ -2244,7 +2244,6 @@ void AddDescriptorsImpl()
     InitDefaults();
     static const char descriptor[] GOOGLE_PROTOBUF_ATTRIBUTE_SECTION_VARIABLE(protodesc_cold)
         = {"\n\npdpb.proto\022\004pdpb\032\014metapb.proto\032\reraftp"
-           "b.proto\032\024gogoproto/gogo.proto\"#\n\rRequest"
            "Header\022\022\n\ncluster_id\030\001 \001(\004\"@\n\016ResponseHe"
            "ader\022\022\n\ncluster_id\030\001 \001(\004\022\032\n\005error\030\002 \001(\0132"
            "\013.pdpb.Error\"7\n\005Error\022\035\n\004type\030\001 \001(\0162\017.pd"
@@ -2429,7 +2428,6 @@ void AddDescriptorsImpl()
     ::google::protobuf::MessageFactory::InternalRegisterGeneratedFile("pdpb.proto", &protobuf_RegisterTypes);
     ::protobuf_metapb_2eproto::AddDescriptors();
     ::protobuf_eraftpb_2eproto::AddDescriptors();
-    ::protobuf_gogoproto_2fgogo_2eproto::AddDescriptors();
 }
 
 void AddDescriptors()

@@ -445,7 +445,6 @@ void AddDescriptorsImpl()
     static const char descriptor[] GOOGLE_PROTOBUF_ATTRIBUTE_SECTION_VARIABLE(protodesc_cold)
         = {"\n\022import_sstpb.proto\022\014import_sstpb\032\014meta"
            "pb.proto\032\rerrorpb.proto\032\rkvrpcpb.proto\032\024"
-           "gogoproto/gogo.proto\";\n\021SwitchModeReques"
            "t\022&\n\004mode\030\001 \001(\0162\030.import_sstpb.SwitchMod"
            "e\"\024\n\022SwitchModeResponse\"#\n\005Range\022\r\n\005star"
            "t\030\001 \001(\014\022\013\n\003end\030\002 \001(\014\"\251\001\n\007SSTMeta\022\014\n\004uuid"
@@ -477,7 +476,6 @@ void AddDescriptorsImpl()
     ::protobuf_metapb_2eproto::AddDescriptors();
     ::protobuf_errorpb_2eproto::AddDescriptors();
     ::protobuf_kvrpcpb_2eproto::AddDescriptors();
-    ::protobuf_gogoproto_2fgogo_2eproto::AddDescriptors();
 }
 
 void AddDescriptors()

@@ -2656,7 +2656,6 @@ void AddDescriptorsImpl()
     InitDefaults();
     static const char descriptor[] GOOGLE_PROTOBUF_ATTRIBUTE_SECTION_VARIABLE(protodesc_cold)
         = {"\n\rkvrpcpb.proto\022\007kvrpcpb\032\014metapb.proto\032\r"
-           "errorpb.proto\032\024gogoproto/gogo.proto\"U\n\010L"
            "ockInfo\022\024\n\014primary_lock\030\001 \001(\014\022\024\n\014lock_ve"
            "rsion\030\002 \001(\004\022\013\n\003key\030\003 \001(\014\022\020\n\010lock_ttl\030\004 \001"
            "(\004\"y\n\010KeyError\022!\n\006locked\030\001 \001(\0132\021.kvrpcpb"
@@ -2823,7 +2822,6 @@ void AddDescriptorsImpl()
     ::google::protobuf::MessageFactory::InternalRegisterGeneratedFile("kvrpcpb.proto", &protobuf_RegisterTypes);
     ::protobuf_metapb_2eproto::AddDescriptors();
     ::protobuf_errorpb_2eproto::AddDescriptors();
-    ::protobuf_gogoproto_2fgogo_2eproto::AddDescriptors();
 }
 
 void AddDescriptors()

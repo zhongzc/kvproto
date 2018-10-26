@@ -112,7 +112,6 @@ void AddDescriptorsImpl()
     ::protobuf_coprocessor_2eproto::AddDescriptors();
     ::protobuf_kvrpcpb_2eproto::AddDescriptors();
     ::protobuf_raft_5fserverpb_2eproto::AddDescriptors();
-    ::protobuf_gogoproto_2fgogo_2eproto::AddDescriptors();
 }
 
 void AddDescriptors()

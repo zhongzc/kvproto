@@ -298,8 +298,7 @@ void AddDescriptorsImpl()
 {
     InitDefaults();
     static const char descriptor[] GOOGLE_PROTOBUF_ATTRIBUTE_SECTION_VARIABLE(protodesc_cold)
-        = {"\n\014metapb.proto\022\006metapb\032\024gogoproto/gogo.p"
-           "roto\"-\n\007Cluster\022\n\n\002id\030\001 \001(\004\022\026\n\016max_peer_"
+        = {"roto\"-\n\007Cluster\022\n\n\002id\030\001 \001(\004\022\026\n\016max_peer_"
            "count\030\002 \001(\r\"(\n\nStoreLabel\022\013\n\003key\030\001 \001(\t\022\r"
            "\n\005value\030\002 \001(\t\"|\n\005Store\022\n\n\002id\030\001 \001(\004\022\017\n\007ad"
            "dress\030\002 \001(\t\022!\n\005state\030\003 \001(\0162\022.metapb.Stor"
@@ -315,7 +314,6 @@ void AddDescriptorsImpl()
            "cap.tikv.kvproto\310\342\036\001\340\342\036\001\320\342\036\001b\006proto3"};
     ::google::protobuf::DescriptorPool::InternalAddGeneratedFile(descriptor, 596);
     ::google::protobuf::MessageFactory::InternalRegisterGeneratedFile("metapb.proto", &protobuf_RegisterTypes);
-    ::protobuf_gogoproto_2fgogo_2eproto::AddDescriptors();
 }
 
 void AddDescriptors()

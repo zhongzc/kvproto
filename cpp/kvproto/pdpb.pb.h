@@ -31,7 +31,6 @@
 #include <google/protobuf/repeated_field.h> // IWYU pragma: export
 #include <google/protobuf/unknown_field_set.h>
 #include "eraftpb.pb.h"
-#include "gogoproto/gogo.pb.h"
 #include "metapb.pb.h"
 // @@protoc_insertion_point(includes)
 
