@@ -199,30 +199,59 @@ public:
 
     // accessors -------------------------------------------------------
 
+    // bytes context = 6;
+    void                  clear_context();
+    static const int      kContextFieldNumber = 6;
+    const ::std::string & context() const;
+    void                  set_context(const ::std::string & value);
+#if LANG_CXX11
+    void set_context(::std::string && value);
+#endif
+    void            set_context(const char * value);
+    void            set_context(const void * value, size_t size);
+    ::std::string * mutable_context();
+    ::std::string * release_context();
+    void            set_allocated_context(::std::string * context);
+
     // uint64 region_id = 1;
     void                       clear_region_id();
     static const int           kRegionIdFieldNumber = 1;
     ::google::protobuf::uint64 region_id() const;
     void                       set_region_id(::google::protobuf::uint64 value);
 
-    // uint64 index = 3;
+    // uint64 index = 2;
     void                       clear_index();
-    static const int           kIndexFieldNumber = 3;
+    static const int           kIndexFieldNumber = 2;
     ::google::protobuf::uint64 index() const;
     void                       set_index(::google::protobuf::uint64 value);
 
-    // bool sync_log = 2;
+    // uint64 term = 3;
+    void                       clear_term();
+    static const int           kTermFieldNumber = 3;
+    ::google::protobuf::uint64 term() const;
+    void                       set_term(::google::protobuf::uint64 value);
+
+    // bool sync_log = 4;
     void             clear_sync_log();
-    static const int kSyncLogFieldNumber = 2;
+    static const int kSyncLogFieldNumber = 4;
     bool             sync_log() const;
     void             set_sync_log(bool value);
+
+    // bool destroy = 5;
+    void             clear_destroy();
+    static const int kDestroyFieldNumber = 5;
+    bool             destroy() const;
+    void             set_destroy(bool value);
 
     // @@protoc_insertion_point(class_scope:enginepb.CommandRequestHeader)
 private:
     ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
+    ::google::protobuf::internal::ArenaStringPtr            context_;
     ::google::protobuf::uint64                              region_id_;
     ::google::protobuf::uint64                              index_;
+    ::google::protobuf::uint64                              term_;
     bool                                                    sync_log_;
+    bool                                                    destroy_;
     mutable int                                             _cached_size_;
     friend struct ::protobuf_enginepb_2eproto::TableStruct;
     friend void ::protobuf_enginepb_2eproto::InitDefaultsCommandRequestHeaderImpl();
@@ -650,11 +679,18 @@ public:
     ::raft_serverpb::RaftApplyState *       mutable_apply_state();
     void                                    set_allocated_apply_state(::raft_serverpb::RaftApplyState * apply_state);
 
+    // uint64 applied_term = 3;
+    void                       clear_applied_term();
+    static const int           kAppliedTermFieldNumber = 3;
+    ::google::protobuf::uint64 applied_term() const;
+    void                       set_applied_term(::google::protobuf::uint64 value);
+
     // @@protoc_insertion_point(class_scope:enginepb.CommandResponse)
 private:
     ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
     ::enginepb::CommandResponseHeader *                     header_;
     ::raft_serverpb::RaftApplyState *                       apply_state_;
+    ::google::protobuf::uint64                              applied_term_;
     mutable int                                             _cached_size_;
     friend struct ::protobuf_enginepb_2eproto::TableStruct;
     friend void ::protobuf_enginepb_2eproto::InitDefaultsCommandResponseImpl();
@@ -849,10 +885,19 @@ public:
     ::metapb::Region *       mutable_region();
     void                     set_allocated_region(::metapb::Region * region);
 
-    // .raft_serverpb.RaftApplyState apply_state = 2;
+    // .metapb.Peer peer = 2;
+    bool                   has_peer() const;
+    void                   clear_peer();
+    static const int       kPeerFieldNumber = 2;
+    const ::metapb::Peer & peer() const;
+    ::metapb::Peer *       release_peer();
+    ::metapb::Peer *       mutable_peer();
+    void                   set_allocated_peer(::metapb::Peer * peer);
+
+    // .raft_serverpb.RaftApplyState apply_state = 3;
     bool                                    has_apply_state() const;
     void                                    clear_apply_state();
-    static const int                        kApplyStateFieldNumber = 2;
+    static const int                        kApplyStateFieldNumber = 3;
     const ::raft_serverpb::RaftApplyState & apply_state() const;
     ::raft_serverpb::RaftApplyState *       release_apply_state();
     ::raft_serverpb::RaftApplyState *       mutable_apply_state();
@@ -862,6 +907,7 @@ public:
 private:
     ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
     ::metapb::Region *                                      region_;
+    ::metapb::Peer *                                        peer_;
     ::raft_serverpb::RaftApplyState *                       apply_state_;
     mutable int                                             _cached_size_;
     friend struct ::protobuf_enginepb_2eproto::TableStruct;
@@ -1233,7 +1279,41 @@ inline void CommandRequestHeader::set_region_id(::google::protobuf::uint64 value
     // @@protoc_insertion_point(field_set:enginepb.CommandRequestHeader.region_id)
 }
 
-// bool sync_log = 2;
+// uint64 index = 2;
+inline void CommandRequestHeader::clear_index()
+{
+    index_ = GOOGLE_ULONGLONG(0);
+}
+inline ::google::protobuf::uint64 CommandRequestHeader::index() const
+{
+    // @@protoc_insertion_point(field_get:enginepb.CommandRequestHeader.index)
+    return index_;
+}
+inline void CommandRequestHeader::set_index(::google::protobuf::uint64 value)
+{
+
+    index_ = value;
+    // @@protoc_insertion_point(field_set:enginepb.CommandRequestHeader.index)
+}
+
+// uint64 term = 3;
+inline void CommandRequestHeader::clear_term()
+{
+    term_ = GOOGLE_ULONGLONG(0);
+}
+inline ::google::protobuf::uint64 CommandRequestHeader::term() const
+{
+    // @@protoc_insertion_point(field_get:enginepb.CommandRequestHeader.term)
+    return term_;
+}
+inline void CommandRequestHeader::set_term(::google::protobuf::uint64 value)
+{
+
+    term_ = value;
+    // @@protoc_insertion_point(field_set:enginepb.CommandRequestHeader.term)
+}
+
+// bool sync_log = 4;
 inline void CommandRequestHeader::clear_sync_log()
 {
     sync_log_ = false;
@@ -1250,21 +1330,81 @@ inline void CommandRequestHeader::set_sync_log(bool value)
     // @@protoc_insertion_point(field_set:enginepb.CommandRequestHeader.sync_log)
 }
 
-// uint64 index = 3;
-inline void CommandRequestHeader::clear_index()
+// bool destroy = 5;
+inline void CommandRequestHeader::clear_destroy()
 {
-    index_ = GOOGLE_ULONGLONG(0);
+    destroy_ = false;
 }
-inline ::google::protobuf::uint64 CommandRequestHeader::index() const
+inline bool CommandRequestHeader::destroy() const
 {
-    // @@protoc_insertion_point(field_get:enginepb.CommandRequestHeader.index)
-    return index_;
+    // @@protoc_insertion_point(field_get:enginepb.CommandRequestHeader.destroy)
+    return destroy_;
 }
-inline void CommandRequestHeader::set_index(::google::protobuf::uint64 value)
+inline void CommandRequestHeader::set_destroy(bool value)
 {
 
-    index_ = value;
-    // @@protoc_insertion_point(field_set:enginepb.CommandRequestHeader.index)
+    destroy_ = value;
+    // @@protoc_insertion_point(field_set:enginepb.CommandRequestHeader.destroy)
+}
+
+// bytes context = 6;
+inline void CommandRequestHeader::clear_context()
+{
+    context_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline const ::std::string & CommandRequestHeader::context() const
+{
+    // @@protoc_insertion_point(field_get:enginepb.CommandRequestHeader.context)
+    return context_.GetNoArena();
+}
+inline void CommandRequestHeader::set_context(const ::std::string & value)
+{
+
+    context_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
+    // @@protoc_insertion_point(field_set:enginepb.CommandRequestHeader.context)
+}
+#if LANG_CXX11
+inline void CommandRequestHeader::set_context(::std::string && value)
+{
+
+    context_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
+    // @@protoc_insertion_point(field_set_rvalue:enginepb.CommandRequestHeader.context)
+}
+#endif
+inline void CommandRequestHeader::set_context(const char * value)
+{
+    GOOGLE_DCHECK(value != NULL);
+
+    context_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
+    // @@protoc_insertion_point(field_set_char:enginepb.CommandRequestHeader.context)
+}
+inline void CommandRequestHeader::set_context(const void * value, size_t size)
+{
+
+    context_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+                        ::std::string(reinterpret_cast<const char *>(value), size));
+    // @@protoc_insertion_point(field_set_pointer:enginepb.CommandRequestHeader.context)
+}
+inline ::std::string * CommandRequestHeader::mutable_context()
+{
+
+    // @@protoc_insertion_point(field_mutable:enginepb.CommandRequestHeader.context)
+    return context_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline ::std::string * CommandRequestHeader::release_context()
+{
+    // @@protoc_insertion_point(field_release:enginepb.CommandRequestHeader.context)
+
+    return context_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline void CommandRequestHeader::set_allocated_context(::std::string * context)
+{
+    if (context != NULL) {}
+    else
+    {
+    }
+    context_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), context);
+    // @@protoc_insertion_point(field_set_allocated:enginepb.CommandRequestHeader.context)
 }
 
 // -------------------------------------------------------------------
@@ -1639,6 +1779,23 @@ inline void CommandResponse::set_allocated_apply_state(::raft_serverpb::RaftAppl
     // @@protoc_insertion_point(field_set_allocated:enginepb.CommandResponse.apply_state)
 }
 
+// uint64 applied_term = 3;
+inline void CommandResponse::clear_applied_term()
+{
+    applied_term_ = GOOGLE_ULONGLONG(0);
+}
+inline ::google::protobuf::uint64 CommandResponse::applied_term() const
+{
+    // @@protoc_insertion_point(field_get:enginepb.CommandResponse.applied_term)
+    return applied_term_;
+}
+inline void CommandResponse::set_applied_term(::google::protobuf::uint64 value)
+{
+
+    applied_term_ = value;
+    // @@protoc_insertion_point(field_set:enginepb.CommandResponse.applied_term)
+}
+
 // -------------------------------------------------------------------
 
 // CommandResponseBatch
@@ -1733,7 +1890,58 @@ inline void SnapshotState::set_allocated_region(::metapb::Region * region)
     // @@protoc_insertion_point(field_set_allocated:enginepb.SnapshotState.region)
 }
 
-// .raft_serverpb.RaftApplyState apply_state = 2;
+// .metapb.Peer peer = 2;
+inline bool SnapshotState::has_peer() const
+{
+    return this != internal_default_instance() && peer_ != NULL;
+}
+inline const ::metapb::Peer & SnapshotState::peer() const
+{
+    const ::metapb::Peer * p = peer_;
+    // @@protoc_insertion_point(field_get:enginepb.SnapshotState.peer)
+    return p != NULL ? *p : *reinterpret_cast<const ::metapb::Peer *>(&::metapb::_Peer_default_instance_);
+}
+inline ::metapb::Peer * SnapshotState::release_peer()
+{
+    // @@protoc_insertion_point(field_release:enginepb.SnapshotState.peer)
+
+    ::metapb::Peer * temp = peer_;
+    peer_                 = NULL;
+    return temp;
+}
+inline ::metapb::Peer * SnapshotState::mutable_peer()
+{
+
+    if (peer_ == NULL)
+    {
+        peer_ = new ::metapb::Peer;
+    }
+    // @@protoc_insertion_point(field_mutable:enginepb.SnapshotState.peer)
+    return peer_;
+}
+inline void SnapshotState::set_allocated_peer(::metapb::Peer * peer)
+{
+    ::google::protobuf::Arena * message_arena = GetArenaNoVirtual();
+    if (message_arena == NULL)
+    {
+        delete reinterpret_cast<::google::protobuf::MessageLite *>(peer_);
+    }
+    if (peer)
+    {
+        ::google::protobuf::Arena * submessage_arena = NULL;
+        if (message_arena != submessage_arena)
+        {
+            peer = ::google::protobuf::internal::GetOwnedMessage(message_arena, peer, submessage_arena);
+        }
+    }
+    else
+    {
+    }
+    peer_ = peer;
+    // @@protoc_insertion_point(field_set_allocated:enginepb.SnapshotState.peer)
+}
+
+// .raft_serverpb.RaftApplyState apply_state = 3;
 inline bool SnapshotState::has_apply_state() const
 {
     return this != internal_default_instance() && apply_state_ != NULL;
