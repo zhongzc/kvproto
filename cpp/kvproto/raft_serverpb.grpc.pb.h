@@ -16,18 +16,16 @@
 #include <grpc++/impl/codegen/stub_options.h>
 #include <grpc++/impl/codegen/sync_stream.h>
 
-namespace grpc
-{
+namespace grpc {
 class CompletionQueue;
 class Channel;
 class ServerCompletionQueue;
 class ServerContext;
-} // namespace grpc
+}  // namespace grpc
 
-namespace raft_serverpb
-{
+namespace raft_serverpb {
 
-} // namespace raft_serverpb
+}  // namespace raft_serverpb
 
 
-#endif // GRPC_raft_5fserverpb_2eproto__INCLUDED
+#endif  // GRPC_raft_5fserverpb_2eproto__INCLUDED

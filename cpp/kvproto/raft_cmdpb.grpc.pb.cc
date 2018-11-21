@@ -2,8 +2,8 @@
 // If you make any local change, they will be lost.
 // source: raft_cmdpb.proto
 
-#include "raft_cmdpb.grpc.pb.h"
 #include "raft_cmdpb.pb.h"
+#include "raft_cmdpb.grpc.pb.h"
 
 #include <grpc++/impl/codegen/async_stream.h>
 #include <grpc++/impl/codegen/async_unary_call.h>
@@ -13,7 +13,7 @@
 #include <grpc++/impl/codegen/rpc_service_method.h>
 #include <grpc++/impl/codegen/service_type.h>
 #include <grpc++/impl/codegen/sync_stream.h>
-namespace raft_cmdpb
-{
+namespace raft_cmdpb {
 
-} // namespace raft_cmdpb
+}  // namespace raft_cmdpb
+

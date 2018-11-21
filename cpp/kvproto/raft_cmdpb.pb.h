@@ -19,180 +19,176 @@
 #error regenerate this file with a newer version of protoc.
 #endif
 
+#include <google/protobuf/io/coded_stream.h>
 #include <google/protobuf/arena.h>
 #include <google/protobuf/arenastring.h>
-#include <google/protobuf/extension_set.h> // IWYU pragma: export
-#include <google/protobuf/generated_enum_reflection.h>
 #include <google/protobuf/generated_message_table_driven.h>
 #include <google/protobuf/generated_message_util.h>
-#include <google/protobuf/io/coded_stream.h>
-#include <google/protobuf/message.h>
 #include <google/protobuf/metadata.h>
-#include <google/protobuf/repeated_field.h> // IWYU pragma: export
+#include <google/protobuf/message.h>
+#include <google/protobuf/repeated_field.h>  // IWYU pragma: export
+#include <google/protobuf/extension_set.h>  // IWYU pragma: export
+#include <google/protobuf/generated_enum_reflection.h>
 #include <google/protobuf/unknown_field_set.h>
-#include "eraftpb.pb.h"
-#include "errorpb.pb.h"
-#include "import_sstpb.pb.h"
 #include "metapb.pb.h"
+#include "errorpb.pb.h"
+#include "eraftpb.pb.h"
+#include "import_sstpb.pb.h"
 // @@protoc_insertion_point(includes)
 
-namespace protobuf_raft_5fcmdpb_2eproto
-{
+namespace protobuf_raft_5fcmdpb_2eproto {
 // Internal implementation detail -- do not use these members.
-struct TableStruct
-{
-    static const ::google::protobuf::internal::ParseTableField          entries[];
-    static const ::google::protobuf::internal::AuxillaryParseTableField aux[];
-    static const ::google::protobuf::internal::ParseTable               schema[46];
-    static const ::google::protobuf::internal::FieldMetadata            field_metadata[];
-    static const ::google::protobuf::internal::SerializationTable       serialization_table[];
-    static const ::google::protobuf::uint32                             offsets[];
+struct TableStruct {
+  static const ::google::protobuf::internal::ParseTableField entries[];
+  static const ::google::protobuf::internal::AuxillaryParseTableField aux[];
+  static const ::google::protobuf::internal::ParseTable schema[46];
+  static const ::google::protobuf::internal::FieldMetadata field_metadata[];
+  static const ::google::protobuf::internal::SerializationTable serialization_table[];
+  static const ::google::protobuf::uint32 offsets[];
 };
-void        AddDescriptors();
-void        InitDefaultsGetRequestImpl();
-void        InitDefaultsGetRequest();
-void        InitDefaultsGetResponseImpl();
-void        InitDefaultsGetResponse();
-void        InitDefaultsPutRequestImpl();
-void        InitDefaultsPutRequest();
-void        InitDefaultsPutResponseImpl();
-void        InitDefaultsPutResponse();
-void        InitDefaultsDeleteRequestImpl();
-void        InitDefaultsDeleteRequest();
-void        InitDefaultsDeleteResponseImpl();
-void        InitDefaultsDeleteResponse();
-void        InitDefaultsDeleteRangeRequestImpl();
-void        InitDefaultsDeleteRangeRequest();
-void        InitDefaultsDeleteRangeResponseImpl();
-void        InitDefaultsDeleteRangeResponse();
-void        InitDefaultsSnapRequestImpl();
-void        InitDefaultsSnapRequest();
-void        InitDefaultsSnapResponseImpl();
-void        InitDefaultsSnapResponse();
-void        InitDefaultsPrewriteRequestImpl();
-void        InitDefaultsPrewriteRequest();
-void        InitDefaultsPrewriteResponseImpl();
-void        InitDefaultsPrewriteResponse();
-void        InitDefaultsIngestSSTRequestImpl();
-void        InitDefaultsIngestSSTRequest();
-void        InitDefaultsIngestSSTResponseImpl();
-void        InitDefaultsIngestSSTResponse();
-void        InitDefaultsRequestImpl();
-void        InitDefaultsRequest();
-void        InitDefaultsResponseImpl();
-void        InitDefaultsResponse();
-void        InitDefaultsChangePeerRequestImpl();
-void        InitDefaultsChangePeerRequest();
-void        InitDefaultsChangePeerResponseImpl();
-void        InitDefaultsChangePeerResponse();
-void        InitDefaultsSplitRequestImpl();
-void        InitDefaultsSplitRequest();
-void        InitDefaultsSplitResponseImpl();
-void        InitDefaultsSplitResponse();
-void        InitDefaultsBatchSplitRequestImpl();
-void        InitDefaultsBatchSplitRequest();
-void        InitDefaultsBatchSplitResponseImpl();
-void        InitDefaultsBatchSplitResponse();
-void        InitDefaultsCompactLogRequestImpl();
-void        InitDefaultsCompactLogRequest();
-void        InitDefaultsCompactLogResponseImpl();
-void        InitDefaultsCompactLogResponse();
-void        InitDefaultsTransferLeaderRequestImpl();
-void        InitDefaultsTransferLeaderRequest();
-void        InitDefaultsTransferLeaderResponseImpl();
-void        InitDefaultsTransferLeaderResponse();
-void        InitDefaultsVerifyHashRequestImpl();
-void        InitDefaultsVerifyHashRequest();
-void        InitDefaultsVerifyHashResponseImpl();
-void        InitDefaultsVerifyHashResponse();
-void        InitDefaultsPrepareMergeRequestImpl();
-void        InitDefaultsPrepareMergeRequest();
-void        InitDefaultsPrepareMergeResponseImpl();
-void        InitDefaultsPrepareMergeResponse();
-void        InitDefaultsCommitMergeRequestImpl();
-void        InitDefaultsCommitMergeRequest();
-void        InitDefaultsCommitMergeResponseImpl();
-void        InitDefaultsCommitMergeResponse();
-void        InitDefaultsRollbackMergeRequestImpl();
-void        InitDefaultsRollbackMergeRequest();
-void        InitDefaultsRollbackMergeResponseImpl();
-void        InitDefaultsRollbackMergeResponse();
-void        InitDefaultsAdminRequestImpl();
-void        InitDefaultsAdminRequest();
-void        InitDefaultsAdminResponseImpl();
-void        InitDefaultsAdminResponse();
-void        InitDefaultsRegionLeaderRequestImpl();
-void        InitDefaultsRegionLeaderRequest();
-void        InitDefaultsRegionLeaderResponseImpl();
-void        InitDefaultsRegionLeaderResponse();
-void        InitDefaultsRegionDetailRequestImpl();
-void        InitDefaultsRegionDetailRequest();
-void        InitDefaultsRegionDetailResponseImpl();
-void        InitDefaultsRegionDetailResponse();
-void        InitDefaultsStatusRequestImpl();
-void        InitDefaultsStatusRequest();
-void        InitDefaultsStatusResponseImpl();
-void        InitDefaultsStatusResponse();
-void        InitDefaultsRaftRequestHeaderImpl();
-void        InitDefaultsRaftRequestHeader();
-void        InitDefaultsRaftResponseHeaderImpl();
-void        InitDefaultsRaftResponseHeader();
-void        InitDefaultsRaftCmdRequestImpl();
-void        InitDefaultsRaftCmdRequest();
-void        InitDefaultsRaftCmdResponseImpl();
-void        InitDefaultsRaftCmdResponse();
-inline void InitDefaults()
-{
-    InitDefaultsGetRequest();
-    InitDefaultsGetResponse();
-    InitDefaultsPutRequest();
-    InitDefaultsPutResponse();
-    InitDefaultsDeleteRequest();
-    InitDefaultsDeleteResponse();
-    InitDefaultsDeleteRangeRequest();
-    InitDefaultsDeleteRangeResponse();
-    InitDefaultsSnapRequest();
-    InitDefaultsSnapResponse();
-    InitDefaultsPrewriteRequest();
-    InitDefaultsPrewriteResponse();
-    InitDefaultsIngestSSTRequest();
-    InitDefaultsIngestSSTResponse();
-    InitDefaultsRequest();
-    InitDefaultsResponse();
-    InitDefaultsChangePeerRequest();
-    InitDefaultsChangePeerResponse();
-    InitDefaultsSplitRequest();
-    InitDefaultsSplitResponse();
-    InitDefaultsBatchSplitRequest();
-    InitDefaultsBatchSplitResponse();
-    InitDefaultsCompactLogRequest();
-    InitDefaultsCompactLogResponse();
-    InitDefaultsTransferLeaderRequest();
-    InitDefaultsTransferLeaderResponse();
-    InitDefaultsVerifyHashRequest();
-    InitDefaultsVerifyHashResponse();
-    InitDefaultsPrepareMergeRequest();
-    InitDefaultsPrepareMergeResponse();
-    InitDefaultsCommitMergeRequest();
-    InitDefaultsCommitMergeResponse();
-    InitDefaultsRollbackMergeRequest();
-    InitDefaultsRollbackMergeResponse();
-    InitDefaultsAdminRequest();
-    InitDefaultsAdminResponse();
-    InitDefaultsRegionLeaderRequest();
-    InitDefaultsRegionLeaderResponse();
-    InitDefaultsRegionDetailRequest();
-    InitDefaultsRegionDetailResponse();
-    InitDefaultsStatusRequest();
-    InitDefaultsStatusResponse();
-    InitDefaultsRaftRequestHeader();
-    InitDefaultsRaftResponseHeader();
-    InitDefaultsRaftCmdRequest();
-    InitDefaultsRaftCmdResponse();
+void AddDescriptors();
+void InitDefaultsGetRequestImpl();
+void InitDefaultsGetRequest();
+void InitDefaultsGetResponseImpl();
+void InitDefaultsGetResponse();
+void InitDefaultsPutRequestImpl();
+void InitDefaultsPutRequest();
+void InitDefaultsPutResponseImpl();
+void InitDefaultsPutResponse();
+void InitDefaultsDeleteRequestImpl();
+void InitDefaultsDeleteRequest();
+void InitDefaultsDeleteResponseImpl();
+void InitDefaultsDeleteResponse();
+void InitDefaultsDeleteRangeRequestImpl();
+void InitDefaultsDeleteRangeRequest();
+void InitDefaultsDeleteRangeResponseImpl();
+void InitDefaultsDeleteRangeResponse();
+void InitDefaultsSnapRequestImpl();
+void InitDefaultsSnapRequest();
+void InitDefaultsSnapResponseImpl();
+void InitDefaultsSnapResponse();
+void InitDefaultsPrewriteRequestImpl();
+void InitDefaultsPrewriteRequest();
+void InitDefaultsPrewriteResponseImpl();
+void InitDefaultsPrewriteResponse();
+void InitDefaultsIngestSSTRequestImpl();
+void InitDefaultsIngestSSTRequest();
+void InitDefaultsIngestSSTResponseImpl();
+void InitDefaultsIngestSSTResponse();
+void InitDefaultsRequestImpl();
+void InitDefaultsRequest();
+void InitDefaultsResponseImpl();
+void InitDefaultsResponse();
+void InitDefaultsChangePeerRequestImpl();
+void InitDefaultsChangePeerRequest();
+void InitDefaultsChangePeerResponseImpl();
+void InitDefaultsChangePeerResponse();
+void InitDefaultsSplitRequestImpl();
+void InitDefaultsSplitRequest();
+void InitDefaultsSplitResponseImpl();
+void InitDefaultsSplitResponse();
+void InitDefaultsBatchSplitRequestImpl();
+void InitDefaultsBatchSplitRequest();
+void InitDefaultsBatchSplitResponseImpl();
+void InitDefaultsBatchSplitResponse();
+void InitDefaultsCompactLogRequestImpl();
+void InitDefaultsCompactLogRequest();
+void InitDefaultsCompactLogResponseImpl();
+void InitDefaultsCompactLogResponse();
+void InitDefaultsTransferLeaderRequestImpl();
+void InitDefaultsTransferLeaderRequest();
+void InitDefaultsTransferLeaderResponseImpl();
+void InitDefaultsTransferLeaderResponse();
+void InitDefaultsVerifyHashRequestImpl();
+void InitDefaultsVerifyHashRequest();
+void InitDefaultsVerifyHashResponseImpl();
+void InitDefaultsVerifyHashResponse();
+void InitDefaultsPrepareMergeRequestImpl();
+void InitDefaultsPrepareMergeRequest();
+void InitDefaultsPrepareMergeResponseImpl();
+void InitDefaultsPrepareMergeResponse();
+void InitDefaultsCommitMergeRequestImpl();
+void InitDefaultsCommitMergeRequest();
+void InitDefaultsCommitMergeResponseImpl();
+void InitDefaultsCommitMergeResponse();
+void InitDefaultsRollbackMergeRequestImpl();
+void InitDefaultsRollbackMergeRequest();
+void InitDefaultsRollbackMergeResponseImpl();
+void InitDefaultsRollbackMergeResponse();
+void InitDefaultsAdminRequestImpl();
+void InitDefaultsAdminRequest();
+void InitDefaultsAdminResponseImpl();
+void InitDefaultsAdminResponse();
+void InitDefaultsRegionLeaderRequestImpl();
+void InitDefaultsRegionLeaderRequest();
+void InitDefaultsRegionLeaderResponseImpl();
+void InitDefaultsRegionLeaderResponse();
+void InitDefaultsRegionDetailRequestImpl();
+void InitDefaultsRegionDetailRequest();
+void InitDefaultsRegionDetailResponseImpl();
+void InitDefaultsRegionDetailResponse();
+void InitDefaultsStatusRequestImpl();
+void InitDefaultsStatusRequest();
+void InitDefaultsStatusResponseImpl();
+void InitDefaultsStatusResponse();
+void InitDefaultsRaftRequestHeaderImpl();
+void InitDefaultsRaftRequestHeader();
+void InitDefaultsRaftResponseHeaderImpl();
+void InitDefaultsRaftResponseHeader();
+void InitDefaultsRaftCmdRequestImpl();
+void InitDefaultsRaftCmdRequest();
+void InitDefaultsRaftCmdResponseImpl();
+void InitDefaultsRaftCmdResponse();
+inline void InitDefaults() {
+  InitDefaultsGetRequest();
+  InitDefaultsGetResponse();
+  InitDefaultsPutRequest();
+  InitDefaultsPutResponse();
+  InitDefaultsDeleteRequest();
+  InitDefaultsDeleteResponse();
+  InitDefaultsDeleteRangeRequest();
+  InitDefaultsDeleteRangeResponse();
+  InitDefaultsSnapRequest();
+  InitDefaultsSnapResponse();
+  InitDefaultsPrewriteRequest();
+  InitDefaultsPrewriteResponse();
+  InitDefaultsIngestSSTRequest();
+  InitDefaultsIngestSSTResponse();
+  InitDefaultsRequest();
+  InitDefaultsResponse();
+  InitDefaultsChangePeerRequest();
+  InitDefaultsChangePeerResponse();
+  InitDefaultsSplitRequest();
+  InitDefaultsSplitResponse();
+  InitDefaultsBatchSplitRequest();
+  InitDefaultsBatchSplitResponse();
+  InitDefaultsCompactLogRequest();
+  InitDefaultsCompactLogResponse();
+  InitDefaultsTransferLeaderRequest();
+  InitDefaultsTransferLeaderResponse();
+  InitDefaultsVerifyHashRequest();
+  InitDefaultsVerifyHashResponse();
+  InitDefaultsPrepareMergeRequest();
+  InitDefaultsPrepareMergeResponse();
+  InitDefaultsCommitMergeRequest();
+  InitDefaultsCommitMergeResponse();
+  InitDefaultsRollbackMergeRequest();
+  InitDefaultsRollbackMergeResponse();
+  InitDefaultsAdminRequest();
+  InitDefaultsAdminResponse();
+  InitDefaultsRegionLeaderRequest();
+  InitDefaultsRegionLeaderResponse();
+  InitDefaultsRegionDetailRequest();
+  InitDefaultsRegionDetailResponse();
+  InitDefaultsStatusRequest();
+  InitDefaultsStatusResponse();
+  InitDefaultsRaftRequestHeader();
+  InitDefaultsRaftResponseHeader();
+  InitDefaultsRaftCmdRequest();
+  InitDefaultsRaftCmdResponse();
 }
-} // namespace protobuf_raft_5fcmdpb_2eproto
-namespace raft_cmdpb
-{
+}  // namespace protobuf_raft_5fcmdpb_2eproto
+namespace raft_cmdpb {
 class AdminRequest;
 class AdminRequestDefaultTypeInternal;
 extern AdminRequestDefaultTypeInternal _AdminRequest_default_instance_;
@@ -331,5196 +327,5385 @@ extern VerifyHashRequestDefaultTypeInternal _VerifyHashRequest_default_instance_
 class VerifyHashResponse;
 class VerifyHashResponseDefaultTypeInternal;
 extern VerifyHashResponseDefaultTypeInternal _VerifyHashResponse_default_instance_;
-} // namespace raft_cmdpb
-namespace raft_cmdpb
-{
+}  // namespace raft_cmdpb
+namespace raft_cmdpb {
 
-enum CmdType
-{
-    Invalid                              = 0,
-    Get                                  = 1,
-    Put                                  = 3,
-    Delete                               = 4,
-    Snap                                 = 5,
-    Prewrite                             = 6,
-    DeleteRange                          = 7,
-    IngestSST                            = 8,
-    CmdType_INT_MIN_SENTINEL_DO_NOT_USE_ = ::google::protobuf::kint32min,
-    CmdType_INT_MAX_SENTINEL_DO_NOT_USE_ = ::google::protobuf::kint32max
+enum CmdType {
+  Invalid = 0,
+  Get = 1,
+  Put = 3,
+  Delete = 4,
+  Snap = 5,
+  Prewrite = 6,
+  DeleteRange = 7,
+  IngestSST = 8,
+  CmdType_INT_MIN_SENTINEL_DO_NOT_USE_ = ::google::protobuf::kint32min,
+  CmdType_INT_MAX_SENTINEL_DO_NOT_USE_ = ::google::protobuf::kint32max
 };
-bool          CmdType_IsValid(int value);
-const CmdType CmdType_MIN       = Invalid;
-const CmdType CmdType_MAX       = IngestSST;
-const int     CmdType_ARRAYSIZE = CmdType_MAX + 1;
+bool CmdType_IsValid(int value);
+const CmdType CmdType_MIN = Invalid;
+const CmdType CmdType_MAX = IngestSST;
+const int CmdType_ARRAYSIZE = CmdType_MAX + 1;
 
-const ::google::protobuf::EnumDescriptor * CmdType_descriptor();
-inline const ::std::string &               CmdType_Name(CmdType value)
-{
-    return ::google::protobuf::internal::NameOfEnum(CmdType_descriptor(), value);
+const ::google::protobuf::EnumDescriptor* CmdType_descriptor();
+inline const ::std::string& CmdType_Name(CmdType value) {
+  return ::google::protobuf::internal::NameOfEnum(
+    CmdType_descriptor(), value);
 }
-inline bool CmdType_Parse(const ::std::string & name, CmdType * value)
-{
-    return ::google::protobuf::internal::ParseNamedEnum<CmdType>(CmdType_descriptor(), name, value);
+inline bool CmdType_Parse(
+    const ::std::string& name, CmdType* value) {
+  return ::google::protobuf::internal::ParseNamedEnum<CmdType>(
+    CmdType_descriptor(), name, value);
 }
-enum AdminCmdType
-{
-    InvalidAdmin                              = 0,
-    ChangePeer                                = 1,
-    Split PROTOBUF_DEPRECATED                 = 2,
-    CompactLog                                = 3,
-    TransferLeader                            = 4,
-    ComputeHash                               = 5,
-    VerifyHash                                = 6,
-    PrepareMerge                              = 7,
-    CommitMerge                               = 8,
-    RollbackMerge                             = 9,
-    BatchSplit                                = 10,
-    AdminCmdType_INT_MIN_SENTINEL_DO_NOT_USE_ = ::google::protobuf::kint32min,
-    AdminCmdType_INT_MAX_SENTINEL_DO_NOT_USE_ = ::google::protobuf::kint32max
+enum AdminCmdType {
+  InvalidAdmin = 0,
+  ChangePeer = 1,
+  Split PROTOBUF_DEPRECATED = 2,
+  CompactLog = 3,
+  TransferLeader = 4,
+  ComputeHash = 5,
+  VerifyHash = 6,
+  PrepareMerge = 7,
+  CommitMerge = 8,
+  RollbackMerge = 9,
+  BatchSplit = 10,
+  AdminCmdType_INT_MIN_SENTINEL_DO_NOT_USE_ = ::google::protobuf::kint32min,
+  AdminCmdType_INT_MAX_SENTINEL_DO_NOT_USE_ = ::google::protobuf::kint32max
 };
-bool               AdminCmdType_IsValid(int value);
-const AdminCmdType AdminCmdType_MIN       = InvalidAdmin;
-const AdminCmdType AdminCmdType_MAX       = BatchSplit;
-const int          AdminCmdType_ARRAYSIZE = AdminCmdType_MAX + 1;
+bool AdminCmdType_IsValid(int value);
+const AdminCmdType AdminCmdType_MIN = InvalidAdmin;
+const AdminCmdType AdminCmdType_MAX = BatchSplit;
+const int AdminCmdType_ARRAYSIZE = AdminCmdType_MAX + 1;
 
-const ::google::protobuf::EnumDescriptor * AdminCmdType_descriptor();
-inline const ::std::string &               AdminCmdType_Name(AdminCmdType value)
-{
-    return ::google::protobuf::internal::NameOfEnum(AdminCmdType_descriptor(), value);
+const ::google::protobuf::EnumDescriptor* AdminCmdType_descriptor();
+inline const ::std::string& AdminCmdType_Name(AdminCmdType value) {
+  return ::google::protobuf::internal::NameOfEnum(
+    AdminCmdType_descriptor(), value);
 }
-inline bool AdminCmdType_Parse(const ::std::string & name, AdminCmdType * value)
-{
-    return ::google::protobuf::internal::ParseNamedEnum<AdminCmdType>(AdminCmdType_descriptor(), name, value);
+inline bool AdminCmdType_Parse(
+    const ::std::string& name, AdminCmdType* value) {
+  return ::google::protobuf::internal::ParseNamedEnum<AdminCmdType>(
+    AdminCmdType_descriptor(), name, value);
 }
-enum StatusCmdType
-{
-    InvalidStatus                              = 0,
-    RegionLeader                               = 1,
-    RegionDetail                               = 2,
-    StatusCmdType_INT_MIN_SENTINEL_DO_NOT_USE_ = ::google::protobuf::kint32min,
-    StatusCmdType_INT_MAX_SENTINEL_DO_NOT_USE_ = ::google::protobuf::kint32max
+enum StatusCmdType {
+  InvalidStatus = 0,
+  RegionLeader = 1,
+  RegionDetail = 2,
+  StatusCmdType_INT_MIN_SENTINEL_DO_NOT_USE_ = ::google::protobuf::kint32min,
+  StatusCmdType_INT_MAX_SENTINEL_DO_NOT_USE_ = ::google::protobuf::kint32max
 };
-bool                StatusCmdType_IsValid(int value);
-const StatusCmdType StatusCmdType_MIN       = InvalidStatus;
-const StatusCmdType StatusCmdType_MAX       = RegionDetail;
-const int           StatusCmdType_ARRAYSIZE = StatusCmdType_MAX + 1;
+bool StatusCmdType_IsValid(int value);
+const StatusCmdType StatusCmdType_MIN = InvalidStatus;
+const StatusCmdType StatusCmdType_MAX = RegionDetail;
+const int StatusCmdType_ARRAYSIZE = StatusCmdType_MAX + 1;
 
-const ::google::protobuf::EnumDescriptor * StatusCmdType_descriptor();
-inline const ::std::string &               StatusCmdType_Name(StatusCmdType value)
-{
-    return ::google::protobuf::internal::NameOfEnum(StatusCmdType_descriptor(), value);
+const ::google::protobuf::EnumDescriptor* StatusCmdType_descriptor();
+inline const ::std::string& StatusCmdType_Name(StatusCmdType value) {
+  return ::google::protobuf::internal::NameOfEnum(
+    StatusCmdType_descriptor(), value);
 }
-inline bool StatusCmdType_Parse(const ::std::string & name, StatusCmdType * value)
-{
-    return ::google::protobuf::internal::ParseNamedEnum<StatusCmdType>(StatusCmdType_descriptor(), name, value);
+inline bool StatusCmdType_Parse(
+    const ::std::string& name, StatusCmdType* value) {
+  return ::google::protobuf::internal::ParseNamedEnum<StatusCmdType>(
+    StatusCmdType_descriptor(), name, value);
 }
 // ===================================================================
 
-class GetRequest : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:raft_cmdpb.GetRequest) */
-{
-public:
-    GetRequest();
-    virtual ~GetRequest();
+class GetRequest : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:raft_cmdpb.GetRequest) */ {
+ public:
+  GetRequest();
+  virtual ~GetRequest();
 
-    GetRequest(const GetRequest & from);
+  GetRequest(const GetRequest& from);
 
-    inline GetRequest & operator=(const GetRequest & from)
-    {
-        CopyFrom(from);
-        return *this;
+  inline GetRequest& operator=(const GetRequest& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  #if LANG_CXX11
+  GetRequest(GetRequest&& from) noexcept
+    : GetRequest() {
+    *this = ::std::move(from);
+  }
+
+  inline GetRequest& operator=(GetRequest&& from) noexcept {
+    if (GetArenaNoVirtual() == from.GetArenaNoVirtual()) {
+      if (this != &from) InternalSwap(&from);
+    } else {
+      CopyFrom(from);
     }
-#if LANG_CXX11
-    GetRequest(GetRequest && from) noexcept : GetRequest() { *this = ::std::move(from); }
+    return *this;
+  }
+  #endif
+  static const ::google::protobuf::Descriptor* descriptor();
+  static const GetRequest& default_instance();
 
-    inline GetRequest & operator=(GetRequest && from) noexcept
-    {
-        if (GetArenaNoVirtual() == from.GetArenaNoVirtual())
-        {
-            if (this != &from)
-                InternalSwap(&from);
-        }
-        else
-        {
-            CopyFrom(from);
-        }
-        return *this;
-    }
-#endif
-    static const ::google::protobuf::Descriptor * descriptor();
-    static const GetRequest &                     default_instance();
+  static void InitAsDefaultInstance();  // FOR INTERNAL USE ONLY
+  static inline const GetRequest* internal_default_instance() {
+    return reinterpret_cast<const GetRequest*>(
+               &_GetRequest_default_instance_);
+  }
+  static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
+    0;
 
-    static void                      InitAsDefaultInstance(); // FOR INTERNAL USE ONLY
-    static inline const GetRequest * internal_default_instance()
-    {
-        return reinterpret_cast<const GetRequest *>(&_GetRequest_default_instance_);
-    }
-    static PROTOBUF_CONSTEXPR int const kIndexInFileMessages = 0;
+  void Swap(GetRequest* other);
+  friend void swap(GetRequest& a, GetRequest& b) {
+    a.Swap(&b);
+  }
 
-    void        Swap(GetRequest * other);
-    friend void swap(GetRequest & a, GetRequest & b) { a.Swap(&b); }
+  // implements Message ----------------------------------------------
 
-    // implements Message ----------------------------------------------
+  inline GetRequest* New() const PROTOBUF_FINAL { return New(NULL); }
 
-    inline GetRequest * New() const PROTOBUF_FINAL { return New(NULL); }
+  GetRequest* New(::google::protobuf::Arena* arena) const PROTOBUF_FINAL;
+  void CopyFrom(const ::google::protobuf::Message& from) PROTOBUF_FINAL;
+  void MergeFrom(const ::google::protobuf::Message& from) PROTOBUF_FINAL;
+  void CopyFrom(const GetRequest& from);
+  void MergeFrom(const GetRequest& from);
+  void Clear() PROTOBUF_FINAL;
+  bool IsInitialized() const PROTOBUF_FINAL;
 
-    GetRequest * New(::google::protobuf::Arena * arena) const PROTOBUF_FINAL;
-    void         CopyFrom(const ::google::protobuf::Message & from) PROTOBUF_FINAL;
-    void         MergeFrom(const ::google::protobuf::Message & from) PROTOBUF_FINAL;
-    void         CopyFrom(const GetRequest & from);
-    void         MergeFrom(const GetRequest & from);
-    void         Clear() PROTOBUF_FINAL;
-    bool         IsInitialized() const PROTOBUF_FINAL;
+  size_t ByteSizeLong() const PROTOBUF_FINAL;
+  bool MergePartialFromCodedStream(
+      ::google::protobuf::io::CodedInputStream* input) PROTOBUF_FINAL;
+  void SerializeWithCachedSizes(
+      ::google::protobuf::io::CodedOutputStream* output) const PROTOBUF_FINAL;
+  ::google::protobuf::uint8* InternalSerializeWithCachedSizesToArray(
+      bool deterministic, ::google::protobuf::uint8* target) const PROTOBUF_FINAL;
+  int GetCachedSize() const PROTOBUF_FINAL { return _cached_size_; }
+  private:
+  void SharedCtor();
+  void SharedDtor();
+  void SetCachedSize(int size) const PROTOBUF_FINAL;
+  void InternalSwap(GetRequest* other);
+  private:
+  inline ::google::protobuf::Arena* GetArenaNoVirtual() const {
+    return NULL;
+  }
+  inline void* MaybeArenaPtr() const {
+    return NULL;
+  }
+  public:
 
-    size_t                      ByteSizeLong() const PROTOBUF_FINAL;
-    bool                        MergePartialFromCodedStream(::google::protobuf::io::CodedInputStream * input) PROTOBUF_FINAL;
-    void                        SerializeWithCachedSizes(::google::protobuf::io::CodedOutputStream * output) const PROTOBUF_FINAL;
-    ::google::protobuf::uint8 * InternalSerializeWithCachedSizesToArray(bool                        deterministic,
-                                                                        ::google::protobuf::uint8 * target) const PROTOBUF_FINAL;
-    int                         GetCachedSize() const PROTOBUF_FINAL { return _cached_size_; }
+  ::google::protobuf::Metadata GetMetadata() const PROTOBUF_FINAL;
 
-private:
-    void SharedCtor();
-    void SharedDtor();
-    void SetCachedSize(int size) const PROTOBUF_FINAL;
-    void InternalSwap(GetRequest * other);
+  // nested types ----------------------------------------------------
 
-private:
-    inline ::google::protobuf::Arena * GetArenaNoVirtual() const { return NULL; }
-    inline void *                      MaybeArenaPtr() const { return NULL; }
+  // accessors -------------------------------------------------------
 
-public:
-    ::google::protobuf::Metadata GetMetadata() const PROTOBUF_FINAL;
+  // string cf = 1;
+  void clear_cf();
+  static const int kCfFieldNumber = 1;
+  const ::std::string& cf() const;
+  void set_cf(const ::std::string& value);
+  #if LANG_CXX11
+  void set_cf(::std::string&& value);
+  #endif
+  void set_cf(const char* value);
+  void set_cf(const char* value, size_t size);
+  ::std::string* mutable_cf();
+  ::std::string* release_cf();
+  void set_allocated_cf(::std::string* cf);
 
-    // nested types ----------------------------------------------------
+  // bytes key = 2;
+  void clear_key();
+  static const int kKeyFieldNumber = 2;
+  const ::std::string& key() const;
+  void set_key(const ::std::string& value);
+  #if LANG_CXX11
+  void set_key(::std::string&& value);
+  #endif
+  void set_key(const char* value);
+  void set_key(const void* value, size_t size);
+  ::std::string* mutable_key();
+  ::std::string* release_key();
+  void set_allocated_key(::std::string* key);
 
-    // accessors -------------------------------------------------------
+  // @@protoc_insertion_point(class_scope:raft_cmdpb.GetRequest)
+ private:
 
-    // string cf = 1;
-    void                  clear_cf();
-    static const int      kCfFieldNumber = 1;
-    const ::std::string & cf() const;
-    void                  set_cf(const ::std::string & value);
-#if LANG_CXX11
-    void set_cf(::std::string && value);
-#endif
-    void            set_cf(const char * value);
-    void            set_cf(const char * value, size_t size);
-    ::std::string * mutable_cf();
-    ::std::string * release_cf();
-    void            set_allocated_cf(::std::string * cf);
-
-    // bytes key = 2;
-    void                  clear_key();
-    static const int      kKeyFieldNumber = 2;
-    const ::std::string & key() const;
-    void                  set_key(const ::std::string & value);
-#if LANG_CXX11
-    void set_key(::std::string && value);
-#endif
-    void            set_key(const char * value);
-    void            set_key(const void * value, size_t size);
-    ::std::string * mutable_key();
-    ::std::string * release_key();
-    void            set_allocated_key(::std::string * key);
-
-    // @@protoc_insertion_point(class_scope:raft_cmdpb.GetRequest)
-private:
-    ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
-    ::google::protobuf::internal::ArenaStringPtr            cf_;
-    ::google::protobuf::internal::ArenaStringPtr            key_;
-    mutable int                                             _cached_size_;
-    friend struct ::protobuf_raft_5fcmdpb_2eproto::TableStruct;
-    friend void ::protobuf_raft_5fcmdpb_2eproto::InitDefaultsGetRequestImpl();
+  ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
+  ::google::protobuf::internal::ArenaStringPtr cf_;
+  ::google::protobuf::internal::ArenaStringPtr key_;
+  mutable int _cached_size_;
+  friend struct ::protobuf_raft_5fcmdpb_2eproto::TableStruct;
+  friend void ::protobuf_raft_5fcmdpb_2eproto::InitDefaultsGetRequestImpl();
 };
 // -------------------------------------------------------------------
 
-class GetResponse : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:raft_cmdpb.GetResponse) */
-{
-public:
-    GetResponse();
-    virtual ~GetResponse();
+class GetResponse : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:raft_cmdpb.GetResponse) */ {
+ public:
+  GetResponse();
+  virtual ~GetResponse();
 
-    GetResponse(const GetResponse & from);
+  GetResponse(const GetResponse& from);
 
-    inline GetResponse & operator=(const GetResponse & from)
-    {
-        CopyFrom(from);
-        return *this;
+  inline GetResponse& operator=(const GetResponse& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  #if LANG_CXX11
+  GetResponse(GetResponse&& from) noexcept
+    : GetResponse() {
+    *this = ::std::move(from);
+  }
+
+  inline GetResponse& operator=(GetResponse&& from) noexcept {
+    if (GetArenaNoVirtual() == from.GetArenaNoVirtual()) {
+      if (this != &from) InternalSwap(&from);
+    } else {
+      CopyFrom(from);
     }
-#if LANG_CXX11
-    GetResponse(GetResponse && from) noexcept : GetResponse() { *this = ::std::move(from); }
+    return *this;
+  }
+  #endif
+  static const ::google::protobuf::Descriptor* descriptor();
+  static const GetResponse& default_instance();
 
-    inline GetResponse & operator=(GetResponse && from) noexcept
-    {
-        if (GetArenaNoVirtual() == from.GetArenaNoVirtual())
-        {
-            if (this != &from)
-                InternalSwap(&from);
-        }
-        else
-        {
-            CopyFrom(from);
-        }
-        return *this;
-    }
-#endif
-    static const ::google::protobuf::Descriptor * descriptor();
-    static const GetResponse &                    default_instance();
+  static void InitAsDefaultInstance();  // FOR INTERNAL USE ONLY
+  static inline const GetResponse* internal_default_instance() {
+    return reinterpret_cast<const GetResponse*>(
+               &_GetResponse_default_instance_);
+  }
+  static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
+    1;
 
-    static void                       InitAsDefaultInstance(); // FOR INTERNAL USE ONLY
-    static inline const GetResponse * internal_default_instance()
-    {
-        return reinterpret_cast<const GetResponse *>(&_GetResponse_default_instance_);
-    }
-    static PROTOBUF_CONSTEXPR int const kIndexInFileMessages = 1;
+  void Swap(GetResponse* other);
+  friend void swap(GetResponse& a, GetResponse& b) {
+    a.Swap(&b);
+  }
 
-    void        Swap(GetResponse * other);
-    friend void swap(GetResponse & a, GetResponse & b) { a.Swap(&b); }
+  // implements Message ----------------------------------------------
 
-    // implements Message ----------------------------------------------
+  inline GetResponse* New() const PROTOBUF_FINAL { return New(NULL); }
 
-    inline GetResponse * New() const PROTOBUF_FINAL { return New(NULL); }
+  GetResponse* New(::google::protobuf::Arena* arena) const PROTOBUF_FINAL;
+  void CopyFrom(const ::google::protobuf::Message& from) PROTOBUF_FINAL;
+  void MergeFrom(const ::google::protobuf::Message& from) PROTOBUF_FINAL;
+  void CopyFrom(const GetResponse& from);
+  void MergeFrom(const GetResponse& from);
+  void Clear() PROTOBUF_FINAL;
+  bool IsInitialized() const PROTOBUF_FINAL;
 
-    GetResponse * New(::google::protobuf::Arena * arena) const PROTOBUF_FINAL;
-    void          CopyFrom(const ::google::protobuf::Message & from) PROTOBUF_FINAL;
-    void          MergeFrom(const ::google::protobuf::Message & from) PROTOBUF_FINAL;
-    void          CopyFrom(const GetResponse & from);
-    void          MergeFrom(const GetResponse & from);
-    void          Clear() PROTOBUF_FINAL;
-    bool          IsInitialized() const PROTOBUF_FINAL;
+  size_t ByteSizeLong() const PROTOBUF_FINAL;
+  bool MergePartialFromCodedStream(
+      ::google::protobuf::io::CodedInputStream* input) PROTOBUF_FINAL;
+  void SerializeWithCachedSizes(
+      ::google::protobuf::io::CodedOutputStream* output) const PROTOBUF_FINAL;
+  ::google::protobuf::uint8* InternalSerializeWithCachedSizesToArray(
+      bool deterministic, ::google::protobuf::uint8* target) const PROTOBUF_FINAL;
+  int GetCachedSize() const PROTOBUF_FINAL { return _cached_size_; }
+  private:
+  void SharedCtor();
+  void SharedDtor();
+  void SetCachedSize(int size) const PROTOBUF_FINAL;
+  void InternalSwap(GetResponse* other);
+  private:
+  inline ::google::protobuf::Arena* GetArenaNoVirtual() const {
+    return NULL;
+  }
+  inline void* MaybeArenaPtr() const {
+    return NULL;
+  }
+  public:
 
-    size_t                      ByteSizeLong() const PROTOBUF_FINAL;
-    bool                        MergePartialFromCodedStream(::google::protobuf::io::CodedInputStream * input) PROTOBUF_FINAL;
-    void                        SerializeWithCachedSizes(::google::protobuf::io::CodedOutputStream * output) const PROTOBUF_FINAL;
-    ::google::protobuf::uint8 * InternalSerializeWithCachedSizesToArray(bool                        deterministic,
-                                                                        ::google::protobuf::uint8 * target) const PROTOBUF_FINAL;
-    int                         GetCachedSize() const PROTOBUF_FINAL { return _cached_size_; }
+  ::google::protobuf::Metadata GetMetadata() const PROTOBUF_FINAL;
 
-private:
-    void SharedCtor();
-    void SharedDtor();
-    void SetCachedSize(int size) const PROTOBUF_FINAL;
-    void InternalSwap(GetResponse * other);
+  // nested types ----------------------------------------------------
 
-private:
-    inline ::google::protobuf::Arena * GetArenaNoVirtual() const { return NULL; }
-    inline void *                      MaybeArenaPtr() const { return NULL; }
+  // accessors -------------------------------------------------------
 
-public:
-    ::google::protobuf::Metadata GetMetadata() const PROTOBUF_FINAL;
+  // bytes value = 1;
+  void clear_value();
+  static const int kValueFieldNumber = 1;
+  const ::std::string& value() const;
+  void set_value(const ::std::string& value);
+  #if LANG_CXX11
+  void set_value(::std::string&& value);
+  #endif
+  void set_value(const char* value);
+  void set_value(const void* value, size_t size);
+  ::std::string* mutable_value();
+  ::std::string* release_value();
+  void set_allocated_value(::std::string* value);
 
-    // nested types ----------------------------------------------------
+  // @@protoc_insertion_point(class_scope:raft_cmdpb.GetResponse)
+ private:
 
-    // accessors -------------------------------------------------------
-
-    // bytes value = 1;
-    void                  clear_value();
-    static const int      kValueFieldNumber = 1;
-    const ::std::string & value() const;
-    void                  set_value(const ::std::string & value);
-#if LANG_CXX11
-    void set_value(::std::string && value);
-#endif
-    void            set_value(const char * value);
-    void            set_value(const void * value, size_t size);
-    ::std::string * mutable_value();
-    ::std::string * release_value();
-    void            set_allocated_value(::std::string * value);
-
-    // @@protoc_insertion_point(class_scope:raft_cmdpb.GetResponse)
-private:
-    ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
-    ::google::protobuf::internal::ArenaStringPtr            value_;
-    mutable int                                             _cached_size_;
-    friend struct ::protobuf_raft_5fcmdpb_2eproto::TableStruct;
-    friend void ::protobuf_raft_5fcmdpb_2eproto::InitDefaultsGetResponseImpl();
+  ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
+  ::google::protobuf::internal::ArenaStringPtr value_;
+  mutable int _cached_size_;
+  friend struct ::protobuf_raft_5fcmdpb_2eproto::TableStruct;
+  friend void ::protobuf_raft_5fcmdpb_2eproto::InitDefaultsGetResponseImpl();
 };
 // -------------------------------------------------------------------
 
-class PutRequest : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:raft_cmdpb.PutRequest) */
-{
-public:
-    PutRequest();
-    virtual ~PutRequest();
+class PutRequest : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:raft_cmdpb.PutRequest) */ {
+ public:
+  PutRequest();
+  virtual ~PutRequest();
 
-    PutRequest(const PutRequest & from);
+  PutRequest(const PutRequest& from);
 
-    inline PutRequest & operator=(const PutRequest & from)
-    {
-        CopyFrom(from);
-        return *this;
+  inline PutRequest& operator=(const PutRequest& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  #if LANG_CXX11
+  PutRequest(PutRequest&& from) noexcept
+    : PutRequest() {
+    *this = ::std::move(from);
+  }
+
+  inline PutRequest& operator=(PutRequest&& from) noexcept {
+    if (GetArenaNoVirtual() == from.GetArenaNoVirtual()) {
+      if (this != &from) InternalSwap(&from);
+    } else {
+      CopyFrom(from);
     }
-#if LANG_CXX11
-    PutRequest(PutRequest && from) noexcept : PutRequest() { *this = ::std::move(from); }
+    return *this;
+  }
+  #endif
+  static const ::google::protobuf::Descriptor* descriptor();
+  static const PutRequest& default_instance();
 
-    inline PutRequest & operator=(PutRequest && from) noexcept
-    {
-        if (GetArenaNoVirtual() == from.GetArenaNoVirtual())
-        {
-            if (this != &from)
-                InternalSwap(&from);
-        }
-        else
-        {
-            CopyFrom(from);
-        }
-        return *this;
-    }
-#endif
-    static const ::google::protobuf::Descriptor * descriptor();
-    static const PutRequest &                     default_instance();
+  static void InitAsDefaultInstance();  // FOR INTERNAL USE ONLY
+  static inline const PutRequest* internal_default_instance() {
+    return reinterpret_cast<const PutRequest*>(
+               &_PutRequest_default_instance_);
+  }
+  static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
+    2;
 
-    static void                      InitAsDefaultInstance(); // FOR INTERNAL USE ONLY
-    static inline const PutRequest * internal_default_instance()
-    {
-        return reinterpret_cast<const PutRequest *>(&_PutRequest_default_instance_);
-    }
-    static PROTOBUF_CONSTEXPR int const kIndexInFileMessages = 2;
+  void Swap(PutRequest* other);
+  friend void swap(PutRequest& a, PutRequest& b) {
+    a.Swap(&b);
+  }
 
-    void        Swap(PutRequest * other);
-    friend void swap(PutRequest & a, PutRequest & b) { a.Swap(&b); }
+  // implements Message ----------------------------------------------
 
-    // implements Message ----------------------------------------------
+  inline PutRequest* New() const PROTOBUF_FINAL { return New(NULL); }
 
-    inline PutRequest * New() const PROTOBUF_FINAL { return New(NULL); }
+  PutRequest* New(::google::protobuf::Arena* arena) const PROTOBUF_FINAL;
+  void CopyFrom(const ::google::protobuf::Message& from) PROTOBUF_FINAL;
+  void MergeFrom(const ::google::protobuf::Message& from) PROTOBUF_FINAL;
+  void CopyFrom(const PutRequest& from);
+  void MergeFrom(const PutRequest& from);
+  void Clear() PROTOBUF_FINAL;
+  bool IsInitialized() const PROTOBUF_FINAL;
 
-    PutRequest * New(::google::protobuf::Arena * arena) const PROTOBUF_FINAL;
-    void         CopyFrom(const ::google::protobuf::Message & from) PROTOBUF_FINAL;
-    void         MergeFrom(const ::google::protobuf::Message & from) PROTOBUF_FINAL;
-    void         CopyFrom(const PutRequest & from);
-    void         MergeFrom(const PutRequest & from);
-    void         Clear() PROTOBUF_FINAL;
-    bool         IsInitialized() const PROTOBUF_FINAL;
+  size_t ByteSizeLong() const PROTOBUF_FINAL;
+  bool MergePartialFromCodedStream(
+      ::google::protobuf::io::CodedInputStream* input) PROTOBUF_FINAL;
+  void SerializeWithCachedSizes(
+      ::google::protobuf::io::CodedOutputStream* output) const PROTOBUF_FINAL;
+  ::google::protobuf::uint8* InternalSerializeWithCachedSizesToArray(
+      bool deterministic, ::google::protobuf::uint8* target) const PROTOBUF_FINAL;
+  int GetCachedSize() const PROTOBUF_FINAL { return _cached_size_; }
+  private:
+  void SharedCtor();
+  void SharedDtor();
+  void SetCachedSize(int size) const PROTOBUF_FINAL;
+  void InternalSwap(PutRequest* other);
+  private:
+  inline ::google::protobuf::Arena* GetArenaNoVirtual() const {
+    return NULL;
+  }
+  inline void* MaybeArenaPtr() const {
+    return NULL;
+  }
+  public:
 
-    size_t                      ByteSizeLong() const PROTOBUF_FINAL;
-    bool                        MergePartialFromCodedStream(::google::protobuf::io::CodedInputStream * input) PROTOBUF_FINAL;
-    void                        SerializeWithCachedSizes(::google::protobuf::io::CodedOutputStream * output) const PROTOBUF_FINAL;
-    ::google::protobuf::uint8 * InternalSerializeWithCachedSizesToArray(bool                        deterministic,
-                                                                        ::google::protobuf::uint8 * target) const PROTOBUF_FINAL;
-    int                         GetCachedSize() const PROTOBUF_FINAL { return _cached_size_; }
+  ::google::protobuf::Metadata GetMetadata() const PROTOBUF_FINAL;
 
-private:
-    void SharedCtor();
-    void SharedDtor();
-    void SetCachedSize(int size) const PROTOBUF_FINAL;
-    void InternalSwap(PutRequest * other);
+  // nested types ----------------------------------------------------
 
-private:
-    inline ::google::protobuf::Arena * GetArenaNoVirtual() const { return NULL; }
-    inline void *                      MaybeArenaPtr() const { return NULL; }
+  // accessors -------------------------------------------------------
 
-public:
-    ::google::protobuf::Metadata GetMetadata() const PROTOBUF_FINAL;
+  // string cf = 1;
+  void clear_cf();
+  static const int kCfFieldNumber = 1;
+  const ::std::string& cf() const;
+  void set_cf(const ::std::string& value);
+  #if LANG_CXX11
+  void set_cf(::std::string&& value);
+  #endif
+  void set_cf(const char* value);
+  void set_cf(const char* value, size_t size);
+  ::std::string* mutable_cf();
+  ::std::string* release_cf();
+  void set_allocated_cf(::std::string* cf);
 
-    // nested types ----------------------------------------------------
+  // bytes key = 2;
+  void clear_key();
+  static const int kKeyFieldNumber = 2;
+  const ::std::string& key() const;
+  void set_key(const ::std::string& value);
+  #if LANG_CXX11
+  void set_key(::std::string&& value);
+  #endif
+  void set_key(const char* value);
+  void set_key(const void* value, size_t size);
+  ::std::string* mutable_key();
+  ::std::string* release_key();
+  void set_allocated_key(::std::string* key);
 
-    // accessors -------------------------------------------------------
+  // bytes value = 3;
+  void clear_value();
+  static const int kValueFieldNumber = 3;
+  const ::std::string& value() const;
+  void set_value(const ::std::string& value);
+  #if LANG_CXX11
+  void set_value(::std::string&& value);
+  #endif
+  void set_value(const char* value);
+  void set_value(const void* value, size_t size);
+  ::std::string* mutable_value();
+  ::std::string* release_value();
+  void set_allocated_value(::std::string* value);
 
-    // string cf = 1;
-    void                  clear_cf();
-    static const int      kCfFieldNumber = 1;
-    const ::std::string & cf() const;
-    void                  set_cf(const ::std::string & value);
-#if LANG_CXX11
-    void set_cf(::std::string && value);
-#endif
-    void            set_cf(const char * value);
-    void            set_cf(const char * value, size_t size);
-    ::std::string * mutable_cf();
-    ::std::string * release_cf();
-    void            set_allocated_cf(::std::string * cf);
+  // @@protoc_insertion_point(class_scope:raft_cmdpb.PutRequest)
+ private:
 
-    // bytes key = 2;
-    void                  clear_key();
-    static const int      kKeyFieldNumber = 2;
-    const ::std::string & key() const;
-    void                  set_key(const ::std::string & value);
-#if LANG_CXX11
-    void set_key(::std::string && value);
-#endif
-    void            set_key(const char * value);
-    void            set_key(const void * value, size_t size);
-    ::std::string * mutable_key();
-    ::std::string * release_key();
-    void            set_allocated_key(::std::string * key);
-
-    // bytes value = 3;
-    void                  clear_value();
-    static const int      kValueFieldNumber = 3;
-    const ::std::string & value() const;
-    void                  set_value(const ::std::string & value);
-#if LANG_CXX11
-    void set_value(::std::string && value);
-#endif
-    void            set_value(const char * value);
-    void            set_value(const void * value, size_t size);
-    ::std::string * mutable_value();
-    ::std::string * release_value();
-    void            set_allocated_value(::std::string * value);
-
-    // @@protoc_insertion_point(class_scope:raft_cmdpb.PutRequest)
-private:
-    ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
-    ::google::protobuf::internal::ArenaStringPtr            cf_;
-    ::google::protobuf::internal::ArenaStringPtr            key_;
-    ::google::protobuf::internal::ArenaStringPtr            value_;
-    mutable int                                             _cached_size_;
-    friend struct ::protobuf_raft_5fcmdpb_2eproto::TableStruct;
-    friend void ::protobuf_raft_5fcmdpb_2eproto::InitDefaultsPutRequestImpl();
+  ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
+  ::google::protobuf::internal::ArenaStringPtr cf_;
+  ::google::protobuf::internal::ArenaStringPtr key_;
+  ::google::protobuf::internal::ArenaStringPtr value_;
+  mutable int _cached_size_;
+  friend struct ::protobuf_raft_5fcmdpb_2eproto::TableStruct;
+  friend void ::protobuf_raft_5fcmdpb_2eproto::InitDefaultsPutRequestImpl();
 };
 // -------------------------------------------------------------------
 
-class PutResponse : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:raft_cmdpb.PutResponse) */
-{
-public:
-    PutResponse();
-    virtual ~PutResponse();
+class PutResponse : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:raft_cmdpb.PutResponse) */ {
+ public:
+  PutResponse();
+  virtual ~PutResponse();
 
-    PutResponse(const PutResponse & from);
+  PutResponse(const PutResponse& from);
 
-    inline PutResponse & operator=(const PutResponse & from)
-    {
-        CopyFrom(from);
-        return *this;
+  inline PutResponse& operator=(const PutResponse& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  #if LANG_CXX11
+  PutResponse(PutResponse&& from) noexcept
+    : PutResponse() {
+    *this = ::std::move(from);
+  }
+
+  inline PutResponse& operator=(PutResponse&& from) noexcept {
+    if (GetArenaNoVirtual() == from.GetArenaNoVirtual()) {
+      if (this != &from) InternalSwap(&from);
+    } else {
+      CopyFrom(from);
     }
-#if LANG_CXX11
-    PutResponse(PutResponse && from) noexcept : PutResponse() { *this = ::std::move(from); }
+    return *this;
+  }
+  #endif
+  static const ::google::protobuf::Descriptor* descriptor();
+  static const PutResponse& default_instance();
 
-    inline PutResponse & operator=(PutResponse && from) noexcept
-    {
-        if (GetArenaNoVirtual() == from.GetArenaNoVirtual())
-        {
-            if (this != &from)
-                InternalSwap(&from);
-        }
-        else
-        {
-            CopyFrom(from);
-        }
-        return *this;
-    }
-#endif
-    static const ::google::protobuf::Descriptor * descriptor();
-    static const PutResponse &                    default_instance();
+  static void InitAsDefaultInstance();  // FOR INTERNAL USE ONLY
+  static inline const PutResponse* internal_default_instance() {
+    return reinterpret_cast<const PutResponse*>(
+               &_PutResponse_default_instance_);
+  }
+  static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
+    3;
 
-    static void                       InitAsDefaultInstance(); // FOR INTERNAL USE ONLY
-    static inline const PutResponse * internal_default_instance()
-    {
-        return reinterpret_cast<const PutResponse *>(&_PutResponse_default_instance_);
-    }
-    static PROTOBUF_CONSTEXPR int const kIndexInFileMessages = 3;
+  void Swap(PutResponse* other);
+  friend void swap(PutResponse& a, PutResponse& b) {
+    a.Swap(&b);
+  }
 
-    void        Swap(PutResponse * other);
-    friend void swap(PutResponse & a, PutResponse & b) { a.Swap(&b); }
+  // implements Message ----------------------------------------------
 
-    // implements Message ----------------------------------------------
+  inline PutResponse* New() const PROTOBUF_FINAL { return New(NULL); }
 
-    inline PutResponse * New() const PROTOBUF_FINAL { return New(NULL); }
+  PutResponse* New(::google::protobuf::Arena* arena) const PROTOBUF_FINAL;
+  void CopyFrom(const ::google::protobuf::Message& from) PROTOBUF_FINAL;
+  void MergeFrom(const ::google::protobuf::Message& from) PROTOBUF_FINAL;
+  void CopyFrom(const PutResponse& from);
+  void MergeFrom(const PutResponse& from);
+  void Clear() PROTOBUF_FINAL;
+  bool IsInitialized() const PROTOBUF_FINAL;
 
-    PutResponse * New(::google::protobuf::Arena * arena) const PROTOBUF_FINAL;
-    void          CopyFrom(const ::google::protobuf::Message & from) PROTOBUF_FINAL;
-    void          MergeFrom(const ::google::protobuf::Message & from) PROTOBUF_FINAL;
-    void          CopyFrom(const PutResponse & from);
-    void          MergeFrom(const PutResponse & from);
-    void          Clear() PROTOBUF_FINAL;
-    bool          IsInitialized() const PROTOBUF_FINAL;
+  size_t ByteSizeLong() const PROTOBUF_FINAL;
+  bool MergePartialFromCodedStream(
+      ::google::protobuf::io::CodedInputStream* input) PROTOBUF_FINAL;
+  void SerializeWithCachedSizes(
+      ::google::protobuf::io::CodedOutputStream* output) const PROTOBUF_FINAL;
+  ::google::protobuf::uint8* InternalSerializeWithCachedSizesToArray(
+      bool deterministic, ::google::protobuf::uint8* target) const PROTOBUF_FINAL;
+  int GetCachedSize() const PROTOBUF_FINAL { return _cached_size_; }
+  private:
+  void SharedCtor();
+  void SharedDtor();
+  void SetCachedSize(int size) const PROTOBUF_FINAL;
+  void InternalSwap(PutResponse* other);
+  private:
+  inline ::google::protobuf::Arena* GetArenaNoVirtual() const {
+    return NULL;
+  }
+  inline void* MaybeArenaPtr() const {
+    return NULL;
+  }
+  public:
 
-    size_t                      ByteSizeLong() const PROTOBUF_FINAL;
-    bool                        MergePartialFromCodedStream(::google::protobuf::io::CodedInputStream * input) PROTOBUF_FINAL;
-    void                        SerializeWithCachedSizes(::google::protobuf::io::CodedOutputStream * output) const PROTOBUF_FINAL;
-    ::google::protobuf::uint8 * InternalSerializeWithCachedSizesToArray(bool                        deterministic,
-                                                                        ::google::protobuf::uint8 * target) const PROTOBUF_FINAL;
-    int                         GetCachedSize() const PROTOBUF_FINAL { return _cached_size_; }
+  ::google::protobuf::Metadata GetMetadata() const PROTOBUF_FINAL;
 
-private:
-    void SharedCtor();
-    void SharedDtor();
-    void SetCachedSize(int size) const PROTOBUF_FINAL;
-    void InternalSwap(PutResponse * other);
+  // nested types ----------------------------------------------------
 
-private:
-    inline ::google::protobuf::Arena * GetArenaNoVirtual() const { return NULL; }
-    inline void *                      MaybeArenaPtr() const { return NULL; }
+  // accessors -------------------------------------------------------
 
-public:
-    ::google::protobuf::Metadata GetMetadata() const PROTOBUF_FINAL;
+  // @@protoc_insertion_point(class_scope:raft_cmdpb.PutResponse)
+ private:
 
-    // nested types ----------------------------------------------------
-
-    // accessors -------------------------------------------------------
-
-    // @@protoc_insertion_point(class_scope:raft_cmdpb.PutResponse)
-private:
-    ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
-    mutable int                                             _cached_size_;
-    friend struct ::protobuf_raft_5fcmdpb_2eproto::TableStruct;
-    friend void ::protobuf_raft_5fcmdpb_2eproto::InitDefaultsPutResponseImpl();
+  ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
+  mutable int _cached_size_;
+  friend struct ::protobuf_raft_5fcmdpb_2eproto::TableStruct;
+  friend void ::protobuf_raft_5fcmdpb_2eproto::InitDefaultsPutResponseImpl();
 };
 // -------------------------------------------------------------------
 
-class DeleteRequest : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:raft_cmdpb.DeleteRequest) */
-{
-public:
-    DeleteRequest();
-    virtual ~DeleteRequest();
+class DeleteRequest : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:raft_cmdpb.DeleteRequest) */ {
+ public:
+  DeleteRequest();
+  virtual ~DeleteRequest();
 
-    DeleteRequest(const DeleteRequest & from);
+  DeleteRequest(const DeleteRequest& from);
 
-    inline DeleteRequest & operator=(const DeleteRequest & from)
-    {
-        CopyFrom(from);
-        return *this;
+  inline DeleteRequest& operator=(const DeleteRequest& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  #if LANG_CXX11
+  DeleteRequest(DeleteRequest&& from) noexcept
+    : DeleteRequest() {
+    *this = ::std::move(from);
+  }
+
+  inline DeleteRequest& operator=(DeleteRequest&& from) noexcept {
+    if (GetArenaNoVirtual() == from.GetArenaNoVirtual()) {
+      if (this != &from) InternalSwap(&from);
+    } else {
+      CopyFrom(from);
     }
-#if LANG_CXX11
-    DeleteRequest(DeleteRequest && from) noexcept : DeleteRequest() { *this = ::std::move(from); }
+    return *this;
+  }
+  #endif
+  static const ::google::protobuf::Descriptor* descriptor();
+  static const DeleteRequest& default_instance();
 
-    inline DeleteRequest & operator=(DeleteRequest && from) noexcept
-    {
-        if (GetArenaNoVirtual() == from.GetArenaNoVirtual())
-        {
-            if (this != &from)
-                InternalSwap(&from);
-        }
-        else
-        {
-            CopyFrom(from);
-        }
-        return *this;
-    }
-#endif
-    static const ::google::protobuf::Descriptor * descriptor();
-    static const DeleteRequest &                  default_instance();
+  static void InitAsDefaultInstance();  // FOR INTERNAL USE ONLY
+  static inline const DeleteRequest* internal_default_instance() {
+    return reinterpret_cast<const DeleteRequest*>(
+               &_DeleteRequest_default_instance_);
+  }
+  static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
+    4;
 
-    static void                         InitAsDefaultInstance(); // FOR INTERNAL USE ONLY
-    static inline const DeleteRequest * internal_default_instance()
-    {
-        return reinterpret_cast<const DeleteRequest *>(&_DeleteRequest_default_instance_);
-    }
-    static PROTOBUF_CONSTEXPR int const kIndexInFileMessages = 4;
+  void Swap(DeleteRequest* other);
+  friend void swap(DeleteRequest& a, DeleteRequest& b) {
+    a.Swap(&b);
+  }
 
-    void        Swap(DeleteRequest * other);
-    friend void swap(DeleteRequest & a, DeleteRequest & b) { a.Swap(&b); }
+  // implements Message ----------------------------------------------
 
-    // implements Message ----------------------------------------------
+  inline DeleteRequest* New() const PROTOBUF_FINAL { return New(NULL); }
 
-    inline DeleteRequest * New() const PROTOBUF_FINAL { return New(NULL); }
+  DeleteRequest* New(::google::protobuf::Arena* arena) const PROTOBUF_FINAL;
+  void CopyFrom(const ::google::protobuf::Message& from) PROTOBUF_FINAL;
+  void MergeFrom(const ::google::protobuf::Message& from) PROTOBUF_FINAL;
+  void CopyFrom(const DeleteRequest& from);
+  void MergeFrom(const DeleteRequest& from);
+  void Clear() PROTOBUF_FINAL;
+  bool IsInitialized() const PROTOBUF_FINAL;
 
-    DeleteRequest * New(::google::protobuf::Arena * arena) const PROTOBUF_FINAL;
-    void            CopyFrom(const ::google::protobuf::Message & from) PROTOBUF_FINAL;
-    void            MergeFrom(const ::google::protobuf::Message & from) PROTOBUF_FINAL;
-    void            CopyFrom(const DeleteRequest & from);
-    void            MergeFrom(const DeleteRequest & from);
-    void            Clear() PROTOBUF_FINAL;
-    bool            IsInitialized() const PROTOBUF_FINAL;
+  size_t ByteSizeLong() const PROTOBUF_FINAL;
+  bool MergePartialFromCodedStream(
+      ::google::protobuf::io::CodedInputStream* input) PROTOBUF_FINAL;
+  void SerializeWithCachedSizes(
+      ::google::protobuf::io::CodedOutputStream* output) const PROTOBUF_FINAL;
+  ::google::protobuf::uint8* InternalSerializeWithCachedSizesToArray(
+      bool deterministic, ::google::protobuf::uint8* target) const PROTOBUF_FINAL;
+  int GetCachedSize() const PROTOBUF_FINAL { return _cached_size_; }
+  private:
+  void SharedCtor();
+  void SharedDtor();
+  void SetCachedSize(int size) const PROTOBUF_FINAL;
+  void InternalSwap(DeleteRequest* other);
+  private:
+  inline ::google::protobuf::Arena* GetArenaNoVirtual() const {
+    return NULL;
+  }
+  inline void* MaybeArenaPtr() const {
+    return NULL;
+  }
+  public:
 
-    size_t                      ByteSizeLong() const PROTOBUF_FINAL;
-    bool                        MergePartialFromCodedStream(::google::protobuf::io::CodedInputStream * input) PROTOBUF_FINAL;
-    void                        SerializeWithCachedSizes(::google::protobuf::io::CodedOutputStream * output) const PROTOBUF_FINAL;
-    ::google::protobuf::uint8 * InternalSerializeWithCachedSizesToArray(bool                        deterministic,
-                                                                        ::google::protobuf::uint8 * target) const PROTOBUF_FINAL;
-    int                         GetCachedSize() const PROTOBUF_FINAL { return _cached_size_; }
+  ::google::protobuf::Metadata GetMetadata() const PROTOBUF_FINAL;
 
-private:
-    void SharedCtor();
-    void SharedDtor();
-    void SetCachedSize(int size) const PROTOBUF_FINAL;
-    void InternalSwap(DeleteRequest * other);
+  // nested types ----------------------------------------------------
 
-private:
-    inline ::google::protobuf::Arena * GetArenaNoVirtual() const { return NULL; }
-    inline void *                      MaybeArenaPtr() const { return NULL; }
+  // accessors -------------------------------------------------------
 
-public:
-    ::google::protobuf::Metadata GetMetadata() const PROTOBUF_FINAL;
+  // string cf = 1;
+  void clear_cf();
+  static const int kCfFieldNumber = 1;
+  const ::std::string& cf() const;
+  void set_cf(const ::std::string& value);
+  #if LANG_CXX11
+  void set_cf(::std::string&& value);
+  #endif
+  void set_cf(const char* value);
+  void set_cf(const char* value, size_t size);
+  ::std::string* mutable_cf();
+  ::std::string* release_cf();
+  void set_allocated_cf(::std::string* cf);
 
-    // nested types ----------------------------------------------------
+  // bytes key = 2;
+  void clear_key();
+  static const int kKeyFieldNumber = 2;
+  const ::std::string& key() const;
+  void set_key(const ::std::string& value);
+  #if LANG_CXX11
+  void set_key(::std::string&& value);
+  #endif
+  void set_key(const char* value);
+  void set_key(const void* value, size_t size);
+  ::std::string* mutable_key();
+  ::std::string* release_key();
+  void set_allocated_key(::std::string* key);
 
-    // accessors -------------------------------------------------------
+  // @@protoc_insertion_point(class_scope:raft_cmdpb.DeleteRequest)
+ private:
 
-    // string cf = 1;
-    void                  clear_cf();
-    static const int      kCfFieldNumber = 1;
-    const ::std::string & cf() const;
-    void                  set_cf(const ::std::string & value);
-#if LANG_CXX11
-    void set_cf(::std::string && value);
-#endif
-    void            set_cf(const char * value);
-    void            set_cf(const char * value, size_t size);
-    ::std::string * mutable_cf();
-    ::std::string * release_cf();
-    void            set_allocated_cf(::std::string * cf);
-
-    // bytes key = 2;
-    void                  clear_key();
-    static const int      kKeyFieldNumber = 2;
-    const ::std::string & key() const;
-    void                  set_key(const ::std::string & value);
-#if LANG_CXX11
-    void set_key(::std::string && value);
-#endif
-    void            set_key(const char * value);
-    void            set_key(const void * value, size_t size);
-    ::std::string * mutable_key();
-    ::std::string * release_key();
-    void            set_allocated_key(::std::string * key);
-
-    // @@protoc_insertion_point(class_scope:raft_cmdpb.DeleteRequest)
-private:
-    ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
-    ::google::protobuf::internal::ArenaStringPtr            cf_;
-    ::google::protobuf::internal::ArenaStringPtr            key_;
-    mutable int                                             _cached_size_;
-    friend struct ::protobuf_raft_5fcmdpb_2eproto::TableStruct;
-    friend void ::protobuf_raft_5fcmdpb_2eproto::InitDefaultsDeleteRequestImpl();
+  ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
+  ::google::protobuf::internal::ArenaStringPtr cf_;
+  ::google::protobuf::internal::ArenaStringPtr key_;
+  mutable int _cached_size_;
+  friend struct ::protobuf_raft_5fcmdpb_2eproto::TableStruct;
+  friend void ::protobuf_raft_5fcmdpb_2eproto::InitDefaultsDeleteRequestImpl();
 };
 // -------------------------------------------------------------------
 
-class DeleteResponse : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:raft_cmdpb.DeleteResponse) */
-{
-public:
-    DeleteResponse();
-    virtual ~DeleteResponse();
+class DeleteResponse : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:raft_cmdpb.DeleteResponse) */ {
+ public:
+  DeleteResponse();
+  virtual ~DeleteResponse();
 
-    DeleteResponse(const DeleteResponse & from);
+  DeleteResponse(const DeleteResponse& from);
 
-    inline DeleteResponse & operator=(const DeleteResponse & from)
-    {
-        CopyFrom(from);
-        return *this;
+  inline DeleteResponse& operator=(const DeleteResponse& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  #if LANG_CXX11
+  DeleteResponse(DeleteResponse&& from) noexcept
+    : DeleteResponse() {
+    *this = ::std::move(from);
+  }
+
+  inline DeleteResponse& operator=(DeleteResponse&& from) noexcept {
+    if (GetArenaNoVirtual() == from.GetArenaNoVirtual()) {
+      if (this != &from) InternalSwap(&from);
+    } else {
+      CopyFrom(from);
     }
-#if LANG_CXX11
-    DeleteResponse(DeleteResponse && from) noexcept : DeleteResponse() { *this = ::std::move(from); }
+    return *this;
+  }
+  #endif
+  static const ::google::protobuf::Descriptor* descriptor();
+  static const DeleteResponse& default_instance();
 
-    inline DeleteResponse & operator=(DeleteResponse && from) noexcept
-    {
-        if (GetArenaNoVirtual() == from.GetArenaNoVirtual())
-        {
-            if (this != &from)
-                InternalSwap(&from);
-        }
-        else
-        {
-            CopyFrom(from);
-        }
-        return *this;
-    }
-#endif
-    static const ::google::protobuf::Descriptor * descriptor();
-    static const DeleteResponse &                 default_instance();
+  static void InitAsDefaultInstance();  // FOR INTERNAL USE ONLY
+  static inline const DeleteResponse* internal_default_instance() {
+    return reinterpret_cast<const DeleteResponse*>(
+               &_DeleteResponse_default_instance_);
+  }
+  static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
+    5;
 
-    static void                          InitAsDefaultInstance(); // FOR INTERNAL USE ONLY
-    static inline const DeleteResponse * internal_default_instance()
-    {
-        return reinterpret_cast<const DeleteResponse *>(&_DeleteResponse_default_instance_);
-    }
-    static PROTOBUF_CONSTEXPR int const kIndexInFileMessages = 5;
+  void Swap(DeleteResponse* other);
+  friend void swap(DeleteResponse& a, DeleteResponse& b) {
+    a.Swap(&b);
+  }
 
-    void        Swap(DeleteResponse * other);
-    friend void swap(DeleteResponse & a, DeleteResponse & b) { a.Swap(&b); }
+  // implements Message ----------------------------------------------
 
-    // implements Message ----------------------------------------------
+  inline DeleteResponse* New() const PROTOBUF_FINAL { return New(NULL); }
 
-    inline DeleteResponse * New() const PROTOBUF_FINAL { return New(NULL); }
+  DeleteResponse* New(::google::protobuf::Arena* arena) const PROTOBUF_FINAL;
+  void CopyFrom(const ::google::protobuf::Message& from) PROTOBUF_FINAL;
+  void MergeFrom(const ::google::protobuf::Message& from) PROTOBUF_FINAL;
+  void CopyFrom(const DeleteResponse& from);
+  void MergeFrom(const DeleteResponse& from);
+  void Clear() PROTOBUF_FINAL;
+  bool IsInitialized() const PROTOBUF_FINAL;
 
-    DeleteResponse * New(::google::protobuf::Arena * arena) const PROTOBUF_FINAL;
-    void             CopyFrom(const ::google::protobuf::Message & from) PROTOBUF_FINAL;
-    void             MergeFrom(const ::google::protobuf::Message & from) PROTOBUF_FINAL;
-    void             CopyFrom(const DeleteResponse & from);
-    void             MergeFrom(const DeleteResponse & from);
-    void             Clear() PROTOBUF_FINAL;
-    bool             IsInitialized() const PROTOBUF_FINAL;
+  size_t ByteSizeLong() const PROTOBUF_FINAL;
+  bool MergePartialFromCodedStream(
+      ::google::protobuf::io::CodedInputStream* input) PROTOBUF_FINAL;
+  void SerializeWithCachedSizes(
+      ::google::protobuf::io::CodedOutputStream* output) const PROTOBUF_FINAL;
+  ::google::protobuf::uint8* InternalSerializeWithCachedSizesToArray(
+      bool deterministic, ::google::protobuf::uint8* target) const PROTOBUF_FINAL;
+  int GetCachedSize() const PROTOBUF_FINAL { return _cached_size_; }
+  private:
+  void SharedCtor();
+  void SharedDtor();
+  void SetCachedSize(int size) const PROTOBUF_FINAL;
+  void InternalSwap(DeleteResponse* other);
+  private:
+  inline ::google::protobuf::Arena* GetArenaNoVirtual() const {
+    return NULL;
+  }
+  inline void* MaybeArenaPtr() const {
+    return NULL;
+  }
+  public:
 
-    size_t                      ByteSizeLong() const PROTOBUF_FINAL;
-    bool                        MergePartialFromCodedStream(::google::protobuf::io::CodedInputStream * input) PROTOBUF_FINAL;
-    void                        SerializeWithCachedSizes(::google::protobuf::io::CodedOutputStream * output) const PROTOBUF_FINAL;
-    ::google::protobuf::uint8 * InternalSerializeWithCachedSizesToArray(bool                        deterministic,
-                                                                        ::google::protobuf::uint8 * target) const PROTOBUF_FINAL;
-    int                         GetCachedSize() const PROTOBUF_FINAL { return _cached_size_; }
+  ::google::protobuf::Metadata GetMetadata() const PROTOBUF_FINAL;
 
-private:
-    void SharedCtor();
-    void SharedDtor();
-    void SetCachedSize(int size) const PROTOBUF_FINAL;
-    void InternalSwap(DeleteResponse * other);
+  // nested types ----------------------------------------------------
 
-private:
-    inline ::google::protobuf::Arena * GetArenaNoVirtual() const { return NULL; }
-    inline void *                      MaybeArenaPtr() const { return NULL; }
+  // accessors -------------------------------------------------------
 
-public:
-    ::google::protobuf::Metadata GetMetadata() const PROTOBUF_FINAL;
+  // @@protoc_insertion_point(class_scope:raft_cmdpb.DeleteResponse)
+ private:
 
-    // nested types ----------------------------------------------------
-
-    // accessors -------------------------------------------------------
-
-    // @@protoc_insertion_point(class_scope:raft_cmdpb.DeleteResponse)
-private:
-    ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
-    mutable int                                             _cached_size_;
-    friend struct ::protobuf_raft_5fcmdpb_2eproto::TableStruct;
-    friend void ::protobuf_raft_5fcmdpb_2eproto::InitDefaultsDeleteResponseImpl();
+  ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
+  mutable int _cached_size_;
+  friend struct ::protobuf_raft_5fcmdpb_2eproto::TableStruct;
+  friend void ::protobuf_raft_5fcmdpb_2eproto::InitDefaultsDeleteResponseImpl();
 };
 // -------------------------------------------------------------------
 
-class DeleteRangeRequest : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:raft_cmdpb.DeleteRangeRequest) */
-{
-public:
-    DeleteRangeRequest();
-    virtual ~DeleteRangeRequest();
+class DeleteRangeRequest : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:raft_cmdpb.DeleteRangeRequest) */ {
+ public:
+  DeleteRangeRequest();
+  virtual ~DeleteRangeRequest();
 
-    DeleteRangeRequest(const DeleteRangeRequest & from);
+  DeleteRangeRequest(const DeleteRangeRequest& from);
 
-    inline DeleteRangeRequest & operator=(const DeleteRangeRequest & from)
-    {
-        CopyFrom(from);
-        return *this;
+  inline DeleteRangeRequest& operator=(const DeleteRangeRequest& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  #if LANG_CXX11
+  DeleteRangeRequest(DeleteRangeRequest&& from) noexcept
+    : DeleteRangeRequest() {
+    *this = ::std::move(from);
+  }
+
+  inline DeleteRangeRequest& operator=(DeleteRangeRequest&& from) noexcept {
+    if (GetArenaNoVirtual() == from.GetArenaNoVirtual()) {
+      if (this != &from) InternalSwap(&from);
+    } else {
+      CopyFrom(from);
     }
-#if LANG_CXX11
-    DeleteRangeRequest(DeleteRangeRequest && from) noexcept : DeleteRangeRequest() { *this = ::std::move(from); }
+    return *this;
+  }
+  #endif
+  static const ::google::protobuf::Descriptor* descriptor();
+  static const DeleteRangeRequest& default_instance();
 
-    inline DeleteRangeRequest & operator=(DeleteRangeRequest && from) noexcept
-    {
-        if (GetArenaNoVirtual() == from.GetArenaNoVirtual())
-        {
-            if (this != &from)
-                InternalSwap(&from);
-        }
-        else
-        {
-            CopyFrom(from);
-        }
-        return *this;
-    }
-#endif
-    static const ::google::protobuf::Descriptor * descriptor();
-    static const DeleteRangeRequest &             default_instance();
+  static void InitAsDefaultInstance();  // FOR INTERNAL USE ONLY
+  static inline const DeleteRangeRequest* internal_default_instance() {
+    return reinterpret_cast<const DeleteRangeRequest*>(
+               &_DeleteRangeRequest_default_instance_);
+  }
+  static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
+    6;
 
-    static void                              InitAsDefaultInstance(); // FOR INTERNAL USE ONLY
-    static inline const DeleteRangeRequest * internal_default_instance()
-    {
-        return reinterpret_cast<const DeleteRangeRequest *>(&_DeleteRangeRequest_default_instance_);
-    }
-    static PROTOBUF_CONSTEXPR int const kIndexInFileMessages = 6;
+  void Swap(DeleteRangeRequest* other);
+  friend void swap(DeleteRangeRequest& a, DeleteRangeRequest& b) {
+    a.Swap(&b);
+  }
 
-    void        Swap(DeleteRangeRequest * other);
-    friend void swap(DeleteRangeRequest & a, DeleteRangeRequest & b) { a.Swap(&b); }
+  // implements Message ----------------------------------------------
 
-    // implements Message ----------------------------------------------
+  inline DeleteRangeRequest* New() const PROTOBUF_FINAL { return New(NULL); }
 
-    inline DeleteRangeRequest * New() const PROTOBUF_FINAL { return New(NULL); }
+  DeleteRangeRequest* New(::google::protobuf::Arena* arena) const PROTOBUF_FINAL;
+  void CopyFrom(const ::google::protobuf::Message& from) PROTOBUF_FINAL;
+  void MergeFrom(const ::google::protobuf::Message& from) PROTOBUF_FINAL;
+  void CopyFrom(const DeleteRangeRequest& from);
+  void MergeFrom(const DeleteRangeRequest& from);
+  void Clear() PROTOBUF_FINAL;
+  bool IsInitialized() const PROTOBUF_FINAL;
 
-    DeleteRangeRequest * New(::google::protobuf::Arena * arena) const PROTOBUF_FINAL;
-    void                 CopyFrom(const ::google::protobuf::Message & from) PROTOBUF_FINAL;
-    void                 MergeFrom(const ::google::protobuf::Message & from) PROTOBUF_FINAL;
-    void                 CopyFrom(const DeleteRangeRequest & from);
-    void                 MergeFrom(const DeleteRangeRequest & from);
-    void                 Clear() PROTOBUF_FINAL;
-    bool                 IsInitialized() const PROTOBUF_FINAL;
+  size_t ByteSizeLong() const PROTOBUF_FINAL;
+  bool MergePartialFromCodedStream(
+      ::google::protobuf::io::CodedInputStream* input) PROTOBUF_FINAL;
+  void SerializeWithCachedSizes(
+      ::google::protobuf::io::CodedOutputStream* output) const PROTOBUF_FINAL;
+  ::google::protobuf::uint8* InternalSerializeWithCachedSizesToArray(
+      bool deterministic, ::google::protobuf::uint8* target) const PROTOBUF_FINAL;
+  int GetCachedSize() const PROTOBUF_FINAL { return _cached_size_; }
+  private:
+  void SharedCtor();
+  void SharedDtor();
+  void SetCachedSize(int size) const PROTOBUF_FINAL;
+  void InternalSwap(DeleteRangeRequest* other);
+  private:
+  inline ::google::protobuf::Arena* GetArenaNoVirtual() const {
+    return NULL;
+  }
+  inline void* MaybeArenaPtr() const {
+    return NULL;
+  }
+  public:
 
-    size_t                      ByteSizeLong() const PROTOBUF_FINAL;
-    bool                        MergePartialFromCodedStream(::google::protobuf::io::CodedInputStream * input) PROTOBUF_FINAL;
-    void                        SerializeWithCachedSizes(::google::protobuf::io::CodedOutputStream * output) const PROTOBUF_FINAL;
-    ::google::protobuf::uint8 * InternalSerializeWithCachedSizesToArray(bool                        deterministic,
-                                                                        ::google::protobuf::uint8 * target) const PROTOBUF_FINAL;
-    int                         GetCachedSize() const PROTOBUF_FINAL { return _cached_size_; }
+  ::google::protobuf::Metadata GetMetadata() const PROTOBUF_FINAL;
 
-private:
-    void SharedCtor();
-    void SharedDtor();
-    void SetCachedSize(int size) const PROTOBUF_FINAL;
-    void InternalSwap(DeleteRangeRequest * other);
+  // nested types ----------------------------------------------------
 
-private:
-    inline ::google::protobuf::Arena * GetArenaNoVirtual() const { return NULL; }
-    inline void *                      MaybeArenaPtr() const { return NULL; }
+  // accessors -------------------------------------------------------
 
-public:
-    ::google::protobuf::Metadata GetMetadata() const PROTOBUF_FINAL;
+  // string cf = 1;
+  void clear_cf();
+  static const int kCfFieldNumber = 1;
+  const ::std::string& cf() const;
+  void set_cf(const ::std::string& value);
+  #if LANG_CXX11
+  void set_cf(::std::string&& value);
+  #endif
+  void set_cf(const char* value);
+  void set_cf(const char* value, size_t size);
+  ::std::string* mutable_cf();
+  ::std::string* release_cf();
+  void set_allocated_cf(::std::string* cf);
 
-    // nested types ----------------------------------------------------
+  // bytes start_key = 2;
+  void clear_start_key();
+  static const int kStartKeyFieldNumber = 2;
+  const ::std::string& start_key() const;
+  void set_start_key(const ::std::string& value);
+  #if LANG_CXX11
+  void set_start_key(::std::string&& value);
+  #endif
+  void set_start_key(const char* value);
+  void set_start_key(const void* value, size_t size);
+  ::std::string* mutable_start_key();
+  ::std::string* release_start_key();
+  void set_allocated_start_key(::std::string* start_key);
 
-    // accessors -------------------------------------------------------
+  // bytes end_key = 3;
+  void clear_end_key();
+  static const int kEndKeyFieldNumber = 3;
+  const ::std::string& end_key() const;
+  void set_end_key(const ::std::string& value);
+  #if LANG_CXX11
+  void set_end_key(::std::string&& value);
+  #endif
+  void set_end_key(const char* value);
+  void set_end_key(const void* value, size_t size);
+  ::std::string* mutable_end_key();
+  ::std::string* release_end_key();
+  void set_allocated_end_key(::std::string* end_key);
 
-    // string cf = 1;
-    void                  clear_cf();
-    static const int      kCfFieldNumber = 1;
-    const ::std::string & cf() const;
-    void                  set_cf(const ::std::string & value);
-#if LANG_CXX11
-    void set_cf(::std::string && value);
-#endif
-    void            set_cf(const char * value);
-    void            set_cf(const char * value, size_t size);
-    ::std::string * mutable_cf();
-    ::std::string * release_cf();
-    void            set_allocated_cf(::std::string * cf);
+  // @@protoc_insertion_point(class_scope:raft_cmdpb.DeleteRangeRequest)
+ private:
 
-    // bytes start_key = 2;
-    void                  clear_start_key();
-    static const int      kStartKeyFieldNumber = 2;
-    const ::std::string & start_key() const;
-    void                  set_start_key(const ::std::string & value);
-#if LANG_CXX11
-    void set_start_key(::std::string && value);
-#endif
-    void            set_start_key(const char * value);
-    void            set_start_key(const void * value, size_t size);
-    ::std::string * mutable_start_key();
-    ::std::string * release_start_key();
-    void            set_allocated_start_key(::std::string * start_key);
-
-    // bytes end_key = 3;
-    void                  clear_end_key();
-    static const int      kEndKeyFieldNumber = 3;
-    const ::std::string & end_key() const;
-    void                  set_end_key(const ::std::string & value);
-#if LANG_CXX11
-    void set_end_key(::std::string && value);
-#endif
-    void            set_end_key(const char * value);
-    void            set_end_key(const void * value, size_t size);
-    ::std::string * mutable_end_key();
-    ::std::string * release_end_key();
-    void            set_allocated_end_key(::std::string * end_key);
-
-    // @@protoc_insertion_point(class_scope:raft_cmdpb.DeleteRangeRequest)
-private:
-    ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
-    ::google::protobuf::internal::ArenaStringPtr            cf_;
-    ::google::protobuf::internal::ArenaStringPtr            start_key_;
-    ::google::protobuf::internal::ArenaStringPtr            end_key_;
-    mutable int                                             _cached_size_;
-    friend struct ::protobuf_raft_5fcmdpb_2eproto::TableStruct;
-    friend void ::protobuf_raft_5fcmdpb_2eproto::InitDefaultsDeleteRangeRequestImpl();
+  ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
+  ::google::protobuf::internal::ArenaStringPtr cf_;
+  ::google::protobuf::internal::ArenaStringPtr start_key_;
+  ::google::protobuf::internal::ArenaStringPtr end_key_;
+  mutable int _cached_size_;
+  friend struct ::protobuf_raft_5fcmdpb_2eproto::TableStruct;
+  friend void ::protobuf_raft_5fcmdpb_2eproto::InitDefaultsDeleteRangeRequestImpl();
 };
 // -------------------------------------------------------------------
 
-class DeleteRangeResponse
-    : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:raft_cmdpb.DeleteRangeResponse) */
-{
-public:
-    DeleteRangeResponse();
-    virtual ~DeleteRangeResponse();
+class DeleteRangeResponse : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:raft_cmdpb.DeleteRangeResponse) */ {
+ public:
+  DeleteRangeResponse();
+  virtual ~DeleteRangeResponse();
 
-    DeleteRangeResponse(const DeleteRangeResponse & from);
+  DeleteRangeResponse(const DeleteRangeResponse& from);
 
-    inline DeleteRangeResponse & operator=(const DeleteRangeResponse & from)
-    {
-        CopyFrom(from);
-        return *this;
+  inline DeleteRangeResponse& operator=(const DeleteRangeResponse& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  #if LANG_CXX11
+  DeleteRangeResponse(DeleteRangeResponse&& from) noexcept
+    : DeleteRangeResponse() {
+    *this = ::std::move(from);
+  }
+
+  inline DeleteRangeResponse& operator=(DeleteRangeResponse&& from) noexcept {
+    if (GetArenaNoVirtual() == from.GetArenaNoVirtual()) {
+      if (this != &from) InternalSwap(&from);
+    } else {
+      CopyFrom(from);
     }
-#if LANG_CXX11
-    DeleteRangeResponse(DeleteRangeResponse && from) noexcept : DeleteRangeResponse() { *this = ::std::move(from); }
+    return *this;
+  }
+  #endif
+  static const ::google::protobuf::Descriptor* descriptor();
+  static const DeleteRangeResponse& default_instance();
 
-    inline DeleteRangeResponse & operator=(DeleteRangeResponse && from) noexcept
-    {
-        if (GetArenaNoVirtual() == from.GetArenaNoVirtual())
-        {
-            if (this != &from)
-                InternalSwap(&from);
-        }
-        else
-        {
-            CopyFrom(from);
-        }
-        return *this;
-    }
-#endif
-    static const ::google::protobuf::Descriptor * descriptor();
-    static const DeleteRangeResponse &            default_instance();
+  static void InitAsDefaultInstance();  // FOR INTERNAL USE ONLY
+  static inline const DeleteRangeResponse* internal_default_instance() {
+    return reinterpret_cast<const DeleteRangeResponse*>(
+               &_DeleteRangeResponse_default_instance_);
+  }
+  static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
+    7;
 
-    static void                               InitAsDefaultInstance(); // FOR INTERNAL USE ONLY
-    static inline const DeleteRangeResponse * internal_default_instance()
-    {
-        return reinterpret_cast<const DeleteRangeResponse *>(&_DeleteRangeResponse_default_instance_);
-    }
-    static PROTOBUF_CONSTEXPR int const kIndexInFileMessages = 7;
+  void Swap(DeleteRangeResponse* other);
+  friend void swap(DeleteRangeResponse& a, DeleteRangeResponse& b) {
+    a.Swap(&b);
+  }
 
-    void        Swap(DeleteRangeResponse * other);
-    friend void swap(DeleteRangeResponse & a, DeleteRangeResponse & b) { a.Swap(&b); }
+  // implements Message ----------------------------------------------
 
-    // implements Message ----------------------------------------------
+  inline DeleteRangeResponse* New() const PROTOBUF_FINAL { return New(NULL); }
 
-    inline DeleteRangeResponse * New() const PROTOBUF_FINAL { return New(NULL); }
+  DeleteRangeResponse* New(::google::protobuf::Arena* arena) const PROTOBUF_FINAL;
+  void CopyFrom(const ::google::protobuf::Message& from) PROTOBUF_FINAL;
+  void MergeFrom(const ::google::protobuf::Message& from) PROTOBUF_FINAL;
+  void CopyFrom(const DeleteRangeResponse& from);
+  void MergeFrom(const DeleteRangeResponse& from);
+  void Clear() PROTOBUF_FINAL;
+  bool IsInitialized() const PROTOBUF_FINAL;
 
-    DeleteRangeResponse * New(::google::protobuf::Arena * arena) const PROTOBUF_FINAL;
-    void                  CopyFrom(const ::google::protobuf::Message & from) PROTOBUF_FINAL;
-    void                  MergeFrom(const ::google::protobuf::Message & from) PROTOBUF_FINAL;
-    void                  CopyFrom(const DeleteRangeResponse & from);
-    void                  MergeFrom(const DeleteRangeResponse & from);
-    void                  Clear() PROTOBUF_FINAL;
-    bool                  IsInitialized() const PROTOBUF_FINAL;
+  size_t ByteSizeLong() const PROTOBUF_FINAL;
+  bool MergePartialFromCodedStream(
+      ::google::protobuf::io::CodedInputStream* input) PROTOBUF_FINAL;
+  void SerializeWithCachedSizes(
+      ::google::protobuf::io::CodedOutputStream* output) const PROTOBUF_FINAL;
+  ::google::protobuf::uint8* InternalSerializeWithCachedSizesToArray(
+      bool deterministic, ::google::protobuf::uint8* target) const PROTOBUF_FINAL;
+  int GetCachedSize() const PROTOBUF_FINAL { return _cached_size_; }
+  private:
+  void SharedCtor();
+  void SharedDtor();
+  void SetCachedSize(int size) const PROTOBUF_FINAL;
+  void InternalSwap(DeleteRangeResponse* other);
+  private:
+  inline ::google::protobuf::Arena* GetArenaNoVirtual() const {
+    return NULL;
+  }
+  inline void* MaybeArenaPtr() const {
+    return NULL;
+  }
+  public:
 
-    size_t                      ByteSizeLong() const PROTOBUF_FINAL;
-    bool                        MergePartialFromCodedStream(::google::protobuf::io::CodedInputStream * input) PROTOBUF_FINAL;
-    void                        SerializeWithCachedSizes(::google::protobuf::io::CodedOutputStream * output) const PROTOBUF_FINAL;
-    ::google::protobuf::uint8 * InternalSerializeWithCachedSizesToArray(bool                        deterministic,
-                                                                        ::google::protobuf::uint8 * target) const PROTOBUF_FINAL;
-    int                         GetCachedSize() const PROTOBUF_FINAL { return _cached_size_; }
+  ::google::protobuf::Metadata GetMetadata() const PROTOBUF_FINAL;
 
-private:
-    void SharedCtor();
-    void SharedDtor();
-    void SetCachedSize(int size) const PROTOBUF_FINAL;
-    void InternalSwap(DeleteRangeResponse * other);
+  // nested types ----------------------------------------------------
 
-private:
-    inline ::google::protobuf::Arena * GetArenaNoVirtual() const { return NULL; }
-    inline void *                      MaybeArenaPtr() const { return NULL; }
+  // accessors -------------------------------------------------------
 
-public:
-    ::google::protobuf::Metadata GetMetadata() const PROTOBUF_FINAL;
+  // @@protoc_insertion_point(class_scope:raft_cmdpb.DeleteRangeResponse)
+ private:
 
-    // nested types ----------------------------------------------------
-
-    // accessors -------------------------------------------------------
-
-    // @@protoc_insertion_point(class_scope:raft_cmdpb.DeleteRangeResponse)
-private:
-    ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
-    mutable int                                             _cached_size_;
-    friend struct ::protobuf_raft_5fcmdpb_2eproto::TableStruct;
-    friend void ::protobuf_raft_5fcmdpb_2eproto::InitDefaultsDeleteRangeResponseImpl();
+  ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
+  mutable int _cached_size_;
+  friend struct ::protobuf_raft_5fcmdpb_2eproto::TableStruct;
+  friend void ::protobuf_raft_5fcmdpb_2eproto::InitDefaultsDeleteRangeResponseImpl();
 };
 // -------------------------------------------------------------------
 
-class SnapRequest : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:raft_cmdpb.SnapRequest) */
-{
-public:
-    SnapRequest();
-    virtual ~SnapRequest();
+class SnapRequest : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:raft_cmdpb.SnapRequest) */ {
+ public:
+  SnapRequest();
+  virtual ~SnapRequest();
 
-    SnapRequest(const SnapRequest & from);
+  SnapRequest(const SnapRequest& from);
 
-    inline SnapRequest & operator=(const SnapRequest & from)
-    {
-        CopyFrom(from);
-        return *this;
+  inline SnapRequest& operator=(const SnapRequest& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  #if LANG_CXX11
+  SnapRequest(SnapRequest&& from) noexcept
+    : SnapRequest() {
+    *this = ::std::move(from);
+  }
+
+  inline SnapRequest& operator=(SnapRequest&& from) noexcept {
+    if (GetArenaNoVirtual() == from.GetArenaNoVirtual()) {
+      if (this != &from) InternalSwap(&from);
+    } else {
+      CopyFrom(from);
     }
-#if LANG_CXX11
-    SnapRequest(SnapRequest && from) noexcept : SnapRequest() { *this = ::std::move(from); }
+    return *this;
+  }
+  #endif
+  static const ::google::protobuf::Descriptor* descriptor();
+  static const SnapRequest& default_instance();
 
-    inline SnapRequest & operator=(SnapRequest && from) noexcept
-    {
-        if (GetArenaNoVirtual() == from.GetArenaNoVirtual())
-        {
-            if (this != &from)
-                InternalSwap(&from);
-        }
-        else
-        {
-            CopyFrom(from);
-        }
-        return *this;
-    }
-#endif
-    static const ::google::protobuf::Descriptor * descriptor();
-    static const SnapRequest &                    default_instance();
+  static void InitAsDefaultInstance();  // FOR INTERNAL USE ONLY
+  static inline const SnapRequest* internal_default_instance() {
+    return reinterpret_cast<const SnapRequest*>(
+               &_SnapRequest_default_instance_);
+  }
+  static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
+    8;
 
-    static void                       InitAsDefaultInstance(); // FOR INTERNAL USE ONLY
-    static inline const SnapRequest * internal_default_instance()
-    {
-        return reinterpret_cast<const SnapRequest *>(&_SnapRequest_default_instance_);
-    }
-    static PROTOBUF_CONSTEXPR int const kIndexInFileMessages = 8;
+  void Swap(SnapRequest* other);
+  friend void swap(SnapRequest& a, SnapRequest& b) {
+    a.Swap(&b);
+  }
 
-    void        Swap(SnapRequest * other);
-    friend void swap(SnapRequest & a, SnapRequest & b) { a.Swap(&b); }
+  // implements Message ----------------------------------------------
 
-    // implements Message ----------------------------------------------
+  inline SnapRequest* New() const PROTOBUF_FINAL { return New(NULL); }
 
-    inline SnapRequest * New() const PROTOBUF_FINAL { return New(NULL); }
+  SnapRequest* New(::google::protobuf::Arena* arena) const PROTOBUF_FINAL;
+  void CopyFrom(const ::google::protobuf::Message& from) PROTOBUF_FINAL;
+  void MergeFrom(const ::google::protobuf::Message& from) PROTOBUF_FINAL;
+  void CopyFrom(const SnapRequest& from);
+  void MergeFrom(const SnapRequest& from);
+  void Clear() PROTOBUF_FINAL;
+  bool IsInitialized() const PROTOBUF_FINAL;
 
-    SnapRequest * New(::google::protobuf::Arena * arena) const PROTOBUF_FINAL;
-    void          CopyFrom(const ::google::protobuf::Message & from) PROTOBUF_FINAL;
-    void          MergeFrom(const ::google::protobuf::Message & from) PROTOBUF_FINAL;
-    void          CopyFrom(const SnapRequest & from);
-    void          MergeFrom(const SnapRequest & from);
-    void          Clear() PROTOBUF_FINAL;
-    bool          IsInitialized() const PROTOBUF_FINAL;
+  size_t ByteSizeLong() const PROTOBUF_FINAL;
+  bool MergePartialFromCodedStream(
+      ::google::protobuf::io::CodedInputStream* input) PROTOBUF_FINAL;
+  void SerializeWithCachedSizes(
+      ::google::protobuf::io::CodedOutputStream* output) const PROTOBUF_FINAL;
+  ::google::protobuf::uint8* InternalSerializeWithCachedSizesToArray(
+      bool deterministic, ::google::protobuf::uint8* target) const PROTOBUF_FINAL;
+  int GetCachedSize() const PROTOBUF_FINAL { return _cached_size_; }
+  private:
+  void SharedCtor();
+  void SharedDtor();
+  void SetCachedSize(int size) const PROTOBUF_FINAL;
+  void InternalSwap(SnapRequest* other);
+  private:
+  inline ::google::protobuf::Arena* GetArenaNoVirtual() const {
+    return NULL;
+  }
+  inline void* MaybeArenaPtr() const {
+    return NULL;
+  }
+  public:
 
-    size_t                      ByteSizeLong() const PROTOBUF_FINAL;
-    bool                        MergePartialFromCodedStream(::google::protobuf::io::CodedInputStream * input) PROTOBUF_FINAL;
-    void                        SerializeWithCachedSizes(::google::protobuf::io::CodedOutputStream * output) const PROTOBUF_FINAL;
-    ::google::protobuf::uint8 * InternalSerializeWithCachedSizesToArray(bool                        deterministic,
-                                                                        ::google::protobuf::uint8 * target) const PROTOBUF_FINAL;
-    int                         GetCachedSize() const PROTOBUF_FINAL { return _cached_size_; }
+  ::google::protobuf::Metadata GetMetadata() const PROTOBUF_FINAL;
 
-private:
-    void SharedCtor();
-    void SharedDtor();
-    void SetCachedSize(int size) const PROTOBUF_FINAL;
-    void InternalSwap(SnapRequest * other);
+  // nested types ----------------------------------------------------
 
-private:
-    inline ::google::protobuf::Arena * GetArenaNoVirtual() const { return NULL; }
-    inline void *                      MaybeArenaPtr() const { return NULL; }
+  // accessors -------------------------------------------------------
 
-public:
-    ::google::protobuf::Metadata GetMetadata() const PROTOBUF_FINAL;
+  // @@protoc_insertion_point(class_scope:raft_cmdpb.SnapRequest)
+ private:
 
-    // nested types ----------------------------------------------------
-
-    // accessors -------------------------------------------------------
-
-    // @@protoc_insertion_point(class_scope:raft_cmdpb.SnapRequest)
-private:
-    ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
-    mutable int                                             _cached_size_;
-    friend struct ::protobuf_raft_5fcmdpb_2eproto::TableStruct;
-    friend void ::protobuf_raft_5fcmdpb_2eproto::InitDefaultsSnapRequestImpl();
+  ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
+  mutable int _cached_size_;
+  friend struct ::protobuf_raft_5fcmdpb_2eproto::TableStruct;
+  friend void ::protobuf_raft_5fcmdpb_2eproto::InitDefaultsSnapRequestImpl();
 };
 // -------------------------------------------------------------------
 
-class SnapResponse : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:raft_cmdpb.SnapResponse) */
-{
-public:
-    SnapResponse();
-    virtual ~SnapResponse();
+class SnapResponse : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:raft_cmdpb.SnapResponse) */ {
+ public:
+  SnapResponse();
+  virtual ~SnapResponse();
 
-    SnapResponse(const SnapResponse & from);
+  SnapResponse(const SnapResponse& from);
 
-    inline SnapResponse & operator=(const SnapResponse & from)
-    {
-        CopyFrom(from);
-        return *this;
+  inline SnapResponse& operator=(const SnapResponse& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  #if LANG_CXX11
+  SnapResponse(SnapResponse&& from) noexcept
+    : SnapResponse() {
+    *this = ::std::move(from);
+  }
+
+  inline SnapResponse& operator=(SnapResponse&& from) noexcept {
+    if (GetArenaNoVirtual() == from.GetArenaNoVirtual()) {
+      if (this != &from) InternalSwap(&from);
+    } else {
+      CopyFrom(from);
     }
-#if LANG_CXX11
-    SnapResponse(SnapResponse && from) noexcept : SnapResponse() { *this = ::std::move(from); }
+    return *this;
+  }
+  #endif
+  static const ::google::protobuf::Descriptor* descriptor();
+  static const SnapResponse& default_instance();
 
-    inline SnapResponse & operator=(SnapResponse && from) noexcept
-    {
-        if (GetArenaNoVirtual() == from.GetArenaNoVirtual())
-        {
-            if (this != &from)
-                InternalSwap(&from);
-        }
-        else
-        {
-            CopyFrom(from);
-        }
-        return *this;
-    }
-#endif
-    static const ::google::protobuf::Descriptor * descriptor();
-    static const SnapResponse &                   default_instance();
+  static void InitAsDefaultInstance();  // FOR INTERNAL USE ONLY
+  static inline const SnapResponse* internal_default_instance() {
+    return reinterpret_cast<const SnapResponse*>(
+               &_SnapResponse_default_instance_);
+  }
+  static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
+    9;
 
-    static void                        InitAsDefaultInstance(); // FOR INTERNAL USE ONLY
-    static inline const SnapResponse * internal_default_instance()
-    {
-        return reinterpret_cast<const SnapResponse *>(&_SnapResponse_default_instance_);
-    }
-    static PROTOBUF_CONSTEXPR int const kIndexInFileMessages = 9;
+  void Swap(SnapResponse* other);
+  friend void swap(SnapResponse& a, SnapResponse& b) {
+    a.Swap(&b);
+  }
 
-    void        Swap(SnapResponse * other);
-    friend void swap(SnapResponse & a, SnapResponse & b) { a.Swap(&b); }
+  // implements Message ----------------------------------------------
 
-    // implements Message ----------------------------------------------
+  inline SnapResponse* New() const PROTOBUF_FINAL { return New(NULL); }
 
-    inline SnapResponse * New() const PROTOBUF_FINAL { return New(NULL); }
+  SnapResponse* New(::google::protobuf::Arena* arena) const PROTOBUF_FINAL;
+  void CopyFrom(const ::google::protobuf::Message& from) PROTOBUF_FINAL;
+  void MergeFrom(const ::google::protobuf::Message& from) PROTOBUF_FINAL;
+  void CopyFrom(const SnapResponse& from);
+  void MergeFrom(const SnapResponse& from);
+  void Clear() PROTOBUF_FINAL;
+  bool IsInitialized() const PROTOBUF_FINAL;
 
-    SnapResponse * New(::google::protobuf::Arena * arena) const PROTOBUF_FINAL;
-    void           CopyFrom(const ::google::protobuf::Message & from) PROTOBUF_FINAL;
-    void           MergeFrom(const ::google::protobuf::Message & from) PROTOBUF_FINAL;
-    void           CopyFrom(const SnapResponse & from);
-    void           MergeFrom(const SnapResponse & from);
-    void           Clear() PROTOBUF_FINAL;
-    bool           IsInitialized() const PROTOBUF_FINAL;
+  size_t ByteSizeLong() const PROTOBUF_FINAL;
+  bool MergePartialFromCodedStream(
+      ::google::protobuf::io::CodedInputStream* input) PROTOBUF_FINAL;
+  void SerializeWithCachedSizes(
+      ::google::protobuf::io::CodedOutputStream* output) const PROTOBUF_FINAL;
+  ::google::protobuf::uint8* InternalSerializeWithCachedSizesToArray(
+      bool deterministic, ::google::protobuf::uint8* target) const PROTOBUF_FINAL;
+  int GetCachedSize() const PROTOBUF_FINAL { return _cached_size_; }
+  private:
+  void SharedCtor();
+  void SharedDtor();
+  void SetCachedSize(int size) const PROTOBUF_FINAL;
+  void InternalSwap(SnapResponse* other);
+  private:
+  inline ::google::protobuf::Arena* GetArenaNoVirtual() const {
+    return NULL;
+  }
+  inline void* MaybeArenaPtr() const {
+    return NULL;
+  }
+  public:
 
-    size_t                      ByteSizeLong() const PROTOBUF_FINAL;
-    bool                        MergePartialFromCodedStream(::google::protobuf::io::CodedInputStream * input) PROTOBUF_FINAL;
-    void                        SerializeWithCachedSizes(::google::protobuf::io::CodedOutputStream * output) const PROTOBUF_FINAL;
-    ::google::protobuf::uint8 * InternalSerializeWithCachedSizesToArray(bool                        deterministic,
-                                                                        ::google::protobuf::uint8 * target) const PROTOBUF_FINAL;
-    int                         GetCachedSize() const PROTOBUF_FINAL { return _cached_size_; }
+  ::google::protobuf::Metadata GetMetadata() const PROTOBUF_FINAL;
 
-private:
-    void SharedCtor();
-    void SharedDtor();
-    void SetCachedSize(int size) const PROTOBUF_FINAL;
-    void InternalSwap(SnapResponse * other);
+  // nested types ----------------------------------------------------
 
-private:
-    inline ::google::protobuf::Arena * GetArenaNoVirtual() const { return NULL; }
-    inline void *                      MaybeArenaPtr() const { return NULL; }
+  // accessors -------------------------------------------------------
 
-public:
-    ::google::protobuf::Metadata GetMetadata() const PROTOBUF_FINAL;
+  // .metapb.Region region = 1;
+  bool has_region() const;
+  void clear_region();
+  static const int kRegionFieldNumber = 1;
+  const ::metapb::Region& region() const;
+  ::metapb::Region* release_region();
+  ::metapb::Region* mutable_region();
+  void set_allocated_region(::metapb::Region* region);
 
-    // nested types ----------------------------------------------------
+  // @@protoc_insertion_point(class_scope:raft_cmdpb.SnapResponse)
+ private:
 
-    // accessors -------------------------------------------------------
-
-    // .metapb.Region region = 1;
-    bool                     has_region() const;
-    void                     clear_region();
-    static const int         kRegionFieldNumber = 1;
-    const ::metapb::Region & region() const;
-    ::metapb::Region *       release_region();
-    ::metapb::Region *       mutable_region();
-    void                     set_allocated_region(::metapb::Region * region);
-
-    // @@protoc_insertion_point(class_scope:raft_cmdpb.SnapResponse)
-private:
-    ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
-    ::metapb::Region *                                      region_;
-    mutable int                                             _cached_size_;
-    friend struct ::protobuf_raft_5fcmdpb_2eproto::TableStruct;
-    friend void ::protobuf_raft_5fcmdpb_2eproto::InitDefaultsSnapResponseImpl();
+  ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
+  ::metapb::Region* region_;
+  mutable int _cached_size_;
+  friend struct ::protobuf_raft_5fcmdpb_2eproto::TableStruct;
+  friend void ::protobuf_raft_5fcmdpb_2eproto::InitDefaultsSnapResponseImpl();
 };
 // -------------------------------------------------------------------
 
-class PrewriteRequest : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:raft_cmdpb.PrewriteRequest) */
-{
-public:
-    PrewriteRequest();
-    virtual ~PrewriteRequest();
+class PrewriteRequest : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:raft_cmdpb.PrewriteRequest) */ {
+ public:
+  PrewriteRequest();
+  virtual ~PrewriteRequest();
 
-    PrewriteRequest(const PrewriteRequest & from);
+  PrewriteRequest(const PrewriteRequest& from);
 
-    inline PrewriteRequest & operator=(const PrewriteRequest & from)
-    {
-        CopyFrom(from);
-        return *this;
+  inline PrewriteRequest& operator=(const PrewriteRequest& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  #if LANG_CXX11
+  PrewriteRequest(PrewriteRequest&& from) noexcept
+    : PrewriteRequest() {
+    *this = ::std::move(from);
+  }
+
+  inline PrewriteRequest& operator=(PrewriteRequest&& from) noexcept {
+    if (GetArenaNoVirtual() == from.GetArenaNoVirtual()) {
+      if (this != &from) InternalSwap(&from);
+    } else {
+      CopyFrom(from);
     }
-#if LANG_CXX11
-    PrewriteRequest(PrewriteRequest && from) noexcept : PrewriteRequest() { *this = ::std::move(from); }
+    return *this;
+  }
+  #endif
+  static const ::google::protobuf::Descriptor* descriptor();
+  static const PrewriteRequest& default_instance();
 
-    inline PrewriteRequest & operator=(PrewriteRequest && from) noexcept
-    {
-        if (GetArenaNoVirtual() == from.GetArenaNoVirtual())
-        {
-            if (this != &from)
-                InternalSwap(&from);
-        }
-        else
-        {
-            CopyFrom(from);
-        }
-        return *this;
-    }
-#endif
-    static const ::google::protobuf::Descriptor * descriptor();
-    static const PrewriteRequest &                default_instance();
+  static void InitAsDefaultInstance();  // FOR INTERNAL USE ONLY
+  static inline const PrewriteRequest* internal_default_instance() {
+    return reinterpret_cast<const PrewriteRequest*>(
+               &_PrewriteRequest_default_instance_);
+  }
+  static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
+    10;
 
-    static void                           InitAsDefaultInstance(); // FOR INTERNAL USE ONLY
-    static inline const PrewriteRequest * internal_default_instance()
-    {
-        return reinterpret_cast<const PrewriteRequest *>(&_PrewriteRequest_default_instance_);
-    }
-    static PROTOBUF_CONSTEXPR int const kIndexInFileMessages = 10;
+  void Swap(PrewriteRequest* other);
+  friend void swap(PrewriteRequest& a, PrewriteRequest& b) {
+    a.Swap(&b);
+  }
 
-    void        Swap(PrewriteRequest * other);
-    friend void swap(PrewriteRequest & a, PrewriteRequest & b) { a.Swap(&b); }
+  // implements Message ----------------------------------------------
 
-    // implements Message ----------------------------------------------
+  inline PrewriteRequest* New() const PROTOBUF_FINAL { return New(NULL); }
 
-    inline PrewriteRequest * New() const PROTOBUF_FINAL { return New(NULL); }
+  PrewriteRequest* New(::google::protobuf::Arena* arena) const PROTOBUF_FINAL;
+  void CopyFrom(const ::google::protobuf::Message& from) PROTOBUF_FINAL;
+  void MergeFrom(const ::google::protobuf::Message& from) PROTOBUF_FINAL;
+  void CopyFrom(const PrewriteRequest& from);
+  void MergeFrom(const PrewriteRequest& from);
+  void Clear() PROTOBUF_FINAL;
+  bool IsInitialized() const PROTOBUF_FINAL;
 
-    PrewriteRequest * New(::google::protobuf::Arena * arena) const PROTOBUF_FINAL;
-    void              CopyFrom(const ::google::protobuf::Message & from) PROTOBUF_FINAL;
-    void              MergeFrom(const ::google::protobuf::Message & from) PROTOBUF_FINAL;
-    void              CopyFrom(const PrewriteRequest & from);
-    void              MergeFrom(const PrewriteRequest & from);
-    void              Clear() PROTOBUF_FINAL;
-    bool              IsInitialized() const PROTOBUF_FINAL;
+  size_t ByteSizeLong() const PROTOBUF_FINAL;
+  bool MergePartialFromCodedStream(
+      ::google::protobuf::io::CodedInputStream* input) PROTOBUF_FINAL;
+  void SerializeWithCachedSizes(
+      ::google::protobuf::io::CodedOutputStream* output) const PROTOBUF_FINAL;
+  ::google::protobuf::uint8* InternalSerializeWithCachedSizesToArray(
+      bool deterministic, ::google::protobuf::uint8* target) const PROTOBUF_FINAL;
+  int GetCachedSize() const PROTOBUF_FINAL { return _cached_size_; }
+  private:
+  void SharedCtor();
+  void SharedDtor();
+  void SetCachedSize(int size) const PROTOBUF_FINAL;
+  void InternalSwap(PrewriteRequest* other);
+  private:
+  inline ::google::protobuf::Arena* GetArenaNoVirtual() const {
+    return NULL;
+  }
+  inline void* MaybeArenaPtr() const {
+    return NULL;
+  }
+  public:
 
-    size_t                      ByteSizeLong() const PROTOBUF_FINAL;
-    bool                        MergePartialFromCodedStream(::google::protobuf::io::CodedInputStream * input) PROTOBUF_FINAL;
-    void                        SerializeWithCachedSizes(::google::protobuf::io::CodedOutputStream * output) const PROTOBUF_FINAL;
-    ::google::protobuf::uint8 * InternalSerializeWithCachedSizesToArray(bool                        deterministic,
-                                                                        ::google::protobuf::uint8 * target) const PROTOBUF_FINAL;
-    int                         GetCachedSize() const PROTOBUF_FINAL { return _cached_size_; }
+  ::google::protobuf::Metadata GetMetadata() const PROTOBUF_FINAL;
 
-private:
-    void SharedCtor();
-    void SharedDtor();
-    void SetCachedSize(int size) const PROTOBUF_FINAL;
-    void InternalSwap(PrewriteRequest * other);
+  // nested types ----------------------------------------------------
 
-private:
-    inline ::google::protobuf::Arena * GetArenaNoVirtual() const { return NULL; }
-    inline void *                      MaybeArenaPtr() const { return NULL; }
+  // accessors -------------------------------------------------------
 
-public:
-    ::google::protobuf::Metadata GetMetadata() const PROTOBUF_FINAL;
+  // bytes key = 1;
+  void clear_key();
+  static const int kKeyFieldNumber = 1;
+  const ::std::string& key() const;
+  void set_key(const ::std::string& value);
+  #if LANG_CXX11
+  void set_key(::std::string&& value);
+  #endif
+  void set_key(const char* value);
+  void set_key(const void* value, size_t size);
+  ::std::string* mutable_key();
+  ::std::string* release_key();
+  void set_allocated_key(::std::string* key);
 
-    // nested types ----------------------------------------------------
+  // bytes value = 2;
+  void clear_value();
+  static const int kValueFieldNumber = 2;
+  const ::std::string& value() const;
+  void set_value(const ::std::string& value);
+  #if LANG_CXX11
+  void set_value(::std::string&& value);
+  #endif
+  void set_value(const char* value);
+  void set_value(const void* value, size_t size);
+  ::std::string* mutable_value();
+  ::std::string* release_value();
+  void set_allocated_value(::std::string* value);
 
-    // accessors -------------------------------------------------------
+  // bytes lock = 3;
+  void clear_lock();
+  static const int kLockFieldNumber = 3;
+  const ::std::string& lock() const;
+  void set_lock(const ::std::string& value);
+  #if LANG_CXX11
+  void set_lock(::std::string&& value);
+  #endif
+  void set_lock(const char* value);
+  void set_lock(const void* value, size_t size);
+  ::std::string* mutable_lock();
+  ::std::string* release_lock();
+  void set_allocated_lock(::std::string* lock);
 
-    // bytes key = 1;
-    void                  clear_key();
-    static const int      kKeyFieldNumber = 1;
-    const ::std::string & key() const;
-    void                  set_key(const ::std::string & value);
-#if LANG_CXX11
-    void set_key(::std::string && value);
-#endif
-    void            set_key(const char * value);
-    void            set_key(const void * value, size_t size);
-    ::std::string * mutable_key();
-    ::std::string * release_key();
-    void            set_allocated_key(::std::string * key);
+  // @@protoc_insertion_point(class_scope:raft_cmdpb.PrewriteRequest)
+ private:
 
-    // bytes value = 2;
-    void                  clear_value();
-    static const int      kValueFieldNumber = 2;
-    const ::std::string & value() const;
-    void                  set_value(const ::std::string & value);
-#if LANG_CXX11
-    void set_value(::std::string && value);
-#endif
-    void            set_value(const char * value);
-    void            set_value(const void * value, size_t size);
-    ::std::string * mutable_value();
-    ::std::string * release_value();
-    void            set_allocated_value(::std::string * value);
-
-    // bytes lock = 3;
-    void                  clear_lock();
-    static const int      kLockFieldNumber = 3;
-    const ::std::string & lock() const;
-    void                  set_lock(const ::std::string & value);
-#if LANG_CXX11
-    void set_lock(::std::string && value);
-#endif
-    void            set_lock(const char * value);
-    void            set_lock(const void * value, size_t size);
-    ::std::string * mutable_lock();
-    ::std::string * release_lock();
-    void            set_allocated_lock(::std::string * lock);
-
-    // @@protoc_insertion_point(class_scope:raft_cmdpb.PrewriteRequest)
-private:
-    ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
-    ::google::protobuf::internal::ArenaStringPtr            key_;
-    ::google::protobuf::internal::ArenaStringPtr            value_;
-    ::google::protobuf::internal::ArenaStringPtr            lock_;
-    mutable int                                             _cached_size_;
-    friend struct ::protobuf_raft_5fcmdpb_2eproto::TableStruct;
-    friend void ::protobuf_raft_5fcmdpb_2eproto::InitDefaultsPrewriteRequestImpl();
+  ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
+  ::google::protobuf::internal::ArenaStringPtr key_;
+  ::google::protobuf::internal::ArenaStringPtr value_;
+  ::google::protobuf::internal::ArenaStringPtr lock_;
+  mutable int _cached_size_;
+  friend struct ::protobuf_raft_5fcmdpb_2eproto::TableStruct;
+  friend void ::protobuf_raft_5fcmdpb_2eproto::InitDefaultsPrewriteRequestImpl();
 };
 // -------------------------------------------------------------------
 
-class PrewriteResponse : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:raft_cmdpb.PrewriteResponse) */
-{
-public:
-    PrewriteResponse();
-    virtual ~PrewriteResponse();
+class PrewriteResponse : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:raft_cmdpb.PrewriteResponse) */ {
+ public:
+  PrewriteResponse();
+  virtual ~PrewriteResponse();
 
-    PrewriteResponse(const PrewriteResponse & from);
+  PrewriteResponse(const PrewriteResponse& from);
 
-    inline PrewriteResponse & operator=(const PrewriteResponse & from)
-    {
-        CopyFrom(from);
-        return *this;
+  inline PrewriteResponse& operator=(const PrewriteResponse& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  #if LANG_CXX11
+  PrewriteResponse(PrewriteResponse&& from) noexcept
+    : PrewriteResponse() {
+    *this = ::std::move(from);
+  }
+
+  inline PrewriteResponse& operator=(PrewriteResponse&& from) noexcept {
+    if (GetArenaNoVirtual() == from.GetArenaNoVirtual()) {
+      if (this != &from) InternalSwap(&from);
+    } else {
+      CopyFrom(from);
     }
-#if LANG_CXX11
-    PrewriteResponse(PrewriteResponse && from) noexcept : PrewriteResponse() { *this = ::std::move(from); }
+    return *this;
+  }
+  #endif
+  static const ::google::protobuf::Descriptor* descriptor();
+  static const PrewriteResponse& default_instance();
 
-    inline PrewriteResponse & operator=(PrewriteResponse && from) noexcept
-    {
-        if (GetArenaNoVirtual() == from.GetArenaNoVirtual())
-        {
-            if (this != &from)
-                InternalSwap(&from);
-        }
-        else
-        {
-            CopyFrom(from);
-        }
-        return *this;
-    }
-#endif
-    static const ::google::protobuf::Descriptor * descriptor();
-    static const PrewriteResponse &               default_instance();
+  static void InitAsDefaultInstance();  // FOR INTERNAL USE ONLY
+  static inline const PrewriteResponse* internal_default_instance() {
+    return reinterpret_cast<const PrewriteResponse*>(
+               &_PrewriteResponse_default_instance_);
+  }
+  static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
+    11;
 
-    static void                            InitAsDefaultInstance(); // FOR INTERNAL USE ONLY
-    static inline const PrewriteResponse * internal_default_instance()
-    {
-        return reinterpret_cast<const PrewriteResponse *>(&_PrewriteResponse_default_instance_);
-    }
-    static PROTOBUF_CONSTEXPR int const kIndexInFileMessages = 11;
+  void Swap(PrewriteResponse* other);
+  friend void swap(PrewriteResponse& a, PrewriteResponse& b) {
+    a.Swap(&b);
+  }
 
-    void        Swap(PrewriteResponse * other);
-    friend void swap(PrewriteResponse & a, PrewriteResponse & b) { a.Swap(&b); }
+  // implements Message ----------------------------------------------
 
-    // implements Message ----------------------------------------------
+  inline PrewriteResponse* New() const PROTOBUF_FINAL { return New(NULL); }
 
-    inline PrewriteResponse * New() const PROTOBUF_FINAL { return New(NULL); }
+  PrewriteResponse* New(::google::protobuf::Arena* arena) const PROTOBUF_FINAL;
+  void CopyFrom(const ::google::protobuf::Message& from) PROTOBUF_FINAL;
+  void MergeFrom(const ::google::protobuf::Message& from) PROTOBUF_FINAL;
+  void CopyFrom(const PrewriteResponse& from);
+  void MergeFrom(const PrewriteResponse& from);
+  void Clear() PROTOBUF_FINAL;
+  bool IsInitialized() const PROTOBUF_FINAL;
 
-    PrewriteResponse * New(::google::protobuf::Arena * arena) const PROTOBUF_FINAL;
-    void               CopyFrom(const ::google::protobuf::Message & from) PROTOBUF_FINAL;
-    void               MergeFrom(const ::google::protobuf::Message & from) PROTOBUF_FINAL;
-    void               CopyFrom(const PrewriteResponse & from);
-    void               MergeFrom(const PrewriteResponse & from);
-    void               Clear() PROTOBUF_FINAL;
-    bool               IsInitialized() const PROTOBUF_FINAL;
+  size_t ByteSizeLong() const PROTOBUF_FINAL;
+  bool MergePartialFromCodedStream(
+      ::google::protobuf::io::CodedInputStream* input) PROTOBUF_FINAL;
+  void SerializeWithCachedSizes(
+      ::google::protobuf::io::CodedOutputStream* output) const PROTOBUF_FINAL;
+  ::google::protobuf::uint8* InternalSerializeWithCachedSizesToArray(
+      bool deterministic, ::google::protobuf::uint8* target) const PROTOBUF_FINAL;
+  int GetCachedSize() const PROTOBUF_FINAL { return _cached_size_; }
+  private:
+  void SharedCtor();
+  void SharedDtor();
+  void SetCachedSize(int size) const PROTOBUF_FINAL;
+  void InternalSwap(PrewriteResponse* other);
+  private:
+  inline ::google::protobuf::Arena* GetArenaNoVirtual() const {
+    return NULL;
+  }
+  inline void* MaybeArenaPtr() const {
+    return NULL;
+  }
+  public:
 
-    size_t                      ByteSizeLong() const PROTOBUF_FINAL;
-    bool                        MergePartialFromCodedStream(::google::protobuf::io::CodedInputStream * input) PROTOBUF_FINAL;
-    void                        SerializeWithCachedSizes(::google::protobuf::io::CodedOutputStream * output) const PROTOBUF_FINAL;
-    ::google::protobuf::uint8 * InternalSerializeWithCachedSizesToArray(bool                        deterministic,
-                                                                        ::google::protobuf::uint8 * target) const PROTOBUF_FINAL;
-    int                         GetCachedSize() const PROTOBUF_FINAL { return _cached_size_; }
+  ::google::protobuf::Metadata GetMetadata() const PROTOBUF_FINAL;
 
-private:
-    void SharedCtor();
-    void SharedDtor();
-    void SetCachedSize(int size) const PROTOBUF_FINAL;
-    void InternalSwap(PrewriteResponse * other);
+  // nested types ----------------------------------------------------
 
-private:
-    inline ::google::protobuf::Arena * GetArenaNoVirtual() const { return NULL; }
-    inline void *                      MaybeArenaPtr() const { return NULL; }
+  // accessors -------------------------------------------------------
 
-public:
-    ::google::protobuf::Metadata GetMetadata() const PROTOBUF_FINAL;
+  // @@protoc_insertion_point(class_scope:raft_cmdpb.PrewriteResponse)
+ private:
 
-    // nested types ----------------------------------------------------
-
-    // accessors -------------------------------------------------------
-
-    // @@protoc_insertion_point(class_scope:raft_cmdpb.PrewriteResponse)
-private:
-    ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
-    mutable int                                             _cached_size_;
-    friend struct ::protobuf_raft_5fcmdpb_2eproto::TableStruct;
-    friend void ::protobuf_raft_5fcmdpb_2eproto::InitDefaultsPrewriteResponseImpl();
+  ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
+  mutable int _cached_size_;
+  friend struct ::protobuf_raft_5fcmdpb_2eproto::TableStruct;
+  friend void ::protobuf_raft_5fcmdpb_2eproto::InitDefaultsPrewriteResponseImpl();
 };
 // -------------------------------------------------------------------
 
-class IngestSSTRequest : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:raft_cmdpb.IngestSSTRequest) */
-{
-public:
-    IngestSSTRequest();
-    virtual ~IngestSSTRequest();
+class IngestSSTRequest : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:raft_cmdpb.IngestSSTRequest) */ {
+ public:
+  IngestSSTRequest();
+  virtual ~IngestSSTRequest();
 
-    IngestSSTRequest(const IngestSSTRequest & from);
+  IngestSSTRequest(const IngestSSTRequest& from);
 
-    inline IngestSSTRequest & operator=(const IngestSSTRequest & from)
-    {
-        CopyFrom(from);
-        return *this;
+  inline IngestSSTRequest& operator=(const IngestSSTRequest& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  #if LANG_CXX11
+  IngestSSTRequest(IngestSSTRequest&& from) noexcept
+    : IngestSSTRequest() {
+    *this = ::std::move(from);
+  }
+
+  inline IngestSSTRequest& operator=(IngestSSTRequest&& from) noexcept {
+    if (GetArenaNoVirtual() == from.GetArenaNoVirtual()) {
+      if (this != &from) InternalSwap(&from);
+    } else {
+      CopyFrom(from);
     }
-#if LANG_CXX11
-    IngestSSTRequest(IngestSSTRequest && from) noexcept : IngestSSTRequest() { *this = ::std::move(from); }
+    return *this;
+  }
+  #endif
+  static const ::google::protobuf::Descriptor* descriptor();
+  static const IngestSSTRequest& default_instance();
 
-    inline IngestSSTRequest & operator=(IngestSSTRequest && from) noexcept
-    {
-        if (GetArenaNoVirtual() == from.GetArenaNoVirtual())
-        {
-            if (this != &from)
-                InternalSwap(&from);
-        }
-        else
-        {
-            CopyFrom(from);
-        }
-        return *this;
-    }
-#endif
-    static const ::google::protobuf::Descriptor * descriptor();
-    static const IngestSSTRequest &               default_instance();
+  static void InitAsDefaultInstance();  // FOR INTERNAL USE ONLY
+  static inline const IngestSSTRequest* internal_default_instance() {
+    return reinterpret_cast<const IngestSSTRequest*>(
+               &_IngestSSTRequest_default_instance_);
+  }
+  static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
+    12;
 
-    static void                            InitAsDefaultInstance(); // FOR INTERNAL USE ONLY
-    static inline const IngestSSTRequest * internal_default_instance()
-    {
-        return reinterpret_cast<const IngestSSTRequest *>(&_IngestSSTRequest_default_instance_);
-    }
-    static PROTOBUF_CONSTEXPR int const kIndexInFileMessages = 12;
+  void Swap(IngestSSTRequest* other);
+  friend void swap(IngestSSTRequest& a, IngestSSTRequest& b) {
+    a.Swap(&b);
+  }
 
-    void        Swap(IngestSSTRequest * other);
-    friend void swap(IngestSSTRequest & a, IngestSSTRequest & b) { a.Swap(&b); }
+  // implements Message ----------------------------------------------
 
-    // implements Message ----------------------------------------------
+  inline IngestSSTRequest* New() const PROTOBUF_FINAL { return New(NULL); }
 
-    inline IngestSSTRequest * New() const PROTOBUF_FINAL { return New(NULL); }
+  IngestSSTRequest* New(::google::protobuf::Arena* arena) const PROTOBUF_FINAL;
+  void CopyFrom(const ::google::protobuf::Message& from) PROTOBUF_FINAL;
+  void MergeFrom(const ::google::protobuf::Message& from) PROTOBUF_FINAL;
+  void CopyFrom(const IngestSSTRequest& from);
+  void MergeFrom(const IngestSSTRequest& from);
+  void Clear() PROTOBUF_FINAL;
+  bool IsInitialized() const PROTOBUF_FINAL;
 
-    IngestSSTRequest * New(::google::protobuf::Arena * arena) const PROTOBUF_FINAL;
-    void               CopyFrom(const ::google::protobuf::Message & from) PROTOBUF_FINAL;
-    void               MergeFrom(const ::google::protobuf::Message & from) PROTOBUF_FINAL;
-    void               CopyFrom(const IngestSSTRequest & from);
-    void               MergeFrom(const IngestSSTRequest & from);
-    void               Clear() PROTOBUF_FINAL;
-    bool               IsInitialized() const PROTOBUF_FINAL;
+  size_t ByteSizeLong() const PROTOBUF_FINAL;
+  bool MergePartialFromCodedStream(
+      ::google::protobuf::io::CodedInputStream* input) PROTOBUF_FINAL;
+  void SerializeWithCachedSizes(
+      ::google::protobuf::io::CodedOutputStream* output) const PROTOBUF_FINAL;
+  ::google::protobuf::uint8* InternalSerializeWithCachedSizesToArray(
+      bool deterministic, ::google::protobuf::uint8* target) const PROTOBUF_FINAL;
+  int GetCachedSize() const PROTOBUF_FINAL { return _cached_size_; }
+  private:
+  void SharedCtor();
+  void SharedDtor();
+  void SetCachedSize(int size) const PROTOBUF_FINAL;
+  void InternalSwap(IngestSSTRequest* other);
+  private:
+  inline ::google::protobuf::Arena* GetArenaNoVirtual() const {
+    return NULL;
+  }
+  inline void* MaybeArenaPtr() const {
+    return NULL;
+  }
+  public:
 
-    size_t                      ByteSizeLong() const PROTOBUF_FINAL;
-    bool                        MergePartialFromCodedStream(::google::protobuf::io::CodedInputStream * input) PROTOBUF_FINAL;
-    void                        SerializeWithCachedSizes(::google::protobuf::io::CodedOutputStream * output) const PROTOBUF_FINAL;
-    ::google::protobuf::uint8 * InternalSerializeWithCachedSizesToArray(bool                        deterministic,
-                                                                        ::google::protobuf::uint8 * target) const PROTOBUF_FINAL;
-    int                         GetCachedSize() const PROTOBUF_FINAL { return _cached_size_; }
+  ::google::protobuf::Metadata GetMetadata() const PROTOBUF_FINAL;
 
-private:
-    void SharedCtor();
-    void SharedDtor();
-    void SetCachedSize(int size) const PROTOBUF_FINAL;
-    void InternalSwap(IngestSSTRequest * other);
+  // nested types ----------------------------------------------------
 
-private:
-    inline ::google::protobuf::Arena * GetArenaNoVirtual() const { return NULL; }
-    inline void *                      MaybeArenaPtr() const { return NULL; }
+  // accessors -------------------------------------------------------
 
-public:
-    ::google::protobuf::Metadata GetMetadata() const PROTOBUF_FINAL;
+  // .import_sstpb.SSTMeta sst = 1;
+  bool has_sst() const;
+  void clear_sst();
+  static const int kSstFieldNumber = 1;
+  const ::import_sstpb::SSTMeta& sst() const;
+  ::import_sstpb::SSTMeta* release_sst();
+  ::import_sstpb::SSTMeta* mutable_sst();
+  void set_allocated_sst(::import_sstpb::SSTMeta* sst);
 
-    // nested types ----------------------------------------------------
+  // @@protoc_insertion_point(class_scope:raft_cmdpb.IngestSSTRequest)
+ private:
 
-    // accessors -------------------------------------------------------
-
-    // .import_sstpb.SSTMeta sst = 1;
-    bool                            has_sst() const;
-    void                            clear_sst();
-    static const int                kSstFieldNumber = 1;
-    const ::import_sstpb::SSTMeta & sst() const;
-    ::import_sstpb::SSTMeta *       release_sst();
-    ::import_sstpb::SSTMeta *       mutable_sst();
-    void                            set_allocated_sst(::import_sstpb::SSTMeta * sst);
-
-    // @@protoc_insertion_point(class_scope:raft_cmdpb.IngestSSTRequest)
-private:
-    ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
-    ::import_sstpb::SSTMeta *                               sst_;
-    mutable int                                             _cached_size_;
-    friend struct ::protobuf_raft_5fcmdpb_2eproto::TableStruct;
-    friend void ::protobuf_raft_5fcmdpb_2eproto::InitDefaultsIngestSSTRequestImpl();
+  ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
+  ::import_sstpb::SSTMeta* sst_;
+  mutable int _cached_size_;
+  friend struct ::protobuf_raft_5fcmdpb_2eproto::TableStruct;
+  friend void ::protobuf_raft_5fcmdpb_2eproto::InitDefaultsIngestSSTRequestImpl();
 };
 // -------------------------------------------------------------------
 
-class IngestSSTResponse : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:raft_cmdpb.IngestSSTResponse) */
-{
-public:
-    IngestSSTResponse();
-    virtual ~IngestSSTResponse();
+class IngestSSTResponse : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:raft_cmdpb.IngestSSTResponse) */ {
+ public:
+  IngestSSTResponse();
+  virtual ~IngestSSTResponse();
 
-    IngestSSTResponse(const IngestSSTResponse & from);
+  IngestSSTResponse(const IngestSSTResponse& from);
 
-    inline IngestSSTResponse & operator=(const IngestSSTResponse & from)
-    {
-        CopyFrom(from);
-        return *this;
+  inline IngestSSTResponse& operator=(const IngestSSTResponse& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  #if LANG_CXX11
+  IngestSSTResponse(IngestSSTResponse&& from) noexcept
+    : IngestSSTResponse() {
+    *this = ::std::move(from);
+  }
+
+  inline IngestSSTResponse& operator=(IngestSSTResponse&& from) noexcept {
+    if (GetArenaNoVirtual() == from.GetArenaNoVirtual()) {
+      if (this != &from) InternalSwap(&from);
+    } else {
+      CopyFrom(from);
     }
-#if LANG_CXX11
-    IngestSSTResponse(IngestSSTResponse && from) noexcept : IngestSSTResponse() { *this = ::std::move(from); }
+    return *this;
+  }
+  #endif
+  static const ::google::protobuf::Descriptor* descriptor();
+  static const IngestSSTResponse& default_instance();
 
-    inline IngestSSTResponse & operator=(IngestSSTResponse && from) noexcept
-    {
-        if (GetArenaNoVirtual() == from.GetArenaNoVirtual())
-        {
-            if (this != &from)
-                InternalSwap(&from);
-        }
-        else
-        {
-            CopyFrom(from);
-        }
-        return *this;
-    }
-#endif
-    static const ::google::protobuf::Descriptor * descriptor();
-    static const IngestSSTResponse &              default_instance();
+  static void InitAsDefaultInstance();  // FOR INTERNAL USE ONLY
+  static inline const IngestSSTResponse* internal_default_instance() {
+    return reinterpret_cast<const IngestSSTResponse*>(
+               &_IngestSSTResponse_default_instance_);
+  }
+  static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
+    13;
 
-    static void                             InitAsDefaultInstance(); // FOR INTERNAL USE ONLY
-    static inline const IngestSSTResponse * internal_default_instance()
-    {
-        return reinterpret_cast<const IngestSSTResponse *>(&_IngestSSTResponse_default_instance_);
-    }
-    static PROTOBUF_CONSTEXPR int const kIndexInFileMessages = 13;
+  void Swap(IngestSSTResponse* other);
+  friend void swap(IngestSSTResponse& a, IngestSSTResponse& b) {
+    a.Swap(&b);
+  }
 
-    void        Swap(IngestSSTResponse * other);
-    friend void swap(IngestSSTResponse & a, IngestSSTResponse & b) { a.Swap(&b); }
+  // implements Message ----------------------------------------------
 
-    // implements Message ----------------------------------------------
+  inline IngestSSTResponse* New() const PROTOBUF_FINAL { return New(NULL); }
 
-    inline IngestSSTResponse * New() const PROTOBUF_FINAL { return New(NULL); }
+  IngestSSTResponse* New(::google::protobuf::Arena* arena) const PROTOBUF_FINAL;
+  void CopyFrom(const ::google::protobuf::Message& from) PROTOBUF_FINAL;
+  void MergeFrom(const ::google::protobuf::Message& from) PROTOBUF_FINAL;
+  void CopyFrom(const IngestSSTResponse& from);
+  void MergeFrom(const IngestSSTResponse& from);
+  void Clear() PROTOBUF_FINAL;
+  bool IsInitialized() const PROTOBUF_FINAL;
 
-    IngestSSTResponse * New(::google::protobuf::Arena * arena) const PROTOBUF_FINAL;
-    void                CopyFrom(const ::google::protobuf::Message & from) PROTOBUF_FINAL;
-    void                MergeFrom(const ::google::protobuf::Message & from) PROTOBUF_FINAL;
-    void                CopyFrom(const IngestSSTResponse & from);
-    void                MergeFrom(const IngestSSTResponse & from);
-    void                Clear() PROTOBUF_FINAL;
-    bool                IsInitialized() const PROTOBUF_FINAL;
+  size_t ByteSizeLong() const PROTOBUF_FINAL;
+  bool MergePartialFromCodedStream(
+      ::google::protobuf::io::CodedInputStream* input) PROTOBUF_FINAL;
+  void SerializeWithCachedSizes(
+      ::google::protobuf::io::CodedOutputStream* output) const PROTOBUF_FINAL;
+  ::google::protobuf::uint8* InternalSerializeWithCachedSizesToArray(
+      bool deterministic, ::google::protobuf::uint8* target) const PROTOBUF_FINAL;
+  int GetCachedSize() const PROTOBUF_FINAL { return _cached_size_; }
+  private:
+  void SharedCtor();
+  void SharedDtor();
+  void SetCachedSize(int size) const PROTOBUF_FINAL;
+  void InternalSwap(IngestSSTResponse* other);
+  private:
+  inline ::google::protobuf::Arena* GetArenaNoVirtual() const {
+    return NULL;
+  }
+  inline void* MaybeArenaPtr() const {
+    return NULL;
+  }
+  public:
 
-    size_t                      ByteSizeLong() const PROTOBUF_FINAL;
-    bool                        MergePartialFromCodedStream(::google::protobuf::io::CodedInputStream * input) PROTOBUF_FINAL;
-    void                        SerializeWithCachedSizes(::google::protobuf::io::CodedOutputStream * output) const PROTOBUF_FINAL;
-    ::google::protobuf::uint8 * InternalSerializeWithCachedSizesToArray(bool                        deterministic,
-                                                                        ::google::protobuf::uint8 * target) const PROTOBUF_FINAL;
-    int                         GetCachedSize() const PROTOBUF_FINAL { return _cached_size_; }
+  ::google::protobuf::Metadata GetMetadata() const PROTOBUF_FINAL;
 
-private:
-    void SharedCtor();
-    void SharedDtor();
-    void SetCachedSize(int size) const PROTOBUF_FINAL;
-    void InternalSwap(IngestSSTResponse * other);
+  // nested types ----------------------------------------------------
 
-private:
-    inline ::google::protobuf::Arena * GetArenaNoVirtual() const { return NULL; }
-    inline void *                      MaybeArenaPtr() const { return NULL; }
+  // accessors -------------------------------------------------------
 
-public:
-    ::google::protobuf::Metadata GetMetadata() const PROTOBUF_FINAL;
+  // @@protoc_insertion_point(class_scope:raft_cmdpb.IngestSSTResponse)
+ private:
 
-    // nested types ----------------------------------------------------
-
-    // accessors -------------------------------------------------------
-
-    // @@protoc_insertion_point(class_scope:raft_cmdpb.IngestSSTResponse)
-private:
-    ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
-    mutable int                                             _cached_size_;
-    friend struct ::protobuf_raft_5fcmdpb_2eproto::TableStruct;
-    friend void ::protobuf_raft_5fcmdpb_2eproto::InitDefaultsIngestSSTResponseImpl();
+  ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
+  mutable int _cached_size_;
+  friend struct ::protobuf_raft_5fcmdpb_2eproto::TableStruct;
+  friend void ::protobuf_raft_5fcmdpb_2eproto::InitDefaultsIngestSSTResponseImpl();
 };
 // -------------------------------------------------------------------
 
-class Request : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:raft_cmdpb.Request) */
-{
-public:
-    Request();
-    virtual ~Request();
+class Request : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:raft_cmdpb.Request) */ {
+ public:
+  Request();
+  virtual ~Request();
 
-    Request(const Request & from);
+  Request(const Request& from);
 
-    inline Request & operator=(const Request & from)
-    {
-        CopyFrom(from);
-        return *this;
+  inline Request& operator=(const Request& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  #if LANG_CXX11
+  Request(Request&& from) noexcept
+    : Request() {
+    *this = ::std::move(from);
+  }
+
+  inline Request& operator=(Request&& from) noexcept {
+    if (GetArenaNoVirtual() == from.GetArenaNoVirtual()) {
+      if (this != &from) InternalSwap(&from);
+    } else {
+      CopyFrom(from);
     }
-#if LANG_CXX11
-    Request(Request && from) noexcept : Request() { *this = ::std::move(from); }
+    return *this;
+  }
+  #endif
+  static const ::google::protobuf::Descriptor* descriptor();
+  static const Request& default_instance();
 
-    inline Request & operator=(Request && from) noexcept
-    {
-        if (GetArenaNoVirtual() == from.GetArenaNoVirtual())
-        {
-            if (this != &from)
-                InternalSwap(&from);
-        }
-        else
-        {
-            CopyFrom(from);
-        }
-        return *this;
-    }
-#endif
-    static const ::google::protobuf::Descriptor * descriptor();
-    static const Request &                        default_instance();
+  static void InitAsDefaultInstance();  // FOR INTERNAL USE ONLY
+  static inline const Request* internal_default_instance() {
+    return reinterpret_cast<const Request*>(
+               &_Request_default_instance_);
+  }
+  static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
+    14;
 
-    static void                   InitAsDefaultInstance(); // FOR INTERNAL USE ONLY
-    static inline const Request * internal_default_instance() { return reinterpret_cast<const Request *>(&_Request_default_instance_); }
-    static PROTOBUF_CONSTEXPR int const kIndexInFileMessages = 14;
+  void Swap(Request* other);
+  friend void swap(Request& a, Request& b) {
+    a.Swap(&b);
+  }
 
-    void        Swap(Request * other);
-    friend void swap(Request & a, Request & b) { a.Swap(&b); }
+  // implements Message ----------------------------------------------
 
-    // implements Message ----------------------------------------------
+  inline Request* New() const PROTOBUF_FINAL { return New(NULL); }
 
-    inline Request * New() const PROTOBUF_FINAL { return New(NULL); }
+  Request* New(::google::protobuf::Arena* arena) const PROTOBUF_FINAL;
+  void CopyFrom(const ::google::protobuf::Message& from) PROTOBUF_FINAL;
+  void MergeFrom(const ::google::protobuf::Message& from) PROTOBUF_FINAL;
+  void CopyFrom(const Request& from);
+  void MergeFrom(const Request& from);
+  void Clear() PROTOBUF_FINAL;
+  bool IsInitialized() const PROTOBUF_FINAL;
 
-    Request * New(::google::protobuf::Arena * arena) const PROTOBUF_FINAL;
-    void      CopyFrom(const ::google::protobuf::Message & from) PROTOBUF_FINAL;
-    void      MergeFrom(const ::google::protobuf::Message & from) PROTOBUF_FINAL;
-    void      CopyFrom(const Request & from);
-    void      MergeFrom(const Request & from);
-    void      Clear() PROTOBUF_FINAL;
-    bool      IsInitialized() const PROTOBUF_FINAL;
+  size_t ByteSizeLong() const PROTOBUF_FINAL;
+  bool MergePartialFromCodedStream(
+      ::google::protobuf::io::CodedInputStream* input) PROTOBUF_FINAL;
+  void SerializeWithCachedSizes(
+      ::google::protobuf::io::CodedOutputStream* output) const PROTOBUF_FINAL;
+  ::google::protobuf::uint8* InternalSerializeWithCachedSizesToArray(
+      bool deterministic, ::google::protobuf::uint8* target) const PROTOBUF_FINAL;
+  int GetCachedSize() const PROTOBUF_FINAL { return _cached_size_; }
+  private:
+  void SharedCtor();
+  void SharedDtor();
+  void SetCachedSize(int size) const PROTOBUF_FINAL;
+  void InternalSwap(Request* other);
+  private:
+  inline ::google::protobuf::Arena* GetArenaNoVirtual() const {
+    return NULL;
+  }
+  inline void* MaybeArenaPtr() const {
+    return NULL;
+  }
+  public:
 
-    size_t                      ByteSizeLong() const PROTOBUF_FINAL;
-    bool                        MergePartialFromCodedStream(::google::protobuf::io::CodedInputStream * input) PROTOBUF_FINAL;
-    void                        SerializeWithCachedSizes(::google::protobuf::io::CodedOutputStream * output) const PROTOBUF_FINAL;
-    ::google::protobuf::uint8 * InternalSerializeWithCachedSizesToArray(bool                        deterministic,
-                                                                        ::google::protobuf::uint8 * target) const PROTOBUF_FINAL;
-    int                         GetCachedSize() const PROTOBUF_FINAL { return _cached_size_; }
+  ::google::protobuf::Metadata GetMetadata() const PROTOBUF_FINAL;
 
-private:
-    void SharedCtor();
-    void SharedDtor();
-    void SetCachedSize(int size) const PROTOBUF_FINAL;
-    void InternalSwap(Request * other);
+  // nested types ----------------------------------------------------
 
-private:
-    inline ::google::protobuf::Arena * GetArenaNoVirtual() const { return NULL; }
-    inline void *                      MaybeArenaPtr() const { return NULL; }
+  // accessors -------------------------------------------------------
 
-public:
-    ::google::protobuf::Metadata GetMetadata() const PROTOBUF_FINAL;
+  // .raft_cmdpb.GetRequest get = 2;
+  bool has_get() const;
+  void clear_get();
+  static const int kGetFieldNumber = 2;
+  const ::raft_cmdpb::GetRequest& get() const;
+  ::raft_cmdpb::GetRequest* release_get();
+  ::raft_cmdpb::GetRequest* mutable_get();
+  void set_allocated_get(::raft_cmdpb::GetRequest* get);
 
-    // nested types ----------------------------------------------------
+  // .raft_cmdpb.PutRequest put = 4;
+  bool has_put() const;
+  void clear_put();
+  static const int kPutFieldNumber = 4;
+  const ::raft_cmdpb::PutRequest& put() const;
+  ::raft_cmdpb::PutRequest* release_put();
+  ::raft_cmdpb::PutRequest* mutable_put();
+  void set_allocated_put(::raft_cmdpb::PutRequest* put);
 
-    // accessors -------------------------------------------------------
+  // .raft_cmdpb.DeleteRequest delete = 5;
+  bool has_delete_() const;
+  void clear_delete_();
+  static const int kDeleteFieldNumber = 5;
+  const ::raft_cmdpb::DeleteRequest& delete_() const;
+  ::raft_cmdpb::DeleteRequest* release_delete_();
+  ::raft_cmdpb::DeleteRequest* mutable_delete_();
+  void set_allocated_delete_(::raft_cmdpb::DeleteRequest* delete_);
 
-    // .raft_cmdpb.GetRequest get = 2;
-    bool                             has_get() const;
-    void                             clear_get();
-    static const int                 kGetFieldNumber = 2;
-    const ::raft_cmdpb::GetRequest & get() const;
-    ::raft_cmdpb::GetRequest *       release_get();
-    ::raft_cmdpb::GetRequest *       mutable_get();
-    void                             set_allocated_get(::raft_cmdpb::GetRequest * get);
+  // .raft_cmdpb.SnapRequest snap = 6;
+  bool has_snap() const;
+  void clear_snap();
+  static const int kSnapFieldNumber = 6;
+  const ::raft_cmdpb::SnapRequest& snap() const;
+  ::raft_cmdpb::SnapRequest* release_snap();
+  ::raft_cmdpb::SnapRequest* mutable_snap();
+  void set_allocated_snap(::raft_cmdpb::SnapRequest* snap);
 
-    // .raft_cmdpb.PutRequest put = 4;
-    bool                             has_put() const;
-    void                             clear_put();
-    static const int                 kPutFieldNumber = 4;
-    const ::raft_cmdpb::PutRequest & put() const;
-    ::raft_cmdpb::PutRequest *       release_put();
-    ::raft_cmdpb::PutRequest *       mutable_put();
-    void                             set_allocated_put(::raft_cmdpb::PutRequest * put);
+  // .raft_cmdpb.PrewriteRequest prewrite = 7;
+  bool has_prewrite() const;
+  void clear_prewrite();
+  static const int kPrewriteFieldNumber = 7;
+  const ::raft_cmdpb::PrewriteRequest& prewrite() const;
+  ::raft_cmdpb::PrewriteRequest* release_prewrite();
+  ::raft_cmdpb::PrewriteRequest* mutable_prewrite();
+  void set_allocated_prewrite(::raft_cmdpb::PrewriteRequest* prewrite);
 
-    // .raft_cmdpb.DeleteRequest delete = 5;
-    bool                                has_delete_() const;
-    void                                clear_delete_();
-    static const int                    kDeleteFieldNumber = 5;
-    const ::raft_cmdpb::DeleteRequest & delete_() const;
-    ::raft_cmdpb::DeleteRequest *       release_delete_();
-    ::raft_cmdpb::DeleteRequest *       mutable_delete_();
-    void                                set_allocated_delete_(::raft_cmdpb::DeleteRequest * delete_);
+  // .raft_cmdpb.DeleteRangeRequest delete_range = 8;
+  bool has_delete_range() const;
+  void clear_delete_range();
+  static const int kDeleteRangeFieldNumber = 8;
+  const ::raft_cmdpb::DeleteRangeRequest& delete_range() const;
+  ::raft_cmdpb::DeleteRangeRequest* release_delete_range();
+  ::raft_cmdpb::DeleteRangeRequest* mutable_delete_range();
+  void set_allocated_delete_range(::raft_cmdpb::DeleteRangeRequest* delete_range);
 
-    // .raft_cmdpb.SnapRequest snap = 6;
-    bool                              has_snap() const;
-    void                              clear_snap();
-    static const int                  kSnapFieldNumber = 6;
-    const ::raft_cmdpb::SnapRequest & snap() const;
-    ::raft_cmdpb::SnapRequest *       release_snap();
-    ::raft_cmdpb::SnapRequest *       mutable_snap();
-    void                              set_allocated_snap(::raft_cmdpb::SnapRequest * snap);
+  // .raft_cmdpb.IngestSSTRequest ingest_sst = 9;
+  bool has_ingest_sst() const;
+  void clear_ingest_sst();
+  static const int kIngestSstFieldNumber = 9;
+  const ::raft_cmdpb::IngestSSTRequest& ingest_sst() const;
+  ::raft_cmdpb::IngestSSTRequest* release_ingest_sst();
+  ::raft_cmdpb::IngestSSTRequest* mutable_ingest_sst();
+  void set_allocated_ingest_sst(::raft_cmdpb::IngestSSTRequest* ingest_sst);
 
-    // .raft_cmdpb.PrewriteRequest prewrite = 7;
-    bool                                  has_prewrite() const;
-    void                                  clear_prewrite();
-    static const int                      kPrewriteFieldNumber = 7;
-    const ::raft_cmdpb::PrewriteRequest & prewrite() const;
-    ::raft_cmdpb::PrewriteRequest *       release_prewrite();
-    ::raft_cmdpb::PrewriteRequest *       mutable_prewrite();
-    void                                  set_allocated_prewrite(::raft_cmdpb::PrewriteRequest * prewrite);
+  // .raft_cmdpb.CmdType cmd_type = 1;
+  void clear_cmd_type();
+  static const int kCmdTypeFieldNumber = 1;
+  ::raft_cmdpb::CmdType cmd_type() const;
+  void set_cmd_type(::raft_cmdpb::CmdType value);
 
-    // .raft_cmdpb.DeleteRangeRequest delete_range = 8;
-    bool                                     has_delete_range() const;
-    void                                     clear_delete_range();
-    static const int                         kDeleteRangeFieldNumber = 8;
-    const ::raft_cmdpb::DeleteRangeRequest & delete_range() const;
-    ::raft_cmdpb::DeleteRangeRequest *       release_delete_range();
-    ::raft_cmdpb::DeleteRangeRequest *       mutable_delete_range();
-    void                                     set_allocated_delete_range(::raft_cmdpb::DeleteRangeRequest * delete_range);
+  // @@protoc_insertion_point(class_scope:raft_cmdpb.Request)
+ private:
 
-    // .raft_cmdpb.IngestSSTRequest ingest_sst = 9;
-    bool                                   has_ingest_sst() const;
-    void                                   clear_ingest_sst();
-    static const int                       kIngestSstFieldNumber = 9;
-    const ::raft_cmdpb::IngestSSTRequest & ingest_sst() const;
-    ::raft_cmdpb::IngestSSTRequest *       release_ingest_sst();
-    ::raft_cmdpb::IngestSSTRequest *       mutable_ingest_sst();
-    void                                   set_allocated_ingest_sst(::raft_cmdpb::IngestSSTRequest * ingest_sst);
-
-    // .raft_cmdpb.CmdType cmd_type = 1;
-    void                  clear_cmd_type();
-    static const int      kCmdTypeFieldNumber = 1;
-    ::raft_cmdpb::CmdType cmd_type() const;
-    void                  set_cmd_type(::raft_cmdpb::CmdType value);
-
-    // @@protoc_insertion_point(class_scope:raft_cmdpb.Request)
-private:
-    ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
-    ::raft_cmdpb::GetRequest *                              get_;
-    ::raft_cmdpb::PutRequest *                              put_;
-    ::raft_cmdpb::DeleteRequest *                           delete__;
-    ::raft_cmdpb::SnapRequest *                             snap_;
-    ::raft_cmdpb::PrewriteRequest *                         prewrite_;
-    ::raft_cmdpb::DeleteRangeRequest *                      delete_range_;
-    ::raft_cmdpb::IngestSSTRequest *                        ingest_sst_;
-    int                                                     cmd_type_;
-    mutable int                                             _cached_size_;
-    friend struct ::protobuf_raft_5fcmdpb_2eproto::TableStruct;
-    friend void ::protobuf_raft_5fcmdpb_2eproto::InitDefaultsRequestImpl();
+  ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
+  ::raft_cmdpb::GetRequest* get_;
+  ::raft_cmdpb::PutRequest* put_;
+  ::raft_cmdpb::DeleteRequest* delete__;
+  ::raft_cmdpb::SnapRequest* snap_;
+  ::raft_cmdpb::PrewriteRequest* prewrite_;
+  ::raft_cmdpb::DeleteRangeRequest* delete_range_;
+  ::raft_cmdpb::IngestSSTRequest* ingest_sst_;
+  int cmd_type_;
+  mutable int _cached_size_;
+  friend struct ::protobuf_raft_5fcmdpb_2eproto::TableStruct;
+  friend void ::protobuf_raft_5fcmdpb_2eproto::InitDefaultsRequestImpl();
 };
 // -------------------------------------------------------------------
 
-class Response : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:raft_cmdpb.Response) */
-{
-public:
-    Response();
-    virtual ~Response();
+class Response : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:raft_cmdpb.Response) */ {
+ public:
+  Response();
+  virtual ~Response();
 
-    Response(const Response & from);
+  Response(const Response& from);
 
-    inline Response & operator=(const Response & from)
-    {
-        CopyFrom(from);
-        return *this;
+  inline Response& operator=(const Response& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  #if LANG_CXX11
+  Response(Response&& from) noexcept
+    : Response() {
+    *this = ::std::move(from);
+  }
+
+  inline Response& operator=(Response&& from) noexcept {
+    if (GetArenaNoVirtual() == from.GetArenaNoVirtual()) {
+      if (this != &from) InternalSwap(&from);
+    } else {
+      CopyFrom(from);
     }
-#if LANG_CXX11
-    Response(Response && from) noexcept : Response() { *this = ::std::move(from); }
+    return *this;
+  }
+  #endif
+  static const ::google::protobuf::Descriptor* descriptor();
+  static const Response& default_instance();
 
-    inline Response & operator=(Response && from) noexcept
-    {
-        if (GetArenaNoVirtual() == from.GetArenaNoVirtual())
-        {
-            if (this != &from)
-                InternalSwap(&from);
-        }
-        else
-        {
-            CopyFrom(from);
-        }
-        return *this;
-    }
-#endif
-    static const ::google::protobuf::Descriptor * descriptor();
-    static const Response &                       default_instance();
+  static void InitAsDefaultInstance();  // FOR INTERNAL USE ONLY
+  static inline const Response* internal_default_instance() {
+    return reinterpret_cast<const Response*>(
+               &_Response_default_instance_);
+  }
+  static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
+    15;
 
-    static void                    InitAsDefaultInstance(); // FOR INTERNAL USE ONLY
-    static inline const Response * internal_default_instance() { return reinterpret_cast<const Response *>(&_Response_default_instance_); }
-    static PROTOBUF_CONSTEXPR int const kIndexInFileMessages = 15;
+  void Swap(Response* other);
+  friend void swap(Response& a, Response& b) {
+    a.Swap(&b);
+  }
 
-    void        Swap(Response * other);
-    friend void swap(Response & a, Response & b) { a.Swap(&b); }
+  // implements Message ----------------------------------------------
 
-    // implements Message ----------------------------------------------
+  inline Response* New() const PROTOBUF_FINAL { return New(NULL); }
 
-    inline Response * New() const PROTOBUF_FINAL { return New(NULL); }
+  Response* New(::google::protobuf::Arena* arena) const PROTOBUF_FINAL;
+  void CopyFrom(const ::google::protobuf::Message& from) PROTOBUF_FINAL;
+  void MergeFrom(const ::google::protobuf::Message& from) PROTOBUF_FINAL;
+  void CopyFrom(const Response& from);
+  void MergeFrom(const Response& from);
+  void Clear() PROTOBUF_FINAL;
+  bool IsInitialized() const PROTOBUF_FINAL;
 
-    Response * New(::google::protobuf::Arena * arena) const PROTOBUF_FINAL;
-    void       CopyFrom(const ::google::protobuf::Message & from) PROTOBUF_FINAL;
-    void       MergeFrom(const ::google::protobuf::Message & from) PROTOBUF_FINAL;
-    void       CopyFrom(const Response & from);
-    void       MergeFrom(const Response & from);
-    void       Clear() PROTOBUF_FINAL;
-    bool       IsInitialized() const PROTOBUF_FINAL;
+  size_t ByteSizeLong() const PROTOBUF_FINAL;
+  bool MergePartialFromCodedStream(
+      ::google::protobuf::io::CodedInputStream* input) PROTOBUF_FINAL;
+  void SerializeWithCachedSizes(
+      ::google::protobuf::io::CodedOutputStream* output) const PROTOBUF_FINAL;
+  ::google::protobuf::uint8* InternalSerializeWithCachedSizesToArray(
+      bool deterministic, ::google::protobuf::uint8* target) const PROTOBUF_FINAL;
+  int GetCachedSize() const PROTOBUF_FINAL { return _cached_size_; }
+  private:
+  void SharedCtor();
+  void SharedDtor();
+  void SetCachedSize(int size) const PROTOBUF_FINAL;
+  void InternalSwap(Response* other);
+  private:
+  inline ::google::protobuf::Arena* GetArenaNoVirtual() const {
+    return NULL;
+  }
+  inline void* MaybeArenaPtr() const {
+    return NULL;
+  }
+  public:
 
-    size_t                      ByteSizeLong() const PROTOBUF_FINAL;
-    bool                        MergePartialFromCodedStream(::google::protobuf::io::CodedInputStream * input) PROTOBUF_FINAL;
-    void                        SerializeWithCachedSizes(::google::protobuf::io::CodedOutputStream * output) const PROTOBUF_FINAL;
-    ::google::protobuf::uint8 * InternalSerializeWithCachedSizesToArray(bool                        deterministic,
-                                                                        ::google::protobuf::uint8 * target) const PROTOBUF_FINAL;
-    int                         GetCachedSize() const PROTOBUF_FINAL { return _cached_size_; }
+  ::google::protobuf::Metadata GetMetadata() const PROTOBUF_FINAL;
 
-private:
-    void SharedCtor();
-    void SharedDtor();
-    void SetCachedSize(int size) const PROTOBUF_FINAL;
-    void InternalSwap(Response * other);
+  // nested types ----------------------------------------------------
 
-private:
-    inline ::google::protobuf::Arena * GetArenaNoVirtual() const { return NULL; }
-    inline void *                      MaybeArenaPtr() const { return NULL; }
+  // accessors -------------------------------------------------------
 
-public:
-    ::google::protobuf::Metadata GetMetadata() const PROTOBUF_FINAL;
+  // .raft_cmdpb.GetResponse get = 2;
+  bool has_get() const;
+  void clear_get();
+  static const int kGetFieldNumber = 2;
+  const ::raft_cmdpb::GetResponse& get() const;
+  ::raft_cmdpb::GetResponse* release_get();
+  ::raft_cmdpb::GetResponse* mutable_get();
+  void set_allocated_get(::raft_cmdpb::GetResponse* get);
 
-    // nested types ----------------------------------------------------
+  // .raft_cmdpb.PutResponse put = 4;
+  bool has_put() const;
+  void clear_put();
+  static const int kPutFieldNumber = 4;
+  const ::raft_cmdpb::PutResponse& put() const;
+  ::raft_cmdpb::PutResponse* release_put();
+  ::raft_cmdpb::PutResponse* mutable_put();
+  void set_allocated_put(::raft_cmdpb::PutResponse* put);
 
-    // accessors -------------------------------------------------------
+  // .raft_cmdpb.DeleteResponse delete = 5;
+  bool has_delete_() const;
+  void clear_delete_();
+  static const int kDeleteFieldNumber = 5;
+  const ::raft_cmdpb::DeleteResponse& delete_() const;
+  ::raft_cmdpb::DeleteResponse* release_delete_();
+  ::raft_cmdpb::DeleteResponse* mutable_delete_();
+  void set_allocated_delete_(::raft_cmdpb::DeleteResponse* delete_);
 
-    // .raft_cmdpb.GetResponse get = 2;
-    bool                              has_get() const;
-    void                              clear_get();
-    static const int                  kGetFieldNumber = 2;
-    const ::raft_cmdpb::GetResponse & get() const;
-    ::raft_cmdpb::GetResponse *       release_get();
-    ::raft_cmdpb::GetResponse *       mutable_get();
-    void                              set_allocated_get(::raft_cmdpb::GetResponse * get);
+  // .raft_cmdpb.SnapResponse snap = 6;
+  bool has_snap() const;
+  void clear_snap();
+  static const int kSnapFieldNumber = 6;
+  const ::raft_cmdpb::SnapResponse& snap() const;
+  ::raft_cmdpb::SnapResponse* release_snap();
+  ::raft_cmdpb::SnapResponse* mutable_snap();
+  void set_allocated_snap(::raft_cmdpb::SnapResponse* snap);
 
-    // .raft_cmdpb.PutResponse put = 4;
-    bool                              has_put() const;
-    void                              clear_put();
-    static const int                  kPutFieldNumber = 4;
-    const ::raft_cmdpb::PutResponse & put() const;
-    ::raft_cmdpb::PutResponse *       release_put();
-    ::raft_cmdpb::PutResponse *       mutable_put();
-    void                              set_allocated_put(::raft_cmdpb::PutResponse * put);
+  // .raft_cmdpb.PrewriteResponse prewrite = 7;
+  bool has_prewrite() const;
+  void clear_prewrite();
+  static const int kPrewriteFieldNumber = 7;
+  const ::raft_cmdpb::PrewriteResponse& prewrite() const;
+  ::raft_cmdpb::PrewriteResponse* release_prewrite();
+  ::raft_cmdpb::PrewriteResponse* mutable_prewrite();
+  void set_allocated_prewrite(::raft_cmdpb::PrewriteResponse* prewrite);
 
-    // .raft_cmdpb.DeleteResponse delete = 5;
-    bool                                 has_delete_() const;
-    void                                 clear_delete_();
-    static const int                     kDeleteFieldNumber = 5;
-    const ::raft_cmdpb::DeleteResponse & delete_() const;
-    ::raft_cmdpb::DeleteResponse *       release_delete_();
-    ::raft_cmdpb::DeleteResponse *       mutable_delete_();
-    void                                 set_allocated_delete_(::raft_cmdpb::DeleteResponse * delete_);
+  // .raft_cmdpb.DeleteRangeResponse delte_range = 8;
+  bool has_delte_range() const;
+  void clear_delte_range();
+  static const int kDelteRangeFieldNumber = 8;
+  const ::raft_cmdpb::DeleteRangeResponse& delte_range() const;
+  ::raft_cmdpb::DeleteRangeResponse* release_delte_range();
+  ::raft_cmdpb::DeleteRangeResponse* mutable_delte_range();
+  void set_allocated_delte_range(::raft_cmdpb::DeleteRangeResponse* delte_range);
 
-    // .raft_cmdpb.SnapResponse snap = 6;
-    bool                               has_snap() const;
-    void                               clear_snap();
-    static const int                   kSnapFieldNumber = 6;
-    const ::raft_cmdpb::SnapResponse & snap() const;
-    ::raft_cmdpb::SnapResponse *       release_snap();
-    ::raft_cmdpb::SnapResponse *       mutable_snap();
-    void                               set_allocated_snap(::raft_cmdpb::SnapResponse * snap);
+  // .raft_cmdpb.IngestSSTResponse ingest_sst = 9;
+  bool has_ingest_sst() const;
+  void clear_ingest_sst();
+  static const int kIngestSstFieldNumber = 9;
+  const ::raft_cmdpb::IngestSSTResponse& ingest_sst() const;
+  ::raft_cmdpb::IngestSSTResponse* release_ingest_sst();
+  ::raft_cmdpb::IngestSSTResponse* mutable_ingest_sst();
+  void set_allocated_ingest_sst(::raft_cmdpb::IngestSSTResponse* ingest_sst);
 
-    // .raft_cmdpb.PrewriteResponse prewrite = 7;
-    bool                                   has_prewrite() const;
-    void                                   clear_prewrite();
-    static const int                       kPrewriteFieldNumber = 7;
-    const ::raft_cmdpb::PrewriteResponse & prewrite() const;
-    ::raft_cmdpb::PrewriteResponse *       release_prewrite();
-    ::raft_cmdpb::PrewriteResponse *       mutable_prewrite();
-    void                                   set_allocated_prewrite(::raft_cmdpb::PrewriteResponse * prewrite);
+  // .raft_cmdpb.CmdType cmd_type = 1;
+  void clear_cmd_type();
+  static const int kCmdTypeFieldNumber = 1;
+  ::raft_cmdpb::CmdType cmd_type() const;
+  void set_cmd_type(::raft_cmdpb::CmdType value);
 
-    // .raft_cmdpb.DeleteRangeResponse delte_range = 8;
-    bool                                      has_delte_range() const;
-    void                                      clear_delte_range();
-    static const int                          kDelteRangeFieldNumber = 8;
-    const ::raft_cmdpb::DeleteRangeResponse & delte_range() const;
-    ::raft_cmdpb::DeleteRangeResponse *       release_delte_range();
-    ::raft_cmdpb::DeleteRangeResponse *       mutable_delte_range();
-    void                                      set_allocated_delte_range(::raft_cmdpb::DeleteRangeResponse * delte_range);
+  // @@protoc_insertion_point(class_scope:raft_cmdpb.Response)
+ private:
 
-    // .raft_cmdpb.IngestSSTResponse ingest_sst = 9;
-    bool                                    has_ingest_sst() const;
-    void                                    clear_ingest_sst();
-    static const int                        kIngestSstFieldNumber = 9;
-    const ::raft_cmdpb::IngestSSTResponse & ingest_sst() const;
-    ::raft_cmdpb::IngestSSTResponse *       release_ingest_sst();
-    ::raft_cmdpb::IngestSSTResponse *       mutable_ingest_sst();
-    void                                    set_allocated_ingest_sst(::raft_cmdpb::IngestSSTResponse * ingest_sst);
-
-    // .raft_cmdpb.CmdType cmd_type = 1;
-    void                  clear_cmd_type();
-    static const int      kCmdTypeFieldNumber = 1;
-    ::raft_cmdpb::CmdType cmd_type() const;
-    void                  set_cmd_type(::raft_cmdpb::CmdType value);
-
-    // @@protoc_insertion_point(class_scope:raft_cmdpb.Response)
-private:
-    ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
-    ::raft_cmdpb::GetResponse *                             get_;
-    ::raft_cmdpb::PutResponse *                             put_;
-    ::raft_cmdpb::DeleteResponse *                          delete__;
-    ::raft_cmdpb::SnapResponse *                            snap_;
-    ::raft_cmdpb::PrewriteResponse *                        prewrite_;
-    ::raft_cmdpb::DeleteRangeResponse *                     delte_range_;
-    ::raft_cmdpb::IngestSSTResponse *                       ingest_sst_;
-    int                                                     cmd_type_;
-    mutable int                                             _cached_size_;
-    friend struct ::protobuf_raft_5fcmdpb_2eproto::TableStruct;
-    friend void ::protobuf_raft_5fcmdpb_2eproto::InitDefaultsResponseImpl();
+  ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
+  ::raft_cmdpb::GetResponse* get_;
+  ::raft_cmdpb::PutResponse* put_;
+  ::raft_cmdpb::DeleteResponse* delete__;
+  ::raft_cmdpb::SnapResponse* snap_;
+  ::raft_cmdpb::PrewriteResponse* prewrite_;
+  ::raft_cmdpb::DeleteRangeResponse* delte_range_;
+  ::raft_cmdpb::IngestSSTResponse* ingest_sst_;
+  int cmd_type_;
+  mutable int _cached_size_;
+  friend struct ::protobuf_raft_5fcmdpb_2eproto::TableStruct;
+  friend void ::protobuf_raft_5fcmdpb_2eproto::InitDefaultsResponseImpl();
 };
 // -------------------------------------------------------------------
 
-class ChangePeerRequest : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:raft_cmdpb.ChangePeerRequest) */
-{
-public:
-    ChangePeerRequest();
-    virtual ~ChangePeerRequest();
+class ChangePeerRequest : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:raft_cmdpb.ChangePeerRequest) */ {
+ public:
+  ChangePeerRequest();
+  virtual ~ChangePeerRequest();
 
-    ChangePeerRequest(const ChangePeerRequest & from);
+  ChangePeerRequest(const ChangePeerRequest& from);
 
-    inline ChangePeerRequest & operator=(const ChangePeerRequest & from)
-    {
-        CopyFrom(from);
-        return *this;
+  inline ChangePeerRequest& operator=(const ChangePeerRequest& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  #if LANG_CXX11
+  ChangePeerRequest(ChangePeerRequest&& from) noexcept
+    : ChangePeerRequest() {
+    *this = ::std::move(from);
+  }
+
+  inline ChangePeerRequest& operator=(ChangePeerRequest&& from) noexcept {
+    if (GetArenaNoVirtual() == from.GetArenaNoVirtual()) {
+      if (this != &from) InternalSwap(&from);
+    } else {
+      CopyFrom(from);
     }
-#if LANG_CXX11
-    ChangePeerRequest(ChangePeerRequest && from) noexcept : ChangePeerRequest() { *this = ::std::move(from); }
+    return *this;
+  }
+  #endif
+  static const ::google::protobuf::Descriptor* descriptor();
+  static const ChangePeerRequest& default_instance();
 
-    inline ChangePeerRequest & operator=(ChangePeerRequest && from) noexcept
-    {
-        if (GetArenaNoVirtual() == from.GetArenaNoVirtual())
-        {
-            if (this != &from)
-                InternalSwap(&from);
-        }
-        else
-        {
-            CopyFrom(from);
-        }
-        return *this;
-    }
-#endif
-    static const ::google::protobuf::Descriptor * descriptor();
-    static const ChangePeerRequest &              default_instance();
+  static void InitAsDefaultInstance();  // FOR INTERNAL USE ONLY
+  static inline const ChangePeerRequest* internal_default_instance() {
+    return reinterpret_cast<const ChangePeerRequest*>(
+               &_ChangePeerRequest_default_instance_);
+  }
+  static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
+    16;
 
-    static void                             InitAsDefaultInstance(); // FOR INTERNAL USE ONLY
-    static inline const ChangePeerRequest * internal_default_instance()
-    {
-        return reinterpret_cast<const ChangePeerRequest *>(&_ChangePeerRequest_default_instance_);
-    }
-    static PROTOBUF_CONSTEXPR int const kIndexInFileMessages = 16;
+  void Swap(ChangePeerRequest* other);
+  friend void swap(ChangePeerRequest& a, ChangePeerRequest& b) {
+    a.Swap(&b);
+  }
 
-    void        Swap(ChangePeerRequest * other);
-    friend void swap(ChangePeerRequest & a, ChangePeerRequest & b) { a.Swap(&b); }
+  // implements Message ----------------------------------------------
 
-    // implements Message ----------------------------------------------
+  inline ChangePeerRequest* New() const PROTOBUF_FINAL { return New(NULL); }
 
-    inline ChangePeerRequest * New() const PROTOBUF_FINAL { return New(NULL); }
+  ChangePeerRequest* New(::google::protobuf::Arena* arena) const PROTOBUF_FINAL;
+  void CopyFrom(const ::google::protobuf::Message& from) PROTOBUF_FINAL;
+  void MergeFrom(const ::google::protobuf::Message& from) PROTOBUF_FINAL;
+  void CopyFrom(const ChangePeerRequest& from);
+  void MergeFrom(const ChangePeerRequest& from);
+  void Clear() PROTOBUF_FINAL;
+  bool IsInitialized() const PROTOBUF_FINAL;
 
-    ChangePeerRequest * New(::google::protobuf::Arena * arena) const PROTOBUF_FINAL;
-    void                CopyFrom(const ::google::protobuf::Message & from) PROTOBUF_FINAL;
-    void                MergeFrom(const ::google::protobuf::Message & from) PROTOBUF_FINAL;
-    void                CopyFrom(const ChangePeerRequest & from);
-    void                MergeFrom(const ChangePeerRequest & from);
-    void                Clear() PROTOBUF_FINAL;
-    bool                IsInitialized() const PROTOBUF_FINAL;
+  size_t ByteSizeLong() const PROTOBUF_FINAL;
+  bool MergePartialFromCodedStream(
+      ::google::protobuf::io::CodedInputStream* input) PROTOBUF_FINAL;
+  void SerializeWithCachedSizes(
+      ::google::protobuf::io::CodedOutputStream* output) const PROTOBUF_FINAL;
+  ::google::protobuf::uint8* InternalSerializeWithCachedSizesToArray(
+      bool deterministic, ::google::protobuf::uint8* target) const PROTOBUF_FINAL;
+  int GetCachedSize() const PROTOBUF_FINAL { return _cached_size_; }
+  private:
+  void SharedCtor();
+  void SharedDtor();
+  void SetCachedSize(int size) const PROTOBUF_FINAL;
+  void InternalSwap(ChangePeerRequest* other);
+  private:
+  inline ::google::protobuf::Arena* GetArenaNoVirtual() const {
+    return NULL;
+  }
+  inline void* MaybeArenaPtr() const {
+    return NULL;
+  }
+  public:
 
-    size_t                      ByteSizeLong() const PROTOBUF_FINAL;
-    bool                        MergePartialFromCodedStream(::google::protobuf::io::CodedInputStream * input) PROTOBUF_FINAL;
-    void                        SerializeWithCachedSizes(::google::protobuf::io::CodedOutputStream * output) const PROTOBUF_FINAL;
-    ::google::protobuf::uint8 * InternalSerializeWithCachedSizesToArray(bool                        deterministic,
-                                                                        ::google::protobuf::uint8 * target) const PROTOBUF_FINAL;
-    int                         GetCachedSize() const PROTOBUF_FINAL { return _cached_size_; }
+  ::google::protobuf::Metadata GetMetadata() const PROTOBUF_FINAL;
 
-private:
-    void SharedCtor();
-    void SharedDtor();
-    void SetCachedSize(int size) const PROTOBUF_FINAL;
-    void InternalSwap(ChangePeerRequest * other);
+  // nested types ----------------------------------------------------
 
-private:
-    inline ::google::protobuf::Arena * GetArenaNoVirtual() const { return NULL; }
-    inline void *                      MaybeArenaPtr() const { return NULL; }
+  // accessors -------------------------------------------------------
 
-public:
-    ::google::protobuf::Metadata GetMetadata() const PROTOBUF_FINAL;
+  // .metapb.Peer peer = 2;
+  bool has_peer() const;
+  void clear_peer();
+  static const int kPeerFieldNumber = 2;
+  const ::metapb::Peer& peer() const;
+  ::metapb::Peer* release_peer();
+  ::metapb::Peer* mutable_peer();
+  void set_allocated_peer(::metapb::Peer* peer);
 
-    // nested types ----------------------------------------------------
+  // .eraftpb.ConfChangeType change_type = 1;
+  void clear_change_type();
+  static const int kChangeTypeFieldNumber = 1;
+  ::eraftpb::ConfChangeType change_type() const;
+  void set_change_type(::eraftpb::ConfChangeType value);
 
-    // accessors -------------------------------------------------------
+  // @@protoc_insertion_point(class_scope:raft_cmdpb.ChangePeerRequest)
+ private:
 
-    // .metapb.Peer peer = 2;
-    bool                   has_peer() const;
-    void                   clear_peer();
-    static const int       kPeerFieldNumber = 2;
-    const ::metapb::Peer & peer() const;
-    ::metapb::Peer *       release_peer();
-    ::metapb::Peer *       mutable_peer();
-    void                   set_allocated_peer(::metapb::Peer * peer);
-
-    // .eraftpb.ConfChangeType change_type = 1;
-    void                      clear_change_type();
-    static const int          kChangeTypeFieldNumber = 1;
-    ::eraftpb::ConfChangeType change_type() const;
-    void                      set_change_type(::eraftpb::ConfChangeType value);
-
-    // @@protoc_insertion_point(class_scope:raft_cmdpb.ChangePeerRequest)
-private:
-    ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
-    ::metapb::Peer *                                        peer_;
-    int                                                     change_type_;
-    mutable int                                             _cached_size_;
-    friend struct ::protobuf_raft_5fcmdpb_2eproto::TableStruct;
-    friend void ::protobuf_raft_5fcmdpb_2eproto::InitDefaultsChangePeerRequestImpl();
+  ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
+  ::metapb::Peer* peer_;
+  int change_type_;
+  mutable int _cached_size_;
+  friend struct ::protobuf_raft_5fcmdpb_2eproto::TableStruct;
+  friend void ::protobuf_raft_5fcmdpb_2eproto::InitDefaultsChangePeerRequestImpl();
 };
 // -------------------------------------------------------------------
 
-class ChangePeerResponse : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:raft_cmdpb.ChangePeerResponse) */
-{
-public:
-    ChangePeerResponse();
-    virtual ~ChangePeerResponse();
+class ChangePeerResponse : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:raft_cmdpb.ChangePeerResponse) */ {
+ public:
+  ChangePeerResponse();
+  virtual ~ChangePeerResponse();
 
-    ChangePeerResponse(const ChangePeerResponse & from);
+  ChangePeerResponse(const ChangePeerResponse& from);
 
-    inline ChangePeerResponse & operator=(const ChangePeerResponse & from)
-    {
-        CopyFrom(from);
-        return *this;
+  inline ChangePeerResponse& operator=(const ChangePeerResponse& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  #if LANG_CXX11
+  ChangePeerResponse(ChangePeerResponse&& from) noexcept
+    : ChangePeerResponse() {
+    *this = ::std::move(from);
+  }
+
+  inline ChangePeerResponse& operator=(ChangePeerResponse&& from) noexcept {
+    if (GetArenaNoVirtual() == from.GetArenaNoVirtual()) {
+      if (this != &from) InternalSwap(&from);
+    } else {
+      CopyFrom(from);
     }
-#if LANG_CXX11
-    ChangePeerResponse(ChangePeerResponse && from) noexcept : ChangePeerResponse() { *this = ::std::move(from); }
+    return *this;
+  }
+  #endif
+  static const ::google::protobuf::Descriptor* descriptor();
+  static const ChangePeerResponse& default_instance();
 
-    inline ChangePeerResponse & operator=(ChangePeerResponse && from) noexcept
-    {
-        if (GetArenaNoVirtual() == from.GetArenaNoVirtual())
-        {
-            if (this != &from)
-                InternalSwap(&from);
-        }
-        else
-        {
-            CopyFrom(from);
-        }
-        return *this;
-    }
-#endif
-    static const ::google::protobuf::Descriptor * descriptor();
-    static const ChangePeerResponse &             default_instance();
+  static void InitAsDefaultInstance();  // FOR INTERNAL USE ONLY
+  static inline const ChangePeerResponse* internal_default_instance() {
+    return reinterpret_cast<const ChangePeerResponse*>(
+               &_ChangePeerResponse_default_instance_);
+  }
+  static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
+    17;
 
-    static void                              InitAsDefaultInstance(); // FOR INTERNAL USE ONLY
-    static inline const ChangePeerResponse * internal_default_instance()
-    {
-        return reinterpret_cast<const ChangePeerResponse *>(&_ChangePeerResponse_default_instance_);
-    }
-    static PROTOBUF_CONSTEXPR int const kIndexInFileMessages = 17;
+  void Swap(ChangePeerResponse* other);
+  friend void swap(ChangePeerResponse& a, ChangePeerResponse& b) {
+    a.Swap(&b);
+  }
 
-    void        Swap(ChangePeerResponse * other);
-    friend void swap(ChangePeerResponse & a, ChangePeerResponse & b) { a.Swap(&b); }
+  // implements Message ----------------------------------------------
 
-    // implements Message ----------------------------------------------
+  inline ChangePeerResponse* New() const PROTOBUF_FINAL { return New(NULL); }
 
-    inline ChangePeerResponse * New() const PROTOBUF_FINAL { return New(NULL); }
+  ChangePeerResponse* New(::google::protobuf::Arena* arena) const PROTOBUF_FINAL;
+  void CopyFrom(const ::google::protobuf::Message& from) PROTOBUF_FINAL;
+  void MergeFrom(const ::google::protobuf::Message& from) PROTOBUF_FINAL;
+  void CopyFrom(const ChangePeerResponse& from);
+  void MergeFrom(const ChangePeerResponse& from);
+  void Clear() PROTOBUF_FINAL;
+  bool IsInitialized() const PROTOBUF_FINAL;
 
-    ChangePeerResponse * New(::google::protobuf::Arena * arena) const PROTOBUF_FINAL;
-    void                 CopyFrom(const ::google::protobuf::Message & from) PROTOBUF_FINAL;
-    void                 MergeFrom(const ::google::protobuf::Message & from) PROTOBUF_FINAL;
-    void                 CopyFrom(const ChangePeerResponse & from);
-    void                 MergeFrom(const ChangePeerResponse & from);
-    void                 Clear() PROTOBUF_FINAL;
-    bool                 IsInitialized() const PROTOBUF_FINAL;
+  size_t ByteSizeLong() const PROTOBUF_FINAL;
+  bool MergePartialFromCodedStream(
+      ::google::protobuf::io::CodedInputStream* input) PROTOBUF_FINAL;
+  void SerializeWithCachedSizes(
+      ::google::protobuf::io::CodedOutputStream* output) const PROTOBUF_FINAL;
+  ::google::protobuf::uint8* InternalSerializeWithCachedSizesToArray(
+      bool deterministic, ::google::protobuf::uint8* target) const PROTOBUF_FINAL;
+  int GetCachedSize() const PROTOBUF_FINAL { return _cached_size_; }
+  private:
+  void SharedCtor();
+  void SharedDtor();
+  void SetCachedSize(int size) const PROTOBUF_FINAL;
+  void InternalSwap(ChangePeerResponse* other);
+  private:
+  inline ::google::protobuf::Arena* GetArenaNoVirtual() const {
+    return NULL;
+  }
+  inline void* MaybeArenaPtr() const {
+    return NULL;
+  }
+  public:
 
-    size_t                      ByteSizeLong() const PROTOBUF_FINAL;
-    bool                        MergePartialFromCodedStream(::google::protobuf::io::CodedInputStream * input) PROTOBUF_FINAL;
-    void                        SerializeWithCachedSizes(::google::protobuf::io::CodedOutputStream * output) const PROTOBUF_FINAL;
-    ::google::protobuf::uint8 * InternalSerializeWithCachedSizesToArray(bool                        deterministic,
-                                                                        ::google::protobuf::uint8 * target) const PROTOBUF_FINAL;
-    int                         GetCachedSize() const PROTOBUF_FINAL { return _cached_size_; }
+  ::google::protobuf::Metadata GetMetadata() const PROTOBUF_FINAL;
 
-private:
-    void SharedCtor();
-    void SharedDtor();
-    void SetCachedSize(int size) const PROTOBUF_FINAL;
-    void InternalSwap(ChangePeerResponse * other);
+  // nested types ----------------------------------------------------
 
-private:
-    inline ::google::protobuf::Arena * GetArenaNoVirtual() const { return NULL; }
-    inline void *                      MaybeArenaPtr() const { return NULL; }
+  // accessors -------------------------------------------------------
 
-public:
-    ::google::protobuf::Metadata GetMetadata() const PROTOBUF_FINAL;
+  // .metapb.Region region = 1;
+  bool has_region() const;
+  void clear_region();
+  static const int kRegionFieldNumber = 1;
+  const ::metapb::Region& region() const;
+  ::metapb::Region* release_region();
+  ::metapb::Region* mutable_region();
+  void set_allocated_region(::metapb::Region* region);
 
-    // nested types ----------------------------------------------------
+  // @@protoc_insertion_point(class_scope:raft_cmdpb.ChangePeerResponse)
+ private:
 
-    // accessors -------------------------------------------------------
-
-    // .metapb.Region region = 1;
-    bool                     has_region() const;
-    void                     clear_region();
-    static const int         kRegionFieldNumber = 1;
-    const ::metapb::Region & region() const;
-    ::metapb::Region *       release_region();
-    ::metapb::Region *       mutable_region();
-    void                     set_allocated_region(::metapb::Region * region);
-
-    // @@protoc_insertion_point(class_scope:raft_cmdpb.ChangePeerResponse)
-private:
-    ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
-    ::metapb::Region *                                      region_;
-    mutable int                                             _cached_size_;
-    friend struct ::protobuf_raft_5fcmdpb_2eproto::TableStruct;
-    friend void ::protobuf_raft_5fcmdpb_2eproto::InitDefaultsChangePeerResponseImpl();
+  ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
+  ::metapb::Region* region_;
+  mutable int _cached_size_;
+  friend struct ::protobuf_raft_5fcmdpb_2eproto::TableStruct;
+  friend void ::protobuf_raft_5fcmdpb_2eproto::InitDefaultsChangePeerResponseImpl();
 };
 // -------------------------------------------------------------------
 
-class SplitRequest : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:raft_cmdpb.SplitRequest) */
-{
-public:
-    SplitRequest();
-    virtual ~SplitRequest();
+class SplitRequest : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:raft_cmdpb.SplitRequest) */ {
+ public:
+  SplitRequest();
+  virtual ~SplitRequest();
 
-    SplitRequest(const SplitRequest & from);
+  SplitRequest(const SplitRequest& from);
 
-    inline SplitRequest & operator=(const SplitRequest & from)
-    {
-        CopyFrom(from);
-        return *this;
+  inline SplitRequest& operator=(const SplitRequest& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  #if LANG_CXX11
+  SplitRequest(SplitRequest&& from) noexcept
+    : SplitRequest() {
+    *this = ::std::move(from);
+  }
+
+  inline SplitRequest& operator=(SplitRequest&& from) noexcept {
+    if (GetArenaNoVirtual() == from.GetArenaNoVirtual()) {
+      if (this != &from) InternalSwap(&from);
+    } else {
+      CopyFrom(from);
     }
-#if LANG_CXX11
-    SplitRequest(SplitRequest && from) noexcept : SplitRequest() { *this = ::std::move(from); }
+    return *this;
+  }
+  #endif
+  static const ::google::protobuf::Descriptor* descriptor();
+  static const SplitRequest& default_instance();
 
-    inline SplitRequest & operator=(SplitRequest && from) noexcept
-    {
-        if (GetArenaNoVirtual() == from.GetArenaNoVirtual())
-        {
-            if (this != &from)
-                InternalSwap(&from);
-        }
-        else
-        {
-            CopyFrom(from);
-        }
-        return *this;
-    }
-#endif
-    static const ::google::protobuf::Descriptor * descriptor();
-    static const SplitRequest &                   default_instance();
+  static void InitAsDefaultInstance();  // FOR INTERNAL USE ONLY
+  static inline const SplitRequest* internal_default_instance() {
+    return reinterpret_cast<const SplitRequest*>(
+               &_SplitRequest_default_instance_);
+  }
+  static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
+    18;
 
-    static void                        InitAsDefaultInstance(); // FOR INTERNAL USE ONLY
-    static inline const SplitRequest * internal_default_instance()
-    {
-        return reinterpret_cast<const SplitRequest *>(&_SplitRequest_default_instance_);
-    }
-    static PROTOBUF_CONSTEXPR int const kIndexInFileMessages = 18;
+  void Swap(SplitRequest* other);
+  friend void swap(SplitRequest& a, SplitRequest& b) {
+    a.Swap(&b);
+  }
 
-    void        Swap(SplitRequest * other);
-    friend void swap(SplitRequest & a, SplitRequest & b) { a.Swap(&b); }
+  // implements Message ----------------------------------------------
 
-    // implements Message ----------------------------------------------
+  inline SplitRequest* New() const PROTOBUF_FINAL { return New(NULL); }
 
-    inline SplitRequest * New() const PROTOBUF_FINAL { return New(NULL); }
+  SplitRequest* New(::google::protobuf::Arena* arena) const PROTOBUF_FINAL;
+  void CopyFrom(const ::google::protobuf::Message& from) PROTOBUF_FINAL;
+  void MergeFrom(const ::google::protobuf::Message& from) PROTOBUF_FINAL;
+  void CopyFrom(const SplitRequest& from);
+  void MergeFrom(const SplitRequest& from);
+  void Clear() PROTOBUF_FINAL;
+  bool IsInitialized() const PROTOBUF_FINAL;
 
-    SplitRequest * New(::google::protobuf::Arena * arena) const PROTOBUF_FINAL;
-    void           CopyFrom(const ::google::protobuf::Message & from) PROTOBUF_FINAL;
-    void           MergeFrom(const ::google::protobuf::Message & from) PROTOBUF_FINAL;
-    void           CopyFrom(const SplitRequest & from);
-    void           MergeFrom(const SplitRequest & from);
-    void           Clear() PROTOBUF_FINAL;
-    bool           IsInitialized() const PROTOBUF_FINAL;
+  size_t ByteSizeLong() const PROTOBUF_FINAL;
+  bool MergePartialFromCodedStream(
+      ::google::protobuf::io::CodedInputStream* input) PROTOBUF_FINAL;
+  void SerializeWithCachedSizes(
+      ::google::protobuf::io::CodedOutputStream* output) const PROTOBUF_FINAL;
+  ::google::protobuf::uint8* InternalSerializeWithCachedSizesToArray(
+      bool deterministic, ::google::protobuf::uint8* target) const PROTOBUF_FINAL;
+  int GetCachedSize() const PROTOBUF_FINAL { return _cached_size_; }
+  private:
+  void SharedCtor();
+  void SharedDtor();
+  void SetCachedSize(int size) const PROTOBUF_FINAL;
+  void InternalSwap(SplitRequest* other);
+  private:
+  inline ::google::protobuf::Arena* GetArenaNoVirtual() const {
+    return NULL;
+  }
+  inline void* MaybeArenaPtr() const {
+    return NULL;
+  }
+  public:
 
-    size_t                      ByteSizeLong() const PROTOBUF_FINAL;
-    bool                        MergePartialFromCodedStream(::google::protobuf::io::CodedInputStream * input) PROTOBUF_FINAL;
-    void                        SerializeWithCachedSizes(::google::protobuf::io::CodedOutputStream * output) const PROTOBUF_FINAL;
-    ::google::protobuf::uint8 * InternalSerializeWithCachedSizesToArray(bool                        deterministic,
-                                                                        ::google::protobuf::uint8 * target) const PROTOBUF_FINAL;
-    int                         GetCachedSize() const PROTOBUF_FINAL { return _cached_size_; }
+  ::google::protobuf::Metadata GetMetadata() const PROTOBUF_FINAL;
 
-private:
-    void SharedCtor();
-    void SharedDtor();
-    void SetCachedSize(int size) const PROTOBUF_FINAL;
-    void InternalSwap(SplitRequest * other);
+  // nested types ----------------------------------------------------
 
-private:
-    inline ::google::protobuf::Arena * GetArenaNoVirtual() const { return NULL; }
-    inline void *                      MaybeArenaPtr() const { return NULL; }
+  // accessors -------------------------------------------------------
 
-public:
-    ::google::protobuf::Metadata GetMetadata() const PROTOBUF_FINAL;
+  // repeated uint64 new_peer_ids = 3;
+  int new_peer_ids_size() const;
+  void clear_new_peer_ids();
+  static const int kNewPeerIdsFieldNumber = 3;
+  ::google::protobuf::uint64 new_peer_ids(int index) const;
+  void set_new_peer_ids(int index, ::google::protobuf::uint64 value);
+  void add_new_peer_ids(::google::protobuf::uint64 value);
+  const ::google::protobuf::RepeatedField< ::google::protobuf::uint64 >&
+      new_peer_ids() const;
+  ::google::protobuf::RepeatedField< ::google::protobuf::uint64 >*
+      mutable_new_peer_ids();
 
-    // nested types ----------------------------------------------------
+  // bytes split_key = 1;
+  void clear_split_key();
+  static const int kSplitKeyFieldNumber = 1;
+  const ::std::string& split_key() const;
+  void set_split_key(const ::std::string& value);
+  #if LANG_CXX11
+  void set_split_key(::std::string&& value);
+  #endif
+  void set_split_key(const char* value);
+  void set_split_key(const void* value, size_t size);
+  ::std::string* mutable_split_key();
+  ::std::string* release_split_key();
+  void set_allocated_split_key(::std::string* split_key);
 
-    // accessors -------------------------------------------------------
+  // uint64 new_region_id = 2;
+  void clear_new_region_id();
+  static const int kNewRegionIdFieldNumber = 2;
+  ::google::protobuf::uint64 new_region_id() const;
+  void set_new_region_id(::google::protobuf::uint64 value);
 
-    // repeated uint64 new_peer_ids = 3;
-    int                                                                   new_peer_ids_size() const;
-    void                                                                  clear_new_peer_ids();
-    static const int                                                      kNewPeerIdsFieldNumber = 3;
-    ::google::protobuf::uint64                                            new_peer_ids(int index) const;
-    void                                                                  set_new_peer_ids(int index, ::google::protobuf::uint64 value);
-    void                                                                  add_new_peer_ids(::google::protobuf::uint64 value);
-    const ::google::protobuf::RepeatedField<::google::protobuf::uint64> & new_peer_ids() const;
-    ::google::protobuf::RepeatedField<::google::protobuf::uint64> *       mutable_new_peer_ids();
+  // bool right_derive = 4 [deprecated = true];
+  GOOGLE_PROTOBUF_DEPRECATED_ATTR void clear_right_derive();
+  GOOGLE_PROTOBUF_DEPRECATED_ATTR static const int kRightDeriveFieldNumber = 4;
+  GOOGLE_PROTOBUF_DEPRECATED_ATTR bool right_derive() const;
+  GOOGLE_PROTOBUF_DEPRECATED_ATTR void set_right_derive(bool value);
 
-    // bytes split_key = 1;
-    void                  clear_split_key();
-    static const int      kSplitKeyFieldNumber = 1;
-    const ::std::string & split_key() const;
-    void                  set_split_key(const ::std::string & value);
-#if LANG_CXX11
-    void set_split_key(::std::string && value);
-#endif
-    void            set_split_key(const char * value);
-    void            set_split_key(const void * value, size_t size);
-    ::std::string * mutable_split_key();
-    ::std::string * release_split_key();
-    void            set_allocated_split_key(::std::string * split_key);
+  // @@protoc_insertion_point(class_scope:raft_cmdpb.SplitRequest)
+ private:
 
-    // uint64 new_region_id = 2;
-    void                       clear_new_region_id();
-    static const int           kNewRegionIdFieldNumber = 2;
-    ::google::protobuf::uint64 new_region_id() const;
-    void                       set_new_region_id(::google::protobuf::uint64 value);
-
-    // bool right_derive = 4 [deprecated = true];
-    GOOGLE_PROTOBUF_DEPRECATED_ATTR void             clear_right_derive();
-    GOOGLE_PROTOBUF_DEPRECATED_ATTR static const int kRightDeriveFieldNumber = 4;
-    GOOGLE_PROTOBUF_DEPRECATED_ATTR bool             right_derive() const;
-    GOOGLE_PROTOBUF_DEPRECATED_ATTR void             set_right_derive(bool value);
-
-    // @@protoc_insertion_point(class_scope:raft_cmdpb.SplitRequest)
-private:
-    ::google::protobuf::internal::InternalMetadataWithArena       _internal_metadata_;
-    ::google::protobuf::RepeatedField<::google::protobuf::uint64> new_peer_ids_;
-    mutable int                                                   _new_peer_ids_cached_byte_size_;
-    ::google::protobuf::internal::ArenaStringPtr                  split_key_;
-    ::google::protobuf::uint64                                    new_region_id_;
-    bool                                                          right_derive_;
-    mutable int                                                   _cached_size_;
-    friend struct ::protobuf_raft_5fcmdpb_2eproto::TableStruct;
-    friend void ::protobuf_raft_5fcmdpb_2eproto::InitDefaultsSplitRequestImpl();
+  ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
+  ::google::protobuf::RepeatedField< ::google::protobuf::uint64 > new_peer_ids_;
+  mutable int _new_peer_ids_cached_byte_size_;
+  ::google::protobuf::internal::ArenaStringPtr split_key_;
+  ::google::protobuf::uint64 new_region_id_;
+  bool right_derive_;
+  mutable int _cached_size_;
+  friend struct ::protobuf_raft_5fcmdpb_2eproto::TableStruct;
+  friend void ::protobuf_raft_5fcmdpb_2eproto::InitDefaultsSplitRequestImpl();
 };
 // -------------------------------------------------------------------
 
-class SplitResponse : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:raft_cmdpb.SplitResponse) */
-{
-public:
-    SplitResponse();
-    virtual ~SplitResponse();
+class SplitResponse : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:raft_cmdpb.SplitResponse) */ {
+ public:
+  SplitResponse();
+  virtual ~SplitResponse();
 
-    SplitResponse(const SplitResponse & from);
+  SplitResponse(const SplitResponse& from);
 
-    inline SplitResponse & operator=(const SplitResponse & from)
-    {
-        CopyFrom(from);
-        return *this;
+  inline SplitResponse& operator=(const SplitResponse& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  #if LANG_CXX11
+  SplitResponse(SplitResponse&& from) noexcept
+    : SplitResponse() {
+    *this = ::std::move(from);
+  }
+
+  inline SplitResponse& operator=(SplitResponse&& from) noexcept {
+    if (GetArenaNoVirtual() == from.GetArenaNoVirtual()) {
+      if (this != &from) InternalSwap(&from);
+    } else {
+      CopyFrom(from);
     }
-#if LANG_CXX11
-    SplitResponse(SplitResponse && from) noexcept : SplitResponse() { *this = ::std::move(from); }
+    return *this;
+  }
+  #endif
+  static const ::google::protobuf::Descriptor* descriptor();
+  static const SplitResponse& default_instance();
 
-    inline SplitResponse & operator=(SplitResponse && from) noexcept
-    {
-        if (GetArenaNoVirtual() == from.GetArenaNoVirtual())
-        {
-            if (this != &from)
-                InternalSwap(&from);
-        }
-        else
-        {
-            CopyFrom(from);
-        }
-        return *this;
-    }
-#endif
-    static const ::google::protobuf::Descriptor * descriptor();
-    static const SplitResponse &                  default_instance();
+  static void InitAsDefaultInstance();  // FOR INTERNAL USE ONLY
+  static inline const SplitResponse* internal_default_instance() {
+    return reinterpret_cast<const SplitResponse*>(
+               &_SplitResponse_default_instance_);
+  }
+  static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
+    19;
 
-    static void                         InitAsDefaultInstance(); // FOR INTERNAL USE ONLY
-    static inline const SplitResponse * internal_default_instance()
-    {
-        return reinterpret_cast<const SplitResponse *>(&_SplitResponse_default_instance_);
-    }
-    static PROTOBUF_CONSTEXPR int const kIndexInFileMessages = 19;
+  void Swap(SplitResponse* other);
+  friend void swap(SplitResponse& a, SplitResponse& b) {
+    a.Swap(&b);
+  }
 
-    void        Swap(SplitResponse * other);
-    friend void swap(SplitResponse & a, SplitResponse & b) { a.Swap(&b); }
+  // implements Message ----------------------------------------------
 
-    // implements Message ----------------------------------------------
+  inline SplitResponse* New() const PROTOBUF_FINAL { return New(NULL); }
 
-    inline SplitResponse * New() const PROTOBUF_FINAL { return New(NULL); }
+  SplitResponse* New(::google::protobuf::Arena* arena) const PROTOBUF_FINAL;
+  void CopyFrom(const ::google::protobuf::Message& from) PROTOBUF_FINAL;
+  void MergeFrom(const ::google::protobuf::Message& from) PROTOBUF_FINAL;
+  void CopyFrom(const SplitResponse& from);
+  void MergeFrom(const SplitResponse& from);
+  void Clear() PROTOBUF_FINAL;
+  bool IsInitialized() const PROTOBUF_FINAL;
 
-    SplitResponse * New(::google::protobuf::Arena * arena) const PROTOBUF_FINAL;
-    void            CopyFrom(const ::google::protobuf::Message & from) PROTOBUF_FINAL;
-    void            MergeFrom(const ::google::protobuf::Message & from) PROTOBUF_FINAL;
-    void            CopyFrom(const SplitResponse & from);
-    void            MergeFrom(const SplitResponse & from);
-    void            Clear() PROTOBUF_FINAL;
-    bool            IsInitialized() const PROTOBUF_FINAL;
+  size_t ByteSizeLong() const PROTOBUF_FINAL;
+  bool MergePartialFromCodedStream(
+      ::google::protobuf::io::CodedInputStream* input) PROTOBUF_FINAL;
+  void SerializeWithCachedSizes(
+      ::google::protobuf::io::CodedOutputStream* output) const PROTOBUF_FINAL;
+  ::google::protobuf::uint8* InternalSerializeWithCachedSizesToArray(
+      bool deterministic, ::google::protobuf::uint8* target) const PROTOBUF_FINAL;
+  int GetCachedSize() const PROTOBUF_FINAL { return _cached_size_; }
+  private:
+  void SharedCtor();
+  void SharedDtor();
+  void SetCachedSize(int size) const PROTOBUF_FINAL;
+  void InternalSwap(SplitResponse* other);
+  private:
+  inline ::google::protobuf::Arena* GetArenaNoVirtual() const {
+    return NULL;
+  }
+  inline void* MaybeArenaPtr() const {
+    return NULL;
+  }
+  public:
 
-    size_t                      ByteSizeLong() const PROTOBUF_FINAL;
-    bool                        MergePartialFromCodedStream(::google::protobuf::io::CodedInputStream * input) PROTOBUF_FINAL;
-    void                        SerializeWithCachedSizes(::google::protobuf::io::CodedOutputStream * output) const PROTOBUF_FINAL;
-    ::google::protobuf::uint8 * InternalSerializeWithCachedSizesToArray(bool                        deterministic,
-                                                                        ::google::protobuf::uint8 * target) const PROTOBUF_FINAL;
-    int                         GetCachedSize() const PROTOBUF_FINAL { return _cached_size_; }
+  ::google::protobuf::Metadata GetMetadata() const PROTOBUF_FINAL;
 
-private:
-    void SharedCtor();
-    void SharedDtor();
-    void SetCachedSize(int size) const PROTOBUF_FINAL;
-    void InternalSwap(SplitResponse * other);
+  // nested types ----------------------------------------------------
 
-private:
-    inline ::google::protobuf::Arena * GetArenaNoVirtual() const { return NULL; }
-    inline void *                      MaybeArenaPtr() const { return NULL; }
+  // accessors -------------------------------------------------------
 
-public:
-    ::google::protobuf::Metadata GetMetadata() const PROTOBUF_FINAL;
+  // .metapb.Region left = 1;
+  bool has_left() const;
+  void clear_left();
+  static const int kLeftFieldNumber = 1;
+  const ::metapb::Region& left() const;
+  ::metapb::Region* release_left();
+  ::metapb::Region* mutable_left();
+  void set_allocated_left(::metapb::Region* left);
 
-    // nested types ----------------------------------------------------
+  // .metapb.Region right = 2;
+  bool has_right() const;
+  void clear_right();
+  static const int kRightFieldNumber = 2;
+  const ::metapb::Region& right() const;
+  ::metapb::Region* release_right();
+  ::metapb::Region* mutable_right();
+  void set_allocated_right(::metapb::Region* right);
 
-    // accessors -------------------------------------------------------
+  // @@protoc_insertion_point(class_scope:raft_cmdpb.SplitResponse)
+ private:
 
-    // .metapb.Region left = 1;
-    bool                     has_left() const;
-    void                     clear_left();
-    static const int         kLeftFieldNumber = 1;
-    const ::metapb::Region & left() const;
-    ::metapb::Region *       release_left();
-    ::metapb::Region *       mutable_left();
-    void                     set_allocated_left(::metapb::Region * left);
-
-    // .metapb.Region right = 2;
-    bool                     has_right() const;
-    void                     clear_right();
-    static const int         kRightFieldNumber = 2;
-    const ::metapb::Region & right() const;
-    ::metapb::Region *       release_right();
-    ::metapb::Region *       mutable_right();
-    void                     set_allocated_right(::metapb::Region * right);
-
-    // @@protoc_insertion_point(class_scope:raft_cmdpb.SplitResponse)
-private:
-    ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
-    ::metapb::Region *                                      left_;
-    ::metapb::Region *                                      right_;
-    mutable int                                             _cached_size_;
-    friend struct ::protobuf_raft_5fcmdpb_2eproto::TableStruct;
-    friend void ::protobuf_raft_5fcmdpb_2eproto::InitDefaultsSplitResponseImpl();
+  ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
+  ::metapb::Region* left_;
+  ::metapb::Region* right_;
+  mutable int _cached_size_;
+  friend struct ::protobuf_raft_5fcmdpb_2eproto::TableStruct;
+  friend void ::protobuf_raft_5fcmdpb_2eproto::InitDefaultsSplitResponseImpl();
 };
 // -------------------------------------------------------------------
 
-class BatchSplitRequest : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:raft_cmdpb.BatchSplitRequest) */
-{
-public:
-    BatchSplitRequest();
-    virtual ~BatchSplitRequest();
+class BatchSplitRequest : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:raft_cmdpb.BatchSplitRequest) */ {
+ public:
+  BatchSplitRequest();
+  virtual ~BatchSplitRequest();
 
-    BatchSplitRequest(const BatchSplitRequest & from);
+  BatchSplitRequest(const BatchSplitRequest& from);
 
-    inline BatchSplitRequest & operator=(const BatchSplitRequest & from)
-    {
-        CopyFrom(from);
-        return *this;
+  inline BatchSplitRequest& operator=(const BatchSplitRequest& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  #if LANG_CXX11
+  BatchSplitRequest(BatchSplitRequest&& from) noexcept
+    : BatchSplitRequest() {
+    *this = ::std::move(from);
+  }
+
+  inline BatchSplitRequest& operator=(BatchSplitRequest&& from) noexcept {
+    if (GetArenaNoVirtual() == from.GetArenaNoVirtual()) {
+      if (this != &from) InternalSwap(&from);
+    } else {
+      CopyFrom(from);
     }
-#if LANG_CXX11
-    BatchSplitRequest(BatchSplitRequest && from) noexcept : BatchSplitRequest() { *this = ::std::move(from); }
+    return *this;
+  }
+  #endif
+  static const ::google::protobuf::Descriptor* descriptor();
+  static const BatchSplitRequest& default_instance();
 
-    inline BatchSplitRequest & operator=(BatchSplitRequest && from) noexcept
-    {
-        if (GetArenaNoVirtual() == from.GetArenaNoVirtual())
-        {
-            if (this != &from)
-                InternalSwap(&from);
-        }
-        else
-        {
-            CopyFrom(from);
-        }
-        return *this;
-    }
-#endif
-    static const ::google::protobuf::Descriptor * descriptor();
-    static const BatchSplitRequest &              default_instance();
+  static void InitAsDefaultInstance();  // FOR INTERNAL USE ONLY
+  static inline const BatchSplitRequest* internal_default_instance() {
+    return reinterpret_cast<const BatchSplitRequest*>(
+               &_BatchSplitRequest_default_instance_);
+  }
+  static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
+    20;
 
-    static void                             InitAsDefaultInstance(); // FOR INTERNAL USE ONLY
-    static inline const BatchSplitRequest * internal_default_instance()
-    {
-        return reinterpret_cast<const BatchSplitRequest *>(&_BatchSplitRequest_default_instance_);
-    }
-    static PROTOBUF_CONSTEXPR int const kIndexInFileMessages = 20;
+  void Swap(BatchSplitRequest* other);
+  friend void swap(BatchSplitRequest& a, BatchSplitRequest& b) {
+    a.Swap(&b);
+  }
 
-    void        Swap(BatchSplitRequest * other);
-    friend void swap(BatchSplitRequest & a, BatchSplitRequest & b) { a.Swap(&b); }
+  // implements Message ----------------------------------------------
 
-    // implements Message ----------------------------------------------
+  inline BatchSplitRequest* New() const PROTOBUF_FINAL { return New(NULL); }
 
-    inline BatchSplitRequest * New() const PROTOBUF_FINAL { return New(NULL); }
+  BatchSplitRequest* New(::google::protobuf::Arena* arena) const PROTOBUF_FINAL;
+  void CopyFrom(const ::google::protobuf::Message& from) PROTOBUF_FINAL;
+  void MergeFrom(const ::google::protobuf::Message& from) PROTOBUF_FINAL;
+  void CopyFrom(const BatchSplitRequest& from);
+  void MergeFrom(const BatchSplitRequest& from);
+  void Clear() PROTOBUF_FINAL;
+  bool IsInitialized() const PROTOBUF_FINAL;
 
-    BatchSplitRequest * New(::google::protobuf::Arena * arena) const PROTOBUF_FINAL;
-    void                CopyFrom(const ::google::protobuf::Message & from) PROTOBUF_FINAL;
-    void                MergeFrom(const ::google::protobuf::Message & from) PROTOBUF_FINAL;
-    void                CopyFrom(const BatchSplitRequest & from);
-    void                MergeFrom(const BatchSplitRequest & from);
-    void                Clear() PROTOBUF_FINAL;
-    bool                IsInitialized() const PROTOBUF_FINAL;
+  size_t ByteSizeLong() const PROTOBUF_FINAL;
+  bool MergePartialFromCodedStream(
+      ::google::protobuf::io::CodedInputStream* input) PROTOBUF_FINAL;
+  void SerializeWithCachedSizes(
+      ::google::protobuf::io::CodedOutputStream* output) const PROTOBUF_FINAL;
+  ::google::protobuf::uint8* InternalSerializeWithCachedSizesToArray(
+      bool deterministic, ::google::protobuf::uint8* target) const PROTOBUF_FINAL;
+  int GetCachedSize() const PROTOBUF_FINAL { return _cached_size_; }
+  private:
+  void SharedCtor();
+  void SharedDtor();
+  void SetCachedSize(int size) const PROTOBUF_FINAL;
+  void InternalSwap(BatchSplitRequest* other);
+  private:
+  inline ::google::protobuf::Arena* GetArenaNoVirtual() const {
+    return NULL;
+  }
+  inline void* MaybeArenaPtr() const {
+    return NULL;
+  }
+  public:
 
-    size_t                      ByteSizeLong() const PROTOBUF_FINAL;
-    bool                        MergePartialFromCodedStream(::google::protobuf::io::CodedInputStream * input) PROTOBUF_FINAL;
-    void                        SerializeWithCachedSizes(::google::protobuf::io::CodedOutputStream * output) const PROTOBUF_FINAL;
-    ::google::protobuf::uint8 * InternalSerializeWithCachedSizesToArray(bool                        deterministic,
-                                                                        ::google::protobuf::uint8 * target) const PROTOBUF_FINAL;
-    int                         GetCachedSize() const PROTOBUF_FINAL { return _cached_size_; }
+  ::google::protobuf::Metadata GetMetadata() const PROTOBUF_FINAL;
 
-private:
-    void SharedCtor();
-    void SharedDtor();
-    void SetCachedSize(int size) const PROTOBUF_FINAL;
-    void InternalSwap(BatchSplitRequest * other);
+  // nested types ----------------------------------------------------
 
-private:
-    inline ::google::protobuf::Arena * GetArenaNoVirtual() const { return NULL; }
-    inline void *                      MaybeArenaPtr() const { return NULL; }
+  // accessors -------------------------------------------------------
 
-public:
-    ::google::protobuf::Metadata GetMetadata() const PROTOBUF_FINAL;
+  // repeated .raft_cmdpb.SplitRequest requests = 1;
+  int requests_size() const;
+  void clear_requests();
+  static const int kRequestsFieldNumber = 1;
+  const ::raft_cmdpb::SplitRequest& requests(int index) const;
+  ::raft_cmdpb::SplitRequest* mutable_requests(int index);
+  ::raft_cmdpb::SplitRequest* add_requests();
+  ::google::protobuf::RepeatedPtrField< ::raft_cmdpb::SplitRequest >*
+      mutable_requests();
+  const ::google::protobuf::RepeatedPtrField< ::raft_cmdpb::SplitRequest >&
+      requests() const;
 
-    // nested types ----------------------------------------------------
+  // bool right_derive = 2;
+  void clear_right_derive();
+  static const int kRightDeriveFieldNumber = 2;
+  bool right_derive() const;
+  void set_right_derive(bool value);
 
-    // accessors -------------------------------------------------------
+  // @@protoc_insertion_point(class_scope:raft_cmdpb.BatchSplitRequest)
+ private:
 
-    // repeated .raft_cmdpb.SplitRequest requests = 1;
-    int                                                                      requests_size() const;
-    void                                                                     clear_requests();
-    static const int                                                         kRequestsFieldNumber = 1;
-    const ::raft_cmdpb::SplitRequest &                                       requests(int index) const;
-    ::raft_cmdpb::SplitRequest *                                             mutable_requests(int index);
-    ::raft_cmdpb::SplitRequest *                                             add_requests();
-    ::google::protobuf::RepeatedPtrField<::raft_cmdpb::SplitRequest> *       mutable_requests();
-    const ::google::protobuf::RepeatedPtrField<::raft_cmdpb::SplitRequest> & requests() const;
-
-    // bool right_derive = 2;
-    void             clear_right_derive();
-    static const int kRightDeriveFieldNumber = 2;
-    bool             right_derive() const;
-    void             set_right_derive(bool value);
-
-    // @@protoc_insertion_point(class_scope:raft_cmdpb.BatchSplitRequest)
-private:
-    ::google::protobuf::internal::InternalMetadataWithArena          _internal_metadata_;
-    ::google::protobuf::RepeatedPtrField<::raft_cmdpb::SplitRequest> requests_;
-    bool                                                             right_derive_;
-    mutable int                                                      _cached_size_;
-    friend struct ::protobuf_raft_5fcmdpb_2eproto::TableStruct;
-    friend void ::protobuf_raft_5fcmdpb_2eproto::InitDefaultsBatchSplitRequestImpl();
+  ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
+  ::google::protobuf::RepeatedPtrField< ::raft_cmdpb::SplitRequest > requests_;
+  bool right_derive_;
+  mutable int _cached_size_;
+  friend struct ::protobuf_raft_5fcmdpb_2eproto::TableStruct;
+  friend void ::protobuf_raft_5fcmdpb_2eproto::InitDefaultsBatchSplitRequestImpl();
 };
 // -------------------------------------------------------------------
 
-class BatchSplitResponse : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:raft_cmdpb.BatchSplitResponse) */
-{
-public:
-    BatchSplitResponse();
-    virtual ~BatchSplitResponse();
+class BatchSplitResponse : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:raft_cmdpb.BatchSplitResponse) */ {
+ public:
+  BatchSplitResponse();
+  virtual ~BatchSplitResponse();
 
-    BatchSplitResponse(const BatchSplitResponse & from);
+  BatchSplitResponse(const BatchSplitResponse& from);
 
-    inline BatchSplitResponse & operator=(const BatchSplitResponse & from)
-    {
-        CopyFrom(from);
-        return *this;
+  inline BatchSplitResponse& operator=(const BatchSplitResponse& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  #if LANG_CXX11
+  BatchSplitResponse(BatchSplitResponse&& from) noexcept
+    : BatchSplitResponse() {
+    *this = ::std::move(from);
+  }
+
+  inline BatchSplitResponse& operator=(BatchSplitResponse&& from) noexcept {
+    if (GetArenaNoVirtual() == from.GetArenaNoVirtual()) {
+      if (this != &from) InternalSwap(&from);
+    } else {
+      CopyFrom(from);
     }
-#if LANG_CXX11
-    BatchSplitResponse(BatchSplitResponse && from) noexcept : BatchSplitResponse() { *this = ::std::move(from); }
+    return *this;
+  }
+  #endif
+  static const ::google::protobuf::Descriptor* descriptor();
+  static const BatchSplitResponse& default_instance();
 
-    inline BatchSplitResponse & operator=(BatchSplitResponse && from) noexcept
-    {
-        if (GetArenaNoVirtual() == from.GetArenaNoVirtual())
-        {
-            if (this != &from)
-                InternalSwap(&from);
-        }
-        else
-        {
-            CopyFrom(from);
-        }
-        return *this;
-    }
-#endif
-    static const ::google::protobuf::Descriptor * descriptor();
-    static const BatchSplitResponse &             default_instance();
+  static void InitAsDefaultInstance();  // FOR INTERNAL USE ONLY
+  static inline const BatchSplitResponse* internal_default_instance() {
+    return reinterpret_cast<const BatchSplitResponse*>(
+               &_BatchSplitResponse_default_instance_);
+  }
+  static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
+    21;
 
-    static void                              InitAsDefaultInstance(); // FOR INTERNAL USE ONLY
-    static inline const BatchSplitResponse * internal_default_instance()
-    {
-        return reinterpret_cast<const BatchSplitResponse *>(&_BatchSplitResponse_default_instance_);
-    }
-    static PROTOBUF_CONSTEXPR int const kIndexInFileMessages = 21;
+  void Swap(BatchSplitResponse* other);
+  friend void swap(BatchSplitResponse& a, BatchSplitResponse& b) {
+    a.Swap(&b);
+  }
 
-    void        Swap(BatchSplitResponse * other);
-    friend void swap(BatchSplitResponse & a, BatchSplitResponse & b) { a.Swap(&b); }
+  // implements Message ----------------------------------------------
 
-    // implements Message ----------------------------------------------
+  inline BatchSplitResponse* New() const PROTOBUF_FINAL { return New(NULL); }
 
-    inline BatchSplitResponse * New() const PROTOBUF_FINAL { return New(NULL); }
+  BatchSplitResponse* New(::google::protobuf::Arena* arena) const PROTOBUF_FINAL;
+  void CopyFrom(const ::google::protobuf::Message& from) PROTOBUF_FINAL;
+  void MergeFrom(const ::google::protobuf::Message& from) PROTOBUF_FINAL;
+  void CopyFrom(const BatchSplitResponse& from);
+  void MergeFrom(const BatchSplitResponse& from);
+  void Clear() PROTOBUF_FINAL;
+  bool IsInitialized() const PROTOBUF_FINAL;
 
-    BatchSplitResponse * New(::google::protobuf::Arena * arena) const PROTOBUF_FINAL;
-    void                 CopyFrom(const ::google::protobuf::Message & from) PROTOBUF_FINAL;
-    void                 MergeFrom(const ::google::protobuf::Message & from) PROTOBUF_FINAL;
-    void                 CopyFrom(const BatchSplitResponse & from);
-    void                 MergeFrom(const BatchSplitResponse & from);
-    void                 Clear() PROTOBUF_FINAL;
-    bool                 IsInitialized() const PROTOBUF_FINAL;
+  size_t ByteSizeLong() const PROTOBUF_FINAL;
+  bool MergePartialFromCodedStream(
+      ::google::protobuf::io::CodedInputStream* input) PROTOBUF_FINAL;
+  void SerializeWithCachedSizes(
+      ::google::protobuf::io::CodedOutputStream* output) const PROTOBUF_FINAL;
+  ::google::protobuf::uint8* InternalSerializeWithCachedSizesToArray(
+      bool deterministic, ::google::protobuf::uint8* target) const PROTOBUF_FINAL;
+  int GetCachedSize() const PROTOBUF_FINAL { return _cached_size_; }
+  private:
+  void SharedCtor();
+  void SharedDtor();
+  void SetCachedSize(int size) const PROTOBUF_FINAL;
+  void InternalSwap(BatchSplitResponse* other);
+  private:
+  inline ::google::protobuf::Arena* GetArenaNoVirtual() const {
+    return NULL;
+  }
+  inline void* MaybeArenaPtr() const {
+    return NULL;
+  }
+  public:
 
-    size_t                      ByteSizeLong() const PROTOBUF_FINAL;
-    bool                        MergePartialFromCodedStream(::google::protobuf::io::CodedInputStream * input) PROTOBUF_FINAL;
-    void                        SerializeWithCachedSizes(::google::protobuf::io::CodedOutputStream * output) const PROTOBUF_FINAL;
-    ::google::protobuf::uint8 * InternalSerializeWithCachedSizesToArray(bool                        deterministic,
-                                                                        ::google::protobuf::uint8 * target) const PROTOBUF_FINAL;
-    int                         GetCachedSize() const PROTOBUF_FINAL { return _cached_size_; }
+  ::google::protobuf::Metadata GetMetadata() const PROTOBUF_FINAL;
 
-private:
-    void SharedCtor();
-    void SharedDtor();
-    void SetCachedSize(int size) const PROTOBUF_FINAL;
-    void InternalSwap(BatchSplitResponse * other);
+  // nested types ----------------------------------------------------
 
-private:
-    inline ::google::protobuf::Arena * GetArenaNoVirtual() const { return NULL; }
-    inline void *                      MaybeArenaPtr() const { return NULL; }
+  // accessors -------------------------------------------------------
 
-public:
-    ::google::protobuf::Metadata GetMetadata() const PROTOBUF_FINAL;
+  // repeated .metapb.Region regions = 1;
+  int regions_size() const;
+  void clear_regions();
+  static const int kRegionsFieldNumber = 1;
+  const ::metapb::Region& regions(int index) const;
+  ::metapb::Region* mutable_regions(int index);
+  ::metapb::Region* add_regions();
+  ::google::protobuf::RepeatedPtrField< ::metapb::Region >*
+      mutable_regions();
+  const ::google::protobuf::RepeatedPtrField< ::metapb::Region >&
+      regions() const;
 
-    // nested types ----------------------------------------------------
+  // @@protoc_insertion_point(class_scope:raft_cmdpb.BatchSplitResponse)
+ private:
 
-    // accessors -------------------------------------------------------
-
-    // repeated .metapb.Region regions = 1;
-    int                                                            regions_size() const;
-    void                                                           clear_regions();
-    static const int                                               kRegionsFieldNumber = 1;
-    const ::metapb::Region &                                       regions(int index) const;
-    ::metapb::Region *                                             mutable_regions(int index);
-    ::metapb::Region *                                             add_regions();
-    ::google::protobuf::RepeatedPtrField<::metapb::Region> *       mutable_regions();
-    const ::google::protobuf::RepeatedPtrField<::metapb::Region> & regions() const;
-
-    // @@protoc_insertion_point(class_scope:raft_cmdpb.BatchSplitResponse)
-private:
-    ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
-    ::google::protobuf::RepeatedPtrField<::metapb::Region>  regions_;
-    mutable int                                             _cached_size_;
-    friend struct ::protobuf_raft_5fcmdpb_2eproto::TableStruct;
-    friend void ::protobuf_raft_5fcmdpb_2eproto::InitDefaultsBatchSplitResponseImpl();
+  ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
+  ::google::protobuf::RepeatedPtrField< ::metapb::Region > regions_;
+  mutable int _cached_size_;
+  friend struct ::protobuf_raft_5fcmdpb_2eproto::TableStruct;
+  friend void ::protobuf_raft_5fcmdpb_2eproto::InitDefaultsBatchSplitResponseImpl();
 };
 // -------------------------------------------------------------------
 
-class CompactLogRequest : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:raft_cmdpb.CompactLogRequest) */
-{
-public:
-    CompactLogRequest();
-    virtual ~CompactLogRequest();
+class CompactLogRequest : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:raft_cmdpb.CompactLogRequest) */ {
+ public:
+  CompactLogRequest();
+  virtual ~CompactLogRequest();
 
-    CompactLogRequest(const CompactLogRequest & from);
+  CompactLogRequest(const CompactLogRequest& from);
 
-    inline CompactLogRequest & operator=(const CompactLogRequest & from)
-    {
-        CopyFrom(from);
-        return *this;
+  inline CompactLogRequest& operator=(const CompactLogRequest& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  #if LANG_CXX11
+  CompactLogRequest(CompactLogRequest&& from) noexcept
+    : CompactLogRequest() {
+    *this = ::std::move(from);
+  }
+
+  inline CompactLogRequest& operator=(CompactLogRequest&& from) noexcept {
+    if (GetArenaNoVirtual() == from.GetArenaNoVirtual()) {
+      if (this != &from) InternalSwap(&from);
+    } else {
+      CopyFrom(from);
     }
-#if LANG_CXX11
-    CompactLogRequest(CompactLogRequest && from) noexcept : CompactLogRequest() { *this = ::std::move(from); }
+    return *this;
+  }
+  #endif
+  static const ::google::protobuf::Descriptor* descriptor();
+  static const CompactLogRequest& default_instance();
 
-    inline CompactLogRequest & operator=(CompactLogRequest && from) noexcept
-    {
-        if (GetArenaNoVirtual() == from.GetArenaNoVirtual())
-        {
-            if (this != &from)
-                InternalSwap(&from);
-        }
-        else
-        {
-            CopyFrom(from);
-        }
-        return *this;
-    }
-#endif
-    static const ::google::protobuf::Descriptor * descriptor();
-    static const CompactLogRequest &              default_instance();
+  static void InitAsDefaultInstance();  // FOR INTERNAL USE ONLY
+  static inline const CompactLogRequest* internal_default_instance() {
+    return reinterpret_cast<const CompactLogRequest*>(
+               &_CompactLogRequest_default_instance_);
+  }
+  static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
+    22;
 
-    static void                             InitAsDefaultInstance(); // FOR INTERNAL USE ONLY
-    static inline const CompactLogRequest * internal_default_instance()
-    {
-        return reinterpret_cast<const CompactLogRequest *>(&_CompactLogRequest_default_instance_);
-    }
-    static PROTOBUF_CONSTEXPR int const kIndexInFileMessages = 22;
+  void Swap(CompactLogRequest* other);
+  friend void swap(CompactLogRequest& a, CompactLogRequest& b) {
+    a.Swap(&b);
+  }
 
-    void        Swap(CompactLogRequest * other);
-    friend void swap(CompactLogRequest & a, CompactLogRequest & b) { a.Swap(&b); }
+  // implements Message ----------------------------------------------
 
-    // implements Message ----------------------------------------------
+  inline CompactLogRequest* New() const PROTOBUF_FINAL { return New(NULL); }
 
-    inline CompactLogRequest * New() const PROTOBUF_FINAL { return New(NULL); }
+  CompactLogRequest* New(::google::protobuf::Arena* arena) const PROTOBUF_FINAL;
+  void CopyFrom(const ::google::protobuf::Message& from) PROTOBUF_FINAL;
+  void MergeFrom(const ::google::protobuf::Message& from) PROTOBUF_FINAL;
+  void CopyFrom(const CompactLogRequest& from);
+  void MergeFrom(const CompactLogRequest& from);
+  void Clear() PROTOBUF_FINAL;
+  bool IsInitialized() const PROTOBUF_FINAL;
 
-    CompactLogRequest * New(::google::protobuf::Arena * arena) const PROTOBUF_FINAL;
-    void                CopyFrom(const ::google::protobuf::Message & from) PROTOBUF_FINAL;
-    void                MergeFrom(const ::google::protobuf::Message & from) PROTOBUF_FINAL;
-    void                CopyFrom(const CompactLogRequest & from);
-    void                MergeFrom(const CompactLogRequest & from);
-    void                Clear() PROTOBUF_FINAL;
-    bool                IsInitialized() const PROTOBUF_FINAL;
+  size_t ByteSizeLong() const PROTOBUF_FINAL;
+  bool MergePartialFromCodedStream(
+      ::google::protobuf::io::CodedInputStream* input) PROTOBUF_FINAL;
+  void SerializeWithCachedSizes(
+      ::google::protobuf::io::CodedOutputStream* output) const PROTOBUF_FINAL;
+  ::google::protobuf::uint8* InternalSerializeWithCachedSizesToArray(
+      bool deterministic, ::google::protobuf::uint8* target) const PROTOBUF_FINAL;
+  int GetCachedSize() const PROTOBUF_FINAL { return _cached_size_; }
+  private:
+  void SharedCtor();
+  void SharedDtor();
+  void SetCachedSize(int size) const PROTOBUF_FINAL;
+  void InternalSwap(CompactLogRequest* other);
+  private:
+  inline ::google::protobuf::Arena* GetArenaNoVirtual() const {
+    return NULL;
+  }
+  inline void* MaybeArenaPtr() const {
+    return NULL;
+  }
+  public:
 
-    size_t                      ByteSizeLong() const PROTOBUF_FINAL;
-    bool                        MergePartialFromCodedStream(::google::protobuf::io::CodedInputStream * input) PROTOBUF_FINAL;
-    void                        SerializeWithCachedSizes(::google::protobuf::io::CodedOutputStream * output) const PROTOBUF_FINAL;
-    ::google::protobuf::uint8 * InternalSerializeWithCachedSizesToArray(bool                        deterministic,
-                                                                        ::google::protobuf::uint8 * target) const PROTOBUF_FINAL;
-    int                         GetCachedSize() const PROTOBUF_FINAL { return _cached_size_; }
+  ::google::protobuf::Metadata GetMetadata() const PROTOBUF_FINAL;
 
-private:
-    void SharedCtor();
-    void SharedDtor();
-    void SetCachedSize(int size) const PROTOBUF_FINAL;
-    void InternalSwap(CompactLogRequest * other);
+  // nested types ----------------------------------------------------
 
-private:
-    inline ::google::protobuf::Arena * GetArenaNoVirtual() const { return NULL; }
-    inline void *                      MaybeArenaPtr() const { return NULL; }
+  // accessors -------------------------------------------------------
 
-public:
-    ::google::protobuf::Metadata GetMetadata() const PROTOBUF_FINAL;
+  // uint64 compact_index = 1;
+  void clear_compact_index();
+  static const int kCompactIndexFieldNumber = 1;
+  ::google::protobuf::uint64 compact_index() const;
+  void set_compact_index(::google::protobuf::uint64 value);
 
-    // nested types ----------------------------------------------------
+  // uint64 compact_term = 2;
+  void clear_compact_term();
+  static const int kCompactTermFieldNumber = 2;
+  ::google::protobuf::uint64 compact_term() const;
+  void set_compact_term(::google::protobuf::uint64 value);
 
-    // accessors -------------------------------------------------------
+  // @@protoc_insertion_point(class_scope:raft_cmdpb.CompactLogRequest)
+ private:
 
-    // uint64 compact_index = 1;
-    void                       clear_compact_index();
-    static const int           kCompactIndexFieldNumber = 1;
-    ::google::protobuf::uint64 compact_index() const;
-    void                       set_compact_index(::google::protobuf::uint64 value);
-
-    // uint64 compact_term = 2;
-    void                       clear_compact_term();
-    static const int           kCompactTermFieldNumber = 2;
-    ::google::protobuf::uint64 compact_term() const;
-    void                       set_compact_term(::google::protobuf::uint64 value);
-
-    // @@protoc_insertion_point(class_scope:raft_cmdpb.CompactLogRequest)
-private:
-    ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
-    ::google::protobuf::uint64                              compact_index_;
-    ::google::protobuf::uint64                              compact_term_;
-    mutable int                                             _cached_size_;
-    friend struct ::protobuf_raft_5fcmdpb_2eproto::TableStruct;
-    friend void ::protobuf_raft_5fcmdpb_2eproto::InitDefaultsCompactLogRequestImpl();
+  ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
+  ::google::protobuf::uint64 compact_index_;
+  ::google::protobuf::uint64 compact_term_;
+  mutable int _cached_size_;
+  friend struct ::protobuf_raft_5fcmdpb_2eproto::TableStruct;
+  friend void ::protobuf_raft_5fcmdpb_2eproto::InitDefaultsCompactLogRequestImpl();
 };
 // -------------------------------------------------------------------
 
-class CompactLogResponse : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:raft_cmdpb.CompactLogResponse) */
-{
-public:
-    CompactLogResponse();
-    virtual ~CompactLogResponse();
+class CompactLogResponse : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:raft_cmdpb.CompactLogResponse) */ {
+ public:
+  CompactLogResponse();
+  virtual ~CompactLogResponse();
 
-    CompactLogResponse(const CompactLogResponse & from);
+  CompactLogResponse(const CompactLogResponse& from);
 
-    inline CompactLogResponse & operator=(const CompactLogResponse & from)
-    {
-        CopyFrom(from);
-        return *this;
+  inline CompactLogResponse& operator=(const CompactLogResponse& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  #if LANG_CXX11
+  CompactLogResponse(CompactLogResponse&& from) noexcept
+    : CompactLogResponse() {
+    *this = ::std::move(from);
+  }
+
+  inline CompactLogResponse& operator=(CompactLogResponse&& from) noexcept {
+    if (GetArenaNoVirtual() == from.GetArenaNoVirtual()) {
+      if (this != &from) InternalSwap(&from);
+    } else {
+      CopyFrom(from);
     }
-#if LANG_CXX11
-    CompactLogResponse(CompactLogResponse && from) noexcept : CompactLogResponse() { *this = ::std::move(from); }
+    return *this;
+  }
+  #endif
+  static const ::google::protobuf::Descriptor* descriptor();
+  static const CompactLogResponse& default_instance();
 
-    inline CompactLogResponse & operator=(CompactLogResponse && from) noexcept
-    {
-        if (GetArenaNoVirtual() == from.GetArenaNoVirtual())
-        {
-            if (this != &from)
-                InternalSwap(&from);
-        }
-        else
-        {
-            CopyFrom(from);
-        }
-        return *this;
-    }
-#endif
-    static const ::google::protobuf::Descriptor * descriptor();
-    static const CompactLogResponse &             default_instance();
+  static void InitAsDefaultInstance();  // FOR INTERNAL USE ONLY
+  static inline const CompactLogResponse* internal_default_instance() {
+    return reinterpret_cast<const CompactLogResponse*>(
+               &_CompactLogResponse_default_instance_);
+  }
+  static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
+    23;
 
-    static void                              InitAsDefaultInstance(); // FOR INTERNAL USE ONLY
-    static inline const CompactLogResponse * internal_default_instance()
-    {
-        return reinterpret_cast<const CompactLogResponse *>(&_CompactLogResponse_default_instance_);
-    }
-    static PROTOBUF_CONSTEXPR int const kIndexInFileMessages = 23;
+  void Swap(CompactLogResponse* other);
+  friend void swap(CompactLogResponse& a, CompactLogResponse& b) {
+    a.Swap(&b);
+  }
 
-    void        Swap(CompactLogResponse * other);
-    friend void swap(CompactLogResponse & a, CompactLogResponse & b) { a.Swap(&b); }
+  // implements Message ----------------------------------------------
 
-    // implements Message ----------------------------------------------
+  inline CompactLogResponse* New() const PROTOBUF_FINAL { return New(NULL); }
 
-    inline CompactLogResponse * New() const PROTOBUF_FINAL { return New(NULL); }
+  CompactLogResponse* New(::google::protobuf::Arena* arena) const PROTOBUF_FINAL;
+  void CopyFrom(const ::google::protobuf::Message& from) PROTOBUF_FINAL;
+  void MergeFrom(const ::google::protobuf::Message& from) PROTOBUF_FINAL;
+  void CopyFrom(const CompactLogResponse& from);
+  void MergeFrom(const CompactLogResponse& from);
+  void Clear() PROTOBUF_FINAL;
+  bool IsInitialized() const PROTOBUF_FINAL;
 
-    CompactLogResponse * New(::google::protobuf::Arena * arena) const PROTOBUF_FINAL;
-    void                 CopyFrom(const ::google::protobuf::Message & from) PROTOBUF_FINAL;
-    void                 MergeFrom(const ::google::protobuf::Message & from) PROTOBUF_FINAL;
-    void                 CopyFrom(const CompactLogResponse & from);
-    void                 MergeFrom(const CompactLogResponse & from);
-    void                 Clear() PROTOBUF_FINAL;
-    bool                 IsInitialized() const PROTOBUF_FINAL;
+  size_t ByteSizeLong() const PROTOBUF_FINAL;
+  bool MergePartialFromCodedStream(
+      ::google::protobuf::io::CodedInputStream* input) PROTOBUF_FINAL;
+  void SerializeWithCachedSizes(
+      ::google::protobuf::io::CodedOutputStream* output) const PROTOBUF_FINAL;
+  ::google::protobuf::uint8* InternalSerializeWithCachedSizesToArray(
+      bool deterministic, ::google::protobuf::uint8* target) const PROTOBUF_FINAL;
+  int GetCachedSize() const PROTOBUF_FINAL { return _cached_size_; }
+  private:
+  void SharedCtor();
+  void SharedDtor();
+  void SetCachedSize(int size) const PROTOBUF_FINAL;
+  void InternalSwap(CompactLogResponse* other);
+  private:
+  inline ::google::protobuf::Arena* GetArenaNoVirtual() const {
+    return NULL;
+  }
+  inline void* MaybeArenaPtr() const {
+    return NULL;
+  }
+  public:
 
-    size_t                      ByteSizeLong() const PROTOBUF_FINAL;
-    bool                        MergePartialFromCodedStream(::google::protobuf::io::CodedInputStream * input) PROTOBUF_FINAL;
-    void                        SerializeWithCachedSizes(::google::protobuf::io::CodedOutputStream * output) const PROTOBUF_FINAL;
-    ::google::protobuf::uint8 * InternalSerializeWithCachedSizesToArray(bool                        deterministic,
-                                                                        ::google::protobuf::uint8 * target) const PROTOBUF_FINAL;
-    int                         GetCachedSize() const PROTOBUF_FINAL { return _cached_size_; }
+  ::google::protobuf::Metadata GetMetadata() const PROTOBUF_FINAL;
 
-private:
-    void SharedCtor();
-    void SharedDtor();
-    void SetCachedSize(int size) const PROTOBUF_FINAL;
-    void InternalSwap(CompactLogResponse * other);
+  // nested types ----------------------------------------------------
 
-private:
-    inline ::google::protobuf::Arena * GetArenaNoVirtual() const { return NULL; }
-    inline void *                      MaybeArenaPtr() const { return NULL; }
+  // accessors -------------------------------------------------------
 
-public:
-    ::google::protobuf::Metadata GetMetadata() const PROTOBUF_FINAL;
+  // @@protoc_insertion_point(class_scope:raft_cmdpb.CompactLogResponse)
+ private:
 
-    // nested types ----------------------------------------------------
-
-    // accessors -------------------------------------------------------
-
-    // @@protoc_insertion_point(class_scope:raft_cmdpb.CompactLogResponse)
-private:
-    ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
-    mutable int                                             _cached_size_;
-    friend struct ::protobuf_raft_5fcmdpb_2eproto::TableStruct;
-    friend void ::protobuf_raft_5fcmdpb_2eproto::InitDefaultsCompactLogResponseImpl();
+  ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
+  mutable int _cached_size_;
+  friend struct ::protobuf_raft_5fcmdpb_2eproto::TableStruct;
+  friend void ::protobuf_raft_5fcmdpb_2eproto::InitDefaultsCompactLogResponseImpl();
 };
 // -------------------------------------------------------------------
 
-class TransferLeaderRequest
-    : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:raft_cmdpb.TransferLeaderRequest) */
-{
-public:
-    TransferLeaderRequest();
-    virtual ~TransferLeaderRequest();
+class TransferLeaderRequest : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:raft_cmdpb.TransferLeaderRequest) */ {
+ public:
+  TransferLeaderRequest();
+  virtual ~TransferLeaderRequest();
 
-    TransferLeaderRequest(const TransferLeaderRequest & from);
+  TransferLeaderRequest(const TransferLeaderRequest& from);
 
-    inline TransferLeaderRequest & operator=(const TransferLeaderRequest & from)
-    {
-        CopyFrom(from);
-        return *this;
+  inline TransferLeaderRequest& operator=(const TransferLeaderRequest& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  #if LANG_CXX11
+  TransferLeaderRequest(TransferLeaderRequest&& from) noexcept
+    : TransferLeaderRequest() {
+    *this = ::std::move(from);
+  }
+
+  inline TransferLeaderRequest& operator=(TransferLeaderRequest&& from) noexcept {
+    if (GetArenaNoVirtual() == from.GetArenaNoVirtual()) {
+      if (this != &from) InternalSwap(&from);
+    } else {
+      CopyFrom(from);
     }
-#if LANG_CXX11
-    TransferLeaderRequest(TransferLeaderRequest && from) noexcept : TransferLeaderRequest() { *this = ::std::move(from); }
+    return *this;
+  }
+  #endif
+  static const ::google::protobuf::Descriptor* descriptor();
+  static const TransferLeaderRequest& default_instance();
 
-    inline TransferLeaderRequest & operator=(TransferLeaderRequest && from) noexcept
-    {
-        if (GetArenaNoVirtual() == from.GetArenaNoVirtual())
-        {
-            if (this != &from)
-                InternalSwap(&from);
-        }
-        else
-        {
-            CopyFrom(from);
-        }
-        return *this;
-    }
-#endif
-    static const ::google::protobuf::Descriptor * descriptor();
-    static const TransferLeaderRequest &          default_instance();
+  static void InitAsDefaultInstance();  // FOR INTERNAL USE ONLY
+  static inline const TransferLeaderRequest* internal_default_instance() {
+    return reinterpret_cast<const TransferLeaderRequest*>(
+               &_TransferLeaderRequest_default_instance_);
+  }
+  static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
+    24;
 
-    static void                                 InitAsDefaultInstance(); // FOR INTERNAL USE ONLY
-    static inline const TransferLeaderRequest * internal_default_instance()
-    {
-        return reinterpret_cast<const TransferLeaderRequest *>(&_TransferLeaderRequest_default_instance_);
-    }
-    static PROTOBUF_CONSTEXPR int const kIndexInFileMessages = 24;
+  void Swap(TransferLeaderRequest* other);
+  friend void swap(TransferLeaderRequest& a, TransferLeaderRequest& b) {
+    a.Swap(&b);
+  }
 
-    void        Swap(TransferLeaderRequest * other);
-    friend void swap(TransferLeaderRequest & a, TransferLeaderRequest & b) { a.Swap(&b); }
+  // implements Message ----------------------------------------------
 
-    // implements Message ----------------------------------------------
+  inline TransferLeaderRequest* New() const PROTOBUF_FINAL { return New(NULL); }
 
-    inline TransferLeaderRequest * New() const PROTOBUF_FINAL { return New(NULL); }
+  TransferLeaderRequest* New(::google::protobuf::Arena* arena) const PROTOBUF_FINAL;
+  void CopyFrom(const ::google::protobuf::Message& from) PROTOBUF_FINAL;
+  void MergeFrom(const ::google::protobuf::Message& from) PROTOBUF_FINAL;
+  void CopyFrom(const TransferLeaderRequest& from);
+  void MergeFrom(const TransferLeaderRequest& from);
+  void Clear() PROTOBUF_FINAL;
+  bool IsInitialized() const PROTOBUF_FINAL;
 
-    TransferLeaderRequest * New(::google::protobuf::Arena * arena) const PROTOBUF_FINAL;
-    void                    CopyFrom(const ::google::protobuf::Message & from) PROTOBUF_FINAL;
-    void                    MergeFrom(const ::google::protobuf::Message & from) PROTOBUF_FINAL;
-    void                    CopyFrom(const TransferLeaderRequest & from);
-    void                    MergeFrom(const TransferLeaderRequest & from);
-    void                    Clear() PROTOBUF_FINAL;
-    bool                    IsInitialized() const PROTOBUF_FINAL;
+  size_t ByteSizeLong() const PROTOBUF_FINAL;
+  bool MergePartialFromCodedStream(
+      ::google::protobuf::io::CodedInputStream* input) PROTOBUF_FINAL;
+  void SerializeWithCachedSizes(
+      ::google::protobuf::io::CodedOutputStream* output) const PROTOBUF_FINAL;
+  ::google::protobuf::uint8* InternalSerializeWithCachedSizesToArray(
+      bool deterministic, ::google::protobuf::uint8* target) const PROTOBUF_FINAL;
+  int GetCachedSize() const PROTOBUF_FINAL { return _cached_size_; }
+  private:
+  void SharedCtor();
+  void SharedDtor();
+  void SetCachedSize(int size) const PROTOBUF_FINAL;
+  void InternalSwap(TransferLeaderRequest* other);
+  private:
+  inline ::google::protobuf::Arena* GetArenaNoVirtual() const {
+    return NULL;
+  }
+  inline void* MaybeArenaPtr() const {
+    return NULL;
+  }
+  public:
 
-    size_t                      ByteSizeLong() const PROTOBUF_FINAL;
-    bool                        MergePartialFromCodedStream(::google::protobuf::io::CodedInputStream * input) PROTOBUF_FINAL;
-    void                        SerializeWithCachedSizes(::google::protobuf::io::CodedOutputStream * output) const PROTOBUF_FINAL;
-    ::google::protobuf::uint8 * InternalSerializeWithCachedSizesToArray(bool                        deterministic,
-                                                                        ::google::protobuf::uint8 * target) const PROTOBUF_FINAL;
-    int                         GetCachedSize() const PROTOBUF_FINAL { return _cached_size_; }
+  ::google::protobuf::Metadata GetMetadata() const PROTOBUF_FINAL;
 
-private:
-    void SharedCtor();
-    void SharedDtor();
-    void SetCachedSize(int size) const PROTOBUF_FINAL;
-    void InternalSwap(TransferLeaderRequest * other);
+  // nested types ----------------------------------------------------
 
-private:
-    inline ::google::protobuf::Arena * GetArenaNoVirtual() const { return NULL; }
-    inline void *                      MaybeArenaPtr() const { return NULL; }
+  // accessors -------------------------------------------------------
 
-public:
-    ::google::protobuf::Metadata GetMetadata() const PROTOBUF_FINAL;
+  // .metapb.Peer peer = 1;
+  bool has_peer() const;
+  void clear_peer();
+  static const int kPeerFieldNumber = 1;
+  const ::metapb::Peer& peer() const;
+  ::metapb::Peer* release_peer();
+  ::metapb::Peer* mutable_peer();
+  void set_allocated_peer(::metapb::Peer* peer);
 
-    // nested types ----------------------------------------------------
+  // @@protoc_insertion_point(class_scope:raft_cmdpb.TransferLeaderRequest)
+ private:
 
-    // accessors -------------------------------------------------------
-
-    // .metapb.Peer peer = 1;
-    bool                   has_peer() const;
-    void                   clear_peer();
-    static const int       kPeerFieldNumber = 1;
-    const ::metapb::Peer & peer() const;
-    ::metapb::Peer *       release_peer();
-    ::metapb::Peer *       mutable_peer();
-    void                   set_allocated_peer(::metapb::Peer * peer);
-
-    // @@protoc_insertion_point(class_scope:raft_cmdpb.TransferLeaderRequest)
-private:
-    ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
-    ::metapb::Peer *                                        peer_;
-    mutable int                                             _cached_size_;
-    friend struct ::protobuf_raft_5fcmdpb_2eproto::TableStruct;
-    friend void ::protobuf_raft_5fcmdpb_2eproto::InitDefaultsTransferLeaderRequestImpl();
+  ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
+  ::metapb::Peer* peer_;
+  mutable int _cached_size_;
+  friend struct ::protobuf_raft_5fcmdpb_2eproto::TableStruct;
+  friend void ::protobuf_raft_5fcmdpb_2eproto::InitDefaultsTransferLeaderRequestImpl();
 };
 // -------------------------------------------------------------------
 
-class TransferLeaderResponse
-    : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:raft_cmdpb.TransferLeaderResponse) */
-{
-public:
-    TransferLeaderResponse();
-    virtual ~TransferLeaderResponse();
+class TransferLeaderResponse : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:raft_cmdpb.TransferLeaderResponse) */ {
+ public:
+  TransferLeaderResponse();
+  virtual ~TransferLeaderResponse();
 
-    TransferLeaderResponse(const TransferLeaderResponse & from);
+  TransferLeaderResponse(const TransferLeaderResponse& from);
 
-    inline TransferLeaderResponse & operator=(const TransferLeaderResponse & from)
-    {
-        CopyFrom(from);
-        return *this;
+  inline TransferLeaderResponse& operator=(const TransferLeaderResponse& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  #if LANG_CXX11
+  TransferLeaderResponse(TransferLeaderResponse&& from) noexcept
+    : TransferLeaderResponse() {
+    *this = ::std::move(from);
+  }
+
+  inline TransferLeaderResponse& operator=(TransferLeaderResponse&& from) noexcept {
+    if (GetArenaNoVirtual() == from.GetArenaNoVirtual()) {
+      if (this != &from) InternalSwap(&from);
+    } else {
+      CopyFrom(from);
     }
-#if LANG_CXX11
-    TransferLeaderResponse(TransferLeaderResponse && from) noexcept : TransferLeaderResponse() { *this = ::std::move(from); }
+    return *this;
+  }
+  #endif
+  static const ::google::protobuf::Descriptor* descriptor();
+  static const TransferLeaderResponse& default_instance();
 
-    inline TransferLeaderResponse & operator=(TransferLeaderResponse && from) noexcept
-    {
-        if (GetArenaNoVirtual() == from.GetArenaNoVirtual())
-        {
-            if (this != &from)
-                InternalSwap(&from);
-        }
-        else
-        {
-            CopyFrom(from);
-        }
-        return *this;
-    }
-#endif
-    static const ::google::protobuf::Descriptor * descriptor();
-    static const TransferLeaderResponse &         default_instance();
+  static void InitAsDefaultInstance();  // FOR INTERNAL USE ONLY
+  static inline const TransferLeaderResponse* internal_default_instance() {
+    return reinterpret_cast<const TransferLeaderResponse*>(
+               &_TransferLeaderResponse_default_instance_);
+  }
+  static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
+    25;
 
-    static void                                  InitAsDefaultInstance(); // FOR INTERNAL USE ONLY
-    static inline const TransferLeaderResponse * internal_default_instance()
-    {
-        return reinterpret_cast<const TransferLeaderResponse *>(&_TransferLeaderResponse_default_instance_);
-    }
-    static PROTOBUF_CONSTEXPR int const kIndexInFileMessages = 25;
+  void Swap(TransferLeaderResponse* other);
+  friend void swap(TransferLeaderResponse& a, TransferLeaderResponse& b) {
+    a.Swap(&b);
+  }
 
-    void        Swap(TransferLeaderResponse * other);
-    friend void swap(TransferLeaderResponse & a, TransferLeaderResponse & b) { a.Swap(&b); }
+  // implements Message ----------------------------------------------
 
-    // implements Message ----------------------------------------------
+  inline TransferLeaderResponse* New() const PROTOBUF_FINAL { return New(NULL); }
 
-    inline TransferLeaderResponse * New() const PROTOBUF_FINAL { return New(NULL); }
+  TransferLeaderResponse* New(::google::protobuf::Arena* arena) const PROTOBUF_FINAL;
+  void CopyFrom(const ::google::protobuf::Message& from) PROTOBUF_FINAL;
+  void MergeFrom(const ::google::protobuf::Message& from) PROTOBUF_FINAL;
+  void CopyFrom(const TransferLeaderResponse& from);
+  void MergeFrom(const TransferLeaderResponse& from);
+  void Clear() PROTOBUF_FINAL;
+  bool IsInitialized() const PROTOBUF_FINAL;
 
-    TransferLeaderResponse * New(::google::protobuf::Arena * arena) const PROTOBUF_FINAL;
-    void                     CopyFrom(const ::google::protobuf::Message & from) PROTOBUF_FINAL;
-    void                     MergeFrom(const ::google::protobuf::Message & from) PROTOBUF_FINAL;
-    void                     CopyFrom(const TransferLeaderResponse & from);
-    void                     MergeFrom(const TransferLeaderResponse & from);
-    void                     Clear() PROTOBUF_FINAL;
-    bool                     IsInitialized() const PROTOBUF_FINAL;
+  size_t ByteSizeLong() const PROTOBUF_FINAL;
+  bool MergePartialFromCodedStream(
+      ::google::protobuf::io::CodedInputStream* input) PROTOBUF_FINAL;
+  void SerializeWithCachedSizes(
+      ::google::protobuf::io::CodedOutputStream* output) const PROTOBUF_FINAL;
+  ::google::protobuf::uint8* InternalSerializeWithCachedSizesToArray(
+      bool deterministic, ::google::protobuf::uint8* target) const PROTOBUF_FINAL;
+  int GetCachedSize() const PROTOBUF_FINAL { return _cached_size_; }
+  private:
+  void SharedCtor();
+  void SharedDtor();
+  void SetCachedSize(int size) const PROTOBUF_FINAL;
+  void InternalSwap(TransferLeaderResponse* other);
+  private:
+  inline ::google::protobuf::Arena* GetArenaNoVirtual() const {
+    return NULL;
+  }
+  inline void* MaybeArenaPtr() const {
+    return NULL;
+  }
+  public:
 
-    size_t                      ByteSizeLong() const PROTOBUF_FINAL;
-    bool                        MergePartialFromCodedStream(::google::protobuf::io::CodedInputStream * input) PROTOBUF_FINAL;
-    void                        SerializeWithCachedSizes(::google::protobuf::io::CodedOutputStream * output) const PROTOBUF_FINAL;
-    ::google::protobuf::uint8 * InternalSerializeWithCachedSizesToArray(bool                        deterministic,
-                                                                        ::google::protobuf::uint8 * target) const PROTOBUF_FINAL;
-    int                         GetCachedSize() const PROTOBUF_FINAL { return _cached_size_; }
+  ::google::protobuf::Metadata GetMetadata() const PROTOBUF_FINAL;
 
-private:
-    void SharedCtor();
-    void SharedDtor();
-    void SetCachedSize(int size) const PROTOBUF_FINAL;
-    void InternalSwap(TransferLeaderResponse * other);
+  // nested types ----------------------------------------------------
 
-private:
-    inline ::google::protobuf::Arena * GetArenaNoVirtual() const { return NULL; }
-    inline void *                      MaybeArenaPtr() const { return NULL; }
+  // accessors -------------------------------------------------------
 
-public:
-    ::google::protobuf::Metadata GetMetadata() const PROTOBUF_FINAL;
+  // @@protoc_insertion_point(class_scope:raft_cmdpb.TransferLeaderResponse)
+ private:
 
-    // nested types ----------------------------------------------------
-
-    // accessors -------------------------------------------------------
-
-    // @@protoc_insertion_point(class_scope:raft_cmdpb.TransferLeaderResponse)
-private:
-    ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
-    mutable int                                             _cached_size_;
-    friend struct ::protobuf_raft_5fcmdpb_2eproto::TableStruct;
-    friend void ::protobuf_raft_5fcmdpb_2eproto::InitDefaultsTransferLeaderResponseImpl();
+  ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
+  mutable int _cached_size_;
+  friend struct ::protobuf_raft_5fcmdpb_2eproto::TableStruct;
+  friend void ::protobuf_raft_5fcmdpb_2eproto::InitDefaultsTransferLeaderResponseImpl();
 };
 // -------------------------------------------------------------------
 
-class VerifyHashRequest : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:raft_cmdpb.VerifyHashRequest) */
-{
-public:
-    VerifyHashRequest();
-    virtual ~VerifyHashRequest();
+class VerifyHashRequest : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:raft_cmdpb.VerifyHashRequest) */ {
+ public:
+  VerifyHashRequest();
+  virtual ~VerifyHashRequest();
 
-    VerifyHashRequest(const VerifyHashRequest & from);
+  VerifyHashRequest(const VerifyHashRequest& from);
 
-    inline VerifyHashRequest & operator=(const VerifyHashRequest & from)
-    {
-        CopyFrom(from);
-        return *this;
+  inline VerifyHashRequest& operator=(const VerifyHashRequest& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  #if LANG_CXX11
+  VerifyHashRequest(VerifyHashRequest&& from) noexcept
+    : VerifyHashRequest() {
+    *this = ::std::move(from);
+  }
+
+  inline VerifyHashRequest& operator=(VerifyHashRequest&& from) noexcept {
+    if (GetArenaNoVirtual() == from.GetArenaNoVirtual()) {
+      if (this != &from) InternalSwap(&from);
+    } else {
+      CopyFrom(from);
     }
-#if LANG_CXX11
-    VerifyHashRequest(VerifyHashRequest && from) noexcept : VerifyHashRequest() { *this = ::std::move(from); }
+    return *this;
+  }
+  #endif
+  static const ::google::protobuf::Descriptor* descriptor();
+  static const VerifyHashRequest& default_instance();
 
-    inline VerifyHashRequest & operator=(VerifyHashRequest && from) noexcept
-    {
-        if (GetArenaNoVirtual() == from.GetArenaNoVirtual())
-        {
-            if (this != &from)
-                InternalSwap(&from);
-        }
-        else
-        {
-            CopyFrom(from);
-        }
-        return *this;
-    }
-#endif
-    static const ::google::protobuf::Descriptor * descriptor();
-    static const VerifyHashRequest &              default_instance();
+  static void InitAsDefaultInstance();  // FOR INTERNAL USE ONLY
+  static inline const VerifyHashRequest* internal_default_instance() {
+    return reinterpret_cast<const VerifyHashRequest*>(
+               &_VerifyHashRequest_default_instance_);
+  }
+  static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
+    26;
 
-    static void                             InitAsDefaultInstance(); // FOR INTERNAL USE ONLY
-    static inline const VerifyHashRequest * internal_default_instance()
-    {
-        return reinterpret_cast<const VerifyHashRequest *>(&_VerifyHashRequest_default_instance_);
-    }
-    static PROTOBUF_CONSTEXPR int const kIndexInFileMessages = 26;
+  void Swap(VerifyHashRequest* other);
+  friend void swap(VerifyHashRequest& a, VerifyHashRequest& b) {
+    a.Swap(&b);
+  }
 
-    void        Swap(VerifyHashRequest * other);
-    friend void swap(VerifyHashRequest & a, VerifyHashRequest & b) { a.Swap(&b); }
+  // implements Message ----------------------------------------------
 
-    // implements Message ----------------------------------------------
+  inline VerifyHashRequest* New() const PROTOBUF_FINAL { return New(NULL); }
 
-    inline VerifyHashRequest * New() const PROTOBUF_FINAL { return New(NULL); }
+  VerifyHashRequest* New(::google::protobuf::Arena* arena) const PROTOBUF_FINAL;
+  void CopyFrom(const ::google::protobuf::Message& from) PROTOBUF_FINAL;
+  void MergeFrom(const ::google::protobuf::Message& from) PROTOBUF_FINAL;
+  void CopyFrom(const VerifyHashRequest& from);
+  void MergeFrom(const VerifyHashRequest& from);
+  void Clear() PROTOBUF_FINAL;
+  bool IsInitialized() const PROTOBUF_FINAL;
 
-    VerifyHashRequest * New(::google::protobuf::Arena * arena) const PROTOBUF_FINAL;
-    void                CopyFrom(const ::google::protobuf::Message & from) PROTOBUF_FINAL;
-    void                MergeFrom(const ::google::protobuf::Message & from) PROTOBUF_FINAL;
-    void                CopyFrom(const VerifyHashRequest & from);
-    void                MergeFrom(const VerifyHashRequest & from);
-    void                Clear() PROTOBUF_FINAL;
-    bool                IsInitialized() const PROTOBUF_FINAL;
+  size_t ByteSizeLong() const PROTOBUF_FINAL;
+  bool MergePartialFromCodedStream(
+      ::google::protobuf::io::CodedInputStream* input) PROTOBUF_FINAL;
+  void SerializeWithCachedSizes(
+      ::google::protobuf::io::CodedOutputStream* output) const PROTOBUF_FINAL;
+  ::google::protobuf::uint8* InternalSerializeWithCachedSizesToArray(
+      bool deterministic, ::google::protobuf::uint8* target) const PROTOBUF_FINAL;
+  int GetCachedSize() const PROTOBUF_FINAL { return _cached_size_; }
+  private:
+  void SharedCtor();
+  void SharedDtor();
+  void SetCachedSize(int size) const PROTOBUF_FINAL;
+  void InternalSwap(VerifyHashRequest* other);
+  private:
+  inline ::google::protobuf::Arena* GetArenaNoVirtual() const {
+    return NULL;
+  }
+  inline void* MaybeArenaPtr() const {
+    return NULL;
+  }
+  public:
 
-    size_t                      ByteSizeLong() const PROTOBUF_FINAL;
-    bool                        MergePartialFromCodedStream(::google::protobuf::io::CodedInputStream * input) PROTOBUF_FINAL;
-    void                        SerializeWithCachedSizes(::google::protobuf::io::CodedOutputStream * output) const PROTOBUF_FINAL;
-    ::google::protobuf::uint8 * InternalSerializeWithCachedSizesToArray(bool                        deterministic,
-                                                                        ::google::protobuf::uint8 * target) const PROTOBUF_FINAL;
-    int                         GetCachedSize() const PROTOBUF_FINAL { return _cached_size_; }
+  ::google::protobuf::Metadata GetMetadata() const PROTOBUF_FINAL;
 
-private:
-    void SharedCtor();
-    void SharedDtor();
-    void SetCachedSize(int size) const PROTOBUF_FINAL;
-    void InternalSwap(VerifyHashRequest * other);
+  // nested types ----------------------------------------------------
 
-private:
-    inline ::google::protobuf::Arena * GetArenaNoVirtual() const { return NULL; }
-    inline void *                      MaybeArenaPtr() const { return NULL; }
+  // accessors -------------------------------------------------------
 
-public:
-    ::google::protobuf::Metadata GetMetadata() const PROTOBUF_FINAL;
+  // bytes hash = 2;
+  void clear_hash();
+  static const int kHashFieldNumber = 2;
+  const ::std::string& hash() const;
+  void set_hash(const ::std::string& value);
+  #if LANG_CXX11
+  void set_hash(::std::string&& value);
+  #endif
+  void set_hash(const char* value);
+  void set_hash(const void* value, size_t size);
+  ::std::string* mutable_hash();
+  ::std::string* release_hash();
+  void set_allocated_hash(::std::string* hash);
 
-    // nested types ----------------------------------------------------
+  // uint64 index = 1;
+  void clear_index();
+  static const int kIndexFieldNumber = 1;
+  ::google::protobuf::uint64 index() const;
+  void set_index(::google::protobuf::uint64 value);
 
-    // accessors -------------------------------------------------------
+  // @@protoc_insertion_point(class_scope:raft_cmdpb.VerifyHashRequest)
+ private:
 
-    // bytes hash = 2;
-    void                  clear_hash();
-    static const int      kHashFieldNumber = 2;
-    const ::std::string & hash() const;
-    void                  set_hash(const ::std::string & value);
-#if LANG_CXX11
-    void set_hash(::std::string && value);
-#endif
-    void            set_hash(const char * value);
-    void            set_hash(const void * value, size_t size);
-    ::std::string * mutable_hash();
-    ::std::string * release_hash();
-    void            set_allocated_hash(::std::string * hash);
-
-    // uint64 index = 1;
-    void                       clear_index();
-    static const int           kIndexFieldNumber = 1;
-    ::google::protobuf::uint64 index() const;
-    void                       set_index(::google::protobuf::uint64 value);
-
-    // @@protoc_insertion_point(class_scope:raft_cmdpb.VerifyHashRequest)
-private:
-    ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
-    ::google::protobuf::internal::ArenaStringPtr            hash_;
-    ::google::protobuf::uint64                              index_;
-    mutable int                                             _cached_size_;
-    friend struct ::protobuf_raft_5fcmdpb_2eproto::TableStruct;
-    friend void ::protobuf_raft_5fcmdpb_2eproto::InitDefaultsVerifyHashRequestImpl();
+  ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
+  ::google::protobuf::internal::ArenaStringPtr hash_;
+  ::google::protobuf::uint64 index_;
+  mutable int _cached_size_;
+  friend struct ::protobuf_raft_5fcmdpb_2eproto::TableStruct;
+  friend void ::protobuf_raft_5fcmdpb_2eproto::InitDefaultsVerifyHashRequestImpl();
 };
 // -------------------------------------------------------------------
 
-class VerifyHashResponse : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:raft_cmdpb.VerifyHashResponse) */
-{
-public:
-    VerifyHashResponse();
-    virtual ~VerifyHashResponse();
+class VerifyHashResponse : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:raft_cmdpb.VerifyHashResponse) */ {
+ public:
+  VerifyHashResponse();
+  virtual ~VerifyHashResponse();
 
-    VerifyHashResponse(const VerifyHashResponse & from);
+  VerifyHashResponse(const VerifyHashResponse& from);
 
-    inline VerifyHashResponse & operator=(const VerifyHashResponse & from)
-    {
-        CopyFrom(from);
-        return *this;
+  inline VerifyHashResponse& operator=(const VerifyHashResponse& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  #if LANG_CXX11
+  VerifyHashResponse(VerifyHashResponse&& from) noexcept
+    : VerifyHashResponse() {
+    *this = ::std::move(from);
+  }
+
+  inline VerifyHashResponse& operator=(VerifyHashResponse&& from) noexcept {
+    if (GetArenaNoVirtual() == from.GetArenaNoVirtual()) {
+      if (this != &from) InternalSwap(&from);
+    } else {
+      CopyFrom(from);
     }
-#if LANG_CXX11
-    VerifyHashResponse(VerifyHashResponse && from) noexcept : VerifyHashResponse() { *this = ::std::move(from); }
+    return *this;
+  }
+  #endif
+  static const ::google::protobuf::Descriptor* descriptor();
+  static const VerifyHashResponse& default_instance();
 
-    inline VerifyHashResponse & operator=(VerifyHashResponse && from) noexcept
-    {
-        if (GetArenaNoVirtual() == from.GetArenaNoVirtual())
-        {
-            if (this != &from)
-                InternalSwap(&from);
-        }
-        else
-        {
-            CopyFrom(from);
-        }
-        return *this;
-    }
-#endif
-    static const ::google::protobuf::Descriptor * descriptor();
-    static const VerifyHashResponse &             default_instance();
+  static void InitAsDefaultInstance();  // FOR INTERNAL USE ONLY
+  static inline const VerifyHashResponse* internal_default_instance() {
+    return reinterpret_cast<const VerifyHashResponse*>(
+               &_VerifyHashResponse_default_instance_);
+  }
+  static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
+    27;
 
-    static void                              InitAsDefaultInstance(); // FOR INTERNAL USE ONLY
-    static inline const VerifyHashResponse * internal_default_instance()
-    {
-        return reinterpret_cast<const VerifyHashResponse *>(&_VerifyHashResponse_default_instance_);
-    }
-    static PROTOBUF_CONSTEXPR int const kIndexInFileMessages = 27;
+  void Swap(VerifyHashResponse* other);
+  friend void swap(VerifyHashResponse& a, VerifyHashResponse& b) {
+    a.Swap(&b);
+  }
 
-    void        Swap(VerifyHashResponse * other);
-    friend void swap(VerifyHashResponse & a, VerifyHashResponse & b) { a.Swap(&b); }
+  // implements Message ----------------------------------------------
 
-    // implements Message ----------------------------------------------
+  inline VerifyHashResponse* New() const PROTOBUF_FINAL { return New(NULL); }
 
-    inline VerifyHashResponse * New() const PROTOBUF_FINAL { return New(NULL); }
+  VerifyHashResponse* New(::google::protobuf::Arena* arena) const PROTOBUF_FINAL;
+  void CopyFrom(const ::google::protobuf::Message& from) PROTOBUF_FINAL;
+  void MergeFrom(const ::google::protobuf::Message& from) PROTOBUF_FINAL;
+  void CopyFrom(const VerifyHashResponse& from);
+  void MergeFrom(const VerifyHashResponse& from);
+  void Clear() PROTOBUF_FINAL;
+  bool IsInitialized() const PROTOBUF_FINAL;
 
-    VerifyHashResponse * New(::google::protobuf::Arena * arena) const PROTOBUF_FINAL;
-    void                 CopyFrom(const ::google::protobuf::Message & from) PROTOBUF_FINAL;
-    void                 MergeFrom(const ::google::protobuf::Message & from) PROTOBUF_FINAL;
-    void                 CopyFrom(const VerifyHashResponse & from);
-    void                 MergeFrom(const VerifyHashResponse & from);
-    void                 Clear() PROTOBUF_FINAL;
-    bool                 IsInitialized() const PROTOBUF_FINAL;
+  size_t ByteSizeLong() const PROTOBUF_FINAL;
+  bool MergePartialFromCodedStream(
+      ::google::protobuf::io::CodedInputStream* input) PROTOBUF_FINAL;
+  void SerializeWithCachedSizes(
+      ::google::protobuf::io::CodedOutputStream* output) const PROTOBUF_FINAL;
+  ::google::protobuf::uint8* InternalSerializeWithCachedSizesToArray(
+      bool deterministic, ::google::protobuf::uint8* target) const PROTOBUF_FINAL;
+  int GetCachedSize() const PROTOBUF_FINAL { return _cached_size_; }
+  private:
+  void SharedCtor();
+  void SharedDtor();
+  void SetCachedSize(int size) const PROTOBUF_FINAL;
+  void InternalSwap(VerifyHashResponse* other);
+  private:
+  inline ::google::protobuf::Arena* GetArenaNoVirtual() const {
+    return NULL;
+  }
+  inline void* MaybeArenaPtr() const {
+    return NULL;
+  }
+  public:
 
-    size_t                      ByteSizeLong() const PROTOBUF_FINAL;
-    bool                        MergePartialFromCodedStream(::google::protobuf::io::CodedInputStream * input) PROTOBUF_FINAL;
-    void                        SerializeWithCachedSizes(::google::protobuf::io::CodedOutputStream * output) const PROTOBUF_FINAL;
-    ::google::protobuf::uint8 * InternalSerializeWithCachedSizesToArray(bool                        deterministic,
-                                                                        ::google::protobuf::uint8 * target) const PROTOBUF_FINAL;
-    int                         GetCachedSize() const PROTOBUF_FINAL { return _cached_size_; }
+  ::google::protobuf::Metadata GetMetadata() const PROTOBUF_FINAL;
 
-private:
-    void SharedCtor();
-    void SharedDtor();
-    void SetCachedSize(int size) const PROTOBUF_FINAL;
-    void InternalSwap(VerifyHashResponse * other);
+  // nested types ----------------------------------------------------
 
-private:
-    inline ::google::protobuf::Arena * GetArenaNoVirtual() const { return NULL; }
-    inline void *                      MaybeArenaPtr() const { return NULL; }
+  // accessors -------------------------------------------------------
 
-public:
-    ::google::protobuf::Metadata GetMetadata() const PROTOBUF_FINAL;
+  // @@protoc_insertion_point(class_scope:raft_cmdpb.VerifyHashResponse)
+ private:
 
-    // nested types ----------------------------------------------------
-
-    // accessors -------------------------------------------------------
-
-    // @@protoc_insertion_point(class_scope:raft_cmdpb.VerifyHashResponse)
-private:
-    ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
-    mutable int                                             _cached_size_;
-    friend struct ::protobuf_raft_5fcmdpb_2eproto::TableStruct;
-    friend void ::protobuf_raft_5fcmdpb_2eproto::InitDefaultsVerifyHashResponseImpl();
+  ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
+  mutable int _cached_size_;
+  friend struct ::protobuf_raft_5fcmdpb_2eproto::TableStruct;
+  friend void ::protobuf_raft_5fcmdpb_2eproto::InitDefaultsVerifyHashResponseImpl();
 };
 // -------------------------------------------------------------------
 
-class PrepareMergeRequest
-    : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:raft_cmdpb.PrepareMergeRequest) */
-{
-public:
-    PrepareMergeRequest();
-    virtual ~PrepareMergeRequest();
+class PrepareMergeRequest : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:raft_cmdpb.PrepareMergeRequest) */ {
+ public:
+  PrepareMergeRequest();
+  virtual ~PrepareMergeRequest();
 
-    PrepareMergeRequest(const PrepareMergeRequest & from);
+  PrepareMergeRequest(const PrepareMergeRequest& from);
 
-    inline PrepareMergeRequest & operator=(const PrepareMergeRequest & from)
-    {
-        CopyFrom(from);
-        return *this;
+  inline PrepareMergeRequest& operator=(const PrepareMergeRequest& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  #if LANG_CXX11
+  PrepareMergeRequest(PrepareMergeRequest&& from) noexcept
+    : PrepareMergeRequest() {
+    *this = ::std::move(from);
+  }
+
+  inline PrepareMergeRequest& operator=(PrepareMergeRequest&& from) noexcept {
+    if (GetArenaNoVirtual() == from.GetArenaNoVirtual()) {
+      if (this != &from) InternalSwap(&from);
+    } else {
+      CopyFrom(from);
     }
-#if LANG_CXX11
-    PrepareMergeRequest(PrepareMergeRequest && from) noexcept : PrepareMergeRequest() { *this = ::std::move(from); }
+    return *this;
+  }
+  #endif
+  static const ::google::protobuf::Descriptor* descriptor();
+  static const PrepareMergeRequest& default_instance();
 
-    inline PrepareMergeRequest & operator=(PrepareMergeRequest && from) noexcept
-    {
-        if (GetArenaNoVirtual() == from.GetArenaNoVirtual())
-        {
-            if (this != &from)
-                InternalSwap(&from);
-        }
-        else
-        {
-            CopyFrom(from);
-        }
-        return *this;
-    }
-#endif
-    static const ::google::protobuf::Descriptor * descriptor();
-    static const PrepareMergeRequest &            default_instance();
+  static void InitAsDefaultInstance();  // FOR INTERNAL USE ONLY
+  static inline const PrepareMergeRequest* internal_default_instance() {
+    return reinterpret_cast<const PrepareMergeRequest*>(
+               &_PrepareMergeRequest_default_instance_);
+  }
+  static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
+    28;
 
-    static void                               InitAsDefaultInstance(); // FOR INTERNAL USE ONLY
-    static inline const PrepareMergeRequest * internal_default_instance()
-    {
-        return reinterpret_cast<const PrepareMergeRequest *>(&_PrepareMergeRequest_default_instance_);
-    }
-    static PROTOBUF_CONSTEXPR int const kIndexInFileMessages = 28;
+  void Swap(PrepareMergeRequest* other);
+  friend void swap(PrepareMergeRequest& a, PrepareMergeRequest& b) {
+    a.Swap(&b);
+  }
 
-    void        Swap(PrepareMergeRequest * other);
-    friend void swap(PrepareMergeRequest & a, PrepareMergeRequest & b) { a.Swap(&b); }
+  // implements Message ----------------------------------------------
 
-    // implements Message ----------------------------------------------
+  inline PrepareMergeRequest* New() const PROTOBUF_FINAL { return New(NULL); }
 
-    inline PrepareMergeRequest * New() const PROTOBUF_FINAL { return New(NULL); }
+  PrepareMergeRequest* New(::google::protobuf::Arena* arena) const PROTOBUF_FINAL;
+  void CopyFrom(const ::google::protobuf::Message& from) PROTOBUF_FINAL;
+  void MergeFrom(const ::google::protobuf::Message& from) PROTOBUF_FINAL;
+  void CopyFrom(const PrepareMergeRequest& from);
+  void MergeFrom(const PrepareMergeRequest& from);
+  void Clear() PROTOBUF_FINAL;
+  bool IsInitialized() const PROTOBUF_FINAL;
 
-    PrepareMergeRequest * New(::google::protobuf::Arena * arena) const PROTOBUF_FINAL;
-    void                  CopyFrom(const ::google::protobuf::Message & from) PROTOBUF_FINAL;
-    void                  MergeFrom(const ::google::protobuf::Message & from) PROTOBUF_FINAL;
-    void                  CopyFrom(const PrepareMergeRequest & from);
-    void                  MergeFrom(const PrepareMergeRequest & from);
-    void                  Clear() PROTOBUF_FINAL;
-    bool                  IsInitialized() const PROTOBUF_FINAL;
+  size_t ByteSizeLong() const PROTOBUF_FINAL;
+  bool MergePartialFromCodedStream(
+      ::google::protobuf::io::CodedInputStream* input) PROTOBUF_FINAL;
+  void SerializeWithCachedSizes(
+      ::google::protobuf::io::CodedOutputStream* output) const PROTOBUF_FINAL;
+  ::google::protobuf::uint8* InternalSerializeWithCachedSizesToArray(
+      bool deterministic, ::google::protobuf::uint8* target) const PROTOBUF_FINAL;
+  int GetCachedSize() const PROTOBUF_FINAL { return _cached_size_; }
+  private:
+  void SharedCtor();
+  void SharedDtor();
+  void SetCachedSize(int size) const PROTOBUF_FINAL;
+  void InternalSwap(PrepareMergeRequest* other);
+  private:
+  inline ::google::protobuf::Arena* GetArenaNoVirtual() const {
+    return NULL;
+  }
+  inline void* MaybeArenaPtr() const {
+    return NULL;
+  }
+  public:
 
-    size_t                      ByteSizeLong() const PROTOBUF_FINAL;
-    bool                        MergePartialFromCodedStream(::google::protobuf::io::CodedInputStream * input) PROTOBUF_FINAL;
-    void                        SerializeWithCachedSizes(::google::protobuf::io::CodedOutputStream * output) const PROTOBUF_FINAL;
-    ::google::protobuf::uint8 * InternalSerializeWithCachedSizesToArray(bool                        deterministic,
-                                                                        ::google::protobuf::uint8 * target) const PROTOBUF_FINAL;
-    int                         GetCachedSize() const PROTOBUF_FINAL { return _cached_size_; }
+  ::google::protobuf::Metadata GetMetadata() const PROTOBUF_FINAL;
 
-private:
-    void SharedCtor();
-    void SharedDtor();
-    void SetCachedSize(int size) const PROTOBUF_FINAL;
-    void InternalSwap(PrepareMergeRequest * other);
+  // nested types ----------------------------------------------------
 
-private:
-    inline ::google::protobuf::Arena * GetArenaNoVirtual() const { return NULL; }
-    inline void *                      MaybeArenaPtr() const { return NULL; }
+  // accessors -------------------------------------------------------
 
-public:
-    ::google::protobuf::Metadata GetMetadata() const PROTOBUF_FINAL;
+  // .metapb.Region target = 2;
+  bool has_target() const;
+  void clear_target();
+  static const int kTargetFieldNumber = 2;
+  const ::metapb::Region& target() const;
+  ::metapb::Region* release_target();
+  ::metapb::Region* mutable_target();
+  void set_allocated_target(::metapb::Region* target);
 
-    // nested types ----------------------------------------------------
+  // uint64 min_index = 1;
+  void clear_min_index();
+  static const int kMinIndexFieldNumber = 1;
+  ::google::protobuf::uint64 min_index() const;
+  void set_min_index(::google::protobuf::uint64 value);
 
-    // accessors -------------------------------------------------------
+  // @@protoc_insertion_point(class_scope:raft_cmdpb.PrepareMergeRequest)
+ private:
 
-    // .metapb.Region target = 2;
-    bool                     has_target() const;
-    void                     clear_target();
-    static const int         kTargetFieldNumber = 2;
-    const ::metapb::Region & target() const;
-    ::metapb::Region *       release_target();
-    ::metapb::Region *       mutable_target();
-    void                     set_allocated_target(::metapb::Region * target);
-
-    // uint64 min_index = 1;
-    void                       clear_min_index();
-    static const int           kMinIndexFieldNumber = 1;
-    ::google::protobuf::uint64 min_index() const;
-    void                       set_min_index(::google::protobuf::uint64 value);
-
-    // @@protoc_insertion_point(class_scope:raft_cmdpb.PrepareMergeRequest)
-private:
-    ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
-    ::metapb::Region *                                      target_;
-    ::google::protobuf::uint64                              min_index_;
-    mutable int                                             _cached_size_;
-    friend struct ::protobuf_raft_5fcmdpb_2eproto::TableStruct;
-    friend void ::protobuf_raft_5fcmdpb_2eproto::InitDefaultsPrepareMergeRequestImpl();
+  ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
+  ::metapb::Region* target_;
+  ::google::protobuf::uint64 min_index_;
+  mutable int _cached_size_;
+  friend struct ::protobuf_raft_5fcmdpb_2eproto::TableStruct;
+  friend void ::protobuf_raft_5fcmdpb_2eproto::InitDefaultsPrepareMergeRequestImpl();
 };
 // -------------------------------------------------------------------
 
-class PrepareMergeResponse
-    : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:raft_cmdpb.PrepareMergeResponse) */
-{
-public:
-    PrepareMergeResponse();
-    virtual ~PrepareMergeResponse();
+class PrepareMergeResponse : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:raft_cmdpb.PrepareMergeResponse) */ {
+ public:
+  PrepareMergeResponse();
+  virtual ~PrepareMergeResponse();
 
-    PrepareMergeResponse(const PrepareMergeResponse & from);
+  PrepareMergeResponse(const PrepareMergeResponse& from);
 
-    inline PrepareMergeResponse & operator=(const PrepareMergeResponse & from)
-    {
-        CopyFrom(from);
-        return *this;
+  inline PrepareMergeResponse& operator=(const PrepareMergeResponse& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  #if LANG_CXX11
+  PrepareMergeResponse(PrepareMergeResponse&& from) noexcept
+    : PrepareMergeResponse() {
+    *this = ::std::move(from);
+  }
+
+  inline PrepareMergeResponse& operator=(PrepareMergeResponse&& from) noexcept {
+    if (GetArenaNoVirtual() == from.GetArenaNoVirtual()) {
+      if (this != &from) InternalSwap(&from);
+    } else {
+      CopyFrom(from);
     }
-#if LANG_CXX11
-    PrepareMergeResponse(PrepareMergeResponse && from) noexcept : PrepareMergeResponse() { *this = ::std::move(from); }
+    return *this;
+  }
+  #endif
+  static const ::google::protobuf::Descriptor* descriptor();
+  static const PrepareMergeResponse& default_instance();
 
-    inline PrepareMergeResponse & operator=(PrepareMergeResponse && from) noexcept
-    {
-        if (GetArenaNoVirtual() == from.GetArenaNoVirtual())
-        {
-            if (this != &from)
-                InternalSwap(&from);
-        }
-        else
-        {
-            CopyFrom(from);
-        }
-        return *this;
-    }
-#endif
-    static const ::google::protobuf::Descriptor * descriptor();
-    static const PrepareMergeResponse &           default_instance();
+  static void InitAsDefaultInstance();  // FOR INTERNAL USE ONLY
+  static inline const PrepareMergeResponse* internal_default_instance() {
+    return reinterpret_cast<const PrepareMergeResponse*>(
+               &_PrepareMergeResponse_default_instance_);
+  }
+  static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
+    29;
 
-    static void                                InitAsDefaultInstance(); // FOR INTERNAL USE ONLY
-    static inline const PrepareMergeResponse * internal_default_instance()
-    {
-        return reinterpret_cast<const PrepareMergeResponse *>(&_PrepareMergeResponse_default_instance_);
-    }
-    static PROTOBUF_CONSTEXPR int const kIndexInFileMessages = 29;
+  void Swap(PrepareMergeResponse* other);
+  friend void swap(PrepareMergeResponse& a, PrepareMergeResponse& b) {
+    a.Swap(&b);
+  }
 
-    void        Swap(PrepareMergeResponse * other);
-    friend void swap(PrepareMergeResponse & a, PrepareMergeResponse & b) { a.Swap(&b); }
+  // implements Message ----------------------------------------------
 
-    // implements Message ----------------------------------------------
+  inline PrepareMergeResponse* New() const PROTOBUF_FINAL { return New(NULL); }
 
-    inline PrepareMergeResponse * New() const PROTOBUF_FINAL { return New(NULL); }
+  PrepareMergeResponse* New(::google::protobuf::Arena* arena) const PROTOBUF_FINAL;
+  void CopyFrom(const ::google::protobuf::Message& from) PROTOBUF_FINAL;
+  void MergeFrom(const ::google::protobuf::Message& from) PROTOBUF_FINAL;
+  void CopyFrom(const PrepareMergeResponse& from);
+  void MergeFrom(const PrepareMergeResponse& from);
+  void Clear() PROTOBUF_FINAL;
+  bool IsInitialized() const PROTOBUF_FINAL;
 
-    PrepareMergeResponse * New(::google::protobuf::Arena * arena) const PROTOBUF_FINAL;
-    void                   CopyFrom(const ::google::protobuf::Message & from) PROTOBUF_FINAL;
-    void                   MergeFrom(const ::google::protobuf::Message & from) PROTOBUF_FINAL;
-    void                   CopyFrom(const PrepareMergeResponse & from);
-    void                   MergeFrom(const PrepareMergeResponse & from);
-    void                   Clear() PROTOBUF_FINAL;
-    bool                   IsInitialized() const PROTOBUF_FINAL;
+  size_t ByteSizeLong() const PROTOBUF_FINAL;
+  bool MergePartialFromCodedStream(
+      ::google::protobuf::io::CodedInputStream* input) PROTOBUF_FINAL;
+  void SerializeWithCachedSizes(
+      ::google::protobuf::io::CodedOutputStream* output) const PROTOBUF_FINAL;
+  ::google::protobuf::uint8* InternalSerializeWithCachedSizesToArray(
+      bool deterministic, ::google::protobuf::uint8* target) const PROTOBUF_FINAL;
+  int GetCachedSize() const PROTOBUF_FINAL { return _cached_size_; }
+  private:
+  void SharedCtor();
+  void SharedDtor();
+  void SetCachedSize(int size) const PROTOBUF_FINAL;
+  void InternalSwap(PrepareMergeResponse* other);
+  private:
+  inline ::google::protobuf::Arena* GetArenaNoVirtual() const {
+    return NULL;
+  }
+  inline void* MaybeArenaPtr() const {
+    return NULL;
+  }
+  public:
 
-    size_t                      ByteSizeLong() const PROTOBUF_FINAL;
-    bool                        MergePartialFromCodedStream(::google::protobuf::io::CodedInputStream * input) PROTOBUF_FINAL;
-    void                        SerializeWithCachedSizes(::google::protobuf::io::CodedOutputStream * output) const PROTOBUF_FINAL;
-    ::google::protobuf::uint8 * InternalSerializeWithCachedSizesToArray(bool                        deterministic,
-                                                                        ::google::protobuf::uint8 * target) const PROTOBUF_FINAL;
-    int                         GetCachedSize() const PROTOBUF_FINAL { return _cached_size_; }
+  ::google::protobuf::Metadata GetMetadata() const PROTOBUF_FINAL;
 
-private:
-    void SharedCtor();
-    void SharedDtor();
-    void SetCachedSize(int size) const PROTOBUF_FINAL;
-    void InternalSwap(PrepareMergeResponse * other);
+  // nested types ----------------------------------------------------
 
-private:
-    inline ::google::protobuf::Arena * GetArenaNoVirtual() const { return NULL; }
-    inline void *                      MaybeArenaPtr() const { return NULL; }
+  // accessors -------------------------------------------------------
 
-public:
-    ::google::protobuf::Metadata GetMetadata() const PROTOBUF_FINAL;
+  // @@protoc_insertion_point(class_scope:raft_cmdpb.PrepareMergeResponse)
+ private:
 
-    // nested types ----------------------------------------------------
-
-    // accessors -------------------------------------------------------
-
-    // @@protoc_insertion_point(class_scope:raft_cmdpb.PrepareMergeResponse)
-private:
-    ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
-    mutable int                                             _cached_size_;
-    friend struct ::protobuf_raft_5fcmdpb_2eproto::TableStruct;
-    friend void ::protobuf_raft_5fcmdpb_2eproto::InitDefaultsPrepareMergeResponseImpl();
+  ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
+  mutable int _cached_size_;
+  friend struct ::protobuf_raft_5fcmdpb_2eproto::TableStruct;
+  friend void ::protobuf_raft_5fcmdpb_2eproto::InitDefaultsPrepareMergeResponseImpl();
 };
 // -------------------------------------------------------------------
 
-class CommitMergeRequest : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:raft_cmdpb.CommitMergeRequest) */
-{
-public:
-    CommitMergeRequest();
-    virtual ~CommitMergeRequest();
+class CommitMergeRequest : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:raft_cmdpb.CommitMergeRequest) */ {
+ public:
+  CommitMergeRequest();
+  virtual ~CommitMergeRequest();
 
-    CommitMergeRequest(const CommitMergeRequest & from);
+  CommitMergeRequest(const CommitMergeRequest& from);
 
-    inline CommitMergeRequest & operator=(const CommitMergeRequest & from)
-    {
-        CopyFrom(from);
-        return *this;
+  inline CommitMergeRequest& operator=(const CommitMergeRequest& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  #if LANG_CXX11
+  CommitMergeRequest(CommitMergeRequest&& from) noexcept
+    : CommitMergeRequest() {
+    *this = ::std::move(from);
+  }
+
+  inline CommitMergeRequest& operator=(CommitMergeRequest&& from) noexcept {
+    if (GetArenaNoVirtual() == from.GetArenaNoVirtual()) {
+      if (this != &from) InternalSwap(&from);
+    } else {
+      CopyFrom(from);
     }
-#if LANG_CXX11
-    CommitMergeRequest(CommitMergeRequest && from) noexcept : CommitMergeRequest() { *this = ::std::move(from); }
+    return *this;
+  }
+  #endif
+  static const ::google::protobuf::Descriptor* descriptor();
+  static const CommitMergeRequest& default_instance();
 
-    inline CommitMergeRequest & operator=(CommitMergeRequest && from) noexcept
-    {
-        if (GetArenaNoVirtual() == from.GetArenaNoVirtual())
-        {
-            if (this != &from)
-                InternalSwap(&from);
-        }
-        else
-        {
-            CopyFrom(from);
-        }
-        return *this;
-    }
-#endif
-    static const ::google::protobuf::Descriptor * descriptor();
-    static const CommitMergeRequest &             default_instance();
+  static void InitAsDefaultInstance();  // FOR INTERNAL USE ONLY
+  static inline const CommitMergeRequest* internal_default_instance() {
+    return reinterpret_cast<const CommitMergeRequest*>(
+               &_CommitMergeRequest_default_instance_);
+  }
+  static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
+    30;
 
-    static void                              InitAsDefaultInstance(); // FOR INTERNAL USE ONLY
-    static inline const CommitMergeRequest * internal_default_instance()
-    {
-        return reinterpret_cast<const CommitMergeRequest *>(&_CommitMergeRequest_default_instance_);
-    }
-    static PROTOBUF_CONSTEXPR int const kIndexInFileMessages = 30;
+  void Swap(CommitMergeRequest* other);
+  friend void swap(CommitMergeRequest& a, CommitMergeRequest& b) {
+    a.Swap(&b);
+  }
 
-    void        Swap(CommitMergeRequest * other);
-    friend void swap(CommitMergeRequest & a, CommitMergeRequest & b) { a.Swap(&b); }
+  // implements Message ----------------------------------------------
 
-    // implements Message ----------------------------------------------
+  inline CommitMergeRequest* New() const PROTOBUF_FINAL { return New(NULL); }
 
-    inline CommitMergeRequest * New() const PROTOBUF_FINAL { return New(NULL); }
+  CommitMergeRequest* New(::google::protobuf::Arena* arena) const PROTOBUF_FINAL;
+  void CopyFrom(const ::google::protobuf::Message& from) PROTOBUF_FINAL;
+  void MergeFrom(const ::google::protobuf::Message& from) PROTOBUF_FINAL;
+  void CopyFrom(const CommitMergeRequest& from);
+  void MergeFrom(const CommitMergeRequest& from);
+  void Clear() PROTOBUF_FINAL;
+  bool IsInitialized() const PROTOBUF_FINAL;
 
-    CommitMergeRequest * New(::google::protobuf::Arena * arena) const PROTOBUF_FINAL;
-    void                 CopyFrom(const ::google::protobuf::Message & from) PROTOBUF_FINAL;
-    void                 MergeFrom(const ::google::protobuf::Message & from) PROTOBUF_FINAL;
-    void                 CopyFrom(const CommitMergeRequest & from);
-    void                 MergeFrom(const CommitMergeRequest & from);
-    void                 Clear() PROTOBUF_FINAL;
-    bool                 IsInitialized() const PROTOBUF_FINAL;
+  size_t ByteSizeLong() const PROTOBUF_FINAL;
+  bool MergePartialFromCodedStream(
+      ::google::protobuf::io::CodedInputStream* input) PROTOBUF_FINAL;
+  void SerializeWithCachedSizes(
+      ::google::protobuf::io::CodedOutputStream* output) const PROTOBUF_FINAL;
+  ::google::protobuf::uint8* InternalSerializeWithCachedSizesToArray(
+      bool deterministic, ::google::protobuf::uint8* target) const PROTOBUF_FINAL;
+  int GetCachedSize() const PROTOBUF_FINAL { return _cached_size_; }
+  private:
+  void SharedCtor();
+  void SharedDtor();
+  void SetCachedSize(int size) const PROTOBUF_FINAL;
+  void InternalSwap(CommitMergeRequest* other);
+  private:
+  inline ::google::protobuf::Arena* GetArenaNoVirtual() const {
+    return NULL;
+  }
+  inline void* MaybeArenaPtr() const {
+    return NULL;
+  }
+  public:
 
-    size_t                      ByteSizeLong() const PROTOBUF_FINAL;
-    bool                        MergePartialFromCodedStream(::google::protobuf::io::CodedInputStream * input) PROTOBUF_FINAL;
-    void                        SerializeWithCachedSizes(::google::protobuf::io::CodedOutputStream * output) const PROTOBUF_FINAL;
-    ::google::protobuf::uint8 * InternalSerializeWithCachedSizesToArray(bool                        deterministic,
-                                                                        ::google::protobuf::uint8 * target) const PROTOBUF_FINAL;
-    int                         GetCachedSize() const PROTOBUF_FINAL { return _cached_size_; }
+  ::google::protobuf::Metadata GetMetadata() const PROTOBUF_FINAL;
 
-private:
-    void SharedCtor();
-    void SharedDtor();
-    void SetCachedSize(int size) const PROTOBUF_FINAL;
-    void InternalSwap(CommitMergeRequest * other);
+  // nested types ----------------------------------------------------
 
-private:
-    inline ::google::protobuf::Arena * GetArenaNoVirtual() const { return NULL; }
-    inline void *                      MaybeArenaPtr() const { return NULL; }
+  // accessors -------------------------------------------------------
 
-public:
-    ::google::protobuf::Metadata GetMetadata() const PROTOBUF_FINAL;
+  // repeated .eraftpb.Entry entries = 3;
+  int entries_size() const;
+  void clear_entries();
+  static const int kEntriesFieldNumber = 3;
+  const ::eraftpb::Entry& entries(int index) const;
+  ::eraftpb::Entry* mutable_entries(int index);
+  ::eraftpb::Entry* add_entries();
+  ::google::protobuf::RepeatedPtrField< ::eraftpb::Entry >*
+      mutable_entries();
+  const ::google::protobuf::RepeatedPtrField< ::eraftpb::Entry >&
+      entries() const;
 
-    // nested types ----------------------------------------------------
+  // .metapb.Region source = 1;
+  bool has_source() const;
+  void clear_source();
+  static const int kSourceFieldNumber = 1;
+  const ::metapb::Region& source() const;
+  ::metapb::Region* release_source();
+  ::metapb::Region* mutable_source();
+  void set_allocated_source(::metapb::Region* source);
 
-    // accessors -------------------------------------------------------
+  // uint64 commit = 2;
+  void clear_commit();
+  static const int kCommitFieldNumber = 2;
+  ::google::protobuf::uint64 commit() const;
+  void set_commit(::google::protobuf::uint64 value);
 
-    // repeated .eraftpb.Entry entries = 3;
-    int                                                            entries_size() const;
-    void                                                           clear_entries();
-    static const int                                               kEntriesFieldNumber = 3;
-    const ::eraftpb::Entry &                                       entries(int index) const;
-    ::eraftpb::Entry *                                             mutable_entries(int index);
-    ::eraftpb::Entry *                                             add_entries();
-    ::google::protobuf::RepeatedPtrField<::eraftpb::Entry> *       mutable_entries();
-    const ::google::protobuf::RepeatedPtrField<::eraftpb::Entry> & entries() const;
+  // @@protoc_insertion_point(class_scope:raft_cmdpb.CommitMergeRequest)
+ private:
 
-    // .metapb.Region source = 1;
-    bool                     has_source() const;
-    void                     clear_source();
-    static const int         kSourceFieldNumber = 1;
-    const ::metapb::Region & source() const;
-    ::metapb::Region *       release_source();
-    ::metapb::Region *       mutable_source();
-    void                     set_allocated_source(::metapb::Region * source);
-
-    // uint64 commit = 2;
-    void                       clear_commit();
-    static const int           kCommitFieldNumber = 2;
-    ::google::protobuf::uint64 commit() const;
-    void                       set_commit(::google::protobuf::uint64 value);
-
-    // @@protoc_insertion_point(class_scope:raft_cmdpb.CommitMergeRequest)
-private:
-    ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
-    ::google::protobuf::RepeatedPtrField<::eraftpb::Entry>  entries_;
-    ::metapb::Region *                                      source_;
-    ::google::protobuf::uint64                              commit_;
-    mutable int                                             _cached_size_;
-    friend struct ::protobuf_raft_5fcmdpb_2eproto::TableStruct;
-    friend void ::protobuf_raft_5fcmdpb_2eproto::InitDefaultsCommitMergeRequestImpl();
+  ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
+  ::google::protobuf::RepeatedPtrField< ::eraftpb::Entry > entries_;
+  ::metapb::Region* source_;
+  ::google::protobuf::uint64 commit_;
+  mutable int _cached_size_;
+  friend struct ::protobuf_raft_5fcmdpb_2eproto::TableStruct;
+  friend void ::protobuf_raft_5fcmdpb_2eproto::InitDefaultsCommitMergeRequestImpl();
 };
 // -------------------------------------------------------------------
 
-class CommitMergeResponse
-    : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:raft_cmdpb.CommitMergeResponse) */
-{
-public:
-    CommitMergeResponse();
-    virtual ~CommitMergeResponse();
+class CommitMergeResponse : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:raft_cmdpb.CommitMergeResponse) */ {
+ public:
+  CommitMergeResponse();
+  virtual ~CommitMergeResponse();
 
-    CommitMergeResponse(const CommitMergeResponse & from);
+  CommitMergeResponse(const CommitMergeResponse& from);
 
-    inline CommitMergeResponse & operator=(const CommitMergeResponse & from)
-    {
-        CopyFrom(from);
-        return *this;
+  inline CommitMergeResponse& operator=(const CommitMergeResponse& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  #if LANG_CXX11
+  CommitMergeResponse(CommitMergeResponse&& from) noexcept
+    : CommitMergeResponse() {
+    *this = ::std::move(from);
+  }
+
+  inline CommitMergeResponse& operator=(CommitMergeResponse&& from) noexcept {
+    if (GetArenaNoVirtual() == from.GetArenaNoVirtual()) {
+      if (this != &from) InternalSwap(&from);
+    } else {
+      CopyFrom(from);
     }
-#if LANG_CXX11
-    CommitMergeResponse(CommitMergeResponse && from) noexcept : CommitMergeResponse() { *this = ::std::move(from); }
+    return *this;
+  }
+  #endif
+  static const ::google::protobuf::Descriptor* descriptor();
+  static const CommitMergeResponse& default_instance();
 
-    inline CommitMergeResponse & operator=(CommitMergeResponse && from) noexcept
-    {
-        if (GetArenaNoVirtual() == from.GetArenaNoVirtual())
-        {
-            if (this != &from)
-                InternalSwap(&from);
-        }
-        else
-        {
-            CopyFrom(from);
-        }
-        return *this;
-    }
-#endif
-    static const ::google::protobuf::Descriptor * descriptor();
-    static const CommitMergeResponse &            default_instance();
+  static void InitAsDefaultInstance();  // FOR INTERNAL USE ONLY
+  static inline const CommitMergeResponse* internal_default_instance() {
+    return reinterpret_cast<const CommitMergeResponse*>(
+               &_CommitMergeResponse_default_instance_);
+  }
+  static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
+    31;
 
-    static void                               InitAsDefaultInstance(); // FOR INTERNAL USE ONLY
-    static inline const CommitMergeResponse * internal_default_instance()
-    {
-        return reinterpret_cast<const CommitMergeResponse *>(&_CommitMergeResponse_default_instance_);
-    }
-    static PROTOBUF_CONSTEXPR int const kIndexInFileMessages = 31;
+  void Swap(CommitMergeResponse* other);
+  friend void swap(CommitMergeResponse& a, CommitMergeResponse& b) {
+    a.Swap(&b);
+  }
 
-    void        Swap(CommitMergeResponse * other);
-    friend void swap(CommitMergeResponse & a, CommitMergeResponse & b) { a.Swap(&b); }
+  // implements Message ----------------------------------------------
 
-    // implements Message ----------------------------------------------
+  inline CommitMergeResponse* New() const PROTOBUF_FINAL { return New(NULL); }
 
-    inline CommitMergeResponse * New() const PROTOBUF_FINAL { return New(NULL); }
+  CommitMergeResponse* New(::google::protobuf::Arena* arena) const PROTOBUF_FINAL;
+  void CopyFrom(const ::google::protobuf::Message& from) PROTOBUF_FINAL;
+  void MergeFrom(const ::google::protobuf::Message& from) PROTOBUF_FINAL;
+  void CopyFrom(const CommitMergeResponse& from);
+  void MergeFrom(const CommitMergeResponse& from);
+  void Clear() PROTOBUF_FINAL;
+  bool IsInitialized() const PROTOBUF_FINAL;
 
-    CommitMergeResponse * New(::google::protobuf::Arena * arena) const PROTOBUF_FINAL;
-    void                  CopyFrom(const ::google::protobuf::Message & from) PROTOBUF_FINAL;
-    void                  MergeFrom(const ::google::protobuf::Message & from) PROTOBUF_FINAL;
-    void                  CopyFrom(const CommitMergeResponse & from);
-    void                  MergeFrom(const CommitMergeResponse & from);
-    void                  Clear() PROTOBUF_FINAL;
-    bool                  IsInitialized() const PROTOBUF_FINAL;
+  size_t ByteSizeLong() const PROTOBUF_FINAL;
+  bool MergePartialFromCodedStream(
+      ::google::protobuf::io::CodedInputStream* input) PROTOBUF_FINAL;
+  void SerializeWithCachedSizes(
+      ::google::protobuf::io::CodedOutputStream* output) const PROTOBUF_FINAL;
+  ::google::protobuf::uint8* InternalSerializeWithCachedSizesToArray(
+      bool deterministic, ::google::protobuf::uint8* target) const PROTOBUF_FINAL;
+  int GetCachedSize() const PROTOBUF_FINAL { return _cached_size_; }
+  private:
+  void SharedCtor();
+  void SharedDtor();
+  void SetCachedSize(int size) const PROTOBUF_FINAL;
+  void InternalSwap(CommitMergeResponse* other);
+  private:
+  inline ::google::protobuf::Arena* GetArenaNoVirtual() const {
+    return NULL;
+  }
+  inline void* MaybeArenaPtr() const {
+    return NULL;
+  }
+  public:
 
-    size_t                      ByteSizeLong() const PROTOBUF_FINAL;
-    bool                        MergePartialFromCodedStream(::google::protobuf::io::CodedInputStream * input) PROTOBUF_FINAL;
-    void                        SerializeWithCachedSizes(::google::protobuf::io::CodedOutputStream * output) const PROTOBUF_FINAL;
-    ::google::protobuf::uint8 * InternalSerializeWithCachedSizesToArray(bool                        deterministic,
-                                                                        ::google::protobuf::uint8 * target) const PROTOBUF_FINAL;
-    int                         GetCachedSize() const PROTOBUF_FINAL { return _cached_size_; }
+  ::google::protobuf::Metadata GetMetadata() const PROTOBUF_FINAL;
 
-private:
-    void SharedCtor();
-    void SharedDtor();
-    void SetCachedSize(int size) const PROTOBUF_FINAL;
-    void InternalSwap(CommitMergeResponse * other);
+  // nested types ----------------------------------------------------
 
-private:
-    inline ::google::protobuf::Arena * GetArenaNoVirtual() const { return NULL; }
-    inline void *                      MaybeArenaPtr() const { return NULL; }
+  // accessors -------------------------------------------------------
 
-public:
-    ::google::protobuf::Metadata GetMetadata() const PROTOBUF_FINAL;
+  // @@protoc_insertion_point(class_scope:raft_cmdpb.CommitMergeResponse)
+ private:
 
-    // nested types ----------------------------------------------------
-
-    // accessors -------------------------------------------------------
-
-    // @@protoc_insertion_point(class_scope:raft_cmdpb.CommitMergeResponse)
-private:
-    ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
-    mutable int                                             _cached_size_;
-    friend struct ::protobuf_raft_5fcmdpb_2eproto::TableStruct;
-    friend void ::protobuf_raft_5fcmdpb_2eproto::InitDefaultsCommitMergeResponseImpl();
+  ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
+  mutable int _cached_size_;
+  friend struct ::protobuf_raft_5fcmdpb_2eproto::TableStruct;
+  friend void ::protobuf_raft_5fcmdpb_2eproto::InitDefaultsCommitMergeResponseImpl();
 };
 // -------------------------------------------------------------------
 
-class RollbackMergeRequest
-    : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:raft_cmdpb.RollbackMergeRequest) */
-{
-public:
-    RollbackMergeRequest();
-    virtual ~RollbackMergeRequest();
+class RollbackMergeRequest : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:raft_cmdpb.RollbackMergeRequest) */ {
+ public:
+  RollbackMergeRequest();
+  virtual ~RollbackMergeRequest();
 
-    RollbackMergeRequest(const RollbackMergeRequest & from);
+  RollbackMergeRequest(const RollbackMergeRequest& from);
 
-    inline RollbackMergeRequest & operator=(const RollbackMergeRequest & from)
-    {
-        CopyFrom(from);
-        return *this;
+  inline RollbackMergeRequest& operator=(const RollbackMergeRequest& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  #if LANG_CXX11
+  RollbackMergeRequest(RollbackMergeRequest&& from) noexcept
+    : RollbackMergeRequest() {
+    *this = ::std::move(from);
+  }
+
+  inline RollbackMergeRequest& operator=(RollbackMergeRequest&& from) noexcept {
+    if (GetArenaNoVirtual() == from.GetArenaNoVirtual()) {
+      if (this != &from) InternalSwap(&from);
+    } else {
+      CopyFrom(from);
     }
-#if LANG_CXX11
-    RollbackMergeRequest(RollbackMergeRequest && from) noexcept : RollbackMergeRequest() { *this = ::std::move(from); }
+    return *this;
+  }
+  #endif
+  static const ::google::protobuf::Descriptor* descriptor();
+  static const RollbackMergeRequest& default_instance();
 
-    inline RollbackMergeRequest & operator=(RollbackMergeRequest && from) noexcept
-    {
-        if (GetArenaNoVirtual() == from.GetArenaNoVirtual())
-        {
-            if (this != &from)
-                InternalSwap(&from);
-        }
-        else
-        {
-            CopyFrom(from);
-        }
-        return *this;
-    }
-#endif
-    static const ::google::protobuf::Descriptor * descriptor();
-    static const RollbackMergeRequest &           default_instance();
+  static void InitAsDefaultInstance();  // FOR INTERNAL USE ONLY
+  static inline const RollbackMergeRequest* internal_default_instance() {
+    return reinterpret_cast<const RollbackMergeRequest*>(
+               &_RollbackMergeRequest_default_instance_);
+  }
+  static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
+    32;
 
-    static void                                InitAsDefaultInstance(); // FOR INTERNAL USE ONLY
-    static inline const RollbackMergeRequest * internal_default_instance()
-    {
-        return reinterpret_cast<const RollbackMergeRequest *>(&_RollbackMergeRequest_default_instance_);
-    }
-    static PROTOBUF_CONSTEXPR int const kIndexInFileMessages = 32;
+  void Swap(RollbackMergeRequest* other);
+  friend void swap(RollbackMergeRequest& a, RollbackMergeRequest& b) {
+    a.Swap(&b);
+  }
 
-    void        Swap(RollbackMergeRequest * other);
-    friend void swap(RollbackMergeRequest & a, RollbackMergeRequest & b) { a.Swap(&b); }
+  // implements Message ----------------------------------------------
 
-    // implements Message ----------------------------------------------
+  inline RollbackMergeRequest* New() const PROTOBUF_FINAL { return New(NULL); }
 
-    inline RollbackMergeRequest * New() const PROTOBUF_FINAL { return New(NULL); }
+  RollbackMergeRequest* New(::google::protobuf::Arena* arena) const PROTOBUF_FINAL;
+  void CopyFrom(const ::google::protobuf::Message& from) PROTOBUF_FINAL;
+  void MergeFrom(const ::google::protobuf::Message& from) PROTOBUF_FINAL;
+  void CopyFrom(const RollbackMergeRequest& from);
+  void MergeFrom(const RollbackMergeRequest& from);
+  void Clear() PROTOBUF_FINAL;
+  bool IsInitialized() const PROTOBUF_FINAL;
 
-    RollbackMergeRequest * New(::google::protobuf::Arena * arena) const PROTOBUF_FINAL;
-    void                   CopyFrom(const ::google::protobuf::Message & from) PROTOBUF_FINAL;
-    void                   MergeFrom(const ::google::protobuf::Message & from) PROTOBUF_FINAL;
-    void                   CopyFrom(const RollbackMergeRequest & from);
-    void                   MergeFrom(const RollbackMergeRequest & from);
-    void                   Clear() PROTOBUF_FINAL;
-    bool                   IsInitialized() const PROTOBUF_FINAL;
+  size_t ByteSizeLong() const PROTOBUF_FINAL;
+  bool MergePartialFromCodedStream(
+      ::google::protobuf::io::CodedInputStream* input) PROTOBUF_FINAL;
+  void SerializeWithCachedSizes(
+      ::google::protobuf::io::CodedOutputStream* output) const PROTOBUF_FINAL;
+  ::google::protobuf::uint8* InternalSerializeWithCachedSizesToArray(
+      bool deterministic, ::google::protobuf::uint8* target) const PROTOBUF_FINAL;
+  int GetCachedSize() const PROTOBUF_FINAL { return _cached_size_; }
+  private:
+  void SharedCtor();
+  void SharedDtor();
+  void SetCachedSize(int size) const PROTOBUF_FINAL;
+  void InternalSwap(RollbackMergeRequest* other);
+  private:
+  inline ::google::protobuf::Arena* GetArenaNoVirtual() const {
+    return NULL;
+  }
+  inline void* MaybeArenaPtr() const {
+    return NULL;
+  }
+  public:
 
-    size_t                      ByteSizeLong() const PROTOBUF_FINAL;
-    bool                        MergePartialFromCodedStream(::google::protobuf::io::CodedInputStream * input) PROTOBUF_FINAL;
-    void                        SerializeWithCachedSizes(::google::protobuf::io::CodedOutputStream * output) const PROTOBUF_FINAL;
-    ::google::protobuf::uint8 * InternalSerializeWithCachedSizesToArray(bool                        deterministic,
-                                                                        ::google::protobuf::uint8 * target) const PROTOBUF_FINAL;
-    int                         GetCachedSize() const PROTOBUF_FINAL { return _cached_size_; }
+  ::google::protobuf::Metadata GetMetadata() const PROTOBUF_FINAL;
 
-private:
-    void SharedCtor();
-    void SharedDtor();
-    void SetCachedSize(int size) const PROTOBUF_FINAL;
-    void InternalSwap(RollbackMergeRequest * other);
+  // nested types ----------------------------------------------------
 
-private:
-    inline ::google::protobuf::Arena * GetArenaNoVirtual() const { return NULL; }
-    inline void *                      MaybeArenaPtr() const { return NULL; }
+  // accessors -------------------------------------------------------
 
-public:
-    ::google::protobuf::Metadata GetMetadata() const PROTOBUF_FINAL;
+  // uint64 commit = 1;
+  void clear_commit();
+  static const int kCommitFieldNumber = 1;
+  ::google::protobuf::uint64 commit() const;
+  void set_commit(::google::protobuf::uint64 value);
 
-    // nested types ----------------------------------------------------
+  // @@protoc_insertion_point(class_scope:raft_cmdpb.RollbackMergeRequest)
+ private:
 
-    // accessors -------------------------------------------------------
-
-    // uint64 commit = 1;
-    void                       clear_commit();
-    static const int           kCommitFieldNumber = 1;
-    ::google::protobuf::uint64 commit() const;
-    void                       set_commit(::google::protobuf::uint64 value);
-
-    // @@protoc_insertion_point(class_scope:raft_cmdpb.RollbackMergeRequest)
-private:
-    ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
-    ::google::protobuf::uint64                              commit_;
-    mutable int                                             _cached_size_;
-    friend struct ::protobuf_raft_5fcmdpb_2eproto::TableStruct;
-    friend void ::protobuf_raft_5fcmdpb_2eproto::InitDefaultsRollbackMergeRequestImpl();
+  ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
+  ::google::protobuf::uint64 commit_;
+  mutable int _cached_size_;
+  friend struct ::protobuf_raft_5fcmdpb_2eproto::TableStruct;
+  friend void ::protobuf_raft_5fcmdpb_2eproto::InitDefaultsRollbackMergeRequestImpl();
 };
 // -------------------------------------------------------------------
 
-class RollbackMergeResponse
-    : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:raft_cmdpb.RollbackMergeResponse) */
-{
-public:
-    RollbackMergeResponse();
-    virtual ~RollbackMergeResponse();
+class RollbackMergeResponse : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:raft_cmdpb.RollbackMergeResponse) */ {
+ public:
+  RollbackMergeResponse();
+  virtual ~RollbackMergeResponse();
 
-    RollbackMergeResponse(const RollbackMergeResponse & from);
+  RollbackMergeResponse(const RollbackMergeResponse& from);
 
-    inline RollbackMergeResponse & operator=(const RollbackMergeResponse & from)
-    {
-        CopyFrom(from);
-        return *this;
+  inline RollbackMergeResponse& operator=(const RollbackMergeResponse& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  #if LANG_CXX11
+  RollbackMergeResponse(RollbackMergeResponse&& from) noexcept
+    : RollbackMergeResponse() {
+    *this = ::std::move(from);
+  }
+
+  inline RollbackMergeResponse& operator=(RollbackMergeResponse&& from) noexcept {
+    if (GetArenaNoVirtual() == from.GetArenaNoVirtual()) {
+      if (this != &from) InternalSwap(&from);
+    } else {
+      CopyFrom(from);
     }
-#if LANG_CXX11
-    RollbackMergeResponse(RollbackMergeResponse && from) noexcept : RollbackMergeResponse() { *this = ::std::move(from); }
+    return *this;
+  }
+  #endif
+  static const ::google::protobuf::Descriptor* descriptor();
+  static const RollbackMergeResponse& default_instance();
 
-    inline RollbackMergeResponse & operator=(RollbackMergeResponse && from) noexcept
-    {
-        if (GetArenaNoVirtual() == from.GetArenaNoVirtual())
-        {
-            if (this != &from)
-                InternalSwap(&from);
-        }
-        else
-        {
-            CopyFrom(from);
-        }
-        return *this;
-    }
-#endif
-    static const ::google::protobuf::Descriptor * descriptor();
-    static const RollbackMergeResponse &          default_instance();
+  static void InitAsDefaultInstance();  // FOR INTERNAL USE ONLY
+  static inline const RollbackMergeResponse* internal_default_instance() {
+    return reinterpret_cast<const RollbackMergeResponse*>(
+               &_RollbackMergeResponse_default_instance_);
+  }
+  static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
+    33;
 
-    static void                                 InitAsDefaultInstance(); // FOR INTERNAL USE ONLY
-    static inline const RollbackMergeResponse * internal_default_instance()
-    {
-        return reinterpret_cast<const RollbackMergeResponse *>(&_RollbackMergeResponse_default_instance_);
-    }
-    static PROTOBUF_CONSTEXPR int const kIndexInFileMessages = 33;
+  void Swap(RollbackMergeResponse* other);
+  friend void swap(RollbackMergeResponse& a, RollbackMergeResponse& b) {
+    a.Swap(&b);
+  }
 
-    void        Swap(RollbackMergeResponse * other);
-    friend void swap(RollbackMergeResponse & a, RollbackMergeResponse & b) { a.Swap(&b); }
+  // implements Message ----------------------------------------------
 
-    // implements Message ----------------------------------------------
+  inline RollbackMergeResponse* New() const PROTOBUF_FINAL { return New(NULL); }
 
-    inline RollbackMergeResponse * New() const PROTOBUF_FINAL { return New(NULL); }
+  RollbackMergeResponse* New(::google::protobuf::Arena* arena) const PROTOBUF_FINAL;
+  void CopyFrom(const ::google::protobuf::Message& from) PROTOBUF_FINAL;
+  void MergeFrom(const ::google::protobuf::Message& from) PROTOBUF_FINAL;
+  void CopyFrom(const RollbackMergeResponse& from);
+  void MergeFrom(const RollbackMergeResponse& from);
+  void Clear() PROTOBUF_FINAL;
+  bool IsInitialized() const PROTOBUF_FINAL;
 
-    RollbackMergeResponse * New(::google::protobuf::Arena * arena) const PROTOBUF_FINAL;
-    void                    CopyFrom(const ::google::protobuf::Message & from) PROTOBUF_FINAL;
-    void                    MergeFrom(const ::google::protobuf::Message & from) PROTOBUF_FINAL;
-    void                    CopyFrom(const RollbackMergeResponse & from);
-    void                    MergeFrom(const RollbackMergeResponse & from);
-    void                    Clear() PROTOBUF_FINAL;
-    bool                    IsInitialized() const PROTOBUF_FINAL;
+  size_t ByteSizeLong() const PROTOBUF_FINAL;
+  bool MergePartialFromCodedStream(
+      ::google::protobuf::io::CodedInputStream* input) PROTOBUF_FINAL;
+  void SerializeWithCachedSizes(
+      ::google::protobuf::io::CodedOutputStream* output) const PROTOBUF_FINAL;
+  ::google::protobuf::uint8* InternalSerializeWithCachedSizesToArray(
+      bool deterministic, ::google::protobuf::uint8* target) const PROTOBUF_FINAL;
+  int GetCachedSize() const PROTOBUF_FINAL { return _cached_size_; }
+  private:
+  void SharedCtor();
+  void SharedDtor();
+  void SetCachedSize(int size) const PROTOBUF_FINAL;
+  void InternalSwap(RollbackMergeResponse* other);
+  private:
+  inline ::google::protobuf::Arena* GetArenaNoVirtual() const {
+    return NULL;
+  }
+  inline void* MaybeArenaPtr() const {
+    return NULL;
+  }
+  public:
 
-    size_t                      ByteSizeLong() const PROTOBUF_FINAL;
-    bool                        MergePartialFromCodedStream(::google::protobuf::io::CodedInputStream * input) PROTOBUF_FINAL;
-    void                        SerializeWithCachedSizes(::google::protobuf::io::CodedOutputStream * output) const PROTOBUF_FINAL;
-    ::google::protobuf::uint8 * InternalSerializeWithCachedSizesToArray(bool                        deterministic,
-                                                                        ::google::protobuf::uint8 * target) const PROTOBUF_FINAL;
-    int                         GetCachedSize() const PROTOBUF_FINAL { return _cached_size_; }
+  ::google::protobuf::Metadata GetMetadata() const PROTOBUF_FINAL;
 
-private:
-    void SharedCtor();
-    void SharedDtor();
-    void SetCachedSize(int size) const PROTOBUF_FINAL;
-    void InternalSwap(RollbackMergeResponse * other);
+  // nested types ----------------------------------------------------
 
-private:
-    inline ::google::protobuf::Arena * GetArenaNoVirtual() const { return NULL; }
-    inline void *                      MaybeArenaPtr() const { return NULL; }
+  // accessors -------------------------------------------------------
 
-public:
-    ::google::protobuf::Metadata GetMetadata() const PROTOBUF_FINAL;
+  // @@protoc_insertion_point(class_scope:raft_cmdpb.RollbackMergeResponse)
+ private:
 
-    // nested types ----------------------------------------------------
-
-    // accessors -------------------------------------------------------
-
-    // @@protoc_insertion_point(class_scope:raft_cmdpb.RollbackMergeResponse)
-private:
-    ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
-    mutable int                                             _cached_size_;
-    friend struct ::protobuf_raft_5fcmdpb_2eproto::TableStruct;
-    friend void ::protobuf_raft_5fcmdpb_2eproto::InitDefaultsRollbackMergeResponseImpl();
+  ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
+  mutable int _cached_size_;
+  friend struct ::protobuf_raft_5fcmdpb_2eproto::TableStruct;
+  friend void ::protobuf_raft_5fcmdpb_2eproto::InitDefaultsRollbackMergeResponseImpl();
 };
 // -------------------------------------------------------------------
 
-class AdminRequest : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:raft_cmdpb.AdminRequest) */
-{
-public:
-    AdminRequest();
-    virtual ~AdminRequest();
+class AdminRequest : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:raft_cmdpb.AdminRequest) */ {
+ public:
+  AdminRequest();
+  virtual ~AdminRequest();
 
-    AdminRequest(const AdminRequest & from);
+  AdminRequest(const AdminRequest& from);
 
-    inline AdminRequest & operator=(const AdminRequest & from)
-    {
-        CopyFrom(from);
-        return *this;
+  inline AdminRequest& operator=(const AdminRequest& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  #if LANG_CXX11
+  AdminRequest(AdminRequest&& from) noexcept
+    : AdminRequest() {
+    *this = ::std::move(from);
+  }
+
+  inline AdminRequest& operator=(AdminRequest&& from) noexcept {
+    if (GetArenaNoVirtual() == from.GetArenaNoVirtual()) {
+      if (this != &from) InternalSwap(&from);
+    } else {
+      CopyFrom(from);
     }
-#if LANG_CXX11
-    AdminRequest(AdminRequest && from) noexcept : AdminRequest() { *this = ::std::move(from); }
+    return *this;
+  }
+  #endif
+  static const ::google::protobuf::Descriptor* descriptor();
+  static const AdminRequest& default_instance();
 
-    inline AdminRequest & operator=(AdminRequest && from) noexcept
-    {
-        if (GetArenaNoVirtual() == from.GetArenaNoVirtual())
-        {
-            if (this != &from)
-                InternalSwap(&from);
-        }
-        else
-        {
-            CopyFrom(from);
-        }
-        return *this;
-    }
-#endif
-    static const ::google::protobuf::Descriptor * descriptor();
-    static const AdminRequest &                   default_instance();
+  static void InitAsDefaultInstance();  // FOR INTERNAL USE ONLY
+  static inline const AdminRequest* internal_default_instance() {
+    return reinterpret_cast<const AdminRequest*>(
+               &_AdminRequest_default_instance_);
+  }
+  static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
+    34;
 
-    static void                        InitAsDefaultInstance(); // FOR INTERNAL USE ONLY
-    static inline const AdminRequest * internal_default_instance()
-    {
-        return reinterpret_cast<const AdminRequest *>(&_AdminRequest_default_instance_);
-    }
-    static PROTOBUF_CONSTEXPR int const kIndexInFileMessages = 34;
+  void Swap(AdminRequest* other);
+  friend void swap(AdminRequest& a, AdminRequest& b) {
+    a.Swap(&b);
+  }
 
-    void        Swap(AdminRequest * other);
-    friend void swap(AdminRequest & a, AdminRequest & b) { a.Swap(&b); }
+  // implements Message ----------------------------------------------
 
-    // implements Message ----------------------------------------------
+  inline AdminRequest* New() const PROTOBUF_FINAL { return New(NULL); }
 
-    inline AdminRequest * New() const PROTOBUF_FINAL { return New(NULL); }
+  AdminRequest* New(::google::protobuf::Arena* arena) const PROTOBUF_FINAL;
+  void CopyFrom(const ::google::protobuf::Message& from) PROTOBUF_FINAL;
+  void MergeFrom(const ::google::protobuf::Message& from) PROTOBUF_FINAL;
+  void CopyFrom(const AdminRequest& from);
+  void MergeFrom(const AdminRequest& from);
+  void Clear() PROTOBUF_FINAL;
+  bool IsInitialized() const PROTOBUF_FINAL;
 
-    AdminRequest * New(::google::protobuf::Arena * arena) const PROTOBUF_FINAL;
-    void           CopyFrom(const ::google::protobuf::Message & from) PROTOBUF_FINAL;
-    void           MergeFrom(const ::google::protobuf::Message & from) PROTOBUF_FINAL;
-    void           CopyFrom(const AdminRequest & from);
-    void           MergeFrom(const AdminRequest & from);
-    void           Clear() PROTOBUF_FINAL;
-    bool           IsInitialized() const PROTOBUF_FINAL;
+  size_t ByteSizeLong() const PROTOBUF_FINAL;
+  bool MergePartialFromCodedStream(
+      ::google::protobuf::io::CodedInputStream* input) PROTOBUF_FINAL;
+  void SerializeWithCachedSizes(
+      ::google::protobuf::io::CodedOutputStream* output) const PROTOBUF_FINAL;
+  ::google::protobuf::uint8* InternalSerializeWithCachedSizesToArray(
+      bool deterministic, ::google::protobuf::uint8* target) const PROTOBUF_FINAL;
+  int GetCachedSize() const PROTOBUF_FINAL { return _cached_size_; }
+  private:
+  void SharedCtor();
+  void SharedDtor();
+  void SetCachedSize(int size) const PROTOBUF_FINAL;
+  void InternalSwap(AdminRequest* other);
+  private:
+  inline ::google::protobuf::Arena* GetArenaNoVirtual() const {
+    return NULL;
+  }
+  inline void* MaybeArenaPtr() const {
+    return NULL;
+  }
+  public:
 
-    size_t                      ByteSizeLong() const PROTOBUF_FINAL;
-    bool                        MergePartialFromCodedStream(::google::protobuf::io::CodedInputStream * input) PROTOBUF_FINAL;
-    void                        SerializeWithCachedSizes(::google::protobuf::io::CodedOutputStream * output) const PROTOBUF_FINAL;
-    ::google::protobuf::uint8 * InternalSerializeWithCachedSizesToArray(bool                        deterministic,
-                                                                        ::google::protobuf::uint8 * target) const PROTOBUF_FINAL;
-    int                         GetCachedSize() const PROTOBUF_FINAL { return _cached_size_; }
+  ::google::protobuf::Metadata GetMetadata() const PROTOBUF_FINAL;
 
-private:
-    void SharedCtor();
-    void SharedDtor();
-    void SetCachedSize(int size) const PROTOBUF_FINAL;
-    void InternalSwap(AdminRequest * other);
+  // nested types ----------------------------------------------------
 
-private:
-    inline ::google::protobuf::Arena * GetArenaNoVirtual() const { return NULL; }
-    inline void *                      MaybeArenaPtr() const { return NULL; }
+  // accessors -------------------------------------------------------
 
-public:
-    ::google::protobuf::Metadata GetMetadata() const PROTOBUF_FINAL;
+  // .raft_cmdpb.ChangePeerRequest change_peer = 2;
+  bool has_change_peer() const;
+  void clear_change_peer();
+  static const int kChangePeerFieldNumber = 2;
+  const ::raft_cmdpb::ChangePeerRequest& change_peer() const;
+  ::raft_cmdpb::ChangePeerRequest* release_change_peer();
+  ::raft_cmdpb::ChangePeerRequest* mutable_change_peer();
+  void set_allocated_change_peer(::raft_cmdpb::ChangePeerRequest* change_peer);
 
-    // nested types ----------------------------------------------------
+  // .raft_cmdpb.SplitRequest split = 3 [deprecated = true];
+  GOOGLE_PROTOBUF_DEPRECATED_ATTR bool has_split() const;
+  GOOGLE_PROTOBUF_DEPRECATED_ATTR void clear_split();
+  GOOGLE_PROTOBUF_DEPRECATED_ATTR static const int kSplitFieldNumber = 3;
+  GOOGLE_PROTOBUF_DEPRECATED_ATTR const ::raft_cmdpb::SplitRequest& split() const;
+  GOOGLE_PROTOBUF_DEPRECATED_ATTR ::raft_cmdpb::SplitRequest* release_split();
+  GOOGLE_PROTOBUF_DEPRECATED_ATTR ::raft_cmdpb::SplitRequest* mutable_split();
+  GOOGLE_PROTOBUF_DEPRECATED_ATTR void set_allocated_split(::raft_cmdpb::SplitRequest* split);
 
-    // accessors -------------------------------------------------------
+  // .raft_cmdpb.CompactLogRequest compact_log = 4;
+  bool has_compact_log() const;
+  void clear_compact_log();
+  static const int kCompactLogFieldNumber = 4;
+  const ::raft_cmdpb::CompactLogRequest& compact_log() const;
+  ::raft_cmdpb::CompactLogRequest* release_compact_log();
+  ::raft_cmdpb::CompactLogRequest* mutable_compact_log();
+  void set_allocated_compact_log(::raft_cmdpb::CompactLogRequest* compact_log);
 
-    // .raft_cmdpb.ChangePeerRequest change_peer = 2;
-    bool                                    has_change_peer() const;
-    void                                    clear_change_peer();
-    static const int                        kChangePeerFieldNumber = 2;
-    const ::raft_cmdpb::ChangePeerRequest & change_peer() const;
-    ::raft_cmdpb::ChangePeerRequest *       release_change_peer();
-    ::raft_cmdpb::ChangePeerRequest *       mutable_change_peer();
-    void                                    set_allocated_change_peer(::raft_cmdpb::ChangePeerRequest * change_peer);
+  // .raft_cmdpb.TransferLeaderRequest transfer_leader = 5;
+  bool has_transfer_leader() const;
+  void clear_transfer_leader();
+  static const int kTransferLeaderFieldNumber = 5;
+  const ::raft_cmdpb::TransferLeaderRequest& transfer_leader() const;
+  ::raft_cmdpb::TransferLeaderRequest* release_transfer_leader();
+  ::raft_cmdpb::TransferLeaderRequest* mutable_transfer_leader();
+  void set_allocated_transfer_leader(::raft_cmdpb::TransferLeaderRequest* transfer_leader);
 
-    // .raft_cmdpb.SplitRequest split = 3 [deprecated = true];
-    GOOGLE_PROTOBUF_DEPRECATED_ATTR bool                               has_split() const;
-    GOOGLE_PROTOBUF_DEPRECATED_ATTR void                               clear_split();
-    GOOGLE_PROTOBUF_DEPRECATED_ATTR static const int                   kSplitFieldNumber = 3;
-    GOOGLE_PROTOBUF_DEPRECATED_ATTR const ::raft_cmdpb::SplitRequest & split() const;
-    GOOGLE_PROTOBUF_DEPRECATED_ATTR ::raft_cmdpb::SplitRequest *       release_split();
-    GOOGLE_PROTOBUF_DEPRECATED_ATTR ::raft_cmdpb::SplitRequest *       mutable_split();
-    GOOGLE_PROTOBUF_DEPRECATED_ATTR void                               set_allocated_split(::raft_cmdpb::SplitRequest * split);
+  // .raft_cmdpb.VerifyHashRequest verify_hash = 6;
+  bool has_verify_hash() const;
+  void clear_verify_hash();
+  static const int kVerifyHashFieldNumber = 6;
+  const ::raft_cmdpb::VerifyHashRequest& verify_hash() const;
+  ::raft_cmdpb::VerifyHashRequest* release_verify_hash();
+  ::raft_cmdpb::VerifyHashRequest* mutable_verify_hash();
+  void set_allocated_verify_hash(::raft_cmdpb::VerifyHashRequest* verify_hash);
 
-    // .raft_cmdpb.CompactLogRequest compact_log = 4;
-    bool                                    has_compact_log() const;
-    void                                    clear_compact_log();
-    static const int                        kCompactLogFieldNumber = 4;
-    const ::raft_cmdpb::CompactLogRequest & compact_log() const;
-    ::raft_cmdpb::CompactLogRequest *       release_compact_log();
-    ::raft_cmdpb::CompactLogRequest *       mutable_compact_log();
-    void                                    set_allocated_compact_log(::raft_cmdpb::CompactLogRequest * compact_log);
+  // .raft_cmdpb.PrepareMergeRequest prepare_merge = 7;
+  bool has_prepare_merge() const;
+  void clear_prepare_merge();
+  static const int kPrepareMergeFieldNumber = 7;
+  const ::raft_cmdpb::PrepareMergeRequest& prepare_merge() const;
+  ::raft_cmdpb::PrepareMergeRequest* release_prepare_merge();
+  ::raft_cmdpb::PrepareMergeRequest* mutable_prepare_merge();
+  void set_allocated_prepare_merge(::raft_cmdpb::PrepareMergeRequest* prepare_merge);
 
-    // .raft_cmdpb.TransferLeaderRequest transfer_leader = 5;
-    bool                                        has_transfer_leader() const;
-    void                                        clear_transfer_leader();
-    static const int                            kTransferLeaderFieldNumber = 5;
-    const ::raft_cmdpb::TransferLeaderRequest & transfer_leader() const;
-    ::raft_cmdpb::TransferLeaderRequest *       release_transfer_leader();
-    ::raft_cmdpb::TransferLeaderRequest *       mutable_transfer_leader();
-    void                                        set_allocated_transfer_leader(::raft_cmdpb::TransferLeaderRequest * transfer_leader);
+  // .raft_cmdpb.CommitMergeRequest commit_merge = 8;
+  bool has_commit_merge() const;
+  void clear_commit_merge();
+  static const int kCommitMergeFieldNumber = 8;
+  const ::raft_cmdpb::CommitMergeRequest& commit_merge() const;
+  ::raft_cmdpb::CommitMergeRequest* release_commit_merge();
+  ::raft_cmdpb::CommitMergeRequest* mutable_commit_merge();
+  void set_allocated_commit_merge(::raft_cmdpb::CommitMergeRequest* commit_merge);
 
-    // .raft_cmdpb.VerifyHashRequest verify_hash = 6;
-    bool                                    has_verify_hash() const;
-    void                                    clear_verify_hash();
-    static const int                        kVerifyHashFieldNumber = 6;
-    const ::raft_cmdpb::VerifyHashRequest & verify_hash() const;
-    ::raft_cmdpb::VerifyHashRequest *       release_verify_hash();
-    ::raft_cmdpb::VerifyHashRequest *       mutable_verify_hash();
-    void                                    set_allocated_verify_hash(::raft_cmdpb::VerifyHashRequest * verify_hash);
+  // .raft_cmdpb.RollbackMergeRequest rollback_merge = 9;
+  bool has_rollback_merge() const;
+  void clear_rollback_merge();
+  static const int kRollbackMergeFieldNumber = 9;
+  const ::raft_cmdpb::RollbackMergeRequest& rollback_merge() const;
+  ::raft_cmdpb::RollbackMergeRequest* release_rollback_merge();
+  ::raft_cmdpb::RollbackMergeRequest* mutable_rollback_merge();
+  void set_allocated_rollback_merge(::raft_cmdpb::RollbackMergeRequest* rollback_merge);
 
-    // .raft_cmdpb.PrepareMergeRequest prepare_merge = 7;
-    bool                                      has_prepare_merge() const;
-    void                                      clear_prepare_merge();
-    static const int                          kPrepareMergeFieldNumber = 7;
-    const ::raft_cmdpb::PrepareMergeRequest & prepare_merge() const;
-    ::raft_cmdpb::PrepareMergeRequest *       release_prepare_merge();
-    ::raft_cmdpb::PrepareMergeRequest *       mutable_prepare_merge();
-    void                                      set_allocated_prepare_merge(::raft_cmdpb::PrepareMergeRequest * prepare_merge);
+  // .raft_cmdpb.BatchSplitRequest splits = 10;
+  bool has_splits() const;
+  void clear_splits();
+  static const int kSplitsFieldNumber = 10;
+  const ::raft_cmdpb::BatchSplitRequest& splits() const;
+  ::raft_cmdpb::BatchSplitRequest* release_splits();
+  ::raft_cmdpb::BatchSplitRequest* mutable_splits();
+  void set_allocated_splits(::raft_cmdpb::BatchSplitRequest* splits);
 
-    // .raft_cmdpb.CommitMergeRequest commit_merge = 8;
-    bool                                     has_commit_merge() const;
-    void                                     clear_commit_merge();
-    static const int                         kCommitMergeFieldNumber = 8;
-    const ::raft_cmdpb::CommitMergeRequest & commit_merge() const;
-    ::raft_cmdpb::CommitMergeRequest *       release_commit_merge();
-    ::raft_cmdpb::CommitMergeRequest *       mutable_commit_merge();
-    void                                     set_allocated_commit_merge(::raft_cmdpb::CommitMergeRequest * commit_merge);
+  // .raft_cmdpb.AdminCmdType cmd_type = 1;
+  void clear_cmd_type();
+  static const int kCmdTypeFieldNumber = 1;
+  ::raft_cmdpb::AdminCmdType cmd_type() const;
+  void set_cmd_type(::raft_cmdpb::AdminCmdType value);
 
-    // .raft_cmdpb.RollbackMergeRequest rollback_merge = 9;
-    bool                                       has_rollback_merge() const;
-    void                                       clear_rollback_merge();
-    static const int                           kRollbackMergeFieldNumber = 9;
-    const ::raft_cmdpb::RollbackMergeRequest & rollback_merge() const;
-    ::raft_cmdpb::RollbackMergeRequest *       release_rollback_merge();
-    ::raft_cmdpb::RollbackMergeRequest *       mutable_rollback_merge();
-    void                                       set_allocated_rollback_merge(::raft_cmdpb::RollbackMergeRequest * rollback_merge);
+  // @@protoc_insertion_point(class_scope:raft_cmdpb.AdminRequest)
+ private:
 
-    // .raft_cmdpb.BatchSplitRequest splits = 10;
-    bool                                    has_splits() const;
-    void                                    clear_splits();
-    static const int                        kSplitsFieldNumber = 10;
-    const ::raft_cmdpb::BatchSplitRequest & splits() const;
-    ::raft_cmdpb::BatchSplitRequest *       release_splits();
-    ::raft_cmdpb::BatchSplitRequest *       mutable_splits();
-    void                                    set_allocated_splits(::raft_cmdpb::BatchSplitRequest * splits);
-
-    // .raft_cmdpb.AdminCmdType cmd_type = 1;
-    void                       clear_cmd_type();
-    static const int           kCmdTypeFieldNumber = 1;
-    ::raft_cmdpb::AdminCmdType cmd_type() const;
-    void                       set_cmd_type(::raft_cmdpb::AdminCmdType value);
-
-    // @@protoc_insertion_point(class_scope:raft_cmdpb.AdminRequest)
-private:
-    ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
-    ::raft_cmdpb::ChangePeerRequest *                       change_peer_;
-    ::raft_cmdpb::SplitRequest *                            split_;
-    ::raft_cmdpb::CompactLogRequest *                       compact_log_;
-    ::raft_cmdpb::TransferLeaderRequest *                   transfer_leader_;
-    ::raft_cmdpb::VerifyHashRequest *                       verify_hash_;
-    ::raft_cmdpb::PrepareMergeRequest *                     prepare_merge_;
-    ::raft_cmdpb::CommitMergeRequest *                      commit_merge_;
-    ::raft_cmdpb::RollbackMergeRequest *                    rollback_merge_;
-    ::raft_cmdpb::BatchSplitRequest *                       splits_;
-    int                                                     cmd_type_;
-    mutable int                                             _cached_size_;
-    friend struct ::protobuf_raft_5fcmdpb_2eproto::TableStruct;
-    friend void ::protobuf_raft_5fcmdpb_2eproto::InitDefaultsAdminRequestImpl();
+  ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
+  ::raft_cmdpb::ChangePeerRequest* change_peer_;
+  ::raft_cmdpb::SplitRequest* split_;
+  ::raft_cmdpb::CompactLogRequest* compact_log_;
+  ::raft_cmdpb::TransferLeaderRequest* transfer_leader_;
+  ::raft_cmdpb::VerifyHashRequest* verify_hash_;
+  ::raft_cmdpb::PrepareMergeRequest* prepare_merge_;
+  ::raft_cmdpb::CommitMergeRequest* commit_merge_;
+  ::raft_cmdpb::RollbackMergeRequest* rollback_merge_;
+  ::raft_cmdpb::BatchSplitRequest* splits_;
+  int cmd_type_;
+  mutable int _cached_size_;
+  friend struct ::protobuf_raft_5fcmdpb_2eproto::TableStruct;
+  friend void ::protobuf_raft_5fcmdpb_2eproto::InitDefaultsAdminRequestImpl();
 };
 // -------------------------------------------------------------------
 
-class AdminResponse : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:raft_cmdpb.AdminResponse) */
-{
-public:
-    AdminResponse();
-    virtual ~AdminResponse();
+class AdminResponse : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:raft_cmdpb.AdminResponse) */ {
+ public:
+  AdminResponse();
+  virtual ~AdminResponse();
 
-    AdminResponse(const AdminResponse & from);
+  AdminResponse(const AdminResponse& from);
 
-    inline AdminResponse & operator=(const AdminResponse & from)
-    {
-        CopyFrom(from);
-        return *this;
+  inline AdminResponse& operator=(const AdminResponse& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  #if LANG_CXX11
+  AdminResponse(AdminResponse&& from) noexcept
+    : AdminResponse() {
+    *this = ::std::move(from);
+  }
+
+  inline AdminResponse& operator=(AdminResponse&& from) noexcept {
+    if (GetArenaNoVirtual() == from.GetArenaNoVirtual()) {
+      if (this != &from) InternalSwap(&from);
+    } else {
+      CopyFrom(from);
     }
-#if LANG_CXX11
-    AdminResponse(AdminResponse && from) noexcept : AdminResponse() { *this = ::std::move(from); }
+    return *this;
+  }
+  #endif
+  static const ::google::protobuf::Descriptor* descriptor();
+  static const AdminResponse& default_instance();
 
-    inline AdminResponse & operator=(AdminResponse && from) noexcept
-    {
-        if (GetArenaNoVirtual() == from.GetArenaNoVirtual())
-        {
-            if (this != &from)
-                InternalSwap(&from);
-        }
-        else
-        {
-            CopyFrom(from);
-        }
-        return *this;
-    }
-#endif
-    static const ::google::protobuf::Descriptor * descriptor();
-    static const AdminResponse &                  default_instance();
+  static void InitAsDefaultInstance();  // FOR INTERNAL USE ONLY
+  static inline const AdminResponse* internal_default_instance() {
+    return reinterpret_cast<const AdminResponse*>(
+               &_AdminResponse_default_instance_);
+  }
+  static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
+    35;
 
-    static void                         InitAsDefaultInstance(); // FOR INTERNAL USE ONLY
-    static inline const AdminResponse * internal_default_instance()
-    {
-        return reinterpret_cast<const AdminResponse *>(&_AdminResponse_default_instance_);
-    }
-    static PROTOBUF_CONSTEXPR int const kIndexInFileMessages = 35;
+  void Swap(AdminResponse* other);
+  friend void swap(AdminResponse& a, AdminResponse& b) {
+    a.Swap(&b);
+  }
 
-    void        Swap(AdminResponse * other);
-    friend void swap(AdminResponse & a, AdminResponse & b) { a.Swap(&b); }
+  // implements Message ----------------------------------------------
 
-    // implements Message ----------------------------------------------
+  inline AdminResponse* New() const PROTOBUF_FINAL { return New(NULL); }
 
-    inline AdminResponse * New() const PROTOBUF_FINAL { return New(NULL); }
+  AdminResponse* New(::google::protobuf::Arena* arena) const PROTOBUF_FINAL;
+  void CopyFrom(const ::google::protobuf::Message& from) PROTOBUF_FINAL;
+  void MergeFrom(const ::google::protobuf::Message& from) PROTOBUF_FINAL;
+  void CopyFrom(const AdminResponse& from);
+  void MergeFrom(const AdminResponse& from);
+  void Clear() PROTOBUF_FINAL;
+  bool IsInitialized() const PROTOBUF_FINAL;
 
-    AdminResponse * New(::google::protobuf::Arena * arena) const PROTOBUF_FINAL;
-    void            CopyFrom(const ::google::protobuf::Message & from) PROTOBUF_FINAL;
-    void            MergeFrom(const ::google::protobuf::Message & from) PROTOBUF_FINAL;
-    void            CopyFrom(const AdminResponse & from);
-    void            MergeFrom(const AdminResponse & from);
-    void            Clear() PROTOBUF_FINAL;
-    bool            IsInitialized() const PROTOBUF_FINAL;
+  size_t ByteSizeLong() const PROTOBUF_FINAL;
+  bool MergePartialFromCodedStream(
+      ::google::protobuf::io::CodedInputStream* input) PROTOBUF_FINAL;
+  void SerializeWithCachedSizes(
+      ::google::protobuf::io::CodedOutputStream* output) const PROTOBUF_FINAL;
+  ::google::protobuf::uint8* InternalSerializeWithCachedSizesToArray(
+      bool deterministic, ::google::protobuf::uint8* target) const PROTOBUF_FINAL;
+  int GetCachedSize() const PROTOBUF_FINAL { return _cached_size_; }
+  private:
+  void SharedCtor();
+  void SharedDtor();
+  void SetCachedSize(int size) const PROTOBUF_FINAL;
+  void InternalSwap(AdminResponse* other);
+  private:
+  inline ::google::protobuf::Arena* GetArenaNoVirtual() const {
+    return NULL;
+  }
+  inline void* MaybeArenaPtr() const {
+    return NULL;
+  }
+  public:
 
-    size_t                      ByteSizeLong() const PROTOBUF_FINAL;
-    bool                        MergePartialFromCodedStream(::google::protobuf::io::CodedInputStream * input) PROTOBUF_FINAL;
-    void                        SerializeWithCachedSizes(::google::protobuf::io::CodedOutputStream * output) const PROTOBUF_FINAL;
-    ::google::protobuf::uint8 * InternalSerializeWithCachedSizesToArray(bool                        deterministic,
-                                                                        ::google::protobuf::uint8 * target) const PROTOBUF_FINAL;
-    int                         GetCachedSize() const PROTOBUF_FINAL { return _cached_size_; }
+  ::google::protobuf::Metadata GetMetadata() const PROTOBUF_FINAL;
 
-private:
-    void SharedCtor();
-    void SharedDtor();
-    void SetCachedSize(int size) const PROTOBUF_FINAL;
-    void InternalSwap(AdminResponse * other);
+  // nested types ----------------------------------------------------
 
-private:
-    inline ::google::protobuf::Arena * GetArenaNoVirtual() const { return NULL; }
-    inline void *                      MaybeArenaPtr() const { return NULL; }
+  // accessors -------------------------------------------------------
 
-public:
-    ::google::protobuf::Metadata GetMetadata() const PROTOBUF_FINAL;
+  // .raft_cmdpb.ChangePeerResponse change_peer = 2;
+  bool has_change_peer() const;
+  void clear_change_peer();
+  static const int kChangePeerFieldNumber = 2;
+  const ::raft_cmdpb::ChangePeerResponse& change_peer() const;
+  ::raft_cmdpb::ChangePeerResponse* release_change_peer();
+  ::raft_cmdpb::ChangePeerResponse* mutable_change_peer();
+  void set_allocated_change_peer(::raft_cmdpb::ChangePeerResponse* change_peer);
 
-    // nested types ----------------------------------------------------
+  // .raft_cmdpb.SplitResponse split = 3 [deprecated = true];
+  GOOGLE_PROTOBUF_DEPRECATED_ATTR bool has_split() const;
+  GOOGLE_PROTOBUF_DEPRECATED_ATTR void clear_split();
+  GOOGLE_PROTOBUF_DEPRECATED_ATTR static const int kSplitFieldNumber = 3;
+  GOOGLE_PROTOBUF_DEPRECATED_ATTR const ::raft_cmdpb::SplitResponse& split() const;
+  GOOGLE_PROTOBUF_DEPRECATED_ATTR ::raft_cmdpb::SplitResponse* release_split();
+  GOOGLE_PROTOBUF_DEPRECATED_ATTR ::raft_cmdpb::SplitResponse* mutable_split();
+  GOOGLE_PROTOBUF_DEPRECATED_ATTR void set_allocated_split(::raft_cmdpb::SplitResponse* split);
 
-    // accessors -------------------------------------------------------
+  // .raft_cmdpb.CompactLogResponse compact_log = 4;
+  bool has_compact_log() const;
+  void clear_compact_log();
+  static const int kCompactLogFieldNumber = 4;
+  const ::raft_cmdpb::CompactLogResponse& compact_log() const;
+  ::raft_cmdpb::CompactLogResponse* release_compact_log();
+  ::raft_cmdpb::CompactLogResponse* mutable_compact_log();
+  void set_allocated_compact_log(::raft_cmdpb::CompactLogResponse* compact_log);
 
-    // .raft_cmdpb.ChangePeerResponse change_peer = 2;
-    bool                                     has_change_peer() const;
-    void                                     clear_change_peer();
-    static const int                         kChangePeerFieldNumber = 2;
-    const ::raft_cmdpb::ChangePeerResponse & change_peer() const;
-    ::raft_cmdpb::ChangePeerResponse *       release_change_peer();
-    ::raft_cmdpb::ChangePeerResponse *       mutable_change_peer();
-    void                                     set_allocated_change_peer(::raft_cmdpb::ChangePeerResponse * change_peer);
+  // .raft_cmdpb.TransferLeaderResponse transfer_leader = 5;
+  bool has_transfer_leader() const;
+  void clear_transfer_leader();
+  static const int kTransferLeaderFieldNumber = 5;
+  const ::raft_cmdpb::TransferLeaderResponse& transfer_leader() const;
+  ::raft_cmdpb::TransferLeaderResponse* release_transfer_leader();
+  ::raft_cmdpb::TransferLeaderResponse* mutable_transfer_leader();
+  void set_allocated_transfer_leader(::raft_cmdpb::TransferLeaderResponse* transfer_leader);
 
-    // .raft_cmdpb.SplitResponse split = 3 [deprecated = true];
-    GOOGLE_PROTOBUF_DEPRECATED_ATTR bool                                has_split() const;
-    GOOGLE_PROTOBUF_DEPRECATED_ATTR void                                clear_split();
-    GOOGLE_PROTOBUF_DEPRECATED_ATTR static const int                    kSplitFieldNumber = 3;
-    GOOGLE_PROTOBUF_DEPRECATED_ATTR const ::raft_cmdpb::SplitResponse & split() const;
-    GOOGLE_PROTOBUF_DEPRECATED_ATTR ::raft_cmdpb::SplitResponse *       release_split();
-    GOOGLE_PROTOBUF_DEPRECATED_ATTR ::raft_cmdpb::SplitResponse *       mutable_split();
-    GOOGLE_PROTOBUF_DEPRECATED_ATTR void                                set_allocated_split(::raft_cmdpb::SplitResponse * split);
+  // .raft_cmdpb.VerifyHashResponse verify_hash = 6;
+  bool has_verify_hash() const;
+  void clear_verify_hash();
+  static const int kVerifyHashFieldNumber = 6;
+  const ::raft_cmdpb::VerifyHashResponse& verify_hash() const;
+  ::raft_cmdpb::VerifyHashResponse* release_verify_hash();
+  ::raft_cmdpb::VerifyHashResponse* mutable_verify_hash();
+  void set_allocated_verify_hash(::raft_cmdpb::VerifyHashResponse* verify_hash);
 
-    // .raft_cmdpb.CompactLogResponse compact_log = 4;
-    bool                                     has_compact_log() const;
-    void                                     clear_compact_log();
-    static const int                         kCompactLogFieldNumber = 4;
-    const ::raft_cmdpb::CompactLogResponse & compact_log() const;
-    ::raft_cmdpb::CompactLogResponse *       release_compact_log();
-    ::raft_cmdpb::CompactLogResponse *       mutable_compact_log();
-    void                                     set_allocated_compact_log(::raft_cmdpb::CompactLogResponse * compact_log);
+  // .raft_cmdpb.PrepareMergeResponse prepare_merge = 7;
+  bool has_prepare_merge() const;
+  void clear_prepare_merge();
+  static const int kPrepareMergeFieldNumber = 7;
+  const ::raft_cmdpb::PrepareMergeResponse& prepare_merge() const;
+  ::raft_cmdpb::PrepareMergeResponse* release_prepare_merge();
+  ::raft_cmdpb::PrepareMergeResponse* mutable_prepare_merge();
+  void set_allocated_prepare_merge(::raft_cmdpb::PrepareMergeResponse* prepare_merge);
 
-    // .raft_cmdpb.TransferLeaderResponse transfer_leader = 5;
-    bool                                         has_transfer_leader() const;
-    void                                         clear_transfer_leader();
-    static const int                             kTransferLeaderFieldNumber = 5;
-    const ::raft_cmdpb::TransferLeaderResponse & transfer_leader() const;
-    ::raft_cmdpb::TransferLeaderResponse *       release_transfer_leader();
-    ::raft_cmdpb::TransferLeaderResponse *       mutable_transfer_leader();
-    void                                         set_allocated_transfer_leader(::raft_cmdpb::TransferLeaderResponse * transfer_leader);
+  // .raft_cmdpb.CommitMergeResponse commit_merge = 8;
+  bool has_commit_merge() const;
+  void clear_commit_merge();
+  static const int kCommitMergeFieldNumber = 8;
+  const ::raft_cmdpb::CommitMergeResponse& commit_merge() const;
+  ::raft_cmdpb::CommitMergeResponse* release_commit_merge();
+  ::raft_cmdpb::CommitMergeResponse* mutable_commit_merge();
+  void set_allocated_commit_merge(::raft_cmdpb::CommitMergeResponse* commit_merge);
 
-    // .raft_cmdpb.VerifyHashResponse verify_hash = 6;
-    bool                                     has_verify_hash() const;
-    void                                     clear_verify_hash();
-    static const int                         kVerifyHashFieldNumber = 6;
-    const ::raft_cmdpb::VerifyHashResponse & verify_hash() const;
-    ::raft_cmdpb::VerifyHashResponse *       release_verify_hash();
-    ::raft_cmdpb::VerifyHashResponse *       mutable_verify_hash();
-    void                                     set_allocated_verify_hash(::raft_cmdpb::VerifyHashResponse * verify_hash);
+  // .raft_cmdpb.RollbackMergeResponse rollback_merge = 9;
+  bool has_rollback_merge() const;
+  void clear_rollback_merge();
+  static const int kRollbackMergeFieldNumber = 9;
+  const ::raft_cmdpb::RollbackMergeResponse& rollback_merge() const;
+  ::raft_cmdpb::RollbackMergeResponse* release_rollback_merge();
+  ::raft_cmdpb::RollbackMergeResponse* mutable_rollback_merge();
+  void set_allocated_rollback_merge(::raft_cmdpb::RollbackMergeResponse* rollback_merge);
 
-    // .raft_cmdpb.PrepareMergeResponse prepare_merge = 7;
-    bool                                       has_prepare_merge() const;
-    void                                       clear_prepare_merge();
-    static const int                           kPrepareMergeFieldNumber = 7;
-    const ::raft_cmdpb::PrepareMergeResponse & prepare_merge() const;
-    ::raft_cmdpb::PrepareMergeResponse *       release_prepare_merge();
-    ::raft_cmdpb::PrepareMergeResponse *       mutable_prepare_merge();
-    void                                       set_allocated_prepare_merge(::raft_cmdpb::PrepareMergeResponse * prepare_merge);
+  // .raft_cmdpb.BatchSplitResponse splits = 10;
+  bool has_splits() const;
+  void clear_splits();
+  static const int kSplitsFieldNumber = 10;
+  const ::raft_cmdpb::BatchSplitResponse& splits() const;
+  ::raft_cmdpb::BatchSplitResponse* release_splits();
+  ::raft_cmdpb::BatchSplitResponse* mutable_splits();
+  void set_allocated_splits(::raft_cmdpb::BatchSplitResponse* splits);
 
-    // .raft_cmdpb.CommitMergeResponse commit_merge = 8;
-    bool                                      has_commit_merge() const;
-    void                                      clear_commit_merge();
-    static const int                          kCommitMergeFieldNumber = 8;
-    const ::raft_cmdpb::CommitMergeResponse & commit_merge() const;
-    ::raft_cmdpb::CommitMergeResponse *       release_commit_merge();
-    ::raft_cmdpb::CommitMergeResponse *       mutable_commit_merge();
-    void                                      set_allocated_commit_merge(::raft_cmdpb::CommitMergeResponse * commit_merge);
+  // .raft_cmdpb.AdminCmdType cmd_type = 1;
+  void clear_cmd_type();
+  static const int kCmdTypeFieldNumber = 1;
+  ::raft_cmdpb::AdminCmdType cmd_type() const;
+  void set_cmd_type(::raft_cmdpb::AdminCmdType value);
 
-    // .raft_cmdpb.RollbackMergeResponse rollback_merge = 9;
-    bool                                        has_rollback_merge() const;
-    void                                        clear_rollback_merge();
-    static const int                            kRollbackMergeFieldNumber = 9;
-    const ::raft_cmdpb::RollbackMergeResponse & rollback_merge() const;
-    ::raft_cmdpb::RollbackMergeResponse *       release_rollback_merge();
-    ::raft_cmdpb::RollbackMergeResponse *       mutable_rollback_merge();
-    void                                        set_allocated_rollback_merge(::raft_cmdpb::RollbackMergeResponse * rollback_merge);
+  // @@protoc_insertion_point(class_scope:raft_cmdpb.AdminResponse)
+ private:
 
-    // .raft_cmdpb.BatchSplitResponse splits = 10;
-    bool                                     has_splits() const;
-    void                                     clear_splits();
-    static const int                         kSplitsFieldNumber = 10;
-    const ::raft_cmdpb::BatchSplitResponse & splits() const;
-    ::raft_cmdpb::BatchSplitResponse *       release_splits();
-    ::raft_cmdpb::BatchSplitResponse *       mutable_splits();
-    void                                     set_allocated_splits(::raft_cmdpb::BatchSplitResponse * splits);
-
-    // .raft_cmdpb.AdminCmdType cmd_type = 1;
-    void                       clear_cmd_type();
-    static const int           kCmdTypeFieldNumber = 1;
-    ::raft_cmdpb::AdminCmdType cmd_type() const;
-    void                       set_cmd_type(::raft_cmdpb::AdminCmdType value);
-
-    // @@protoc_insertion_point(class_scope:raft_cmdpb.AdminResponse)
-private:
-    ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
-    ::raft_cmdpb::ChangePeerResponse *                      change_peer_;
-    ::raft_cmdpb::SplitResponse *                           split_;
-    ::raft_cmdpb::CompactLogResponse *                      compact_log_;
-    ::raft_cmdpb::TransferLeaderResponse *                  transfer_leader_;
-    ::raft_cmdpb::VerifyHashResponse *                      verify_hash_;
-    ::raft_cmdpb::PrepareMergeResponse *                    prepare_merge_;
-    ::raft_cmdpb::CommitMergeResponse *                     commit_merge_;
-    ::raft_cmdpb::RollbackMergeResponse *                   rollback_merge_;
-    ::raft_cmdpb::BatchSplitResponse *                      splits_;
-    int                                                     cmd_type_;
-    mutable int                                             _cached_size_;
-    friend struct ::protobuf_raft_5fcmdpb_2eproto::TableStruct;
-    friend void ::protobuf_raft_5fcmdpb_2eproto::InitDefaultsAdminResponseImpl();
+  ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
+  ::raft_cmdpb::ChangePeerResponse* change_peer_;
+  ::raft_cmdpb::SplitResponse* split_;
+  ::raft_cmdpb::CompactLogResponse* compact_log_;
+  ::raft_cmdpb::TransferLeaderResponse* transfer_leader_;
+  ::raft_cmdpb::VerifyHashResponse* verify_hash_;
+  ::raft_cmdpb::PrepareMergeResponse* prepare_merge_;
+  ::raft_cmdpb::CommitMergeResponse* commit_merge_;
+  ::raft_cmdpb::RollbackMergeResponse* rollback_merge_;
+  ::raft_cmdpb::BatchSplitResponse* splits_;
+  int cmd_type_;
+  mutable int _cached_size_;
+  friend struct ::protobuf_raft_5fcmdpb_2eproto::TableStruct;
+  friend void ::protobuf_raft_5fcmdpb_2eproto::InitDefaultsAdminResponseImpl();
 };
 // -------------------------------------------------------------------
 
-class RegionLeaderRequest
-    : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:raft_cmdpb.RegionLeaderRequest) */
-{
-public:
-    RegionLeaderRequest();
-    virtual ~RegionLeaderRequest();
+class RegionLeaderRequest : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:raft_cmdpb.RegionLeaderRequest) */ {
+ public:
+  RegionLeaderRequest();
+  virtual ~RegionLeaderRequest();
 
-    RegionLeaderRequest(const RegionLeaderRequest & from);
+  RegionLeaderRequest(const RegionLeaderRequest& from);
 
-    inline RegionLeaderRequest & operator=(const RegionLeaderRequest & from)
-    {
-        CopyFrom(from);
-        return *this;
+  inline RegionLeaderRequest& operator=(const RegionLeaderRequest& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  #if LANG_CXX11
+  RegionLeaderRequest(RegionLeaderRequest&& from) noexcept
+    : RegionLeaderRequest() {
+    *this = ::std::move(from);
+  }
+
+  inline RegionLeaderRequest& operator=(RegionLeaderRequest&& from) noexcept {
+    if (GetArenaNoVirtual() == from.GetArenaNoVirtual()) {
+      if (this != &from) InternalSwap(&from);
+    } else {
+      CopyFrom(from);
     }
-#if LANG_CXX11
-    RegionLeaderRequest(RegionLeaderRequest && from) noexcept : RegionLeaderRequest() { *this = ::std::move(from); }
+    return *this;
+  }
+  #endif
+  static const ::google::protobuf::Descriptor* descriptor();
+  static const RegionLeaderRequest& default_instance();
 
-    inline RegionLeaderRequest & operator=(RegionLeaderRequest && from) noexcept
-    {
-        if (GetArenaNoVirtual() == from.GetArenaNoVirtual())
-        {
-            if (this != &from)
-                InternalSwap(&from);
-        }
-        else
-        {
-            CopyFrom(from);
-        }
-        return *this;
-    }
-#endif
-    static const ::google::protobuf::Descriptor * descriptor();
-    static const RegionLeaderRequest &            default_instance();
+  static void InitAsDefaultInstance();  // FOR INTERNAL USE ONLY
+  static inline const RegionLeaderRequest* internal_default_instance() {
+    return reinterpret_cast<const RegionLeaderRequest*>(
+               &_RegionLeaderRequest_default_instance_);
+  }
+  static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
+    36;
 
-    static void                               InitAsDefaultInstance(); // FOR INTERNAL USE ONLY
-    static inline const RegionLeaderRequest * internal_default_instance()
-    {
-        return reinterpret_cast<const RegionLeaderRequest *>(&_RegionLeaderRequest_default_instance_);
-    }
-    static PROTOBUF_CONSTEXPR int const kIndexInFileMessages = 36;
+  void Swap(RegionLeaderRequest* other);
+  friend void swap(RegionLeaderRequest& a, RegionLeaderRequest& b) {
+    a.Swap(&b);
+  }
 
-    void        Swap(RegionLeaderRequest * other);
-    friend void swap(RegionLeaderRequest & a, RegionLeaderRequest & b) { a.Swap(&b); }
+  // implements Message ----------------------------------------------
 
-    // implements Message ----------------------------------------------
+  inline RegionLeaderRequest* New() const PROTOBUF_FINAL { return New(NULL); }
 
-    inline RegionLeaderRequest * New() const PROTOBUF_FINAL { return New(NULL); }
+  RegionLeaderRequest* New(::google::protobuf::Arena* arena) const PROTOBUF_FINAL;
+  void CopyFrom(const ::google::protobuf::Message& from) PROTOBUF_FINAL;
+  void MergeFrom(const ::google::protobuf::Message& from) PROTOBUF_FINAL;
+  void CopyFrom(const RegionLeaderRequest& from);
+  void MergeFrom(const RegionLeaderRequest& from);
+  void Clear() PROTOBUF_FINAL;
+  bool IsInitialized() const PROTOBUF_FINAL;
 
-    RegionLeaderRequest * New(::google::protobuf::Arena * arena) const PROTOBUF_FINAL;
-    void                  CopyFrom(const ::google::protobuf::Message & from) PROTOBUF_FINAL;
-    void                  MergeFrom(const ::google::protobuf::Message & from) PROTOBUF_FINAL;
-    void                  CopyFrom(const RegionLeaderRequest & from);
-    void                  MergeFrom(const RegionLeaderRequest & from);
-    void                  Clear() PROTOBUF_FINAL;
-    bool                  IsInitialized() const PROTOBUF_FINAL;
+  size_t ByteSizeLong() const PROTOBUF_FINAL;
+  bool MergePartialFromCodedStream(
+      ::google::protobuf::io::CodedInputStream* input) PROTOBUF_FINAL;
+  void SerializeWithCachedSizes(
+      ::google::protobuf::io::CodedOutputStream* output) const PROTOBUF_FINAL;
+  ::google::protobuf::uint8* InternalSerializeWithCachedSizesToArray(
+      bool deterministic, ::google::protobuf::uint8* target) const PROTOBUF_FINAL;
+  int GetCachedSize() const PROTOBUF_FINAL { return _cached_size_; }
+  private:
+  void SharedCtor();
+  void SharedDtor();
+  void SetCachedSize(int size) const PROTOBUF_FINAL;
+  void InternalSwap(RegionLeaderRequest* other);
+  private:
+  inline ::google::protobuf::Arena* GetArenaNoVirtual() const {
+    return NULL;
+  }
+  inline void* MaybeArenaPtr() const {
+    return NULL;
+  }
+  public:
 
-    size_t                      ByteSizeLong() const PROTOBUF_FINAL;
-    bool                        MergePartialFromCodedStream(::google::protobuf::io::CodedInputStream * input) PROTOBUF_FINAL;
-    void                        SerializeWithCachedSizes(::google::protobuf::io::CodedOutputStream * output) const PROTOBUF_FINAL;
-    ::google::protobuf::uint8 * InternalSerializeWithCachedSizesToArray(bool                        deterministic,
-                                                                        ::google::protobuf::uint8 * target) const PROTOBUF_FINAL;
-    int                         GetCachedSize() const PROTOBUF_FINAL { return _cached_size_; }
+  ::google::protobuf::Metadata GetMetadata() const PROTOBUF_FINAL;
 
-private:
-    void SharedCtor();
-    void SharedDtor();
-    void SetCachedSize(int size) const PROTOBUF_FINAL;
-    void InternalSwap(RegionLeaderRequest * other);
+  // nested types ----------------------------------------------------
 
-private:
-    inline ::google::protobuf::Arena * GetArenaNoVirtual() const { return NULL; }
-    inline void *                      MaybeArenaPtr() const { return NULL; }
+  // accessors -------------------------------------------------------
 
-public:
-    ::google::protobuf::Metadata GetMetadata() const PROTOBUF_FINAL;
+  // @@protoc_insertion_point(class_scope:raft_cmdpb.RegionLeaderRequest)
+ private:
 
-    // nested types ----------------------------------------------------
-
-    // accessors -------------------------------------------------------
-
-    // @@protoc_insertion_point(class_scope:raft_cmdpb.RegionLeaderRequest)
-private:
-    ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
-    mutable int                                             _cached_size_;
-    friend struct ::protobuf_raft_5fcmdpb_2eproto::TableStruct;
-    friend void ::protobuf_raft_5fcmdpb_2eproto::InitDefaultsRegionLeaderRequestImpl();
+  ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
+  mutable int _cached_size_;
+  friend struct ::protobuf_raft_5fcmdpb_2eproto::TableStruct;
+  friend void ::protobuf_raft_5fcmdpb_2eproto::InitDefaultsRegionLeaderRequestImpl();
 };
 // -------------------------------------------------------------------
 
-class RegionLeaderResponse
-    : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:raft_cmdpb.RegionLeaderResponse) */
-{
-public:
-    RegionLeaderResponse();
-    virtual ~RegionLeaderResponse();
+class RegionLeaderResponse : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:raft_cmdpb.RegionLeaderResponse) */ {
+ public:
+  RegionLeaderResponse();
+  virtual ~RegionLeaderResponse();
 
-    RegionLeaderResponse(const RegionLeaderResponse & from);
+  RegionLeaderResponse(const RegionLeaderResponse& from);
 
-    inline RegionLeaderResponse & operator=(const RegionLeaderResponse & from)
-    {
-        CopyFrom(from);
-        return *this;
+  inline RegionLeaderResponse& operator=(const RegionLeaderResponse& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  #if LANG_CXX11
+  RegionLeaderResponse(RegionLeaderResponse&& from) noexcept
+    : RegionLeaderResponse() {
+    *this = ::std::move(from);
+  }
+
+  inline RegionLeaderResponse& operator=(RegionLeaderResponse&& from) noexcept {
+    if (GetArenaNoVirtual() == from.GetArenaNoVirtual()) {
+      if (this != &from) InternalSwap(&from);
+    } else {
+      CopyFrom(from);
     }
-#if LANG_CXX11
-    RegionLeaderResponse(RegionLeaderResponse && from) noexcept : RegionLeaderResponse() { *this = ::std::move(from); }
+    return *this;
+  }
+  #endif
+  static const ::google::protobuf::Descriptor* descriptor();
+  static const RegionLeaderResponse& default_instance();
 
-    inline RegionLeaderResponse & operator=(RegionLeaderResponse && from) noexcept
-    {
-        if (GetArenaNoVirtual() == from.GetArenaNoVirtual())
-        {
-            if (this != &from)
-                InternalSwap(&from);
-        }
-        else
-        {
-            CopyFrom(from);
-        }
-        return *this;
-    }
-#endif
-    static const ::google::protobuf::Descriptor * descriptor();
-    static const RegionLeaderResponse &           default_instance();
+  static void InitAsDefaultInstance();  // FOR INTERNAL USE ONLY
+  static inline const RegionLeaderResponse* internal_default_instance() {
+    return reinterpret_cast<const RegionLeaderResponse*>(
+               &_RegionLeaderResponse_default_instance_);
+  }
+  static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
+    37;
 
-    static void                                InitAsDefaultInstance(); // FOR INTERNAL USE ONLY
-    static inline const RegionLeaderResponse * internal_default_instance()
-    {
-        return reinterpret_cast<const RegionLeaderResponse *>(&_RegionLeaderResponse_default_instance_);
-    }
-    static PROTOBUF_CONSTEXPR int const kIndexInFileMessages = 37;
+  void Swap(RegionLeaderResponse* other);
+  friend void swap(RegionLeaderResponse& a, RegionLeaderResponse& b) {
+    a.Swap(&b);
+  }
 
-    void        Swap(RegionLeaderResponse * other);
-    friend void swap(RegionLeaderResponse & a, RegionLeaderResponse & b) { a.Swap(&b); }
+  // implements Message ----------------------------------------------
 
-    // implements Message ----------------------------------------------
+  inline RegionLeaderResponse* New() const PROTOBUF_FINAL { return New(NULL); }
 
-    inline RegionLeaderResponse * New() const PROTOBUF_FINAL { return New(NULL); }
+  RegionLeaderResponse* New(::google::protobuf::Arena* arena) const PROTOBUF_FINAL;
+  void CopyFrom(const ::google::protobuf::Message& from) PROTOBUF_FINAL;
+  void MergeFrom(const ::google::protobuf::Message& from) PROTOBUF_FINAL;
+  void CopyFrom(const RegionLeaderResponse& from);
+  void MergeFrom(const RegionLeaderResponse& from);
+  void Clear() PROTOBUF_FINAL;
+  bool IsInitialized() const PROTOBUF_FINAL;
 
-    RegionLeaderResponse * New(::google::protobuf::Arena * arena) const PROTOBUF_FINAL;
-    void                   CopyFrom(const ::google::protobuf::Message & from) PROTOBUF_FINAL;
-    void                   MergeFrom(const ::google::protobuf::Message & from) PROTOBUF_FINAL;
-    void                   CopyFrom(const RegionLeaderResponse & from);
-    void                   MergeFrom(const RegionLeaderResponse & from);
-    void                   Clear() PROTOBUF_FINAL;
-    bool                   IsInitialized() const PROTOBUF_FINAL;
+  size_t ByteSizeLong() const PROTOBUF_FINAL;
+  bool MergePartialFromCodedStream(
+      ::google::protobuf::io::CodedInputStream* input) PROTOBUF_FINAL;
+  void SerializeWithCachedSizes(
+      ::google::protobuf::io::CodedOutputStream* output) const PROTOBUF_FINAL;
+  ::google::protobuf::uint8* InternalSerializeWithCachedSizesToArray(
+      bool deterministic, ::google::protobuf::uint8* target) const PROTOBUF_FINAL;
+  int GetCachedSize() const PROTOBUF_FINAL { return _cached_size_; }
+  private:
+  void SharedCtor();
+  void SharedDtor();
+  void SetCachedSize(int size) const PROTOBUF_FINAL;
+  void InternalSwap(RegionLeaderResponse* other);
+  private:
+  inline ::google::protobuf::Arena* GetArenaNoVirtual() const {
+    return NULL;
+  }
+  inline void* MaybeArenaPtr() const {
+    return NULL;
+  }
+  public:
 
-    size_t                      ByteSizeLong() const PROTOBUF_FINAL;
-    bool                        MergePartialFromCodedStream(::google::protobuf::io::CodedInputStream * input) PROTOBUF_FINAL;
-    void                        SerializeWithCachedSizes(::google::protobuf::io::CodedOutputStream * output) const PROTOBUF_FINAL;
-    ::google::protobuf::uint8 * InternalSerializeWithCachedSizesToArray(bool                        deterministic,
-                                                                        ::google::protobuf::uint8 * target) const PROTOBUF_FINAL;
-    int                         GetCachedSize() const PROTOBUF_FINAL { return _cached_size_; }
+  ::google::protobuf::Metadata GetMetadata() const PROTOBUF_FINAL;
 
-private:
-    void SharedCtor();
-    void SharedDtor();
-    void SetCachedSize(int size) const PROTOBUF_FINAL;
-    void InternalSwap(RegionLeaderResponse * other);
+  // nested types ----------------------------------------------------
 
-private:
-    inline ::google::protobuf::Arena * GetArenaNoVirtual() const { return NULL; }
-    inline void *                      MaybeArenaPtr() const { return NULL; }
+  // accessors -------------------------------------------------------
 
-public:
-    ::google::protobuf::Metadata GetMetadata() const PROTOBUF_FINAL;
+  // .metapb.Peer leader = 1;
+  bool has_leader() const;
+  void clear_leader();
+  static const int kLeaderFieldNumber = 1;
+  const ::metapb::Peer& leader() const;
+  ::metapb::Peer* release_leader();
+  ::metapb::Peer* mutable_leader();
+  void set_allocated_leader(::metapb::Peer* leader);
 
-    // nested types ----------------------------------------------------
+  // @@protoc_insertion_point(class_scope:raft_cmdpb.RegionLeaderResponse)
+ private:
 
-    // accessors -------------------------------------------------------
-
-    // .metapb.Peer leader = 1;
-    bool                   has_leader() const;
-    void                   clear_leader();
-    static const int       kLeaderFieldNumber = 1;
-    const ::metapb::Peer & leader() const;
-    ::metapb::Peer *       release_leader();
-    ::metapb::Peer *       mutable_leader();
-    void                   set_allocated_leader(::metapb::Peer * leader);
-
-    // @@protoc_insertion_point(class_scope:raft_cmdpb.RegionLeaderResponse)
-private:
-    ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
-    ::metapb::Peer *                                        leader_;
-    mutable int                                             _cached_size_;
-    friend struct ::protobuf_raft_5fcmdpb_2eproto::TableStruct;
-    friend void ::protobuf_raft_5fcmdpb_2eproto::InitDefaultsRegionLeaderResponseImpl();
+  ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
+  ::metapb::Peer* leader_;
+  mutable int _cached_size_;
+  friend struct ::protobuf_raft_5fcmdpb_2eproto::TableStruct;
+  friend void ::protobuf_raft_5fcmdpb_2eproto::InitDefaultsRegionLeaderResponseImpl();
 };
 // -------------------------------------------------------------------
 
-class RegionDetailRequest
-    : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:raft_cmdpb.RegionDetailRequest) */
-{
-public:
-    RegionDetailRequest();
-    virtual ~RegionDetailRequest();
+class RegionDetailRequest : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:raft_cmdpb.RegionDetailRequest) */ {
+ public:
+  RegionDetailRequest();
+  virtual ~RegionDetailRequest();
 
-    RegionDetailRequest(const RegionDetailRequest & from);
+  RegionDetailRequest(const RegionDetailRequest& from);
 
-    inline RegionDetailRequest & operator=(const RegionDetailRequest & from)
-    {
-        CopyFrom(from);
-        return *this;
+  inline RegionDetailRequest& operator=(const RegionDetailRequest& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  #if LANG_CXX11
+  RegionDetailRequest(RegionDetailRequest&& from) noexcept
+    : RegionDetailRequest() {
+    *this = ::std::move(from);
+  }
+
+  inline RegionDetailRequest& operator=(RegionDetailRequest&& from) noexcept {
+    if (GetArenaNoVirtual() == from.GetArenaNoVirtual()) {
+      if (this != &from) InternalSwap(&from);
+    } else {
+      CopyFrom(from);
     }
-#if LANG_CXX11
-    RegionDetailRequest(RegionDetailRequest && from) noexcept : RegionDetailRequest() { *this = ::std::move(from); }
+    return *this;
+  }
+  #endif
+  static const ::google::protobuf::Descriptor* descriptor();
+  static const RegionDetailRequest& default_instance();
 
-    inline RegionDetailRequest & operator=(RegionDetailRequest && from) noexcept
-    {
-        if (GetArenaNoVirtual() == from.GetArenaNoVirtual())
-        {
-            if (this != &from)
-                InternalSwap(&from);
-        }
-        else
-        {
-            CopyFrom(from);
-        }
-        return *this;
-    }
-#endif
-    static const ::google::protobuf::Descriptor * descriptor();
-    static const RegionDetailRequest &            default_instance();
+  static void InitAsDefaultInstance();  // FOR INTERNAL USE ONLY
+  static inline const RegionDetailRequest* internal_default_instance() {
+    return reinterpret_cast<const RegionDetailRequest*>(
+               &_RegionDetailRequest_default_instance_);
+  }
+  static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
+    38;
 
-    static void                               InitAsDefaultInstance(); // FOR INTERNAL USE ONLY
-    static inline const RegionDetailRequest * internal_default_instance()
-    {
-        return reinterpret_cast<const RegionDetailRequest *>(&_RegionDetailRequest_default_instance_);
-    }
-    static PROTOBUF_CONSTEXPR int const kIndexInFileMessages = 38;
+  void Swap(RegionDetailRequest* other);
+  friend void swap(RegionDetailRequest& a, RegionDetailRequest& b) {
+    a.Swap(&b);
+  }
 
-    void        Swap(RegionDetailRequest * other);
-    friend void swap(RegionDetailRequest & a, RegionDetailRequest & b) { a.Swap(&b); }
+  // implements Message ----------------------------------------------
 
-    // implements Message ----------------------------------------------
+  inline RegionDetailRequest* New() const PROTOBUF_FINAL { return New(NULL); }
 
-    inline RegionDetailRequest * New() const PROTOBUF_FINAL { return New(NULL); }
+  RegionDetailRequest* New(::google::protobuf::Arena* arena) const PROTOBUF_FINAL;
+  void CopyFrom(const ::google::protobuf::Message& from) PROTOBUF_FINAL;
+  void MergeFrom(const ::google::protobuf::Message& from) PROTOBUF_FINAL;
+  void CopyFrom(const RegionDetailRequest& from);
+  void MergeFrom(const RegionDetailRequest& from);
+  void Clear() PROTOBUF_FINAL;
+  bool IsInitialized() const PROTOBUF_FINAL;
 
-    RegionDetailRequest * New(::google::protobuf::Arena * arena) const PROTOBUF_FINAL;
-    void                  CopyFrom(const ::google::protobuf::Message & from) PROTOBUF_FINAL;
-    void                  MergeFrom(const ::google::protobuf::Message & from) PROTOBUF_FINAL;
-    void                  CopyFrom(const RegionDetailRequest & from);
-    void                  MergeFrom(const RegionDetailRequest & from);
-    void                  Clear() PROTOBUF_FINAL;
-    bool                  IsInitialized() const PROTOBUF_FINAL;
+  size_t ByteSizeLong() const PROTOBUF_FINAL;
+  bool MergePartialFromCodedStream(
+      ::google::protobuf::io::CodedInputStream* input) PROTOBUF_FINAL;
+  void SerializeWithCachedSizes(
+      ::google::protobuf::io::CodedOutputStream* output) const PROTOBUF_FINAL;
+  ::google::protobuf::uint8* InternalSerializeWithCachedSizesToArray(
+      bool deterministic, ::google::protobuf::uint8* target) const PROTOBUF_FINAL;
+  int GetCachedSize() const PROTOBUF_FINAL { return _cached_size_; }
+  private:
+  void SharedCtor();
+  void SharedDtor();
+  void SetCachedSize(int size) const PROTOBUF_FINAL;
+  void InternalSwap(RegionDetailRequest* other);
+  private:
+  inline ::google::protobuf::Arena* GetArenaNoVirtual() const {
+    return NULL;
+  }
+  inline void* MaybeArenaPtr() const {
+    return NULL;
+  }
+  public:
 
-    size_t                      ByteSizeLong() const PROTOBUF_FINAL;
-    bool                        MergePartialFromCodedStream(::google::protobuf::io::CodedInputStream * input) PROTOBUF_FINAL;
-    void                        SerializeWithCachedSizes(::google::protobuf::io::CodedOutputStream * output) const PROTOBUF_FINAL;
-    ::google::protobuf::uint8 * InternalSerializeWithCachedSizesToArray(bool                        deterministic,
-                                                                        ::google::protobuf::uint8 * target) const PROTOBUF_FINAL;
-    int                         GetCachedSize() const PROTOBUF_FINAL { return _cached_size_; }
+  ::google::protobuf::Metadata GetMetadata() const PROTOBUF_FINAL;
 
-private:
-    void SharedCtor();
-    void SharedDtor();
-    void SetCachedSize(int size) const PROTOBUF_FINAL;
-    void InternalSwap(RegionDetailRequest * other);
+  // nested types ----------------------------------------------------
 
-private:
-    inline ::google::protobuf::Arena * GetArenaNoVirtual() const { return NULL; }
-    inline void *                      MaybeArenaPtr() const { return NULL; }
+  // accessors -------------------------------------------------------
 
-public:
-    ::google::protobuf::Metadata GetMetadata() const PROTOBUF_FINAL;
+  // @@protoc_insertion_point(class_scope:raft_cmdpb.RegionDetailRequest)
+ private:
 
-    // nested types ----------------------------------------------------
-
-    // accessors -------------------------------------------------------
-
-    // @@protoc_insertion_point(class_scope:raft_cmdpb.RegionDetailRequest)
-private:
-    ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
-    mutable int                                             _cached_size_;
-    friend struct ::protobuf_raft_5fcmdpb_2eproto::TableStruct;
-    friend void ::protobuf_raft_5fcmdpb_2eproto::InitDefaultsRegionDetailRequestImpl();
+  ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
+  mutable int _cached_size_;
+  friend struct ::protobuf_raft_5fcmdpb_2eproto::TableStruct;
+  friend void ::protobuf_raft_5fcmdpb_2eproto::InitDefaultsRegionDetailRequestImpl();
 };
 // -------------------------------------------------------------------
 
-class RegionDetailResponse
-    : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:raft_cmdpb.RegionDetailResponse) */
-{
-public:
-    RegionDetailResponse();
-    virtual ~RegionDetailResponse();
+class RegionDetailResponse : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:raft_cmdpb.RegionDetailResponse) */ {
+ public:
+  RegionDetailResponse();
+  virtual ~RegionDetailResponse();
 
-    RegionDetailResponse(const RegionDetailResponse & from);
+  RegionDetailResponse(const RegionDetailResponse& from);
 
-    inline RegionDetailResponse & operator=(const RegionDetailResponse & from)
-    {
-        CopyFrom(from);
-        return *this;
+  inline RegionDetailResponse& operator=(const RegionDetailResponse& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  #if LANG_CXX11
+  RegionDetailResponse(RegionDetailResponse&& from) noexcept
+    : RegionDetailResponse() {
+    *this = ::std::move(from);
+  }
+
+  inline RegionDetailResponse& operator=(RegionDetailResponse&& from) noexcept {
+    if (GetArenaNoVirtual() == from.GetArenaNoVirtual()) {
+      if (this != &from) InternalSwap(&from);
+    } else {
+      CopyFrom(from);
     }
-#if LANG_CXX11
-    RegionDetailResponse(RegionDetailResponse && from) noexcept : RegionDetailResponse() { *this = ::std::move(from); }
+    return *this;
+  }
+  #endif
+  static const ::google::protobuf::Descriptor* descriptor();
+  static const RegionDetailResponse& default_instance();
 
-    inline RegionDetailResponse & operator=(RegionDetailResponse && from) noexcept
-    {
-        if (GetArenaNoVirtual() == from.GetArenaNoVirtual())
-        {
-            if (this != &from)
-                InternalSwap(&from);
-        }
-        else
-        {
-            CopyFrom(from);
-        }
-        return *this;
-    }
-#endif
-    static const ::google::protobuf::Descriptor * descriptor();
-    static const RegionDetailResponse &           default_instance();
+  static void InitAsDefaultInstance();  // FOR INTERNAL USE ONLY
+  static inline const RegionDetailResponse* internal_default_instance() {
+    return reinterpret_cast<const RegionDetailResponse*>(
+               &_RegionDetailResponse_default_instance_);
+  }
+  static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
+    39;
 
-    static void                                InitAsDefaultInstance(); // FOR INTERNAL USE ONLY
-    static inline const RegionDetailResponse * internal_default_instance()
-    {
-        return reinterpret_cast<const RegionDetailResponse *>(&_RegionDetailResponse_default_instance_);
-    }
-    static PROTOBUF_CONSTEXPR int const kIndexInFileMessages = 39;
+  void Swap(RegionDetailResponse* other);
+  friend void swap(RegionDetailResponse& a, RegionDetailResponse& b) {
+    a.Swap(&b);
+  }
 
-    void        Swap(RegionDetailResponse * other);
-    friend void swap(RegionDetailResponse & a, RegionDetailResponse & b) { a.Swap(&b); }
+  // implements Message ----------------------------------------------
 
-    // implements Message ----------------------------------------------
+  inline RegionDetailResponse* New() const PROTOBUF_FINAL { return New(NULL); }
 
-    inline RegionDetailResponse * New() const PROTOBUF_FINAL { return New(NULL); }
+  RegionDetailResponse* New(::google::protobuf::Arena* arena) const PROTOBUF_FINAL;
+  void CopyFrom(const ::google::protobuf::Message& from) PROTOBUF_FINAL;
+  void MergeFrom(const ::google::protobuf::Message& from) PROTOBUF_FINAL;
+  void CopyFrom(const RegionDetailResponse& from);
+  void MergeFrom(const RegionDetailResponse& from);
+  void Clear() PROTOBUF_FINAL;
+  bool IsInitialized() const PROTOBUF_FINAL;
 
-    RegionDetailResponse * New(::google::protobuf::Arena * arena) const PROTOBUF_FINAL;
-    void                   CopyFrom(const ::google::protobuf::Message & from) PROTOBUF_FINAL;
-    void                   MergeFrom(const ::google::protobuf::Message & from) PROTOBUF_FINAL;
-    void                   CopyFrom(const RegionDetailResponse & from);
-    void                   MergeFrom(const RegionDetailResponse & from);
-    void                   Clear() PROTOBUF_FINAL;
-    bool                   IsInitialized() const PROTOBUF_FINAL;
+  size_t ByteSizeLong() const PROTOBUF_FINAL;
+  bool MergePartialFromCodedStream(
+      ::google::protobuf::io::CodedInputStream* input) PROTOBUF_FINAL;
+  void SerializeWithCachedSizes(
+      ::google::protobuf::io::CodedOutputStream* output) const PROTOBUF_FINAL;
+  ::google::protobuf::uint8* InternalSerializeWithCachedSizesToArray(
+      bool deterministic, ::google::protobuf::uint8* target) const PROTOBUF_FINAL;
+  int GetCachedSize() const PROTOBUF_FINAL { return _cached_size_; }
+  private:
+  void SharedCtor();
+  void SharedDtor();
+  void SetCachedSize(int size) const PROTOBUF_FINAL;
+  void InternalSwap(RegionDetailResponse* other);
+  private:
+  inline ::google::protobuf::Arena* GetArenaNoVirtual() const {
+    return NULL;
+  }
+  inline void* MaybeArenaPtr() const {
+    return NULL;
+  }
+  public:
 
-    size_t                      ByteSizeLong() const PROTOBUF_FINAL;
-    bool                        MergePartialFromCodedStream(::google::protobuf::io::CodedInputStream * input) PROTOBUF_FINAL;
-    void                        SerializeWithCachedSizes(::google::protobuf::io::CodedOutputStream * output) const PROTOBUF_FINAL;
-    ::google::protobuf::uint8 * InternalSerializeWithCachedSizesToArray(bool                        deterministic,
-                                                                        ::google::protobuf::uint8 * target) const PROTOBUF_FINAL;
-    int                         GetCachedSize() const PROTOBUF_FINAL { return _cached_size_; }
+  ::google::protobuf::Metadata GetMetadata() const PROTOBUF_FINAL;
 
-private:
-    void SharedCtor();
-    void SharedDtor();
-    void SetCachedSize(int size) const PROTOBUF_FINAL;
-    void InternalSwap(RegionDetailResponse * other);
+  // nested types ----------------------------------------------------
 
-private:
-    inline ::google::protobuf::Arena * GetArenaNoVirtual() const { return NULL; }
-    inline void *                      MaybeArenaPtr() const { return NULL; }
+  // accessors -------------------------------------------------------
 
-public:
-    ::google::protobuf::Metadata GetMetadata() const PROTOBUF_FINAL;
+  // .metapb.Region region = 1;
+  bool has_region() const;
+  void clear_region();
+  static const int kRegionFieldNumber = 1;
+  const ::metapb::Region& region() const;
+  ::metapb::Region* release_region();
+  ::metapb::Region* mutable_region();
+  void set_allocated_region(::metapb::Region* region);
 
-    // nested types ----------------------------------------------------
+  // .metapb.Peer leader = 2;
+  bool has_leader() const;
+  void clear_leader();
+  static const int kLeaderFieldNumber = 2;
+  const ::metapb::Peer& leader() const;
+  ::metapb::Peer* release_leader();
+  ::metapb::Peer* mutable_leader();
+  void set_allocated_leader(::metapb::Peer* leader);
 
-    // accessors -------------------------------------------------------
+  // @@protoc_insertion_point(class_scope:raft_cmdpb.RegionDetailResponse)
+ private:
 
-    // .metapb.Region region = 1;
-    bool                     has_region() const;
-    void                     clear_region();
-    static const int         kRegionFieldNumber = 1;
-    const ::metapb::Region & region() const;
-    ::metapb::Region *       release_region();
-    ::metapb::Region *       mutable_region();
-    void                     set_allocated_region(::metapb::Region * region);
-
-    // .metapb.Peer leader = 2;
-    bool                   has_leader() const;
-    void                   clear_leader();
-    static const int       kLeaderFieldNumber = 2;
-    const ::metapb::Peer & leader() const;
-    ::metapb::Peer *       release_leader();
-    ::metapb::Peer *       mutable_leader();
-    void                   set_allocated_leader(::metapb::Peer * leader);
-
-    // @@protoc_insertion_point(class_scope:raft_cmdpb.RegionDetailResponse)
-private:
-    ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
-    ::metapb::Region *                                      region_;
-    ::metapb::Peer *                                        leader_;
-    mutable int                                             _cached_size_;
-    friend struct ::protobuf_raft_5fcmdpb_2eproto::TableStruct;
-    friend void ::protobuf_raft_5fcmdpb_2eproto::InitDefaultsRegionDetailResponseImpl();
+  ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
+  ::metapb::Region* region_;
+  ::metapb::Peer* leader_;
+  mutable int _cached_size_;
+  friend struct ::protobuf_raft_5fcmdpb_2eproto::TableStruct;
+  friend void ::protobuf_raft_5fcmdpb_2eproto::InitDefaultsRegionDetailResponseImpl();
 };
 // -------------------------------------------------------------------
 
-class StatusRequest : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:raft_cmdpb.StatusRequest) */
-{
-public:
-    StatusRequest();
-    virtual ~StatusRequest();
+class StatusRequest : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:raft_cmdpb.StatusRequest) */ {
+ public:
+  StatusRequest();
+  virtual ~StatusRequest();
 
-    StatusRequest(const StatusRequest & from);
+  StatusRequest(const StatusRequest& from);
 
-    inline StatusRequest & operator=(const StatusRequest & from)
-    {
-        CopyFrom(from);
-        return *this;
+  inline StatusRequest& operator=(const StatusRequest& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  #if LANG_CXX11
+  StatusRequest(StatusRequest&& from) noexcept
+    : StatusRequest() {
+    *this = ::std::move(from);
+  }
+
+  inline StatusRequest& operator=(StatusRequest&& from) noexcept {
+    if (GetArenaNoVirtual() == from.GetArenaNoVirtual()) {
+      if (this != &from) InternalSwap(&from);
+    } else {
+      CopyFrom(from);
     }
-#if LANG_CXX11
-    StatusRequest(StatusRequest && from) noexcept : StatusRequest() { *this = ::std::move(from); }
+    return *this;
+  }
+  #endif
+  static const ::google::protobuf::Descriptor* descriptor();
+  static const StatusRequest& default_instance();
 
-    inline StatusRequest & operator=(StatusRequest && from) noexcept
-    {
-        if (GetArenaNoVirtual() == from.GetArenaNoVirtual())
-        {
-            if (this != &from)
-                InternalSwap(&from);
-        }
-        else
-        {
-            CopyFrom(from);
-        }
-        return *this;
-    }
-#endif
-    static const ::google::protobuf::Descriptor * descriptor();
-    static const StatusRequest &                  default_instance();
+  static void InitAsDefaultInstance();  // FOR INTERNAL USE ONLY
+  static inline const StatusRequest* internal_default_instance() {
+    return reinterpret_cast<const StatusRequest*>(
+               &_StatusRequest_default_instance_);
+  }
+  static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
+    40;
 
-    static void                         InitAsDefaultInstance(); // FOR INTERNAL USE ONLY
-    static inline const StatusRequest * internal_default_instance()
-    {
-        return reinterpret_cast<const StatusRequest *>(&_StatusRequest_default_instance_);
-    }
-    static PROTOBUF_CONSTEXPR int const kIndexInFileMessages = 40;
+  void Swap(StatusRequest* other);
+  friend void swap(StatusRequest& a, StatusRequest& b) {
+    a.Swap(&b);
+  }
 
-    void        Swap(StatusRequest * other);
-    friend void swap(StatusRequest & a, StatusRequest & b) { a.Swap(&b); }
+  // implements Message ----------------------------------------------
 
-    // implements Message ----------------------------------------------
+  inline StatusRequest* New() const PROTOBUF_FINAL { return New(NULL); }
 
-    inline StatusRequest * New() const PROTOBUF_FINAL { return New(NULL); }
+  StatusRequest* New(::google::protobuf::Arena* arena) const PROTOBUF_FINAL;
+  void CopyFrom(const ::google::protobuf::Message& from) PROTOBUF_FINAL;
+  void MergeFrom(const ::google::protobuf::Message& from) PROTOBUF_FINAL;
+  void CopyFrom(const StatusRequest& from);
+  void MergeFrom(const StatusRequest& from);
+  void Clear() PROTOBUF_FINAL;
+  bool IsInitialized() const PROTOBUF_FINAL;
 
-    StatusRequest * New(::google::protobuf::Arena * arena) const PROTOBUF_FINAL;
-    void            CopyFrom(const ::google::protobuf::Message & from) PROTOBUF_FINAL;
-    void            MergeFrom(const ::google::protobuf::Message & from) PROTOBUF_FINAL;
-    void            CopyFrom(const StatusRequest & from);
-    void            MergeFrom(const StatusRequest & from);
-    void            Clear() PROTOBUF_FINAL;
-    bool            IsInitialized() const PROTOBUF_FINAL;
+  size_t ByteSizeLong() const PROTOBUF_FINAL;
+  bool MergePartialFromCodedStream(
+      ::google::protobuf::io::CodedInputStream* input) PROTOBUF_FINAL;
+  void SerializeWithCachedSizes(
+      ::google::protobuf::io::CodedOutputStream* output) const PROTOBUF_FINAL;
+  ::google::protobuf::uint8* InternalSerializeWithCachedSizesToArray(
+      bool deterministic, ::google::protobuf::uint8* target) const PROTOBUF_FINAL;
+  int GetCachedSize() const PROTOBUF_FINAL { return _cached_size_; }
+  private:
+  void SharedCtor();
+  void SharedDtor();
+  void SetCachedSize(int size) const PROTOBUF_FINAL;
+  void InternalSwap(StatusRequest* other);
+  private:
+  inline ::google::protobuf::Arena* GetArenaNoVirtual() const {
+    return NULL;
+  }
+  inline void* MaybeArenaPtr() const {
+    return NULL;
+  }
+  public:
 
-    size_t                      ByteSizeLong() const PROTOBUF_FINAL;
-    bool                        MergePartialFromCodedStream(::google::protobuf::io::CodedInputStream * input) PROTOBUF_FINAL;
-    void                        SerializeWithCachedSizes(::google::protobuf::io::CodedOutputStream * output) const PROTOBUF_FINAL;
-    ::google::protobuf::uint8 * InternalSerializeWithCachedSizesToArray(bool                        deterministic,
-                                                                        ::google::protobuf::uint8 * target) const PROTOBUF_FINAL;
-    int                         GetCachedSize() const PROTOBUF_FINAL { return _cached_size_; }
+  ::google::protobuf::Metadata GetMetadata() const PROTOBUF_FINAL;
 
-private:
-    void SharedCtor();
-    void SharedDtor();
-    void SetCachedSize(int size) const PROTOBUF_FINAL;
-    void InternalSwap(StatusRequest * other);
+  // nested types ----------------------------------------------------
 
-private:
-    inline ::google::protobuf::Arena * GetArenaNoVirtual() const { return NULL; }
-    inline void *                      MaybeArenaPtr() const { return NULL; }
+  // accessors -------------------------------------------------------
 
-public:
-    ::google::protobuf::Metadata GetMetadata() const PROTOBUF_FINAL;
+  // .raft_cmdpb.RegionLeaderRequest region_leader = 2;
+  bool has_region_leader() const;
+  void clear_region_leader();
+  static const int kRegionLeaderFieldNumber = 2;
+  const ::raft_cmdpb::RegionLeaderRequest& region_leader() const;
+  ::raft_cmdpb::RegionLeaderRequest* release_region_leader();
+  ::raft_cmdpb::RegionLeaderRequest* mutable_region_leader();
+  void set_allocated_region_leader(::raft_cmdpb::RegionLeaderRequest* region_leader);
 
-    // nested types ----------------------------------------------------
+  // .raft_cmdpb.RegionDetailRequest region_detail = 3;
+  bool has_region_detail() const;
+  void clear_region_detail();
+  static const int kRegionDetailFieldNumber = 3;
+  const ::raft_cmdpb::RegionDetailRequest& region_detail() const;
+  ::raft_cmdpb::RegionDetailRequest* release_region_detail();
+  ::raft_cmdpb::RegionDetailRequest* mutable_region_detail();
+  void set_allocated_region_detail(::raft_cmdpb::RegionDetailRequest* region_detail);
 
-    // accessors -------------------------------------------------------
+  // .raft_cmdpb.StatusCmdType cmd_type = 1;
+  void clear_cmd_type();
+  static const int kCmdTypeFieldNumber = 1;
+  ::raft_cmdpb::StatusCmdType cmd_type() const;
+  void set_cmd_type(::raft_cmdpb::StatusCmdType value);
 
-    // .raft_cmdpb.RegionLeaderRequest region_leader = 2;
-    bool                                      has_region_leader() const;
-    void                                      clear_region_leader();
-    static const int                          kRegionLeaderFieldNumber = 2;
-    const ::raft_cmdpb::RegionLeaderRequest & region_leader() const;
-    ::raft_cmdpb::RegionLeaderRequest *       release_region_leader();
-    ::raft_cmdpb::RegionLeaderRequest *       mutable_region_leader();
-    void                                      set_allocated_region_leader(::raft_cmdpb::RegionLeaderRequest * region_leader);
+  // @@protoc_insertion_point(class_scope:raft_cmdpb.StatusRequest)
+ private:
 
-    // .raft_cmdpb.RegionDetailRequest region_detail = 3;
-    bool                                      has_region_detail() const;
-    void                                      clear_region_detail();
-    static const int                          kRegionDetailFieldNumber = 3;
-    const ::raft_cmdpb::RegionDetailRequest & region_detail() const;
-    ::raft_cmdpb::RegionDetailRequest *       release_region_detail();
-    ::raft_cmdpb::RegionDetailRequest *       mutable_region_detail();
-    void                                      set_allocated_region_detail(::raft_cmdpb::RegionDetailRequest * region_detail);
-
-    // .raft_cmdpb.StatusCmdType cmd_type = 1;
-    void                        clear_cmd_type();
-    static const int            kCmdTypeFieldNumber = 1;
-    ::raft_cmdpb::StatusCmdType cmd_type() const;
-    void                        set_cmd_type(::raft_cmdpb::StatusCmdType value);
-
-    // @@protoc_insertion_point(class_scope:raft_cmdpb.StatusRequest)
-private:
-    ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
-    ::raft_cmdpb::RegionLeaderRequest *                     region_leader_;
-    ::raft_cmdpb::RegionDetailRequest *                     region_detail_;
-    int                                                     cmd_type_;
-    mutable int                                             _cached_size_;
-    friend struct ::protobuf_raft_5fcmdpb_2eproto::TableStruct;
-    friend void ::protobuf_raft_5fcmdpb_2eproto::InitDefaultsStatusRequestImpl();
+  ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
+  ::raft_cmdpb::RegionLeaderRequest* region_leader_;
+  ::raft_cmdpb::RegionDetailRequest* region_detail_;
+  int cmd_type_;
+  mutable int _cached_size_;
+  friend struct ::protobuf_raft_5fcmdpb_2eproto::TableStruct;
+  friend void ::protobuf_raft_5fcmdpb_2eproto::InitDefaultsStatusRequestImpl();
 };
 // -------------------------------------------------------------------
 
-class StatusResponse : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:raft_cmdpb.StatusResponse) */
-{
-public:
-    StatusResponse();
-    virtual ~StatusResponse();
+class StatusResponse : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:raft_cmdpb.StatusResponse) */ {
+ public:
+  StatusResponse();
+  virtual ~StatusResponse();
 
-    StatusResponse(const StatusResponse & from);
+  StatusResponse(const StatusResponse& from);
 
-    inline StatusResponse & operator=(const StatusResponse & from)
-    {
-        CopyFrom(from);
-        return *this;
+  inline StatusResponse& operator=(const StatusResponse& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  #if LANG_CXX11
+  StatusResponse(StatusResponse&& from) noexcept
+    : StatusResponse() {
+    *this = ::std::move(from);
+  }
+
+  inline StatusResponse& operator=(StatusResponse&& from) noexcept {
+    if (GetArenaNoVirtual() == from.GetArenaNoVirtual()) {
+      if (this != &from) InternalSwap(&from);
+    } else {
+      CopyFrom(from);
     }
-#if LANG_CXX11
-    StatusResponse(StatusResponse && from) noexcept : StatusResponse() { *this = ::std::move(from); }
+    return *this;
+  }
+  #endif
+  static const ::google::protobuf::Descriptor* descriptor();
+  static const StatusResponse& default_instance();
 
-    inline StatusResponse & operator=(StatusResponse && from) noexcept
-    {
-        if (GetArenaNoVirtual() == from.GetArenaNoVirtual())
-        {
-            if (this != &from)
-                InternalSwap(&from);
-        }
-        else
-        {
-            CopyFrom(from);
-        }
-        return *this;
-    }
-#endif
-    static const ::google::protobuf::Descriptor * descriptor();
-    static const StatusResponse &                 default_instance();
+  static void InitAsDefaultInstance();  // FOR INTERNAL USE ONLY
+  static inline const StatusResponse* internal_default_instance() {
+    return reinterpret_cast<const StatusResponse*>(
+               &_StatusResponse_default_instance_);
+  }
+  static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
+    41;
 
-    static void                          InitAsDefaultInstance(); // FOR INTERNAL USE ONLY
-    static inline const StatusResponse * internal_default_instance()
-    {
-        return reinterpret_cast<const StatusResponse *>(&_StatusResponse_default_instance_);
-    }
-    static PROTOBUF_CONSTEXPR int const kIndexInFileMessages = 41;
+  void Swap(StatusResponse* other);
+  friend void swap(StatusResponse& a, StatusResponse& b) {
+    a.Swap(&b);
+  }
 
-    void        Swap(StatusResponse * other);
-    friend void swap(StatusResponse & a, StatusResponse & b) { a.Swap(&b); }
+  // implements Message ----------------------------------------------
 
-    // implements Message ----------------------------------------------
+  inline StatusResponse* New() const PROTOBUF_FINAL { return New(NULL); }
 
-    inline StatusResponse * New() const PROTOBUF_FINAL { return New(NULL); }
+  StatusResponse* New(::google::protobuf::Arena* arena) const PROTOBUF_FINAL;
+  void CopyFrom(const ::google::protobuf::Message& from) PROTOBUF_FINAL;
+  void MergeFrom(const ::google::protobuf::Message& from) PROTOBUF_FINAL;
+  void CopyFrom(const StatusResponse& from);
+  void MergeFrom(const StatusResponse& from);
+  void Clear() PROTOBUF_FINAL;
+  bool IsInitialized() const PROTOBUF_FINAL;
 
-    StatusResponse * New(::google::protobuf::Arena * arena) const PROTOBUF_FINAL;
-    void             CopyFrom(const ::google::protobuf::Message & from) PROTOBUF_FINAL;
-    void             MergeFrom(const ::google::protobuf::Message & from) PROTOBUF_FINAL;
-    void             CopyFrom(const StatusResponse & from);
-    void             MergeFrom(const StatusResponse & from);
-    void             Clear() PROTOBUF_FINAL;
-    bool             IsInitialized() const PROTOBUF_FINAL;
+  size_t ByteSizeLong() const PROTOBUF_FINAL;
+  bool MergePartialFromCodedStream(
+      ::google::protobuf::io::CodedInputStream* input) PROTOBUF_FINAL;
+  void SerializeWithCachedSizes(
+      ::google::protobuf::io::CodedOutputStream* output) const PROTOBUF_FINAL;
+  ::google::protobuf::uint8* InternalSerializeWithCachedSizesToArray(
+      bool deterministic, ::google::protobuf::uint8* target) const PROTOBUF_FINAL;
+  int GetCachedSize() const PROTOBUF_FINAL { return _cached_size_; }
+  private:
+  void SharedCtor();
+  void SharedDtor();
+  void SetCachedSize(int size) const PROTOBUF_FINAL;
+  void InternalSwap(StatusResponse* other);
+  private:
+  inline ::google::protobuf::Arena* GetArenaNoVirtual() const {
+    return NULL;
+  }
+  inline void* MaybeArenaPtr() const {
+    return NULL;
+  }
+  public:
 
-    size_t                      ByteSizeLong() const PROTOBUF_FINAL;
-    bool                        MergePartialFromCodedStream(::google::protobuf::io::CodedInputStream * input) PROTOBUF_FINAL;
-    void                        SerializeWithCachedSizes(::google::protobuf::io::CodedOutputStream * output) const PROTOBUF_FINAL;
-    ::google::protobuf::uint8 * InternalSerializeWithCachedSizesToArray(bool                        deterministic,
-                                                                        ::google::protobuf::uint8 * target) const PROTOBUF_FINAL;
-    int                         GetCachedSize() const PROTOBUF_FINAL { return _cached_size_; }
+  ::google::protobuf::Metadata GetMetadata() const PROTOBUF_FINAL;
 
-private:
-    void SharedCtor();
-    void SharedDtor();
-    void SetCachedSize(int size) const PROTOBUF_FINAL;
-    void InternalSwap(StatusResponse * other);
+  // nested types ----------------------------------------------------
 
-private:
-    inline ::google::protobuf::Arena * GetArenaNoVirtual() const { return NULL; }
-    inline void *                      MaybeArenaPtr() const { return NULL; }
+  // accessors -------------------------------------------------------
 
-public:
-    ::google::protobuf::Metadata GetMetadata() const PROTOBUF_FINAL;
+  // .raft_cmdpb.RegionLeaderResponse region_leader = 2;
+  bool has_region_leader() const;
+  void clear_region_leader();
+  static const int kRegionLeaderFieldNumber = 2;
+  const ::raft_cmdpb::RegionLeaderResponse& region_leader() const;
+  ::raft_cmdpb::RegionLeaderResponse* release_region_leader();
+  ::raft_cmdpb::RegionLeaderResponse* mutable_region_leader();
+  void set_allocated_region_leader(::raft_cmdpb::RegionLeaderResponse* region_leader);
 
-    // nested types ----------------------------------------------------
+  // .raft_cmdpb.RegionDetailResponse region_detail = 3;
+  bool has_region_detail() const;
+  void clear_region_detail();
+  static const int kRegionDetailFieldNumber = 3;
+  const ::raft_cmdpb::RegionDetailResponse& region_detail() const;
+  ::raft_cmdpb::RegionDetailResponse* release_region_detail();
+  ::raft_cmdpb::RegionDetailResponse* mutable_region_detail();
+  void set_allocated_region_detail(::raft_cmdpb::RegionDetailResponse* region_detail);
 
-    // accessors -------------------------------------------------------
+  // .raft_cmdpb.StatusCmdType cmd_type = 1;
+  void clear_cmd_type();
+  static const int kCmdTypeFieldNumber = 1;
+  ::raft_cmdpb::StatusCmdType cmd_type() const;
+  void set_cmd_type(::raft_cmdpb::StatusCmdType value);
 
-    // .raft_cmdpb.RegionLeaderResponse region_leader = 2;
-    bool                                       has_region_leader() const;
-    void                                       clear_region_leader();
-    static const int                           kRegionLeaderFieldNumber = 2;
-    const ::raft_cmdpb::RegionLeaderResponse & region_leader() const;
-    ::raft_cmdpb::RegionLeaderResponse *       release_region_leader();
-    ::raft_cmdpb::RegionLeaderResponse *       mutable_region_leader();
-    void                                       set_allocated_region_leader(::raft_cmdpb::RegionLeaderResponse * region_leader);
+  // @@protoc_insertion_point(class_scope:raft_cmdpb.StatusResponse)
+ private:
 
-    // .raft_cmdpb.RegionDetailResponse region_detail = 3;
-    bool                                       has_region_detail() const;
-    void                                       clear_region_detail();
-    static const int                           kRegionDetailFieldNumber = 3;
-    const ::raft_cmdpb::RegionDetailResponse & region_detail() const;
-    ::raft_cmdpb::RegionDetailResponse *       release_region_detail();
-    ::raft_cmdpb::RegionDetailResponse *       mutable_region_detail();
-    void                                       set_allocated_region_detail(::raft_cmdpb::RegionDetailResponse * region_detail);
-
-    // .raft_cmdpb.StatusCmdType cmd_type = 1;
-    void                        clear_cmd_type();
-    static const int            kCmdTypeFieldNumber = 1;
-    ::raft_cmdpb::StatusCmdType cmd_type() const;
-    void                        set_cmd_type(::raft_cmdpb::StatusCmdType value);
-
-    // @@protoc_insertion_point(class_scope:raft_cmdpb.StatusResponse)
-private:
-    ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
-    ::raft_cmdpb::RegionLeaderResponse *                    region_leader_;
-    ::raft_cmdpb::RegionDetailResponse *                    region_detail_;
-    int                                                     cmd_type_;
-    mutable int                                             _cached_size_;
-    friend struct ::protobuf_raft_5fcmdpb_2eproto::TableStruct;
-    friend void ::protobuf_raft_5fcmdpb_2eproto::InitDefaultsStatusResponseImpl();
+  ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
+  ::raft_cmdpb::RegionLeaderResponse* region_leader_;
+  ::raft_cmdpb::RegionDetailResponse* region_detail_;
+  int cmd_type_;
+  mutable int _cached_size_;
+  friend struct ::protobuf_raft_5fcmdpb_2eproto::TableStruct;
+  friend void ::protobuf_raft_5fcmdpb_2eproto::InitDefaultsStatusResponseImpl();
 };
 // -------------------------------------------------------------------
 
-class RaftRequestHeader : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:raft_cmdpb.RaftRequestHeader) */
-{
-public:
-    RaftRequestHeader();
-    virtual ~RaftRequestHeader();
+class RaftRequestHeader : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:raft_cmdpb.RaftRequestHeader) */ {
+ public:
+  RaftRequestHeader();
+  virtual ~RaftRequestHeader();
 
-    RaftRequestHeader(const RaftRequestHeader & from);
+  RaftRequestHeader(const RaftRequestHeader& from);
 
-    inline RaftRequestHeader & operator=(const RaftRequestHeader & from)
-    {
-        CopyFrom(from);
-        return *this;
+  inline RaftRequestHeader& operator=(const RaftRequestHeader& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  #if LANG_CXX11
+  RaftRequestHeader(RaftRequestHeader&& from) noexcept
+    : RaftRequestHeader() {
+    *this = ::std::move(from);
+  }
+
+  inline RaftRequestHeader& operator=(RaftRequestHeader&& from) noexcept {
+    if (GetArenaNoVirtual() == from.GetArenaNoVirtual()) {
+      if (this != &from) InternalSwap(&from);
+    } else {
+      CopyFrom(from);
     }
-#if LANG_CXX11
-    RaftRequestHeader(RaftRequestHeader && from) noexcept : RaftRequestHeader() { *this = ::std::move(from); }
+    return *this;
+  }
+  #endif
+  static const ::google::protobuf::Descriptor* descriptor();
+  static const RaftRequestHeader& default_instance();
 
-    inline RaftRequestHeader & operator=(RaftRequestHeader && from) noexcept
-    {
-        if (GetArenaNoVirtual() == from.GetArenaNoVirtual())
-        {
-            if (this != &from)
-                InternalSwap(&from);
-        }
-        else
-        {
-            CopyFrom(from);
-        }
-        return *this;
-    }
-#endif
-    static const ::google::protobuf::Descriptor * descriptor();
-    static const RaftRequestHeader &              default_instance();
+  static void InitAsDefaultInstance();  // FOR INTERNAL USE ONLY
+  static inline const RaftRequestHeader* internal_default_instance() {
+    return reinterpret_cast<const RaftRequestHeader*>(
+               &_RaftRequestHeader_default_instance_);
+  }
+  static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
+    42;
 
-    static void                             InitAsDefaultInstance(); // FOR INTERNAL USE ONLY
-    static inline const RaftRequestHeader * internal_default_instance()
-    {
-        return reinterpret_cast<const RaftRequestHeader *>(&_RaftRequestHeader_default_instance_);
-    }
-    static PROTOBUF_CONSTEXPR int const kIndexInFileMessages = 42;
+  void Swap(RaftRequestHeader* other);
+  friend void swap(RaftRequestHeader& a, RaftRequestHeader& b) {
+    a.Swap(&b);
+  }
 
-    void        Swap(RaftRequestHeader * other);
-    friend void swap(RaftRequestHeader & a, RaftRequestHeader & b) { a.Swap(&b); }
+  // implements Message ----------------------------------------------
 
-    // implements Message ----------------------------------------------
+  inline RaftRequestHeader* New() const PROTOBUF_FINAL { return New(NULL); }
 
-    inline RaftRequestHeader * New() const PROTOBUF_FINAL { return New(NULL); }
+  RaftRequestHeader* New(::google::protobuf::Arena* arena) const PROTOBUF_FINAL;
+  void CopyFrom(const ::google::protobuf::Message& from) PROTOBUF_FINAL;
+  void MergeFrom(const ::google::protobuf::Message& from) PROTOBUF_FINAL;
+  void CopyFrom(const RaftRequestHeader& from);
+  void MergeFrom(const RaftRequestHeader& from);
+  void Clear() PROTOBUF_FINAL;
+  bool IsInitialized() const PROTOBUF_FINAL;
 
-    RaftRequestHeader * New(::google::protobuf::Arena * arena) const PROTOBUF_FINAL;
-    void                CopyFrom(const ::google::protobuf::Message & from) PROTOBUF_FINAL;
-    void                MergeFrom(const ::google::protobuf::Message & from) PROTOBUF_FINAL;
-    void                CopyFrom(const RaftRequestHeader & from);
-    void                MergeFrom(const RaftRequestHeader & from);
-    void                Clear() PROTOBUF_FINAL;
-    bool                IsInitialized() const PROTOBUF_FINAL;
+  size_t ByteSizeLong() const PROTOBUF_FINAL;
+  bool MergePartialFromCodedStream(
+      ::google::protobuf::io::CodedInputStream* input) PROTOBUF_FINAL;
+  void SerializeWithCachedSizes(
+      ::google::protobuf::io::CodedOutputStream* output) const PROTOBUF_FINAL;
+  ::google::protobuf::uint8* InternalSerializeWithCachedSizesToArray(
+      bool deterministic, ::google::protobuf::uint8* target) const PROTOBUF_FINAL;
+  int GetCachedSize() const PROTOBUF_FINAL { return _cached_size_; }
+  private:
+  void SharedCtor();
+  void SharedDtor();
+  void SetCachedSize(int size) const PROTOBUF_FINAL;
+  void InternalSwap(RaftRequestHeader* other);
+  private:
+  inline ::google::protobuf::Arena* GetArenaNoVirtual() const {
+    return NULL;
+  }
+  inline void* MaybeArenaPtr() const {
+    return NULL;
+  }
+  public:
 
-    size_t                      ByteSizeLong() const PROTOBUF_FINAL;
-    bool                        MergePartialFromCodedStream(::google::protobuf::io::CodedInputStream * input) PROTOBUF_FINAL;
-    void                        SerializeWithCachedSizes(::google::protobuf::io::CodedOutputStream * output) const PROTOBUF_FINAL;
-    ::google::protobuf::uint8 * InternalSerializeWithCachedSizesToArray(bool                        deterministic,
-                                                                        ::google::protobuf::uint8 * target) const PROTOBUF_FINAL;
-    int                         GetCachedSize() const PROTOBUF_FINAL { return _cached_size_; }
+  ::google::protobuf::Metadata GetMetadata() const PROTOBUF_FINAL;
 
-private:
-    void SharedCtor();
-    void SharedDtor();
-    void SetCachedSize(int size) const PROTOBUF_FINAL;
-    void InternalSwap(RaftRequestHeader * other);
+  // nested types ----------------------------------------------------
 
-private:
-    inline ::google::protobuf::Arena * GetArenaNoVirtual() const { return NULL; }
-    inline void *                      MaybeArenaPtr() const { return NULL; }
+  // accessors -------------------------------------------------------
 
-public:
-    ::google::protobuf::Metadata GetMetadata() const PROTOBUF_FINAL;
+  // bytes uuid = 4;
+  void clear_uuid();
+  static const int kUuidFieldNumber = 4;
+  const ::std::string& uuid() const;
+  void set_uuid(const ::std::string& value);
+  #if LANG_CXX11
+  void set_uuid(::std::string&& value);
+  #endif
+  void set_uuid(const char* value);
+  void set_uuid(const void* value, size_t size);
+  ::std::string* mutable_uuid();
+  ::std::string* release_uuid();
+  void set_allocated_uuid(::std::string* uuid);
 
-    // nested types ----------------------------------------------------
+  // .metapb.Peer peer = 2;
+  bool has_peer() const;
+  void clear_peer();
+  static const int kPeerFieldNumber = 2;
+  const ::metapb::Peer& peer() const;
+  ::metapb::Peer* release_peer();
+  ::metapb::Peer* mutable_peer();
+  void set_allocated_peer(::metapb::Peer* peer);
 
-    // accessors -------------------------------------------------------
+  // .metapb.RegionEpoch region_epoch = 5;
+  bool has_region_epoch() const;
+  void clear_region_epoch();
+  static const int kRegionEpochFieldNumber = 5;
+  const ::metapb::RegionEpoch& region_epoch() const;
+  ::metapb::RegionEpoch* release_region_epoch();
+  ::metapb::RegionEpoch* mutable_region_epoch();
+  void set_allocated_region_epoch(::metapb::RegionEpoch* region_epoch);
 
-    // bytes uuid = 4;
-    void                  clear_uuid();
-    static const int      kUuidFieldNumber = 4;
-    const ::std::string & uuid() const;
-    void                  set_uuid(const ::std::string & value);
-#if LANG_CXX11
-    void set_uuid(::std::string && value);
-#endif
-    void            set_uuid(const char * value);
-    void            set_uuid(const void * value, size_t size);
-    ::std::string * mutable_uuid();
-    ::std::string * release_uuid();
-    void            set_allocated_uuid(::std::string * uuid);
+  // uint64 region_id = 1;
+  void clear_region_id();
+  static const int kRegionIdFieldNumber = 1;
+  ::google::protobuf::uint64 region_id() const;
+  void set_region_id(::google::protobuf::uint64 value);
 
-    // .metapb.Peer peer = 2;
-    bool                   has_peer() const;
-    void                   clear_peer();
-    static const int       kPeerFieldNumber = 2;
-    const ::metapb::Peer & peer() const;
-    ::metapb::Peer *       release_peer();
-    ::metapb::Peer *       mutable_peer();
-    void                   set_allocated_peer(::metapb::Peer * peer);
+  // uint64 term = 6;
+  void clear_term();
+  static const int kTermFieldNumber = 6;
+  ::google::protobuf::uint64 term() const;
+  void set_term(::google::protobuf::uint64 value);
 
-    // .metapb.RegionEpoch region_epoch = 5;
-    bool                          has_region_epoch() const;
-    void                          clear_region_epoch();
-    static const int              kRegionEpochFieldNumber = 5;
-    const ::metapb::RegionEpoch & region_epoch() const;
-    ::metapb::RegionEpoch *       release_region_epoch();
-    ::metapb::RegionEpoch *       mutable_region_epoch();
-    void                          set_allocated_region_epoch(::metapb::RegionEpoch * region_epoch);
+  // bool read_quorum = 3;
+  void clear_read_quorum();
+  static const int kReadQuorumFieldNumber = 3;
+  bool read_quorum() const;
+  void set_read_quorum(bool value);
 
-    // uint64 region_id = 1;
-    void                       clear_region_id();
-    static const int           kRegionIdFieldNumber = 1;
-    ::google::protobuf::uint64 region_id() const;
-    void                       set_region_id(::google::protobuf::uint64 value);
+  // bool sync_log = 7;
+  void clear_sync_log();
+  static const int kSyncLogFieldNumber = 7;
+  bool sync_log() const;
+  void set_sync_log(bool value);
 
-    // uint64 term = 6;
-    void                       clear_term();
-    static const int           kTermFieldNumber = 6;
-    ::google::protobuf::uint64 term() const;
-    void                       set_term(::google::protobuf::uint64 value);
+  // @@protoc_insertion_point(class_scope:raft_cmdpb.RaftRequestHeader)
+ private:
 
-    // bool read_quorum = 3;
-    void             clear_read_quorum();
-    static const int kReadQuorumFieldNumber = 3;
-    bool             read_quorum() const;
-    void             set_read_quorum(bool value);
-
-    // bool sync_log = 7;
-    void             clear_sync_log();
-    static const int kSyncLogFieldNumber = 7;
-    bool             sync_log() const;
-    void             set_sync_log(bool value);
-
-    // @@protoc_insertion_point(class_scope:raft_cmdpb.RaftRequestHeader)
-private:
-    ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
-    ::google::protobuf::internal::ArenaStringPtr            uuid_;
-    ::metapb::Peer *                                        peer_;
-    ::metapb::RegionEpoch *                                 region_epoch_;
-    ::google::protobuf::uint64                              region_id_;
-    ::google::protobuf::uint64                              term_;
-    bool                                                    read_quorum_;
-    bool                                                    sync_log_;
-    mutable int                                             _cached_size_;
-    friend struct ::protobuf_raft_5fcmdpb_2eproto::TableStruct;
-    friend void ::protobuf_raft_5fcmdpb_2eproto::InitDefaultsRaftRequestHeaderImpl();
+  ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
+  ::google::protobuf::internal::ArenaStringPtr uuid_;
+  ::metapb::Peer* peer_;
+  ::metapb::RegionEpoch* region_epoch_;
+  ::google::protobuf::uint64 region_id_;
+  ::google::protobuf::uint64 term_;
+  bool read_quorum_;
+  bool sync_log_;
+  mutable int _cached_size_;
+  friend struct ::protobuf_raft_5fcmdpb_2eproto::TableStruct;
+  friend void ::protobuf_raft_5fcmdpb_2eproto::InitDefaultsRaftRequestHeaderImpl();
 };
 // -------------------------------------------------------------------
 
-class RaftResponseHeader : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:raft_cmdpb.RaftResponseHeader) */
-{
-public:
-    RaftResponseHeader();
-    virtual ~RaftResponseHeader();
+class RaftResponseHeader : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:raft_cmdpb.RaftResponseHeader) */ {
+ public:
+  RaftResponseHeader();
+  virtual ~RaftResponseHeader();
 
-    RaftResponseHeader(const RaftResponseHeader & from);
+  RaftResponseHeader(const RaftResponseHeader& from);
 
-    inline RaftResponseHeader & operator=(const RaftResponseHeader & from)
-    {
-        CopyFrom(from);
-        return *this;
+  inline RaftResponseHeader& operator=(const RaftResponseHeader& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  #if LANG_CXX11
+  RaftResponseHeader(RaftResponseHeader&& from) noexcept
+    : RaftResponseHeader() {
+    *this = ::std::move(from);
+  }
+
+  inline RaftResponseHeader& operator=(RaftResponseHeader&& from) noexcept {
+    if (GetArenaNoVirtual() == from.GetArenaNoVirtual()) {
+      if (this != &from) InternalSwap(&from);
+    } else {
+      CopyFrom(from);
     }
-#if LANG_CXX11
-    RaftResponseHeader(RaftResponseHeader && from) noexcept : RaftResponseHeader() { *this = ::std::move(from); }
+    return *this;
+  }
+  #endif
+  static const ::google::protobuf::Descriptor* descriptor();
+  static const RaftResponseHeader& default_instance();
 
-    inline RaftResponseHeader & operator=(RaftResponseHeader && from) noexcept
-    {
-        if (GetArenaNoVirtual() == from.GetArenaNoVirtual())
-        {
-            if (this != &from)
-                InternalSwap(&from);
-        }
-        else
-        {
-            CopyFrom(from);
-        }
-        return *this;
-    }
-#endif
-    static const ::google::protobuf::Descriptor * descriptor();
-    static const RaftResponseHeader &             default_instance();
+  static void InitAsDefaultInstance();  // FOR INTERNAL USE ONLY
+  static inline const RaftResponseHeader* internal_default_instance() {
+    return reinterpret_cast<const RaftResponseHeader*>(
+               &_RaftResponseHeader_default_instance_);
+  }
+  static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
+    43;
 
-    static void                              InitAsDefaultInstance(); // FOR INTERNAL USE ONLY
-    static inline const RaftResponseHeader * internal_default_instance()
-    {
-        return reinterpret_cast<const RaftResponseHeader *>(&_RaftResponseHeader_default_instance_);
-    }
-    static PROTOBUF_CONSTEXPR int const kIndexInFileMessages = 43;
+  void Swap(RaftResponseHeader* other);
+  friend void swap(RaftResponseHeader& a, RaftResponseHeader& b) {
+    a.Swap(&b);
+  }
 
-    void        Swap(RaftResponseHeader * other);
-    friend void swap(RaftResponseHeader & a, RaftResponseHeader & b) { a.Swap(&b); }
+  // implements Message ----------------------------------------------
 
-    // implements Message ----------------------------------------------
+  inline RaftResponseHeader* New() const PROTOBUF_FINAL { return New(NULL); }
 
-    inline RaftResponseHeader * New() const PROTOBUF_FINAL { return New(NULL); }
+  RaftResponseHeader* New(::google::protobuf::Arena* arena) const PROTOBUF_FINAL;
+  void CopyFrom(const ::google::protobuf::Message& from) PROTOBUF_FINAL;
+  void MergeFrom(const ::google::protobuf::Message& from) PROTOBUF_FINAL;
+  void CopyFrom(const RaftResponseHeader& from);
+  void MergeFrom(const RaftResponseHeader& from);
+  void Clear() PROTOBUF_FINAL;
+  bool IsInitialized() const PROTOBUF_FINAL;
 
-    RaftResponseHeader * New(::google::protobuf::Arena * arena) const PROTOBUF_FINAL;
-    void                 CopyFrom(const ::google::protobuf::Message & from) PROTOBUF_FINAL;
-    void                 MergeFrom(const ::google::protobuf::Message & from) PROTOBUF_FINAL;
-    void                 CopyFrom(const RaftResponseHeader & from);
-    void                 MergeFrom(const RaftResponseHeader & from);
-    void                 Clear() PROTOBUF_FINAL;
-    bool                 IsInitialized() const PROTOBUF_FINAL;
+  size_t ByteSizeLong() const PROTOBUF_FINAL;
+  bool MergePartialFromCodedStream(
+      ::google::protobuf::io::CodedInputStream* input) PROTOBUF_FINAL;
+  void SerializeWithCachedSizes(
+      ::google::protobuf::io::CodedOutputStream* output) const PROTOBUF_FINAL;
+  ::google::protobuf::uint8* InternalSerializeWithCachedSizesToArray(
+      bool deterministic, ::google::protobuf::uint8* target) const PROTOBUF_FINAL;
+  int GetCachedSize() const PROTOBUF_FINAL { return _cached_size_; }
+  private:
+  void SharedCtor();
+  void SharedDtor();
+  void SetCachedSize(int size) const PROTOBUF_FINAL;
+  void InternalSwap(RaftResponseHeader* other);
+  private:
+  inline ::google::protobuf::Arena* GetArenaNoVirtual() const {
+    return NULL;
+  }
+  inline void* MaybeArenaPtr() const {
+    return NULL;
+  }
+  public:
 
-    size_t                      ByteSizeLong() const PROTOBUF_FINAL;
-    bool                        MergePartialFromCodedStream(::google::protobuf::io::CodedInputStream * input) PROTOBUF_FINAL;
-    void                        SerializeWithCachedSizes(::google::protobuf::io::CodedOutputStream * output) const PROTOBUF_FINAL;
-    ::google::protobuf::uint8 * InternalSerializeWithCachedSizesToArray(bool                        deterministic,
-                                                                        ::google::protobuf::uint8 * target) const PROTOBUF_FINAL;
-    int                         GetCachedSize() const PROTOBUF_FINAL { return _cached_size_; }
+  ::google::protobuf::Metadata GetMetadata() const PROTOBUF_FINAL;
 
-private:
-    void SharedCtor();
-    void SharedDtor();
-    void SetCachedSize(int size) const PROTOBUF_FINAL;
-    void InternalSwap(RaftResponseHeader * other);
+  // nested types ----------------------------------------------------
 
-private:
-    inline ::google::protobuf::Arena * GetArenaNoVirtual() const { return NULL; }
-    inline void *                      MaybeArenaPtr() const { return NULL; }
+  // accessors -------------------------------------------------------
 
-public:
-    ::google::protobuf::Metadata GetMetadata() const PROTOBUF_FINAL;
+  // bytes uuid = 2;
+  void clear_uuid();
+  static const int kUuidFieldNumber = 2;
+  const ::std::string& uuid() const;
+  void set_uuid(const ::std::string& value);
+  #if LANG_CXX11
+  void set_uuid(::std::string&& value);
+  #endif
+  void set_uuid(const char* value);
+  void set_uuid(const void* value, size_t size);
+  ::std::string* mutable_uuid();
+  ::std::string* release_uuid();
+  void set_allocated_uuid(::std::string* uuid);
 
-    // nested types ----------------------------------------------------
+  // .errorpb.Error error = 1;
+  bool has_error() const;
+  void clear_error();
+  static const int kErrorFieldNumber = 1;
+  const ::errorpb::Error& error() const;
+  ::errorpb::Error* release_error();
+  ::errorpb::Error* mutable_error();
+  void set_allocated_error(::errorpb::Error* error);
 
-    // accessors -------------------------------------------------------
+  // uint64 current_term = 3;
+  void clear_current_term();
+  static const int kCurrentTermFieldNumber = 3;
+  ::google::protobuf::uint64 current_term() const;
+  void set_current_term(::google::protobuf::uint64 value);
 
-    // bytes uuid = 2;
-    void                  clear_uuid();
-    static const int      kUuidFieldNumber = 2;
-    const ::std::string & uuid() const;
-    void                  set_uuid(const ::std::string & value);
-#if LANG_CXX11
-    void set_uuid(::std::string && value);
-#endif
-    void            set_uuid(const char * value);
-    void            set_uuid(const void * value, size_t size);
-    ::std::string * mutable_uuid();
-    ::std::string * release_uuid();
-    void            set_allocated_uuid(::std::string * uuid);
+  // @@protoc_insertion_point(class_scope:raft_cmdpb.RaftResponseHeader)
+ private:
 
-    // .errorpb.Error error = 1;
-    bool                     has_error() const;
-    void                     clear_error();
-    static const int         kErrorFieldNumber = 1;
-    const ::errorpb::Error & error() const;
-    ::errorpb::Error *       release_error();
-    ::errorpb::Error *       mutable_error();
-    void                     set_allocated_error(::errorpb::Error * error);
-
-    // uint64 current_term = 3;
-    void                       clear_current_term();
-    static const int           kCurrentTermFieldNumber = 3;
-    ::google::protobuf::uint64 current_term() const;
-    void                       set_current_term(::google::protobuf::uint64 value);
-
-    // @@protoc_insertion_point(class_scope:raft_cmdpb.RaftResponseHeader)
-private:
-    ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
-    ::google::protobuf::internal::ArenaStringPtr            uuid_;
-    ::errorpb::Error *                                      error_;
-    ::google::protobuf::uint64                              current_term_;
-    mutable int                                             _cached_size_;
-    friend struct ::protobuf_raft_5fcmdpb_2eproto::TableStruct;
-    friend void ::protobuf_raft_5fcmdpb_2eproto::InitDefaultsRaftResponseHeaderImpl();
+  ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
+  ::google::protobuf::internal::ArenaStringPtr uuid_;
+  ::errorpb::Error* error_;
+  ::google::protobuf::uint64 current_term_;
+  mutable int _cached_size_;
+  friend struct ::protobuf_raft_5fcmdpb_2eproto::TableStruct;
+  friend void ::protobuf_raft_5fcmdpb_2eproto::InitDefaultsRaftResponseHeaderImpl();
 };
 // -------------------------------------------------------------------
 
-class RaftCmdRequest : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:raft_cmdpb.RaftCmdRequest) */
-{
-public:
-    RaftCmdRequest();
-    virtual ~RaftCmdRequest();
+class RaftCmdRequest : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:raft_cmdpb.RaftCmdRequest) */ {
+ public:
+  RaftCmdRequest();
+  virtual ~RaftCmdRequest();
 
-    RaftCmdRequest(const RaftCmdRequest & from);
+  RaftCmdRequest(const RaftCmdRequest& from);
 
-    inline RaftCmdRequest & operator=(const RaftCmdRequest & from)
-    {
-        CopyFrom(from);
-        return *this;
+  inline RaftCmdRequest& operator=(const RaftCmdRequest& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  #if LANG_CXX11
+  RaftCmdRequest(RaftCmdRequest&& from) noexcept
+    : RaftCmdRequest() {
+    *this = ::std::move(from);
+  }
+
+  inline RaftCmdRequest& operator=(RaftCmdRequest&& from) noexcept {
+    if (GetArenaNoVirtual() == from.GetArenaNoVirtual()) {
+      if (this != &from) InternalSwap(&from);
+    } else {
+      CopyFrom(from);
     }
-#if LANG_CXX11
-    RaftCmdRequest(RaftCmdRequest && from) noexcept : RaftCmdRequest() { *this = ::std::move(from); }
+    return *this;
+  }
+  #endif
+  static const ::google::protobuf::Descriptor* descriptor();
+  static const RaftCmdRequest& default_instance();
 
-    inline RaftCmdRequest & operator=(RaftCmdRequest && from) noexcept
-    {
-        if (GetArenaNoVirtual() == from.GetArenaNoVirtual())
-        {
-            if (this != &from)
-                InternalSwap(&from);
-        }
-        else
-        {
-            CopyFrom(from);
-        }
-        return *this;
-    }
-#endif
-    static const ::google::protobuf::Descriptor * descriptor();
-    static const RaftCmdRequest &                 default_instance();
+  static void InitAsDefaultInstance();  // FOR INTERNAL USE ONLY
+  static inline const RaftCmdRequest* internal_default_instance() {
+    return reinterpret_cast<const RaftCmdRequest*>(
+               &_RaftCmdRequest_default_instance_);
+  }
+  static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
+    44;
 
-    static void                          InitAsDefaultInstance(); // FOR INTERNAL USE ONLY
-    static inline const RaftCmdRequest * internal_default_instance()
-    {
-        return reinterpret_cast<const RaftCmdRequest *>(&_RaftCmdRequest_default_instance_);
-    }
-    static PROTOBUF_CONSTEXPR int const kIndexInFileMessages = 44;
+  void Swap(RaftCmdRequest* other);
+  friend void swap(RaftCmdRequest& a, RaftCmdRequest& b) {
+    a.Swap(&b);
+  }
 
-    void        Swap(RaftCmdRequest * other);
-    friend void swap(RaftCmdRequest & a, RaftCmdRequest & b) { a.Swap(&b); }
+  // implements Message ----------------------------------------------
 
-    // implements Message ----------------------------------------------
+  inline RaftCmdRequest* New() const PROTOBUF_FINAL { return New(NULL); }
 
-    inline RaftCmdRequest * New() const PROTOBUF_FINAL { return New(NULL); }
+  RaftCmdRequest* New(::google::protobuf::Arena* arena) const PROTOBUF_FINAL;
+  void CopyFrom(const ::google::protobuf::Message& from) PROTOBUF_FINAL;
+  void MergeFrom(const ::google::protobuf::Message& from) PROTOBUF_FINAL;
+  void CopyFrom(const RaftCmdRequest& from);
+  void MergeFrom(const RaftCmdRequest& from);
+  void Clear() PROTOBUF_FINAL;
+  bool IsInitialized() const PROTOBUF_FINAL;
 
-    RaftCmdRequest * New(::google::protobuf::Arena * arena) const PROTOBUF_FINAL;
-    void             CopyFrom(const ::google::protobuf::Message & from) PROTOBUF_FINAL;
-    void             MergeFrom(const ::google::protobuf::Message & from) PROTOBUF_FINAL;
-    void             CopyFrom(const RaftCmdRequest & from);
-    void             MergeFrom(const RaftCmdRequest & from);
-    void             Clear() PROTOBUF_FINAL;
-    bool             IsInitialized() const PROTOBUF_FINAL;
+  size_t ByteSizeLong() const PROTOBUF_FINAL;
+  bool MergePartialFromCodedStream(
+      ::google::protobuf::io::CodedInputStream* input) PROTOBUF_FINAL;
+  void SerializeWithCachedSizes(
+      ::google::protobuf::io::CodedOutputStream* output) const PROTOBUF_FINAL;
+  ::google::protobuf::uint8* InternalSerializeWithCachedSizesToArray(
+      bool deterministic, ::google::protobuf::uint8* target) const PROTOBUF_FINAL;
+  int GetCachedSize() const PROTOBUF_FINAL { return _cached_size_; }
+  private:
+  void SharedCtor();
+  void SharedDtor();
+  void SetCachedSize(int size) const PROTOBUF_FINAL;
+  void InternalSwap(RaftCmdRequest* other);
+  private:
+  inline ::google::protobuf::Arena* GetArenaNoVirtual() const {
+    return NULL;
+  }
+  inline void* MaybeArenaPtr() const {
+    return NULL;
+  }
+  public:
 
-    size_t                      ByteSizeLong() const PROTOBUF_FINAL;
-    bool                        MergePartialFromCodedStream(::google::protobuf::io::CodedInputStream * input) PROTOBUF_FINAL;
-    void                        SerializeWithCachedSizes(::google::protobuf::io::CodedOutputStream * output) const PROTOBUF_FINAL;
-    ::google::protobuf::uint8 * InternalSerializeWithCachedSizesToArray(bool                        deterministic,
-                                                                        ::google::protobuf::uint8 * target) const PROTOBUF_FINAL;
-    int                         GetCachedSize() const PROTOBUF_FINAL { return _cached_size_; }
+  ::google::protobuf::Metadata GetMetadata() const PROTOBUF_FINAL;
 
-private:
-    void SharedCtor();
-    void SharedDtor();
-    void SetCachedSize(int size) const PROTOBUF_FINAL;
-    void InternalSwap(RaftCmdRequest * other);
+  // nested types ----------------------------------------------------
 
-private:
-    inline ::google::protobuf::Arena * GetArenaNoVirtual() const { return NULL; }
-    inline void *                      MaybeArenaPtr() const { return NULL; }
+  // accessors -------------------------------------------------------
 
-public:
-    ::google::protobuf::Metadata GetMetadata() const PROTOBUF_FINAL;
+  // repeated .raft_cmdpb.Request requests = 2;
+  int requests_size() const;
+  void clear_requests();
+  static const int kRequestsFieldNumber = 2;
+  const ::raft_cmdpb::Request& requests(int index) const;
+  ::raft_cmdpb::Request* mutable_requests(int index);
+  ::raft_cmdpb::Request* add_requests();
+  ::google::protobuf::RepeatedPtrField< ::raft_cmdpb::Request >*
+      mutable_requests();
+  const ::google::protobuf::RepeatedPtrField< ::raft_cmdpb::Request >&
+      requests() const;
 
-    // nested types ----------------------------------------------------
+  // .raft_cmdpb.RaftRequestHeader header = 1;
+  bool has_header() const;
+  void clear_header();
+  static const int kHeaderFieldNumber = 1;
+  const ::raft_cmdpb::RaftRequestHeader& header() const;
+  ::raft_cmdpb::RaftRequestHeader* release_header();
+  ::raft_cmdpb::RaftRequestHeader* mutable_header();
+  void set_allocated_header(::raft_cmdpb::RaftRequestHeader* header);
 
-    // accessors -------------------------------------------------------
+  // .raft_cmdpb.AdminRequest admin_request = 3;
+  bool has_admin_request() const;
+  void clear_admin_request();
+  static const int kAdminRequestFieldNumber = 3;
+  const ::raft_cmdpb::AdminRequest& admin_request() const;
+  ::raft_cmdpb::AdminRequest* release_admin_request();
+  ::raft_cmdpb::AdminRequest* mutable_admin_request();
+  void set_allocated_admin_request(::raft_cmdpb::AdminRequest* admin_request);
 
-    // repeated .raft_cmdpb.Request requests = 2;
-    int                                                                 requests_size() const;
-    void                                                                clear_requests();
-    static const int                                                    kRequestsFieldNumber = 2;
-    const ::raft_cmdpb::Request &                                       requests(int index) const;
-    ::raft_cmdpb::Request *                                             mutable_requests(int index);
-    ::raft_cmdpb::Request *                                             add_requests();
-    ::google::protobuf::RepeatedPtrField<::raft_cmdpb::Request> *       mutable_requests();
-    const ::google::protobuf::RepeatedPtrField<::raft_cmdpb::Request> & requests() const;
+  // .raft_cmdpb.StatusRequest status_request = 4;
+  bool has_status_request() const;
+  void clear_status_request();
+  static const int kStatusRequestFieldNumber = 4;
+  const ::raft_cmdpb::StatusRequest& status_request() const;
+  ::raft_cmdpb::StatusRequest* release_status_request();
+  ::raft_cmdpb::StatusRequest* mutable_status_request();
+  void set_allocated_status_request(::raft_cmdpb::StatusRequest* status_request);
 
-    // .raft_cmdpb.RaftRequestHeader header = 1;
-    bool                                    has_header() const;
-    void                                    clear_header();
-    static const int                        kHeaderFieldNumber = 1;
-    const ::raft_cmdpb::RaftRequestHeader & header() const;
-    ::raft_cmdpb::RaftRequestHeader *       release_header();
-    ::raft_cmdpb::RaftRequestHeader *       mutable_header();
-    void                                    set_allocated_header(::raft_cmdpb::RaftRequestHeader * header);
+  // @@protoc_insertion_point(class_scope:raft_cmdpb.RaftCmdRequest)
+ private:
 
-    // .raft_cmdpb.AdminRequest admin_request = 3;
-    bool                               has_admin_request() const;
-    void                               clear_admin_request();
-    static const int                   kAdminRequestFieldNumber = 3;
-    const ::raft_cmdpb::AdminRequest & admin_request() const;
-    ::raft_cmdpb::AdminRequest *       release_admin_request();
-    ::raft_cmdpb::AdminRequest *       mutable_admin_request();
-    void                               set_allocated_admin_request(::raft_cmdpb::AdminRequest * admin_request);
-
-    // .raft_cmdpb.StatusRequest status_request = 4;
-    bool                                has_status_request() const;
-    void                                clear_status_request();
-    static const int                    kStatusRequestFieldNumber = 4;
-    const ::raft_cmdpb::StatusRequest & status_request() const;
-    ::raft_cmdpb::StatusRequest *       release_status_request();
-    ::raft_cmdpb::StatusRequest *       mutable_status_request();
-    void                                set_allocated_status_request(::raft_cmdpb::StatusRequest * status_request);
-
-    // @@protoc_insertion_point(class_scope:raft_cmdpb.RaftCmdRequest)
-private:
-    ::google::protobuf::internal::InternalMetadataWithArena     _internal_metadata_;
-    ::google::protobuf::RepeatedPtrField<::raft_cmdpb::Request> requests_;
-    ::raft_cmdpb::RaftRequestHeader *                           header_;
-    ::raft_cmdpb::AdminRequest *                                admin_request_;
-    ::raft_cmdpb::StatusRequest *                               status_request_;
-    mutable int                                                 _cached_size_;
-    friend struct ::protobuf_raft_5fcmdpb_2eproto::TableStruct;
-    friend void ::protobuf_raft_5fcmdpb_2eproto::InitDefaultsRaftCmdRequestImpl();
+  ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
+  ::google::protobuf::RepeatedPtrField< ::raft_cmdpb::Request > requests_;
+  ::raft_cmdpb::RaftRequestHeader* header_;
+  ::raft_cmdpb::AdminRequest* admin_request_;
+  ::raft_cmdpb::StatusRequest* status_request_;
+  mutable int _cached_size_;
+  friend struct ::protobuf_raft_5fcmdpb_2eproto::TableStruct;
+  friend void ::protobuf_raft_5fcmdpb_2eproto::InitDefaultsRaftCmdRequestImpl();
 };
 // -------------------------------------------------------------------
 
-class RaftCmdResponse : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:raft_cmdpb.RaftCmdResponse) */
-{
-public:
-    RaftCmdResponse();
-    virtual ~RaftCmdResponse();
+class RaftCmdResponse : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:raft_cmdpb.RaftCmdResponse) */ {
+ public:
+  RaftCmdResponse();
+  virtual ~RaftCmdResponse();
 
-    RaftCmdResponse(const RaftCmdResponse & from);
+  RaftCmdResponse(const RaftCmdResponse& from);
 
-    inline RaftCmdResponse & operator=(const RaftCmdResponse & from)
-    {
-        CopyFrom(from);
-        return *this;
+  inline RaftCmdResponse& operator=(const RaftCmdResponse& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  #if LANG_CXX11
+  RaftCmdResponse(RaftCmdResponse&& from) noexcept
+    : RaftCmdResponse() {
+    *this = ::std::move(from);
+  }
+
+  inline RaftCmdResponse& operator=(RaftCmdResponse&& from) noexcept {
+    if (GetArenaNoVirtual() == from.GetArenaNoVirtual()) {
+      if (this != &from) InternalSwap(&from);
+    } else {
+      CopyFrom(from);
     }
-#if LANG_CXX11
-    RaftCmdResponse(RaftCmdResponse && from) noexcept : RaftCmdResponse() { *this = ::std::move(from); }
+    return *this;
+  }
+  #endif
+  static const ::google::protobuf::Descriptor* descriptor();
+  static const RaftCmdResponse& default_instance();
 
-    inline RaftCmdResponse & operator=(RaftCmdResponse && from) noexcept
-    {
-        if (GetArenaNoVirtual() == from.GetArenaNoVirtual())
-        {
-            if (this != &from)
-                InternalSwap(&from);
-        }
-        else
-        {
-            CopyFrom(from);
-        }
-        return *this;
-    }
-#endif
-    static const ::google::protobuf::Descriptor * descriptor();
-    static const RaftCmdResponse &                default_instance();
+  static void InitAsDefaultInstance();  // FOR INTERNAL USE ONLY
+  static inline const RaftCmdResponse* internal_default_instance() {
+    return reinterpret_cast<const RaftCmdResponse*>(
+               &_RaftCmdResponse_default_instance_);
+  }
+  static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
+    45;
 
-    static void                           InitAsDefaultInstance(); // FOR INTERNAL USE ONLY
-    static inline const RaftCmdResponse * internal_default_instance()
-    {
-        return reinterpret_cast<const RaftCmdResponse *>(&_RaftCmdResponse_default_instance_);
-    }
-    static PROTOBUF_CONSTEXPR int const kIndexInFileMessages = 45;
+  void Swap(RaftCmdResponse* other);
+  friend void swap(RaftCmdResponse& a, RaftCmdResponse& b) {
+    a.Swap(&b);
+  }
 
-    void        Swap(RaftCmdResponse * other);
-    friend void swap(RaftCmdResponse & a, RaftCmdResponse & b) { a.Swap(&b); }
+  // implements Message ----------------------------------------------
 
-    // implements Message ----------------------------------------------
+  inline RaftCmdResponse* New() const PROTOBUF_FINAL { return New(NULL); }
 
-    inline RaftCmdResponse * New() const PROTOBUF_FINAL { return New(NULL); }
+  RaftCmdResponse* New(::google::protobuf::Arena* arena) const PROTOBUF_FINAL;
+  void CopyFrom(const ::google::protobuf::Message& from) PROTOBUF_FINAL;
+  void MergeFrom(const ::google::protobuf::Message& from) PROTOBUF_FINAL;
+  void CopyFrom(const RaftCmdResponse& from);
+  void MergeFrom(const RaftCmdResponse& from);
+  void Clear() PROTOBUF_FINAL;
+  bool IsInitialized() const PROTOBUF_FINAL;
 
-    RaftCmdResponse * New(::google::protobuf::Arena * arena) const PROTOBUF_FINAL;
-    void              CopyFrom(const ::google::protobuf::Message & from) PROTOBUF_FINAL;
-    void              MergeFrom(const ::google::protobuf::Message & from) PROTOBUF_FINAL;
-    void              CopyFrom(const RaftCmdResponse & from);
-    void              MergeFrom(const RaftCmdResponse & from);
-    void              Clear() PROTOBUF_FINAL;
-    bool              IsInitialized() const PROTOBUF_FINAL;
+  size_t ByteSizeLong() const PROTOBUF_FINAL;
+  bool MergePartialFromCodedStream(
+      ::google::protobuf::io::CodedInputStream* input) PROTOBUF_FINAL;
+  void SerializeWithCachedSizes(
+      ::google::protobuf::io::CodedOutputStream* output) const PROTOBUF_FINAL;
+  ::google::protobuf::uint8* InternalSerializeWithCachedSizesToArray(
+      bool deterministic, ::google::protobuf::uint8* target) const PROTOBUF_FINAL;
+  int GetCachedSize() const PROTOBUF_FINAL { return _cached_size_; }
+  private:
+  void SharedCtor();
+  void SharedDtor();
+  void SetCachedSize(int size) const PROTOBUF_FINAL;
+  void InternalSwap(RaftCmdResponse* other);
+  private:
+  inline ::google::protobuf::Arena* GetArenaNoVirtual() const {
+    return NULL;
+  }
+  inline void* MaybeArenaPtr() const {
+    return NULL;
+  }
+  public:
 
-    size_t                      ByteSizeLong() const PROTOBUF_FINAL;
-    bool                        MergePartialFromCodedStream(::google::protobuf::io::CodedInputStream * input) PROTOBUF_FINAL;
-    void                        SerializeWithCachedSizes(::google::protobuf::io::CodedOutputStream * output) const PROTOBUF_FINAL;
-    ::google::protobuf::uint8 * InternalSerializeWithCachedSizesToArray(bool                        deterministic,
-                                                                        ::google::protobuf::uint8 * target) const PROTOBUF_FINAL;
-    int                         GetCachedSize() const PROTOBUF_FINAL { return _cached_size_; }
+  ::google::protobuf::Metadata GetMetadata() const PROTOBUF_FINAL;
 
-private:
-    void SharedCtor();
-    void SharedDtor();
-    void SetCachedSize(int size) const PROTOBUF_FINAL;
-    void InternalSwap(RaftCmdResponse * other);
+  // nested types ----------------------------------------------------
 
-private:
-    inline ::google::protobuf::Arena * GetArenaNoVirtual() const { return NULL; }
-    inline void *                      MaybeArenaPtr() const { return NULL; }
+  // accessors -------------------------------------------------------
 
-public:
-    ::google::protobuf::Metadata GetMetadata() const PROTOBUF_FINAL;
+  // repeated .raft_cmdpb.Response responses = 2;
+  int responses_size() const;
+  void clear_responses();
+  static const int kResponsesFieldNumber = 2;
+  const ::raft_cmdpb::Response& responses(int index) const;
+  ::raft_cmdpb::Response* mutable_responses(int index);
+  ::raft_cmdpb::Response* add_responses();
+  ::google::protobuf::RepeatedPtrField< ::raft_cmdpb::Response >*
+      mutable_responses();
+  const ::google::protobuf::RepeatedPtrField< ::raft_cmdpb::Response >&
+      responses() const;
 
-    // nested types ----------------------------------------------------
+  // .raft_cmdpb.RaftResponseHeader header = 1;
+  bool has_header() const;
+  void clear_header();
+  static const int kHeaderFieldNumber = 1;
+  const ::raft_cmdpb::RaftResponseHeader& header() const;
+  ::raft_cmdpb::RaftResponseHeader* release_header();
+  ::raft_cmdpb::RaftResponseHeader* mutable_header();
+  void set_allocated_header(::raft_cmdpb::RaftResponseHeader* header);
 
-    // accessors -------------------------------------------------------
+  // .raft_cmdpb.AdminResponse admin_response = 3;
+  bool has_admin_response() const;
+  void clear_admin_response();
+  static const int kAdminResponseFieldNumber = 3;
+  const ::raft_cmdpb::AdminResponse& admin_response() const;
+  ::raft_cmdpb::AdminResponse* release_admin_response();
+  ::raft_cmdpb::AdminResponse* mutable_admin_response();
+  void set_allocated_admin_response(::raft_cmdpb::AdminResponse* admin_response);
 
-    // repeated .raft_cmdpb.Response responses = 2;
-    int                                                                  responses_size() const;
-    void                                                                 clear_responses();
-    static const int                                                     kResponsesFieldNumber = 2;
-    const ::raft_cmdpb::Response &                                       responses(int index) const;
-    ::raft_cmdpb::Response *                                             mutable_responses(int index);
-    ::raft_cmdpb::Response *                                             add_responses();
-    ::google::protobuf::RepeatedPtrField<::raft_cmdpb::Response> *       mutable_responses();
-    const ::google::protobuf::RepeatedPtrField<::raft_cmdpb::Response> & responses() const;
+  // .raft_cmdpb.StatusResponse status_response = 4;
+  bool has_status_response() const;
+  void clear_status_response();
+  static const int kStatusResponseFieldNumber = 4;
+  const ::raft_cmdpb::StatusResponse& status_response() const;
+  ::raft_cmdpb::StatusResponse* release_status_response();
+  ::raft_cmdpb::StatusResponse* mutable_status_response();
+  void set_allocated_status_response(::raft_cmdpb::StatusResponse* status_response);
 
-    // .raft_cmdpb.RaftResponseHeader header = 1;
-    bool                                     has_header() const;
-    void                                     clear_header();
-    static const int                         kHeaderFieldNumber = 1;
-    const ::raft_cmdpb::RaftResponseHeader & header() const;
-    ::raft_cmdpb::RaftResponseHeader *       release_header();
-    ::raft_cmdpb::RaftResponseHeader *       mutable_header();
-    void                                     set_allocated_header(::raft_cmdpb::RaftResponseHeader * header);
+  // @@protoc_insertion_point(class_scope:raft_cmdpb.RaftCmdResponse)
+ private:
 
-    // .raft_cmdpb.AdminResponse admin_response = 3;
-    bool                                has_admin_response() const;
-    void                                clear_admin_response();
-    static const int                    kAdminResponseFieldNumber = 3;
-    const ::raft_cmdpb::AdminResponse & admin_response() const;
-    ::raft_cmdpb::AdminResponse *       release_admin_response();
-    ::raft_cmdpb::AdminResponse *       mutable_admin_response();
-    void                                set_allocated_admin_response(::raft_cmdpb::AdminResponse * admin_response);
-
-    // .raft_cmdpb.StatusResponse status_response = 4;
-    bool                                 has_status_response() const;
-    void                                 clear_status_response();
-    static const int                     kStatusResponseFieldNumber = 4;
-    const ::raft_cmdpb::StatusResponse & status_response() const;
-    ::raft_cmdpb::StatusResponse *       release_status_response();
-    ::raft_cmdpb::StatusResponse *       mutable_status_response();
-    void                                 set_allocated_status_response(::raft_cmdpb::StatusResponse * status_response);
-
-    // @@protoc_insertion_point(class_scope:raft_cmdpb.RaftCmdResponse)
-private:
-    ::google::protobuf::internal::InternalMetadataWithArena      _internal_metadata_;
-    ::google::protobuf::RepeatedPtrField<::raft_cmdpb::Response> responses_;
-    ::raft_cmdpb::RaftResponseHeader *                           header_;
-    ::raft_cmdpb::AdminResponse *                                admin_response_;
-    ::raft_cmdpb::StatusResponse *                               status_response_;
-    mutable int                                                  _cached_size_;
-    friend struct ::protobuf_raft_5fcmdpb_2eproto::TableStruct;
-    friend void ::protobuf_raft_5fcmdpb_2eproto::InitDefaultsRaftCmdResponseImpl();
+  ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
+  ::google::protobuf::RepeatedPtrField< ::raft_cmdpb::Response > responses_;
+  ::raft_cmdpb::RaftResponseHeader* header_;
+  ::raft_cmdpb::AdminResponse* admin_response_;
+  ::raft_cmdpb::StatusResponse* status_response_;
+  mutable int _cached_size_;
+  friend struct ::protobuf_raft_5fcmdpb_2eproto::TableStruct;
+  friend void ::protobuf_raft_5fcmdpb_2eproto::InitDefaultsRaftCmdResponseImpl();
 };
 // ===================================================================
 
@@ -5528,129 +5713,115 @@ private:
 // ===================================================================
 
 #ifdef __GNUC__
-#pragma GCC diagnostic push
-#pragma GCC diagnostic ignored "-Wstrict-aliasing"
-#endif // __GNUC__
+  #pragma GCC diagnostic push
+  #pragma GCC diagnostic ignored "-Wstrict-aliasing"
+#endif  // __GNUC__
 // GetRequest
 
 // string cf = 1;
-inline void GetRequest::clear_cf()
-{
-    cf_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+inline void GetRequest::clear_cf() {
+  cf_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
-inline const ::std::string & GetRequest::cf() const
-{
-    // @@protoc_insertion_point(field_get:raft_cmdpb.GetRequest.cf)
-    return cf_.GetNoArena();
+inline const ::std::string& GetRequest::cf() const {
+  // @@protoc_insertion_point(field_get:raft_cmdpb.GetRequest.cf)
+  return cf_.GetNoArena();
 }
-inline void GetRequest::set_cf(const ::std::string & value)
-{
-
-    cf_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
-    // @@protoc_insertion_point(field_set:raft_cmdpb.GetRequest.cf)
+inline void GetRequest::set_cf(const ::std::string& value) {
+  
+  cf_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
+  // @@protoc_insertion_point(field_set:raft_cmdpb.GetRequest.cf)
 }
 #if LANG_CXX11
-inline void GetRequest::set_cf(::std::string && value)
-{
-
-    cf_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
-    // @@protoc_insertion_point(field_set_rvalue:raft_cmdpb.GetRequest.cf)
+inline void GetRequest::set_cf(::std::string&& value) {
+  
+  cf_.SetNoArena(
+    &::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
+  // @@protoc_insertion_point(field_set_rvalue:raft_cmdpb.GetRequest.cf)
 }
 #endif
-inline void GetRequest::set_cf(const char * value)
-{
-    GOOGLE_DCHECK(value != NULL);
-
-    cf_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
-    // @@protoc_insertion_point(field_set_char:raft_cmdpb.GetRequest.cf)
+inline void GetRequest::set_cf(const char* value) {
+  GOOGLE_DCHECK(value != NULL);
+  
+  cf_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
+  // @@protoc_insertion_point(field_set_char:raft_cmdpb.GetRequest.cf)
 }
-inline void GetRequest::set_cf(const char * value, size_t size)
-{
-
-    cf_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
-                   ::std::string(reinterpret_cast<const char *>(value), size));
-    // @@protoc_insertion_point(field_set_pointer:raft_cmdpb.GetRequest.cf)
+inline void GetRequest::set_cf(const char* value, size_t size) {
+  
+  cf_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+      ::std::string(reinterpret_cast<const char*>(value), size));
+  // @@protoc_insertion_point(field_set_pointer:raft_cmdpb.GetRequest.cf)
 }
-inline ::std::string * GetRequest::mutable_cf()
-{
-
-    // @@protoc_insertion_point(field_mutable:raft_cmdpb.GetRequest.cf)
-    return cf_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+inline ::std::string* GetRequest::mutable_cf() {
+  
+  // @@protoc_insertion_point(field_mutable:raft_cmdpb.GetRequest.cf)
+  return cf_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
-inline ::std::string * GetRequest::release_cf()
-{
-    // @@protoc_insertion_point(field_release:raft_cmdpb.GetRequest.cf)
-
-    return cf_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+inline ::std::string* GetRequest::release_cf() {
+  // @@protoc_insertion_point(field_release:raft_cmdpb.GetRequest.cf)
+  
+  return cf_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
-inline void GetRequest::set_allocated_cf(::std::string * cf)
-{
-    if (cf != NULL) {}
-    else
-    {
-    }
-    cf_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), cf);
-    // @@protoc_insertion_point(field_set_allocated:raft_cmdpb.GetRequest.cf)
+inline void GetRequest::set_allocated_cf(::std::string* cf) {
+  if (cf != NULL) {
+    
+  } else {
+    
+  }
+  cf_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), cf);
+  // @@protoc_insertion_point(field_set_allocated:raft_cmdpb.GetRequest.cf)
 }
 
 // bytes key = 2;
-inline void GetRequest::clear_key()
-{
-    key_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+inline void GetRequest::clear_key() {
+  key_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
-inline const ::std::string & GetRequest::key() const
-{
-    // @@protoc_insertion_point(field_get:raft_cmdpb.GetRequest.key)
-    return key_.GetNoArena();
+inline const ::std::string& GetRequest::key() const {
+  // @@protoc_insertion_point(field_get:raft_cmdpb.GetRequest.key)
+  return key_.GetNoArena();
 }
-inline void GetRequest::set_key(const ::std::string & value)
-{
-
-    key_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
-    // @@protoc_insertion_point(field_set:raft_cmdpb.GetRequest.key)
+inline void GetRequest::set_key(const ::std::string& value) {
+  
+  key_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
+  // @@protoc_insertion_point(field_set:raft_cmdpb.GetRequest.key)
 }
 #if LANG_CXX11
-inline void GetRequest::set_key(::std::string && value)
-{
-
-    key_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
-    // @@protoc_insertion_point(field_set_rvalue:raft_cmdpb.GetRequest.key)
+inline void GetRequest::set_key(::std::string&& value) {
+  
+  key_.SetNoArena(
+    &::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
+  // @@protoc_insertion_point(field_set_rvalue:raft_cmdpb.GetRequest.key)
 }
 #endif
-inline void GetRequest::set_key(const char * value)
-{
-    GOOGLE_DCHECK(value != NULL);
-
-    key_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
-    // @@protoc_insertion_point(field_set_char:raft_cmdpb.GetRequest.key)
+inline void GetRequest::set_key(const char* value) {
+  GOOGLE_DCHECK(value != NULL);
+  
+  key_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
+  // @@protoc_insertion_point(field_set_char:raft_cmdpb.GetRequest.key)
 }
-inline void GetRequest::set_key(const void * value, size_t size)
-{
-
-    key_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
-                    ::std::string(reinterpret_cast<const char *>(value), size));
-    // @@protoc_insertion_point(field_set_pointer:raft_cmdpb.GetRequest.key)
+inline void GetRequest::set_key(const void* value, size_t size) {
+  
+  key_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+      ::std::string(reinterpret_cast<const char*>(value), size));
+  // @@protoc_insertion_point(field_set_pointer:raft_cmdpb.GetRequest.key)
 }
-inline ::std::string * GetRequest::mutable_key()
-{
-
-    // @@protoc_insertion_point(field_mutable:raft_cmdpb.GetRequest.key)
-    return key_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+inline ::std::string* GetRequest::mutable_key() {
+  
+  // @@protoc_insertion_point(field_mutable:raft_cmdpb.GetRequest.key)
+  return key_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
-inline ::std::string * GetRequest::release_key()
-{
-    // @@protoc_insertion_point(field_release:raft_cmdpb.GetRequest.key)
-
-    return key_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+inline ::std::string* GetRequest::release_key() {
+  // @@protoc_insertion_point(field_release:raft_cmdpb.GetRequest.key)
+  
+  return key_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
-inline void GetRequest::set_allocated_key(::std::string * key)
-{
-    if (key != NULL) {}
-    else
-    {
-    }
-    key_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), key);
-    // @@protoc_insertion_point(field_set_allocated:raft_cmdpb.GetRequest.key)
+inline void GetRequest::set_allocated_key(::std::string* key) {
+  if (key != NULL) {
+    
+  } else {
+    
+  }
+  key_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), key);
+  // @@protoc_insertion_point(field_set_allocated:raft_cmdpb.GetRequest.key)
 }
 
 // -------------------------------------------------------------------
@@ -5658,63 +5829,56 @@ inline void GetRequest::set_allocated_key(::std::string * key)
 // GetResponse
 
 // bytes value = 1;
-inline void GetResponse::clear_value()
-{
-    value_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+inline void GetResponse::clear_value() {
+  value_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
-inline const ::std::string & GetResponse::value() const
-{
-    // @@protoc_insertion_point(field_get:raft_cmdpb.GetResponse.value)
-    return value_.GetNoArena();
+inline const ::std::string& GetResponse::value() const {
+  // @@protoc_insertion_point(field_get:raft_cmdpb.GetResponse.value)
+  return value_.GetNoArena();
 }
-inline void GetResponse::set_value(const ::std::string & value)
-{
-
-    value_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
-    // @@protoc_insertion_point(field_set:raft_cmdpb.GetResponse.value)
+inline void GetResponse::set_value(const ::std::string& value) {
+  
+  value_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
+  // @@protoc_insertion_point(field_set:raft_cmdpb.GetResponse.value)
 }
 #if LANG_CXX11
-inline void GetResponse::set_value(::std::string && value)
-{
-
-    value_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
-    // @@protoc_insertion_point(field_set_rvalue:raft_cmdpb.GetResponse.value)
+inline void GetResponse::set_value(::std::string&& value) {
+  
+  value_.SetNoArena(
+    &::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
+  // @@protoc_insertion_point(field_set_rvalue:raft_cmdpb.GetResponse.value)
 }
 #endif
-inline void GetResponse::set_value(const char * value)
-{
-    GOOGLE_DCHECK(value != NULL);
-
-    value_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
-    // @@protoc_insertion_point(field_set_char:raft_cmdpb.GetResponse.value)
+inline void GetResponse::set_value(const char* value) {
+  GOOGLE_DCHECK(value != NULL);
+  
+  value_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
+  // @@protoc_insertion_point(field_set_char:raft_cmdpb.GetResponse.value)
 }
-inline void GetResponse::set_value(const void * value, size_t size)
-{
-
-    value_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
-                      ::std::string(reinterpret_cast<const char *>(value), size));
-    // @@protoc_insertion_point(field_set_pointer:raft_cmdpb.GetResponse.value)
+inline void GetResponse::set_value(const void* value, size_t size) {
+  
+  value_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+      ::std::string(reinterpret_cast<const char*>(value), size));
+  // @@protoc_insertion_point(field_set_pointer:raft_cmdpb.GetResponse.value)
 }
-inline ::std::string * GetResponse::mutable_value()
-{
-
-    // @@protoc_insertion_point(field_mutable:raft_cmdpb.GetResponse.value)
-    return value_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+inline ::std::string* GetResponse::mutable_value() {
+  
+  // @@protoc_insertion_point(field_mutable:raft_cmdpb.GetResponse.value)
+  return value_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
-inline ::std::string * GetResponse::release_value()
-{
-    // @@protoc_insertion_point(field_release:raft_cmdpb.GetResponse.value)
-
-    return value_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+inline ::std::string* GetResponse::release_value() {
+  // @@protoc_insertion_point(field_release:raft_cmdpb.GetResponse.value)
+  
+  return value_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
-inline void GetResponse::set_allocated_value(::std::string * value)
-{
-    if (value != NULL) {}
-    else
-    {
-    }
-    value_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
-    // @@protoc_insertion_point(field_set_allocated:raft_cmdpb.GetResponse.value)
+inline void GetResponse::set_allocated_value(::std::string* value) {
+  if (value != NULL) {
+    
+  } else {
+    
+  }
+  value_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
+  // @@protoc_insertion_point(field_set_allocated:raft_cmdpb.GetResponse.value)
 }
 
 // -------------------------------------------------------------------
@@ -5722,183 +5886,162 @@ inline void GetResponse::set_allocated_value(::std::string * value)
 // PutRequest
 
 // string cf = 1;
-inline void PutRequest::clear_cf()
-{
-    cf_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+inline void PutRequest::clear_cf() {
+  cf_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
-inline const ::std::string & PutRequest::cf() const
-{
-    // @@protoc_insertion_point(field_get:raft_cmdpb.PutRequest.cf)
-    return cf_.GetNoArena();
+inline const ::std::string& PutRequest::cf() const {
+  // @@protoc_insertion_point(field_get:raft_cmdpb.PutRequest.cf)
+  return cf_.GetNoArena();
 }
-inline void PutRequest::set_cf(const ::std::string & value)
-{
-
-    cf_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
-    // @@protoc_insertion_point(field_set:raft_cmdpb.PutRequest.cf)
+inline void PutRequest::set_cf(const ::std::string& value) {
+  
+  cf_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
+  // @@protoc_insertion_point(field_set:raft_cmdpb.PutRequest.cf)
 }
 #if LANG_CXX11
-inline void PutRequest::set_cf(::std::string && value)
-{
-
-    cf_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
-    // @@protoc_insertion_point(field_set_rvalue:raft_cmdpb.PutRequest.cf)
+inline void PutRequest::set_cf(::std::string&& value) {
+  
+  cf_.SetNoArena(
+    &::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
+  // @@protoc_insertion_point(field_set_rvalue:raft_cmdpb.PutRequest.cf)
 }
 #endif
-inline void PutRequest::set_cf(const char * value)
-{
-    GOOGLE_DCHECK(value != NULL);
-
-    cf_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
-    // @@protoc_insertion_point(field_set_char:raft_cmdpb.PutRequest.cf)
+inline void PutRequest::set_cf(const char* value) {
+  GOOGLE_DCHECK(value != NULL);
+  
+  cf_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
+  // @@protoc_insertion_point(field_set_char:raft_cmdpb.PutRequest.cf)
 }
-inline void PutRequest::set_cf(const char * value, size_t size)
-{
-
-    cf_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
-                   ::std::string(reinterpret_cast<const char *>(value), size));
-    // @@protoc_insertion_point(field_set_pointer:raft_cmdpb.PutRequest.cf)
+inline void PutRequest::set_cf(const char* value, size_t size) {
+  
+  cf_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+      ::std::string(reinterpret_cast<const char*>(value), size));
+  // @@protoc_insertion_point(field_set_pointer:raft_cmdpb.PutRequest.cf)
 }
-inline ::std::string * PutRequest::mutable_cf()
-{
-
-    // @@protoc_insertion_point(field_mutable:raft_cmdpb.PutRequest.cf)
-    return cf_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+inline ::std::string* PutRequest::mutable_cf() {
+  
+  // @@protoc_insertion_point(field_mutable:raft_cmdpb.PutRequest.cf)
+  return cf_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
-inline ::std::string * PutRequest::release_cf()
-{
-    // @@protoc_insertion_point(field_release:raft_cmdpb.PutRequest.cf)
-
-    return cf_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+inline ::std::string* PutRequest::release_cf() {
+  // @@protoc_insertion_point(field_release:raft_cmdpb.PutRequest.cf)
+  
+  return cf_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
-inline void PutRequest::set_allocated_cf(::std::string * cf)
-{
-    if (cf != NULL) {}
-    else
-    {
-    }
-    cf_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), cf);
-    // @@protoc_insertion_point(field_set_allocated:raft_cmdpb.PutRequest.cf)
+inline void PutRequest::set_allocated_cf(::std::string* cf) {
+  if (cf != NULL) {
+    
+  } else {
+    
+  }
+  cf_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), cf);
+  // @@protoc_insertion_point(field_set_allocated:raft_cmdpb.PutRequest.cf)
 }
 
 // bytes key = 2;
-inline void PutRequest::clear_key()
-{
-    key_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+inline void PutRequest::clear_key() {
+  key_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
-inline const ::std::string & PutRequest::key() const
-{
-    // @@protoc_insertion_point(field_get:raft_cmdpb.PutRequest.key)
-    return key_.GetNoArena();
+inline const ::std::string& PutRequest::key() const {
+  // @@protoc_insertion_point(field_get:raft_cmdpb.PutRequest.key)
+  return key_.GetNoArena();
 }
-inline void PutRequest::set_key(const ::std::string & value)
-{
-
-    key_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
-    // @@protoc_insertion_point(field_set:raft_cmdpb.PutRequest.key)
+inline void PutRequest::set_key(const ::std::string& value) {
+  
+  key_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
+  // @@protoc_insertion_point(field_set:raft_cmdpb.PutRequest.key)
 }
 #if LANG_CXX11
-inline void PutRequest::set_key(::std::string && value)
-{
-
-    key_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
-    // @@protoc_insertion_point(field_set_rvalue:raft_cmdpb.PutRequest.key)
+inline void PutRequest::set_key(::std::string&& value) {
+  
+  key_.SetNoArena(
+    &::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
+  // @@protoc_insertion_point(field_set_rvalue:raft_cmdpb.PutRequest.key)
 }
 #endif
-inline void PutRequest::set_key(const char * value)
-{
-    GOOGLE_DCHECK(value != NULL);
-
-    key_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
-    // @@protoc_insertion_point(field_set_char:raft_cmdpb.PutRequest.key)
+inline void PutRequest::set_key(const char* value) {
+  GOOGLE_DCHECK(value != NULL);
+  
+  key_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
+  // @@protoc_insertion_point(field_set_char:raft_cmdpb.PutRequest.key)
 }
-inline void PutRequest::set_key(const void * value, size_t size)
-{
-
-    key_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
-                    ::std::string(reinterpret_cast<const char *>(value), size));
-    // @@protoc_insertion_point(field_set_pointer:raft_cmdpb.PutRequest.key)
+inline void PutRequest::set_key(const void* value, size_t size) {
+  
+  key_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+      ::std::string(reinterpret_cast<const char*>(value), size));
+  // @@protoc_insertion_point(field_set_pointer:raft_cmdpb.PutRequest.key)
 }
-inline ::std::string * PutRequest::mutable_key()
-{
-
-    // @@protoc_insertion_point(field_mutable:raft_cmdpb.PutRequest.key)
-    return key_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+inline ::std::string* PutRequest::mutable_key() {
+  
+  // @@protoc_insertion_point(field_mutable:raft_cmdpb.PutRequest.key)
+  return key_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
-inline ::std::string * PutRequest::release_key()
-{
-    // @@protoc_insertion_point(field_release:raft_cmdpb.PutRequest.key)
-
-    return key_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+inline ::std::string* PutRequest::release_key() {
+  // @@protoc_insertion_point(field_release:raft_cmdpb.PutRequest.key)
+  
+  return key_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
-inline void PutRequest::set_allocated_key(::std::string * key)
-{
-    if (key != NULL) {}
-    else
-    {
-    }
-    key_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), key);
-    // @@protoc_insertion_point(field_set_allocated:raft_cmdpb.PutRequest.key)
+inline void PutRequest::set_allocated_key(::std::string* key) {
+  if (key != NULL) {
+    
+  } else {
+    
+  }
+  key_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), key);
+  // @@protoc_insertion_point(field_set_allocated:raft_cmdpb.PutRequest.key)
 }
 
 // bytes value = 3;
-inline void PutRequest::clear_value()
-{
-    value_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+inline void PutRequest::clear_value() {
+  value_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
-inline const ::std::string & PutRequest::value() const
-{
-    // @@protoc_insertion_point(field_get:raft_cmdpb.PutRequest.value)
-    return value_.GetNoArena();
+inline const ::std::string& PutRequest::value() const {
+  // @@protoc_insertion_point(field_get:raft_cmdpb.PutRequest.value)
+  return value_.GetNoArena();
 }
-inline void PutRequest::set_value(const ::std::string & value)
-{
-
-    value_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
-    // @@protoc_insertion_point(field_set:raft_cmdpb.PutRequest.value)
+inline void PutRequest::set_value(const ::std::string& value) {
+  
+  value_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
+  // @@protoc_insertion_point(field_set:raft_cmdpb.PutRequest.value)
 }
 #if LANG_CXX11
-inline void PutRequest::set_value(::std::string && value)
-{
-
-    value_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
-    // @@protoc_insertion_point(field_set_rvalue:raft_cmdpb.PutRequest.value)
+inline void PutRequest::set_value(::std::string&& value) {
+  
+  value_.SetNoArena(
+    &::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
+  // @@protoc_insertion_point(field_set_rvalue:raft_cmdpb.PutRequest.value)
 }
 #endif
-inline void PutRequest::set_value(const char * value)
-{
-    GOOGLE_DCHECK(value != NULL);
-
-    value_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
-    // @@protoc_insertion_point(field_set_char:raft_cmdpb.PutRequest.value)
+inline void PutRequest::set_value(const char* value) {
+  GOOGLE_DCHECK(value != NULL);
+  
+  value_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
+  // @@protoc_insertion_point(field_set_char:raft_cmdpb.PutRequest.value)
 }
-inline void PutRequest::set_value(const void * value, size_t size)
-{
-
-    value_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
-                      ::std::string(reinterpret_cast<const char *>(value), size));
-    // @@protoc_insertion_point(field_set_pointer:raft_cmdpb.PutRequest.value)
+inline void PutRequest::set_value(const void* value, size_t size) {
+  
+  value_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+      ::std::string(reinterpret_cast<const char*>(value), size));
+  // @@protoc_insertion_point(field_set_pointer:raft_cmdpb.PutRequest.value)
 }
-inline ::std::string * PutRequest::mutable_value()
-{
-
-    // @@protoc_insertion_point(field_mutable:raft_cmdpb.PutRequest.value)
-    return value_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+inline ::std::string* PutRequest::mutable_value() {
+  
+  // @@protoc_insertion_point(field_mutable:raft_cmdpb.PutRequest.value)
+  return value_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
-inline ::std::string * PutRequest::release_value()
-{
-    // @@protoc_insertion_point(field_release:raft_cmdpb.PutRequest.value)
-
-    return value_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+inline ::std::string* PutRequest::release_value() {
+  // @@protoc_insertion_point(field_release:raft_cmdpb.PutRequest.value)
+  
+  return value_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
-inline void PutRequest::set_allocated_value(::std::string * value)
-{
-    if (value != NULL) {}
-    else
-    {
-    }
-    value_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
-    // @@protoc_insertion_point(field_set_allocated:raft_cmdpb.PutRequest.value)
+inline void PutRequest::set_allocated_value(::std::string* value) {
+  if (value != NULL) {
+    
+  } else {
+    
+  }
+  value_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
+  // @@protoc_insertion_point(field_set_allocated:raft_cmdpb.PutRequest.value)
 }
 
 // -------------------------------------------------------------------
@@ -5910,123 +6053,109 @@ inline void PutRequest::set_allocated_value(::std::string * value)
 // DeleteRequest
 
 // string cf = 1;
-inline void DeleteRequest::clear_cf()
-{
-    cf_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+inline void DeleteRequest::clear_cf() {
+  cf_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
-inline const ::std::string & DeleteRequest::cf() const
-{
-    // @@protoc_insertion_point(field_get:raft_cmdpb.DeleteRequest.cf)
-    return cf_.GetNoArena();
+inline const ::std::string& DeleteRequest::cf() const {
+  // @@protoc_insertion_point(field_get:raft_cmdpb.DeleteRequest.cf)
+  return cf_.GetNoArena();
 }
-inline void DeleteRequest::set_cf(const ::std::string & value)
-{
-
-    cf_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
-    // @@protoc_insertion_point(field_set:raft_cmdpb.DeleteRequest.cf)
+inline void DeleteRequest::set_cf(const ::std::string& value) {
+  
+  cf_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
+  // @@protoc_insertion_point(field_set:raft_cmdpb.DeleteRequest.cf)
 }
 #if LANG_CXX11
-inline void DeleteRequest::set_cf(::std::string && value)
-{
-
-    cf_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
-    // @@protoc_insertion_point(field_set_rvalue:raft_cmdpb.DeleteRequest.cf)
+inline void DeleteRequest::set_cf(::std::string&& value) {
+  
+  cf_.SetNoArena(
+    &::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
+  // @@protoc_insertion_point(field_set_rvalue:raft_cmdpb.DeleteRequest.cf)
 }
 #endif
-inline void DeleteRequest::set_cf(const char * value)
-{
-    GOOGLE_DCHECK(value != NULL);
-
-    cf_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
-    // @@protoc_insertion_point(field_set_char:raft_cmdpb.DeleteRequest.cf)
+inline void DeleteRequest::set_cf(const char* value) {
+  GOOGLE_DCHECK(value != NULL);
+  
+  cf_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
+  // @@protoc_insertion_point(field_set_char:raft_cmdpb.DeleteRequest.cf)
 }
-inline void DeleteRequest::set_cf(const char * value, size_t size)
-{
-
-    cf_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
-                   ::std::string(reinterpret_cast<const char *>(value), size));
-    // @@protoc_insertion_point(field_set_pointer:raft_cmdpb.DeleteRequest.cf)
+inline void DeleteRequest::set_cf(const char* value, size_t size) {
+  
+  cf_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+      ::std::string(reinterpret_cast<const char*>(value), size));
+  // @@protoc_insertion_point(field_set_pointer:raft_cmdpb.DeleteRequest.cf)
 }
-inline ::std::string * DeleteRequest::mutable_cf()
-{
-
-    // @@protoc_insertion_point(field_mutable:raft_cmdpb.DeleteRequest.cf)
-    return cf_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+inline ::std::string* DeleteRequest::mutable_cf() {
+  
+  // @@protoc_insertion_point(field_mutable:raft_cmdpb.DeleteRequest.cf)
+  return cf_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
-inline ::std::string * DeleteRequest::release_cf()
-{
-    // @@protoc_insertion_point(field_release:raft_cmdpb.DeleteRequest.cf)
-
-    return cf_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+inline ::std::string* DeleteRequest::release_cf() {
+  // @@protoc_insertion_point(field_release:raft_cmdpb.DeleteRequest.cf)
+  
+  return cf_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
-inline void DeleteRequest::set_allocated_cf(::std::string * cf)
-{
-    if (cf != NULL) {}
-    else
-    {
-    }
-    cf_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), cf);
-    // @@protoc_insertion_point(field_set_allocated:raft_cmdpb.DeleteRequest.cf)
+inline void DeleteRequest::set_allocated_cf(::std::string* cf) {
+  if (cf != NULL) {
+    
+  } else {
+    
+  }
+  cf_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), cf);
+  // @@protoc_insertion_point(field_set_allocated:raft_cmdpb.DeleteRequest.cf)
 }
 
 // bytes key = 2;
-inline void DeleteRequest::clear_key()
-{
-    key_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+inline void DeleteRequest::clear_key() {
+  key_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
-inline const ::std::string & DeleteRequest::key() const
-{
-    // @@protoc_insertion_point(field_get:raft_cmdpb.DeleteRequest.key)
-    return key_.GetNoArena();
+inline const ::std::string& DeleteRequest::key() const {
+  // @@protoc_insertion_point(field_get:raft_cmdpb.DeleteRequest.key)
+  return key_.GetNoArena();
 }
-inline void DeleteRequest::set_key(const ::std::string & value)
-{
-
-    key_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
-    // @@protoc_insertion_point(field_set:raft_cmdpb.DeleteRequest.key)
+inline void DeleteRequest::set_key(const ::std::string& value) {
+  
+  key_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
+  // @@protoc_insertion_point(field_set:raft_cmdpb.DeleteRequest.key)
 }
 #if LANG_CXX11
-inline void DeleteRequest::set_key(::std::string && value)
-{
-
-    key_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
-    // @@protoc_insertion_point(field_set_rvalue:raft_cmdpb.DeleteRequest.key)
+inline void DeleteRequest::set_key(::std::string&& value) {
+  
+  key_.SetNoArena(
+    &::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
+  // @@protoc_insertion_point(field_set_rvalue:raft_cmdpb.DeleteRequest.key)
 }
 #endif
-inline void DeleteRequest::set_key(const char * value)
-{
-    GOOGLE_DCHECK(value != NULL);
-
-    key_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
-    // @@protoc_insertion_point(field_set_char:raft_cmdpb.DeleteRequest.key)
+inline void DeleteRequest::set_key(const char* value) {
+  GOOGLE_DCHECK(value != NULL);
+  
+  key_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
+  // @@protoc_insertion_point(field_set_char:raft_cmdpb.DeleteRequest.key)
 }
-inline void DeleteRequest::set_key(const void * value, size_t size)
-{
-
-    key_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
-                    ::std::string(reinterpret_cast<const char *>(value), size));
-    // @@protoc_insertion_point(field_set_pointer:raft_cmdpb.DeleteRequest.key)
+inline void DeleteRequest::set_key(const void* value, size_t size) {
+  
+  key_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+      ::std::string(reinterpret_cast<const char*>(value), size));
+  // @@protoc_insertion_point(field_set_pointer:raft_cmdpb.DeleteRequest.key)
 }
-inline ::std::string * DeleteRequest::mutable_key()
-{
-
-    // @@protoc_insertion_point(field_mutable:raft_cmdpb.DeleteRequest.key)
-    return key_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+inline ::std::string* DeleteRequest::mutable_key() {
+  
+  // @@protoc_insertion_point(field_mutable:raft_cmdpb.DeleteRequest.key)
+  return key_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
-inline ::std::string * DeleteRequest::release_key()
-{
-    // @@protoc_insertion_point(field_release:raft_cmdpb.DeleteRequest.key)
-
-    return key_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+inline ::std::string* DeleteRequest::release_key() {
+  // @@protoc_insertion_point(field_release:raft_cmdpb.DeleteRequest.key)
+  
+  return key_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
-inline void DeleteRequest::set_allocated_key(::std::string * key)
-{
-    if (key != NULL) {}
-    else
-    {
-    }
-    key_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), key);
-    // @@protoc_insertion_point(field_set_allocated:raft_cmdpb.DeleteRequest.key)
+inline void DeleteRequest::set_allocated_key(::std::string* key) {
+  if (key != NULL) {
+    
+  } else {
+    
+  }
+  key_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), key);
+  // @@protoc_insertion_point(field_set_allocated:raft_cmdpb.DeleteRequest.key)
 }
 
 // -------------------------------------------------------------------
@@ -6038,183 +6167,162 @@ inline void DeleteRequest::set_allocated_key(::std::string * key)
 // DeleteRangeRequest
 
 // string cf = 1;
-inline void DeleteRangeRequest::clear_cf()
-{
-    cf_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+inline void DeleteRangeRequest::clear_cf() {
+  cf_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
-inline const ::std::string & DeleteRangeRequest::cf() const
-{
-    // @@protoc_insertion_point(field_get:raft_cmdpb.DeleteRangeRequest.cf)
-    return cf_.GetNoArena();
+inline const ::std::string& DeleteRangeRequest::cf() const {
+  // @@protoc_insertion_point(field_get:raft_cmdpb.DeleteRangeRequest.cf)
+  return cf_.GetNoArena();
 }
-inline void DeleteRangeRequest::set_cf(const ::std::string & value)
-{
-
-    cf_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
-    // @@protoc_insertion_point(field_set:raft_cmdpb.DeleteRangeRequest.cf)
+inline void DeleteRangeRequest::set_cf(const ::std::string& value) {
+  
+  cf_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
+  // @@protoc_insertion_point(field_set:raft_cmdpb.DeleteRangeRequest.cf)
 }
 #if LANG_CXX11
-inline void DeleteRangeRequest::set_cf(::std::string && value)
-{
-
-    cf_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
-    // @@protoc_insertion_point(field_set_rvalue:raft_cmdpb.DeleteRangeRequest.cf)
+inline void DeleteRangeRequest::set_cf(::std::string&& value) {
+  
+  cf_.SetNoArena(
+    &::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
+  // @@protoc_insertion_point(field_set_rvalue:raft_cmdpb.DeleteRangeRequest.cf)
 }
 #endif
-inline void DeleteRangeRequest::set_cf(const char * value)
-{
-    GOOGLE_DCHECK(value != NULL);
-
-    cf_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
-    // @@protoc_insertion_point(field_set_char:raft_cmdpb.DeleteRangeRequest.cf)
+inline void DeleteRangeRequest::set_cf(const char* value) {
+  GOOGLE_DCHECK(value != NULL);
+  
+  cf_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
+  // @@protoc_insertion_point(field_set_char:raft_cmdpb.DeleteRangeRequest.cf)
 }
-inline void DeleteRangeRequest::set_cf(const char * value, size_t size)
-{
-
-    cf_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
-                   ::std::string(reinterpret_cast<const char *>(value), size));
-    // @@protoc_insertion_point(field_set_pointer:raft_cmdpb.DeleteRangeRequest.cf)
+inline void DeleteRangeRequest::set_cf(const char* value, size_t size) {
+  
+  cf_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+      ::std::string(reinterpret_cast<const char*>(value), size));
+  // @@protoc_insertion_point(field_set_pointer:raft_cmdpb.DeleteRangeRequest.cf)
 }
-inline ::std::string * DeleteRangeRequest::mutable_cf()
-{
-
-    // @@protoc_insertion_point(field_mutable:raft_cmdpb.DeleteRangeRequest.cf)
-    return cf_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+inline ::std::string* DeleteRangeRequest::mutable_cf() {
+  
+  // @@protoc_insertion_point(field_mutable:raft_cmdpb.DeleteRangeRequest.cf)
+  return cf_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
-inline ::std::string * DeleteRangeRequest::release_cf()
-{
-    // @@protoc_insertion_point(field_release:raft_cmdpb.DeleteRangeRequest.cf)
-
-    return cf_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+inline ::std::string* DeleteRangeRequest::release_cf() {
+  // @@protoc_insertion_point(field_release:raft_cmdpb.DeleteRangeRequest.cf)
+  
+  return cf_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
-inline void DeleteRangeRequest::set_allocated_cf(::std::string * cf)
-{
-    if (cf != NULL) {}
-    else
-    {
-    }
-    cf_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), cf);
-    // @@protoc_insertion_point(field_set_allocated:raft_cmdpb.DeleteRangeRequest.cf)
+inline void DeleteRangeRequest::set_allocated_cf(::std::string* cf) {
+  if (cf != NULL) {
+    
+  } else {
+    
+  }
+  cf_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), cf);
+  // @@protoc_insertion_point(field_set_allocated:raft_cmdpb.DeleteRangeRequest.cf)
 }
 
 // bytes start_key = 2;
-inline void DeleteRangeRequest::clear_start_key()
-{
-    start_key_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+inline void DeleteRangeRequest::clear_start_key() {
+  start_key_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
-inline const ::std::string & DeleteRangeRequest::start_key() const
-{
-    // @@protoc_insertion_point(field_get:raft_cmdpb.DeleteRangeRequest.start_key)
-    return start_key_.GetNoArena();
+inline const ::std::string& DeleteRangeRequest::start_key() const {
+  // @@protoc_insertion_point(field_get:raft_cmdpb.DeleteRangeRequest.start_key)
+  return start_key_.GetNoArena();
 }
-inline void DeleteRangeRequest::set_start_key(const ::std::string & value)
-{
-
-    start_key_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
-    // @@protoc_insertion_point(field_set:raft_cmdpb.DeleteRangeRequest.start_key)
+inline void DeleteRangeRequest::set_start_key(const ::std::string& value) {
+  
+  start_key_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
+  // @@protoc_insertion_point(field_set:raft_cmdpb.DeleteRangeRequest.start_key)
 }
 #if LANG_CXX11
-inline void DeleteRangeRequest::set_start_key(::std::string && value)
-{
-
-    start_key_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
-    // @@protoc_insertion_point(field_set_rvalue:raft_cmdpb.DeleteRangeRequest.start_key)
+inline void DeleteRangeRequest::set_start_key(::std::string&& value) {
+  
+  start_key_.SetNoArena(
+    &::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
+  // @@protoc_insertion_point(field_set_rvalue:raft_cmdpb.DeleteRangeRequest.start_key)
 }
 #endif
-inline void DeleteRangeRequest::set_start_key(const char * value)
-{
-    GOOGLE_DCHECK(value != NULL);
-
-    start_key_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
-    // @@protoc_insertion_point(field_set_char:raft_cmdpb.DeleteRangeRequest.start_key)
+inline void DeleteRangeRequest::set_start_key(const char* value) {
+  GOOGLE_DCHECK(value != NULL);
+  
+  start_key_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
+  // @@protoc_insertion_point(field_set_char:raft_cmdpb.DeleteRangeRequest.start_key)
 }
-inline void DeleteRangeRequest::set_start_key(const void * value, size_t size)
-{
-
-    start_key_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
-                          ::std::string(reinterpret_cast<const char *>(value), size));
-    // @@protoc_insertion_point(field_set_pointer:raft_cmdpb.DeleteRangeRequest.start_key)
+inline void DeleteRangeRequest::set_start_key(const void* value, size_t size) {
+  
+  start_key_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+      ::std::string(reinterpret_cast<const char*>(value), size));
+  // @@protoc_insertion_point(field_set_pointer:raft_cmdpb.DeleteRangeRequest.start_key)
 }
-inline ::std::string * DeleteRangeRequest::mutable_start_key()
-{
-
-    // @@protoc_insertion_point(field_mutable:raft_cmdpb.DeleteRangeRequest.start_key)
-    return start_key_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+inline ::std::string* DeleteRangeRequest::mutable_start_key() {
+  
+  // @@protoc_insertion_point(field_mutable:raft_cmdpb.DeleteRangeRequest.start_key)
+  return start_key_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
-inline ::std::string * DeleteRangeRequest::release_start_key()
-{
-    // @@protoc_insertion_point(field_release:raft_cmdpb.DeleteRangeRequest.start_key)
-
-    return start_key_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+inline ::std::string* DeleteRangeRequest::release_start_key() {
+  // @@protoc_insertion_point(field_release:raft_cmdpb.DeleteRangeRequest.start_key)
+  
+  return start_key_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
-inline void DeleteRangeRequest::set_allocated_start_key(::std::string * start_key)
-{
-    if (start_key != NULL) {}
-    else
-    {
-    }
-    start_key_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), start_key);
-    // @@protoc_insertion_point(field_set_allocated:raft_cmdpb.DeleteRangeRequest.start_key)
+inline void DeleteRangeRequest::set_allocated_start_key(::std::string* start_key) {
+  if (start_key != NULL) {
+    
+  } else {
+    
+  }
+  start_key_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), start_key);
+  // @@protoc_insertion_point(field_set_allocated:raft_cmdpb.DeleteRangeRequest.start_key)
 }
 
 // bytes end_key = 3;
-inline void DeleteRangeRequest::clear_end_key()
-{
-    end_key_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+inline void DeleteRangeRequest::clear_end_key() {
+  end_key_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
-inline const ::std::string & DeleteRangeRequest::end_key() const
-{
-    // @@protoc_insertion_point(field_get:raft_cmdpb.DeleteRangeRequest.end_key)
-    return end_key_.GetNoArena();
+inline const ::std::string& DeleteRangeRequest::end_key() const {
+  // @@protoc_insertion_point(field_get:raft_cmdpb.DeleteRangeRequest.end_key)
+  return end_key_.GetNoArena();
 }
-inline void DeleteRangeRequest::set_end_key(const ::std::string & value)
-{
-
-    end_key_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
-    // @@protoc_insertion_point(field_set:raft_cmdpb.DeleteRangeRequest.end_key)
+inline void DeleteRangeRequest::set_end_key(const ::std::string& value) {
+  
+  end_key_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
+  // @@protoc_insertion_point(field_set:raft_cmdpb.DeleteRangeRequest.end_key)
 }
 #if LANG_CXX11
-inline void DeleteRangeRequest::set_end_key(::std::string && value)
-{
-
-    end_key_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
-    // @@protoc_insertion_point(field_set_rvalue:raft_cmdpb.DeleteRangeRequest.end_key)
+inline void DeleteRangeRequest::set_end_key(::std::string&& value) {
+  
+  end_key_.SetNoArena(
+    &::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
+  // @@protoc_insertion_point(field_set_rvalue:raft_cmdpb.DeleteRangeRequest.end_key)
 }
 #endif
-inline void DeleteRangeRequest::set_end_key(const char * value)
-{
-    GOOGLE_DCHECK(value != NULL);
-
-    end_key_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
-    // @@protoc_insertion_point(field_set_char:raft_cmdpb.DeleteRangeRequest.end_key)
+inline void DeleteRangeRequest::set_end_key(const char* value) {
+  GOOGLE_DCHECK(value != NULL);
+  
+  end_key_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
+  // @@protoc_insertion_point(field_set_char:raft_cmdpb.DeleteRangeRequest.end_key)
 }
-inline void DeleteRangeRequest::set_end_key(const void * value, size_t size)
-{
-
-    end_key_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
-                        ::std::string(reinterpret_cast<const char *>(value), size));
-    // @@protoc_insertion_point(field_set_pointer:raft_cmdpb.DeleteRangeRequest.end_key)
+inline void DeleteRangeRequest::set_end_key(const void* value, size_t size) {
+  
+  end_key_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+      ::std::string(reinterpret_cast<const char*>(value), size));
+  // @@protoc_insertion_point(field_set_pointer:raft_cmdpb.DeleteRangeRequest.end_key)
 }
-inline ::std::string * DeleteRangeRequest::mutable_end_key()
-{
-
-    // @@protoc_insertion_point(field_mutable:raft_cmdpb.DeleteRangeRequest.end_key)
-    return end_key_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+inline ::std::string* DeleteRangeRequest::mutable_end_key() {
+  
+  // @@protoc_insertion_point(field_mutable:raft_cmdpb.DeleteRangeRequest.end_key)
+  return end_key_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
-inline ::std::string * DeleteRangeRequest::release_end_key()
-{
-    // @@protoc_insertion_point(field_release:raft_cmdpb.DeleteRangeRequest.end_key)
-
-    return end_key_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+inline ::std::string* DeleteRangeRequest::release_end_key() {
+  // @@protoc_insertion_point(field_release:raft_cmdpb.DeleteRangeRequest.end_key)
+  
+  return end_key_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
-inline void DeleteRangeRequest::set_allocated_end_key(::std::string * end_key)
-{
-    if (end_key != NULL) {}
-    else
-    {
-    }
-    end_key_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), end_key);
-    // @@protoc_insertion_point(field_set_allocated:raft_cmdpb.DeleteRangeRequest.end_key)
+inline void DeleteRangeRequest::set_allocated_end_key(::std::string* end_key) {
+  if (end_key != NULL) {
+    
+  } else {
+    
+  }
+  end_key_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), end_key);
+  // @@protoc_insertion_point(field_set_allocated:raft_cmdpb.DeleteRangeRequest.end_key)
 }
 
 // -------------------------------------------------------------------
@@ -6230,54 +6338,47 @@ inline void DeleteRangeRequest::set_allocated_end_key(::std::string * end_key)
 // SnapResponse
 
 // .metapb.Region region = 1;
-inline bool SnapResponse::has_region() const
-{
-    return this != internal_default_instance() && region_ != NULL;
+inline bool SnapResponse::has_region() const {
+  return this != internal_default_instance() && region_ != NULL;
 }
-inline const ::metapb::Region & SnapResponse::region() const
-{
-    const ::metapb::Region * p = region_;
-    // @@protoc_insertion_point(field_get:raft_cmdpb.SnapResponse.region)
-    return p != NULL ? *p : *reinterpret_cast<const ::metapb::Region *>(&::metapb::_Region_default_instance_);
+inline const ::metapb::Region& SnapResponse::region() const {
+  const ::metapb::Region* p = region_;
+  // @@protoc_insertion_point(field_get:raft_cmdpb.SnapResponse.region)
+  return p != NULL ? *p : *reinterpret_cast<const ::metapb::Region*>(
+      &::metapb::_Region_default_instance_);
 }
-inline ::metapb::Region * SnapResponse::release_region()
-{
-    // @@protoc_insertion_point(field_release:raft_cmdpb.SnapResponse.region)
-
-    ::metapb::Region * temp = region_;
-    region_                 = NULL;
-    return temp;
+inline ::metapb::Region* SnapResponse::release_region() {
+  // @@protoc_insertion_point(field_release:raft_cmdpb.SnapResponse.region)
+  
+  ::metapb::Region* temp = region_;
+  region_ = NULL;
+  return temp;
 }
-inline ::metapb::Region * SnapResponse::mutable_region()
-{
-
-    if (region_ == NULL)
-    {
-        region_ = new ::metapb::Region;
-    }
-    // @@protoc_insertion_point(field_mutable:raft_cmdpb.SnapResponse.region)
-    return region_;
+inline ::metapb::Region* SnapResponse::mutable_region() {
+  
+  if (region_ == NULL) {
+    region_ = new ::metapb::Region;
+  }
+  // @@protoc_insertion_point(field_mutable:raft_cmdpb.SnapResponse.region)
+  return region_;
 }
-inline void SnapResponse::set_allocated_region(::metapb::Region * region)
-{
-    ::google::protobuf::Arena * message_arena = GetArenaNoVirtual();
-    if (message_arena == NULL)
-    {
-        delete reinterpret_cast<::google::protobuf::MessageLite *>(region_);
+inline void SnapResponse::set_allocated_region(::metapb::Region* region) {
+  ::google::protobuf::Arena* message_arena = GetArenaNoVirtual();
+  if (message_arena == NULL) {
+    delete reinterpret_cast< ::google::protobuf::MessageLite*>(region_);
+  }
+  if (region) {
+    ::google::protobuf::Arena* submessage_arena = NULL;
+    if (message_arena != submessage_arena) {
+      region = ::google::protobuf::internal::GetOwnedMessage(
+          message_arena, region, submessage_arena);
     }
-    if (region)
-    {
-        ::google::protobuf::Arena * submessage_arena = NULL;
-        if (message_arena != submessage_arena)
-        {
-            region = ::google::protobuf::internal::GetOwnedMessage(message_arena, region, submessage_arena);
-        }
-    }
-    else
-    {
-    }
-    region_ = region;
-    // @@protoc_insertion_point(field_set_allocated:raft_cmdpb.SnapResponse.region)
+    
+  } else {
+    
+  }
+  region_ = region;
+  // @@protoc_insertion_point(field_set_allocated:raft_cmdpb.SnapResponse.region)
 }
 
 // -------------------------------------------------------------------
@@ -6285,183 +6386,162 @@ inline void SnapResponse::set_allocated_region(::metapb::Region * region)
 // PrewriteRequest
 
 // bytes key = 1;
-inline void PrewriteRequest::clear_key()
-{
-    key_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+inline void PrewriteRequest::clear_key() {
+  key_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
-inline const ::std::string & PrewriteRequest::key() const
-{
-    // @@protoc_insertion_point(field_get:raft_cmdpb.PrewriteRequest.key)
-    return key_.GetNoArena();
+inline const ::std::string& PrewriteRequest::key() const {
+  // @@protoc_insertion_point(field_get:raft_cmdpb.PrewriteRequest.key)
+  return key_.GetNoArena();
 }
-inline void PrewriteRequest::set_key(const ::std::string & value)
-{
-
-    key_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
-    // @@protoc_insertion_point(field_set:raft_cmdpb.PrewriteRequest.key)
+inline void PrewriteRequest::set_key(const ::std::string& value) {
+  
+  key_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
+  // @@protoc_insertion_point(field_set:raft_cmdpb.PrewriteRequest.key)
 }
 #if LANG_CXX11
-inline void PrewriteRequest::set_key(::std::string && value)
-{
-
-    key_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
-    // @@protoc_insertion_point(field_set_rvalue:raft_cmdpb.PrewriteRequest.key)
+inline void PrewriteRequest::set_key(::std::string&& value) {
+  
+  key_.SetNoArena(
+    &::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
+  // @@protoc_insertion_point(field_set_rvalue:raft_cmdpb.PrewriteRequest.key)
 }
 #endif
-inline void PrewriteRequest::set_key(const char * value)
-{
-    GOOGLE_DCHECK(value != NULL);
-
-    key_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
-    // @@protoc_insertion_point(field_set_char:raft_cmdpb.PrewriteRequest.key)
+inline void PrewriteRequest::set_key(const char* value) {
+  GOOGLE_DCHECK(value != NULL);
+  
+  key_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
+  // @@protoc_insertion_point(field_set_char:raft_cmdpb.PrewriteRequest.key)
 }
-inline void PrewriteRequest::set_key(const void * value, size_t size)
-{
-
-    key_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
-                    ::std::string(reinterpret_cast<const char *>(value), size));
-    // @@protoc_insertion_point(field_set_pointer:raft_cmdpb.PrewriteRequest.key)
+inline void PrewriteRequest::set_key(const void* value, size_t size) {
+  
+  key_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+      ::std::string(reinterpret_cast<const char*>(value), size));
+  // @@protoc_insertion_point(field_set_pointer:raft_cmdpb.PrewriteRequest.key)
 }
-inline ::std::string * PrewriteRequest::mutable_key()
-{
-
-    // @@protoc_insertion_point(field_mutable:raft_cmdpb.PrewriteRequest.key)
-    return key_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+inline ::std::string* PrewriteRequest::mutable_key() {
+  
+  // @@protoc_insertion_point(field_mutable:raft_cmdpb.PrewriteRequest.key)
+  return key_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
-inline ::std::string * PrewriteRequest::release_key()
-{
-    // @@protoc_insertion_point(field_release:raft_cmdpb.PrewriteRequest.key)
-
-    return key_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+inline ::std::string* PrewriteRequest::release_key() {
+  // @@protoc_insertion_point(field_release:raft_cmdpb.PrewriteRequest.key)
+  
+  return key_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
-inline void PrewriteRequest::set_allocated_key(::std::string * key)
-{
-    if (key != NULL) {}
-    else
-    {
-    }
-    key_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), key);
-    // @@protoc_insertion_point(field_set_allocated:raft_cmdpb.PrewriteRequest.key)
+inline void PrewriteRequest::set_allocated_key(::std::string* key) {
+  if (key != NULL) {
+    
+  } else {
+    
+  }
+  key_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), key);
+  // @@protoc_insertion_point(field_set_allocated:raft_cmdpb.PrewriteRequest.key)
 }
 
 // bytes value = 2;
-inline void PrewriteRequest::clear_value()
-{
-    value_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+inline void PrewriteRequest::clear_value() {
+  value_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
-inline const ::std::string & PrewriteRequest::value() const
-{
-    // @@protoc_insertion_point(field_get:raft_cmdpb.PrewriteRequest.value)
-    return value_.GetNoArena();
+inline const ::std::string& PrewriteRequest::value() const {
+  // @@protoc_insertion_point(field_get:raft_cmdpb.PrewriteRequest.value)
+  return value_.GetNoArena();
 }
-inline void PrewriteRequest::set_value(const ::std::string & value)
-{
-
-    value_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
-    // @@protoc_insertion_point(field_set:raft_cmdpb.PrewriteRequest.value)
+inline void PrewriteRequest::set_value(const ::std::string& value) {
+  
+  value_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
+  // @@protoc_insertion_point(field_set:raft_cmdpb.PrewriteRequest.value)
 }
 #if LANG_CXX11
-inline void PrewriteRequest::set_value(::std::string && value)
-{
-
-    value_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
-    // @@protoc_insertion_point(field_set_rvalue:raft_cmdpb.PrewriteRequest.value)
+inline void PrewriteRequest::set_value(::std::string&& value) {
+  
+  value_.SetNoArena(
+    &::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
+  // @@protoc_insertion_point(field_set_rvalue:raft_cmdpb.PrewriteRequest.value)
 }
 #endif
-inline void PrewriteRequest::set_value(const char * value)
-{
-    GOOGLE_DCHECK(value != NULL);
-
-    value_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
-    // @@protoc_insertion_point(field_set_char:raft_cmdpb.PrewriteRequest.value)
+inline void PrewriteRequest::set_value(const char* value) {
+  GOOGLE_DCHECK(value != NULL);
+  
+  value_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
+  // @@protoc_insertion_point(field_set_char:raft_cmdpb.PrewriteRequest.value)
 }
-inline void PrewriteRequest::set_value(const void * value, size_t size)
-{
-
-    value_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
-                      ::std::string(reinterpret_cast<const char *>(value), size));
-    // @@protoc_insertion_point(field_set_pointer:raft_cmdpb.PrewriteRequest.value)
+inline void PrewriteRequest::set_value(const void* value, size_t size) {
+  
+  value_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+      ::std::string(reinterpret_cast<const char*>(value), size));
+  // @@protoc_insertion_point(field_set_pointer:raft_cmdpb.PrewriteRequest.value)
 }
-inline ::std::string * PrewriteRequest::mutable_value()
-{
-
-    // @@protoc_insertion_point(field_mutable:raft_cmdpb.PrewriteRequest.value)
-    return value_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+inline ::std::string* PrewriteRequest::mutable_value() {
+  
+  // @@protoc_insertion_point(field_mutable:raft_cmdpb.PrewriteRequest.value)
+  return value_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
-inline ::std::string * PrewriteRequest::release_value()
-{
-    // @@protoc_insertion_point(field_release:raft_cmdpb.PrewriteRequest.value)
-
-    return value_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+inline ::std::string* PrewriteRequest::release_value() {
+  // @@protoc_insertion_point(field_release:raft_cmdpb.PrewriteRequest.value)
+  
+  return value_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
-inline void PrewriteRequest::set_allocated_value(::std::string * value)
-{
-    if (value != NULL) {}
-    else
-    {
-    }
-    value_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
-    // @@protoc_insertion_point(field_set_allocated:raft_cmdpb.PrewriteRequest.value)
+inline void PrewriteRequest::set_allocated_value(::std::string* value) {
+  if (value != NULL) {
+    
+  } else {
+    
+  }
+  value_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
+  // @@protoc_insertion_point(field_set_allocated:raft_cmdpb.PrewriteRequest.value)
 }
 
 // bytes lock = 3;
-inline void PrewriteRequest::clear_lock()
-{
-    lock_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+inline void PrewriteRequest::clear_lock() {
+  lock_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
-inline const ::std::string & PrewriteRequest::lock() const
-{
-    // @@protoc_insertion_point(field_get:raft_cmdpb.PrewriteRequest.lock)
-    return lock_.GetNoArena();
+inline const ::std::string& PrewriteRequest::lock() const {
+  // @@protoc_insertion_point(field_get:raft_cmdpb.PrewriteRequest.lock)
+  return lock_.GetNoArena();
 }
-inline void PrewriteRequest::set_lock(const ::std::string & value)
-{
-
-    lock_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
-    // @@protoc_insertion_point(field_set:raft_cmdpb.PrewriteRequest.lock)
+inline void PrewriteRequest::set_lock(const ::std::string& value) {
+  
+  lock_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
+  // @@protoc_insertion_point(field_set:raft_cmdpb.PrewriteRequest.lock)
 }
 #if LANG_CXX11
-inline void PrewriteRequest::set_lock(::std::string && value)
-{
-
-    lock_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
-    // @@protoc_insertion_point(field_set_rvalue:raft_cmdpb.PrewriteRequest.lock)
+inline void PrewriteRequest::set_lock(::std::string&& value) {
+  
+  lock_.SetNoArena(
+    &::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
+  // @@protoc_insertion_point(field_set_rvalue:raft_cmdpb.PrewriteRequest.lock)
 }
 #endif
-inline void PrewriteRequest::set_lock(const char * value)
-{
-    GOOGLE_DCHECK(value != NULL);
-
-    lock_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
-    // @@protoc_insertion_point(field_set_char:raft_cmdpb.PrewriteRequest.lock)
+inline void PrewriteRequest::set_lock(const char* value) {
+  GOOGLE_DCHECK(value != NULL);
+  
+  lock_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
+  // @@protoc_insertion_point(field_set_char:raft_cmdpb.PrewriteRequest.lock)
 }
-inline void PrewriteRequest::set_lock(const void * value, size_t size)
-{
-
-    lock_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
-                     ::std::string(reinterpret_cast<const char *>(value), size));
-    // @@protoc_insertion_point(field_set_pointer:raft_cmdpb.PrewriteRequest.lock)
+inline void PrewriteRequest::set_lock(const void* value, size_t size) {
+  
+  lock_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+      ::std::string(reinterpret_cast<const char*>(value), size));
+  // @@protoc_insertion_point(field_set_pointer:raft_cmdpb.PrewriteRequest.lock)
 }
-inline ::std::string * PrewriteRequest::mutable_lock()
-{
-
-    // @@protoc_insertion_point(field_mutable:raft_cmdpb.PrewriteRequest.lock)
-    return lock_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+inline ::std::string* PrewriteRequest::mutable_lock() {
+  
+  // @@protoc_insertion_point(field_mutable:raft_cmdpb.PrewriteRequest.lock)
+  return lock_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
-inline ::std::string * PrewriteRequest::release_lock()
-{
-    // @@protoc_insertion_point(field_release:raft_cmdpb.PrewriteRequest.lock)
-
-    return lock_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+inline ::std::string* PrewriteRequest::release_lock() {
+  // @@protoc_insertion_point(field_release:raft_cmdpb.PrewriteRequest.lock)
+  
+  return lock_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
-inline void PrewriteRequest::set_allocated_lock(::std::string * lock)
-{
-    if (lock != NULL) {}
-    else
-    {
-    }
-    lock_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), lock);
-    // @@protoc_insertion_point(field_set_allocated:raft_cmdpb.PrewriteRequest.lock)
+inline void PrewriteRequest::set_allocated_lock(::std::string* lock) {
+  if (lock != NULL) {
+    
+  } else {
+    
+  }
+  lock_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), lock);
+  // @@protoc_insertion_point(field_set_allocated:raft_cmdpb.PrewriteRequest.lock)
 }
 
 // -------------------------------------------------------------------
@@ -6473,54 +6553,47 @@ inline void PrewriteRequest::set_allocated_lock(::std::string * lock)
 // IngestSSTRequest
 
 // .import_sstpb.SSTMeta sst = 1;
-inline bool IngestSSTRequest::has_sst() const
-{
-    return this != internal_default_instance() && sst_ != NULL;
+inline bool IngestSSTRequest::has_sst() const {
+  return this != internal_default_instance() && sst_ != NULL;
 }
-inline const ::import_sstpb::SSTMeta & IngestSSTRequest::sst() const
-{
-    const ::import_sstpb::SSTMeta * p = sst_;
-    // @@protoc_insertion_point(field_get:raft_cmdpb.IngestSSTRequest.sst)
-    return p != NULL ? *p : *reinterpret_cast<const ::import_sstpb::SSTMeta *>(&::import_sstpb::_SSTMeta_default_instance_);
+inline const ::import_sstpb::SSTMeta& IngestSSTRequest::sst() const {
+  const ::import_sstpb::SSTMeta* p = sst_;
+  // @@protoc_insertion_point(field_get:raft_cmdpb.IngestSSTRequest.sst)
+  return p != NULL ? *p : *reinterpret_cast<const ::import_sstpb::SSTMeta*>(
+      &::import_sstpb::_SSTMeta_default_instance_);
 }
-inline ::import_sstpb::SSTMeta * IngestSSTRequest::release_sst()
-{
-    // @@protoc_insertion_point(field_release:raft_cmdpb.IngestSSTRequest.sst)
-
-    ::import_sstpb::SSTMeta * temp = sst_;
-    sst_                           = NULL;
-    return temp;
+inline ::import_sstpb::SSTMeta* IngestSSTRequest::release_sst() {
+  // @@protoc_insertion_point(field_release:raft_cmdpb.IngestSSTRequest.sst)
+  
+  ::import_sstpb::SSTMeta* temp = sst_;
+  sst_ = NULL;
+  return temp;
 }
-inline ::import_sstpb::SSTMeta * IngestSSTRequest::mutable_sst()
-{
-
-    if (sst_ == NULL)
-    {
-        sst_ = new ::import_sstpb::SSTMeta;
-    }
-    // @@protoc_insertion_point(field_mutable:raft_cmdpb.IngestSSTRequest.sst)
-    return sst_;
+inline ::import_sstpb::SSTMeta* IngestSSTRequest::mutable_sst() {
+  
+  if (sst_ == NULL) {
+    sst_ = new ::import_sstpb::SSTMeta;
+  }
+  // @@protoc_insertion_point(field_mutable:raft_cmdpb.IngestSSTRequest.sst)
+  return sst_;
 }
-inline void IngestSSTRequest::set_allocated_sst(::import_sstpb::SSTMeta * sst)
-{
-    ::google::protobuf::Arena * message_arena = GetArenaNoVirtual();
-    if (message_arena == NULL)
-    {
-        delete reinterpret_cast<::google::protobuf::MessageLite *>(sst_);
+inline void IngestSSTRequest::set_allocated_sst(::import_sstpb::SSTMeta* sst) {
+  ::google::protobuf::Arena* message_arena = GetArenaNoVirtual();
+  if (message_arena == NULL) {
+    delete reinterpret_cast< ::google::protobuf::MessageLite*>(sst_);
+  }
+  if (sst) {
+    ::google::protobuf::Arena* submessage_arena = NULL;
+    if (message_arena != submessage_arena) {
+      sst = ::google::protobuf::internal::GetOwnedMessage(
+          message_arena, sst, submessage_arena);
     }
-    if (sst)
-    {
-        ::google::protobuf::Arena * submessage_arena = NULL;
-        if (message_arena != submessage_arena)
-        {
-            sst = ::google::protobuf::internal::GetOwnedMessage(message_arena, sst, submessage_arena);
-        }
-    }
-    else
-    {
-    }
-    sst_ = sst;
-    // @@protoc_insertion_point(field_set_allocated:raft_cmdpb.IngestSSTRequest.sst)
+    
+  } else {
+    
+  }
+  sst_ = sst;
+  // @@protoc_insertion_point(field_set_allocated:raft_cmdpb.IngestSSTRequest.sst)
 }
 
 // -------------------------------------------------------------------
@@ -6532,434 +6605,367 @@ inline void IngestSSTRequest::set_allocated_sst(::import_sstpb::SSTMeta * sst)
 // Request
 
 // .raft_cmdpb.CmdType cmd_type = 1;
-inline void Request::clear_cmd_type()
-{
-    cmd_type_ = 0;
+inline void Request::clear_cmd_type() {
+  cmd_type_ = 0;
 }
-inline ::raft_cmdpb::CmdType Request::cmd_type() const
-{
-    // @@protoc_insertion_point(field_get:raft_cmdpb.Request.cmd_type)
-    return static_cast<::raft_cmdpb::CmdType>(cmd_type_);
+inline ::raft_cmdpb::CmdType Request::cmd_type() const {
+  // @@protoc_insertion_point(field_get:raft_cmdpb.Request.cmd_type)
+  return static_cast< ::raft_cmdpb::CmdType >(cmd_type_);
 }
-inline void Request::set_cmd_type(::raft_cmdpb::CmdType value)
-{
-
-    cmd_type_ = value;
-    // @@protoc_insertion_point(field_set:raft_cmdpb.Request.cmd_type)
+inline void Request::set_cmd_type(::raft_cmdpb::CmdType value) {
+  
+  cmd_type_ = value;
+  // @@protoc_insertion_point(field_set:raft_cmdpb.Request.cmd_type)
 }
 
 // .raft_cmdpb.GetRequest get = 2;
-inline bool Request::has_get() const
-{
-    return this != internal_default_instance() && get_ != NULL;
+inline bool Request::has_get() const {
+  return this != internal_default_instance() && get_ != NULL;
 }
-inline void Request::clear_get()
-{
-    if (GetArenaNoVirtual() == NULL && get_ != NULL)
-    {
-        delete get_;
-    }
-    get_ = NULL;
+inline void Request::clear_get() {
+  if (GetArenaNoVirtual() == NULL && get_ != NULL) {
+    delete get_;
+  }
+  get_ = NULL;
 }
-inline const ::raft_cmdpb::GetRequest & Request::get() const
-{
-    const ::raft_cmdpb::GetRequest * p = get_;
-    // @@protoc_insertion_point(field_get:raft_cmdpb.Request.get)
-    return p != NULL ? *p : *reinterpret_cast<const ::raft_cmdpb::GetRequest *>(&::raft_cmdpb::_GetRequest_default_instance_);
+inline const ::raft_cmdpb::GetRequest& Request::get() const {
+  const ::raft_cmdpb::GetRequest* p = get_;
+  // @@protoc_insertion_point(field_get:raft_cmdpb.Request.get)
+  return p != NULL ? *p : *reinterpret_cast<const ::raft_cmdpb::GetRequest*>(
+      &::raft_cmdpb::_GetRequest_default_instance_);
 }
-inline ::raft_cmdpb::GetRequest * Request::release_get()
-{
-    // @@protoc_insertion_point(field_release:raft_cmdpb.Request.get)
-
-    ::raft_cmdpb::GetRequest * temp = get_;
-    get_                            = NULL;
-    return temp;
+inline ::raft_cmdpb::GetRequest* Request::release_get() {
+  // @@protoc_insertion_point(field_release:raft_cmdpb.Request.get)
+  
+  ::raft_cmdpb::GetRequest* temp = get_;
+  get_ = NULL;
+  return temp;
 }
-inline ::raft_cmdpb::GetRequest * Request::mutable_get()
-{
-
-    if (get_ == NULL)
-    {
-        get_ = new ::raft_cmdpb::GetRequest;
-    }
-    // @@protoc_insertion_point(field_mutable:raft_cmdpb.Request.get)
-    return get_;
+inline ::raft_cmdpb::GetRequest* Request::mutable_get() {
+  
+  if (get_ == NULL) {
+    get_ = new ::raft_cmdpb::GetRequest;
+  }
+  // @@protoc_insertion_point(field_mutable:raft_cmdpb.Request.get)
+  return get_;
 }
-inline void Request::set_allocated_get(::raft_cmdpb::GetRequest * get)
-{
-    ::google::protobuf::Arena * message_arena = GetArenaNoVirtual();
-    if (message_arena == NULL)
-    {
-        delete get_;
+inline void Request::set_allocated_get(::raft_cmdpb::GetRequest* get) {
+  ::google::protobuf::Arena* message_arena = GetArenaNoVirtual();
+  if (message_arena == NULL) {
+    delete get_;
+  }
+  if (get) {
+    ::google::protobuf::Arena* submessage_arena = NULL;
+    if (message_arena != submessage_arena) {
+      get = ::google::protobuf::internal::GetOwnedMessage(
+          message_arena, get, submessage_arena);
     }
-    if (get)
-    {
-        ::google::protobuf::Arena * submessage_arena = NULL;
-        if (message_arena != submessage_arena)
-        {
-            get = ::google::protobuf::internal::GetOwnedMessage(message_arena, get, submessage_arena);
-        }
-    }
-    else
-    {
-    }
-    get_ = get;
-    // @@protoc_insertion_point(field_set_allocated:raft_cmdpb.Request.get)
+    
+  } else {
+    
+  }
+  get_ = get;
+  // @@protoc_insertion_point(field_set_allocated:raft_cmdpb.Request.get)
 }
 
 // .raft_cmdpb.PutRequest put = 4;
-inline bool Request::has_put() const
-{
-    return this != internal_default_instance() && put_ != NULL;
+inline bool Request::has_put() const {
+  return this != internal_default_instance() && put_ != NULL;
 }
-inline void Request::clear_put()
-{
-    if (GetArenaNoVirtual() == NULL && put_ != NULL)
-    {
-        delete put_;
-    }
-    put_ = NULL;
+inline void Request::clear_put() {
+  if (GetArenaNoVirtual() == NULL && put_ != NULL) {
+    delete put_;
+  }
+  put_ = NULL;
 }
-inline const ::raft_cmdpb::PutRequest & Request::put() const
-{
-    const ::raft_cmdpb::PutRequest * p = put_;
-    // @@protoc_insertion_point(field_get:raft_cmdpb.Request.put)
-    return p != NULL ? *p : *reinterpret_cast<const ::raft_cmdpb::PutRequest *>(&::raft_cmdpb::_PutRequest_default_instance_);
+inline const ::raft_cmdpb::PutRequest& Request::put() const {
+  const ::raft_cmdpb::PutRequest* p = put_;
+  // @@protoc_insertion_point(field_get:raft_cmdpb.Request.put)
+  return p != NULL ? *p : *reinterpret_cast<const ::raft_cmdpb::PutRequest*>(
+      &::raft_cmdpb::_PutRequest_default_instance_);
 }
-inline ::raft_cmdpb::PutRequest * Request::release_put()
-{
-    // @@protoc_insertion_point(field_release:raft_cmdpb.Request.put)
-
-    ::raft_cmdpb::PutRequest * temp = put_;
-    put_                            = NULL;
-    return temp;
+inline ::raft_cmdpb::PutRequest* Request::release_put() {
+  // @@protoc_insertion_point(field_release:raft_cmdpb.Request.put)
+  
+  ::raft_cmdpb::PutRequest* temp = put_;
+  put_ = NULL;
+  return temp;
 }
-inline ::raft_cmdpb::PutRequest * Request::mutable_put()
-{
-
-    if (put_ == NULL)
-    {
-        put_ = new ::raft_cmdpb::PutRequest;
-    }
-    // @@protoc_insertion_point(field_mutable:raft_cmdpb.Request.put)
-    return put_;
+inline ::raft_cmdpb::PutRequest* Request::mutable_put() {
+  
+  if (put_ == NULL) {
+    put_ = new ::raft_cmdpb::PutRequest;
+  }
+  // @@protoc_insertion_point(field_mutable:raft_cmdpb.Request.put)
+  return put_;
 }
-inline void Request::set_allocated_put(::raft_cmdpb::PutRequest * put)
-{
-    ::google::protobuf::Arena * message_arena = GetArenaNoVirtual();
-    if (message_arena == NULL)
-    {
-        delete put_;
+inline void Request::set_allocated_put(::raft_cmdpb::PutRequest* put) {
+  ::google::protobuf::Arena* message_arena = GetArenaNoVirtual();
+  if (message_arena == NULL) {
+    delete put_;
+  }
+  if (put) {
+    ::google::protobuf::Arena* submessage_arena = NULL;
+    if (message_arena != submessage_arena) {
+      put = ::google::protobuf::internal::GetOwnedMessage(
+          message_arena, put, submessage_arena);
     }
-    if (put)
-    {
-        ::google::protobuf::Arena * submessage_arena = NULL;
-        if (message_arena != submessage_arena)
-        {
-            put = ::google::protobuf::internal::GetOwnedMessage(message_arena, put, submessage_arena);
-        }
-    }
-    else
-    {
-    }
-    put_ = put;
-    // @@protoc_insertion_point(field_set_allocated:raft_cmdpb.Request.put)
+    
+  } else {
+    
+  }
+  put_ = put;
+  // @@protoc_insertion_point(field_set_allocated:raft_cmdpb.Request.put)
 }
 
 // .raft_cmdpb.DeleteRequest delete = 5;
-inline bool Request::has_delete_() const
-{
-    return this != internal_default_instance() && delete__ != NULL;
+inline bool Request::has_delete_() const {
+  return this != internal_default_instance() && delete__ != NULL;
 }
-inline void Request::clear_delete_()
-{
-    if (GetArenaNoVirtual() == NULL && delete__ != NULL)
-    {
-        delete delete__;
-    }
-    delete__ = NULL;
+inline void Request::clear_delete_() {
+  if (GetArenaNoVirtual() == NULL && delete__ != NULL) {
+    delete delete__;
+  }
+  delete__ = NULL;
 }
-inline const ::raft_cmdpb::DeleteRequest & Request::delete_() const
-{
-    const ::raft_cmdpb::DeleteRequest * p = delete__;
-    // @@protoc_insertion_point(field_get:raft_cmdpb.Request.delete)
-    return p != NULL ? *p : *reinterpret_cast<const ::raft_cmdpb::DeleteRequest *>(&::raft_cmdpb::_DeleteRequest_default_instance_);
+inline const ::raft_cmdpb::DeleteRequest& Request::delete_() const {
+  const ::raft_cmdpb::DeleteRequest* p = delete__;
+  // @@protoc_insertion_point(field_get:raft_cmdpb.Request.delete)
+  return p != NULL ? *p : *reinterpret_cast<const ::raft_cmdpb::DeleteRequest*>(
+      &::raft_cmdpb::_DeleteRequest_default_instance_);
 }
-inline ::raft_cmdpb::DeleteRequest * Request::release_delete_()
-{
-    // @@protoc_insertion_point(field_release:raft_cmdpb.Request.delete)
-
-    ::raft_cmdpb::DeleteRequest * temp = delete__;
-    delete__                           = NULL;
-    return temp;
+inline ::raft_cmdpb::DeleteRequest* Request::release_delete_() {
+  // @@protoc_insertion_point(field_release:raft_cmdpb.Request.delete)
+  
+  ::raft_cmdpb::DeleteRequest* temp = delete__;
+  delete__ = NULL;
+  return temp;
 }
-inline ::raft_cmdpb::DeleteRequest * Request::mutable_delete_()
-{
-
-    if (delete__ == NULL)
-    {
-        delete__ = new ::raft_cmdpb::DeleteRequest;
-    }
-    // @@protoc_insertion_point(field_mutable:raft_cmdpb.Request.delete)
-    return delete__;
+inline ::raft_cmdpb::DeleteRequest* Request::mutable_delete_() {
+  
+  if (delete__ == NULL) {
+    delete__ = new ::raft_cmdpb::DeleteRequest;
+  }
+  // @@protoc_insertion_point(field_mutable:raft_cmdpb.Request.delete)
+  return delete__;
 }
-inline void Request::set_allocated_delete_(::raft_cmdpb::DeleteRequest * delete_)
-{
-    ::google::protobuf::Arena * message_arena = GetArenaNoVirtual();
-    if (message_arena == NULL)
-    {
-        delete delete__;
+inline void Request::set_allocated_delete_(::raft_cmdpb::DeleteRequest* delete_) {
+  ::google::protobuf::Arena* message_arena = GetArenaNoVirtual();
+  if (message_arena == NULL) {
+    delete delete__;
+  }
+  if (delete_) {
+    ::google::protobuf::Arena* submessage_arena = NULL;
+    if (message_arena != submessage_arena) {
+      delete_ = ::google::protobuf::internal::GetOwnedMessage(
+          message_arena, delete_, submessage_arena);
     }
-    if (delete_)
-    {
-        ::google::protobuf::Arena * submessage_arena = NULL;
-        if (message_arena != submessage_arena)
-        {
-            delete_ = ::google::protobuf::internal::GetOwnedMessage(message_arena, delete_, submessage_arena);
-        }
-    }
-    else
-    {
-    }
-    delete__ = delete_;
-    // @@protoc_insertion_point(field_set_allocated:raft_cmdpb.Request.delete)
+    
+  } else {
+    
+  }
+  delete__ = delete_;
+  // @@protoc_insertion_point(field_set_allocated:raft_cmdpb.Request.delete)
 }
 
 // .raft_cmdpb.SnapRequest snap = 6;
-inline bool Request::has_snap() const
-{
-    return this != internal_default_instance() && snap_ != NULL;
+inline bool Request::has_snap() const {
+  return this != internal_default_instance() && snap_ != NULL;
 }
-inline void Request::clear_snap()
-{
-    if (GetArenaNoVirtual() == NULL && snap_ != NULL)
-    {
-        delete snap_;
-    }
-    snap_ = NULL;
+inline void Request::clear_snap() {
+  if (GetArenaNoVirtual() == NULL && snap_ != NULL) {
+    delete snap_;
+  }
+  snap_ = NULL;
 }
-inline const ::raft_cmdpb::SnapRequest & Request::snap() const
-{
-    const ::raft_cmdpb::SnapRequest * p = snap_;
-    // @@protoc_insertion_point(field_get:raft_cmdpb.Request.snap)
-    return p != NULL ? *p : *reinterpret_cast<const ::raft_cmdpb::SnapRequest *>(&::raft_cmdpb::_SnapRequest_default_instance_);
+inline const ::raft_cmdpb::SnapRequest& Request::snap() const {
+  const ::raft_cmdpb::SnapRequest* p = snap_;
+  // @@protoc_insertion_point(field_get:raft_cmdpb.Request.snap)
+  return p != NULL ? *p : *reinterpret_cast<const ::raft_cmdpb::SnapRequest*>(
+      &::raft_cmdpb::_SnapRequest_default_instance_);
 }
-inline ::raft_cmdpb::SnapRequest * Request::release_snap()
-{
-    // @@protoc_insertion_point(field_release:raft_cmdpb.Request.snap)
-
-    ::raft_cmdpb::SnapRequest * temp = snap_;
-    snap_                            = NULL;
-    return temp;
+inline ::raft_cmdpb::SnapRequest* Request::release_snap() {
+  // @@protoc_insertion_point(field_release:raft_cmdpb.Request.snap)
+  
+  ::raft_cmdpb::SnapRequest* temp = snap_;
+  snap_ = NULL;
+  return temp;
 }
-inline ::raft_cmdpb::SnapRequest * Request::mutable_snap()
-{
-
-    if (snap_ == NULL)
-    {
-        snap_ = new ::raft_cmdpb::SnapRequest;
-    }
-    // @@protoc_insertion_point(field_mutable:raft_cmdpb.Request.snap)
-    return snap_;
+inline ::raft_cmdpb::SnapRequest* Request::mutable_snap() {
+  
+  if (snap_ == NULL) {
+    snap_ = new ::raft_cmdpb::SnapRequest;
+  }
+  // @@protoc_insertion_point(field_mutable:raft_cmdpb.Request.snap)
+  return snap_;
 }
-inline void Request::set_allocated_snap(::raft_cmdpb::SnapRequest * snap)
-{
-    ::google::protobuf::Arena * message_arena = GetArenaNoVirtual();
-    if (message_arena == NULL)
-    {
-        delete snap_;
+inline void Request::set_allocated_snap(::raft_cmdpb::SnapRequest* snap) {
+  ::google::protobuf::Arena* message_arena = GetArenaNoVirtual();
+  if (message_arena == NULL) {
+    delete snap_;
+  }
+  if (snap) {
+    ::google::protobuf::Arena* submessage_arena = NULL;
+    if (message_arena != submessage_arena) {
+      snap = ::google::protobuf::internal::GetOwnedMessage(
+          message_arena, snap, submessage_arena);
     }
-    if (snap)
-    {
-        ::google::protobuf::Arena * submessage_arena = NULL;
-        if (message_arena != submessage_arena)
-        {
-            snap = ::google::protobuf::internal::GetOwnedMessage(message_arena, snap, submessage_arena);
-        }
-    }
-    else
-    {
-    }
-    snap_ = snap;
-    // @@protoc_insertion_point(field_set_allocated:raft_cmdpb.Request.snap)
+    
+  } else {
+    
+  }
+  snap_ = snap;
+  // @@protoc_insertion_point(field_set_allocated:raft_cmdpb.Request.snap)
 }
 
 // .raft_cmdpb.PrewriteRequest prewrite = 7;
-inline bool Request::has_prewrite() const
-{
-    return this != internal_default_instance() && prewrite_ != NULL;
+inline bool Request::has_prewrite() const {
+  return this != internal_default_instance() && prewrite_ != NULL;
 }
-inline void Request::clear_prewrite()
-{
-    if (GetArenaNoVirtual() == NULL && prewrite_ != NULL)
-    {
-        delete prewrite_;
-    }
-    prewrite_ = NULL;
+inline void Request::clear_prewrite() {
+  if (GetArenaNoVirtual() == NULL && prewrite_ != NULL) {
+    delete prewrite_;
+  }
+  prewrite_ = NULL;
 }
-inline const ::raft_cmdpb::PrewriteRequest & Request::prewrite() const
-{
-    const ::raft_cmdpb::PrewriteRequest * p = prewrite_;
-    // @@protoc_insertion_point(field_get:raft_cmdpb.Request.prewrite)
-    return p != NULL ? *p : *reinterpret_cast<const ::raft_cmdpb::PrewriteRequest *>(&::raft_cmdpb::_PrewriteRequest_default_instance_);
+inline const ::raft_cmdpb::PrewriteRequest& Request::prewrite() const {
+  const ::raft_cmdpb::PrewriteRequest* p = prewrite_;
+  // @@protoc_insertion_point(field_get:raft_cmdpb.Request.prewrite)
+  return p != NULL ? *p : *reinterpret_cast<const ::raft_cmdpb::PrewriteRequest*>(
+      &::raft_cmdpb::_PrewriteRequest_default_instance_);
 }
-inline ::raft_cmdpb::PrewriteRequest * Request::release_prewrite()
-{
-    // @@protoc_insertion_point(field_release:raft_cmdpb.Request.prewrite)
-
-    ::raft_cmdpb::PrewriteRequest * temp = prewrite_;
-    prewrite_                            = NULL;
-    return temp;
+inline ::raft_cmdpb::PrewriteRequest* Request::release_prewrite() {
+  // @@protoc_insertion_point(field_release:raft_cmdpb.Request.prewrite)
+  
+  ::raft_cmdpb::PrewriteRequest* temp = prewrite_;
+  prewrite_ = NULL;
+  return temp;
 }
-inline ::raft_cmdpb::PrewriteRequest * Request::mutable_prewrite()
-{
-
-    if (prewrite_ == NULL)
-    {
-        prewrite_ = new ::raft_cmdpb::PrewriteRequest;
-    }
-    // @@protoc_insertion_point(field_mutable:raft_cmdpb.Request.prewrite)
-    return prewrite_;
+inline ::raft_cmdpb::PrewriteRequest* Request::mutable_prewrite() {
+  
+  if (prewrite_ == NULL) {
+    prewrite_ = new ::raft_cmdpb::PrewriteRequest;
+  }
+  // @@protoc_insertion_point(field_mutable:raft_cmdpb.Request.prewrite)
+  return prewrite_;
 }
-inline void Request::set_allocated_prewrite(::raft_cmdpb::PrewriteRequest * prewrite)
-{
-    ::google::protobuf::Arena * message_arena = GetArenaNoVirtual();
-    if (message_arena == NULL)
-    {
-        delete prewrite_;
+inline void Request::set_allocated_prewrite(::raft_cmdpb::PrewriteRequest* prewrite) {
+  ::google::protobuf::Arena* message_arena = GetArenaNoVirtual();
+  if (message_arena == NULL) {
+    delete prewrite_;
+  }
+  if (prewrite) {
+    ::google::protobuf::Arena* submessage_arena = NULL;
+    if (message_arena != submessage_arena) {
+      prewrite = ::google::protobuf::internal::GetOwnedMessage(
+          message_arena, prewrite, submessage_arena);
     }
-    if (prewrite)
-    {
-        ::google::protobuf::Arena * submessage_arena = NULL;
-        if (message_arena != submessage_arena)
-        {
-            prewrite = ::google::protobuf::internal::GetOwnedMessage(message_arena, prewrite, submessage_arena);
-        }
-    }
-    else
-    {
-    }
-    prewrite_ = prewrite;
-    // @@protoc_insertion_point(field_set_allocated:raft_cmdpb.Request.prewrite)
+    
+  } else {
+    
+  }
+  prewrite_ = prewrite;
+  // @@protoc_insertion_point(field_set_allocated:raft_cmdpb.Request.prewrite)
 }
 
 // .raft_cmdpb.DeleteRangeRequest delete_range = 8;
-inline bool Request::has_delete_range() const
-{
-    return this != internal_default_instance() && delete_range_ != NULL;
+inline bool Request::has_delete_range() const {
+  return this != internal_default_instance() && delete_range_ != NULL;
 }
-inline void Request::clear_delete_range()
-{
-    if (GetArenaNoVirtual() == NULL && delete_range_ != NULL)
-    {
-        delete delete_range_;
-    }
-    delete_range_ = NULL;
+inline void Request::clear_delete_range() {
+  if (GetArenaNoVirtual() == NULL && delete_range_ != NULL) {
+    delete delete_range_;
+  }
+  delete_range_ = NULL;
 }
-inline const ::raft_cmdpb::DeleteRangeRequest & Request::delete_range() const
-{
-    const ::raft_cmdpb::DeleteRangeRequest * p = delete_range_;
-    // @@protoc_insertion_point(field_get:raft_cmdpb.Request.delete_range)
-    return p != NULL ? *p
-                     : *reinterpret_cast<const ::raft_cmdpb::DeleteRangeRequest *>(&::raft_cmdpb::_DeleteRangeRequest_default_instance_);
+inline const ::raft_cmdpb::DeleteRangeRequest& Request::delete_range() const {
+  const ::raft_cmdpb::DeleteRangeRequest* p = delete_range_;
+  // @@protoc_insertion_point(field_get:raft_cmdpb.Request.delete_range)
+  return p != NULL ? *p : *reinterpret_cast<const ::raft_cmdpb::DeleteRangeRequest*>(
+      &::raft_cmdpb::_DeleteRangeRequest_default_instance_);
 }
-inline ::raft_cmdpb::DeleteRangeRequest * Request::release_delete_range()
-{
-    // @@protoc_insertion_point(field_release:raft_cmdpb.Request.delete_range)
-
-    ::raft_cmdpb::DeleteRangeRequest * temp = delete_range_;
-    delete_range_                           = NULL;
-    return temp;
+inline ::raft_cmdpb::DeleteRangeRequest* Request::release_delete_range() {
+  // @@protoc_insertion_point(field_release:raft_cmdpb.Request.delete_range)
+  
+  ::raft_cmdpb::DeleteRangeRequest* temp = delete_range_;
+  delete_range_ = NULL;
+  return temp;
 }
-inline ::raft_cmdpb::DeleteRangeRequest * Request::mutable_delete_range()
-{
-
-    if (delete_range_ == NULL)
-    {
-        delete_range_ = new ::raft_cmdpb::DeleteRangeRequest;
-    }
-    // @@protoc_insertion_point(field_mutable:raft_cmdpb.Request.delete_range)
-    return delete_range_;
+inline ::raft_cmdpb::DeleteRangeRequest* Request::mutable_delete_range() {
+  
+  if (delete_range_ == NULL) {
+    delete_range_ = new ::raft_cmdpb::DeleteRangeRequest;
+  }
+  // @@protoc_insertion_point(field_mutable:raft_cmdpb.Request.delete_range)
+  return delete_range_;
 }
-inline void Request::set_allocated_delete_range(::raft_cmdpb::DeleteRangeRequest * delete_range)
-{
-    ::google::protobuf::Arena * message_arena = GetArenaNoVirtual();
-    if (message_arena == NULL)
-    {
-        delete delete_range_;
+inline void Request::set_allocated_delete_range(::raft_cmdpb::DeleteRangeRequest* delete_range) {
+  ::google::protobuf::Arena* message_arena = GetArenaNoVirtual();
+  if (message_arena == NULL) {
+    delete delete_range_;
+  }
+  if (delete_range) {
+    ::google::protobuf::Arena* submessage_arena = NULL;
+    if (message_arena != submessage_arena) {
+      delete_range = ::google::protobuf::internal::GetOwnedMessage(
+          message_arena, delete_range, submessage_arena);
     }
-    if (delete_range)
-    {
-        ::google::protobuf::Arena * submessage_arena = NULL;
-        if (message_arena != submessage_arena)
-        {
-            delete_range = ::google::protobuf::internal::GetOwnedMessage(message_arena, delete_range, submessage_arena);
-        }
-    }
-    else
-    {
-    }
-    delete_range_ = delete_range;
-    // @@protoc_insertion_point(field_set_allocated:raft_cmdpb.Request.delete_range)
+    
+  } else {
+    
+  }
+  delete_range_ = delete_range;
+  // @@protoc_insertion_point(field_set_allocated:raft_cmdpb.Request.delete_range)
 }
 
 // .raft_cmdpb.IngestSSTRequest ingest_sst = 9;
-inline bool Request::has_ingest_sst() const
-{
-    return this != internal_default_instance() && ingest_sst_ != NULL;
+inline bool Request::has_ingest_sst() const {
+  return this != internal_default_instance() && ingest_sst_ != NULL;
 }
-inline void Request::clear_ingest_sst()
-{
-    if (GetArenaNoVirtual() == NULL && ingest_sst_ != NULL)
-    {
-        delete ingest_sst_;
-    }
-    ingest_sst_ = NULL;
+inline void Request::clear_ingest_sst() {
+  if (GetArenaNoVirtual() == NULL && ingest_sst_ != NULL) {
+    delete ingest_sst_;
+  }
+  ingest_sst_ = NULL;
 }
-inline const ::raft_cmdpb::IngestSSTRequest & Request::ingest_sst() const
-{
-    const ::raft_cmdpb::IngestSSTRequest * p = ingest_sst_;
-    // @@protoc_insertion_point(field_get:raft_cmdpb.Request.ingest_sst)
-    return p != NULL ? *p : *reinterpret_cast<const ::raft_cmdpb::IngestSSTRequest *>(&::raft_cmdpb::_IngestSSTRequest_default_instance_);
+inline const ::raft_cmdpb::IngestSSTRequest& Request::ingest_sst() const {
+  const ::raft_cmdpb::IngestSSTRequest* p = ingest_sst_;
+  // @@protoc_insertion_point(field_get:raft_cmdpb.Request.ingest_sst)
+  return p != NULL ? *p : *reinterpret_cast<const ::raft_cmdpb::IngestSSTRequest*>(
+      &::raft_cmdpb::_IngestSSTRequest_default_instance_);
 }
-inline ::raft_cmdpb::IngestSSTRequest * Request::release_ingest_sst()
-{
-    // @@protoc_insertion_point(field_release:raft_cmdpb.Request.ingest_sst)
-
-    ::raft_cmdpb::IngestSSTRequest * temp = ingest_sst_;
-    ingest_sst_                           = NULL;
-    return temp;
+inline ::raft_cmdpb::IngestSSTRequest* Request::release_ingest_sst() {
+  // @@protoc_insertion_point(field_release:raft_cmdpb.Request.ingest_sst)
+  
+  ::raft_cmdpb::IngestSSTRequest* temp = ingest_sst_;
+  ingest_sst_ = NULL;
+  return temp;
 }
-inline ::raft_cmdpb::IngestSSTRequest * Request::mutable_ingest_sst()
-{
-
-    if (ingest_sst_ == NULL)
-    {
-        ingest_sst_ = new ::raft_cmdpb::IngestSSTRequest;
-    }
-    // @@protoc_insertion_point(field_mutable:raft_cmdpb.Request.ingest_sst)
-    return ingest_sst_;
+inline ::raft_cmdpb::IngestSSTRequest* Request::mutable_ingest_sst() {
+  
+  if (ingest_sst_ == NULL) {
+    ingest_sst_ = new ::raft_cmdpb::IngestSSTRequest;
+  }
+  // @@protoc_insertion_point(field_mutable:raft_cmdpb.Request.ingest_sst)
+  return ingest_sst_;
 }
-inline void Request::set_allocated_ingest_sst(::raft_cmdpb::IngestSSTRequest * ingest_sst)
-{
-    ::google::protobuf::Arena * message_arena = GetArenaNoVirtual();
-    if (message_arena == NULL)
-    {
-        delete ingest_sst_;
+inline void Request::set_allocated_ingest_sst(::raft_cmdpb::IngestSSTRequest* ingest_sst) {
+  ::google::protobuf::Arena* message_arena = GetArenaNoVirtual();
+  if (message_arena == NULL) {
+    delete ingest_sst_;
+  }
+  if (ingest_sst) {
+    ::google::protobuf::Arena* submessage_arena = NULL;
+    if (message_arena != submessage_arena) {
+      ingest_sst = ::google::protobuf::internal::GetOwnedMessage(
+          message_arena, ingest_sst, submessage_arena);
     }
-    if (ingest_sst)
-    {
-        ::google::protobuf::Arena * submessage_arena = NULL;
-        if (message_arena != submessage_arena)
-        {
-            ingest_sst = ::google::protobuf::internal::GetOwnedMessage(message_arena, ingest_sst, submessage_arena);
-        }
-    }
-    else
-    {
-    }
-    ingest_sst_ = ingest_sst;
-    // @@protoc_insertion_point(field_set_allocated:raft_cmdpb.Request.ingest_sst)
+    
+  } else {
+    
+  }
+  ingest_sst_ = ingest_sst;
+  // @@protoc_insertion_point(field_set_allocated:raft_cmdpb.Request.ingest_sst)
 }
 
 // -------------------------------------------------------------------
@@ -6967,434 +6973,367 @@ inline void Request::set_allocated_ingest_sst(::raft_cmdpb::IngestSSTRequest * i
 // Response
 
 // .raft_cmdpb.CmdType cmd_type = 1;
-inline void Response::clear_cmd_type()
-{
-    cmd_type_ = 0;
+inline void Response::clear_cmd_type() {
+  cmd_type_ = 0;
 }
-inline ::raft_cmdpb::CmdType Response::cmd_type() const
-{
-    // @@protoc_insertion_point(field_get:raft_cmdpb.Response.cmd_type)
-    return static_cast<::raft_cmdpb::CmdType>(cmd_type_);
+inline ::raft_cmdpb::CmdType Response::cmd_type() const {
+  // @@protoc_insertion_point(field_get:raft_cmdpb.Response.cmd_type)
+  return static_cast< ::raft_cmdpb::CmdType >(cmd_type_);
 }
-inline void Response::set_cmd_type(::raft_cmdpb::CmdType value)
-{
-
-    cmd_type_ = value;
-    // @@protoc_insertion_point(field_set:raft_cmdpb.Response.cmd_type)
+inline void Response::set_cmd_type(::raft_cmdpb::CmdType value) {
+  
+  cmd_type_ = value;
+  // @@protoc_insertion_point(field_set:raft_cmdpb.Response.cmd_type)
 }
 
 // .raft_cmdpb.GetResponse get = 2;
-inline bool Response::has_get() const
-{
-    return this != internal_default_instance() && get_ != NULL;
+inline bool Response::has_get() const {
+  return this != internal_default_instance() && get_ != NULL;
 }
-inline void Response::clear_get()
-{
-    if (GetArenaNoVirtual() == NULL && get_ != NULL)
-    {
-        delete get_;
-    }
-    get_ = NULL;
+inline void Response::clear_get() {
+  if (GetArenaNoVirtual() == NULL && get_ != NULL) {
+    delete get_;
+  }
+  get_ = NULL;
 }
-inline const ::raft_cmdpb::GetResponse & Response::get() const
-{
-    const ::raft_cmdpb::GetResponse * p = get_;
-    // @@protoc_insertion_point(field_get:raft_cmdpb.Response.get)
-    return p != NULL ? *p : *reinterpret_cast<const ::raft_cmdpb::GetResponse *>(&::raft_cmdpb::_GetResponse_default_instance_);
+inline const ::raft_cmdpb::GetResponse& Response::get() const {
+  const ::raft_cmdpb::GetResponse* p = get_;
+  // @@protoc_insertion_point(field_get:raft_cmdpb.Response.get)
+  return p != NULL ? *p : *reinterpret_cast<const ::raft_cmdpb::GetResponse*>(
+      &::raft_cmdpb::_GetResponse_default_instance_);
 }
-inline ::raft_cmdpb::GetResponse * Response::release_get()
-{
-    // @@protoc_insertion_point(field_release:raft_cmdpb.Response.get)
-
-    ::raft_cmdpb::GetResponse * temp = get_;
-    get_                             = NULL;
-    return temp;
+inline ::raft_cmdpb::GetResponse* Response::release_get() {
+  // @@protoc_insertion_point(field_release:raft_cmdpb.Response.get)
+  
+  ::raft_cmdpb::GetResponse* temp = get_;
+  get_ = NULL;
+  return temp;
 }
-inline ::raft_cmdpb::GetResponse * Response::mutable_get()
-{
-
-    if (get_ == NULL)
-    {
-        get_ = new ::raft_cmdpb::GetResponse;
-    }
-    // @@protoc_insertion_point(field_mutable:raft_cmdpb.Response.get)
-    return get_;
+inline ::raft_cmdpb::GetResponse* Response::mutable_get() {
+  
+  if (get_ == NULL) {
+    get_ = new ::raft_cmdpb::GetResponse;
+  }
+  // @@protoc_insertion_point(field_mutable:raft_cmdpb.Response.get)
+  return get_;
 }
-inline void Response::set_allocated_get(::raft_cmdpb::GetResponse * get)
-{
-    ::google::protobuf::Arena * message_arena = GetArenaNoVirtual();
-    if (message_arena == NULL)
-    {
-        delete get_;
+inline void Response::set_allocated_get(::raft_cmdpb::GetResponse* get) {
+  ::google::protobuf::Arena* message_arena = GetArenaNoVirtual();
+  if (message_arena == NULL) {
+    delete get_;
+  }
+  if (get) {
+    ::google::protobuf::Arena* submessage_arena = NULL;
+    if (message_arena != submessage_arena) {
+      get = ::google::protobuf::internal::GetOwnedMessage(
+          message_arena, get, submessage_arena);
     }
-    if (get)
-    {
-        ::google::protobuf::Arena * submessage_arena = NULL;
-        if (message_arena != submessage_arena)
-        {
-            get = ::google::protobuf::internal::GetOwnedMessage(message_arena, get, submessage_arena);
-        }
-    }
-    else
-    {
-    }
-    get_ = get;
-    // @@protoc_insertion_point(field_set_allocated:raft_cmdpb.Response.get)
+    
+  } else {
+    
+  }
+  get_ = get;
+  // @@protoc_insertion_point(field_set_allocated:raft_cmdpb.Response.get)
 }
 
 // .raft_cmdpb.PutResponse put = 4;
-inline bool Response::has_put() const
-{
-    return this != internal_default_instance() && put_ != NULL;
+inline bool Response::has_put() const {
+  return this != internal_default_instance() && put_ != NULL;
 }
-inline void Response::clear_put()
-{
-    if (GetArenaNoVirtual() == NULL && put_ != NULL)
-    {
-        delete put_;
-    }
-    put_ = NULL;
+inline void Response::clear_put() {
+  if (GetArenaNoVirtual() == NULL && put_ != NULL) {
+    delete put_;
+  }
+  put_ = NULL;
 }
-inline const ::raft_cmdpb::PutResponse & Response::put() const
-{
-    const ::raft_cmdpb::PutResponse * p = put_;
-    // @@protoc_insertion_point(field_get:raft_cmdpb.Response.put)
-    return p != NULL ? *p : *reinterpret_cast<const ::raft_cmdpb::PutResponse *>(&::raft_cmdpb::_PutResponse_default_instance_);
+inline const ::raft_cmdpb::PutResponse& Response::put() const {
+  const ::raft_cmdpb::PutResponse* p = put_;
+  // @@protoc_insertion_point(field_get:raft_cmdpb.Response.put)
+  return p != NULL ? *p : *reinterpret_cast<const ::raft_cmdpb::PutResponse*>(
+      &::raft_cmdpb::_PutResponse_default_instance_);
 }
-inline ::raft_cmdpb::PutResponse * Response::release_put()
-{
-    // @@protoc_insertion_point(field_release:raft_cmdpb.Response.put)
-
-    ::raft_cmdpb::PutResponse * temp = put_;
-    put_                             = NULL;
-    return temp;
+inline ::raft_cmdpb::PutResponse* Response::release_put() {
+  // @@protoc_insertion_point(field_release:raft_cmdpb.Response.put)
+  
+  ::raft_cmdpb::PutResponse* temp = put_;
+  put_ = NULL;
+  return temp;
 }
-inline ::raft_cmdpb::PutResponse * Response::mutable_put()
-{
-
-    if (put_ == NULL)
-    {
-        put_ = new ::raft_cmdpb::PutResponse;
-    }
-    // @@protoc_insertion_point(field_mutable:raft_cmdpb.Response.put)
-    return put_;
+inline ::raft_cmdpb::PutResponse* Response::mutable_put() {
+  
+  if (put_ == NULL) {
+    put_ = new ::raft_cmdpb::PutResponse;
+  }
+  // @@protoc_insertion_point(field_mutable:raft_cmdpb.Response.put)
+  return put_;
 }
-inline void Response::set_allocated_put(::raft_cmdpb::PutResponse * put)
-{
-    ::google::protobuf::Arena * message_arena = GetArenaNoVirtual();
-    if (message_arena == NULL)
-    {
-        delete put_;
+inline void Response::set_allocated_put(::raft_cmdpb::PutResponse* put) {
+  ::google::protobuf::Arena* message_arena = GetArenaNoVirtual();
+  if (message_arena == NULL) {
+    delete put_;
+  }
+  if (put) {
+    ::google::protobuf::Arena* submessage_arena = NULL;
+    if (message_arena != submessage_arena) {
+      put = ::google::protobuf::internal::GetOwnedMessage(
+          message_arena, put, submessage_arena);
     }
-    if (put)
-    {
-        ::google::protobuf::Arena * submessage_arena = NULL;
-        if (message_arena != submessage_arena)
-        {
-            put = ::google::protobuf::internal::GetOwnedMessage(message_arena, put, submessage_arena);
-        }
-    }
-    else
-    {
-    }
-    put_ = put;
-    // @@protoc_insertion_point(field_set_allocated:raft_cmdpb.Response.put)
+    
+  } else {
+    
+  }
+  put_ = put;
+  // @@protoc_insertion_point(field_set_allocated:raft_cmdpb.Response.put)
 }
 
 // .raft_cmdpb.DeleteResponse delete = 5;
-inline bool Response::has_delete_() const
-{
-    return this != internal_default_instance() && delete__ != NULL;
+inline bool Response::has_delete_() const {
+  return this != internal_default_instance() && delete__ != NULL;
 }
-inline void Response::clear_delete_()
-{
-    if (GetArenaNoVirtual() == NULL && delete__ != NULL)
-    {
-        delete delete__;
-    }
-    delete__ = NULL;
+inline void Response::clear_delete_() {
+  if (GetArenaNoVirtual() == NULL && delete__ != NULL) {
+    delete delete__;
+  }
+  delete__ = NULL;
 }
-inline const ::raft_cmdpb::DeleteResponse & Response::delete_() const
-{
-    const ::raft_cmdpb::DeleteResponse * p = delete__;
-    // @@protoc_insertion_point(field_get:raft_cmdpb.Response.delete)
-    return p != NULL ? *p : *reinterpret_cast<const ::raft_cmdpb::DeleteResponse *>(&::raft_cmdpb::_DeleteResponse_default_instance_);
+inline const ::raft_cmdpb::DeleteResponse& Response::delete_() const {
+  const ::raft_cmdpb::DeleteResponse* p = delete__;
+  // @@protoc_insertion_point(field_get:raft_cmdpb.Response.delete)
+  return p != NULL ? *p : *reinterpret_cast<const ::raft_cmdpb::DeleteResponse*>(
+      &::raft_cmdpb::_DeleteResponse_default_instance_);
 }
-inline ::raft_cmdpb::DeleteResponse * Response::release_delete_()
-{
-    // @@protoc_insertion_point(field_release:raft_cmdpb.Response.delete)
-
-    ::raft_cmdpb::DeleteResponse * temp = delete__;
-    delete__                            = NULL;
-    return temp;
+inline ::raft_cmdpb::DeleteResponse* Response::release_delete_() {
+  // @@protoc_insertion_point(field_release:raft_cmdpb.Response.delete)
+  
+  ::raft_cmdpb::DeleteResponse* temp = delete__;
+  delete__ = NULL;
+  return temp;
 }
-inline ::raft_cmdpb::DeleteResponse * Response::mutable_delete_()
-{
-
-    if (delete__ == NULL)
-    {
-        delete__ = new ::raft_cmdpb::DeleteResponse;
-    }
-    // @@protoc_insertion_point(field_mutable:raft_cmdpb.Response.delete)
-    return delete__;
+inline ::raft_cmdpb::DeleteResponse* Response::mutable_delete_() {
+  
+  if (delete__ == NULL) {
+    delete__ = new ::raft_cmdpb::DeleteResponse;
+  }
+  // @@protoc_insertion_point(field_mutable:raft_cmdpb.Response.delete)
+  return delete__;
 }
-inline void Response::set_allocated_delete_(::raft_cmdpb::DeleteResponse * delete_)
-{
-    ::google::protobuf::Arena * message_arena = GetArenaNoVirtual();
-    if (message_arena == NULL)
-    {
-        delete delete__;
+inline void Response::set_allocated_delete_(::raft_cmdpb::DeleteResponse* delete_) {
+  ::google::protobuf::Arena* message_arena = GetArenaNoVirtual();
+  if (message_arena == NULL) {
+    delete delete__;
+  }
+  if (delete_) {
+    ::google::protobuf::Arena* submessage_arena = NULL;
+    if (message_arena != submessage_arena) {
+      delete_ = ::google::protobuf::internal::GetOwnedMessage(
+          message_arena, delete_, submessage_arena);
     }
-    if (delete_)
-    {
-        ::google::protobuf::Arena * submessage_arena = NULL;
-        if (message_arena != submessage_arena)
-        {
-            delete_ = ::google::protobuf::internal::GetOwnedMessage(message_arena, delete_, submessage_arena);
-        }
-    }
-    else
-    {
-    }
-    delete__ = delete_;
-    // @@protoc_insertion_point(field_set_allocated:raft_cmdpb.Response.delete)
+    
+  } else {
+    
+  }
+  delete__ = delete_;
+  // @@protoc_insertion_point(field_set_allocated:raft_cmdpb.Response.delete)
 }
 
 // .raft_cmdpb.SnapResponse snap = 6;
-inline bool Response::has_snap() const
-{
-    return this != internal_default_instance() && snap_ != NULL;
+inline bool Response::has_snap() const {
+  return this != internal_default_instance() && snap_ != NULL;
 }
-inline void Response::clear_snap()
-{
-    if (GetArenaNoVirtual() == NULL && snap_ != NULL)
-    {
-        delete snap_;
-    }
-    snap_ = NULL;
+inline void Response::clear_snap() {
+  if (GetArenaNoVirtual() == NULL && snap_ != NULL) {
+    delete snap_;
+  }
+  snap_ = NULL;
 }
-inline const ::raft_cmdpb::SnapResponse & Response::snap() const
-{
-    const ::raft_cmdpb::SnapResponse * p = snap_;
-    // @@protoc_insertion_point(field_get:raft_cmdpb.Response.snap)
-    return p != NULL ? *p : *reinterpret_cast<const ::raft_cmdpb::SnapResponse *>(&::raft_cmdpb::_SnapResponse_default_instance_);
+inline const ::raft_cmdpb::SnapResponse& Response::snap() const {
+  const ::raft_cmdpb::SnapResponse* p = snap_;
+  // @@protoc_insertion_point(field_get:raft_cmdpb.Response.snap)
+  return p != NULL ? *p : *reinterpret_cast<const ::raft_cmdpb::SnapResponse*>(
+      &::raft_cmdpb::_SnapResponse_default_instance_);
 }
-inline ::raft_cmdpb::SnapResponse * Response::release_snap()
-{
-    // @@protoc_insertion_point(field_release:raft_cmdpb.Response.snap)
-
-    ::raft_cmdpb::SnapResponse * temp = snap_;
-    snap_                             = NULL;
-    return temp;
+inline ::raft_cmdpb::SnapResponse* Response::release_snap() {
+  // @@protoc_insertion_point(field_release:raft_cmdpb.Response.snap)
+  
+  ::raft_cmdpb::SnapResponse* temp = snap_;
+  snap_ = NULL;
+  return temp;
 }
-inline ::raft_cmdpb::SnapResponse * Response::mutable_snap()
-{
-
-    if (snap_ == NULL)
-    {
-        snap_ = new ::raft_cmdpb::SnapResponse;
-    }
-    // @@protoc_insertion_point(field_mutable:raft_cmdpb.Response.snap)
-    return snap_;
+inline ::raft_cmdpb::SnapResponse* Response::mutable_snap() {
+  
+  if (snap_ == NULL) {
+    snap_ = new ::raft_cmdpb::SnapResponse;
+  }
+  // @@protoc_insertion_point(field_mutable:raft_cmdpb.Response.snap)
+  return snap_;
 }
-inline void Response::set_allocated_snap(::raft_cmdpb::SnapResponse * snap)
-{
-    ::google::protobuf::Arena * message_arena = GetArenaNoVirtual();
-    if (message_arena == NULL)
-    {
-        delete snap_;
+inline void Response::set_allocated_snap(::raft_cmdpb::SnapResponse* snap) {
+  ::google::protobuf::Arena* message_arena = GetArenaNoVirtual();
+  if (message_arena == NULL) {
+    delete snap_;
+  }
+  if (snap) {
+    ::google::protobuf::Arena* submessage_arena = NULL;
+    if (message_arena != submessage_arena) {
+      snap = ::google::protobuf::internal::GetOwnedMessage(
+          message_arena, snap, submessage_arena);
     }
-    if (snap)
-    {
-        ::google::protobuf::Arena * submessage_arena = NULL;
-        if (message_arena != submessage_arena)
-        {
-            snap = ::google::protobuf::internal::GetOwnedMessage(message_arena, snap, submessage_arena);
-        }
-    }
-    else
-    {
-    }
-    snap_ = snap;
-    // @@protoc_insertion_point(field_set_allocated:raft_cmdpb.Response.snap)
+    
+  } else {
+    
+  }
+  snap_ = snap;
+  // @@protoc_insertion_point(field_set_allocated:raft_cmdpb.Response.snap)
 }
 
 // .raft_cmdpb.PrewriteResponse prewrite = 7;
-inline bool Response::has_prewrite() const
-{
-    return this != internal_default_instance() && prewrite_ != NULL;
+inline bool Response::has_prewrite() const {
+  return this != internal_default_instance() && prewrite_ != NULL;
 }
-inline void Response::clear_prewrite()
-{
-    if (GetArenaNoVirtual() == NULL && prewrite_ != NULL)
-    {
-        delete prewrite_;
-    }
-    prewrite_ = NULL;
+inline void Response::clear_prewrite() {
+  if (GetArenaNoVirtual() == NULL && prewrite_ != NULL) {
+    delete prewrite_;
+  }
+  prewrite_ = NULL;
 }
-inline const ::raft_cmdpb::PrewriteResponse & Response::prewrite() const
-{
-    const ::raft_cmdpb::PrewriteResponse * p = prewrite_;
-    // @@protoc_insertion_point(field_get:raft_cmdpb.Response.prewrite)
-    return p != NULL ? *p : *reinterpret_cast<const ::raft_cmdpb::PrewriteResponse *>(&::raft_cmdpb::_PrewriteResponse_default_instance_);
+inline const ::raft_cmdpb::PrewriteResponse& Response::prewrite() const {
+  const ::raft_cmdpb::PrewriteResponse* p = prewrite_;
+  // @@protoc_insertion_point(field_get:raft_cmdpb.Response.prewrite)
+  return p != NULL ? *p : *reinterpret_cast<const ::raft_cmdpb::PrewriteResponse*>(
+      &::raft_cmdpb::_PrewriteResponse_default_instance_);
 }
-inline ::raft_cmdpb::PrewriteResponse * Response::release_prewrite()
-{
-    // @@protoc_insertion_point(field_release:raft_cmdpb.Response.prewrite)
-
-    ::raft_cmdpb::PrewriteResponse * temp = prewrite_;
-    prewrite_                             = NULL;
-    return temp;
+inline ::raft_cmdpb::PrewriteResponse* Response::release_prewrite() {
+  // @@protoc_insertion_point(field_release:raft_cmdpb.Response.prewrite)
+  
+  ::raft_cmdpb::PrewriteResponse* temp = prewrite_;
+  prewrite_ = NULL;
+  return temp;
 }
-inline ::raft_cmdpb::PrewriteResponse * Response::mutable_prewrite()
-{
-
-    if (prewrite_ == NULL)
-    {
-        prewrite_ = new ::raft_cmdpb::PrewriteResponse;
-    }
-    // @@protoc_insertion_point(field_mutable:raft_cmdpb.Response.prewrite)
-    return prewrite_;
+inline ::raft_cmdpb::PrewriteResponse* Response::mutable_prewrite() {
+  
+  if (prewrite_ == NULL) {
+    prewrite_ = new ::raft_cmdpb::PrewriteResponse;
+  }
+  // @@protoc_insertion_point(field_mutable:raft_cmdpb.Response.prewrite)
+  return prewrite_;
 }
-inline void Response::set_allocated_prewrite(::raft_cmdpb::PrewriteResponse * prewrite)
-{
-    ::google::protobuf::Arena * message_arena = GetArenaNoVirtual();
-    if (message_arena == NULL)
-    {
-        delete prewrite_;
+inline void Response::set_allocated_prewrite(::raft_cmdpb::PrewriteResponse* prewrite) {
+  ::google::protobuf::Arena* message_arena = GetArenaNoVirtual();
+  if (message_arena == NULL) {
+    delete prewrite_;
+  }
+  if (prewrite) {
+    ::google::protobuf::Arena* submessage_arena = NULL;
+    if (message_arena != submessage_arena) {
+      prewrite = ::google::protobuf::internal::GetOwnedMessage(
+          message_arena, prewrite, submessage_arena);
     }
-    if (prewrite)
-    {
-        ::google::protobuf::Arena * submessage_arena = NULL;
-        if (message_arena != submessage_arena)
-        {
-            prewrite = ::google::protobuf::internal::GetOwnedMessage(message_arena, prewrite, submessage_arena);
-        }
-    }
-    else
-    {
-    }
-    prewrite_ = prewrite;
-    // @@protoc_insertion_point(field_set_allocated:raft_cmdpb.Response.prewrite)
+    
+  } else {
+    
+  }
+  prewrite_ = prewrite;
+  // @@protoc_insertion_point(field_set_allocated:raft_cmdpb.Response.prewrite)
 }
 
 // .raft_cmdpb.DeleteRangeResponse delte_range = 8;
-inline bool Response::has_delte_range() const
-{
-    return this != internal_default_instance() && delte_range_ != NULL;
+inline bool Response::has_delte_range() const {
+  return this != internal_default_instance() && delte_range_ != NULL;
 }
-inline void Response::clear_delte_range()
-{
-    if (GetArenaNoVirtual() == NULL && delte_range_ != NULL)
-    {
-        delete delte_range_;
-    }
-    delte_range_ = NULL;
+inline void Response::clear_delte_range() {
+  if (GetArenaNoVirtual() == NULL && delte_range_ != NULL) {
+    delete delte_range_;
+  }
+  delte_range_ = NULL;
 }
-inline const ::raft_cmdpb::DeleteRangeResponse & Response::delte_range() const
-{
-    const ::raft_cmdpb::DeleteRangeResponse * p = delte_range_;
-    // @@protoc_insertion_point(field_get:raft_cmdpb.Response.delte_range)
-    return p != NULL ? *p
-                     : *reinterpret_cast<const ::raft_cmdpb::DeleteRangeResponse *>(&::raft_cmdpb::_DeleteRangeResponse_default_instance_);
+inline const ::raft_cmdpb::DeleteRangeResponse& Response::delte_range() const {
+  const ::raft_cmdpb::DeleteRangeResponse* p = delte_range_;
+  // @@protoc_insertion_point(field_get:raft_cmdpb.Response.delte_range)
+  return p != NULL ? *p : *reinterpret_cast<const ::raft_cmdpb::DeleteRangeResponse*>(
+      &::raft_cmdpb::_DeleteRangeResponse_default_instance_);
 }
-inline ::raft_cmdpb::DeleteRangeResponse * Response::release_delte_range()
-{
-    // @@protoc_insertion_point(field_release:raft_cmdpb.Response.delte_range)
-
-    ::raft_cmdpb::DeleteRangeResponse * temp = delte_range_;
-    delte_range_                             = NULL;
-    return temp;
+inline ::raft_cmdpb::DeleteRangeResponse* Response::release_delte_range() {
+  // @@protoc_insertion_point(field_release:raft_cmdpb.Response.delte_range)
+  
+  ::raft_cmdpb::DeleteRangeResponse* temp = delte_range_;
+  delte_range_ = NULL;
+  return temp;
 }
-inline ::raft_cmdpb::DeleteRangeResponse * Response::mutable_delte_range()
-{
-
-    if (delte_range_ == NULL)
-    {
-        delte_range_ = new ::raft_cmdpb::DeleteRangeResponse;
-    }
-    // @@protoc_insertion_point(field_mutable:raft_cmdpb.Response.delte_range)
-    return delte_range_;
+inline ::raft_cmdpb::DeleteRangeResponse* Response::mutable_delte_range() {
+  
+  if (delte_range_ == NULL) {
+    delte_range_ = new ::raft_cmdpb::DeleteRangeResponse;
+  }
+  // @@protoc_insertion_point(field_mutable:raft_cmdpb.Response.delte_range)
+  return delte_range_;
 }
-inline void Response::set_allocated_delte_range(::raft_cmdpb::DeleteRangeResponse * delte_range)
-{
-    ::google::protobuf::Arena * message_arena = GetArenaNoVirtual();
-    if (message_arena == NULL)
-    {
-        delete delte_range_;
+inline void Response::set_allocated_delte_range(::raft_cmdpb::DeleteRangeResponse* delte_range) {
+  ::google::protobuf::Arena* message_arena = GetArenaNoVirtual();
+  if (message_arena == NULL) {
+    delete delte_range_;
+  }
+  if (delte_range) {
+    ::google::protobuf::Arena* submessage_arena = NULL;
+    if (message_arena != submessage_arena) {
+      delte_range = ::google::protobuf::internal::GetOwnedMessage(
+          message_arena, delte_range, submessage_arena);
     }
-    if (delte_range)
-    {
-        ::google::protobuf::Arena * submessage_arena = NULL;
-        if (message_arena != submessage_arena)
-        {
-            delte_range = ::google::protobuf::internal::GetOwnedMessage(message_arena, delte_range, submessage_arena);
-        }
-    }
-    else
-    {
-    }
-    delte_range_ = delte_range;
-    // @@protoc_insertion_point(field_set_allocated:raft_cmdpb.Response.delte_range)
+    
+  } else {
+    
+  }
+  delte_range_ = delte_range;
+  // @@protoc_insertion_point(field_set_allocated:raft_cmdpb.Response.delte_range)
 }
 
 // .raft_cmdpb.IngestSSTResponse ingest_sst = 9;
-inline bool Response::has_ingest_sst() const
-{
-    return this != internal_default_instance() && ingest_sst_ != NULL;
+inline bool Response::has_ingest_sst() const {
+  return this != internal_default_instance() && ingest_sst_ != NULL;
 }
-inline void Response::clear_ingest_sst()
-{
-    if (GetArenaNoVirtual() == NULL && ingest_sst_ != NULL)
-    {
-        delete ingest_sst_;
-    }
-    ingest_sst_ = NULL;
+inline void Response::clear_ingest_sst() {
+  if (GetArenaNoVirtual() == NULL && ingest_sst_ != NULL) {
+    delete ingest_sst_;
+  }
+  ingest_sst_ = NULL;
 }
-inline const ::raft_cmdpb::IngestSSTResponse & Response::ingest_sst() const
-{
-    const ::raft_cmdpb::IngestSSTResponse * p = ingest_sst_;
-    // @@protoc_insertion_point(field_get:raft_cmdpb.Response.ingest_sst)
-    return p != NULL ? *p : *reinterpret_cast<const ::raft_cmdpb::IngestSSTResponse *>(&::raft_cmdpb::_IngestSSTResponse_default_instance_);
+inline const ::raft_cmdpb::IngestSSTResponse& Response::ingest_sst() const {
+  const ::raft_cmdpb::IngestSSTResponse* p = ingest_sst_;
+  // @@protoc_insertion_point(field_get:raft_cmdpb.Response.ingest_sst)
+  return p != NULL ? *p : *reinterpret_cast<const ::raft_cmdpb::IngestSSTResponse*>(
+      &::raft_cmdpb::_IngestSSTResponse_default_instance_);
 }
-inline ::raft_cmdpb::IngestSSTResponse * Response::release_ingest_sst()
-{
-    // @@protoc_insertion_point(field_release:raft_cmdpb.Response.ingest_sst)
-
-    ::raft_cmdpb::IngestSSTResponse * temp = ingest_sst_;
-    ingest_sst_                            = NULL;
-    return temp;
+inline ::raft_cmdpb::IngestSSTResponse* Response::release_ingest_sst() {
+  // @@protoc_insertion_point(field_release:raft_cmdpb.Response.ingest_sst)
+  
+  ::raft_cmdpb::IngestSSTResponse* temp = ingest_sst_;
+  ingest_sst_ = NULL;
+  return temp;
 }
-inline ::raft_cmdpb::IngestSSTResponse * Response::mutable_ingest_sst()
-{
-
-    if (ingest_sst_ == NULL)
-    {
-        ingest_sst_ = new ::raft_cmdpb::IngestSSTResponse;
-    }
-    // @@protoc_insertion_point(field_mutable:raft_cmdpb.Response.ingest_sst)
-    return ingest_sst_;
+inline ::raft_cmdpb::IngestSSTResponse* Response::mutable_ingest_sst() {
+  
+  if (ingest_sst_ == NULL) {
+    ingest_sst_ = new ::raft_cmdpb::IngestSSTResponse;
+  }
+  // @@protoc_insertion_point(field_mutable:raft_cmdpb.Response.ingest_sst)
+  return ingest_sst_;
 }
-inline void Response::set_allocated_ingest_sst(::raft_cmdpb::IngestSSTResponse * ingest_sst)
-{
-    ::google::protobuf::Arena * message_arena = GetArenaNoVirtual();
-    if (message_arena == NULL)
-    {
-        delete ingest_sst_;
+inline void Response::set_allocated_ingest_sst(::raft_cmdpb::IngestSSTResponse* ingest_sst) {
+  ::google::protobuf::Arena* message_arena = GetArenaNoVirtual();
+  if (message_arena == NULL) {
+    delete ingest_sst_;
+  }
+  if (ingest_sst) {
+    ::google::protobuf::Arena* submessage_arena = NULL;
+    if (message_arena != submessage_arena) {
+      ingest_sst = ::google::protobuf::internal::GetOwnedMessage(
+          message_arena, ingest_sst, submessage_arena);
     }
-    if (ingest_sst)
-    {
-        ::google::protobuf::Arena * submessage_arena = NULL;
-        if (message_arena != submessage_arena)
-        {
-            ingest_sst = ::google::protobuf::internal::GetOwnedMessage(message_arena, ingest_sst, submessage_arena);
-        }
-    }
-    else
-    {
-    }
-    ingest_sst_ = ingest_sst;
-    // @@protoc_insertion_point(field_set_allocated:raft_cmdpb.Response.ingest_sst)
+    
+  } else {
+    
+  }
+  ingest_sst_ = ingest_sst;
+  // @@protoc_insertion_point(field_set_allocated:raft_cmdpb.Response.ingest_sst)
 }
 
 // -------------------------------------------------------------------
@@ -7402,71 +7341,61 @@ inline void Response::set_allocated_ingest_sst(::raft_cmdpb::IngestSSTResponse *
 // ChangePeerRequest
 
 // .eraftpb.ConfChangeType change_type = 1;
-inline void ChangePeerRequest::clear_change_type()
-{
-    change_type_ = 0;
+inline void ChangePeerRequest::clear_change_type() {
+  change_type_ = 0;
 }
-inline ::eraftpb::ConfChangeType ChangePeerRequest::change_type() const
-{
-    // @@protoc_insertion_point(field_get:raft_cmdpb.ChangePeerRequest.change_type)
-    return static_cast<::eraftpb::ConfChangeType>(change_type_);
+inline ::eraftpb::ConfChangeType ChangePeerRequest::change_type() const {
+  // @@protoc_insertion_point(field_get:raft_cmdpb.ChangePeerRequest.change_type)
+  return static_cast< ::eraftpb::ConfChangeType >(change_type_);
 }
-inline void ChangePeerRequest::set_change_type(::eraftpb::ConfChangeType value)
-{
-
-    change_type_ = value;
-    // @@protoc_insertion_point(field_set:raft_cmdpb.ChangePeerRequest.change_type)
+inline void ChangePeerRequest::set_change_type(::eraftpb::ConfChangeType value) {
+  
+  change_type_ = value;
+  // @@protoc_insertion_point(field_set:raft_cmdpb.ChangePeerRequest.change_type)
 }
 
 // .metapb.Peer peer = 2;
-inline bool ChangePeerRequest::has_peer() const
-{
-    return this != internal_default_instance() && peer_ != NULL;
+inline bool ChangePeerRequest::has_peer() const {
+  return this != internal_default_instance() && peer_ != NULL;
 }
-inline const ::metapb::Peer & ChangePeerRequest::peer() const
-{
-    const ::metapb::Peer * p = peer_;
-    // @@protoc_insertion_point(field_get:raft_cmdpb.ChangePeerRequest.peer)
-    return p != NULL ? *p : *reinterpret_cast<const ::metapb::Peer *>(&::metapb::_Peer_default_instance_);
+inline const ::metapb::Peer& ChangePeerRequest::peer() const {
+  const ::metapb::Peer* p = peer_;
+  // @@protoc_insertion_point(field_get:raft_cmdpb.ChangePeerRequest.peer)
+  return p != NULL ? *p : *reinterpret_cast<const ::metapb::Peer*>(
+      &::metapb::_Peer_default_instance_);
 }
-inline ::metapb::Peer * ChangePeerRequest::release_peer()
-{
-    // @@protoc_insertion_point(field_release:raft_cmdpb.ChangePeerRequest.peer)
-
-    ::metapb::Peer * temp = peer_;
-    peer_                 = NULL;
-    return temp;
+inline ::metapb::Peer* ChangePeerRequest::release_peer() {
+  // @@protoc_insertion_point(field_release:raft_cmdpb.ChangePeerRequest.peer)
+  
+  ::metapb::Peer* temp = peer_;
+  peer_ = NULL;
+  return temp;
 }
-inline ::metapb::Peer * ChangePeerRequest::mutable_peer()
-{
-
-    if (peer_ == NULL)
-    {
-        peer_ = new ::metapb::Peer;
-    }
-    // @@protoc_insertion_point(field_mutable:raft_cmdpb.ChangePeerRequest.peer)
-    return peer_;
+inline ::metapb::Peer* ChangePeerRequest::mutable_peer() {
+  
+  if (peer_ == NULL) {
+    peer_ = new ::metapb::Peer;
+  }
+  // @@protoc_insertion_point(field_mutable:raft_cmdpb.ChangePeerRequest.peer)
+  return peer_;
 }
-inline void ChangePeerRequest::set_allocated_peer(::metapb::Peer * peer)
-{
-    ::google::protobuf::Arena * message_arena = GetArenaNoVirtual();
-    if (message_arena == NULL)
-    {
-        delete reinterpret_cast<::google::protobuf::MessageLite *>(peer_);
+inline void ChangePeerRequest::set_allocated_peer(::metapb::Peer* peer) {
+  ::google::protobuf::Arena* message_arena = GetArenaNoVirtual();
+  if (message_arena == NULL) {
+    delete reinterpret_cast< ::google::protobuf::MessageLite*>(peer_);
+  }
+  if (peer) {
+    ::google::protobuf::Arena* submessage_arena = NULL;
+    if (message_arena != submessage_arena) {
+      peer = ::google::protobuf::internal::GetOwnedMessage(
+          message_arena, peer, submessage_arena);
     }
-    if (peer)
-    {
-        ::google::protobuf::Arena * submessage_arena = NULL;
-        if (message_arena != submessage_arena)
-        {
-            peer = ::google::protobuf::internal::GetOwnedMessage(message_arena, peer, submessage_arena);
-        }
-    }
-    else
-    {
-    }
-    peer_ = peer;
-    // @@protoc_insertion_point(field_set_allocated:raft_cmdpb.ChangePeerRequest.peer)
+    
+  } else {
+    
+  }
+  peer_ = peer;
+  // @@protoc_insertion_point(field_set_allocated:raft_cmdpb.ChangePeerRequest.peer)
 }
 
 // -------------------------------------------------------------------
@@ -7474,54 +7403,47 @@ inline void ChangePeerRequest::set_allocated_peer(::metapb::Peer * peer)
 // ChangePeerResponse
 
 // .metapb.Region region = 1;
-inline bool ChangePeerResponse::has_region() const
-{
-    return this != internal_default_instance() && region_ != NULL;
+inline bool ChangePeerResponse::has_region() const {
+  return this != internal_default_instance() && region_ != NULL;
 }
-inline const ::metapb::Region & ChangePeerResponse::region() const
-{
-    const ::metapb::Region * p = region_;
-    // @@protoc_insertion_point(field_get:raft_cmdpb.ChangePeerResponse.region)
-    return p != NULL ? *p : *reinterpret_cast<const ::metapb::Region *>(&::metapb::_Region_default_instance_);
+inline const ::metapb::Region& ChangePeerResponse::region() const {
+  const ::metapb::Region* p = region_;
+  // @@protoc_insertion_point(field_get:raft_cmdpb.ChangePeerResponse.region)
+  return p != NULL ? *p : *reinterpret_cast<const ::metapb::Region*>(
+      &::metapb::_Region_default_instance_);
 }
-inline ::metapb::Region * ChangePeerResponse::release_region()
-{
-    // @@protoc_insertion_point(field_release:raft_cmdpb.ChangePeerResponse.region)
-
-    ::metapb::Region * temp = region_;
-    region_                 = NULL;
-    return temp;
+inline ::metapb::Region* ChangePeerResponse::release_region() {
+  // @@protoc_insertion_point(field_release:raft_cmdpb.ChangePeerResponse.region)
+  
+  ::metapb::Region* temp = region_;
+  region_ = NULL;
+  return temp;
 }
-inline ::metapb::Region * ChangePeerResponse::mutable_region()
-{
-
-    if (region_ == NULL)
-    {
-        region_ = new ::metapb::Region;
-    }
-    // @@protoc_insertion_point(field_mutable:raft_cmdpb.ChangePeerResponse.region)
-    return region_;
+inline ::metapb::Region* ChangePeerResponse::mutable_region() {
+  
+  if (region_ == NULL) {
+    region_ = new ::metapb::Region;
+  }
+  // @@protoc_insertion_point(field_mutable:raft_cmdpb.ChangePeerResponse.region)
+  return region_;
 }
-inline void ChangePeerResponse::set_allocated_region(::metapb::Region * region)
-{
-    ::google::protobuf::Arena * message_arena = GetArenaNoVirtual();
-    if (message_arena == NULL)
-    {
-        delete reinterpret_cast<::google::protobuf::MessageLite *>(region_);
+inline void ChangePeerResponse::set_allocated_region(::metapb::Region* region) {
+  ::google::protobuf::Arena* message_arena = GetArenaNoVirtual();
+  if (message_arena == NULL) {
+    delete reinterpret_cast< ::google::protobuf::MessageLite*>(region_);
+  }
+  if (region) {
+    ::google::protobuf::Arena* submessage_arena = NULL;
+    if (message_arena != submessage_arena) {
+      region = ::google::protobuf::internal::GetOwnedMessage(
+          message_arena, region, submessage_arena);
     }
-    if (region)
-    {
-        ::google::protobuf::Arena * submessage_arena = NULL;
-        if (message_arena != submessage_arena)
-        {
-            region = ::google::protobuf::internal::GetOwnedMessage(message_arena, region, submessage_arena);
-        }
-    }
-    else
-    {
-    }
-    region_ = region;
-    // @@protoc_insertion_point(field_set_allocated:raft_cmdpb.ChangePeerResponse.region)
+    
+  } else {
+    
+  }
+  region_ = region;
+  // @@protoc_insertion_point(field_set_allocated:raft_cmdpb.ChangePeerResponse.region)
 }
 
 // -------------------------------------------------------------------
@@ -7529,132 +7451,114 @@ inline void ChangePeerResponse::set_allocated_region(::metapb::Region * region)
 // SplitRequest
 
 // bytes split_key = 1;
-inline void SplitRequest::clear_split_key()
-{
-    split_key_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+inline void SplitRequest::clear_split_key() {
+  split_key_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
-inline const ::std::string & SplitRequest::split_key() const
-{
-    // @@protoc_insertion_point(field_get:raft_cmdpb.SplitRequest.split_key)
-    return split_key_.GetNoArena();
+inline const ::std::string& SplitRequest::split_key() const {
+  // @@protoc_insertion_point(field_get:raft_cmdpb.SplitRequest.split_key)
+  return split_key_.GetNoArena();
 }
-inline void SplitRequest::set_split_key(const ::std::string & value)
-{
-
-    split_key_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
-    // @@protoc_insertion_point(field_set:raft_cmdpb.SplitRequest.split_key)
+inline void SplitRequest::set_split_key(const ::std::string& value) {
+  
+  split_key_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
+  // @@protoc_insertion_point(field_set:raft_cmdpb.SplitRequest.split_key)
 }
 #if LANG_CXX11
-inline void SplitRequest::set_split_key(::std::string && value)
-{
-
-    split_key_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
-    // @@protoc_insertion_point(field_set_rvalue:raft_cmdpb.SplitRequest.split_key)
+inline void SplitRequest::set_split_key(::std::string&& value) {
+  
+  split_key_.SetNoArena(
+    &::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
+  // @@protoc_insertion_point(field_set_rvalue:raft_cmdpb.SplitRequest.split_key)
 }
 #endif
-inline void SplitRequest::set_split_key(const char * value)
-{
-    GOOGLE_DCHECK(value != NULL);
-
-    split_key_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
-    // @@protoc_insertion_point(field_set_char:raft_cmdpb.SplitRequest.split_key)
+inline void SplitRequest::set_split_key(const char* value) {
+  GOOGLE_DCHECK(value != NULL);
+  
+  split_key_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
+  // @@protoc_insertion_point(field_set_char:raft_cmdpb.SplitRequest.split_key)
 }
-inline void SplitRequest::set_split_key(const void * value, size_t size)
-{
-
-    split_key_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
-                          ::std::string(reinterpret_cast<const char *>(value), size));
-    // @@protoc_insertion_point(field_set_pointer:raft_cmdpb.SplitRequest.split_key)
+inline void SplitRequest::set_split_key(const void* value, size_t size) {
+  
+  split_key_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+      ::std::string(reinterpret_cast<const char*>(value), size));
+  // @@protoc_insertion_point(field_set_pointer:raft_cmdpb.SplitRequest.split_key)
 }
-inline ::std::string * SplitRequest::mutable_split_key()
-{
-
-    // @@protoc_insertion_point(field_mutable:raft_cmdpb.SplitRequest.split_key)
-    return split_key_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+inline ::std::string* SplitRequest::mutable_split_key() {
+  
+  // @@protoc_insertion_point(field_mutable:raft_cmdpb.SplitRequest.split_key)
+  return split_key_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
-inline ::std::string * SplitRequest::release_split_key()
-{
-    // @@protoc_insertion_point(field_release:raft_cmdpb.SplitRequest.split_key)
-
-    return split_key_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+inline ::std::string* SplitRequest::release_split_key() {
+  // @@protoc_insertion_point(field_release:raft_cmdpb.SplitRequest.split_key)
+  
+  return split_key_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
-inline void SplitRequest::set_allocated_split_key(::std::string * split_key)
-{
-    if (split_key != NULL) {}
-    else
-    {
-    }
-    split_key_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), split_key);
-    // @@protoc_insertion_point(field_set_allocated:raft_cmdpb.SplitRequest.split_key)
+inline void SplitRequest::set_allocated_split_key(::std::string* split_key) {
+  if (split_key != NULL) {
+    
+  } else {
+    
+  }
+  split_key_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), split_key);
+  // @@protoc_insertion_point(field_set_allocated:raft_cmdpb.SplitRequest.split_key)
 }
 
 // uint64 new_region_id = 2;
-inline void SplitRequest::clear_new_region_id()
-{
-    new_region_id_ = GOOGLE_ULONGLONG(0);
+inline void SplitRequest::clear_new_region_id() {
+  new_region_id_ = GOOGLE_ULONGLONG(0);
 }
-inline ::google::protobuf::uint64 SplitRequest::new_region_id() const
-{
-    // @@protoc_insertion_point(field_get:raft_cmdpb.SplitRequest.new_region_id)
-    return new_region_id_;
+inline ::google::protobuf::uint64 SplitRequest::new_region_id() const {
+  // @@protoc_insertion_point(field_get:raft_cmdpb.SplitRequest.new_region_id)
+  return new_region_id_;
 }
-inline void SplitRequest::set_new_region_id(::google::protobuf::uint64 value)
-{
-
-    new_region_id_ = value;
-    // @@protoc_insertion_point(field_set:raft_cmdpb.SplitRequest.new_region_id)
+inline void SplitRequest::set_new_region_id(::google::protobuf::uint64 value) {
+  
+  new_region_id_ = value;
+  // @@protoc_insertion_point(field_set:raft_cmdpb.SplitRequest.new_region_id)
 }
 
 // repeated uint64 new_peer_ids = 3;
-inline int SplitRequest::new_peer_ids_size() const
-{
-    return new_peer_ids_.size();
+inline int SplitRequest::new_peer_ids_size() const {
+  return new_peer_ids_.size();
 }
-inline void SplitRequest::clear_new_peer_ids()
-{
-    new_peer_ids_.Clear();
+inline void SplitRequest::clear_new_peer_ids() {
+  new_peer_ids_.Clear();
 }
-inline ::google::protobuf::uint64 SplitRequest::new_peer_ids(int index) const
-{
-    // @@protoc_insertion_point(field_get:raft_cmdpb.SplitRequest.new_peer_ids)
-    return new_peer_ids_.Get(index);
+inline ::google::protobuf::uint64 SplitRequest::new_peer_ids(int index) const {
+  // @@protoc_insertion_point(field_get:raft_cmdpb.SplitRequest.new_peer_ids)
+  return new_peer_ids_.Get(index);
 }
-inline void SplitRequest::set_new_peer_ids(int index, ::google::protobuf::uint64 value)
-{
-    new_peer_ids_.Set(index, value);
-    // @@protoc_insertion_point(field_set:raft_cmdpb.SplitRequest.new_peer_ids)
+inline void SplitRequest::set_new_peer_ids(int index, ::google::protobuf::uint64 value) {
+  new_peer_ids_.Set(index, value);
+  // @@protoc_insertion_point(field_set:raft_cmdpb.SplitRequest.new_peer_ids)
 }
-inline void SplitRequest::add_new_peer_ids(::google::protobuf::uint64 value)
-{
-    new_peer_ids_.Add(value);
-    // @@protoc_insertion_point(field_add:raft_cmdpb.SplitRequest.new_peer_ids)
+inline void SplitRequest::add_new_peer_ids(::google::protobuf::uint64 value) {
+  new_peer_ids_.Add(value);
+  // @@protoc_insertion_point(field_add:raft_cmdpb.SplitRequest.new_peer_ids)
 }
-inline const ::google::protobuf::RepeatedField<::google::protobuf::uint64> & SplitRequest::new_peer_ids() const
-{
-    // @@protoc_insertion_point(field_list:raft_cmdpb.SplitRequest.new_peer_ids)
-    return new_peer_ids_;
+inline const ::google::protobuf::RepeatedField< ::google::protobuf::uint64 >&
+SplitRequest::new_peer_ids() const {
+  // @@protoc_insertion_point(field_list:raft_cmdpb.SplitRequest.new_peer_ids)
+  return new_peer_ids_;
 }
-inline ::google::protobuf::RepeatedField<::google::protobuf::uint64> * SplitRequest::mutable_new_peer_ids()
-{
-    // @@protoc_insertion_point(field_mutable_list:raft_cmdpb.SplitRequest.new_peer_ids)
-    return &new_peer_ids_;
+inline ::google::protobuf::RepeatedField< ::google::protobuf::uint64 >*
+SplitRequest::mutable_new_peer_ids() {
+  // @@protoc_insertion_point(field_mutable_list:raft_cmdpb.SplitRequest.new_peer_ids)
+  return &new_peer_ids_;
 }
 
 // bool right_derive = 4 [deprecated = true];
-inline void SplitRequest::clear_right_derive()
-{
-    right_derive_ = false;
+inline void SplitRequest::clear_right_derive() {
+  right_derive_ = false;
 }
-inline bool SplitRequest::right_derive() const
-{
-    // @@protoc_insertion_point(field_get:raft_cmdpb.SplitRequest.right_derive)
-    return right_derive_;
+inline bool SplitRequest::right_derive() const {
+  // @@protoc_insertion_point(field_get:raft_cmdpb.SplitRequest.right_derive)
+  return right_derive_;
 }
-inline void SplitRequest::set_right_derive(bool value)
-{
-
-    right_derive_ = value;
-    // @@protoc_insertion_point(field_set:raft_cmdpb.SplitRequest.right_derive)
+inline void SplitRequest::set_right_derive(bool value) {
+  
+  right_derive_ = value;
+  // @@protoc_insertion_point(field_set:raft_cmdpb.SplitRequest.right_derive)
 }
 
 // -------------------------------------------------------------------
@@ -7662,105 +7566,91 @@ inline void SplitRequest::set_right_derive(bool value)
 // SplitResponse
 
 // .metapb.Region left = 1;
-inline bool SplitResponse::has_left() const
-{
-    return this != internal_default_instance() && left_ != NULL;
+inline bool SplitResponse::has_left() const {
+  return this != internal_default_instance() && left_ != NULL;
 }
-inline const ::metapb::Region & SplitResponse::left() const
-{
-    const ::metapb::Region * p = left_;
-    // @@protoc_insertion_point(field_get:raft_cmdpb.SplitResponse.left)
-    return p != NULL ? *p : *reinterpret_cast<const ::metapb::Region *>(&::metapb::_Region_default_instance_);
+inline const ::metapb::Region& SplitResponse::left() const {
+  const ::metapb::Region* p = left_;
+  // @@protoc_insertion_point(field_get:raft_cmdpb.SplitResponse.left)
+  return p != NULL ? *p : *reinterpret_cast<const ::metapb::Region*>(
+      &::metapb::_Region_default_instance_);
 }
-inline ::metapb::Region * SplitResponse::release_left()
-{
-    // @@protoc_insertion_point(field_release:raft_cmdpb.SplitResponse.left)
-
-    ::metapb::Region * temp = left_;
-    left_                   = NULL;
-    return temp;
+inline ::metapb::Region* SplitResponse::release_left() {
+  // @@protoc_insertion_point(field_release:raft_cmdpb.SplitResponse.left)
+  
+  ::metapb::Region* temp = left_;
+  left_ = NULL;
+  return temp;
 }
-inline ::metapb::Region * SplitResponse::mutable_left()
-{
-
-    if (left_ == NULL)
-    {
-        left_ = new ::metapb::Region;
-    }
-    // @@protoc_insertion_point(field_mutable:raft_cmdpb.SplitResponse.left)
-    return left_;
+inline ::metapb::Region* SplitResponse::mutable_left() {
+  
+  if (left_ == NULL) {
+    left_ = new ::metapb::Region;
+  }
+  // @@protoc_insertion_point(field_mutable:raft_cmdpb.SplitResponse.left)
+  return left_;
 }
-inline void SplitResponse::set_allocated_left(::metapb::Region * left)
-{
-    ::google::protobuf::Arena * message_arena = GetArenaNoVirtual();
-    if (message_arena == NULL)
-    {
-        delete reinterpret_cast<::google::protobuf::MessageLite *>(left_);
+inline void SplitResponse::set_allocated_left(::metapb::Region* left) {
+  ::google::protobuf::Arena* message_arena = GetArenaNoVirtual();
+  if (message_arena == NULL) {
+    delete reinterpret_cast< ::google::protobuf::MessageLite*>(left_);
+  }
+  if (left) {
+    ::google::protobuf::Arena* submessage_arena = NULL;
+    if (message_arena != submessage_arena) {
+      left = ::google::protobuf::internal::GetOwnedMessage(
+          message_arena, left, submessage_arena);
     }
-    if (left)
-    {
-        ::google::protobuf::Arena * submessage_arena = NULL;
-        if (message_arena != submessage_arena)
-        {
-            left = ::google::protobuf::internal::GetOwnedMessage(message_arena, left, submessage_arena);
-        }
-    }
-    else
-    {
-    }
-    left_ = left;
-    // @@protoc_insertion_point(field_set_allocated:raft_cmdpb.SplitResponse.left)
+    
+  } else {
+    
+  }
+  left_ = left;
+  // @@protoc_insertion_point(field_set_allocated:raft_cmdpb.SplitResponse.left)
 }
 
 // .metapb.Region right = 2;
-inline bool SplitResponse::has_right() const
-{
-    return this != internal_default_instance() && right_ != NULL;
+inline bool SplitResponse::has_right() const {
+  return this != internal_default_instance() && right_ != NULL;
 }
-inline const ::metapb::Region & SplitResponse::right() const
-{
-    const ::metapb::Region * p = right_;
-    // @@protoc_insertion_point(field_get:raft_cmdpb.SplitResponse.right)
-    return p != NULL ? *p : *reinterpret_cast<const ::metapb::Region *>(&::metapb::_Region_default_instance_);
+inline const ::metapb::Region& SplitResponse::right() const {
+  const ::metapb::Region* p = right_;
+  // @@protoc_insertion_point(field_get:raft_cmdpb.SplitResponse.right)
+  return p != NULL ? *p : *reinterpret_cast<const ::metapb::Region*>(
+      &::metapb::_Region_default_instance_);
 }
-inline ::metapb::Region * SplitResponse::release_right()
-{
-    // @@protoc_insertion_point(field_release:raft_cmdpb.SplitResponse.right)
-
-    ::metapb::Region * temp = right_;
-    right_                  = NULL;
-    return temp;
+inline ::metapb::Region* SplitResponse::release_right() {
+  // @@protoc_insertion_point(field_release:raft_cmdpb.SplitResponse.right)
+  
+  ::metapb::Region* temp = right_;
+  right_ = NULL;
+  return temp;
 }
-inline ::metapb::Region * SplitResponse::mutable_right()
-{
-
-    if (right_ == NULL)
-    {
-        right_ = new ::metapb::Region;
-    }
-    // @@protoc_insertion_point(field_mutable:raft_cmdpb.SplitResponse.right)
-    return right_;
+inline ::metapb::Region* SplitResponse::mutable_right() {
+  
+  if (right_ == NULL) {
+    right_ = new ::metapb::Region;
+  }
+  // @@protoc_insertion_point(field_mutable:raft_cmdpb.SplitResponse.right)
+  return right_;
 }
-inline void SplitResponse::set_allocated_right(::metapb::Region * right)
-{
-    ::google::protobuf::Arena * message_arena = GetArenaNoVirtual();
-    if (message_arena == NULL)
-    {
-        delete reinterpret_cast<::google::protobuf::MessageLite *>(right_);
+inline void SplitResponse::set_allocated_right(::metapb::Region* right) {
+  ::google::protobuf::Arena* message_arena = GetArenaNoVirtual();
+  if (message_arena == NULL) {
+    delete reinterpret_cast< ::google::protobuf::MessageLite*>(right_);
+  }
+  if (right) {
+    ::google::protobuf::Arena* submessage_arena = NULL;
+    if (message_arena != submessage_arena) {
+      right = ::google::protobuf::internal::GetOwnedMessage(
+          message_arena, right, submessage_arena);
     }
-    if (right)
-    {
-        ::google::protobuf::Arena * submessage_arena = NULL;
-        if (message_arena != submessage_arena)
-        {
-            right = ::google::protobuf::internal::GetOwnedMessage(message_arena, right, submessage_arena);
-        }
-    }
-    else
-    {
-    }
-    right_ = right;
-    // @@protoc_insertion_point(field_set_allocated:raft_cmdpb.SplitResponse.right)
+    
+  } else {
+    
+  }
+  right_ = right;
+  // @@protoc_insertion_point(field_set_allocated:raft_cmdpb.SplitResponse.right)
 }
 
 // -------------------------------------------------------------------
@@ -7768,55 +7658,47 @@ inline void SplitResponse::set_allocated_right(::metapb::Region * right)
 // BatchSplitRequest
 
 // repeated .raft_cmdpb.SplitRequest requests = 1;
-inline int BatchSplitRequest::requests_size() const
-{
-    return requests_.size();
+inline int BatchSplitRequest::requests_size() const {
+  return requests_.size();
 }
-inline void BatchSplitRequest::clear_requests()
-{
-    requests_.Clear();
+inline void BatchSplitRequest::clear_requests() {
+  requests_.Clear();
 }
-inline const ::raft_cmdpb::SplitRequest & BatchSplitRequest::requests(int index) const
-{
-    // @@protoc_insertion_point(field_get:raft_cmdpb.BatchSplitRequest.requests)
-    return requests_.Get(index);
+inline const ::raft_cmdpb::SplitRequest& BatchSplitRequest::requests(int index) const {
+  // @@protoc_insertion_point(field_get:raft_cmdpb.BatchSplitRequest.requests)
+  return requests_.Get(index);
 }
-inline ::raft_cmdpb::SplitRequest * BatchSplitRequest::mutable_requests(int index)
-{
-    // @@protoc_insertion_point(field_mutable:raft_cmdpb.BatchSplitRequest.requests)
-    return requests_.Mutable(index);
+inline ::raft_cmdpb::SplitRequest* BatchSplitRequest::mutable_requests(int index) {
+  // @@protoc_insertion_point(field_mutable:raft_cmdpb.BatchSplitRequest.requests)
+  return requests_.Mutable(index);
 }
-inline ::raft_cmdpb::SplitRequest * BatchSplitRequest::add_requests()
-{
-    // @@protoc_insertion_point(field_add:raft_cmdpb.BatchSplitRequest.requests)
-    return requests_.Add();
+inline ::raft_cmdpb::SplitRequest* BatchSplitRequest::add_requests() {
+  // @@protoc_insertion_point(field_add:raft_cmdpb.BatchSplitRequest.requests)
+  return requests_.Add();
 }
-inline ::google::protobuf::RepeatedPtrField<::raft_cmdpb::SplitRequest> * BatchSplitRequest::mutable_requests()
-{
-    // @@protoc_insertion_point(field_mutable_list:raft_cmdpb.BatchSplitRequest.requests)
-    return &requests_;
+inline ::google::protobuf::RepeatedPtrField< ::raft_cmdpb::SplitRequest >*
+BatchSplitRequest::mutable_requests() {
+  // @@protoc_insertion_point(field_mutable_list:raft_cmdpb.BatchSplitRequest.requests)
+  return &requests_;
 }
-inline const ::google::protobuf::RepeatedPtrField<::raft_cmdpb::SplitRequest> & BatchSplitRequest::requests() const
-{
-    // @@protoc_insertion_point(field_list:raft_cmdpb.BatchSplitRequest.requests)
-    return requests_;
+inline const ::google::protobuf::RepeatedPtrField< ::raft_cmdpb::SplitRequest >&
+BatchSplitRequest::requests() const {
+  // @@protoc_insertion_point(field_list:raft_cmdpb.BatchSplitRequest.requests)
+  return requests_;
 }
 
 // bool right_derive = 2;
-inline void BatchSplitRequest::clear_right_derive()
-{
-    right_derive_ = false;
+inline void BatchSplitRequest::clear_right_derive() {
+  right_derive_ = false;
 }
-inline bool BatchSplitRequest::right_derive() const
-{
-    // @@protoc_insertion_point(field_get:raft_cmdpb.BatchSplitRequest.right_derive)
-    return right_derive_;
+inline bool BatchSplitRequest::right_derive() const {
+  // @@protoc_insertion_point(field_get:raft_cmdpb.BatchSplitRequest.right_derive)
+  return right_derive_;
 }
-inline void BatchSplitRequest::set_right_derive(bool value)
-{
-
-    right_derive_ = value;
-    // @@protoc_insertion_point(field_set:raft_cmdpb.BatchSplitRequest.right_derive)
+inline void BatchSplitRequest::set_right_derive(bool value) {
+  
+  right_derive_ = value;
+  // @@protoc_insertion_point(field_set:raft_cmdpb.BatchSplitRequest.right_derive)
 }
 
 // -------------------------------------------------------------------
@@ -7824,34 +7706,30 @@ inline void BatchSplitRequest::set_right_derive(bool value)
 // BatchSplitResponse
 
 // repeated .metapb.Region regions = 1;
-inline int BatchSplitResponse::regions_size() const
-{
-    return regions_.size();
+inline int BatchSplitResponse::regions_size() const {
+  return regions_.size();
 }
-inline const ::metapb::Region & BatchSplitResponse::regions(int index) const
-{
-    // @@protoc_insertion_point(field_get:raft_cmdpb.BatchSplitResponse.regions)
-    return regions_.Get(index);
+inline const ::metapb::Region& BatchSplitResponse::regions(int index) const {
+  // @@protoc_insertion_point(field_get:raft_cmdpb.BatchSplitResponse.regions)
+  return regions_.Get(index);
 }
-inline ::metapb::Region * BatchSplitResponse::mutable_regions(int index)
-{
-    // @@protoc_insertion_point(field_mutable:raft_cmdpb.BatchSplitResponse.regions)
-    return regions_.Mutable(index);
+inline ::metapb::Region* BatchSplitResponse::mutable_regions(int index) {
+  // @@protoc_insertion_point(field_mutable:raft_cmdpb.BatchSplitResponse.regions)
+  return regions_.Mutable(index);
 }
-inline ::metapb::Region * BatchSplitResponse::add_regions()
-{
-    // @@protoc_insertion_point(field_add:raft_cmdpb.BatchSplitResponse.regions)
-    return regions_.Add();
+inline ::metapb::Region* BatchSplitResponse::add_regions() {
+  // @@protoc_insertion_point(field_add:raft_cmdpb.BatchSplitResponse.regions)
+  return regions_.Add();
 }
-inline ::google::protobuf::RepeatedPtrField<::metapb::Region> * BatchSplitResponse::mutable_regions()
-{
-    // @@protoc_insertion_point(field_mutable_list:raft_cmdpb.BatchSplitResponse.regions)
-    return &regions_;
+inline ::google::protobuf::RepeatedPtrField< ::metapb::Region >*
+BatchSplitResponse::mutable_regions() {
+  // @@protoc_insertion_point(field_mutable_list:raft_cmdpb.BatchSplitResponse.regions)
+  return &regions_;
 }
-inline const ::google::protobuf::RepeatedPtrField<::metapb::Region> & BatchSplitResponse::regions() const
-{
-    // @@protoc_insertion_point(field_list:raft_cmdpb.BatchSplitResponse.regions)
-    return regions_;
+inline const ::google::protobuf::RepeatedPtrField< ::metapb::Region >&
+BatchSplitResponse::regions() const {
+  // @@protoc_insertion_point(field_list:raft_cmdpb.BatchSplitResponse.regions)
+  return regions_;
 }
 
 // -------------------------------------------------------------------
@@ -7859,37 +7737,31 @@ inline const ::google::protobuf::RepeatedPtrField<::metapb::Region> & BatchSplit
 // CompactLogRequest
 
 // uint64 compact_index = 1;
-inline void CompactLogRequest::clear_compact_index()
-{
-    compact_index_ = GOOGLE_ULONGLONG(0);
+inline void CompactLogRequest::clear_compact_index() {
+  compact_index_ = GOOGLE_ULONGLONG(0);
 }
-inline ::google::protobuf::uint64 CompactLogRequest::compact_index() const
-{
-    // @@protoc_insertion_point(field_get:raft_cmdpb.CompactLogRequest.compact_index)
-    return compact_index_;
+inline ::google::protobuf::uint64 CompactLogRequest::compact_index() const {
+  // @@protoc_insertion_point(field_get:raft_cmdpb.CompactLogRequest.compact_index)
+  return compact_index_;
 }
-inline void CompactLogRequest::set_compact_index(::google::protobuf::uint64 value)
-{
-
-    compact_index_ = value;
-    // @@protoc_insertion_point(field_set:raft_cmdpb.CompactLogRequest.compact_index)
+inline void CompactLogRequest::set_compact_index(::google::protobuf::uint64 value) {
+  
+  compact_index_ = value;
+  // @@protoc_insertion_point(field_set:raft_cmdpb.CompactLogRequest.compact_index)
 }
 
 // uint64 compact_term = 2;
-inline void CompactLogRequest::clear_compact_term()
-{
-    compact_term_ = GOOGLE_ULONGLONG(0);
+inline void CompactLogRequest::clear_compact_term() {
+  compact_term_ = GOOGLE_ULONGLONG(0);
 }
-inline ::google::protobuf::uint64 CompactLogRequest::compact_term() const
-{
-    // @@protoc_insertion_point(field_get:raft_cmdpb.CompactLogRequest.compact_term)
-    return compact_term_;
+inline ::google::protobuf::uint64 CompactLogRequest::compact_term() const {
+  // @@protoc_insertion_point(field_get:raft_cmdpb.CompactLogRequest.compact_term)
+  return compact_term_;
 }
-inline void CompactLogRequest::set_compact_term(::google::protobuf::uint64 value)
-{
-
-    compact_term_ = value;
-    // @@protoc_insertion_point(field_set:raft_cmdpb.CompactLogRequest.compact_term)
+inline void CompactLogRequest::set_compact_term(::google::protobuf::uint64 value) {
+  
+  compact_term_ = value;
+  // @@protoc_insertion_point(field_set:raft_cmdpb.CompactLogRequest.compact_term)
 }
 
 // -------------------------------------------------------------------
@@ -7901,54 +7773,47 @@ inline void CompactLogRequest::set_compact_term(::google::protobuf::uint64 value
 // TransferLeaderRequest
 
 // .metapb.Peer peer = 1;
-inline bool TransferLeaderRequest::has_peer() const
-{
-    return this != internal_default_instance() && peer_ != NULL;
+inline bool TransferLeaderRequest::has_peer() const {
+  return this != internal_default_instance() && peer_ != NULL;
 }
-inline const ::metapb::Peer & TransferLeaderRequest::peer() const
-{
-    const ::metapb::Peer * p = peer_;
-    // @@protoc_insertion_point(field_get:raft_cmdpb.TransferLeaderRequest.peer)
-    return p != NULL ? *p : *reinterpret_cast<const ::metapb::Peer *>(&::metapb::_Peer_default_instance_);
+inline const ::metapb::Peer& TransferLeaderRequest::peer() const {
+  const ::metapb::Peer* p = peer_;
+  // @@protoc_insertion_point(field_get:raft_cmdpb.TransferLeaderRequest.peer)
+  return p != NULL ? *p : *reinterpret_cast<const ::metapb::Peer*>(
+      &::metapb::_Peer_default_instance_);
 }
-inline ::metapb::Peer * TransferLeaderRequest::release_peer()
-{
-    // @@protoc_insertion_point(field_release:raft_cmdpb.TransferLeaderRequest.peer)
-
-    ::metapb::Peer * temp = peer_;
-    peer_                 = NULL;
-    return temp;
+inline ::metapb::Peer* TransferLeaderRequest::release_peer() {
+  // @@protoc_insertion_point(field_release:raft_cmdpb.TransferLeaderRequest.peer)
+  
+  ::metapb::Peer* temp = peer_;
+  peer_ = NULL;
+  return temp;
 }
-inline ::metapb::Peer * TransferLeaderRequest::mutable_peer()
-{
-
-    if (peer_ == NULL)
-    {
-        peer_ = new ::metapb::Peer;
-    }
-    // @@protoc_insertion_point(field_mutable:raft_cmdpb.TransferLeaderRequest.peer)
-    return peer_;
+inline ::metapb::Peer* TransferLeaderRequest::mutable_peer() {
+  
+  if (peer_ == NULL) {
+    peer_ = new ::metapb::Peer;
+  }
+  // @@protoc_insertion_point(field_mutable:raft_cmdpb.TransferLeaderRequest.peer)
+  return peer_;
 }
-inline void TransferLeaderRequest::set_allocated_peer(::metapb::Peer * peer)
-{
-    ::google::protobuf::Arena * message_arena = GetArenaNoVirtual();
-    if (message_arena == NULL)
-    {
-        delete reinterpret_cast<::google::protobuf::MessageLite *>(peer_);
+inline void TransferLeaderRequest::set_allocated_peer(::metapb::Peer* peer) {
+  ::google::protobuf::Arena* message_arena = GetArenaNoVirtual();
+  if (message_arena == NULL) {
+    delete reinterpret_cast< ::google::protobuf::MessageLite*>(peer_);
+  }
+  if (peer) {
+    ::google::protobuf::Arena* submessage_arena = NULL;
+    if (message_arena != submessage_arena) {
+      peer = ::google::protobuf::internal::GetOwnedMessage(
+          message_arena, peer, submessage_arena);
     }
-    if (peer)
-    {
-        ::google::protobuf::Arena * submessage_arena = NULL;
-        if (message_arena != submessage_arena)
-        {
-            peer = ::google::protobuf::internal::GetOwnedMessage(message_arena, peer, submessage_arena);
-        }
-    }
-    else
-    {
-    }
-    peer_ = peer;
-    // @@protoc_insertion_point(field_set_allocated:raft_cmdpb.TransferLeaderRequest.peer)
+    
+  } else {
+    
+  }
+  peer_ = peer;
+  // @@protoc_insertion_point(field_set_allocated:raft_cmdpb.TransferLeaderRequest.peer)
 }
 
 // -------------------------------------------------------------------
@@ -7960,80 +7825,70 @@ inline void TransferLeaderRequest::set_allocated_peer(::metapb::Peer * peer)
 // VerifyHashRequest
 
 // uint64 index = 1;
-inline void VerifyHashRequest::clear_index()
-{
-    index_ = GOOGLE_ULONGLONG(0);
+inline void VerifyHashRequest::clear_index() {
+  index_ = GOOGLE_ULONGLONG(0);
 }
-inline ::google::protobuf::uint64 VerifyHashRequest::index() const
-{
-    // @@protoc_insertion_point(field_get:raft_cmdpb.VerifyHashRequest.index)
-    return index_;
+inline ::google::protobuf::uint64 VerifyHashRequest::index() const {
+  // @@protoc_insertion_point(field_get:raft_cmdpb.VerifyHashRequest.index)
+  return index_;
 }
-inline void VerifyHashRequest::set_index(::google::protobuf::uint64 value)
-{
-
-    index_ = value;
-    // @@protoc_insertion_point(field_set:raft_cmdpb.VerifyHashRequest.index)
+inline void VerifyHashRequest::set_index(::google::protobuf::uint64 value) {
+  
+  index_ = value;
+  // @@protoc_insertion_point(field_set:raft_cmdpb.VerifyHashRequest.index)
 }
 
 // bytes hash = 2;
-inline void VerifyHashRequest::clear_hash()
-{
-    hash_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+inline void VerifyHashRequest::clear_hash() {
+  hash_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
-inline const ::std::string & VerifyHashRequest::hash() const
-{
-    // @@protoc_insertion_point(field_get:raft_cmdpb.VerifyHashRequest.hash)
-    return hash_.GetNoArena();
+inline const ::std::string& VerifyHashRequest::hash() const {
+  // @@protoc_insertion_point(field_get:raft_cmdpb.VerifyHashRequest.hash)
+  return hash_.GetNoArena();
 }
-inline void VerifyHashRequest::set_hash(const ::std::string & value)
-{
-
-    hash_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
-    // @@protoc_insertion_point(field_set:raft_cmdpb.VerifyHashRequest.hash)
+inline void VerifyHashRequest::set_hash(const ::std::string& value) {
+  
+  hash_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
+  // @@protoc_insertion_point(field_set:raft_cmdpb.VerifyHashRequest.hash)
 }
 #if LANG_CXX11
-inline void VerifyHashRequest::set_hash(::std::string && value)
-{
-
-    hash_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
-    // @@protoc_insertion_point(field_set_rvalue:raft_cmdpb.VerifyHashRequest.hash)
+inline void VerifyHashRequest::set_hash(::std::string&& value) {
+  
+  hash_.SetNoArena(
+    &::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
+  // @@protoc_insertion_point(field_set_rvalue:raft_cmdpb.VerifyHashRequest.hash)
 }
 #endif
-inline void VerifyHashRequest::set_hash(const char * value)
-{
-    GOOGLE_DCHECK(value != NULL);
-
-    hash_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
-    // @@protoc_insertion_point(field_set_char:raft_cmdpb.VerifyHashRequest.hash)
+inline void VerifyHashRequest::set_hash(const char* value) {
+  GOOGLE_DCHECK(value != NULL);
+  
+  hash_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
+  // @@protoc_insertion_point(field_set_char:raft_cmdpb.VerifyHashRequest.hash)
 }
-inline void VerifyHashRequest::set_hash(const void * value, size_t size)
-{
-
-    hash_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
-                     ::std::string(reinterpret_cast<const char *>(value), size));
-    // @@protoc_insertion_point(field_set_pointer:raft_cmdpb.VerifyHashRequest.hash)
+inline void VerifyHashRequest::set_hash(const void* value, size_t size) {
+  
+  hash_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+      ::std::string(reinterpret_cast<const char*>(value), size));
+  // @@protoc_insertion_point(field_set_pointer:raft_cmdpb.VerifyHashRequest.hash)
 }
-inline ::std::string * VerifyHashRequest::mutable_hash()
-{
-
-    // @@protoc_insertion_point(field_mutable:raft_cmdpb.VerifyHashRequest.hash)
-    return hash_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+inline ::std::string* VerifyHashRequest::mutable_hash() {
+  
+  // @@protoc_insertion_point(field_mutable:raft_cmdpb.VerifyHashRequest.hash)
+  return hash_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
-inline ::std::string * VerifyHashRequest::release_hash()
-{
-    // @@protoc_insertion_point(field_release:raft_cmdpb.VerifyHashRequest.hash)
-
-    return hash_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+inline ::std::string* VerifyHashRequest::release_hash() {
+  // @@protoc_insertion_point(field_release:raft_cmdpb.VerifyHashRequest.hash)
+  
+  return hash_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
-inline void VerifyHashRequest::set_allocated_hash(::std::string * hash)
-{
-    if (hash != NULL) {}
-    else
-    {
-    }
-    hash_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), hash);
-    // @@protoc_insertion_point(field_set_allocated:raft_cmdpb.VerifyHashRequest.hash)
+inline void VerifyHashRequest::set_allocated_hash(::std::string* hash) {
+  if (hash != NULL) {
+    
+  } else {
+    
+  }
+  hash_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), hash);
+  // @@protoc_insertion_point(field_set_allocated:raft_cmdpb.VerifyHashRequest.hash)
 }
 
 // -------------------------------------------------------------------
@@ -8045,71 +7900,61 @@ inline void VerifyHashRequest::set_allocated_hash(::std::string * hash)
 // PrepareMergeRequest
 
 // uint64 min_index = 1;
-inline void PrepareMergeRequest::clear_min_index()
-{
-    min_index_ = GOOGLE_ULONGLONG(0);
+inline void PrepareMergeRequest::clear_min_index() {
+  min_index_ = GOOGLE_ULONGLONG(0);
 }
-inline ::google::protobuf::uint64 PrepareMergeRequest::min_index() const
-{
-    // @@protoc_insertion_point(field_get:raft_cmdpb.PrepareMergeRequest.min_index)
-    return min_index_;
+inline ::google::protobuf::uint64 PrepareMergeRequest::min_index() const {
+  // @@protoc_insertion_point(field_get:raft_cmdpb.PrepareMergeRequest.min_index)
+  return min_index_;
 }
-inline void PrepareMergeRequest::set_min_index(::google::protobuf::uint64 value)
-{
-
-    min_index_ = value;
-    // @@protoc_insertion_point(field_set:raft_cmdpb.PrepareMergeRequest.min_index)
+inline void PrepareMergeRequest::set_min_index(::google::protobuf::uint64 value) {
+  
+  min_index_ = value;
+  // @@protoc_insertion_point(field_set:raft_cmdpb.PrepareMergeRequest.min_index)
 }
 
 // .metapb.Region target = 2;
-inline bool PrepareMergeRequest::has_target() const
-{
-    return this != internal_default_instance() && target_ != NULL;
+inline bool PrepareMergeRequest::has_target() const {
+  return this != internal_default_instance() && target_ != NULL;
 }
-inline const ::metapb::Region & PrepareMergeRequest::target() const
-{
-    const ::metapb::Region * p = target_;
-    // @@protoc_insertion_point(field_get:raft_cmdpb.PrepareMergeRequest.target)
-    return p != NULL ? *p : *reinterpret_cast<const ::metapb::Region *>(&::metapb::_Region_default_instance_);
+inline const ::metapb::Region& PrepareMergeRequest::target() const {
+  const ::metapb::Region* p = target_;
+  // @@protoc_insertion_point(field_get:raft_cmdpb.PrepareMergeRequest.target)
+  return p != NULL ? *p : *reinterpret_cast<const ::metapb::Region*>(
+      &::metapb::_Region_default_instance_);
 }
-inline ::metapb::Region * PrepareMergeRequest::release_target()
-{
-    // @@protoc_insertion_point(field_release:raft_cmdpb.PrepareMergeRequest.target)
-
-    ::metapb::Region * temp = target_;
-    target_                 = NULL;
-    return temp;
+inline ::metapb::Region* PrepareMergeRequest::release_target() {
+  // @@protoc_insertion_point(field_release:raft_cmdpb.PrepareMergeRequest.target)
+  
+  ::metapb::Region* temp = target_;
+  target_ = NULL;
+  return temp;
 }
-inline ::metapb::Region * PrepareMergeRequest::mutable_target()
-{
-
-    if (target_ == NULL)
-    {
-        target_ = new ::metapb::Region;
-    }
-    // @@protoc_insertion_point(field_mutable:raft_cmdpb.PrepareMergeRequest.target)
-    return target_;
+inline ::metapb::Region* PrepareMergeRequest::mutable_target() {
+  
+  if (target_ == NULL) {
+    target_ = new ::metapb::Region;
+  }
+  // @@protoc_insertion_point(field_mutable:raft_cmdpb.PrepareMergeRequest.target)
+  return target_;
 }
-inline void PrepareMergeRequest::set_allocated_target(::metapb::Region * target)
-{
-    ::google::protobuf::Arena * message_arena = GetArenaNoVirtual();
-    if (message_arena == NULL)
-    {
-        delete reinterpret_cast<::google::protobuf::MessageLite *>(target_);
+inline void PrepareMergeRequest::set_allocated_target(::metapb::Region* target) {
+  ::google::protobuf::Arena* message_arena = GetArenaNoVirtual();
+  if (message_arena == NULL) {
+    delete reinterpret_cast< ::google::protobuf::MessageLite*>(target_);
+  }
+  if (target) {
+    ::google::protobuf::Arena* submessage_arena = NULL;
+    if (message_arena != submessage_arena) {
+      target = ::google::protobuf::internal::GetOwnedMessage(
+          message_arena, target, submessage_arena);
     }
-    if (target)
-    {
-        ::google::protobuf::Arena * submessage_arena = NULL;
-        if (message_arena != submessage_arena)
-        {
-            target = ::google::protobuf::internal::GetOwnedMessage(message_arena, target, submessage_arena);
-        }
-    }
-    else
-    {
-    }
-    target_ = target;
-    // @@protoc_insertion_point(field_set_allocated:raft_cmdpb.PrepareMergeRequest.target)
+    
+  } else {
+    
+  }
+  target_ = target;
+  // @@protoc_insertion_point(field_set_allocated:raft_cmdpb.PrepareMergeRequest.target)
 }
 
 // -------------------------------------------------------------------
@@ -8121,102 +7966,88 @@ inline void PrepareMergeRequest::set_allocated_target(::metapb::Region * target)
 // CommitMergeRequest
 
 // .metapb.Region source = 1;
-inline bool CommitMergeRequest::has_source() const
-{
-    return this != internal_default_instance() && source_ != NULL;
+inline bool CommitMergeRequest::has_source() const {
+  return this != internal_default_instance() && source_ != NULL;
 }
-inline const ::metapb::Region & CommitMergeRequest::source() const
-{
-    const ::metapb::Region * p = source_;
-    // @@protoc_insertion_point(field_get:raft_cmdpb.CommitMergeRequest.source)
-    return p != NULL ? *p : *reinterpret_cast<const ::metapb::Region *>(&::metapb::_Region_default_instance_);
+inline const ::metapb::Region& CommitMergeRequest::source() const {
+  const ::metapb::Region* p = source_;
+  // @@protoc_insertion_point(field_get:raft_cmdpb.CommitMergeRequest.source)
+  return p != NULL ? *p : *reinterpret_cast<const ::metapb::Region*>(
+      &::metapb::_Region_default_instance_);
 }
-inline ::metapb::Region * CommitMergeRequest::release_source()
-{
-    // @@protoc_insertion_point(field_release:raft_cmdpb.CommitMergeRequest.source)
-
-    ::metapb::Region * temp = source_;
-    source_                 = NULL;
-    return temp;
+inline ::metapb::Region* CommitMergeRequest::release_source() {
+  // @@protoc_insertion_point(field_release:raft_cmdpb.CommitMergeRequest.source)
+  
+  ::metapb::Region* temp = source_;
+  source_ = NULL;
+  return temp;
 }
-inline ::metapb::Region * CommitMergeRequest::mutable_source()
-{
-
-    if (source_ == NULL)
-    {
-        source_ = new ::metapb::Region;
-    }
-    // @@protoc_insertion_point(field_mutable:raft_cmdpb.CommitMergeRequest.source)
-    return source_;
+inline ::metapb::Region* CommitMergeRequest::mutable_source() {
+  
+  if (source_ == NULL) {
+    source_ = new ::metapb::Region;
+  }
+  // @@protoc_insertion_point(field_mutable:raft_cmdpb.CommitMergeRequest.source)
+  return source_;
 }
-inline void CommitMergeRequest::set_allocated_source(::metapb::Region * source)
-{
-    ::google::protobuf::Arena * message_arena = GetArenaNoVirtual();
-    if (message_arena == NULL)
-    {
-        delete reinterpret_cast<::google::protobuf::MessageLite *>(source_);
+inline void CommitMergeRequest::set_allocated_source(::metapb::Region* source) {
+  ::google::protobuf::Arena* message_arena = GetArenaNoVirtual();
+  if (message_arena == NULL) {
+    delete reinterpret_cast< ::google::protobuf::MessageLite*>(source_);
+  }
+  if (source) {
+    ::google::protobuf::Arena* submessage_arena = NULL;
+    if (message_arena != submessage_arena) {
+      source = ::google::protobuf::internal::GetOwnedMessage(
+          message_arena, source, submessage_arena);
     }
-    if (source)
-    {
-        ::google::protobuf::Arena * submessage_arena = NULL;
-        if (message_arena != submessage_arena)
-        {
-            source = ::google::protobuf::internal::GetOwnedMessage(message_arena, source, submessage_arena);
-        }
-    }
-    else
-    {
-    }
-    source_ = source;
-    // @@protoc_insertion_point(field_set_allocated:raft_cmdpb.CommitMergeRequest.source)
+    
+  } else {
+    
+  }
+  source_ = source;
+  // @@protoc_insertion_point(field_set_allocated:raft_cmdpb.CommitMergeRequest.source)
 }
 
 // uint64 commit = 2;
-inline void CommitMergeRequest::clear_commit()
-{
-    commit_ = GOOGLE_ULONGLONG(0);
+inline void CommitMergeRequest::clear_commit() {
+  commit_ = GOOGLE_ULONGLONG(0);
 }
-inline ::google::protobuf::uint64 CommitMergeRequest::commit() const
-{
-    // @@protoc_insertion_point(field_get:raft_cmdpb.CommitMergeRequest.commit)
-    return commit_;
+inline ::google::protobuf::uint64 CommitMergeRequest::commit() const {
+  // @@protoc_insertion_point(field_get:raft_cmdpb.CommitMergeRequest.commit)
+  return commit_;
 }
-inline void CommitMergeRequest::set_commit(::google::protobuf::uint64 value)
-{
-
-    commit_ = value;
-    // @@protoc_insertion_point(field_set:raft_cmdpb.CommitMergeRequest.commit)
+inline void CommitMergeRequest::set_commit(::google::protobuf::uint64 value) {
+  
+  commit_ = value;
+  // @@protoc_insertion_point(field_set:raft_cmdpb.CommitMergeRequest.commit)
 }
 
 // repeated .eraftpb.Entry entries = 3;
-inline int CommitMergeRequest::entries_size() const
-{
-    return entries_.size();
+inline int CommitMergeRequest::entries_size() const {
+  return entries_.size();
 }
-inline const ::eraftpb::Entry & CommitMergeRequest::entries(int index) const
-{
-    // @@protoc_insertion_point(field_get:raft_cmdpb.CommitMergeRequest.entries)
-    return entries_.Get(index);
+inline const ::eraftpb::Entry& CommitMergeRequest::entries(int index) const {
+  // @@protoc_insertion_point(field_get:raft_cmdpb.CommitMergeRequest.entries)
+  return entries_.Get(index);
 }
-inline ::eraftpb::Entry * CommitMergeRequest::mutable_entries(int index)
-{
-    // @@protoc_insertion_point(field_mutable:raft_cmdpb.CommitMergeRequest.entries)
-    return entries_.Mutable(index);
+inline ::eraftpb::Entry* CommitMergeRequest::mutable_entries(int index) {
+  // @@protoc_insertion_point(field_mutable:raft_cmdpb.CommitMergeRequest.entries)
+  return entries_.Mutable(index);
 }
-inline ::eraftpb::Entry * CommitMergeRequest::add_entries()
-{
-    // @@protoc_insertion_point(field_add:raft_cmdpb.CommitMergeRequest.entries)
-    return entries_.Add();
+inline ::eraftpb::Entry* CommitMergeRequest::add_entries() {
+  // @@protoc_insertion_point(field_add:raft_cmdpb.CommitMergeRequest.entries)
+  return entries_.Add();
 }
-inline ::google::protobuf::RepeatedPtrField<::eraftpb::Entry> * CommitMergeRequest::mutable_entries()
-{
-    // @@protoc_insertion_point(field_mutable_list:raft_cmdpb.CommitMergeRequest.entries)
-    return &entries_;
+inline ::google::protobuf::RepeatedPtrField< ::eraftpb::Entry >*
+CommitMergeRequest::mutable_entries() {
+  // @@protoc_insertion_point(field_mutable_list:raft_cmdpb.CommitMergeRequest.entries)
+  return &entries_;
 }
-inline const ::google::protobuf::RepeatedPtrField<::eraftpb::Entry> & CommitMergeRequest::entries() const
-{
-    // @@protoc_insertion_point(field_list:raft_cmdpb.CommitMergeRequest.entries)
-    return entries_;
+inline const ::google::protobuf::RepeatedPtrField< ::eraftpb::Entry >&
+CommitMergeRequest::entries() const {
+  // @@protoc_insertion_point(field_list:raft_cmdpb.CommitMergeRequest.entries)
+  return entries_;
 }
 
 // -------------------------------------------------------------------
@@ -8228,20 +8059,17 @@ inline const ::google::protobuf::RepeatedPtrField<::eraftpb::Entry> & CommitMerg
 // RollbackMergeRequest
 
 // uint64 commit = 1;
-inline void RollbackMergeRequest::clear_commit()
-{
-    commit_ = GOOGLE_ULONGLONG(0);
+inline void RollbackMergeRequest::clear_commit() {
+  commit_ = GOOGLE_ULONGLONG(0);
 }
-inline ::google::protobuf::uint64 RollbackMergeRequest::commit() const
-{
-    // @@protoc_insertion_point(field_get:raft_cmdpb.RollbackMergeRequest.commit)
-    return commit_;
+inline ::google::protobuf::uint64 RollbackMergeRequest::commit() const {
+  // @@protoc_insertion_point(field_get:raft_cmdpb.RollbackMergeRequest.commit)
+  return commit_;
 }
-inline void RollbackMergeRequest::set_commit(::google::protobuf::uint64 value)
-{
-
-    commit_ = value;
-    // @@protoc_insertion_point(field_set:raft_cmdpb.RollbackMergeRequest.commit)
+inline void RollbackMergeRequest::set_commit(::google::protobuf::uint64 value) {
+  
+  commit_ = value;
+  // @@protoc_insertion_point(field_set:raft_cmdpb.RollbackMergeRequest.commit)
 }
 
 // -------------------------------------------------------------------
@@ -8253,557 +8081,467 @@ inline void RollbackMergeRequest::set_commit(::google::protobuf::uint64 value)
 // AdminRequest
 
 // .raft_cmdpb.AdminCmdType cmd_type = 1;
-inline void AdminRequest::clear_cmd_type()
-{
-    cmd_type_ = 0;
+inline void AdminRequest::clear_cmd_type() {
+  cmd_type_ = 0;
 }
-inline ::raft_cmdpb::AdminCmdType AdminRequest::cmd_type() const
-{
-    // @@protoc_insertion_point(field_get:raft_cmdpb.AdminRequest.cmd_type)
-    return static_cast<::raft_cmdpb::AdminCmdType>(cmd_type_);
+inline ::raft_cmdpb::AdminCmdType AdminRequest::cmd_type() const {
+  // @@protoc_insertion_point(field_get:raft_cmdpb.AdminRequest.cmd_type)
+  return static_cast< ::raft_cmdpb::AdminCmdType >(cmd_type_);
 }
-inline void AdminRequest::set_cmd_type(::raft_cmdpb::AdminCmdType value)
-{
-
-    cmd_type_ = value;
-    // @@protoc_insertion_point(field_set:raft_cmdpb.AdminRequest.cmd_type)
+inline void AdminRequest::set_cmd_type(::raft_cmdpb::AdminCmdType value) {
+  
+  cmd_type_ = value;
+  // @@protoc_insertion_point(field_set:raft_cmdpb.AdminRequest.cmd_type)
 }
 
 // .raft_cmdpb.ChangePeerRequest change_peer = 2;
-inline bool AdminRequest::has_change_peer() const
-{
-    return this != internal_default_instance() && change_peer_ != NULL;
+inline bool AdminRequest::has_change_peer() const {
+  return this != internal_default_instance() && change_peer_ != NULL;
 }
-inline void AdminRequest::clear_change_peer()
-{
-    if (GetArenaNoVirtual() == NULL && change_peer_ != NULL)
-    {
-        delete change_peer_;
-    }
-    change_peer_ = NULL;
+inline void AdminRequest::clear_change_peer() {
+  if (GetArenaNoVirtual() == NULL && change_peer_ != NULL) {
+    delete change_peer_;
+  }
+  change_peer_ = NULL;
 }
-inline const ::raft_cmdpb::ChangePeerRequest & AdminRequest::change_peer() const
-{
-    const ::raft_cmdpb::ChangePeerRequest * p = change_peer_;
-    // @@protoc_insertion_point(field_get:raft_cmdpb.AdminRequest.change_peer)
-    return p != NULL ? *p : *reinterpret_cast<const ::raft_cmdpb::ChangePeerRequest *>(&::raft_cmdpb::_ChangePeerRequest_default_instance_);
+inline const ::raft_cmdpb::ChangePeerRequest& AdminRequest::change_peer() const {
+  const ::raft_cmdpb::ChangePeerRequest* p = change_peer_;
+  // @@protoc_insertion_point(field_get:raft_cmdpb.AdminRequest.change_peer)
+  return p != NULL ? *p : *reinterpret_cast<const ::raft_cmdpb::ChangePeerRequest*>(
+      &::raft_cmdpb::_ChangePeerRequest_default_instance_);
 }
-inline ::raft_cmdpb::ChangePeerRequest * AdminRequest::release_change_peer()
-{
-    // @@protoc_insertion_point(field_release:raft_cmdpb.AdminRequest.change_peer)
-
-    ::raft_cmdpb::ChangePeerRequest * temp = change_peer_;
-    change_peer_                           = NULL;
-    return temp;
+inline ::raft_cmdpb::ChangePeerRequest* AdminRequest::release_change_peer() {
+  // @@protoc_insertion_point(field_release:raft_cmdpb.AdminRequest.change_peer)
+  
+  ::raft_cmdpb::ChangePeerRequest* temp = change_peer_;
+  change_peer_ = NULL;
+  return temp;
 }
-inline ::raft_cmdpb::ChangePeerRequest * AdminRequest::mutable_change_peer()
-{
-
-    if (change_peer_ == NULL)
-    {
-        change_peer_ = new ::raft_cmdpb::ChangePeerRequest;
-    }
-    // @@protoc_insertion_point(field_mutable:raft_cmdpb.AdminRequest.change_peer)
-    return change_peer_;
+inline ::raft_cmdpb::ChangePeerRequest* AdminRequest::mutable_change_peer() {
+  
+  if (change_peer_ == NULL) {
+    change_peer_ = new ::raft_cmdpb::ChangePeerRequest;
+  }
+  // @@protoc_insertion_point(field_mutable:raft_cmdpb.AdminRequest.change_peer)
+  return change_peer_;
 }
-inline void AdminRequest::set_allocated_change_peer(::raft_cmdpb::ChangePeerRequest * change_peer)
-{
-    ::google::protobuf::Arena * message_arena = GetArenaNoVirtual();
-    if (message_arena == NULL)
-    {
-        delete change_peer_;
+inline void AdminRequest::set_allocated_change_peer(::raft_cmdpb::ChangePeerRequest* change_peer) {
+  ::google::protobuf::Arena* message_arena = GetArenaNoVirtual();
+  if (message_arena == NULL) {
+    delete change_peer_;
+  }
+  if (change_peer) {
+    ::google::protobuf::Arena* submessage_arena = NULL;
+    if (message_arena != submessage_arena) {
+      change_peer = ::google::protobuf::internal::GetOwnedMessage(
+          message_arena, change_peer, submessage_arena);
     }
-    if (change_peer)
-    {
-        ::google::protobuf::Arena * submessage_arena = NULL;
-        if (message_arena != submessage_arena)
-        {
-            change_peer = ::google::protobuf::internal::GetOwnedMessage(message_arena, change_peer, submessage_arena);
-        }
-    }
-    else
-    {
-    }
-    change_peer_ = change_peer;
-    // @@protoc_insertion_point(field_set_allocated:raft_cmdpb.AdminRequest.change_peer)
+    
+  } else {
+    
+  }
+  change_peer_ = change_peer;
+  // @@protoc_insertion_point(field_set_allocated:raft_cmdpb.AdminRequest.change_peer)
 }
 
 // .raft_cmdpb.SplitRequest split = 3 [deprecated = true];
-inline bool AdminRequest::has_split() const
-{
-    return this != internal_default_instance() && split_ != NULL;
+inline bool AdminRequest::has_split() const {
+  return this != internal_default_instance() && split_ != NULL;
 }
-inline void AdminRequest::clear_split()
-{
-    if (GetArenaNoVirtual() == NULL && split_ != NULL)
-    {
-        delete split_;
-    }
-    split_ = NULL;
+inline void AdminRequest::clear_split() {
+  if (GetArenaNoVirtual() == NULL && split_ != NULL) {
+    delete split_;
+  }
+  split_ = NULL;
 }
-inline const ::raft_cmdpb::SplitRequest & AdminRequest::split() const
-{
-    const ::raft_cmdpb::SplitRequest * p = split_;
-    // @@protoc_insertion_point(field_get:raft_cmdpb.AdminRequest.split)
-    return p != NULL ? *p : *reinterpret_cast<const ::raft_cmdpb::SplitRequest *>(&::raft_cmdpb::_SplitRequest_default_instance_);
+inline const ::raft_cmdpb::SplitRequest& AdminRequest::split() const {
+  const ::raft_cmdpb::SplitRequest* p = split_;
+  // @@protoc_insertion_point(field_get:raft_cmdpb.AdminRequest.split)
+  return p != NULL ? *p : *reinterpret_cast<const ::raft_cmdpb::SplitRequest*>(
+      &::raft_cmdpb::_SplitRequest_default_instance_);
 }
-inline ::raft_cmdpb::SplitRequest * AdminRequest::release_split()
-{
-    // @@protoc_insertion_point(field_release:raft_cmdpb.AdminRequest.split)
-
-    ::raft_cmdpb::SplitRequest * temp = split_;
-    split_                            = NULL;
-    return temp;
+inline ::raft_cmdpb::SplitRequest* AdminRequest::release_split() {
+  // @@protoc_insertion_point(field_release:raft_cmdpb.AdminRequest.split)
+  
+  ::raft_cmdpb::SplitRequest* temp = split_;
+  split_ = NULL;
+  return temp;
 }
-inline ::raft_cmdpb::SplitRequest * AdminRequest::mutable_split()
-{
-
-    if (split_ == NULL)
-    {
-        split_ = new ::raft_cmdpb::SplitRequest;
-    }
-    // @@protoc_insertion_point(field_mutable:raft_cmdpb.AdminRequest.split)
-    return split_;
+inline ::raft_cmdpb::SplitRequest* AdminRequest::mutable_split() {
+  
+  if (split_ == NULL) {
+    split_ = new ::raft_cmdpb::SplitRequest;
+  }
+  // @@protoc_insertion_point(field_mutable:raft_cmdpb.AdminRequest.split)
+  return split_;
 }
-inline void AdminRequest::set_allocated_split(::raft_cmdpb::SplitRequest * split)
-{
-    ::google::protobuf::Arena * message_arena = GetArenaNoVirtual();
-    if (message_arena == NULL)
-    {
-        delete split_;
+inline void AdminRequest::set_allocated_split(::raft_cmdpb::SplitRequest* split) {
+  ::google::protobuf::Arena* message_arena = GetArenaNoVirtual();
+  if (message_arena == NULL) {
+    delete split_;
+  }
+  if (split) {
+    ::google::protobuf::Arena* submessage_arena = NULL;
+    if (message_arena != submessage_arena) {
+      split = ::google::protobuf::internal::GetOwnedMessage(
+          message_arena, split, submessage_arena);
     }
-    if (split)
-    {
-        ::google::protobuf::Arena * submessage_arena = NULL;
-        if (message_arena != submessage_arena)
-        {
-            split = ::google::protobuf::internal::GetOwnedMessage(message_arena, split, submessage_arena);
-        }
-    }
-    else
-    {
-    }
-    split_ = split;
-    // @@protoc_insertion_point(field_set_allocated:raft_cmdpb.AdminRequest.split)
+    
+  } else {
+    
+  }
+  split_ = split;
+  // @@protoc_insertion_point(field_set_allocated:raft_cmdpb.AdminRequest.split)
 }
 
 // .raft_cmdpb.CompactLogRequest compact_log = 4;
-inline bool AdminRequest::has_compact_log() const
-{
-    return this != internal_default_instance() && compact_log_ != NULL;
+inline bool AdminRequest::has_compact_log() const {
+  return this != internal_default_instance() && compact_log_ != NULL;
 }
-inline void AdminRequest::clear_compact_log()
-{
-    if (GetArenaNoVirtual() == NULL && compact_log_ != NULL)
-    {
-        delete compact_log_;
-    }
-    compact_log_ = NULL;
+inline void AdminRequest::clear_compact_log() {
+  if (GetArenaNoVirtual() == NULL && compact_log_ != NULL) {
+    delete compact_log_;
+  }
+  compact_log_ = NULL;
 }
-inline const ::raft_cmdpb::CompactLogRequest & AdminRequest::compact_log() const
-{
-    const ::raft_cmdpb::CompactLogRequest * p = compact_log_;
-    // @@protoc_insertion_point(field_get:raft_cmdpb.AdminRequest.compact_log)
-    return p != NULL ? *p : *reinterpret_cast<const ::raft_cmdpb::CompactLogRequest *>(&::raft_cmdpb::_CompactLogRequest_default_instance_);
+inline const ::raft_cmdpb::CompactLogRequest& AdminRequest::compact_log() const {
+  const ::raft_cmdpb::CompactLogRequest* p = compact_log_;
+  // @@protoc_insertion_point(field_get:raft_cmdpb.AdminRequest.compact_log)
+  return p != NULL ? *p : *reinterpret_cast<const ::raft_cmdpb::CompactLogRequest*>(
+      &::raft_cmdpb::_CompactLogRequest_default_instance_);
 }
-inline ::raft_cmdpb::CompactLogRequest * AdminRequest::release_compact_log()
-{
-    // @@protoc_insertion_point(field_release:raft_cmdpb.AdminRequest.compact_log)
-
-    ::raft_cmdpb::CompactLogRequest * temp = compact_log_;
-    compact_log_                           = NULL;
-    return temp;
+inline ::raft_cmdpb::CompactLogRequest* AdminRequest::release_compact_log() {
+  // @@protoc_insertion_point(field_release:raft_cmdpb.AdminRequest.compact_log)
+  
+  ::raft_cmdpb::CompactLogRequest* temp = compact_log_;
+  compact_log_ = NULL;
+  return temp;
 }
-inline ::raft_cmdpb::CompactLogRequest * AdminRequest::mutable_compact_log()
-{
-
-    if (compact_log_ == NULL)
-    {
-        compact_log_ = new ::raft_cmdpb::CompactLogRequest;
-    }
-    // @@protoc_insertion_point(field_mutable:raft_cmdpb.AdminRequest.compact_log)
-    return compact_log_;
+inline ::raft_cmdpb::CompactLogRequest* AdminRequest::mutable_compact_log() {
+  
+  if (compact_log_ == NULL) {
+    compact_log_ = new ::raft_cmdpb::CompactLogRequest;
+  }
+  // @@protoc_insertion_point(field_mutable:raft_cmdpb.AdminRequest.compact_log)
+  return compact_log_;
 }
-inline void AdminRequest::set_allocated_compact_log(::raft_cmdpb::CompactLogRequest * compact_log)
-{
-    ::google::protobuf::Arena * message_arena = GetArenaNoVirtual();
-    if (message_arena == NULL)
-    {
-        delete compact_log_;
+inline void AdminRequest::set_allocated_compact_log(::raft_cmdpb::CompactLogRequest* compact_log) {
+  ::google::protobuf::Arena* message_arena = GetArenaNoVirtual();
+  if (message_arena == NULL) {
+    delete compact_log_;
+  }
+  if (compact_log) {
+    ::google::protobuf::Arena* submessage_arena = NULL;
+    if (message_arena != submessage_arena) {
+      compact_log = ::google::protobuf::internal::GetOwnedMessage(
+          message_arena, compact_log, submessage_arena);
     }
-    if (compact_log)
-    {
-        ::google::protobuf::Arena * submessage_arena = NULL;
-        if (message_arena != submessage_arena)
-        {
-            compact_log = ::google::protobuf::internal::GetOwnedMessage(message_arena, compact_log, submessage_arena);
-        }
-    }
-    else
-    {
-    }
-    compact_log_ = compact_log;
-    // @@protoc_insertion_point(field_set_allocated:raft_cmdpb.AdminRequest.compact_log)
+    
+  } else {
+    
+  }
+  compact_log_ = compact_log;
+  // @@protoc_insertion_point(field_set_allocated:raft_cmdpb.AdminRequest.compact_log)
 }
 
 // .raft_cmdpb.TransferLeaderRequest transfer_leader = 5;
-inline bool AdminRequest::has_transfer_leader() const
-{
-    return this != internal_default_instance() && transfer_leader_ != NULL;
+inline bool AdminRequest::has_transfer_leader() const {
+  return this != internal_default_instance() && transfer_leader_ != NULL;
 }
-inline void AdminRequest::clear_transfer_leader()
-{
-    if (GetArenaNoVirtual() == NULL && transfer_leader_ != NULL)
-    {
-        delete transfer_leader_;
-    }
-    transfer_leader_ = NULL;
+inline void AdminRequest::clear_transfer_leader() {
+  if (GetArenaNoVirtual() == NULL && transfer_leader_ != NULL) {
+    delete transfer_leader_;
+  }
+  transfer_leader_ = NULL;
 }
-inline const ::raft_cmdpb::TransferLeaderRequest & AdminRequest::transfer_leader() const
-{
-    const ::raft_cmdpb::TransferLeaderRequest * p = transfer_leader_;
-    // @@protoc_insertion_point(field_get:raft_cmdpb.AdminRequest.transfer_leader)
-    return p != NULL
-        ? *p
-        : *reinterpret_cast<const ::raft_cmdpb::TransferLeaderRequest *>(&::raft_cmdpb::_TransferLeaderRequest_default_instance_);
+inline const ::raft_cmdpb::TransferLeaderRequest& AdminRequest::transfer_leader() const {
+  const ::raft_cmdpb::TransferLeaderRequest* p = transfer_leader_;
+  // @@protoc_insertion_point(field_get:raft_cmdpb.AdminRequest.transfer_leader)
+  return p != NULL ? *p : *reinterpret_cast<const ::raft_cmdpb::TransferLeaderRequest*>(
+      &::raft_cmdpb::_TransferLeaderRequest_default_instance_);
 }
-inline ::raft_cmdpb::TransferLeaderRequest * AdminRequest::release_transfer_leader()
-{
-    // @@protoc_insertion_point(field_release:raft_cmdpb.AdminRequest.transfer_leader)
-
-    ::raft_cmdpb::TransferLeaderRequest * temp = transfer_leader_;
-    transfer_leader_                           = NULL;
-    return temp;
+inline ::raft_cmdpb::TransferLeaderRequest* AdminRequest::release_transfer_leader() {
+  // @@protoc_insertion_point(field_release:raft_cmdpb.AdminRequest.transfer_leader)
+  
+  ::raft_cmdpb::TransferLeaderRequest* temp = transfer_leader_;
+  transfer_leader_ = NULL;
+  return temp;
 }
-inline ::raft_cmdpb::TransferLeaderRequest * AdminRequest::mutable_transfer_leader()
-{
-
-    if (transfer_leader_ == NULL)
-    {
-        transfer_leader_ = new ::raft_cmdpb::TransferLeaderRequest;
-    }
-    // @@protoc_insertion_point(field_mutable:raft_cmdpb.AdminRequest.transfer_leader)
-    return transfer_leader_;
+inline ::raft_cmdpb::TransferLeaderRequest* AdminRequest::mutable_transfer_leader() {
+  
+  if (transfer_leader_ == NULL) {
+    transfer_leader_ = new ::raft_cmdpb::TransferLeaderRequest;
+  }
+  // @@protoc_insertion_point(field_mutable:raft_cmdpb.AdminRequest.transfer_leader)
+  return transfer_leader_;
 }
-inline void AdminRequest::set_allocated_transfer_leader(::raft_cmdpb::TransferLeaderRequest * transfer_leader)
-{
-    ::google::protobuf::Arena * message_arena = GetArenaNoVirtual();
-    if (message_arena == NULL)
-    {
-        delete transfer_leader_;
+inline void AdminRequest::set_allocated_transfer_leader(::raft_cmdpb::TransferLeaderRequest* transfer_leader) {
+  ::google::protobuf::Arena* message_arena = GetArenaNoVirtual();
+  if (message_arena == NULL) {
+    delete transfer_leader_;
+  }
+  if (transfer_leader) {
+    ::google::protobuf::Arena* submessage_arena = NULL;
+    if (message_arena != submessage_arena) {
+      transfer_leader = ::google::protobuf::internal::GetOwnedMessage(
+          message_arena, transfer_leader, submessage_arena);
     }
-    if (transfer_leader)
-    {
-        ::google::protobuf::Arena * submessage_arena = NULL;
-        if (message_arena != submessage_arena)
-        {
-            transfer_leader = ::google::protobuf::internal::GetOwnedMessage(message_arena, transfer_leader, submessage_arena);
-        }
-    }
-    else
-    {
-    }
-    transfer_leader_ = transfer_leader;
-    // @@protoc_insertion_point(field_set_allocated:raft_cmdpb.AdminRequest.transfer_leader)
+    
+  } else {
+    
+  }
+  transfer_leader_ = transfer_leader;
+  // @@protoc_insertion_point(field_set_allocated:raft_cmdpb.AdminRequest.transfer_leader)
 }
 
 // .raft_cmdpb.VerifyHashRequest verify_hash = 6;
-inline bool AdminRequest::has_verify_hash() const
-{
-    return this != internal_default_instance() && verify_hash_ != NULL;
+inline bool AdminRequest::has_verify_hash() const {
+  return this != internal_default_instance() && verify_hash_ != NULL;
 }
-inline void AdminRequest::clear_verify_hash()
-{
-    if (GetArenaNoVirtual() == NULL && verify_hash_ != NULL)
-    {
-        delete verify_hash_;
-    }
-    verify_hash_ = NULL;
+inline void AdminRequest::clear_verify_hash() {
+  if (GetArenaNoVirtual() == NULL && verify_hash_ != NULL) {
+    delete verify_hash_;
+  }
+  verify_hash_ = NULL;
 }
-inline const ::raft_cmdpb::VerifyHashRequest & AdminRequest::verify_hash() const
-{
-    const ::raft_cmdpb::VerifyHashRequest * p = verify_hash_;
-    // @@protoc_insertion_point(field_get:raft_cmdpb.AdminRequest.verify_hash)
-    return p != NULL ? *p : *reinterpret_cast<const ::raft_cmdpb::VerifyHashRequest *>(&::raft_cmdpb::_VerifyHashRequest_default_instance_);
+inline const ::raft_cmdpb::VerifyHashRequest& AdminRequest::verify_hash() const {
+  const ::raft_cmdpb::VerifyHashRequest* p = verify_hash_;
+  // @@protoc_insertion_point(field_get:raft_cmdpb.AdminRequest.verify_hash)
+  return p != NULL ? *p : *reinterpret_cast<const ::raft_cmdpb::VerifyHashRequest*>(
+      &::raft_cmdpb::_VerifyHashRequest_default_instance_);
 }
-inline ::raft_cmdpb::VerifyHashRequest * AdminRequest::release_verify_hash()
-{
-    // @@protoc_insertion_point(field_release:raft_cmdpb.AdminRequest.verify_hash)
-
-    ::raft_cmdpb::VerifyHashRequest * temp = verify_hash_;
-    verify_hash_                           = NULL;
-    return temp;
+inline ::raft_cmdpb::VerifyHashRequest* AdminRequest::release_verify_hash() {
+  // @@protoc_insertion_point(field_release:raft_cmdpb.AdminRequest.verify_hash)
+  
+  ::raft_cmdpb::VerifyHashRequest* temp = verify_hash_;
+  verify_hash_ = NULL;
+  return temp;
 }
-inline ::raft_cmdpb::VerifyHashRequest * AdminRequest::mutable_verify_hash()
-{
-
-    if (verify_hash_ == NULL)
-    {
-        verify_hash_ = new ::raft_cmdpb::VerifyHashRequest;
-    }
-    // @@protoc_insertion_point(field_mutable:raft_cmdpb.AdminRequest.verify_hash)
-    return verify_hash_;
+inline ::raft_cmdpb::VerifyHashRequest* AdminRequest::mutable_verify_hash() {
+  
+  if (verify_hash_ == NULL) {
+    verify_hash_ = new ::raft_cmdpb::VerifyHashRequest;
+  }
+  // @@protoc_insertion_point(field_mutable:raft_cmdpb.AdminRequest.verify_hash)
+  return verify_hash_;
 }
-inline void AdminRequest::set_allocated_verify_hash(::raft_cmdpb::VerifyHashRequest * verify_hash)
-{
-    ::google::protobuf::Arena * message_arena = GetArenaNoVirtual();
-    if (message_arena == NULL)
-    {
-        delete verify_hash_;
+inline void AdminRequest::set_allocated_verify_hash(::raft_cmdpb::VerifyHashRequest* verify_hash) {
+  ::google::protobuf::Arena* message_arena = GetArenaNoVirtual();
+  if (message_arena == NULL) {
+    delete verify_hash_;
+  }
+  if (verify_hash) {
+    ::google::protobuf::Arena* submessage_arena = NULL;
+    if (message_arena != submessage_arena) {
+      verify_hash = ::google::protobuf::internal::GetOwnedMessage(
+          message_arena, verify_hash, submessage_arena);
     }
-    if (verify_hash)
-    {
-        ::google::protobuf::Arena * submessage_arena = NULL;
-        if (message_arena != submessage_arena)
-        {
-            verify_hash = ::google::protobuf::internal::GetOwnedMessage(message_arena, verify_hash, submessage_arena);
-        }
-    }
-    else
-    {
-    }
-    verify_hash_ = verify_hash;
-    // @@protoc_insertion_point(field_set_allocated:raft_cmdpb.AdminRequest.verify_hash)
+    
+  } else {
+    
+  }
+  verify_hash_ = verify_hash;
+  // @@protoc_insertion_point(field_set_allocated:raft_cmdpb.AdminRequest.verify_hash)
 }
 
 // .raft_cmdpb.PrepareMergeRequest prepare_merge = 7;
-inline bool AdminRequest::has_prepare_merge() const
-{
-    return this != internal_default_instance() && prepare_merge_ != NULL;
+inline bool AdminRequest::has_prepare_merge() const {
+  return this != internal_default_instance() && prepare_merge_ != NULL;
 }
-inline void AdminRequest::clear_prepare_merge()
-{
-    if (GetArenaNoVirtual() == NULL && prepare_merge_ != NULL)
-    {
-        delete prepare_merge_;
-    }
-    prepare_merge_ = NULL;
+inline void AdminRequest::clear_prepare_merge() {
+  if (GetArenaNoVirtual() == NULL && prepare_merge_ != NULL) {
+    delete prepare_merge_;
+  }
+  prepare_merge_ = NULL;
 }
-inline const ::raft_cmdpb::PrepareMergeRequest & AdminRequest::prepare_merge() const
-{
-    const ::raft_cmdpb::PrepareMergeRequest * p = prepare_merge_;
-    // @@protoc_insertion_point(field_get:raft_cmdpb.AdminRequest.prepare_merge)
-    return p != NULL ? *p
-                     : *reinterpret_cast<const ::raft_cmdpb::PrepareMergeRequest *>(&::raft_cmdpb::_PrepareMergeRequest_default_instance_);
+inline const ::raft_cmdpb::PrepareMergeRequest& AdminRequest::prepare_merge() const {
+  const ::raft_cmdpb::PrepareMergeRequest* p = prepare_merge_;
+  // @@protoc_insertion_point(field_get:raft_cmdpb.AdminRequest.prepare_merge)
+  return p != NULL ? *p : *reinterpret_cast<const ::raft_cmdpb::PrepareMergeRequest*>(
+      &::raft_cmdpb::_PrepareMergeRequest_default_instance_);
 }
-inline ::raft_cmdpb::PrepareMergeRequest * AdminRequest::release_prepare_merge()
-{
-    // @@protoc_insertion_point(field_release:raft_cmdpb.AdminRequest.prepare_merge)
-
-    ::raft_cmdpb::PrepareMergeRequest * temp = prepare_merge_;
-    prepare_merge_                           = NULL;
-    return temp;
+inline ::raft_cmdpb::PrepareMergeRequest* AdminRequest::release_prepare_merge() {
+  // @@protoc_insertion_point(field_release:raft_cmdpb.AdminRequest.prepare_merge)
+  
+  ::raft_cmdpb::PrepareMergeRequest* temp = prepare_merge_;
+  prepare_merge_ = NULL;
+  return temp;
 }
-inline ::raft_cmdpb::PrepareMergeRequest * AdminRequest::mutable_prepare_merge()
-{
-
-    if (prepare_merge_ == NULL)
-    {
-        prepare_merge_ = new ::raft_cmdpb::PrepareMergeRequest;
-    }
-    // @@protoc_insertion_point(field_mutable:raft_cmdpb.AdminRequest.prepare_merge)
-    return prepare_merge_;
+inline ::raft_cmdpb::PrepareMergeRequest* AdminRequest::mutable_prepare_merge() {
+  
+  if (prepare_merge_ == NULL) {
+    prepare_merge_ = new ::raft_cmdpb::PrepareMergeRequest;
+  }
+  // @@protoc_insertion_point(field_mutable:raft_cmdpb.AdminRequest.prepare_merge)
+  return prepare_merge_;
 }
-inline void AdminRequest::set_allocated_prepare_merge(::raft_cmdpb::PrepareMergeRequest * prepare_merge)
-{
-    ::google::protobuf::Arena * message_arena = GetArenaNoVirtual();
-    if (message_arena == NULL)
-    {
-        delete prepare_merge_;
+inline void AdminRequest::set_allocated_prepare_merge(::raft_cmdpb::PrepareMergeRequest* prepare_merge) {
+  ::google::protobuf::Arena* message_arena = GetArenaNoVirtual();
+  if (message_arena == NULL) {
+    delete prepare_merge_;
+  }
+  if (prepare_merge) {
+    ::google::protobuf::Arena* submessage_arena = NULL;
+    if (message_arena != submessage_arena) {
+      prepare_merge = ::google::protobuf::internal::GetOwnedMessage(
+          message_arena, prepare_merge, submessage_arena);
     }
-    if (prepare_merge)
-    {
-        ::google::protobuf::Arena * submessage_arena = NULL;
-        if (message_arena != submessage_arena)
-        {
-            prepare_merge = ::google::protobuf::internal::GetOwnedMessage(message_arena, prepare_merge, submessage_arena);
-        }
-    }
-    else
-    {
-    }
-    prepare_merge_ = prepare_merge;
-    // @@protoc_insertion_point(field_set_allocated:raft_cmdpb.AdminRequest.prepare_merge)
+    
+  } else {
+    
+  }
+  prepare_merge_ = prepare_merge;
+  // @@protoc_insertion_point(field_set_allocated:raft_cmdpb.AdminRequest.prepare_merge)
 }
 
 // .raft_cmdpb.CommitMergeRequest commit_merge = 8;
-inline bool AdminRequest::has_commit_merge() const
-{
-    return this != internal_default_instance() && commit_merge_ != NULL;
+inline bool AdminRequest::has_commit_merge() const {
+  return this != internal_default_instance() && commit_merge_ != NULL;
 }
-inline void AdminRequest::clear_commit_merge()
-{
-    if (GetArenaNoVirtual() == NULL && commit_merge_ != NULL)
-    {
-        delete commit_merge_;
-    }
-    commit_merge_ = NULL;
+inline void AdminRequest::clear_commit_merge() {
+  if (GetArenaNoVirtual() == NULL && commit_merge_ != NULL) {
+    delete commit_merge_;
+  }
+  commit_merge_ = NULL;
 }
-inline const ::raft_cmdpb::CommitMergeRequest & AdminRequest::commit_merge() const
-{
-    const ::raft_cmdpb::CommitMergeRequest * p = commit_merge_;
-    // @@protoc_insertion_point(field_get:raft_cmdpb.AdminRequest.commit_merge)
-    return p != NULL ? *p
-                     : *reinterpret_cast<const ::raft_cmdpb::CommitMergeRequest *>(&::raft_cmdpb::_CommitMergeRequest_default_instance_);
+inline const ::raft_cmdpb::CommitMergeRequest& AdminRequest::commit_merge() const {
+  const ::raft_cmdpb::CommitMergeRequest* p = commit_merge_;
+  // @@protoc_insertion_point(field_get:raft_cmdpb.AdminRequest.commit_merge)
+  return p != NULL ? *p : *reinterpret_cast<const ::raft_cmdpb::CommitMergeRequest*>(
+      &::raft_cmdpb::_CommitMergeRequest_default_instance_);
 }
-inline ::raft_cmdpb::CommitMergeRequest * AdminRequest::release_commit_merge()
-{
-    // @@protoc_insertion_point(field_release:raft_cmdpb.AdminRequest.commit_merge)
-
-    ::raft_cmdpb::CommitMergeRequest * temp = commit_merge_;
-    commit_merge_                           = NULL;
-    return temp;
+inline ::raft_cmdpb::CommitMergeRequest* AdminRequest::release_commit_merge() {
+  // @@protoc_insertion_point(field_release:raft_cmdpb.AdminRequest.commit_merge)
+  
+  ::raft_cmdpb::CommitMergeRequest* temp = commit_merge_;
+  commit_merge_ = NULL;
+  return temp;
 }
-inline ::raft_cmdpb::CommitMergeRequest * AdminRequest::mutable_commit_merge()
-{
-
-    if (commit_merge_ == NULL)
-    {
-        commit_merge_ = new ::raft_cmdpb::CommitMergeRequest;
-    }
-    // @@protoc_insertion_point(field_mutable:raft_cmdpb.AdminRequest.commit_merge)
-    return commit_merge_;
+inline ::raft_cmdpb::CommitMergeRequest* AdminRequest::mutable_commit_merge() {
+  
+  if (commit_merge_ == NULL) {
+    commit_merge_ = new ::raft_cmdpb::CommitMergeRequest;
+  }
+  // @@protoc_insertion_point(field_mutable:raft_cmdpb.AdminRequest.commit_merge)
+  return commit_merge_;
 }
-inline void AdminRequest::set_allocated_commit_merge(::raft_cmdpb::CommitMergeRequest * commit_merge)
-{
-    ::google::protobuf::Arena * message_arena = GetArenaNoVirtual();
-    if (message_arena == NULL)
-    {
-        delete commit_merge_;
+inline void AdminRequest::set_allocated_commit_merge(::raft_cmdpb::CommitMergeRequest* commit_merge) {
+  ::google::protobuf::Arena* message_arena = GetArenaNoVirtual();
+  if (message_arena == NULL) {
+    delete commit_merge_;
+  }
+  if (commit_merge) {
+    ::google::protobuf::Arena* submessage_arena = NULL;
+    if (message_arena != submessage_arena) {
+      commit_merge = ::google::protobuf::internal::GetOwnedMessage(
+          message_arena, commit_merge, submessage_arena);
     }
-    if (commit_merge)
-    {
-        ::google::protobuf::Arena * submessage_arena = NULL;
-        if (message_arena != submessage_arena)
-        {
-            commit_merge = ::google::protobuf::internal::GetOwnedMessage(message_arena, commit_merge, submessage_arena);
-        }
-    }
-    else
-    {
-    }
-    commit_merge_ = commit_merge;
-    // @@protoc_insertion_point(field_set_allocated:raft_cmdpb.AdminRequest.commit_merge)
+    
+  } else {
+    
+  }
+  commit_merge_ = commit_merge;
+  // @@protoc_insertion_point(field_set_allocated:raft_cmdpb.AdminRequest.commit_merge)
 }
 
 // .raft_cmdpb.RollbackMergeRequest rollback_merge = 9;
-inline bool AdminRequest::has_rollback_merge() const
-{
-    return this != internal_default_instance() && rollback_merge_ != NULL;
+inline bool AdminRequest::has_rollback_merge() const {
+  return this != internal_default_instance() && rollback_merge_ != NULL;
 }
-inline void AdminRequest::clear_rollback_merge()
-{
-    if (GetArenaNoVirtual() == NULL && rollback_merge_ != NULL)
-    {
-        delete rollback_merge_;
-    }
-    rollback_merge_ = NULL;
+inline void AdminRequest::clear_rollback_merge() {
+  if (GetArenaNoVirtual() == NULL && rollback_merge_ != NULL) {
+    delete rollback_merge_;
+  }
+  rollback_merge_ = NULL;
 }
-inline const ::raft_cmdpb::RollbackMergeRequest & AdminRequest::rollback_merge() const
-{
-    const ::raft_cmdpb::RollbackMergeRequest * p = rollback_merge_;
-    // @@protoc_insertion_point(field_get:raft_cmdpb.AdminRequest.rollback_merge)
-    return p != NULL
-        ? *p
-        : *reinterpret_cast<const ::raft_cmdpb::RollbackMergeRequest *>(&::raft_cmdpb::_RollbackMergeRequest_default_instance_);
+inline const ::raft_cmdpb::RollbackMergeRequest& AdminRequest::rollback_merge() const {
+  const ::raft_cmdpb::RollbackMergeRequest* p = rollback_merge_;
+  // @@protoc_insertion_point(field_get:raft_cmdpb.AdminRequest.rollback_merge)
+  return p != NULL ? *p : *reinterpret_cast<const ::raft_cmdpb::RollbackMergeRequest*>(
+      &::raft_cmdpb::_RollbackMergeRequest_default_instance_);
 }
-inline ::raft_cmdpb::RollbackMergeRequest * AdminRequest::release_rollback_merge()
-{
-    // @@protoc_insertion_point(field_release:raft_cmdpb.AdminRequest.rollback_merge)
-
-    ::raft_cmdpb::RollbackMergeRequest * temp = rollback_merge_;
-    rollback_merge_                           = NULL;
-    return temp;
+inline ::raft_cmdpb::RollbackMergeRequest* AdminRequest::release_rollback_merge() {
+  // @@protoc_insertion_point(field_release:raft_cmdpb.AdminRequest.rollback_merge)
+  
+  ::raft_cmdpb::RollbackMergeRequest* temp = rollback_merge_;
+  rollback_merge_ = NULL;
+  return temp;
 }
-inline ::raft_cmdpb::RollbackMergeRequest * AdminRequest::mutable_rollback_merge()
-{
-
-    if (rollback_merge_ == NULL)
-    {
-        rollback_merge_ = new ::raft_cmdpb::RollbackMergeRequest;
-    }
-    // @@protoc_insertion_point(field_mutable:raft_cmdpb.AdminRequest.rollback_merge)
-    return rollback_merge_;
+inline ::raft_cmdpb::RollbackMergeRequest* AdminRequest::mutable_rollback_merge() {
+  
+  if (rollback_merge_ == NULL) {
+    rollback_merge_ = new ::raft_cmdpb::RollbackMergeRequest;
+  }
+  // @@protoc_insertion_point(field_mutable:raft_cmdpb.AdminRequest.rollback_merge)
+  return rollback_merge_;
 }
-inline void AdminRequest::set_allocated_rollback_merge(::raft_cmdpb::RollbackMergeRequest * rollback_merge)
-{
-    ::google::protobuf::Arena * message_arena = GetArenaNoVirtual();
-    if (message_arena == NULL)
-    {
-        delete rollback_merge_;
+inline void AdminRequest::set_allocated_rollback_merge(::raft_cmdpb::RollbackMergeRequest* rollback_merge) {
+  ::google::protobuf::Arena* message_arena = GetArenaNoVirtual();
+  if (message_arena == NULL) {
+    delete rollback_merge_;
+  }
+  if (rollback_merge) {
+    ::google::protobuf::Arena* submessage_arena = NULL;
+    if (message_arena != submessage_arena) {
+      rollback_merge = ::google::protobuf::internal::GetOwnedMessage(
+          message_arena, rollback_merge, submessage_arena);
     }
-    if (rollback_merge)
-    {
-        ::google::protobuf::Arena * submessage_arena = NULL;
-        if (message_arena != submessage_arena)
-        {
-            rollback_merge = ::google::protobuf::internal::GetOwnedMessage(message_arena, rollback_merge, submessage_arena);
-        }
-    }
-    else
-    {
-    }
-    rollback_merge_ = rollback_merge;
-    // @@protoc_insertion_point(field_set_allocated:raft_cmdpb.AdminRequest.rollback_merge)
+    
+  } else {
+    
+  }
+  rollback_merge_ = rollback_merge;
+  // @@protoc_insertion_point(field_set_allocated:raft_cmdpb.AdminRequest.rollback_merge)
 }
 
 // .raft_cmdpb.BatchSplitRequest splits = 10;
-inline bool AdminRequest::has_splits() const
-{
-    return this != internal_default_instance() && splits_ != NULL;
+inline bool AdminRequest::has_splits() const {
+  return this != internal_default_instance() && splits_ != NULL;
 }
-inline void AdminRequest::clear_splits()
-{
-    if (GetArenaNoVirtual() == NULL && splits_ != NULL)
-    {
-        delete splits_;
-    }
-    splits_ = NULL;
+inline void AdminRequest::clear_splits() {
+  if (GetArenaNoVirtual() == NULL && splits_ != NULL) {
+    delete splits_;
+  }
+  splits_ = NULL;
 }
-inline const ::raft_cmdpb::BatchSplitRequest & AdminRequest::splits() const
-{
-    const ::raft_cmdpb::BatchSplitRequest * p = splits_;
-    // @@protoc_insertion_point(field_get:raft_cmdpb.AdminRequest.splits)
-    return p != NULL ? *p : *reinterpret_cast<const ::raft_cmdpb::BatchSplitRequest *>(&::raft_cmdpb::_BatchSplitRequest_default_instance_);
+inline const ::raft_cmdpb::BatchSplitRequest& AdminRequest::splits() const {
+  const ::raft_cmdpb::BatchSplitRequest* p = splits_;
+  // @@protoc_insertion_point(field_get:raft_cmdpb.AdminRequest.splits)
+  return p != NULL ? *p : *reinterpret_cast<const ::raft_cmdpb::BatchSplitRequest*>(
+      &::raft_cmdpb::_BatchSplitRequest_default_instance_);
 }
-inline ::raft_cmdpb::BatchSplitRequest * AdminRequest::release_splits()
-{
-    // @@protoc_insertion_point(field_release:raft_cmdpb.AdminRequest.splits)
-
-    ::raft_cmdpb::BatchSplitRequest * temp = splits_;
-    splits_                                = NULL;
-    return temp;
+inline ::raft_cmdpb::BatchSplitRequest* AdminRequest::release_splits() {
+  // @@protoc_insertion_point(field_release:raft_cmdpb.AdminRequest.splits)
+  
+  ::raft_cmdpb::BatchSplitRequest* temp = splits_;
+  splits_ = NULL;
+  return temp;
 }
-inline ::raft_cmdpb::BatchSplitRequest * AdminRequest::mutable_splits()
-{
-
-    if (splits_ == NULL)
-    {
-        splits_ = new ::raft_cmdpb::BatchSplitRequest;
-    }
-    // @@protoc_insertion_point(field_mutable:raft_cmdpb.AdminRequest.splits)
-    return splits_;
+inline ::raft_cmdpb::BatchSplitRequest* AdminRequest::mutable_splits() {
+  
+  if (splits_ == NULL) {
+    splits_ = new ::raft_cmdpb::BatchSplitRequest;
+  }
+  // @@protoc_insertion_point(field_mutable:raft_cmdpb.AdminRequest.splits)
+  return splits_;
 }
-inline void AdminRequest::set_allocated_splits(::raft_cmdpb::BatchSplitRequest * splits)
-{
-    ::google::protobuf::Arena * message_arena = GetArenaNoVirtual();
-    if (message_arena == NULL)
-    {
-        delete splits_;
+inline void AdminRequest::set_allocated_splits(::raft_cmdpb::BatchSplitRequest* splits) {
+  ::google::protobuf::Arena* message_arena = GetArenaNoVirtual();
+  if (message_arena == NULL) {
+    delete splits_;
+  }
+  if (splits) {
+    ::google::protobuf::Arena* submessage_arena = NULL;
+    if (message_arena != submessage_arena) {
+      splits = ::google::protobuf::internal::GetOwnedMessage(
+          message_arena, splits, submessage_arena);
     }
-    if (splits)
-    {
-        ::google::protobuf::Arena * submessage_arena = NULL;
-        if (message_arena != submessage_arena)
-        {
-            splits = ::google::protobuf::internal::GetOwnedMessage(message_arena, splits, submessage_arena);
-        }
-    }
-    else
-    {
-    }
-    splits_ = splits;
-    // @@protoc_insertion_point(field_set_allocated:raft_cmdpb.AdminRequest.splits)
+    
+  } else {
+    
+  }
+  splits_ = splits;
+  // @@protoc_insertion_point(field_set_allocated:raft_cmdpb.AdminRequest.splits)
 }
 
 // -------------------------------------------------------------------
@@ -8811,562 +8549,467 @@ inline void AdminRequest::set_allocated_splits(::raft_cmdpb::BatchSplitRequest *
 // AdminResponse
 
 // .raft_cmdpb.AdminCmdType cmd_type = 1;
-inline void AdminResponse::clear_cmd_type()
-{
-    cmd_type_ = 0;
+inline void AdminResponse::clear_cmd_type() {
+  cmd_type_ = 0;
 }
-inline ::raft_cmdpb::AdminCmdType AdminResponse::cmd_type() const
-{
-    // @@protoc_insertion_point(field_get:raft_cmdpb.AdminResponse.cmd_type)
-    return static_cast<::raft_cmdpb::AdminCmdType>(cmd_type_);
+inline ::raft_cmdpb::AdminCmdType AdminResponse::cmd_type() const {
+  // @@protoc_insertion_point(field_get:raft_cmdpb.AdminResponse.cmd_type)
+  return static_cast< ::raft_cmdpb::AdminCmdType >(cmd_type_);
 }
-inline void AdminResponse::set_cmd_type(::raft_cmdpb::AdminCmdType value)
-{
-
-    cmd_type_ = value;
-    // @@protoc_insertion_point(field_set:raft_cmdpb.AdminResponse.cmd_type)
+inline void AdminResponse::set_cmd_type(::raft_cmdpb::AdminCmdType value) {
+  
+  cmd_type_ = value;
+  // @@protoc_insertion_point(field_set:raft_cmdpb.AdminResponse.cmd_type)
 }
 
 // .raft_cmdpb.ChangePeerResponse change_peer = 2;
-inline bool AdminResponse::has_change_peer() const
-{
-    return this != internal_default_instance() && change_peer_ != NULL;
+inline bool AdminResponse::has_change_peer() const {
+  return this != internal_default_instance() && change_peer_ != NULL;
 }
-inline void AdminResponse::clear_change_peer()
-{
-    if (GetArenaNoVirtual() == NULL && change_peer_ != NULL)
-    {
-        delete change_peer_;
-    }
-    change_peer_ = NULL;
+inline void AdminResponse::clear_change_peer() {
+  if (GetArenaNoVirtual() == NULL && change_peer_ != NULL) {
+    delete change_peer_;
+  }
+  change_peer_ = NULL;
 }
-inline const ::raft_cmdpb::ChangePeerResponse & AdminResponse::change_peer() const
-{
-    const ::raft_cmdpb::ChangePeerResponse * p = change_peer_;
-    // @@protoc_insertion_point(field_get:raft_cmdpb.AdminResponse.change_peer)
-    return p != NULL ? *p
-                     : *reinterpret_cast<const ::raft_cmdpb::ChangePeerResponse *>(&::raft_cmdpb::_ChangePeerResponse_default_instance_);
+inline const ::raft_cmdpb::ChangePeerResponse& AdminResponse::change_peer() const {
+  const ::raft_cmdpb::ChangePeerResponse* p = change_peer_;
+  // @@protoc_insertion_point(field_get:raft_cmdpb.AdminResponse.change_peer)
+  return p != NULL ? *p : *reinterpret_cast<const ::raft_cmdpb::ChangePeerResponse*>(
+      &::raft_cmdpb::_ChangePeerResponse_default_instance_);
 }
-inline ::raft_cmdpb::ChangePeerResponse * AdminResponse::release_change_peer()
-{
-    // @@protoc_insertion_point(field_release:raft_cmdpb.AdminResponse.change_peer)
-
-    ::raft_cmdpb::ChangePeerResponse * temp = change_peer_;
-    change_peer_                            = NULL;
-    return temp;
+inline ::raft_cmdpb::ChangePeerResponse* AdminResponse::release_change_peer() {
+  // @@protoc_insertion_point(field_release:raft_cmdpb.AdminResponse.change_peer)
+  
+  ::raft_cmdpb::ChangePeerResponse* temp = change_peer_;
+  change_peer_ = NULL;
+  return temp;
 }
-inline ::raft_cmdpb::ChangePeerResponse * AdminResponse::mutable_change_peer()
-{
-
-    if (change_peer_ == NULL)
-    {
-        change_peer_ = new ::raft_cmdpb::ChangePeerResponse;
-    }
-    // @@protoc_insertion_point(field_mutable:raft_cmdpb.AdminResponse.change_peer)
-    return change_peer_;
+inline ::raft_cmdpb::ChangePeerResponse* AdminResponse::mutable_change_peer() {
+  
+  if (change_peer_ == NULL) {
+    change_peer_ = new ::raft_cmdpb::ChangePeerResponse;
+  }
+  // @@protoc_insertion_point(field_mutable:raft_cmdpb.AdminResponse.change_peer)
+  return change_peer_;
 }
-inline void AdminResponse::set_allocated_change_peer(::raft_cmdpb::ChangePeerResponse * change_peer)
-{
-    ::google::protobuf::Arena * message_arena = GetArenaNoVirtual();
-    if (message_arena == NULL)
-    {
-        delete change_peer_;
+inline void AdminResponse::set_allocated_change_peer(::raft_cmdpb::ChangePeerResponse* change_peer) {
+  ::google::protobuf::Arena* message_arena = GetArenaNoVirtual();
+  if (message_arena == NULL) {
+    delete change_peer_;
+  }
+  if (change_peer) {
+    ::google::protobuf::Arena* submessage_arena = NULL;
+    if (message_arena != submessage_arena) {
+      change_peer = ::google::protobuf::internal::GetOwnedMessage(
+          message_arena, change_peer, submessage_arena);
     }
-    if (change_peer)
-    {
-        ::google::protobuf::Arena * submessage_arena = NULL;
-        if (message_arena != submessage_arena)
-        {
-            change_peer = ::google::protobuf::internal::GetOwnedMessage(message_arena, change_peer, submessage_arena);
-        }
-    }
-    else
-    {
-    }
-    change_peer_ = change_peer;
-    // @@protoc_insertion_point(field_set_allocated:raft_cmdpb.AdminResponse.change_peer)
+    
+  } else {
+    
+  }
+  change_peer_ = change_peer;
+  // @@protoc_insertion_point(field_set_allocated:raft_cmdpb.AdminResponse.change_peer)
 }
 
 // .raft_cmdpb.SplitResponse split = 3 [deprecated = true];
-inline bool AdminResponse::has_split() const
-{
-    return this != internal_default_instance() && split_ != NULL;
+inline bool AdminResponse::has_split() const {
+  return this != internal_default_instance() && split_ != NULL;
 }
-inline void AdminResponse::clear_split()
-{
-    if (GetArenaNoVirtual() == NULL && split_ != NULL)
-    {
-        delete split_;
-    }
-    split_ = NULL;
+inline void AdminResponse::clear_split() {
+  if (GetArenaNoVirtual() == NULL && split_ != NULL) {
+    delete split_;
+  }
+  split_ = NULL;
 }
-inline const ::raft_cmdpb::SplitResponse & AdminResponse::split() const
-{
-    const ::raft_cmdpb::SplitResponse * p = split_;
-    // @@protoc_insertion_point(field_get:raft_cmdpb.AdminResponse.split)
-    return p != NULL ? *p : *reinterpret_cast<const ::raft_cmdpb::SplitResponse *>(&::raft_cmdpb::_SplitResponse_default_instance_);
+inline const ::raft_cmdpb::SplitResponse& AdminResponse::split() const {
+  const ::raft_cmdpb::SplitResponse* p = split_;
+  // @@protoc_insertion_point(field_get:raft_cmdpb.AdminResponse.split)
+  return p != NULL ? *p : *reinterpret_cast<const ::raft_cmdpb::SplitResponse*>(
+      &::raft_cmdpb::_SplitResponse_default_instance_);
 }
-inline ::raft_cmdpb::SplitResponse * AdminResponse::release_split()
-{
-    // @@protoc_insertion_point(field_release:raft_cmdpb.AdminResponse.split)
-
-    ::raft_cmdpb::SplitResponse * temp = split_;
-    split_                             = NULL;
-    return temp;
+inline ::raft_cmdpb::SplitResponse* AdminResponse::release_split() {
+  // @@protoc_insertion_point(field_release:raft_cmdpb.AdminResponse.split)
+  
+  ::raft_cmdpb::SplitResponse* temp = split_;
+  split_ = NULL;
+  return temp;
 }
-inline ::raft_cmdpb::SplitResponse * AdminResponse::mutable_split()
-{
-
-    if (split_ == NULL)
-    {
-        split_ = new ::raft_cmdpb::SplitResponse;
-    }
-    // @@protoc_insertion_point(field_mutable:raft_cmdpb.AdminResponse.split)
-    return split_;
+inline ::raft_cmdpb::SplitResponse* AdminResponse::mutable_split() {
+  
+  if (split_ == NULL) {
+    split_ = new ::raft_cmdpb::SplitResponse;
+  }
+  // @@protoc_insertion_point(field_mutable:raft_cmdpb.AdminResponse.split)
+  return split_;
 }
-inline void AdminResponse::set_allocated_split(::raft_cmdpb::SplitResponse * split)
-{
-    ::google::protobuf::Arena * message_arena = GetArenaNoVirtual();
-    if (message_arena == NULL)
-    {
-        delete split_;
+inline void AdminResponse::set_allocated_split(::raft_cmdpb::SplitResponse* split) {
+  ::google::protobuf::Arena* message_arena = GetArenaNoVirtual();
+  if (message_arena == NULL) {
+    delete split_;
+  }
+  if (split) {
+    ::google::protobuf::Arena* submessage_arena = NULL;
+    if (message_arena != submessage_arena) {
+      split = ::google::protobuf::internal::GetOwnedMessage(
+          message_arena, split, submessage_arena);
     }
-    if (split)
-    {
-        ::google::protobuf::Arena * submessage_arena = NULL;
-        if (message_arena != submessage_arena)
-        {
-            split = ::google::protobuf::internal::GetOwnedMessage(message_arena, split, submessage_arena);
-        }
-    }
-    else
-    {
-    }
-    split_ = split;
-    // @@protoc_insertion_point(field_set_allocated:raft_cmdpb.AdminResponse.split)
+    
+  } else {
+    
+  }
+  split_ = split;
+  // @@protoc_insertion_point(field_set_allocated:raft_cmdpb.AdminResponse.split)
 }
 
 // .raft_cmdpb.CompactLogResponse compact_log = 4;
-inline bool AdminResponse::has_compact_log() const
-{
-    return this != internal_default_instance() && compact_log_ != NULL;
+inline bool AdminResponse::has_compact_log() const {
+  return this != internal_default_instance() && compact_log_ != NULL;
 }
-inline void AdminResponse::clear_compact_log()
-{
-    if (GetArenaNoVirtual() == NULL && compact_log_ != NULL)
-    {
-        delete compact_log_;
-    }
-    compact_log_ = NULL;
+inline void AdminResponse::clear_compact_log() {
+  if (GetArenaNoVirtual() == NULL && compact_log_ != NULL) {
+    delete compact_log_;
+  }
+  compact_log_ = NULL;
 }
-inline const ::raft_cmdpb::CompactLogResponse & AdminResponse::compact_log() const
-{
-    const ::raft_cmdpb::CompactLogResponse * p = compact_log_;
-    // @@protoc_insertion_point(field_get:raft_cmdpb.AdminResponse.compact_log)
-    return p != NULL ? *p
-                     : *reinterpret_cast<const ::raft_cmdpb::CompactLogResponse *>(&::raft_cmdpb::_CompactLogResponse_default_instance_);
+inline const ::raft_cmdpb::CompactLogResponse& AdminResponse::compact_log() const {
+  const ::raft_cmdpb::CompactLogResponse* p = compact_log_;
+  // @@protoc_insertion_point(field_get:raft_cmdpb.AdminResponse.compact_log)
+  return p != NULL ? *p : *reinterpret_cast<const ::raft_cmdpb::CompactLogResponse*>(
+      &::raft_cmdpb::_CompactLogResponse_default_instance_);
 }
-inline ::raft_cmdpb::CompactLogResponse * AdminResponse::release_compact_log()
-{
-    // @@protoc_insertion_point(field_release:raft_cmdpb.AdminResponse.compact_log)
-
-    ::raft_cmdpb::CompactLogResponse * temp = compact_log_;
-    compact_log_                            = NULL;
-    return temp;
+inline ::raft_cmdpb::CompactLogResponse* AdminResponse::release_compact_log() {
+  // @@protoc_insertion_point(field_release:raft_cmdpb.AdminResponse.compact_log)
+  
+  ::raft_cmdpb::CompactLogResponse* temp = compact_log_;
+  compact_log_ = NULL;
+  return temp;
 }
-inline ::raft_cmdpb::CompactLogResponse * AdminResponse::mutable_compact_log()
-{
-
-    if (compact_log_ == NULL)
-    {
-        compact_log_ = new ::raft_cmdpb::CompactLogResponse;
-    }
-    // @@protoc_insertion_point(field_mutable:raft_cmdpb.AdminResponse.compact_log)
-    return compact_log_;
+inline ::raft_cmdpb::CompactLogResponse* AdminResponse::mutable_compact_log() {
+  
+  if (compact_log_ == NULL) {
+    compact_log_ = new ::raft_cmdpb::CompactLogResponse;
+  }
+  // @@protoc_insertion_point(field_mutable:raft_cmdpb.AdminResponse.compact_log)
+  return compact_log_;
 }
-inline void AdminResponse::set_allocated_compact_log(::raft_cmdpb::CompactLogResponse * compact_log)
-{
-    ::google::protobuf::Arena * message_arena = GetArenaNoVirtual();
-    if (message_arena == NULL)
-    {
-        delete compact_log_;
+inline void AdminResponse::set_allocated_compact_log(::raft_cmdpb::CompactLogResponse* compact_log) {
+  ::google::protobuf::Arena* message_arena = GetArenaNoVirtual();
+  if (message_arena == NULL) {
+    delete compact_log_;
+  }
+  if (compact_log) {
+    ::google::protobuf::Arena* submessage_arena = NULL;
+    if (message_arena != submessage_arena) {
+      compact_log = ::google::protobuf::internal::GetOwnedMessage(
+          message_arena, compact_log, submessage_arena);
     }
-    if (compact_log)
-    {
-        ::google::protobuf::Arena * submessage_arena = NULL;
-        if (message_arena != submessage_arena)
-        {
-            compact_log = ::google::protobuf::internal::GetOwnedMessage(message_arena, compact_log, submessage_arena);
-        }
-    }
-    else
-    {
-    }
-    compact_log_ = compact_log;
-    // @@protoc_insertion_point(field_set_allocated:raft_cmdpb.AdminResponse.compact_log)
+    
+  } else {
+    
+  }
+  compact_log_ = compact_log;
+  // @@protoc_insertion_point(field_set_allocated:raft_cmdpb.AdminResponse.compact_log)
 }
 
 // .raft_cmdpb.TransferLeaderResponse transfer_leader = 5;
-inline bool AdminResponse::has_transfer_leader() const
-{
-    return this != internal_default_instance() && transfer_leader_ != NULL;
+inline bool AdminResponse::has_transfer_leader() const {
+  return this != internal_default_instance() && transfer_leader_ != NULL;
 }
-inline void AdminResponse::clear_transfer_leader()
-{
-    if (GetArenaNoVirtual() == NULL && transfer_leader_ != NULL)
-    {
-        delete transfer_leader_;
-    }
-    transfer_leader_ = NULL;
+inline void AdminResponse::clear_transfer_leader() {
+  if (GetArenaNoVirtual() == NULL && transfer_leader_ != NULL) {
+    delete transfer_leader_;
+  }
+  transfer_leader_ = NULL;
 }
-inline const ::raft_cmdpb::TransferLeaderResponse & AdminResponse::transfer_leader() const
-{
-    const ::raft_cmdpb::TransferLeaderResponse * p = transfer_leader_;
-    // @@protoc_insertion_point(field_get:raft_cmdpb.AdminResponse.transfer_leader)
-    return p != NULL
-        ? *p
-        : *reinterpret_cast<const ::raft_cmdpb::TransferLeaderResponse *>(&::raft_cmdpb::_TransferLeaderResponse_default_instance_);
+inline const ::raft_cmdpb::TransferLeaderResponse& AdminResponse::transfer_leader() const {
+  const ::raft_cmdpb::TransferLeaderResponse* p = transfer_leader_;
+  // @@protoc_insertion_point(field_get:raft_cmdpb.AdminResponse.transfer_leader)
+  return p != NULL ? *p : *reinterpret_cast<const ::raft_cmdpb::TransferLeaderResponse*>(
+      &::raft_cmdpb::_TransferLeaderResponse_default_instance_);
 }
-inline ::raft_cmdpb::TransferLeaderResponse * AdminResponse::release_transfer_leader()
-{
-    // @@protoc_insertion_point(field_release:raft_cmdpb.AdminResponse.transfer_leader)
-
-    ::raft_cmdpb::TransferLeaderResponse * temp = transfer_leader_;
-    transfer_leader_                            = NULL;
-    return temp;
+inline ::raft_cmdpb::TransferLeaderResponse* AdminResponse::release_transfer_leader() {
+  // @@protoc_insertion_point(field_release:raft_cmdpb.AdminResponse.transfer_leader)
+  
+  ::raft_cmdpb::TransferLeaderResponse* temp = transfer_leader_;
+  transfer_leader_ = NULL;
+  return temp;
 }
-inline ::raft_cmdpb::TransferLeaderResponse * AdminResponse::mutable_transfer_leader()
-{
-
-    if (transfer_leader_ == NULL)
-    {
-        transfer_leader_ = new ::raft_cmdpb::TransferLeaderResponse;
-    }
-    // @@protoc_insertion_point(field_mutable:raft_cmdpb.AdminResponse.transfer_leader)
-    return transfer_leader_;
+inline ::raft_cmdpb::TransferLeaderResponse* AdminResponse::mutable_transfer_leader() {
+  
+  if (transfer_leader_ == NULL) {
+    transfer_leader_ = new ::raft_cmdpb::TransferLeaderResponse;
+  }
+  // @@protoc_insertion_point(field_mutable:raft_cmdpb.AdminResponse.transfer_leader)
+  return transfer_leader_;
 }
-inline void AdminResponse::set_allocated_transfer_leader(::raft_cmdpb::TransferLeaderResponse * transfer_leader)
-{
-    ::google::protobuf::Arena * message_arena = GetArenaNoVirtual();
-    if (message_arena == NULL)
-    {
-        delete transfer_leader_;
+inline void AdminResponse::set_allocated_transfer_leader(::raft_cmdpb::TransferLeaderResponse* transfer_leader) {
+  ::google::protobuf::Arena* message_arena = GetArenaNoVirtual();
+  if (message_arena == NULL) {
+    delete transfer_leader_;
+  }
+  if (transfer_leader) {
+    ::google::protobuf::Arena* submessage_arena = NULL;
+    if (message_arena != submessage_arena) {
+      transfer_leader = ::google::protobuf::internal::GetOwnedMessage(
+          message_arena, transfer_leader, submessage_arena);
     }
-    if (transfer_leader)
-    {
-        ::google::protobuf::Arena * submessage_arena = NULL;
-        if (message_arena != submessage_arena)
-        {
-            transfer_leader = ::google::protobuf::internal::GetOwnedMessage(message_arena, transfer_leader, submessage_arena);
-        }
-    }
-    else
-    {
-    }
-    transfer_leader_ = transfer_leader;
-    // @@protoc_insertion_point(field_set_allocated:raft_cmdpb.AdminResponse.transfer_leader)
+    
+  } else {
+    
+  }
+  transfer_leader_ = transfer_leader;
+  // @@protoc_insertion_point(field_set_allocated:raft_cmdpb.AdminResponse.transfer_leader)
 }
 
 // .raft_cmdpb.VerifyHashResponse verify_hash = 6;
-inline bool AdminResponse::has_verify_hash() const
-{
-    return this != internal_default_instance() && verify_hash_ != NULL;
+inline bool AdminResponse::has_verify_hash() const {
+  return this != internal_default_instance() && verify_hash_ != NULL;
 }
-inline void AdminResponse::clear_verify_hash()
-{
-    if (GetArenaNoVirtual() == NULL && verify_hash_ != NULL)
-    {
-        delete verify_hash_;
-    }
-    verify_hash_ = NULL;
+inline void AdminResponse::clear_verify_hash() {
+  if (GetArenaNoVirtual() == NULL && verify_hash_ != NULL) {
+    delete verify_hash_;
+  }
+  verify_hash_ = NULL;
 }
-inline const ::raft_cmdpb::VerifyHashResponse & AdminResponse::verify_hash() const
-{
-    const ::raft_cmdpb::VerifyHashResponse * p = verify_hash_;
-    // @@protoc_insertion_point(field_get:raft_cmdpb.AdminResponse.verify_hash)
-    return p != NULL ? *p
-                     : *reinterpret_cast<const ::raft_cmdpb::VerifyHashResponse *>(&::raft_cmdpb::_VerifyHashResponse_default_instance_);
+inline const ::raft_cmdpb::VerifyHashResponse& AdminResponse::verify_hash() const {
+  const ::raft_cmdpb::VerifyHashResponse* p = verify_hash_;
+  // @@protoc_insertion_point(field_get:raft_cmdpb.AdminResponse.verify_hash)
+  return p != NULL ? *p : *reinterpret_cast<const ::raft_cmdpb::VerifyHashResponse*>(
+      &::raft_cmdpb::_VerifyHashResponse_default_instance_);
 }
-inline ::raft_cmdpb::VerifyHashResponse * AdminResponse::release_verify_hash()
-{
-    // @@protoc_insertion_point(field_release:raft_cmdpb.AdminResponse.verify_hash)
-
-    ::raft_cmdpb::VerifyHashResponse * temp = verify_hash_;
-    verify_hash_                            = NULL;
-    return temp;
+inline ::raft_cmdpb::VerifyHashResponse* AdminResponse::release_verify_hash() {
+  // @@protoc_insertion_point(field_release:raft_cmdpb.AdminResponse.verify_hash)
+  
+  ::raft_cmdpb::VerifyHashResponse* temp = verify_hash_;
+  verify_hash_ = NULL;
+  return temp;
 }
-inline ::raft_cmdpb::VerifyHashResponse * AdminResponse::mutable_verify_hash()
-{
-
-    if (verify_hash_ == NULL)
-    {
-        verify_hash_ = new ::raft_cmdpb::VerifyHashResponse;
-    }
-    // @@protoc_insertion_point(field_mutable:raft_cmdpb.AdminResponse.verify_hash)
-    return verify_hash_;
+inline ::raft_cmdpb::VerifyHashResponse* AdminResponse::mutable_verify_hash() {
+  
+  if (verify_hash_ == NULL) {
+    verify_hash_ = new ::raft_cmdpb::VerifyHashResponse;
+  }
+  // @@protoc_insertion_point(field_mutable:raft_cmdpb.AdminResponse.verify_hash)
+  return verify_hash_;
 }
-inline void AdminResponse::set_allocated_verify_hash(::raft_cmdpb::VerifyHashResponse * verify_hash)
-{
-    ::google::protobuf::Arena * message_arena = GetArenaNoVirtual();
-    if (message_arena == NULL)
-    {
-        delete verify_hash_;
+inline void AdminResponse::set_allocated_verify_hash(::raft_cmdpb::VerifyHashResponse* verify_hash) {
+  ::google::protobuf::Arena* message_arena = GetArenaNoVirtual();
+  if (message_arena == NULL) {
+    delete verify_hash_;
+  }
+  if (verify_hash) {
+    ::google::protobuf::Arena* submessage_arena = NULL;
+    if (message_arena != submessage_arena) {
+      verify_hash = ::google::protobuf::internal::GetOwnedMessage(
+          message_arena, verify_hash, submessage_arena);
     }
-    if (verify_hash)
-    {
-        ::google::protobuf::Arena * submessage_arena = NULL;
-        if (message_arena != submessage_arena)
-        {
-            verify_hash = ::google::protobuf::internal::GetOwnedMessage(message_arena, verify_hash, submessage_arena);
-        }
-    }
-    else
-    {
-    }
-    verify_hash_ = verify_hash;
-    // @@protoc_insertion_point(field_set_allocated:raft_cmdpb.AdminResponse.verify_hash)
+    
+  } else {
+    
+  }
+  verify_hash_ = verify_hash;
+  // @@protoc_insertion_point(field_set_allocated:raft_cmdpb.AdminResponse.verify_hash)
 }
 
 // .raft_cmdpb.PrepareMergeResponse prepare_merge = 7;
-inline bool AdminResponse::has_prepare_merge() const
-{
-    return this != internal_default_instance() && prepare_merge_ != NULL;
+inline bool AdminResponse::has_prepare_merge() const {
+  return this != internal_default_instance() && prepare_merge_ != NULL;
 }
-inline void AdminResponse::clear_prepare_merge()
-{
-    if (GetArenaNoVirtual() == NULL && prepare_merge_ != NULL)
-    {
-        delete prepare_merge_;
-    }
-    prepare_merge_ = NULL;
+inline void AdminResponse::clear_prepare_merge() {
+  if (GetArenaNoVirtual() == NULL && prepare_merge_ != NULL) {
+    delete prepare_merge_;
+  }
+  prepare_merge_ = NULL;
 }
-inline const ::raft_cmdpb::PrepareMergeResponse & AdminResponse::prepare_merge() const
-{
-    const ::raft_cmdpb::PrepareMergeResponse * p = prepare_merge_;
-    // @@protoc_insertion_point(field_get:raft_cmdpb.AdminResponse.prepare_merge)
-    return p != NULL
-        ? *p
-        : *reinterpret_cast<const ::raft_cmdpb::PrepareMergeResponse *>(&::raft_cmdpb::_PrepareMergeResponse_default_instance_);
+inline const ::raft_cmdpb::PrepareMergeResponse& AdminResponse::prepare_merge() const {
+  const ::raft_cmdpb::PrepareMergeResponse* p = prepare_merge_;
+  // @@protoc_insertion_point(field_get:raft_cmdpb.AdminResponse.prepare_merge)
+  return p != NULL ? *p : *reinterpret_cast<const ::raft_cmdpb::PrepareMergeResponse*>(
+      &::raft_cmdpb::_PrepareMergeResponse_default_instance_);
 }
-inline ::raft_cmdpb::PrepareMergeResponse * AdminResponse::release_prepare_merge()
-{
-    // @@protoc_insertion_point(field_release:raft_cmdpb.AdminResponse.prepare_merge)
-
-    ::raft_cmdpb::PrepareMergeResponse * temp = prepare_merge_;
-    prepare_merge_                            = NULL;
-    return temp;
+inline ::raft_cmdpb::PrepareMergeResponse* AdminResponse::release_prepare_merge() {
+  // @@protoc_insertion_point(field_release:raft_cmdpb.AdminResponse.prepare_merge)
+  
+  ::raft_cmdpb::PrepareMergeResponse* temp = prepare_merge_;
+  prepare_merge_ = NULL;
+  return temp;
 }
-inline ::raft_cmdpb::PrepareMergeResponse * AdminResponse::mutable_prepare_merge()
-{
-
-    if (prepare_merge_ == NULL)
-    {
-        prepare_merge_ = new ::raft_cmdpb::PrepareMergeResponse;
-    }
-    // @@protoc_insertion_point(field_mutable:raft_cmdpb.AdminResponse.prepare_merge)
-    return prepare_merge_;
+inline ::raft_cmdpb::PrepareMergeResponse* AdminResponse::mutable_prepare_merge() {
+  
+  if (prepare_merge_ == NULL) {
+    prepare_merge_ = new ::raft_cmdpb::PrepareMergeResponse;
+  }
+  // @@protoc_insertion_point(field_mutable:raft_cmdpb.AdminResponse.prepare_merge)
+  return prepare_merge_;
 }
-inline void AdminResponse::set_allocated_prepare_merge(::raft_cmdpb::PrepareMergeResponse * prepare_merge)
-{
-    ::google::protobuf::Arena * message_arena = GetArenaNoVirtual();
-    if (message_arena == NULL)
-    {
-        delete prepare_merge_;
+inline void AdminResponse::set_allocated_prepare_merge(::raft_cmdpb::PrepareMergeResponse* prepare_merge) {
+  ::google::protobuf::Arena* message_arena = GetArenaNoVirtual();
+  if (message_arena == NULL) {
+    delete prepare_merge_;
+  }
+  if (prepare_merge) {
+    ::google::protobuf::Arena* submessage_arena = NULL;
+    if (message_arena != submessage_arena) {
+      prepare_merge = ::google::protobuf::internal::GetOwnedMessage(
+          message_arena, prepare_merge, submessage_arena);
     }
-    if (prepare_merge)
-    {
-        ::google::protobuf::Arena * submessage_arena = NULL;
-        if (message_arena != submessage_arena)
-        {
-            prepare_merge = ::google::protobuf::internal::GetOwnedMessage(message_arena, prepare_merge, submessage_arena);
-        }
-    }
-    else
-    {
-    }
-    prepare_merge_ = prepare_merge;
-    // @@protoc_insertion_point(field_set_allocated:raft_cmdpb.AdminResponse.prepare_merge)
+    
+  } else {
+    
+  }
+  prepare_merge_ = prepare_merge;
+  // @@protoc_insertion_point(field_set_allocated:raft_cmdpb.AdminResponse.prepare_merge)
 }
 
 // .raft_cmdpb.CommitMergeResponse commit_merge = 8;
-inline bool AdminResponse::has_commit_merge() const
-{
-    return this != internal_default_instance() && commit_merge_ != NULL;
+inline bool AdminResponse::has_commit_merge() const {
+  return this != internal_default_instance() && commit_merge_ != NULL;
 }
-inline void AdminResponse::clear_commit_merge()
-{
-    if (GetArenaNoVirtual() == NULL && commit_merge_ != NULL)
-    {
-        delete commit_merge_;
-    }
-    commit_merge_ = NULL;
+inline void AdminResponse::clear_commit_merge() {
+  if (GetArenaNoVirtual() == NULL && commit_merge_ != NULL) {
+    delete commit_merge_;
+  }
+  commit_merge_ = NULL;
 }
-inline const ::raft_cmdpb::CommitMergeResponse & AdminResponse::commit_merge() const
-{
-    const ::raft_cmdpb::CommitMergeResponse * p = commit_merge_;
-    // @@protoc_insertion_point(field_get:raft_cmdpb.AdminResponse.commit_merge)
-    return p != NULL ? *p
-                     : *reinterpret_cast<const ::raft_cmdpb::CommitMergeResponse *>(&::raft_cmdpb::_CommitMergeResponse_default_instance_);
+inline const ::raft_cmdpb::CommitMergeResponse& AdminResponse::commit_merge() const {
+  const ::raft_cmdpb::CommitMergeResponse* p = commit_merge_;
+  // @@protoc_insertion_point(field_get:raft_cmdpb.AdminResponse.commit_merge)
+  return p != NULL ? *p : *reinterpret_cast<const ::raft_cmdpb::CommitMergeResponse*>(
+      &::raft_cmdpb::_CommitMergeResponse_default_instance_);
 }
-inline ::raft_cmdpb::CommitMergeResponse * AdminResponse::release_commit_merge()
-{
-    // @@protoc_insertion_point(field_release:raft_cmdpb.AdminResponse.commit_merge)
-
-    ::raft_cmdpb::CommitMergeResponse * temp = commit_merge_;
-    commit_merge_                            = NULL;
-    return temp;
+inline ::raft_cmdpb::CommitMergeResponse* AdminResponse::release_commit_merge() {
+  // @@protoc_insertion_point(field_release:raft_cmdpb.AdminResponse.commit_merge)
+  
+  ::raft_cmdpb::CommitMergeResponse* temp = commit_merge_;
+  commit_merge_ = NULL;
+  return temp;
 }
-inline ::raft_cmdpb::CommitMergeResponse * AdminResponse::mutable_commit_merge()
-{
-
-    if (commit_merge_ == NULL)
-    {
-        commit_merge_ = new ::raft_cmdpb::CommitMergeResponse;
-    }
-    // @@protoc_insertion_point(field_mutable:raft_cmdpb.AdminResponse.commit_merge)
-    return commit_merge_;
+inline ::raft_cmdpb::CommitMergeResponse* AdminResponse::mutable_commit_merge() {
+  
+  if (commit_merge_ == NULL) {
+    commit_merge_ = new ::raft_cmdpb::CommitMergeResponse;
+  }
+  // @@protoc_insertion_point(field_mutable:raft_cmdpb.AdminResponse.commit_merge)
+  return commit_merge_;
 }
-inline void AdminResponse::set_allocated_commit_merge(::raft_cmdpb::CommitMergeResponse * commit_merge)
-{
-    ::google::protobuf::Arena * message_arena = GetArenaNoVirtual();
-    if (message_arena == NULL)
-    {
-        delete commit_merge_;
+inline void AdminResponse::set_allocated_commit_merge(::raft_cmdpb::CommitMergeResponse* commit_merge) {
+  ::google::protobuf::Arena* message_arena = GetArenaNoVirtual();
+  if (message_arena == NULL) {
+    delete commit_merge_;
+  }
+  if (commit_merge) {
+    ::google::protobuf::Arena* submessage_arena = NULL;
+    if (message_arena != submessage_arena) {
+      commit_merge = ::google::protobuf::internal::GetOwnedMessage(
+          message_arena, commit_merge, submessage_arena);
     }
-    if (commit_merge)
-    {
-        ::google::protobuf::Arena * submessage_arena = NULL;
-        if (message_arena != submessage_arena)
-        {
-            commit_merge = ::google::protobuf::internal::GetOwnedMessage(message_arena, commit_merge, submessage_arena);
-        }
-    }
-    else
-    {
-    }
-    commit_merge_ = commit_merge;
-    // @@protoc_insertion_point(field_set_allocated:raft_cmdpb.AdminResponse.commit_merge)
+    
+  } else {
+    
+  }
+  commit_merge_ = commit_merge;
+  // @@protoc_insertion_point(field_set_allocated:raft_cmdpb.AdminResponse.commit_merge)
 }
 
 // .raft_cmdpb.RollbackMergeResponse rollback_merge = 9;
-inline bool AdminResponse::has_rollback_merge() const
-{
-    return this != internal_default_instance() && rollback_merge_ != NULL;
+inline bool AdminResponse::has_rollback_merge() const {
+  return this != internal_default_instance() && rollback_merge_ != NULL;
 }
-inline void AdminResponse::clear_rollback_merge()
-{
-    if (GetArenaNoVirtual() == NULL && rollback_merge_ != NULL)
-    {
-        delete rollback_merge_;
-    }
-    rollback_merge_ = NULL;
+inline void AdminResponse::clear_rollback_merge() {
+  if (GetArenaNoVirtual() == NULL && rollback_merge_ != NULL) {
+    delete rollback_merge_;
+  }
+  rollback_merge_ = NULL;
 }
-inline const ::raft_cmdpb::RollbackMergeResponse & AdminResponse::rollback_merge() const
-{
-    const ::raft_cmdpb::RollbackMergeResponse * p = rollback_merge_;
-    // @@protoc_insertion_point(field_get:raft_cmdpb.AdminResponse.rollback_merge)
-    return p != NULL
-        ? *p
-        : *reinterpret_cast<const ::raft_cmdpb::RollbackMergeResponse *>(&::raft_cmdpb::_RollbackMergeResponse_default_instance_);
+inline const ::raft_cmdpb::RollbackMergeResponse& AdminResponse::rollback_merge() const {
+  const ::raft_cmdpb::RollbackMergeResponse* p = rollback_merge_;
+  // @@protoc_insertion_point(field_get:raft_cmdpb.AdminResponse.rollback_merge)
+  return p != NULL ? *p : *reinterpret_cast<const ::raft_cmdpb::RollbackMergeResponse*>(
+      &::raft_cmdpb::_RollbackMergeResponse_default_instance_);
 }
-inline ::raft_cmdpb::RollbackMergeResponse * AdminResponse::release_rollback_merge()
-{
-    // @@protoc_insertion_point(field_release:raft_cmdpb.AdminResponse.rollback_merge)
-
-    ::raft_cmdpb::RollbackMergeResponse * temp = rollback_merge_;
-    rollback_merge_                            = NULL;
-    return temp;
+inline ::raft_cmdpb::RollbackMergeResponse* AdminResponse::release_rollback_merge() {
+  // @@protoc_insertion_point(field_release:raft_cmdpb.AdminResponse.rollback_merge)
+  
+  ::raft_cmdpb::RollbackMergeResponse* temp = rollback_merge_;
+  rollback_merge_ = NULL;
+  return temp;
 }
-inline ::raft_cmdpb::RollbackMergeResponse * AdminResponse::mutable_rollback_merge()
-{
-
-    if (rollback_merge_ == NULL)
-    {
-        rollback_merge_ = new ::raft_cmdpb::RollbackMergeResponse;
-    }
-    // @@protoc_insertion_point(field_mutable:raft_cmdpb.AdminResponse.rollback_merge)
-    return rollback_merge_;
+inline ::raft_cmdpb::RollbackMergeResponse* AdminResponse::mutable_rollback_merge() {
+  
+  if (rollback_merge_ == NULL) {
+    rollback_merge_ = new ::raft_cmdpb::RollbackMergeResponse;
+  }
+  // @@protoc_insertion_point(field_mutable:raft_cmdpb.AdminResponse.rollback_merge)
+  return rollback_merge_;
 }
-inline void AdminResponse::set_allocated_rollback_merge(::raft_cmdpb::RollbackMergeResponse * rollback_merge)
-{
-    ::google::protobuf::Arena * message_arena = GetArenaNoVirtual();
-    if (message_arena == NULL)
-    {
-        delete rollback_merge_;
+inline void AdminResponse::set_allocated_rollback_merge(::raft_cmdpb::RollbackMergeResponse* rollback_merge) {
+  ::google::protobuf::Arena* message_arena = GetArenaNoVirtual();
+  if (message_arena == NULL) {
+    delete rollback_merge_;
+  }
+  if (rollback_merge) {
+    ::google::protobuf::Arena* submessage_arena = NULL;
+    if (message_arena != submessage_arena) {
+      rollback_merge = ::google::protobuf::internal::GetOwnedMessage(
+          message_arena, rollback_merge, submessage_arena);
     }
-    if (rollback_merge)
-    {
-        ::google::protobuf::Arena * submessage_arena = NULL;
-        if (message_arena != submessage_arena)
-        {
-            rollback_merge = ::google::protobuf::internal::GetOwnedMessage(message_arena, rollback_merge, submessage_arena);
-        }
-    }
-    else
-    {
-    }
-    rollback_merge_ = rollback_merge;
-    // @@protoc_insertion_point(field_set_allocated:raft_cmdpb.AdminResponse.rollback_merge)
+    
+  } else {
+    
+  }
+  rollback_merge_ = rollback_merge;
+  // @@protoc_insertion_point(field_set_allocated:raft_cmdpb.AdminResponse.rollback_merge)
 }
 
 // .raft_cmdpb.BatchSplitResponse splits = 10;
-inline bool AdminResponse::has_splits() const
-{
-    return this != internal_default_instance() && splits_ != NULL;
+inline bool AdminResponse::has_splits() const {
+  return this != internal_default_instance() && splits_ != NULL;
 }
-inline void AdminResponse::clear_splits()
-{
-    if (GetArenaNoVirtual() == NULL && splits_ != NULL)
-    {
-        delete splits_;
-    }
-    splits_ = NULL;
+inline void AdminResponse::clear_splits() {
+  if (GetArenaNoVirtual() == NULL && splits_ != NULL) {
+    delete splits_;
+  }
+  splits_ = NULL;
 }
-inline const ::raft_cmdpb::BatchSplitResponse & AdminResponse::splits() const
-{
-    const ::raft_cmdpb::BatchSplitResponse * p = splits_;
-    // @@protoc_insertion_point(field_get:raft_cmdpb.AdminResponse.splits)
-    return p != NULL ? *p
-                     : *reinterpret_cast<const ::raft_cmdpb::BatchSplitResponse *>(&::raft_cmdpb::_BatchSplitResponse_default_instance_);
+inline const ::raft_cmdpb::BatchSplitResponse& AdminResponse::splits() const {
+  const ::raft_cmdpb::BatchSplitResponse* p = splits_;
+  // @@protoc_insertion_point(field_get:raft_cmdpb.AdminResponse.splits)
+  return p != NULL ? *p : *reinterpret_cast<const ::raft_cmdpb::BatchSplitResponse*>(
+      &::raft_cmdpb::_BatchSplitResponse_default_instance_);
 }
-inline ::raft_cmdpb::BatchSplitResponse * AdminResponse::release_splits()
-{
-    // @@protoc_insertion_point(field_release:raft_cmdpb.AdminResponse.splits)
-
-    ::raft_cmdpb::BatchSplitResponse * temp = splits_;
-    splits_                                 = NULL;
-    return temp;
+inline ::raft_cmdpb::BatchSplitResponse* AdminResponse::release_splits() {
+  // @@protoc_insertion_point(field_release:raft_cmdpb.AdminResponse.splits)
+  
+  ::raft_cmdpb::BatchSplitResponse* temp = splits_;
+  splits_ = NULL;
+  return temp;
 }
-inline ::raft_cmdpb::BatchSplitResponse * AdminResponse::mutable_splits()
-{
-
-    if (splits_ == NULL)
-    {
-        splits_ = new ::raft_cmdpb::BatchSplitResponse;
-    }
-    // @@protoc_insertion_point(field_mutable:raft_cmdpb.AdminResponse.splits)
-    return splits_;
+inline ::raft_cmdpb::BatchSplitResponse* AdminResponse::mutable_splits() {
+  
+  if (splits_ == NULL) {
+    splits_ = new ::raft_cmdpb::BatchSplitResponse;
+  }
+  // @@protoc_insertion_point(field_mutable:raft_cmdpb.AdminResponse.splits)
+  return splits_;
 }
-inline void AdminResponse::set_allocated_splits(::raft_cmdpb::BatchSplitResponse * splits)
-{
-    ::google::protobuf::Arena * message_arena = GetArenaNoVirtual();
-    if (message_arena == NULL)
-    {
-        delete splits_;
+inline void AdminResponse::set_allocated_splits(::raft_cmdpb::BatchSplitResponse* splits) {
+  ::google::protobuf::Arena* message_arena = GetArenaNoVirtual();
+  if (message_arena == NULL) {
+    delete splits_;
+  }
+  if (splits) {
+    ::google::protobuf::Arena* submessage_arena = NULL;
+    if (message_arena != submessage_arena) {
+      splits = ::google::protobuf::internal::GetOwnedMessage(
+          message_arena, splits, submessage_arena);
     }
-    if (splits)
-    {
-        ::google::protobuf::Arena * submessage_arena = NULL;
-        if (message_arena != submessage_arena)
-        {
-            splits = ::google::protobuf::internal::GetOwnedMessage(message_arena, splits, submessage_arena);
-        }
-    }
-    else
-    {
-    }
-    splits_ = splits;
-    // @@protoc_insertion_point(field_set_allocated:raft_cmdpb.AdminResponse.splits)
+    
+  } else {
+    
+  }
+  splits_ = splits;
+  // @@protoc_insertion_point(field_set_allocated:raft_cmdpb.AdminResponse.splits)
 }
 
 // -------------------------------------------------------------------
@@ -9378,54 +9021,47 @@ inline void AdminResponse::set_allocated_splits(::raft_cmdpb::BatchSplitResponse
 // RegionLeaderResponse
 
 // .metapb.Peer leader = 1;
-inline bool RegionLeaderResponse::has_leader() const
-{
-    return this != internal_default_instance() && leader_ != NULL;
+inline bool RegionLeaderResponse::has_leader() const {
+  return this != internal_default_instance() && leader_ != NULL;
 }
-inline const ::metapb::Peer & RegionLeaderResponse::leader() const
-{
-    const ::metapb::Peer * p = leader_;
-    // @@protoc_insertion_point(field_get:raft_cmdpb.RegionLeaderResponse.leader)
-    return p != NULL ? *p : *reinterpret_cast<const ::metapb::Peer *>(&::metapb::_Peer_default_instance_);
+inline const ::metapb::Peer& RegionLeaderResponse::leader() const {
+  const ::metapb::Peer* p = leader_;
+  // @@protoc_insertion_point(field_get:raft_cmdpb.RegionLeaderResponse.leader)
+  return p != NULL ? *p : *reinterpret_cast<const ::metapb::Peer*>(
+      &::metapb::_Peer_default_instance_);
 }
-inline ::metapb::Peer * RegionLeaderResponse::release_leader()
-{
-    // @@protoc_insertion_point(field_release:raft_cmdpb.RegionLeaderResponse.leader)
-
-    ::metapb::Peer * temp = leader_;
-    leader_               = NULL;
-    return temp;
+inline ::metapb::Peer* RegionLeaderResponse::release_leader() {
+  // @@protoc_insertion_point(field_release:raft_cmdpb.RegionLeaderResponse.leader)
+  
+  ::metapb::Peer* temp = leader_;
+  leader_ = NULL;
+  return temp;
 }
-inline ::metapb::Peer * RegionLeaderResponse::mutable_leader()
-{
-
-    if (leader_ == NULL)
-    {
-        leader_ = new ::metapb::Peer;
-    }
-    // @@protoc_insertion_point(field_mutable:raft_cmdpb.RegionLeaderResponse.leader)
-    return leader_;
+inline ::metapb::Peer* RegionLeaderResponse::mutable_leader() {
+  
+  if (leader_ == NULL) {
+    leader_ = new ::metapb::Peer;
+  }
+  // @@protoc_insertion_point(field_mutable:raft_cmdpb.RegionLeaderResponse.leader)
+  return leader_;
 }
-inline void RegionLeaderResponse::set_allocated_leader(::metapb::Peer * leader)
-{
-    ::google::protobuf::Arena * message_arena = GetArenaNoVirtual();
-    if (message_arena == NULL)
-    {
-        delete reinterpret_cast<::google::protobuf::MessageLite *>(leader_);
+inline void RegionLeaderResponse::set_allocated_leader(::metapb::Peer* leader) {
+  ::google::protobuf::Arena* message_arena = GetArenaNoVirtual();
+  if (message_arena == NULL) {
+    delete reinterpret_cast< ::google::protobuf::MessageLite*>(leader_);
+  }
+  if (leader) {
+    ::google::protobuf::Arena* submessage_arena = NULL;
+    if (message_arena != submessage_arena) {
+      leader = ::google::protobuf::internal::GetOwnedMessage(
+          message_arena, leader, submessage_arena);
     }
-    if (leader)
-    {
-        ::google::protobuf::Arena * submessage_arena = NULL;
-        if (message_arena != submessage_arena)
-        {
-            leader = ::google::protobuf::internal::GetOwnedMessage(message_arena, leader, submessage_arena);
-        }
-    }
-    else
-    {
-    }
-    leader_ = leader;
-    // @@protoc_insertion_point(field_set_allocated:raft_cmdpb.RegionLeaderResponse.leader)
+    
+  } else {
+    
+  }
+  leader_ = leader;
+  // @@protoc_insertion_point(field_set_allocated:raft_cmdpb.RegionLeaderResponse.leader)
 }
 
 // -------------------------------------------------------------------
@@ -9437,105 +9073,91 @@ inline void RegionLeaderResponse::set_allocated_leader(::metapb::Peer * leader)
 // RegionDetailResponse
 
 // .metapb.Region region = 1;
-inline bool RegionDetailResponse::has_region() const
-{
-    return this != internal_default_instance() && region_ != NULL;
+inline bool RegionDetailResponse::has_region() const {
+  return this != internal_default_instance() && region_ != NULL;
 }
-inline const ::metapb::Region & RegionDetailResponse::region() const
-{
-    const ::metapb::Region * p = region_;
-    // @@protoc_insertion_point(field_get:raft_cmdpb.RegionDetailResponse.region)
-    return p != NULL ? *p : *reinterpret_cast<const ::metapb::Region *>(&::metapb::_Region_default_instance_);
+inline const ::metapb::Region& RegionDetailResponse::region() const {
+  const ::metapb::Region* p = region_;
+  // @@protoc_insertion_point(field_get:raft_cmdpb.RegionDetailResponse.region)
+  return p != NULL ? *p : *reinterpret_cast<const ::metapb::Region*>(
+      &::metapb::_Region_default_instance_);
 }
-inline ::metapb::Region * RegionDetailResponse::release_region()
-{
-    // @@protoc_insertion_point(field_release:raft_cmdpb.RegionDetailResponse.region)
-
-    ::metapb::Region * temp = region_;
-    region_                 = NULL;
-    return temp;
+inline ::metapb::Region* RegionDetailResponse::release_region() {
+  // @@protoc_insertion_point(field_release:raft_cmdpb.RegionDetailResponse.region)
+  
+  ::metapb::Region* temp = region_;
+  region_ = NULL;
+  return temp;
 }
-inline ::metapb::Region * RegionDetailResponse::mutable_region()
-{
-
-    if (region_ == NULL)
-    {
-        region_ = new ::metapb::Region;
-    }
-    // @@protoc_insertion_point(field_mutable:raft_cmdpb.RegionDetailResponse.region)
-    return region_;
+inline ::metapb::Region* RegionDetailResponse::mutable_region() {
+  
+  if (region_ == NULL) {
+    region_ = new ::metapb::Region;
+  }
+  // @@protoc_insertion_point(field_mutable:raft_cmdpb.RegionDetailResponse.region)
+  return region_;
 }
-inline void RegionDetailResponse::set_allocated_region(::metapb::Region * region)
-{
-    ::google::protobuf::Arena * message_arena = GetArenaNoVirtual();
-    if (message_arena == NULL)
-    {
-        delete reinterpret_cast<::google::protobuf::MessageLite *>(region_);
+inline void RegionDetailResponse::set_allocated_region(::metapb::Region* region) {
+  ::google::protobuf::Arena* message_arena = GetArenaNoVirtual();
+  if (message_arena == NULL) {
+    delete reinterpret_cast< ::google::protobuf::MessageLite*>(region_);
+  }
+  if (region) {
+    ::google::protobuf::Arena* submessage_arena = NULL;
+    if (message_arena != submessage_arena) {
+      region = ::google::protobuf::internal::GetOwnedMessage(
+          message_arena, region, submessage_arena);
     }
-    if (region)
-    {
-        ::google::protobuf::Arena * submessage_arena = NULL;
-        if (message_arena != submessage_arena)
-        {
-            region = ::google::protobuf::internal::GetOwnedMessage(message_arena, region, submessage_arena);
-        }
-    }
-    else
-    {
-    }
-    region_ = region;
-    // @@protoc_insertion_point(field_set_allocated:raft_cmdpb.RegionDetailResponse.region)
+    
+  } else {
+    
+  }
+  region_ = region;
+  // @@protoc_insertion_point(field_set_allocated:raft_cmdpb.RegionDetailResponse.region)
 }
 
 // .metapb.Peer leader = 2;
-inline bool RegionDetailResponse::has_leader() const
-{
-    return this != internal_default_instance() && leader_ != NULL;
+inline bool RegionDetailResponse::has_leader() const {
+  return this != internal_default_instance() && leader_ != NULL;
 }
-inline const ::metapb::Peer & RegionDetailResponse::leader() const
-{
-    const ::metapb::Peer * p = leader_;
-    // @@protoc_insertion_point(field_get:raft_cmdpb.RegionDetailResponse.leader)
-    return p != NULL ? *p : *reinterpret_cast<const ::metapb::Peer *>(&::metapb::_Peer_default_instance_);
+inline const ::metapb::Peer& RegionDetailResponse::leader() const {
+  const ::metapb::Peer* p = leader_;
+  // @@protoc_insertion_point(field_get:raft_cmdpb.RegionDetailResponse.leader)
+  return p != NULL ? *p : *reinterpret_cast<const ::metapb::Peer*>(
+      &::metapb::_Peer_default_instance_);
 }
-inline ::metapb::Peer * RegionDetailResponse::release_leader()
-{
-    // @@protoc_insertion_point(field_release:raft_cmdpb.RegionDetailResponse.leader)
-
-    ::metapb::Peer * temp = leader_;
-    leader_               = NULL;
-    return temp;
+inline ::metapb::Peer* RegionDetailResponse::release_leader() {
+  // @@protoc_insertion_point(field_release:raft_cmdpb.RegionDetailResponse.leader)
+  
+  ::metapb::Peer* temp = leader_;
+  leader_ = NULL;
+  return temp;
 }
-inline ::metapb::Peer * RegionDetailResponse::mutable_leader()
-{
-
-    if (leader_ == NULL)
-    {
-        leader_ = new ::metapb::Peer;
-    }
-    // @@protoc_insertion_point(field_mutable:raft_cmdpb.RegionDetailResponse.leader)
-    return leader_;
+inline ::metapb::Peer* RegionDetailResponse::mutable_leader() {
+  
+  if (leader_ == NULL) {
+    leader_ = new ::metapb::Peer;
+  }
+  // @@protoc_insertion_point(field_mutable:raft_cmdpb.RegionDetailResponse.leader)
+  return leader_;
 }
-inline void RegionDetailResponse::set_allocated_leader(::metapb::Peer * leader)
-{
-    ::google::protobuf::Arena * message_arena = GetArenaNoVirtual();
-    if (message_arena == NULL)
-    {
-        delete reinterpret_cast<::google::protobuf::MessageLite *>(leader_);
+inline void RegionDetailResponse::set_allocated_leader(::metapb::Peer* leader) {
+  ::google::protobuf::Arena* message_arena = GetArenaNoVirtual();
+  if (message_arena == NULL) {
+    delete reinterpret_cast< ::google::protobuf::MessageLite*>(leader_);
+  }
+  if (leader) {
+    ::google::protobuf::Arena* submessage_arena = NULL;
+    if (message_arena != submessage_arena) {
+      leader = ::google::protobuf::internal::GetOwnedMessage(
+          message_arena, leader, submessage_arena);
     }
-    if (leader)
-    {
-        ::google::protobuf::Arena * submessage_arena = NULL;
-        if (message_arena != submessage_arena)
-        {
-            leader = ::google::protobuf::internal::GetOwnedMessage(message_arena, leader, submessage_arena);
-        }
-    }
-    else
-    {
-    }
-    leader_ = leader;
-    // @@protoc_insertion_point(field_set_allocated:raft_cmdpb.RegionDetailResponse.leader)
+    
+  } else {
+    
+  }
+  leader_ = leader;
+  // @@protoc_insertion_point(field_set_allocated:raft_cmdpb.RegionDetailResponse.leader)
 }
 
 // -------------------------------------------------------------------
@@ -9543,140 +9165,117 @@ inline void RegionDetailResponse::set_allocated_leader(::metapb::Peer * leader)
 // StatusRequest
 
 // .raft_cmdpb.StatusCmdType cmd_type = 1;
-inline void StatusRequest::clear_cmd_type()
-{
-    cmd_type_ = 0;
+inline void StatusRequest::clear_cmd_type() {
+  cmd_type_ = 0;
 }
-inline ::raft_cmdpb::StatusCmdType StatusRequest::cmd_type() const
-{
-    // @@protoc_insertion_point(field_get:raft_cmdpb.StatusRequest.cmd_type)
-    return static_cast<::raft_cmdpb::StatusCmdType>(cmd_type_);
+inline ::raft_cmdpb::StatusCmdType StatusRequest::cmd_type() const {
+  // @@protoc_insertion_point(field_get:raft_cmdpb.StatusRequest.cmd_type)
+  return static_cast< ::raft_cmdpb::StatusCmdType >(cmd_type_);
 }
-inline void StatusRequest::set_cmd_type(::raft_cmdpb::StatusCmdType value)
-{
-
-    cmd_type_ = value;
-    // @@protoc_insertion_point(field_set:raft_cmdpb.StatusRequest.cmd_type)
+inline void StatusRequest::set_cmd_type(::raft_cmdpb::StatusCmdType value) {
+  
+  cmd_type_ = value;
+  // @@protoc_insertion_point(field_set:raft_cmdpb.StatusRequest.cmd_type)
 }
 
 // .raft_cmdpb.RegionLeaderRequest region_leader = 2;
-inline bool StatusRequest::has_region_leader() const
-{
-    return this != internal_default_instance() && region_leader_ != NULL;
+inline bool StatusRequest::has_region_leader() const {
+  return this != internal_default_instance() && region_leader_ != NULL;
 }
-inline void StatusRequest::clear_region_leader()
-{
-    if (GetArenaNoVirtual() == NULL && region_leader_ != NULL)
-    {
-        delete region_leader_;
-    }
-    region_leader_ = NULL;
+inline void StatusRequest::clear_region_leader() {
+  if (GetArenaNoVirtual() == NULL && region_leader_ != NULL) {
+    delete region_leader_;
+  }
+  region_leader_ = NULL;
 }
-inline const ::raft_cmdpb::RegionLeaderRequest & StatusRequest::region_leader() const
-{
-    const ::raft_cmdpb::RegionLeaderRequest * p = region_leader_;
-    // @@protoc_insertion_point(field_get:raft_cmdpb.StatusRequest.region_leader)
-    return p != NULL ? *p
-                     : *reinterpret_cast<const ::raft_cmdpb::RegionLeaderRequest *>(&::raft_cmdpb::_RegionLeaderRequest_default_instance_);
+inline const ::raft_cmdpb::RegionLeaderRequest& StatusRequest::region_leader() const {
+  const ::raft_cmdpb::RegionLeaderRequest* p = region_leader_;
+  // @@protoc_insertion_point(field_get:raft_cmdpb.StatusRequest.region_leader)
+  return p != NULL ? *p : *reinterpret_cast<const ::raft_cmdpb::RegionLeaderRequest*>(
+      &::raft_cmdpb::_RegionLeaderRequest_default_instance_);
 }
-inline ::raft_cmdpb::RegionLeaderRequest * StatusRequest::release_region_leader()
-{
-    // @@protoc_insertion_point(field_release:raft_cmdpb.StatusRequest.region_leader)
-
-    ::raft_cmdpb::RegionLeaderRequest * temp = region_leader_;
-    region_leader_                           = NULL;
-    return temp;
+inline ::raft_cmdpb::RegionLeaderRequest* StatusRequest::release_region_leader() {
+  // @@protoc_insertion_point(field_release:raft_cmdpb.StatusRequest.region_leader)
+  
+  ::raft_cmdpb::RegionLeaderRequest* temp = region_leader_;
+  region_leader_ = NULL;
+  return temp;
 }
-inline ::raft_cmdpb::RegionLeaderRequest * StatusRequest::mutable_region_leader()
-{
-
-    if (region_leader_ == NULL)
-    {
-        region_leader_ = new ::raft_cmdpb::RegionLeaderRequest;
-    }
-    // @@protoc_insertion_point(field_mutable:raft_cmdpb.StatusRequest.region_leader)
-    return region_leader_;
+inline ::raft_cmdpb::RegionLeaderRequest* StatusRequest::mutable_region_leader() {
+  
+  if (region_leader_ == NULL) {
+    region_leader_ = new ::raft_cmdpb::RegionLeaderRequest;
+  }
+  // @@protoc_insertion_point(field_mutable:raft_cmdpb.StatusRequest.region_leader)
+  return region_leader_;
 }
-inline void StatusRequest::set_allocated_region_leader(::raft_cmdpb::RegionLeaderRequest * region_leader)
-{
-    ::google::protobuf::Arena * message_arena = GetArenaNoVirtual();
-    if (message_arena == NULL)
-    {
-        delete region_leader_;
+inline void StatusRequest::set_allocated_region_leader(::raft_cmdpb::RegionLeaderRequest* region_leader) {
+  ::google::protobuf::Arena* message_arena = GetArenaNoVirtual();
+  if (message_arena == NULL) {
+    delete region_leader_;
+  }
+  if (region_leader) {
+    ::google::protobuf::Arena* submessage_arena = NULL;
+    if (message_arena != submessage_arena) {
+      region_leader = ::google::protobuf::internal::GetOwnedMessage(
+          message_arena, region_leader, submessage_arena);
     }
-    if (region_leader)
-    {
-        ::google::protobuf::Arena * submessage_arena = NULL;
-        if (message_arena != submessage_arena)
-        {
-            region_leader = ::google::protobuf::internal::GetOwnedMessage(message_arena, region_leader, submessage_arena);
-        }
-    }
-    else
-    {
-    }
-    region_leader_ = region_leader;
-    // @@protoc_insertion_point(field_set_allocated:raft_cmdpb.StatusRequest.region_leader)
+    
+  } else {
+    
+  }
+  region_leader_ = region_leader;
+  // @@protoc_insertion_point(field_set_allocated:raft_cmdpb.StatusRequest.region_leader)
 }
 
 // .raft_cmdpb.RegionDetailRequest region_detail = 3;
-inline bool StatusRequest::has_region_detail() const
-{
-    return this != internal_default_instance() && region_detail_ != NULL;
+inline bool StatusRequest::has_region_detail() const {
+  return this != internal_default_instance() && region_detail_ != NULL;
 }
-inline void StatusRequest::clear_region_detail()
-{
-    if (GetArenaNoVirtual() == NULL && region_detail_ != NULL)
-    {
-        delete region_detail_;
-    }
-    region_detail_ = NULL;
+inline void StatusRequest::clear_region_detail() {
+  if (GetArenaNoVirtual() == NULL && region_detail_ != NULL) {
+    delete region_detail_;
+  }
+  region_detail_ = NULL;
 }
-inline const ::raft_cmdpb::RegionDetailRequest & StatusRequest::region_detail() const
-{
-    const ::raft_cmdpb::RegionDetailRequest * p = region_detail_;
-    // @@protoc_insertion_point(field_get:raft_cmdpb.StatusRequest.region_detail)
-    return p != NULL ? *p
-                     : *reinterpret_cast<const ::raft_cmdpb::RegionDetailRequest *>(&::raft_cmdpb::_RegionDetailRequest_default_instance_);
+inline const ::raft_cmdpb::RegionDetailRequest& StatusRequest::region_detail() const {
+  const ::raft_cmdpb::RegionDetailRequest* p = region_detail_;
+  // @@protoc_insertion_point(field_get:raft_cmdpb.StatusRequest.region_detail)
+  return p != NULL ? *p : *reinterpret_cast<const ::raft_cmdpb::RegionDetailRequest*>(
+      &::raft_cmdpb::_RegionDetailRequest_default_instance_);
 }
-inline ::raft_cmdpb::RegionDetailRequest * StatusRequest::release_region_detail()
-{
-    // @@protoc_insertion_point(field_release:raft_cmdpb.StatusRequest.region_detail)
-
-    ::raft_cmdpb::RegionDetailRequest * temp = region_detail_;
-    region_detail_                           = NULL;
-    return temp;
+inline ::raft_cmdpb::RegionDetailRequest* StatusRequest::release_region_detail() {
+  // @@protoc_insertion_point(field_release:raft_cmdpb.StatusRequest.region_detail)
+  
+  ::raft_cmdpb::RegionDetailRequest* temp = region_detail_;
+  region_detail_ = NULL;
+  return temp;
 }
-inline ::raft_cmdpb::RegionDetailRequest * StatusRequest::mutable_region_detail()
-{
-
-    if (region_detail_ == NULL)
-    {
-        region_detail_ = new ::raft_cmdpb::RegionDetailRequest;
-    }
-    // @@protoc_insertion_point(field_mutable:raft_cmdpb.StatusRequest.region_detail)
-    return region_detail_;
+inline ::raft_cmdpb::RegionDetailRequest* StatusRequest::mutable_region_detail() {
+  
+  if (region_detail_ == NULL) {
+    region_detail_ = new ::raft_cmdpb::RegionDetailRequest;
+  }
+  // @@protoc_insertion_point(field_mutable:raft_cmdpb.StatusRequest.region_detail)
+  return region_detail_;
 }
-inline void StatusRequest::set_allocated_region_detail(::raft_cmdpb::RegionDetailRequest * region_detail)
-{
-    ::google::protobuf::Arena * message_arena = GetArenaNoVirtual();
-    if (message_arena == NULL)
-    {
-        delete region_detail_;
+inline void StatusRequest::set_allocated_region_detail(::raft_cmdpb::RegionDetailRequest* region_detail) {
+  ::google::protobuf::Arena* message_arena = GetArenaNoVirtual();
+  if (message_arena == NULL) {
+    delete region_detail_;
+  }
+  if (region_detail) {
+    ::google::protobuf::Arena* submessage_arena = NULL;
+    if (message_arena != submessage_arena) {
+      region_detail = ::google::protobuf::internal::GetOwnedMessage(
+          message_arena, region_detail, submessage_arena);
     }
-    if (region_detail)
-    {
-        ::google::protobuf::Arena * submessage_arena = NULL;
-        if (message_arena != submessage_arena)
-        {
-            region_detail = ::google::protobuf::internal::GetOwnedMessage(message_arena, region_detail, submessage_arena);
-        }
-    }
-    else
-    {
-    }
-    region_detail_ = region_detail;
-    // @@protoc_insertion_point(field_set_allocated:raft_cmdpb.StatusRequest.region_detail)
+    
+  } else {
+    
+  }
+  region_detail_ = region_detail;
+  // @@protoc_insertion_point(field_set_allocated:raft_cmdpb.StatusRequest.region_detail)
 }
 
 // -------------------------------------------------------------------
@@ -9684,142 +9283,117 @@ inline void StatusRequest::set_allocated_region_detail(::raft_cmdpb::RegionDetai
 // StatusResponse
 
 // .raft_cmdpb.StatusCmdType cmd_type = 1;
-inline void StatusResponse::clear_cmd_type()
-{
-    cmd_type_ = 0;
+inline void StatusResponse::clear_cmd_type() {
+  cmd_type_ = 0;
 }
-inline ::raft_cmdpb::StatusCmdType StatusResponse::cmd_type() const
-{
-    // @@protoc_insertion_point(field_get:raft_cmdpb.StatusResponse.cmd_type)
-    return static_cast<::raft_cmdpb::StatusCmdType>(cmd_type_);
+inline ::raft_cmdpb::StatusCmdType StatusResponse::cmd_type() const {
+  // @@protoc_insertion_point(field_get:raft_cmdpb.StatusResponse.cmd_type)
+  return static_cast< ::raft_cmdpb::StatusCmdType >(cmd_type_);
 }
-inline void StatusResponse::set_cmd_type(::raft_cmdpb::StatusCmdType value)
-{
-
-    cmd_type_ = value;
-    // @@protoc_insertion_point(field_set:raft_cmdpb.StatusResponse.cmd_type)
+inline void StatusResponse::set_cmd_type(::raft_cmdpb::StatusCmdType value) {
+  
+  cmd_type_ = value;
+  // @@protoc_insertion_point(field_set:raft_cmdpb.StatusResponse.cmd_type)
 }
 
 // .raft_cmdpb.RegionLeaderResponse region_leader = 2;
-inline bool StatusResponse::has_region_leader() const
-{
-    return this != internal_default_instance() && region_leader_ != NULL;
+inline bool StatusResponse::has_region_leader() const {
+  return this != internal_default_instance() && region_leader_ != NULL;
 }
-inline void StatusResponse::clear_region_leader()
-{
-    if (GetArenaNoVirtual() == NULL && region_leader_ != NULL)
-    {
-        delete region_leader_;
-    }
-    region_leader_ = NULL;
+inline void StatusResponse::clear_region_leader() {
+  if (GetArenaNoVirtual() == NULL && region_leader_ != NULL) {
+    delete region_leader_;
+  }
+  region_leader_ = NULL;
 }
-inline const ::raft_cmdpb::RegionLeaderResponse & StatusResponse::region_leader() const
-{
-    const ::raft_cmdpb::RegionLeaderResponse * p = region_leader_;
-    // @@protoc_insertion_point(field_get:raft_cmdpb.StatusResponse.region_leader)
-    return p != NULL
-        ? *p
-        : *reinterpret_cast<const ::raft_cmdpb::RegionLeaderResponse *>(&::raft_cmdpb::_RegionLeaderResponse_default_instance_);
+inline const ::raft_cmdpb::RegionLeaderResponse& StatusResponse::region_leader() const {
+  const ::raft_cmdpb::RegionLeaderResponse* p = region_leader_;
+  // @@protoc_insertion_point(field_get:raft_cmdpb.StatusResponse.region_leader)
+  return p != NULL ? *p : *reinterpret_cast<const ::raft_cmdpb::RegionLeaderResponse*>(
+      &::raft_cmdpb::_RegionLeaderResponse_default_instance_);
 }
-inline ::raft_cmdpb::RegionLeaderResponse * StatusResponse::release_region_leader()
-{
-    // @@protoc_insertion_point(field_release:raft_cmdpb.StatusResponse.region_leader)
-
-    ::raft_cmdpb::RegionLeaderResponse * temp = region_leader_;
-    region_leader_                            = NULL;
-    return temp;
+inline ::raft_cmdpb::RegionLeaderResponse* StatusResponse::release_region_leader() {
+  // @@protoc_insertion_point(field_release:raft_cmdpb.StatusResponse.region_leader)
+  
+  ::raft_cmdpb::RegionLeaderResponse* temp = region_leader_;
+  region_leader_ = NULL;
+  return temp;
 }
-inline ::raft_cmdpb::RegionLeaderResponse * StatusResponse::mutable_region_leader()
-{
-
-    if (region_leader_ == NULL)
-    {
-        region_leader_ = new ::raft_cmdpb::RegionLeaderResponse;
-    }
-    // @@protoc_insertion_point(field_mutable:raft_cmdpb.StatusResponse.region_leader)
-    return region_leader_;
+inline ::raft_cmdpb::RegionLeaderResponse* StatusResponse::mutable_region_leader() {
+  
+  if (region_leader_ == NULL) {
+    region_leader_ = new ::raft_cmdpb::RegionLeaderResponse;
+  }
+  // @@protoc_insertion_point(field_mutable:raft_cmdpb.StatusResponse.region_leader)
+  return region_leader_;
 }
-inline void StatusResponse::set_allocated_region_leader(::raft_cmdpb::RegionLeaderResponse * region_leader)
-{
-    ::google::protobuf::Arena * message_arena = GetArenaNoVirtual();
-    if (message_arena == NULL)
-    {
-        delete region_leader_;
+inline void StatusResponse::set_allocated_region_leader(::raft_cmdpb::RegionLeaderResponse* region_leader) {
+  ::google::protobuf::Arena* message_arena = GetArenaNoVirtual();
+  if (message_arena == NULL) {
+    delete region_leader_;
+  }
+  if (region_leader) {
+    ::google::protobuf::Arena* submessage_arena = NULL;
+    if (message_arena != submessage_arena) {
+      region_leader = ::google::protobuf::internal::GetOwnedMessage(
+          message_arena, region_leader, submessage_arena);
     }
-    if (region_leader)
-    {
-        ::google::protobuf::Arena * submessage_arena = NULL;
-        if (message_arena != submessage_arena)
-        {
-            region_leader = ::google::protobuf::internal::GetOwnedMessage(message_arena, region_leader, submessage_arena);
-        }
-    }
-    else
-    {
-    }
-    region_leader_ = region_leader;
-    // @@protoc_insertion_point(field_set_allocated:raft_cmdpb.StatusResponse.region_leader)
+    
+  } else {
+    
+  }
+  region_leader_ = region_leader;
+  // @@protoc_insertion_point(field_set_allocated:raft_cmdpb.StatusResponse.region_leader)
 }
 
 // .raft_cmdpb.RegionDetailResponse region_detail = 3;
-inline bool StatusResponse::has_region_detail() const
-{
-    return this != internal_default_instance() && region_detail_ != NULL;
+inline bool StatusResponse::has_region_detail() const {
+  return this != internal_default_instance() && region_detail_ != NULL;
 }
-inline void StatusResponse::clear_region_detail()
-{
-    if (GetArenaNoVirtual() == NULL && region_detail_ != NULL)
-    {
-        delete region_detail_;
-    }
-    region_detail_ = NULL;
+inline void StatusResponse::clear_region_detail() {
+  if (GetArenaNoVirtual() == NULL && region_detail_ != NULL) {
+    delete region_detail_;
+  }
+  region_detail_ = NULL;
 }
-inline const ::raft_cmdpb::RegionDetailResponse & StatusResponse::region_detail() const
-{
-    const ::raft_cmdpb::RegionDetailResponse * p = region_detail_;
-    // @@protoc_insertion_point(field_get:raft_cmdpb.StatusResponse.region_detail)
-    return p != NULL
-        ? *p
-        : *reinterpret_cast<const ::raft_cmdpb::RegionDetailResponse *>(&::raft_cmdpb::_RegionDetailResponse_default_instance_);
+inline const ::raft_cmdpb::RegionDetailResponse& StatusResponse::region_detail() const {
+  const ::raft_cmdpb::RegionDetailResponse* p = region_detail_;
+  // @@protoc_insertion_point(field_get:raft_cmdpb.StatusResponse.region_detail)
+  return p != NULL ? *p : *reinterpret_cast<const ::raft_cmdpb::RegionDetailResponse*>(
+      &::raft_cmdpb::_RegionDetailResponse_default_instance_);
 }
-inline ::raft_cmdpb::RegionDetailResponse * StatusResponse::release_region_detail()
-{
-    // @@protoc_insertion_point(field_release:raft_cmdpb.StatusResponse.region_detail)
-
-    ::raft_cmdpb::RegionDetailResponse * temp = region_detail_;
-    region_detail_                            = NULL;
-    return temp;
+inline ::raft_cmdpb::RegionDetailResponse* StatusResponse::release_region_detail() {
+  // @@protoc_insertion_point(field_release:raft_cmdpb.StatusResponse.region_detail)
+  
+  ::raft_cmdpb::RegionDetailResponse* temp = region_detail_;
+  region_detail_ = NULL;
+  return temp;
 }
-inline ::raft_cmdpb::RegionDetailResponse * StatusResponse::mutable_region_detail()
-{
-
-    if (region_detail_ == NULL)
-    {
-        region_detail_ = new ::raft_cmdpb::RegionDetailResponse;
-    }
-    // @@protoc_insertion_point(field_mutable:raft_cmdpb.StatusResponse.region_detail)
-    return region_detail_;
+inline ::raft_cmdpb::RegionDetailResponse* StatusResponse::mutable_region_detail() {
+  
+  if (region_detail_ == NULL) {
+    region_detail_ = new ::raft_cmdpb::RegionDetailResponse;
+  }
+  // @@protoc_insertion_point(field_mutable:raft_cmdpb.StatusResponse.region_detail)
+  return region_detail_;
 }
-inline void StatusResponse::set_allocated_region_detail(::raft_cmdpb::RegionDetailResponse * region_detail)
-{
-    ::google::protobuf::Arena * message_arena = GetArenaNoVirtual();
-    if (message_arena == NULL)
-    {
-        delete region_detail_;
+inline void StatusResponse::set_allocated_region_detail(::raft_cmdpb::RegionDetailResponse* region_detail) {
+  ::google::protobuf::Arena* message_arena = GetArenaNoVirtual();
+  if (message_arena == NULL) {
+    delete region_detail_;
+  }
+  if (region_detail) {
+    ::google::protobuf::Arena* submessage_arena = NULL;
+    if (message_arena != submessage_arena) {
+      region_detail = ::google::protobuf::internal::GetOwnedMessage(
+          message_arena, region_detail, submessage_arena);
     }
-    if (region_detail)
-    {
-        ::google::protobuf::Arena * submessage_arena = NULL;
-        if (message_arena != submessage_arena)
-        {
-            region_detail = ::google::protobuf::internal::GetOwnedMessage(message_arena, region_detail, submessage_arena);
-        }
-    }
-    else
-    {
-    }
-    region_detail_ = region_detail;
-    // @@protoc_insertion_point(field_set_allocated:raft_cmdpb.StatusResponse.region_detail)
+    
+  } else {
+    
+  }
+  region_detail_ = region_detail;
+  // @@protoc_insertion_point(field_set_allocated:raft_cmdpb.StatusResponse.region_detail)
 }
 
 // -------------------------------------------------------------------
@@ -9827,233 +9401,200 @@ inline void StatusResponse::set_allocated_region_detail(::raft_cmdpb::RegionDeta
 // RaftRequestHeader
 
 // uint64 region_id = 1;
-inline void RaftRequestHeader::clear_region_id()
-{
-    region_id_ = GOOGLE_ULONGLONG(0);
+inline void RaftRequestHeader::clear_region_id() {
+  region_id_ = GOOGLE_ULONGLONG(0);
 }
-inline ::google::protobuf::uint64 RaftRequestHeader::region_id() const
-{
-    // @@protoc_insertion_point(field_get:raft_cmdpb.RaftRequestHeader.region_id)
-    return region_id_;
+inline ::google::protobuf::uint64 RaftRequestHeader::region_id() const {
+  // @@protoc_insertion_point(field_get:raft_cmdpb.RaftRequestHeader.region_id)
+  return region_id_;
 }
-inline void RaftRequestHeader::set_region_id(::google::protobuf::uint64 value)
-{
-
-    region_id_ = value;
-    // @@protoc_insertion_point(field_set:raft_cmdpb.RaftRequestHeader.region_id)
+inline void RaftRequestHeader::set_region_id(::google::protobuf::uint64 value) {
+  
+  region_id_ = value;
+  // @@protoc_insertion_point(field_set:raft_cmdpb.RaftRequestHeader.region_id)
 }
 
 // .metapb.Peer peer = 2;
-inline bool RaftRequestHeader::has_peer() const
-{
-    return this != internal_default_instance() && peer_ != NULL;
+inline bool RaftRequestHeader::has_peer() const {
+  return this != internal_default_instance() && peer_ != NULL;
 }
-inline const ::metapb::Peer & RaftRequestHeader::peer() const
-{
-    const ::metapb::Peer * p = peer_;
-    // @@protoc_insertion_point(field_get:raft_cmdpb.RaftRequestHeader.peer)
-    return p != NULL ? *p : *reinterpret_cast<const ::metapb::Peer *>(&::metapb::_Peer_default_instance_);
+inline const ::metapb::Peer& RaftRequestHeader::peer() const {
+  const ::metapb::Peer* p = peer_;
+  // @@protoc_insertion_point(field_get:raft_cmdpb.RaftRequestHeader.peer)
+  return p != NULL ? *p : *reinterpret_cast<const ::metapb::Peer*>(
+      &::metapb::_Peer_default_instance_);
 }
-inline ::metapb::Peer * RaftRequestHeader::release_peer()
-{
-    // @@protoc_insertion_point(field_release:raft_cmdpb.RaftRequestHeader.peer)
-
-    ::metapb::Peer * temp = peer_;
-    peer_                 = NULL;
-    return temp;
+inline ::metapb::Peer* RaftRequestHeader::release_peer() {
+  // @@protoc_insertion_point(field_release:raft_cmdpb.RaftRequestHeader.peer)
+  
+  ::metapb::Peer* temp = peer_;
+  peer_ = NULL;
+  return temp;
 }
-inline ::metapb::Peer * RaftRequestHeader::mutable_peer()
-{
-
-    if (peer_ == NULL)
-    {
-        peer_ = new ::metapb::Peer;
-    }
-    // @@protoc_insertion_point(field_mutable:raft_cmdpb.RaftRequestHeader.peer)
-    return peer_;
+inline ::metapb::Peer* RaftRequestHeader::mutable_peer() {
+  
+  if (peer_ == NULL) {
+    peer_ = new ::metapb::Peer;
+  }
+  // @@protoc_insertion_point(field_mutable:raft_cmdpb.RaftRequestHeader.peer)
+  return peer_;
 }
-inline void RaftRequestHeader::set_allocated_peer(::metapb::Peer * peer)
-{
-    ::google::protobuf::Arena * message_arena = GetArenaNoVirtual();
-    if (message_arena == NULL)
-    {
-        delete reinterpret_cast<::google::protobuf::MessageLite *>(peer_);
+inline void RaftRequestHeader::set_allocated_peer(::metapb::Peer* peer) {
+  ::google::protobuf::Arena* message_arena = GetArenaNoVirtual();
+  if (message_arena == NULL) {
+    delete reinterpret_cast< ::google::protobuf::MessageLite*>(peer_);
+  }
+  if (peer) {
+    ::google::protobuf::Arena* submessage_arena = NULL;
+    if (message_arena != submessage_arena) {
+      peer = ::google::protobuf::internal::GetOwnedMessage(
+          message_arena, peer, submessage_arena);
     }
-    if (peer)
-    {
-        ::google::protobuf::Arena * submessage_arena = NULL;
-        if (message_arena != submessage_arena)
-        {
-            peer = ::google::protobuf::internal::GetOwnedMessage(message_arena, peer, submessage_arena);
-        }
-    }
-    else
-    {
-    }
-    peer_ = peer;
-    // @@protoc_insertion_point(field_set_allocated:raft_cmdpb.RaftRequestHeader.peer)
+    
+  } else {
+    
+  }
+  peer_ = peer;
+  // @@protoc_insertion_point(field_set_allocated:raft_cmdpb.RaftRequestHeader.peer)
 }
 
 // bool read_quorum = 3;
-inline void RaftRequestHeader::clear_read_quorum()
-{
-    read_quorum_ = false;
+inline void RaftRequestHeader::clear_read_quorum() {
+  read_quorum_ = false;
 }
-inline bool RaftRequestHeader::read_quorum() const
-{
-    // @@protoc_insertion_point(field_get:raft_cmdpb.RaftRequestHeader.read_quorum)
-    return read_quorum_;
+inline bool RaftRequestHeader::read_quorum() const {
+  // @@protoc_insertion_point(field_get:raft_cmdpb.RaftRequestHeader.read_quorum)
+  return read_quorum_;
 }
-inline void RaftRequestHeader::set_read_quorum(bool value)
-{
-
-    read_quorum_ = value;
-    // @@protoc_insertion_point(field_set:raft_cmdpb.RaftRequestHeader.read_quorum)
+inline void RaftRequestHeader::set_read_quorum(bool value) {
+  
+  read_quorum_ = value;
+  // @@protoc_insertion_point(field_set:raft_cmdpb.RaftRequestHeader.read_quorum)
 }
 
 // bytes uuid = 4;
-inline void RaftRequestHeader::clear_uuid()
-{
-    uuid_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+inline void RaftRequestHeader::clear_uuid() {
+  uuid_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
-inline const ::std::string & RaftRequestHeader::uuid() const
-{
-    // @@protoc_insertion_point(field_get:raft_cmdpb.RaftRequestHeader.uuid)
-    return uuid_.GetNoArena();
+inline const ::std::string& RaftRequestHeader::uuid() const {
+  // @@protoc_insertion_point(field_get:raft_cmdpb.RaftRequestHeader.uuid)
+  return uuid_.GetNoArena();
 }
-inline void RaftRequestHeader::set_uuid(const ::std::string & value)
-{
-
-    uuid_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
-    // @@protoc_insertion_point(field_set:raft_cmdpb.RaftRequestHeader.uuid)
+inline void RaftRequestHeader::set_uuid(const ::std::string& value) {
+  
+  uuid_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
+  // @@protoc_insertion_point(field_set:raft_cmdpb.RaftRequestHeader.uuid)
 }
 #if LANG_CXX11
-inline void RaftRequestHeader::set_uuid(::std::string && value)
-{
-
-    uuid_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
-    // @@protoc_insertion_point(field_set_rvalue:raft_cmdpb.RaftRequestHeader.uuid)
+inline void RaftRequestHeader::set_uuid(::std::string&& value) {
+  
+  uuid_.SetNoArena(
+    &::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
+  // @@protoc_insertion_point(field_set_rvalue:raft_cmdpb.RaftRequestHeader.uuid)
 }
 #endif
-inline void RaftRequestHeader::set_uuid(const char * value)
-{
-    GOOGLE_DCHECK(value != NULL);
-
-    uuid_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
-    // @@protoc_insertion_point(field_set_char:raft_cmdpb.RaftRequestHeader.uuid)
+inline void RaftRequestHeader::set_uuid(const char* value) {
+  GOOGLE_DCHECK(value != NULL);
+  
+  uuid_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
+  // @@protoc_insertion_point(field_set_char:raft_cmdpb.RaftRequestHeader.uuid)
 }
-inline void RaftRequestHeader::set_uuid(const void * value, size_t size)
-{
-
-    uuid_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
-                     ::std::string(reinterpret_cast<const char *>(value), size));
-    // @@protoc_insertion_point(field_set_pointer:raft_cmdpb.RaftRequestHeader.uuid)
+inline void RaftRequestHeader::set_uuid(const void* value, size_t size) {
+  
+  uuid_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+      ::std::string(reinterpret_cast<const char*>(value), size));
+  // @@protoc_insertion_point(field_set_pointer:raft_cmdpb.RaftRequestHeader.uuid)
 }
-inline ::std::string * RaftRequestHeader::mutable_uuid()
-{
-
-    // @@protoc_insertion_point(field_mutable:raft_cmdpb.RaftRequestHeader.uuid)
-    return uuid_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+inline ::std::string* RaftRequestHeader::mutable_uuid() {
+  
+  // @@protoc_insertion_point(field_mutable:raft_cmdpb.RaftRequestHeader.uuid)
+  return uuid_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
-inline ::std::string * RaftRequestHeader::release_uuid()
-{
-    // @@protoc_insertion_point(field_release:raft_cmdpb.RaftRequestHeader.uuid)
-
-    return uuid_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+inline ::std::string* RaftRequestHeader::release_uuid() {
+  // @@protoc_insertion_point(field_release:raft_cmdpb.RaftRequestHeader.uuid)
+  
+  return uuid_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
-inline void RaftRequestHeader::set_allocated_uuid(::std::string * uuid)
-{
-    if (uuid != NULL) {}
-    else
-    {
-    }
-    uuid_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), uuid);
-    // @@protoc_insertion_point(field_set_allocated:raft_cmdpb.RaftRequestHeader.uuid)
+inline void RaftRequestHeader::set_allocated_uuid(::std::string* uuid) {
+  if (uuid != NULL) {
+    
+  } else {
+    
+  }
+  uuid_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), uuid);
+  // @@protoc_insertion_point(field_set_allocated:raft_cmdpb.RaftRequestHeader.uuid)
 }
 
 // .metapb.RegionEpoch region_epoch = 5;
-inline bool RaftRequestHeader::has_region_epoch() const
-{
-    return this != internal_default_instance() && region_epoch_ != NULL;
+inline bool RaftRequestHeader::has_region_epoch() const {
+  return this != internal_default_instance() && region_epoch_ != NULL;
 }
-inline const ::metapb::RegionEpoch & RaftRequestHeader::region_epoch() const
-{
-    const ::metapb::RegionEpoch * p = region_epoch_;
-    // @@protoc_insertion_point(field_get:raft_cmdpb.RaftRequestHeader.region_epoch)
-    return p != NULL ? *p : *reinterpret_cast<const ::metapb::RegionEpoch *>(&::metapb::_RegionEpoch_default_instance_);
+inline const ::metapb::RegionEpoch& RaftRequestHeader::region_epoch() const {
+  const ::metapb::RegionEpoch* p = region_epoch_;
+  // @@protoc_insertion_point(field_get:raft_cmdpb.RaftRequestHeader.region_epoch)
+  return p != NULL ? *p : *reinterpret_cast<const ::metapb::RegionEpoch*>(
+      &::metapb::_RegionEpoch_default_instance_);
 }
-inline ::metapb::RegionEpoch * RaftRequestHeader::release_region_epoch()
-{
-    // @@protoc_insertion_point(field_release:raft_cmdpb.RaftRequestHeader.region_epoch)
-
-    ::metapb::RegionEpoch * temp = region_epoch_;
-    region_epoch_                = NULL;
-    return temp;
+inline ::metapb::RegionEpoch* RaftRequestHeader::release_region_epoch() {
+  // @@protoc_insertion_point(field_release:raft_cmdpb.RaftRequestHeader.region_epoch)
+  
+  ::metapb::RegionEpoch* temp = region_epoch_;
+  region_epoch_ = NULL;
+  return temp;
 }
-inline ::metapb::RegionEpoch * RaftRequestHeader::mutable_region_epoch()
-{
-
-    if (region_epoch_ == NULL)
-    {
-        region_epoch_ = new ::metapb::RegionEpoch;
-    }
-    // @@protoc_insertion_point(field_mutable:raft_cmdpb.RaftRequestHeader.region_epoch)
-    return region_epoch_;
+inline ::metapb::RegionEpoch* RaftRequestHeader::mutable_region_epoch() {
+  
+  if (region_epoch_ == NULL) {
+    region_epoch_ = new ::metapb::RegionEpoch;
+  }
+  // @@protoc_insertion_point(field_mutable:raft_cmdpb.RaftRequestHeader.region_epoch)
+  return region_epoch_;
 }
-inline void RaftRequestHeader::set_allocated_region_epoch(::metapb::RegionEpoch * region_epoch)
-{
-    ::google::protobuf::Arena * message_arena = GetArenaNoVirtual();
-    if (message_arena == NULL)
-    {
-        delete reinterpret_cast<::google::protobuf::MessageLite *>(region_epoch_);
+inline void RaftRequestHeader::set_allocated_region_epoch(::metapb::RegionEpoch* region_epoch) {
+  ::google::protobuf::Arena* message_arena = GetArenaNoVirtual();
+  if (message_arena == NULL) {
+    delete reinterpret_cast< ::google::protobuf::MessageLite*>(region_epoch_);
+  }
+  if (region_epoch) {
+    ::google::protobuf::Arena* submessage_arena = NULL;
+    if (message_arena != submessage_arena) {
+      region_epoch = ::google::protobuf::internal::GetOwnedMessage(
+          message_arena, region_epoch, submessage_arena);
     }
-    if (region_epoch)
-    {
-        ::google::protobuf::Arena * submessage_arena = NULL;
-        if (message_arena != submessage_arena)
-        {
-            region_epoch = ::google::protobuf::internal::GetOwnedMessage(message_arena, region_epoch, submessage_arena);
-        }
-    }
-    else
-    {
-    }
-    region_epoch_ = region_epoch;
-    // @@protoc_insertion_point(field_set_allocated:raft_cmdpb.RaftRequestHeader.region_epoch)
+    
+  } else {
+    
+  }
+  region_epoch_ = region_epoch;
+  // @@protoc_insertion_point(field_set_allocated:raft_cmdpb.RaftRequestHeader.region_epoch)
 }
 
 // uint64 term = 6;
-inline void RaftRequestHeader::clear_term()
-{
-    term_ = GOOGLE_ULONGLONG(0);
+inline void RaftRequestHeader::clear_term() {
+  term_ = GOOGLE_ULONGLONG(0);
 }
-inline ::google::protobuf::uint64 RaftRequestHeader::term() const
-{
-    // @@protoc_insertion_point(field_get:raft_cmdpb.RaftRequestHeader.term)
-    return term_;
+inline ::google::protobuf::uint64 RaftRequestHeader::term() const {
+  // @@protoc_insertion_point(field_get:raft_cmdpb.RaftRequestHeader.term)
+  return term_;
 }
-inline void RaftRequestHeader::set_term(::google::protobuf::uint64 value)
-{
-
-    term_ = value;
-    // @@protoc_insertion_point(field_set:raft_cmdpb.RaftRequestHeader.term)
+inline void RaftRequestHeader::set_term(::google::protobuf::uint64 value) {
+  
+  term_ = value;
+  // @@protoc_insertion_point(field_set:raft_cmdpb.RaftRequestHeader.term)
 }
 
 // bool sync_log = 7;
-inline void RaftRequestHeader::clear_sync_log()
-{
-    sync_log_ = false;
+inline void RaftRequestHeader::clear_sync_log() {
+  sync_log_ = false;
 }
-inline bool RaftRequestHeader::sync_log() const
-{
-    // @@protoc_insertion_point(field_get:raft_cmdpb.RaftRequestHeader.sync_log)
-    return sync_log_;
+inline bool RaftRequestHeader::sync_log() const {
+  // @@protoc_insertion_point(field_get:raft_cmdpb.RaftRequestHeader.sync_log)
+  return sync_log_;
 }
-inline void RaftRequestHeader::set_sync_log(bool value)
-{
-
-    sync_log_ = value;
-    // @@protoc_insertion_point(field_set:raft_cmdpb.RaftRequestHeader.sync_log)
+inline void RaftRequestHeader::set_sync_log(bool value) {
+  
+  sync_log_ = value;
+  // @@protoc_insertion_point(field_set:raft_cmdpb.RaftRequestHeader.sync_log)
 }
 
 // -------------------------------------------------------------------
@@ -10061,131 +9602,114 @@ inline void RaftRequestHeader::set_sync_log(bool value)
 // RaftResponseHeader
 
 // .errorpb.Error error = 1;
-inline bool RaftResponseHeader::has_error() const
-{
-    return this != internal_default_instance() && error_ != NULL;
+inline bool RaftResponseHeader::has_error() const {
+  return this != internal_default_instance() && error_ != NULL;
 }
-inline const ::errorpb::Error & RaftResponseHeader::error() const
-{
-    const ::errorpb::Error * p = error_;
-    // @@protoc_insertion_point(field_get:raft_cmdpb.RaftResponseHeader.error)
-    return p != NULL ? *p : *reinterpret_cast<const ::errorpb::Error *>(&::errorpb::_Error_default_instance_);
+inline const ::errorpb::Error& RaftResponseHeader::error() const {
+  const ::errorpb::Error* p = error_;
+  // @@protoc_insertion_point(field_get:raft_cmdpb.RaftResponseHeader.error)
+  return p != NULL ? *p : *reinterpret_cast<const ::errorpb::Error*>(
+      &::errorpb::_Error_default_instance_);
 }
-inline ::errorpb::Error * RaftResponseHeader::release_error()
-{
-    // @@protoc_insertion_point(field_release:raft_cmdpb.RaftResponseHeader.error)
-
-    ::errorpb::Error * temp = error_;
-    error_                  = NULL;
-    return temp;
+inline ::errorpb::Error* RaftResponseHeader::release_error() {
+  // @@protoc_insertion_point(field_release:raft_cmdpb.RaftResponseHeader.error)
+  
+  ::errorpb::Error* temp = error_;
+  error_ = NULL;
+  return temp;
 }
-inline ::errorpb::Error * RaftResponseHeader::mutable_error()
-{
-
-    if (error_ == NULL)
-    {
-        error_ = new ::errorpb::Error;
-    }
-    // @@protoc_insertion_point(field_mutable:raft_cmdpb.RaftResponseHeader.error)
-    return error_;
+inline ::errorpb::Error* RaftResponseHeader::mutable_error() {
+  
+  if (error_ == NULL) {
+    error_ = new ::errorpb::Error;
+  }
+  // @@protoc_insertion_point(field_mutable:raft_cmdpb.RaftResponseHeader.error)
+  return error_;
 }
-inline void RaftResponseHeader::set_allocated_error(::errorpb::Error * error)
-{
-    ::google::protobuf::Arena * message_arena = GetArenaNoVirtual();
-    if (message_arena == NULL)
-    {
-        delete reinterpret_cast<::google::protobuf::MessageLite *>(error_);
+inline void RaftResponseHeader::set_allocated_error(::errorpb::Error* error) {
+  ::google::protobuf::Arena* message_arena = GetArenaNoVirtual();
+  if (message_arena == NULL) {
+    delete reinterpret_cast< ::google::protobuf::MessageLite*>(error_);
+  }
+  if (error) {
+    ::google::protobuf::Arena* submessage_arena = NULL;
+    if (message_arena != submessage_arena) {
+      error = ::google::protobuf::internal::GetOwnedMessage(
+          message_arena, error, submessage_arena);
     }
-    if (error)
-    {
-        ::google::protobuf::Arena * submessage_arena = NULL;
-        if (message_arena != submessage_arena)
-        {
-            error = ::google::protobuf::internal::GetOwnedMessage(message_arena, error, submessage_arena);
-        }
-    }
-    else
-    {
-    }
-    error_ = error;
-    // @@protoc_insertion_point(field_set_allocated:raft_cmdpb.RaftResponseHeader.error)
+    
+  } else {
+    
+  }
+  error_ = error;
+  // @@protoc_insertion_point(field_set_allocated:raft_cmdpb.RaftResponseHeader.error)
 }
 
 // bytes uuid = 2;
-inline void RaftResponseHeader::clear_uuid()
-{
-    uuid_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+inline void RaftResponseHeader::clear_uuid() {
+  uuid_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
-inline const ::std::string & RaftResponseHeader::uuid() const
-{
-    // @@protoc_insertion_point(field_get:raft_cmdpb.RaftResponseHeader.uuid)
-    return uuid_.GetNoArena();
+inline const ::std::string& RaftResponseHeader::uuid() const {
+  // @@protoc_insertion_point(field_get:raft_cmdpb.RaftResponseHeader.uuid)
+  return uuid_.GetNoArena();
 }
-inline void RaftResponseHeader::set_uuid(const ::std::string & value)
-{
-
-    uuid_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
-    // @@protoc_insertion_point(field_set:raft_cmdpb.RaftResponseHeader.uuid)
+inline void RaftResponseHeader::set_uuid(const ::std::string& value) {
+  
+  uuid_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
+  // @@protoc_insertion_point(field_set:raft_cmdpb.RaftResponseHeader.uuid)
 }
 #if LANG_CXX11
-inline void RaftResponseHeader::set_uuid(::std::string && value)
-{
-
-    uuid_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
-    // @@protoc_insertion_point(field_set_rvalue:raft_cmdpb.RaftResponseHeader.uuid)
+inline void RaftResponseHeader::set_uuid(::std::string&& value) {
+  
+  uuid_.SetNoArena(
+    &::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
+  // @@protoc_insertion_point(field_set_rvalue:raft_cmdpb.RaftResponseHeader.uuid)
 }
 #endif
-inline void RaftResponseHeader::set_uuid(const char * value)
-{
-    GOOGLE_DCHECK(value != NULL);
-
-    uuid_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
-    // @@protoc_insertion_point(field_set_char:raft_cmdpb.RaftResponseHeader.uuid)
+inline void RaftResponseHeader::set_uuid(const char* value) {
+  GOOGLE_DCHECK(value != NULL);
+  
+  uuid_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
+  // @@protoc_insertion_point(field_set_char:raft_cmdpb.RaftResponseHeader.uuid)
 }
-inline void RaftResponseHeader::set_uuid(const void * value, size_t size)
-{
-
-    uuid_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
-                     ::std::string(reinterpret_cast<const char *>(value), size));
-    // @@protoc_insertion_point(field_set_pointer:raft_cmdpb.RaftResponseHeader.uuid)
+inline void RaftResponseHeader::set_uuid(const void* value, size_t size) {
+  
+  uuid_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+      ::std::string(reinterpret_cast<const char*>(value), size));
+  // @@protoc_insertion_point(field_set_pointer:raft_cmdpb.RaftResponseHeader.uuid)
 }
-inline ::std::string * RaftResponseHeader::mutable_uuid()
-{
-
-    // @@protoc_insertion_point(field_mutable:raft_cmdpb.RaftResponseHeader.uuid)
-    return uuid_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+inline ::std::string* RaftResponseHeader::mutable_uuid() {
+  
+  // @@protoc_insertion_point(field_mutable:raft_cmdpb.RaftResponseHeader.uuid)
+  return uuid_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
-inline ::std::string * RaftResponseHeader::release_uuid()
-{
-    // @@protoc_insertion_point(field_release:raft_cmdpb.RaftResponseHeader.uuid)
-
-    return uuid_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+inline ::std::string* RaftResponseHeader::release_uuid() {
+  // @@protoc_insertion_point(field_release:raft_cmdpb.RaftResponseHeader.uuid)
+  
+  return uuid_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
-inline void RaftResponseHeader::set_allocated_uuid(::std::string * uuid)
-{
-    if (uuid != NULL) {}
-    else
-    {
-    }
-    uuid_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), uuid);
-    // @@protoc_insertion_point(field_set_allocated:raft_cmdpb.RaftResponseHeader.uuid)
+inline void RaftResponseHeader::set_allocated_uuid(::std::string* uuid) {
+  if (uuid != NULL) {
+    
+  } else {
+    
+  }
+  uuid_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), uuid);
+  // @@protoc_insertion_point(field_set_allocated:raft_cmdpb.RaftResponseHeader.uuid)
 }
 
 // uint64 current_term = 3;
-inline void RaftResponseHeader::clear_current_term()
-{
-    current_term_ = GOOGLE_ULONGLONG(0);
+inline void RaftResponseHeader::clear_current_term() {
+  current_term_ = GOOGLE_ULONGLONG(0);
 }
-inline ::google::protobuf::uint64 RaftResponseHeader::current_term() const
-{
-    // @@protoc_insertion_point(field_get:raft_cmdpb.RaftResponseHeader.current_term)
-    return current_term_;
+inline ::google::protobuf::uint64 RaftResponseHeader::current_term() const {
+  // @@protoc_insertion_point(field_get:raft_cmdpb.RaftResponseHeader.current_term)
+  return current_term_;
 }
-inline void RaftResponseHeader::set_current_term(::google::protobuf::uint64 value)
-{
-
-    current_term_ = value;
-    // @@protoc_insertion_point(field_set:raft_cmdpb.RaftResponseHeader.current_term)
+inline void RaftResponseHeader::set_current_term(::google::protobuf::uint64 value) {
+  
+  current_term_ = value;
+  // @@protoc_insertion_point(field_set:raft_cmdpb.RaftResponseHeader.current_term)
 }
 
 // -------------------------------------------------------------------
@@ -10193,215 +9717,183 @@ inline void RaftResponseHeader::set_current_term(::google::protobuf::uint64 valu
 // RaftCmdRequest
 
 // .raft_cmdpb.RaftRequestHeader header = 1;
-inline bool RaftCmdRequest::has_header() const
-{
-    return this != internal_default_instance() && header_ != NULL;
+inline bool RaftCmdRequest::has_header() const {
+  return this != internal_default_instance() && header_ != NULL;
 }
-inline void RaftCmdRequest::clear_header()
-{
-    if (GetArenaNoVirtual() == NULL && header_ != NULL)
-    {
-        delete header_;
-    }
-    header_ = NULL;
+inline void RaftCmdRequest::clear_header() {
+  if (GetArenaNoVirtual() == NULL && header_ != NULL) {
+    delete header_;
+  }
+  header_ = NULL;
 }
-inline const ::raft_cmdpb::RaftRequestHeader & RaftCmdRequest::header() const
-{
-    const ::raft_cmdpb::RaftRequestHeader * p = header_;
-    // @@protoc_insertion_point(field_get:raft_cmdpb.RaftCmdRequest.header)
-    return p != NULL ? *p : *reinterpret_cast<const ::raft_cmdpb::RaftRequestHeader *>(&::raft_cmdpb::_RaftRequestHeader_default_instance_);
+inline const ::raft_cmdpb::RaftRequestHeader& RaftCmdRequest::header() const {
+  const ::raft_cmdpb::RaftRequestHeader* p = header_;
+  // @@protoc_insertion_point(field_get:raft_cmdpb.RaftCmdRequest.header)
+  return p != NULL ? *p : *reinterpret_cast<const ::raft_cmdpb::RaftRequestHeader*>(
+      &::raft_cmdpb::_RaftRequestHeader_default_instance_);
 }
-inline ::raft_cmdpb::RaftRequestHeader * RaftCmdRequest::release_header()
-{
-    // @@protoc_insertion_point(field_release:raft_cmdpb.RaftCmdRequest.header)
-
-    ::raft_cmdpb::RaftRequestHeader * temp = header_;
-    header_                                = NULL;
-    return temp;
+inline ::raft_cmdpb::RaftRequestHeader* RaftCmdRequest::release_header() {
+  // @@protoc_insertion_point(field_release:raft_cmdpb.RaftCmdRequest.header)
+  
+  ::raft_cmdpb::RaftRequestHeader* temp = header_;
+  header_ = NULL;
+  return temp;
 }
-inline ::raft_cmdpb::RaftRequestHeader * RaftCmdRequest::mutable_header()
-{
-
-    if (header_ == NULL)
-    {
-        header_ = new ::raft_cmdpb::RaftRequestHeader;
-    }
-    // @@protoc_insertion_point(field_mutable:raft_cmdpb.RaftCmdRequest.header)
-    return header_;
+inline ::raft_cmdpb::RaftRequestHeader* RaftCmdRequest::mutable_header() {
+  
+  if (header_ == NULL) {
+    header_ = new ::raft_cmdpb::RaftRequestHeader;
+  }
+  // @@protoc_insertion_point(field_mutable:raft_cmdpb.RaftCmdRequest.header)
+  return header_;
 }
-inline void RaftCmdRequest::set_allocated_header(::raft_cmdpb::RaftRequestHeader * header)
-{
-    ::google::protobuf::Arena * message_arena = GetArenaNoVirtual();
-    if (message_arena == NULL)
-    {
-        delete header_;
+inline void RaftCmdRequest::set_allocated_header(::raft_cmdpb::RaftRequestHeader* header) {
+  ::google::protobuf::Arena* message_arena = GetArenaNoVirtual();
+  if (message_arena == NULL) {
+    delete header_;
+  }
+  if (header) {
+    ::google::protobuf::Arena* submessage_arena = NULL;
+    if (message_arena != submessage_arena) {
+      header = ::google::protobuf::internal::GetOwnedMessage(
+          message_arena, header, submessage_arena);
     }
-    if (header)
-    {
-        ::google::protobuf::Arena * submessage_arena = NULL;
-        if (message_arena != submessage_arena)
-        {
-            header = ::google::protobuf::internal::GetOwnedMessage(message_arena, header, submessage_arena);
-        }
-    }
-    else
-    {
-    }
-    header_ = header;
-    // @@protoc_insertion_point(field_set_allocated:raft_cmdpb.RaftCmdRequest.header)
+    
+  } else {
+    
+  }
+  header_ = header;
+  // @@protoc_insertion_point(field_set_allocated:raft_cmdpb.RaftCmdRequest.header)
 }
 
 // repeated .raft_cmdpb.Request requests = 2;
-inline int RaftCmdRequest::requests_size() const
-{
-    return requests_.size();
+inline int RaftCmdRequest::requests_size() const {
+  return requests_.size();
 }
-inline void RaftCmdRequest::clear_requests()
-{
-    requests_.Clear();
+inline void RaftCmdRequest::clear_requests() {
+  requests_.Clear();
 }
-inline const ::raft_cmdpb::Request & RaftCmdRequest::requests(int index) const
-{
-    // @@protoc_insertion_point(field_get:raft_cmdpb.RaftCmdRequest.requests)
-    return requests_.Get(index);
+inline const ::raft_cmdpb::Request& RaftCmdRequest::requests(int index) const {
+  // @@protoc_insertion_point(field_get:raft_cmdpb.RaftCmdRequest.requests)
+  return requests_.Get(index);
 }
-inline ::raft_cmdpb::Request * RaftCmdRequest::mutable_requests(int index)
-{
-    // @@protoc_insertion_point(field_mutable:raft_cmdpb.RaftCmdRequest.requests)
-    return requests_.Mutable(index);
+inline ::raft_cmdpb::Request* RaftCmdRequest::mutable_requests(int index) {
+  // @@protoc_insertion_point(field_mutable:raft_cmdpb.RaftCmdRequest.requests)
+  return requests_.Mutable(index);
 }
-inline ::raft_cmdpb::Request * RaftCmdRequest::add_requests()
-{
-    // @@protoc_insertion_point(field_add:raft_cmdpb.RaftCmdRequest.requests)
-    return requests_.Add();
+inline ::raft_cmdpb::Request* RaftCmdRequest::add_requests() {
+  // @@protoc_insertion_point(field_add:raft_cmdpb.RaftCmdRequest.requests)
+  return requests_.Add();
 }
-inline ::google::protobuf::RepeatedPtrField<::raft_cmdpb::Request> * RaftCmdRequest::mutable_requests()
-{
-    // @@protoc_insertion_point(field_mutable_list:raft_cmdpb.RaftCmdRequest.requests)
-    return &requests_;
+inline ::google::protobuf::RepeatedPtrField< ::raft_cmdpb::Request >*
+RaftCmdRequest::mutable_requests() {
+  // @@protoc_insertion_point(field_mutable_list:raft_cmdpb.RaftCmdRequest.requests)
+  return &requests_;
 }
-inline const ::google::protobuf::RepeatedPtrField<::raft_cmdpb::Request> & RaftCmdRequest::requests() const
-{
-    // @@protoc_insertion_point(field_list:raft_cmdpb.RaftCmdRequest.requests)
-    return requests_;
+inline const ::google::protobuf::RepeatedPtrField< ::raft_cmdpb::Request >&
+RaftCmdRequest::requests() const {
+  // @@protoc_insertion_point(field_list:raft_cmdpb.RaftCmdRequest.requests)
+  return requests_;
 }
 
 // .raft_cmdpb.AdminRequest admin_request = 3;
-inline bool RaftCmdRequest::has_admin_request() const
-{
-    return this != internal_default_instance() && admin_request_ != NULL;
+inline bool RaftCmdRequest::has_admin_request() const {
+  return this != internal_default_instance() && admin_request_ != NULL;
 }
-inline void RaftCmdRequest::clear_admin_request()
-{
-    if (GetArenaNoVirtual() == NULL && admin_request_ != NULL)
-    {
-        delete admin_request_;
-    }
-    admin_request_ = NULL;
+inline void RaftCmdRequest::clear_admin_request() {
+  if (GetArenaNoVirtual() == NULL && admin_request_ != NULL) {
+    delete admin_request_;
+  }
+  admin_request_ = NULL;
 }
-inline const ::raft_cmdpb::AdminRequest & RaftCmdRequest::admin_request() const
-{
-    const ::raft_cmdpb::AdminRequest * p = admin_request_;
-    // @@protoc_insertion_point(field_get:raft_cmdpb.RaftCmdRequest.admin_request)
-    return p != NULL ? *p : *reinterpret_cast<const ::raft_cmdpb::AdminRequest *>(&::raft_cmdpb::_AdminRequest_default_instance_);
+inline const ::raft_cmdpb::AdminRequest& RaftCmdRequest::admin_request() const {
+  const ::raft_cmdpb::AdminRequest* p = admin_request_;
+  // @@protoc_insertion_point(field_get:raft_cmdpb.RaftCmdRequest.admin_request)
+  return p != NULL ? *p : *reinterpret_cast<const ::raft_cmdpb::AdminRequest*>(
+      &::raft_cmdpb::_AdminRequest_default_instance_);
 }
-inline ::raft_cmdpb::AdminRequest * RaftCmdRequest::release_admin_request()
-{
-    // @@protoc_insertion_point(field_release:raft_cmdpb.RaftCmdRequest.admin_request)
-
-    ::raft_cmdpb::AdminRequest * temp = admin_request_;
-    admin_request_                    = NULL;
-    return temp;
+inline ::raft_cmdpb::AdminRequest* RaftCmdRequest::release_admin_request() {
+  // @@protoc_insertion_point(field_release:raft_cmdpb.RaftCmdRequest.admin_request)
+  
+  ::raft_cmdpb::AdminRequest* temp = admin_request_;
+  admin_request_ = NULL;
+  return temp;
 }
-inline ::raft_cmdpb::AdminRequest * RaftCmdRequest::mutable_admin_request()
-{
-
-    if (admin_request_ == NULL)
-    {
-        admin_request_ = new ::raft_cmdpb::AdminRequest;
-    }
-    // @@protoc_insertion_point(field_mutable:raft_cmdpb.RaftCmdRequest.admin_request)
-    return admin_request_;
+inline ::raft_cmdpb::AdminRequest* RaftCmdRequest::mutable_admin_request() {
+  
+  if (admin_request_ == NULL) {
+    admin_request_ = new ::raft_cmdpb::AdminRequest;
+  }
+  // @@protoc_insertion_point(field_mutable:raft_cmdpb.RaftCmdRequest.admin_request)
+  return admin_request_;
 }
-inline void RaftCmdRequest::set_allocated_admin_request(::raft_cmdpb::AdminRequest * admin_request)
-{
-    ::google::protobuf::Arena * message_arena = GetArenaNoVirtual();
-    if (message_arena == NULL)
-    {
-        delete admin_request_;
+inline void RaftCmdRequest::set_allocated_admin_request(::raft_cmdpb::AdminRequest* admin_request) {
+  ::google::protobuf::Arena* message_arena = GetArenaNoVirtual();
+  if (message_arena == NULL) {
+    delete admin_request_;
+  }
+  if (admin_request) {
+    ::google::protobuf::Arena* submessage_arena = NULL;
+    if (message_arena != submessage_arena) {
+      admin_request = ::google::protobuf::internal::GetOwnedMessage(
+          message_arena, admin_request, submessage_arena);
     }
-    if (admin_request)
-    {
-        ::google::protobuf::Arena * submessage_arena = NULL;
-        if (message_arena != submessage_arena)
-        {
-            admin_request = ::google::protobuf::internal::GetOwnedMessage(message_arena, admin_request, submessage_arena);
-        }
-    }
-    else
-    {
-    }
-    admin_request_ = admin_request;
-    // @@protoc_insertion_point(field_set_allocated:raft_cmdpb.RaftCmdRequest.admin_request)
+    
+  } else {
+    
+  }
+  admin_request_ = admin_request;
+  // @@protoc_insertion_point(field_set_allocated:raft_cmdpb.RaftCmdRequest.admin_request)
 }
 
 // .raft_cmdpb.StatusRequest status_request = 4;
-inline bool RaftCmdRequest::has_status_request() const
-{
-    return this != internal_default_instance() && status_request_ != NULL;
+inline bool RaftCmdRequest::has_status_request() const {
+  return this != internal_default_instance() && status_request_ != NULL;
 }
-inline void RaftCmdRequest::clear_status_request()
-{
-    if (GetArenaNoVirtual() == NULL && status_request_ != NULL)
-    {
-        delete status_request_;
-    }
-    status_request_ = NULL;
+inline void RaftCmdRequest::clear_status_request() {
+  if (GetArenaNoVirtual() == NULL && status_request_ != NULL) {
+    delete status_request_;
+  }
+  status_request_ = NULL;
 }
-inline const ::raft_cmdpb::StatusRequest & RaftCmdRequest::status_request() const
-{
-    const ::raft_cmdpb::StatusRequest * p = status_request_;
-    // @@protoc_insertion_point(field_get:raft_cmdpb.RaftCmdRequest.status_request)
-    return p != NULL ? *p : *reinterpret_cast<const ::raft_cmdpb::StatusRequest *>(&::raft_cmdpb::_StatusRequest_default_instance_);
+inline const ::raft_cmdpb::StatusRequest& RaftCmdRequest::status_request() const {
+  const ::raft_cmdpb::StatusRequest* p = status_request_;
+  // @@protoc_insertion_point(field_get:raft_cmdpb.RaftCmdRequest.status_request)
+  return p != NULL ? *p : *reinterpret_cast<const ::raft_cmdpb::StatusRequest*>(
+      &::raft_cmdpb::_StatusRequest_default_instance_);
 }
-inline ::raft_cmdpb::StatusRequest * RaftCmdRequest::release_status_request()
-{
-    // @@protoc_insertion_point(field_release:raft_cmdpb.RaftCmdRequest.status_request)
-
-    ::raft_cmdpb::StatusRequest * temp = status_request_;
-    status_request_                    = NULL;
-    return temp;
+inline ::raft_cmdpb::StatusRequest* RaftCmdRequest::release_status_request() {
+  // @@protoc_insertion_point(field_release:raft_cmdpb.RaftCmdRequest.status_request)
+  
+  ::raft_cmdpb::StatusRequest* temp = status_request_;
+  status_request_ = NULL;
+  return temp;
 }
-inline ::raft_cmdpb::StatusRequest * RaftCmdRequest::mutable_status_request()
-{
-
-    if (status_request_ == NULL)
-    {
-        status_request_ = new ::raft_cmdpb::StatusRequest;
-    }
-    // @@protoc_insertion_point(field_mutable:raft_cmdpb.RaftCmdRequest.status_request)
-    return status_request_;
+inline ::raft_cmdpb::StatusRequest* RaftCmdRequest::mutable_status_request() {
+  
+  if (status_request_ == NULL) {
+    status_request_ = new ::raft_cmdpb::StatusRequest;
+  }
+  // @@protoc_insertion_point(field_mutable:raft_cmdpb.RaftCmdRequest.status_request)
+  return status_request_;
 }
-inline void RaftCmdRequest::set_allocated_status_request(::raft_cmdpb::StatusRequest * status_request)
-{
-    ::google::protobuf::Arena * message_arena = GetArenaNoVirtual();
-    if (message_arena == NULL)
-    {
-        delete status_request_;
+inline void RaftCmdRequest::set_allocated_status_request(::raft_cmdpb::StatusRequest* status_request) {
+  ::google::protobuf::Arena* message_arena = GetArenaNoVirtual();
+  if (message_arena == NULL) {
+    delete status_request_;
+  }
+  if (status_request) {
+    ::google::protobuf::Arena* submessage_arena = NULL;
+    if (message_arena != submessage_arena) {
+      status_request = ::google::protobuf::internal::GetOwnedMessage(
+          message_arena, status_request, submessage_arena);
     }
-    if (status_request)
-    {
-        ::google::protobuf::Arena * submessage_arena = NULL;
-        if (message_arena != submessage_arena)
-        {
-            status_request = ::google::protobuf::internal::GetOwnedMessage(message_arena, status_request, submessage_arena);
-        }
-    }
-    else
-    {
-    }
-    status_request_ = status_request;
-    // @@protoc_insertion_point(field_set_allocated:raft_cmdpb.RaftCmdRequest.status_request)
+    
+  } else {
+    
+  }
+  status_request_ = status_request;
+  // @@protoc_insertion_point(field_set_allocated:raft_cmdpb.RaftCmdRequest.status_request)
 }
 
 // -------------------------------------------------------------------
@@ -10409,221 +9901,188 @@ inline void RaftCmdRequest::set_allocated_status_request(::raft_cmdpb::StatusReq
 // RaftCmdResponse
 
 // .raft_cmdpb.RaftResponseHeader header = 1;
-inline bool RaftCmdResponse::has_header() const
-{
-    return this != internal_default_instance() && header_ != NULL;
+inline bool RaftCmdResponse::has_header() const {
+  return this != internal_default_instance() && header_ != NULL;
 }
-inline void RaftCmdResponse::clear_header()
-{
-    if (GetArenaNoVirtual() == NULL && header_ != NULL)
-    {
-        delete header_;
-    }
-    header_ = NULL;
+inline void RaftCmdResponse::clear_header() {
+  if (GetArenaNoVirtual() == NULL && header_ != NULL) {
+    delete header_;
+  }
+  header_ = NULL;
 }
-inline const ::raft_cmdpb::RaftResponseHeader & RaftCmdResponse::header() const
-{
-    const ::raft_cmdpb::RaftResponseHeader * p = header_;
-    // @@protoc_insertion_point(field_get:raft_cmdpb.RaftCmdResponse.header)
-    return p != NULL ? *p
-                     : *reinterpret_cast<const ::raft_cmdpb::RaftResponseHeader *>(&::raft_cmdpb::_RaftResponseHeader_default_instance_);
+inline const ::raft_cmdpb::RaftResponseHeader& RaftCmdResponse::header() const {
+  const ::raft_cmdpb::RaftResponseHeader* p = header_;
+  // @@protoc_insertion_point(field_get:raft_cmdpb.RaftCmdResponse.header)
+  return p != NULL ? *p : *reinterpret_cast<const ::raft_cmdpb::RaftResponseHeader*>(
+      &::raft_cmdpb::_RaftResponseHeader_default_instance_);
 }
-inline ::raft_cmdpb::RaftResponseHeader * RaftCmdResponse::release_header()
-{
-    // @@protoc_insertion_point(field_release:raft_cmdpb.RaftCmdResponse.header)
-
-    ::raft_cmdpb::RaftResponseHeader * temp = header_;
-    header_                                 = NULL;
-    return temp;
+inline ::raft_cmdpb::RaftResponseHeader* RaftCmdResponse::release_header() {
+  // @@protoc_insertion_point(field_release:raft_cmdpb.RaftCmdResponse.header)
+  
+  ::raft_cmdpb::RaftResponseHeader* temp = header_;
+  header_ = NULL;
+  return temp;
 }
-inline ::raft_cmdpb::RaftResponseHeader * RaftCmdResponse::mutable_header()
-{
-
-    if (header_ == NULL)
-    {
-        header_ = new ::raft_cmdpb::RaftResponseHeader;
-    }
-    // @@protoc_insertion_point(field_mutable:raft_cmdpb.RaftCmdResponse.header)
-    return header_;
+inline ::raft_cmdpb::RaftResponseHeader* RaftCmdResponse::mutable_header() {
+  
+  if (header_ == NULL) {
+    header_ = new ::raft_cmdpb::RaftResponseHeader;
+  }
+  // @@protoc_insertion_point(field_mutable:raft_cmdpb.RaftCmdResponse.header)
+  return header_;
 }
-inline void RaftCmdResponse::set_allocated_header(::raft_cmdpb::RaftResponseHeader * header)
-{
-    ::google::protobuf::Arena * message_arena = GetArenaNoVirtual();
-    if (message_arena == NULL)
-    {
-        delete header_;
+inline void RaftCmdResponse::set_allocated_header(::raft_cmdpb::RaftResponseHeader* header) {
+  ::google::protobuf::Arena* message_arena = GetArenaNoVirtual();
+  if (message_arena == NULL) {
+    delete header_;
+  }
+  if (header) {
+    ::google::protobuf::Arena* submessage_arena = NULL;
+    if (message_arena != submessage_arena) {
+      header = ::google::protobuf::internal::GetOwnedMessage(
+          message_arena, header, submessage_arena);
     }
-    if (header)
-    {
-        ::google::protobuf::Arena * submessage_arena = NULL;
-        if (message_arena != submessage_arena)
-        {
-            header = ::google::protobuf::internal::GetOwnedMessage(message_arena, header, submessage_arena);
-        }
-    }
-    else
-    {
-    }
-    header_ = header;
-    // @@protoc_insertion_point(field_set_allocated:raft_cmdpb.RaftCmdResponse.header)
+    
+  } else {
+    
+  }
+  header_ = header;
+  // @@protoc_insertion_point(field_set_allocated:raft_cmdpb.RaftCmdResponse.header)
 }
 
 // repeated .raft_cmdpb.Response responses = 2;
-inline int RaftCmdResponse::responses_size() const
-{
-    return responses_.size();
+inline int RaftCmdResponse::responses_size() const {
+  return responses_.size();
 }
-inline void RaftCmdResponse::clear_responses()
-{
-    responses_.Clear();
+inline void RaftCmdResponse::clear_responses() {
+  responses_.Clear();
 }
-inline const ::raft_cmdpb::Response & RaftCmdResponse::responses(int index) const
-{
-    // @@protoc_insertion_point(field_get:raft_cmdpb.RaftCmdResponse.responses)
-    return responses_.Get(index);
+inline const ::raft_cmdpb::Response& RaftCmdResponse::responses(int index) const {
+  // @@protoc_insertion_point(field_get:raft_cmdpb.RaftCmdResponse.responses)
+  return responses_.Get(index);
 }
-inline ::raft_cmdpb::Response * RaftCmdResponse::mutable_responses(int index)
-{
-    // @@protoc_insertion_point(field_mutable:raft_cmdpb.RaftCmdResponse.responses)
-    return responses_.Mutable(index);
+inline ::raft_cmdpb::Response* RaftCmdResponse::mutable_responses(int index) {
+  // @@protoc_insertion_point(field_mutable:raft_cmdpb.RaftCmdResponse.responses)
+  return responses_.Mutable(index);
 }
-inline ::raft_cmdpb::Response * RaftCmdResponse::add_responses()
-{
-    // @@protoc_insertion_point(field_add:raft_cmdpb.RaftCmdResponse.responses)
-    return responses_.Add();
+inline ::raft_cmdpb::Response* RaftCmdResponse::add_responses() {
+  // @@protoc_insertion_point(field_add:raft_cmdpb.RaftCmdResponse.responses)
+  return responses_.Add();
 }
-inline ::google::protobuf::RepeatedPtrField<::raft_cmdpb::Response> * RaftCmdResponse::mutable_responses()
-{
-    // @@protoc_insertion_point(field_mutable_list:raft_cmdpb.RaftCmdResponse.responses)
-    return &responses_;
+inline ::google::protobuf::RepeatedPtrField< ::raft_cmdpb::Response >*
+RaftCmdResponse::mutable_responses() {
+  // @@protoc_insertion_point(field_mutable_list:raft_cmdpb.RaftCmdResponse.responses)
+  return &responses_;
 }
-inline const ::google::protobuf::RepeatedPtrField<::raft_cmdpb::Response> & RaftCmdResponse::responses() const
-{
-    // @@protoc_insertion_point(field_list:raft_cmdpb.RaftCmdResponse.responses)
-    return responses_;
+inline const ::google::protobuf::RepeatedPtrField< ::raft_cmdpb::Response >&
+RaftCmdResponse::responses() const {
+  // @@protoc_insertion_point(field_list:raft_cmdpb.RaftCmdResponse.responses)
+  return responses_;
 }
 
 // .raft_cmdpb.AdminResponse admin_response = 3;
-inline bool RaftCmdResponse::has_admin_response() const
-{
-    return this != internal_default_instance() && admin_response_ != NULL;
+inline bool RaftCmdResponse::has_admin_response() const {
+  return this != internal_default_instance() && admin_response_ != NULL;
 }
-inline void RaftCmdResponse::clear_admin_response()
-{
-    if (GetArenaNoVirtual() == NULL && admin_response_ != NULL)
-    {
-        delete admin_response_;
-    }
-    admin_response_ = NULL;
+inline void RaftCmdResponse::clear_admin_response() {
+  if (GetArenaNoVirtual() == NULL && admin_response_ != NULL) {
+    delete admin_response_;
+  }
+  admin_response_ = NULL;
 }
-inline const ::raft_cmdpb::AdminResponse & RaftCmdResponse::admin_response() const
-{
-    const ::raft_cmdpb::AdminResponse * p = admin_response_;
-    // @@protoc_insertion_point(field_get:raft_cmdpb.RaftCmdResponse.admin_response)
-    return p != NULL ? *p : *reinterpret_cast<const ::raft_cmdpb::AdminResponse *>(&::raft_cmdpb::_AdminResponse_default_instance_);
+inline const ::raft_cmdpb::AdminResponse& RaftCmdResponse::admin_response() const {
+  const ::raft_cmdpb::AdminResponse* p = admin_response_;
+  // @@protoc_insertion_point(field_get:raft_cmdpb.RaftCmdResponse.admin_response)
+  return p != NULL ? *p : *reinterpret_cast<const ::raft_cmdpb::AdminResponse*>(
+      &::raft_cmdpb::_AdminResponse_default_instance_);
 }
-inline ::raft_cmdpb::AdminResponse * RaftCmdResponse::release_admin_response()
-{
-    // @@protoc_insertion_point(field_release:raft_cmdpb.RaftCmdResponse.admin_response)
-
-    ::raft_cmdpb::AdminResponse * temp = admin_response_;
-    admin_response_                    = NULL;
-    return temp;
+inline ::raft_cmdpb::AdminResponse* RaftCmdResponse::release_admin_response() {
+  // @@protoc_insertion_point(field_release:raft_cmdpb.RaftCmdResponse.admin_response)
+  
+  ::raft_cmdpb::AdminResponse* temp = admin_response_;
+  admin_response_ = NULL;
+  return temp;
 }
-inline ::raft_cmdpb::AdminResponse * RaftCmdResponse::mutable_admin_response()
-{
-
-    if (admin_response_ == NULL)
-    {
-        admin_response_ = new ::raft_cmdpb::AdminResponse;
-    }
-    // @@protoc_insertion_point(field_mutable:raft_cmdpb.RaftCmdResponse.admin_response)
-    return admin_response_;
+inline ::raft_cmdpb::AdminResponse* RaftCmdResponse::mutable_admin_response() {
+  
+  if (admin_response_ == NULL) {
+    admin_response_ = new ::raft_cmdpb::AdminResponse;
+  }
+  // @@protoc_insertion_point(field_mutable:raft_cmdpb.RaftCmdResponse.admin_response)
+  return admin_response_;
 }
-inline void RaftCmdResponse::set_allocated_admin_response(::raft_cmdpb::AdminResponse * admin_response)
-{
-    ::google::protobuf::Arena * message_arena = GetArenaNoVirtual();
-    if (message_arena == NULL)
-    {
-        delete admin_response_;
+inline void RaftCmdResponse::set_allocated_admin_response(::raft_cmdpb::AdminResponse* admin_response) {
+  ::google::protobuf::Arena* message_arena = GetArenaNoVirtual();
+  if (message_arena == NULL) {
+    delete admin_response_;
+  }
+  if (admin_response) {
+    ::google::protobuf::Arena* submessage_arena = NULL;
+    if (message_arena != submessage_arena) {
+      admin_response = ::google::protobuf::internal::GetOwnedMessage(
+          message_arena, admin_response, submessage_arena);
     }
-    if (admin_response)
-    {
-        ::google::protobuf::Arena * submessage_arena = NULL;
-        if (message_arena != submessage_arena)
-        {
-            admin_response = ::google::protobuf::internal::GetOwnedMessage(message_arena, admin_response, submessage_arena);
-        }
-    }
-    else
-    {
-    }
-    admin_response_ = admin_response;
-    // @@protoc_insertion_point(field_set_allocated:raft_cmdpb.RaftCmdResponse.admin_response)
+    
+  } else {
+    
+  }
+  admin_response_ = admin_response;
+  // @@protoc_insertion_point(field_set_allocated:raft_cmdpb.RaftCmdResponse.admin_response)
 }
 
 // .raft_cmdpb.StatusResponse status_response = 4;
-inline bool RaftCmdResponse::has_status_response() const
-{
-    return this != internal_default_instance() && status_response_ != NULL;
+inline bool RaftCmdResponse::has_status_response() const {
+  return this != internal_default_instance() && status_response_ != NULL;
 }
-inline void RaftCmdResponse::clear_status_response()
-{
-    if (GetArenaNoVirtual() == NULL && status_response_ != NULL)
-    {
-        delete status_response_;
-    }
-    status_response_ = NULL;
+inline void RaftCmdResponse::clear_status_response() {
+  if (GetArenaNoVirtual() == NULL && status_response_ != NULL) {
+    delete status_response_;
+  }
+  status_response_ = NULL;
 }
-inline const ::raft_cmdpb::StatusResponse & RaftCmdResponse::status_response() const
-{
-    const ::raft_cmdpb::StatusResponse * p = status_response_;
-    // @@protoc_insertion_point(field_get:raft_cmdpb.RaftCmdResponse.status_response)
-    return p != NULL ? *p : *reinterpret_cast<const ::raft_cmdpb::StatusResponse *>(&::raft_cmdpb::_StatusResponse_default_instance_);
+inline const ::raft_cmdpb::StatusResponse& RaftCmdResponse::status_response() const {
+  const ::raft_cmdpb::StatusResponse* p = status_response_;
+  // @@protoc_insertion_point(field_get:raft_cmdpb.RaftCmdResponse.status_response)
+  return p != NULL ? *p : *reinterpret_cast<const ::raft_cmdpb::StatusResponse*>(
+      &::raft_cmdpb::_StatusResponse_default_instance_);
 }
-inline ::raft_cmdpb::StatusResponse * RaftCmdResponse::release_status_response()
-{
-    // @@protoc_insertion_point(field_release:raft_cmdpb.RaftCmdResponse.status_response)
-
-    ::raft_cmdpb::StatusResponse * temp = status_response_;
-    status_response_                    = NULL;
-    return temp;
+inline ::raft_cmdpb::StatusResponse* RaftCmdResponse::release_status_response() {
+  // @@protoc_insertion_point(field_release:raft_cmdpb.RaftCmdResponse.status_response)
+  
+  ::raft_cmdpb::StatusResponse* temp = status_response_;
+  status_response_ = NULL;
+  return temp;
 }
-inline ::raft_cmdpb::StatusResponse * RaftCmdResponse::mutable_status_response()
-{
-
-    if (status_response_ == NULL)
-    {
-        status_response_ = new ::raft_cmdpb::StatusResponse;
-    }
-    // @@protoc_insertion_point(field_mutable:raft_cmdpb.RaftCmdResponse.status_response)
-    return status_response_;
+inline ::raft_cmdpb::StatusResponse* RaftCmdResponse::mutable_status_response() {
+  
+  if (status_response_ == NULL) {
+    status_response_ = new ::raft_cmdpb::StatusResponse;
+  }
+  // @@protoc_insertion_point(field_mutable:raft_cmdpb.RaftCmdResponse.status_response)
+  return status_response_;
 }
-inline void RaftCmdResponse::set_allocated_status_response(::raft_cmdpb::StatusResponse * status_response)
-{
-    ::google::protobuf::Arena * message_arena = GetArenaNoVirtual();
-    if (message_arena == NULL)
-    {
-        delete status_response_;
+inline void RaftCmdResponse::set_allocated_status_response(::raft_cmdpb::StatusResponse* status_response) {
+  ::google::protobuf::Arena* message_arena = GetArenaNoVirtual();
+  if (message_arena == NULL) {
+    delete status_response_;
+  }
+  if (status_response) {
+    ::google::protobuf::Arena* submessage_arena = NULL;
+    if (message_arena != submessage_arena) {
+      status_response = ::google::protobuf::internal::GetOwnedMessage(
+          message_arena, status_response, submessage_arena);
     }
-    if (status_response)
-    {
-        ::google::protobuf::Arena * submessage_arena = NULL;
-        if (message_arena != submessage_arena)
-        {
-            status_response = ::google::protobuf::internal::GetOwnedMessage(message_arena, status_response, submessage_arena);
-        }
-    }
-    else
-    {
-    }
-    status_response_ = status_response;
-    // @@protoc_insertion_point(field_set_allocated:raft_cmdpb.RaftCmdResponse.status_response)
+    
+  } else {
+    
+  }
+  status_response_ = status_response;
+  // @@protoc_insertion_point(field_set_allocated:raft_cmdpb.RaftCmdResponse.status_response)
 }
 
 #ifdef __GNUC__
-#pragma GCC diagnostic pop
-#endif // __GNUC__
+  #pragma GCC diagnostic pop
+#endif  // __GNUC__
 // -------------------------------------------------------------------
 
 // -------------------------------------------------------------------
@@ -10717,44 +10176,30 @@ inline void RaftCmdResponse::set_allocated_status_response(::raft_cmdpb::StatusR
 
 // @@protoc_insertion_point(namespace_scope)
 
-} // namespace raft_cmdpb
+}  // namespace raft_cmdpb
 
-namespace google
-{
-namespace protobuf
-{
+namespace google {
+namespace protobuf {
 
+template <> struct is_proto_enum< ::raft_cmdpb::CmdType> : ::google::protobuf::internal::true_type {};
 template <>
-struct is_proto_enum<::raft_cmdpb::CmdType> : ::google::protobuf::internal::true_type
-{
-};
-template <>
-inline const EnumDescriptor * GetEnumDescriptor<::raft_cmdpb::CmdType>()
-{
-    return ::raft_cmdpb::CmdType_descriptor();
+inline const EnumDescriptor* GetEnumDescriptor< ::raft_cmdpb::CmdType>() {
+  return ::raft_cmdpb::CmdType_descriptor();
 }
+template <> struct is_proto_enum< ::raft_cmdpb::AdminCmdType> : ::google::protobuf::internal::true_type {};
 template <>
-struct is_proto_enum<::raft_cmdpb::AdminCmdType> : ::google::protobuf::internal::true_type
-{
-};
-template <>
-inline const EnumDescriptor * GetEnumDescriptor<::raft_cmdpb::AdminCmdType>()
-{
-    return ::raft_cmdpb::AdminCmdType_descriptor();
+inline const EnumDescriptor* GetEnumDescriptor< ::raft_cmdpb::AdminCmdType>() {
+  return ::raft_cmdpb::AdminCmdType_descriptor();
 }
+template <> struct is_proto_enum< ::raft_cmdpb::StatusCmdType> : ::google::protobuf::internal::true_type {};
 template <>
-struct is_proto_enum<::raft_cmdpb::StatusCmdType> : ::google::protobuf::internal::true_type
-{
-};
-template <>
-inline const EnumDescriptor * GetEnumDescriptor<::raft_cmdpb::StatusCmdType>()
-{
-    return ::raft_cmdpb::StatusCmdType_descriptor();
+inline const EnumDescriptor* GetEnumDescriptor< ::raft_cmdpb::StatusCmdType>() {
+  return ::raft_cmdpb::StatusCmdType_descriptor();
 }
 
-} // namespace protobuf
-} // namespace google
+}  // namespace protobuf
+}  // namespace google
 
 // @@protoc_insertion_point(global_scope)
 
-#endif // PROTOBUF_raft_5fcmdpb_2eproto__INCLUDED
+#endif  // PROTOBUF_raft_5fcmdpb_2eproto__INCLUDED

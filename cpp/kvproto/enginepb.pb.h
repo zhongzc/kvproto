@@ -19,70 +19,66 @@
 #error regenerate this file with a newer version of protoc.
 #endif
 
+#include <google/protobuf/io/coded_stream.h>
 #include <google/protobuf/arena.h>
 #include <google/protobuf/arenastring.h>
-#include <google/protobuf/extension_set.h> // IWYU pragma: export
 #include <google/protobuf/generated_message_table_driven.h>
 #include <google/protobuf/generated_message_util.h>
-#include <google/protobuf/io/coded_stream.h>
-#include <google/protobuf/message.h>
 #include <google/protobuf/metadata.h>
-#include <google/protobuf/repeated_field.h> // IWYU pragma: export
+#include <google/protobuf/message.h>
+#include <google/protobuf/repeated_field.h>  // IWYU pragma: export
+#include <google/protobuf/extension_set.h>  // IWYU pragma: export
 #include <google/protobuf/unknown_field_set.h>
 #include "metapb.pb.h"
 #include "raft_cmdpb.pb.h"
 #include "raft_serverpb.pb.h"
 // @@protoc_insertion_point(includes)
 
-namespace protobuf_enginepb_2eproto
-{
+namespace protobuf_enginepb_2eproto {
 // Internal implementation detail -- do not use these members.
-struct TableStruct
-{
-    static const ::google::protobuf::internal::ParseTableField          entries[];
-    static const ::google::protobuf::internal::AuxillaryParseTableField aux[];
-    static const ::google::protobuf::internal::ParseTable               schema[10];
-    static const ::google::protobuf::internal::FieldMetadata            field_metadata[];
-    static const ::google::protobuf::internal::SerializationTable       serialization_table[];
-    static const ::google::protobuf::uint32                             offsets[];
+struct TableStruct {
+  static const ::google::protobuf::internal::ParseTableField entries[];
+  static const ::google::protobuf::internal::AuxillaryParseTableField aux[];
+  static const ::google::protobuf::internal::ParseTable schema[10];
+  static const ::google::protobuf::internal::FieldMetadata field_metadata[];
+  static const ::google::protobuf::internal::SerializationTable serialization_table[];
+  static const ::google::protobuf::uint32 offsets[];
 };
-void        AddDescriptors();
-void        InitDefaultsCommandRequestHeaderImpl();
-void        InitDefaultsCommandRequestHeader();
-void        InitDefaultsCommandRequestImpl();
-void        InitDefaultsCommandRequest();
-void        InitDefaultsCommandRequestBatchImpl();
-void        InitDefaultsCommandRequestBatch();
-void        InitDefaultsCommandResponseHeaderImpl();
-void        InitDefaultsCommandResponseHeader();
-void        InitDefaultsCommandResponseImpl();
-void        InitDefaultsCommandResponse();
-void        InitDefaultsCommandResponseBatchImpl();
-void        InitDefaultsCommandResponseBatch();
-void        InitDefaultsSnapshotStateImpl();
-void        InitDefaultsSnapshotState();
-void        InitDefaultsSnapshotDataImpl();
-void        InitDefaultsSnapshotData();
-void        InitDefaultsSnapshotRequestImpl();
-void        InitDefaultsSnapshotRequest();
-void        InitDefaultsSnapshotDoneImpl();
-void        InitDefaultsSnapshotDone();
-inline void InitDefaults()
-{
-    InitDefaultsCommandRequestHeader();
-    InitDefaultsCommandRequest();
-    InitDefaultsCommandRequestBatch();
-    InitDefaultsCommandResponseHeader();
-    InitDefaultsCommandResponse();
-    InitDefaultsCommandResponseBatch();
-    InitDefaultsSnapshotState();
-    InitDefaultsSnapshotData();
-    InitDefaultsSnapshotRequest();
-    InitDefaultsSnapshotDone();
+void AddDescriptors();
+void InitDefaultsCommandRequestHeaderImpl();
+void InitDefaultsCommandRequestHeader();
+void InitDefaultsCommandRequestImpl();
+void InitDefaultsCommandRequest();
+void InitDefaultsCommandRequestBatchImpl();
+void InitDefaultsCommandRequestBatch();
+void InitDefaultsCommandResponseHeaderImpl();
+void InitDefaultsCommandResponseHeader();
+void InitDefaultsCommandResponseImpl();
+void InitDefaultsCommandResponse();
+void InitDefaultsCommandResponseBatchImpl();
+void InitDefaultsCommandResponseBatch();
+void InitDefaultsSnapshotStateImpl();
+void InitDefaultsSnapshotState();
+void InitDefaultsSnapshotDataImpl();
+void InitDefaultsSnapshotData();
+void InitDefaultsSnapshotRequestImpl();
+void InitDefaultsSnapshotRequest();
+void InitDefaultsSnapshotDoneImpl();
+void InitDefaultsSnapshotDone();
+inline void InitDefaults() {
+  InitDefaultsCommandRequestHeader();
+  InitDefaultsCommandRequest();
+  InitDefaultsCommandRequestBatch();
+  InitDefaultsCommandResponseHeader();
+  InitDefaultsCommandResponse();
+  InitDefaultsCommandResponseBatch();
+  InitDefaultsSnapshotState();
+  InitDefaultsSnapshotData();
+  InitDefaultsSnapshotRequest();
+  InitDefaultsSnapshotDone();
 }
-} // namespace protobuf_enginepb_2eproto
-namespace enginepb
-{
+}  // namespace protobuf_enginepb_2eproto
+namespace enginepb {
 class CommandRequest;
 class CommandRequestDefaultTypeInternal;
 extern CommandRequestDefaultTypeInternal _CommandRequest_default_instance_;
@@ -113,1143 +109,1184 @@ extern SnapshotRequestDefaultTypeInternal _SnapshotRequest_default_instance_;
 class SnapshotState;
 class SnapshotStateDefaultTypeInternal;
 extern SnapshotStateDefaultTypeInternal _SnapshotState_default_instance_;
-} // namespace enginepb
-namespace enginepb
-{
+}  // namespace enginepb
+namespace enginepb {
 
 // ===================================================================
 
-class CommandRequestHeader
-    : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:enginepb.CommandRequestHeader) */
-{
-public:
-    CommandRequestHeader();
-    virtual ~CommandRequestHeader();
+class CommandRequestHeader : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:enginepb.CommandRequestHeader) */ {
+ public:
+  CommandRequestHeader();
+  virtual ~CommandRequestHeader();
 
-    CommandRequestHeader(const CommandRequestHeader & from);
+  CommandRequestHeader(const CommandRequestHeader& from);
 
-    inline CommandRequestHeader & operator=(const CommandRequestHeader & from)
-    {
-        CopyFrom(from);
-        return *this;
+  inline CommandRequestHeader& operator=(const CommandRequestHeader& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  #if LANG_CXX11
+  CommandRequestHeader(CommandRequestHeader&& from) noexcept
+    : CommandRequestHeader() {
+    *this = ::std::move(from);
+  }
+
+  inline CommandRequestHeader& operator=(CommandRequestHeader&& from) noexcept {
+    if (GetArenaNoVirtual() == from.GetArenaNoVirtual()) {
+      if (this != &from) InternalSwap(&from);
+    } else {
+      CopyFrom(from);
     }
-#if LANG_CXX11
-    CommandRequestHeader(CommandRequestHeader && from) noexcept : CommandRequestHeader() { *this = ::std::move(from); }
+    return *this;
+  }
+  #endif
+  static const ::google::protobuf::Descriptor* descriptor();
+  static const CommandRequestHeader& default_instance();
 
-    inline CommandRequestHeader & operator=(CommandRequestHeader && from) noexcept
-    {
-        if (GetArenaNoVirtual() == from.GetArenaNoVirtual())
-        {
-            if (this != &from)
-                InternalSwap(&from);
-        }
-        else
-        {
-            CopyFrom(from);
-        }
-        return *this;
-    }
-#endif
-    static const ::google::protobuf::Descriptor * descriptor();
-    static const CommandRequestHeader &           default_instance();
+  static void InitAsDefaultInstance();  // FOR INTERNAL USE ONLY
+  static inline const CommandRequestHeader* internal_default_instance() {
+    return reinterpret_cast<const CommandRequestHeader*>(
+               &_CommandRequestHeader_default_instance_);
+  }
+  static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
+    0;
 
-    static void                                InitAsDefaultInstance(); // FOR INTERNAL USE ONLY
-    static inline const CommandRequestHeader * internal_default_instance()
-    {
-        return reinterpret_cast<const CommandRequestHeader *>(&_CommandRequestHeader_default_instance_);
-    }
-    static PROTOBUF_CONSTEXPR int const kIndexInFileMessages = 0;
+  void Swap(CommandRequestHeader* other);
+  friend void swap(CommandRequestHeader& a, CommandRequestHeader& b) {
+    a.Swap(&b);
+  }
 
-    void        Swap(CommandRequestHeader * other);
-    friend void swap(CommandRequestHeader & a, CommandRequestHeader & b) { a.Swap(&b); }
+  // implements Message ----------------------------------------------
 
-    // implements Message ----------------------------------------------
+  inline CommandRequestHeader* New() const PROTOBUF_FINAL { return New(NULL); }
 
-    inline CommandRequestHeader * New() const PROTOBUF_FINAL { return New(NULL); }
+  CommandRequestHeader* New(::google::protobuf::Arena* arena) const PROTOBUF_FINAL;
+  void CopyFrom(const ::google::protobuf::Message& from) PROTOBUF_FINAL;
+  void MergeFrom(const ::google::protobuf::Message& from) PROTOBUF_FINAL;
+  void CopyFrom(const CommandRequestHeader& from);
+  void MergeFrom(const CommandRequestHeader& from);
+  void Clear() PROTOBUF_FINAL;
+  bool IsInitialized() const PROTOBUF_FINAL;
 
-    CommandRequestHeader * New(::google::protobuf::Arena * arena) const PROTOBUF_FINAL;
-    void                   CopyFrom(const ::google::protobuf::Message & from) PROTOBUF_FINAL;
-    void                   MergeFrom(const ::google::protobuf::Message & from) PROTOBUF_FINAL;
-    void                   CopyFrom(const CommandRequestHeader & from);
-    void                   MergeFrom(const CommandRequestHeader & from);
-    void                   Clear() PROTOBUF_FINAL;
-    bool                   IsInitialized() const PROTOBUF_FINAL;
+  size_t ByteSizeLong() const PROTOBUF_FINAL;
+  bool MergePartialFromCodedStream(
+      ::google::protobuf::io::CodedInputStream* input) PROTOBUF_FINAL;
+  void SerializeWithCachedSizes(
+      ::google::protobuf::io::CodedOutputStream* output) const PROTOBUF_FINAL;
+  ::google::protobuf::uint8* InternalSerializeWithCachedSizesToArray(
+      bool deterministic, ::google::protobuf::uint8* target) const PROTOBUF_FINAL;
+  int GetCachedSize() const PROTOBUF_FINAL { return _cached_size_; }
+  private:
+  void SharedCtor();
+  void SharedDtor();
+  void SetCachedSize(int size) const PROTOBUF_FINAL;
+  void InternalSwap(CommandRequestHeader* other);
+  private:
+  inline ::google::protobuf::Arena* GetArenaNoVirtual() const {
+    return NULL;
+  }
+  inline void* MaybeArenaPtr() const {
+    return NULL;
+  }
+  public:
 
-    size_t                      ByteSizeLong() const PROTOBUF_FINAL;
-    bool                        MergePartialFromCodedStream(::google::protobuf::io::CodedInputStream * input) PROTOBUF_FINAL;
-    void                        SerializeWithCachedSizes(::google::protobuf::io::CodedOutputStream * output) const PROTOBUF_FINAL;
-    ::google::protobuf::uint8 * InternalSerializeWithCachedSizesToArray(bool                        deterministic,
-                                                                        ::google::protobuf::uint8 * target) const PROTOBUF_FINAL;
-    int                         GetCachedSize() const PROTOBUF_FINAL { return _cached_size_; }
+  ::google::protobuf::Metadata GetMetadata() const PROTOBUF_FINAL;
 
-private:
-    void SharedCtor();
-    void SharedDtor();
-    void SetCachedSize(int size) const PROTOBUF_FINAL;
-    void InternalSwap(CommandRequestHeader * other);
+  // nested types ----------------------------------------------------
 
-private:
-    inline ::google::protobuf::Arena * GetArenaNoVirtual() const { return NULL; }
-    inline void *                      MaybeArenaPtr() const { return NULL; }
+  // accessors -------------------------------------------------------
 
-public:
-    ::google::protobuf::Metadata GetMetadata() const PROTOBUF_FINAL;
+  // bytes context = 6;
+  void clear_context();
+  static const int kContextFieldNumber = 6;
+  const ::std::string& context() const;
+  void set_context(const ::std::string& value);
+  #if LANG_CXX11
+  void set_context(::std::string&& value);
+  #endif
+  void set_context(const char* value);
+  void set_context(const void* value, size_t size);
+  ::std::string* mutable_context();
+  ::std::string* release_context();
+  void set_allocated_context(::std::string* context);
 
-    // nested types ----------------------------------------------------
+  // uint64 region_id = 1;
+  void clear_region_id();
+  static const int kRegionIdFieldNumber = 1;
+  ::google::protobuf::uint64 region_id() const;
+  void set_region_id(::google::protobuf::uint64 value);
 
-    // accessors -------------------------------------------------------
+  // uint64 index = 2;
+  void clear_index();
+  static const int kIndexFieldNumber = 2;
+  ::google::protobuf::uint64 index() const;
+  void set_index(::google::protobuf::uint64 value);
 
-    // bytes context = 6;
-    void                  clear_context();
-    static const int      kContextFieldNumber = 6;
-    const ::std::string & context() const;
-    void                  set_context(const ::std::string & value);
-#if LANG_CXX11
-    void set_context(::std::string && value);
-#endif
-    void            set_context(const char * value);
-    void            set_context(const void * value, size_t size);
-    ::std::string * mutable_context();
-    ::std::string * release_context();
-    void            set_allocated_context(::std::string * context);
+  // uint64 term = 3;
+  void clear_term();
+  static const int kTermFieldNumber = 3;
+  ::google::protobuf::uint64 term() const;
+  void set_term(::google::protobuf::uint64 value);
 
-    // uint64 region_id = 1;
-    void                       clear_region_id();
-    static const int           kRegionIdFieldNumber = 1;
-    ::google::protobuf::uint64 region_id() const;
-    void                       set_region_id(::google::protobuf::uint64 value);
+  // bool sync_log = 4;
+  void clear_sync_log();
+  static const int kSyncLogFieldNumber = 4;
+  bool sync_log() const;
+  void set_sync_log(bool value);
 
-    // uint64 index = 2;
-    void                       clear_index();
-    static const int           kIndexFieldNumber = 2;
-    ::google::protobuf::uint64 index() const;
-    void                       set_index(::google::protobuf::uint64 value);
+  // bool destroy = 5;
+  void clear_destroy();
+  static const int kDestroyFieldNumber = 5;
+  bool destroy() const;
+  void set_destroy(bool value);
 
-    // uint64 term = 3;
-    void                       clear_term();
-    static const int           kTermFieldNumber = 3;
-    ::google::protobuf::uint64 term() const;
-    void                       set_term(::google::protobuf::uint64 value);
+  // @@protoc_insertion_point(class_scope:enginepb.CommandRequestHeader)
+ private:
 
-    // bool sync_log = 4;
-    void             clear_sync_log();
-    static const int kSyncLogFieldNumber = 4;
-    bool             sync_log() const;
-    void             set_sync_log(bool value);
-
-    // bool destroy = 5;
-    void             clear_destroy();
-    static const int kDestroyFieldNumber = 5;
-    bool             destroy() const;
-    void             set_destroy(bool value);
-
-    // @@protoc_insertion_point(class_scope:enginepb.CommandRequestHeader)
-private:
-    ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
-    ::google::protobuf::internal::ArenaStringPtr            context_;
-    ::google::protobuf::uint64                              region_id_;
-    ::google::protobuf::uint64                              index_;
-    ::google::protobuf::uint64                              term_;
-    bool                                                    sync_log_;
-    bool                                                    destroy_;
-    mutable int                                             _cached_size_;
-    friend struct ::protobuf_enginepb_2eproto::TableStruct;
-    friend void ::protobuf_enginepb_2eproto::InitDefaultsCommandRequestHeaderImpl();
+  ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
+  ::google::protobuf::internal::ArenaStringPtr context_;
+  ::google::protobuf::uint64 region_id_;
+  ::google::protobuf::uint64 index_;
+  ::google::protobuf::uint64 term_;
+  bool sync_log_;
+  bool destroy_;
+  mutable int _cached_size_;
+  friend struct ::protobuf_enginepb_2eproto::TableStruct;
+  friend void ::protobuf_enginepb_2eproto::InitDefaultsCommandRequestHeaderImpl();
 };
 // -------------------------------------------------------------------
 
-class CommandRequest : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:enginepb.CommandRequest) */
-{
-public:
-    CommandRequest();
-    virtual ~CommandRequest();
+class CommandRequest : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:enginepb.CommandRequest) */ {
+ public:
+  CommandRequest();
+  virtual ~CommandRequest();
 
-    CommandRequest(const CommandRequest & from);
+  CommandRequest(const CommandRequest& from);
 
-    inline CommandRequest & operator=(const CommandRequest & from)
-    {
-        CopyFrom(from);
-        return *this;
+  inline CommandRequest& operator=(const CommandRequest& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  #if LANG_CXX11
+  CommandRequest(CommandRequest&& from) noexcept
+    : CommandRequest() {
+    *this = ::std::move(from);
+  }
+
+  inline CommandRequest& operator=(CommandRequest&& from) noexcept {
+    if (GetArenaNoVirtual() == from.GetArenaNoVirtual()) {
+      if (this != &from) InternalSwap(&from);
+    } else {
+      CopyFrom(from);
     }
-#if LANG_CXX11
-    CommandRequest(CommandRequest && from) noexcept : CommandRequest() { *this = ::std::move(from); }
+    return *this;
+  }
+  #endif
+  static const ::google::protobuf::Descriptor* descriptor();
+  static const CommandRequest& default_instance();
 
-    inline CommandRequest & operator=(CommandRequest && from) noexcept
-    {
-        if (GetArenaNoVirtual() == from.GetArenaNoVirtual())
-        {
-            if (this != &from)
-                InternalSwap(&from);
-        }
-        else
-        {
-            CopyFrom(from);
-        }
-        return *this;
-    }
-#endif
-    static const ::google::protobuf::Descriptor * descriptor();
-    static const CommandRequest &                 default_instance();
+  static void InitAsDefaultInstance();  // FOR INTERNAL USE ONLY
+  static inline const CommandRequest* internal_default_instance() {
+    return reinterpret_cast<const CommandRequest*>(
+               &_CommandRequest_default_instance_);
+  }
+  static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
+    1;
 
-    static void                          InitAsDefaultInstance(); // FOR INTERNAL USE ONLY
-    static inline const CommandRequest * internal_default_instance()
-    {
-        return reinterpret_cast<const CommandRequest *>(&_CommandRequest_default_instance_);
-    }
-    static PROTOBUF_CONSTEXPR int const kIndexInFileMessages = 1;
+  void Swap(CommandRequest* other);
+  friend void swap(CommandRequest& a, CommandRequest& b) {
+    a.Swap(&b);
+  }
 
-    void        Swap(CommandRequest * other);
-    friend void swap(CommandRequest & a, CommandRequest & b) { a.Swap(&b); }
+  // implements Message ----------------------------------------------
 
-    // implements Message ----------------------------------------------
+  inline CommandRequest* New() const PROTOBUF_FINAL { return New(NULL); }
 
-    inline CommandRequest * New() const PROTOBUF_FINAL { return New(NULL); }
+  CommandRequest* New(::google::protobuf::Arena* arena) const PROTOBUF_FINAL;
+  void CopyFrom(const ::google::protobuf::Message& from) PROTOBUF_FINAL;
+  void MergeFrom(const ::google::protobuf::Message& from) PROTOBUF_FINAL;
+  void CopyFrom(const CommandRequest& from);
+  void MergeFrom(const CommandRequest& from);
+  void Clear() PROTOBUF_FINAL;
+  bool IsInitialized() const PROTOBUF_FINAL;
 
-    CommandRequest * New(::google::protobuf::Arena * arena) const PROTOBUF_FINAL;
-    void             CopyFrom(const ::google::protobuf::Message & from) PROTOBUF_FINAL;
-    void             MergeFrom(const ::google::protobuf::Message & from) PROTOBUF_FINAL;
-    void             CopyFrom(const CommandRequest & from);
-    void             MergeFrom(const CommandRequest & from);
-    void             Clear() PROTOBUF_FINAL;
-    bool             IsInitialized() const PROTOBUF_FINAL;
+  size_t ByteSizeLong() const PROTOBUF_FINAL;
+  bool MergePartialFromCodedStream(
+      ::google::protobuf::io::CodedInputStream* input) PROTOBUF_FINAL;
+  void SerializeWithCachedSizes(
+      ::google::protobuf::io::CodedOutputStream* output) const PROTOBUF_FINAL;
+  ::google::protobuf::uint8* InternalSerializeWithCachedSizesToArray(
+      bool deterministic, ::google::protobuf::uint8* target) const PROTOBUF_FINAL;
+  int GetCachedSize() const PROTOBUF_FINAL { return _cached_size_; }
+  private:
+  void SharedCtor();
+  void SharedDtor();
+  void SetCachedSize(int size) const PROTOBUF_FINAL;
+  void InternalSwap(CommandRequest* other);
+  private:
+  inline ::google::protobuf::Arena* GetArenaNoVirtual() const {
+    return NULL;
+  }
+  inline void* MaybeArenaPtr() const {
+    return NULL;
+  }
+  public:
 
-    size_t                      ByteSizeLong() const PROTOBUF_FINAL;
-    bool                        MergePartialFromCodedStream(::google::protobuf::io::CodedInputStream * input) PROTOBUF_FINAL;
-    void                        SerializeWithCachedSizes(::google::protobuf::io::CodedOutputStream * output) const PROTOBUF_FINAL;
-    ::google::protobuf::uint8 * InternalSerializeWithCachedSizesToArray(bool                        deterministic,
-                                                                        ::google::protobuf::uint8 * target) const PROTOBUF_FINAL;
-    int                         GetCachedSize() const PROTOBUF_FINAL { return _cached_size_; }
+  ::google::protobuf::Metadata GetMetadata() const PROTOBUF_FINAL;
 
-private:
-    void SharedCtor();
-    void SharedDtor();
-    void SetCachedSize(int size) const PROTOBUF_FINAL;
-    void InternalSwap(CommandRequest * other);
+  // nested types ----------------------------------------------------
 
-private:
-    inline ::google::protobuf::Arena * GetArenaNoVirtual() const { return NULL; }
-    inline void *                      MaybeArenaPtr() const { return NULL; }
+  // accessors -------------------------------------------------------
 
-public:
-    ::google::protobuf::Metadata GetMetadata() const PROTOBUF_FINAL;
+  // repeated .raft_cmdpb.Request requests = 2;
+  int requests_size() const;
+  void clear_requests();
+  static const int kRequestsFieldNumber = 2;
+  const ::raft_cmdpb::Request& requests(int index) const;
+  ::raft_cmdpb::Request* mutable_requests(int index);
+  ::raft_cmdpb::Request* add_requests();
+  ::google::protobuf::RepeatedPtrField< ::raft_cmdpb::Request >*
+      mutable_requests();
+  const ::google::protobuf::RepeatedPtrField< ::raft_cmdpb::Request >&
+      requests() const;
 
-    // nested types ----------------------------------------------------
+  // .enginepb.CommandRequestHeader header = 1;
+  bool has_header() const;
+  void clear_header();
+  static const int kHeaderFieldNumber = 1;
+  const ::enginepb::CommandRequestHeader& header() const;
+  ::enginepb::CommandRequestHeader* release_header();
+  ::enginepb::CommandRequestHeader* mutable_header();
+  void set_allocated_header(::enginepb::CommandRequestHeader* header);
 
-    // accessors -------------------------------------------------------
+  // .raft_cmdpb.AdminRequest admin_request = 3;
+  bool has_admin_request() const;
+  void clear_admin_request();
+  static const int kAdminRequestFieldNumber = 3;
+  const ::raft_cmdpb::AdminRequest& admin_request() const;
+  ::raft_cmdpb::AdminRequest* release_admin_request();
+  ::raft_cmdpb::AdminRequest* mutable_admin_request();
+  void set_allocated_admin_request(::raft_cmdpb::AdminRequest* admin_request);
 
-    // repeated .raft_cmdpb.Request requests = 2;
-    int                                                                 requests_size() const;
-    void                                                                clear_requests();
-    static const int                                                    kRequestsFieldNumber = 2;
-    const ::raft_cmdpb::Request &                                       requests(int index) const;
-    ::raft_cmdpb::Request *                                             mutable_requests(int index);
-    ::raft_cmdpb::Request *                                             add_requests();
-    ::google::protobuf::RepeatedPtrField<::raft_cmdpb::Request> *       mutable_requests();
-    const ::google::protobuf::RepeatedPtrField<::raft_cmdpb::Request> & requests() const;
+  // .raft_cmdpb.AdminResponse admin_response = 4;
+  bool has_admin_response() const;
+  void clear_admin_response();
+  static const int kAdminResponseFieldNumber = 4;
+  const ::raft_cmdpb::AdminResponse& admin_response() const;
+  ::raft_cmdpb::AdminResponse* release_admin_response();
+  ::raft_cmdpb::AdminResponse* mutable_admin_response();
+  void set_allocated_admin_response(::raft_cmdpb::AdminResponse* admin_response);
 
-    // .enginepb.CommandRequestHeader header = 1;
-    bool                                     has_header() const;
-    void                                     clear_header();
-    static const int                         kHeaderFieldNumber = 1;
-    const ::enginepb::CommandRequestHeader & header() const;
-    ::enginepb::CommandRequestHeader *       release_header();
-    ::enginepb::CommandRequestHeader *       mutable_header();
-    void                                     set_allocated_header(::enginepb::CommandRequestHeader * header);
+  // @@protoc_insertion_point(class_scope:enginepb.CommandRequest)
+ private:
 
-    // .raft_cmdpb.AdminRequest admin_request = 3;
-    bool                               has_admin_request() const;
-    void                               clear_admin_request();
-    static const int                   kAdminRequestFieldNumber = 3;
-    const ::raft_cmdpb::AdminRequest & admin_request() const;
-    ::raft_cmdpb::AdminRequest *       release_admin_request();
-    ::raft_cmdpb::AdminRequest *       mutable_admin_request();
-    void                               set_allocated_admin_request(::raft_cmdpb::AdminRequest * admin_request);
-
-    // .raft_cmdpb.AdminResponse admin_response = 4;
-    bool                                has_admin_response() const;
-    void                                clear_admin_response();
-    static const int                    kAdminResponseFieldNumber = 4;
-    const ::raft_cmdpb::AdminResponse & admin_response() const;
-    ::raft_cmdpb::AdminResponse *       release_admin_response();
-    ::raft_cmdpb::AdminResponse *       mutable_admin_response();
-    void                                set_allocated_admin_response(::raft_cmdpb::AdminResponse * admin_response);
-
-    // @@protoc_insertion_point(class_scope:enginepb.CommandRequest)
-private:
-    ::google::protobuf::internal::InternalMetadataWithArena     _internal_metadata_;
-    ::google::protobuf::RepeatedPtrField<::raft_cmdpb::Request> requests_;
-    ::enginepb::CommandRequestHeader *                          header_;
-    ::raft_cmdpb::AdminRequest *                                admin_request_;
-    ::raft_cmdpb::AdminResponse *                               admin_response_;
-    mutable int                                                 _cached_size_;
-    friend struct ::protobuf_enginepb_2eproto::TableStruct;
-    friend void ::protobuf_enginepb_2eproto::InitDefaultsCommandRequestImpl();
+  ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
+  ::google::protobuf::RepeatedPtrField< ::raft_cmdpb::Request > requests_;
+  ::enginepb::CommandRequestHeader* header_;
+  ::raft_cmdpb::AdminRequest* admin_request_;
+  ::raft_cmdpb::AdminResponse* admin_response_;
+  mutable int _cached_size_;
+  friend struct ::protobuf_enginepb_2eproto::TableStruct;
+  friend void ::protobuf_enginepb_2eproto::InitDefaultsCommandRequestImpl();
 };
 // -------------------------------------------------------------------
 
-class CommandRequestBatch : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:enginepb.CommandRequestBatch) */
-{
-public:
-    CommandRequestBatch();
-    virtual ~CommandRequestBatch();
+class CommandRequestBatch : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:enginepb.CommandRequestBatch) */ {
+ public:
+  CommandRequestBatch();
+  virtual ~CommandRequestBatch();
 
-    CommandRequestBatch(const CommandRequestBatch & from);
+  CommandRequestBatch(const CommandRequestBatch& from);
 
-    inline CommandRequestBatch & operator=(const CommandRequestBatch & from)
-    {
-        CopyFrom(from);
-        return *this;
+  inline CommandRequestBatch& operator=(const CommandRequestBatch& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  #if LANG_CXX11
+  CommandRequestBatch(CommandRequestBatch&& from) noexcept
+    : CommandRequestBatch() {
+    *this = ::std::move(from);
+  }
+
+  inline CommandRequestBatch& operator=(CommandRequestBatch&& from) noexcept {
+    if (GetArenaNoVirtual() == from.GetArenaNoVirtual()) {
+      if (this != &from) InternalSwap(&from);
+    } else {
+      CopyFrom(from);
     }
-#if LANG_CXX11
-    CommandRequestBatch(CommandRequestBatch && from) noexcept : CommandRequestBatch() { *this = ::std::move(from); }
+    return *this;
+  }
+  #endif
+  static const ::google::protobuf::Descriptor* descriptor();
+  static const CommandRequestBatch& default_instance();
 
-    inline CommandRequestBatch & operator=(CommandRequestBatch && from) noexcept
-    {
-        if (GetArenaNoVirtual() == from.GetArenaNoVirtual())
-        {
-            if (this != &from)
-                InternalSwap(&from);
-        }
-        else
-        {
-            CopyFrom(from);
-        }
-        return *this;
-    }
-#endif
-    static const ::google::protobuf::Descriptor * descriptor();
-    static const CommandRequestBatch &            default_instance();
+  static void InitAsDefaultInstance();  // FOR INTERNAL USE ONLY
+  static inline const CommandRequestBatch* internal_default_instance() {
+    return reinterpret_cast<const CommandRequestBatch*>(
+               &_CommandRequestBatch_default_instance_);
+  }
+  static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
+    2;
 
-    static void                               InitAsDefaultInstance(); // FOR INTERNAL USE ONLY
-    static inline const CommandRequestBatch * internal_default_instance()
-    {
-        return reinterpret_cast<const CommandRequestBatch *>(&_CommandRequestBatch_default_instance_);
-    }
-    static PROTOBUF_CONSTEXPR int const kIndexInFileMessages = 2;
+  void Swap(CommandRequestBatch* other);
+  friend void swap(CommandRequestBatch& a, CommandRequestBatch& b) {
+    a.Swap(&b);
+  }
 
-    void        Swap(CommandRequestBatch * other);
-    friend void swap(CommandRequestBatch & a, CommandRequestBatch & b) { a.Swap(&b); }
+  // implements Message ----------------------------------------------
 
-    // implements Message ----------------------------------------------
+  inline CommandRequestBatch* New() const PROTOBUF_FINAL { return New(NULL); }
 
-    inline CommandRequestBatch * New() const PROTOBUF_FINAL { return New(NULL); }
+  CommandRequestBatch* New(::google::protobuf::Arena* arena) const PROTOBUF_FINAL;
+  void CopyFrom(const ::google::protobuf::Message& from) PROTOBUF_FINAL;
+  void MergeFrom(const ::google::protobuf::Message& from) PROTOBUF_FINAL;
+  void CopyFrom(const CommandRequestBatch& from);
+  void MergeFrom(const CommandRequestBatch& from);
+  void Clear() PROTOBUF_FINAL;
+  bool IsInitialized() const PROTOBUF_FINAL;
 
-    CommandRequestBatch * New(::google::protobuf::Arena * arena) const PROTOBUF_FINAL;
-    void                  CopyFrom(const ::google::protobuf::Message & from) PROTOBUF_FINAL;
-    void                  MergeFrom(const ::google::protobuf::Message & from) PROTOBUF_FINAL;
-    void                  CopyFrom(const CommandRequestBatch & from);
-    void                  MergeFrom(const CommandRequestBatch & from);
-    void                  Clear() PROTOBUF_FINAL;
-    bool                  IsInitialized() const PROTOBUF_FINAL;
+  size_t ByteSizeLong() const PROTOBUF_FINAL;
+  bool MergePartialFromCodedStream(
+      ::google::protobuf::io::CodedInputStream* input) PROTOBUF_FINAL;
+  void SerializeWithCachedSizes(
+      ::google::protobuf::io::CodedOutputStream* output) const PROTOBUF_FINAL;
+  ::google::protobuf::uint8* InternalSerializeWithCachedSizesToArray(
+      bool deterministic, ::google::protobuf::uint8* target) const PROTOBUF_FINAL;
+  int GetCachedSize() const PROTOBUF_FINAL { return _cached_size_; }
+  private:
+  void SharedCtor();
+  void SharedDtor();
+  void SetCachedSize(int size) const PROTOBUF_FINAL;
+  void InternalSwap(CommandRequestBatch* other);
+  private:
+  inline ::google::protobuf::Arena* GetArenaNoVirtual() const {
+    return NULL;
+  }
+  inline void* MaybeArenaPtr() const {
+    return NULL;
+  }
+  public:
 
-    size_t                      ByteSizeLong() const PROTOBUF_FINAL;
-    bool                        MergePartialFromCodedStream(::google::protobuf::io::CodedInputStream * input) PROTOBUF_FINAL;
-    void                        SerializeWithCachedSizes(::google::protobuf::io::CodedOutputStream * output) const PROTOBUF_FINAL;
-    ::google::protobuf::uint8 * InternalSerializeWithCachedSizesToArray(bool                        deterministic,
-                                                                        ::google::protobuf::uint8 * target) const PROTOBUF_FINAL;
-    int                         GetCachedSize() const PROTOBUF_FINAL { return _cached_size_; }
+  ::google::protobuf::Metadata GetMetadata() const PROTOBUF_FINAL;
 
-private:
-    void SharedCtor();
-    void SharedDtor();
-    void SetCachedSize(int size) const PROTOBUF_FINAL;
-    void InternalSwap(CommandRequestBatch * other);
+  // nested types ----------------------------------------------------
 
-private:
-    inline ::google::protobuf::Arena * GetArenaNoVirtual() const { return NULL; }
-    inline void *                      MaybeArenaPtr() const { return NULL; }
+  // accessors -------------------------------------------------------
 
-public:
-    ::google::protobuf::Metadata GetMetadata() const PROTOBUF_FINAL;
+  // repeated .enginepb.CommandRequest requests = 1;
+  int requests_size() const;
+  void clear_requests();
+  static const int kRequestsFieldNumber = 1;
+  const ::enginepb::CommandRequest& requests(int index) const;
+  ::enginepb::CommandRequest* mutable_requests(int index);
+  ::enginepb::CommandRequest* add_requests();
+  ::google::protobuf::RepeatedPtrField< ::enginepb::CommandRequest >*
+      mutable_requests();
+  const ::google::protobuf::RepeatedPtrField< ::enginepb::CommandRequest >&
+      requests() const;
 
-    // nested types ----------------------------------------------------
+  // @@protoc_insertion_point(class_scope:enginepb.CommandRequestBatch)
+ private:
 
-    // accessors -------------------------------------------------------
-
-    // repeated .enginepb.CommandRequest requests = 1;
-    int                                                                      requests_size() const;
-    void                                                                     clear_requests();
-    static const int                                                         kRequestsFieldNumber = 1;
-    const ::enginepb::CommandRequest &                                       requests(int index) const;
-    ::enginepb::CommandRequest *                                             mutable_requests(int index);
-    ::enginepb::CommandRequest *                                             add_requests();
-    ::google::protobuf::RepeatedPtrField<::enginepb::CommandRequest> *       mutable_requests();
-    const ::google::protobuf::RepeatedPtrField<::enginepb::CommandRequest> & requests() const;
-
-    // @@protoc_insertion_point(class_scope:enginepb.CommandRequestBatch)
-private:
-    ::google::protobuf::internal::InternalMetadataWithArena          _internal_metadata_;
-    ::google::protobuf::RepeatedPtrField<::enginepb::CommandRequest> requests_;
-    mutable int                                                      _cached_size_;
-    friend struct ::protobuf_enginepb_2eproto::TableStruct;
-    friend void ::protobuf_enginepb_2eproto::InitDefaultsCommandRequestBatchImpl();
+  ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
+  ::google::protobuf::RepeatedPtrField< ::enginepb::CommandRequest > requests_;
+  mutable int _cached_size_;
+  friend struct ::protobuf_enginepb_2eproto::TableStruct;
+  friend void ::protobuf_enginepb_2eproto::InitDefaultsCommandRequestBatchImpl();
 };
 // -------------------------------------------------------------------
 
-class CommandResponseHeader
-    : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:enginepb.CommandResponseHeader) */
-{
-public:
-    CommandResponseHeader();
-    virtual ~CommandResponseHeader();
+class CommandResponseHeader : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:enginepb.CommandResponseHeader) */ {
+ public:
+  CommandResponseHeader();
+  virtual ~CommandResponseHeader();
 
-    CommandResponseHeader(const CommandResponseHeader & from);
+  CommandResponseHeader(const CommandResponseHeader& from);
 
-    inline CommandResponseHeader & operator=(const CommandResponseHeader & from)
-    {
-        CopyFrom(from);
-        return *this;
+  inline CommandResponseHeader& operator=(const CommandResponseHeader& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  #if LANG_CXX11
+  CommandResponseHeader(CommandResponseHeader&& from) noexcept
+    : CommandResponseHeader() {
+    *this = ::std::move(from);
+  }
+
+  inline CommandResponseHeader& operator=(CommandResponseHeader&& from) noexcept {
+    if (GetArenaNoVirtual() == from.GetArenaNoVirtual()) {
+      if (this != &from) InternalSwap(&from);
+    } else {
+      CopyFrom(from);
     }
-#if LANG_CXX11
-    CommandResponseHeader(CommandResponseHeader && from) noexcept : CommandResponseHeader() { *this = ::std::move(from); }
+    return *this;
+  }
+  #endif
+  static const ::google::protobuf::Descriptor* descriptor();
+  static const CommandResponseHeader& default_instance();
 
-    inline CommandResponseHeader & operator=(CommandResponseHeader && from) noexcept
-    {
-        if (GetArenaNoVirtual() == from.GetArenaNoVirtual())
-        {
-            if (this != &from)
-                InternalSwap(&from);
-        }
-        else
-        {
-            CopyFrom(from);
-        }
-        return *this;
-    }
-#endif
-    static const ::google::protobuf::Descriptor * descriptor();
-    static const CommandResponseHeader &          default_instance();
+  static void InitAsDefaultInstance();  // FOR INTERNAL USE ONLY
+  static inline const CommandResponseHeader* internal_default_instance() {
+    return reinterpret_cast<const CommandResponseHeader*>(
+               &_CommandResponseHeader_default_instance_);
+  }
+  static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
+    3;
 
-    static void                                 InitAsDefaultInstance(); // FOR INTERNAL USE ONLY
-    static inline const CommandResponseHeader * internal_default_instance()
-    {
-        return reinterpret_cast<const CommandResponseHeader *>(&_CommandResponseHeader_default_instance_);
-    }
-    static PROTOBUF_CONSTEXPR int const kIndexInFileMessages = 3;
+  void Swap(CommandResponseHeader* other);
+  friend void swap(CommandResponseHeader& a, CommandResponseHeader& b) {
+    a.Swap(&b);
+  }
 
-    void        Swap(CommandResponseHeader * other);
-    friend void swap(CommandResponseHeader & a, CommandResponseHeader & b) { a.Swap(&b); }
+  // implements Message ----------------------------------------------
 
-    // implements Message ----------------------------------------------
+  inline CommandResponseHeader* New() const PROTOBUF_FINAL { return New(NULL); }
 
-    inline CommandResponseHeader * New() const PROTOBUF_FINAL { return New(NULL); }
+  CommandResponseHeader* New(::google::protobuf::Arena* arena) const PROTOBUF_FINAL;
+  void CopyFrom(const ::google::protobuf::Message& from) PROTOBUF_FINAL;
+  void MergeFrom(const ::google::protobuf::Message& from) PROTOBUF_FINAL;
+  void CopyFrom(const CommandResponseHeader& from);
+  void MergeFrom(const CommandResponseHeader& from);
+  void Clear() PROTOBUF_FINAL;
+  bool IsInitialized() const PROTOBUF_FINAL;
 
-    CommandResponseHeader * New(::google::protobuf::Arena * arena) const PROTOBUF_FINAL;
-    void                    CopyFrom(const ::google::protobuf::Message & from) PROTOBUF_FINAL;
-    void                    MergeFrom(const ::google::protobuf::Message & from) PROTOBUF_FINAL;
-    void                    CopyFrom(const CommandResponseHeader & from);
-    void                    MergeFrom(const CommandResponseHeader & from);
-    void                    Clear() PROTOBUF_FINAL;
-    bool                    IsInitialized() const PROTOBUF_FINAL;
+  size_t ByteSizeLong() const PROTOBUF_FINAL;
+  bool MergePartialFromCodedStream(
+      ::google::protobuf::io::CodedInputStream* input) PROTOBUF_FINAL;
+  void SerializeWithCachedSizes(
+      ::google::protobuf::io::CodedOutputStream* output) const PROTOBUF_FINAL;
+  ::google::protobuf::uint8* InternalSerializeWithCachedSizesToArray(
+      bool deterministic, ::google::protobuf::uint8* target) const PROTOBUF_FINAL;
+  int GetCachedSize() const PROTOBUF_FINAL { return _cached_size_; }
+  private:
+  void SharedCtor();
+  void SharedDtor();
+  void SetCachedSize(int size) const PROTOBUF_FINAL;
+  void InternalSwap(CommandResponseHeader* other);
+  private:
+  inline ::google::protobuf::Arena* GetArenaNoVirtual() const {
+    return NULL;
+  }
+  inline void* MaybeArenaPtr() const {
+    return NULL;
+  }
+  public:
 
-    size_t                      ByteSizeLong() const PROTOBUF_FINAL;
-    bool                        MergePartialFromCodedStream(::google::protobuf::io::CodedInputStream * input) PROTOBUF_FINAL;
-    void                        SerializeWithCachedSizes(::google::protobuf::io::CodedOutputStream * output) const PROTOBUF_FINAL;
-    ::google::protobuf::uint8 * InternalSerializeWithCachedSizesToArray(bool                        deterministic,
-                                                                        ::google::protobuf::uint8 * target) const PROTOBUF_FINAL;
-    int                         GetCachedSize() const PROTOBUF_FINAL { return _cached_size_; }
+  ::google::protobuf::Metadata GetMetadata() const PROTOBUF_FINAL;
 
-private:
-    void SharedCtor();
-    void SharedDtor();
-    void SetCachedSize(int size) const PROTOBUF_FINAL;
-    void InternalSwap(CommandResponseHeader * other);
+  // nested types ----------------------------------------------------
 
-private:
-    inline ::google::protobuf::Arena * GetArenaNoVirtual() const { return NULL; }
-    inline void *                      MaybeArenaPtr() const { return NULL; }
+  // accessors -------------------------------------------------------
 
-public:
-    ::google::protobuf::Metadata GetMetadata() const PROTOBUF_FINAL;
+  // uint64 region_id = 1;
+  void clear_region_id();
+  static const int kRegionIdFieldNumber = 1;
+  ::google::protobuf::uint64 region_id() const;
+  void set_region_id(::google::protobuf::uint64 value);
 
-    // nested types ----------------------------------------------------
+  // @@protoc_insertion_point(class_scope:enginepb.CommandResponseHeader)
+ private:
 
-    // accessors -------------------------------------------------------
-
-    // uint64 region_id = 1;
-    void                       clear_region_id();
-    static const int           kRegionIdFieldNumber = 1;
-    ::google::protobuf::uint64 region_id() const;
-    void                       set_region_id(::google::protobuf::uint64 value);
-
-    // @@protoc_insertion_point(class_scope:enginepb.CommandResponseHeader)
-private:
-    ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
-    ::google::protobuf::uint64                              region_id_;
-    mutable int                                             _cached_size_;
-    friend struct ::protobuf_enginepb_2eproto::TableStruct;
-    friend void ::protobuf_enginepb_2eproto::InitDefaultsCommandResponseHeaderImpl();
+  ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
+  ::google::protobuf::uint64 region_id_;
+  mutable int _cached_size_;
+  friend struct ::protobuf_enginepb_2eproto::TableStruct;
+  friend void ::protobuf_enginepb_2eproto::InitDefaultsCommandResponseHeaderImpl();
 };
 // -------------------------------------------------------------------
 
-class CommandResponse : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:enginepb.CommandResponse) */
-{
-public:
-    CommandResponse();
-    virtual ~CommandResponse();
+class CommandResponse : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:enginepb.CommandResponse) */ {
+ public:
+  CommandResponse();
+  virtual ~CommandResponse();
 
-    CommandResponse(const CommandResponse & from);
+  CommandResponse(const CommandResponse& from);
 
-    inline CommandResponse & operator=(const CommandResponse & from)
-    {
-        CopyFrom(from);
-        return *this;
+  inline CommandResponse& operator=(const CommandResponse& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  #if LANG_CXX11
+  CommandResponse(CommandResponse&& from) noexcept
+    : CommandResponse() {
+    *this = ::std::move(from);
+  }
+
+  inline CommandResponse& operator=(CommandResponse&& from) noexcept {
+    if (GetArenaNoVirtual() == from.GetArenaNoVirtual()) {
+      if (this != &from) InternalSwap(&from);
+    } else {
+      CopyFrom(from);
     }
-#if LANG_CXX11
-    CommandResponse(CommandResponse && from) noexcept : CommandResponse() { *this = ::std::move(from); }
+    return *this;
+  }
+  #endif
+  static const ::google::protobuf::Descriptor* descriptor();
+  static const CommandResponse& default_instance();
 
-    inline CommandResponse & operator=(CommandResponse && from) noexcept
-    {
-        if (GetArenaNoVirtual() == from.GetArenaNoVirtual())
-        {
-            if (this != &from)
-                InternalSwap(&from);
-        }
-        else
-        {
-            CopyFrom(from);
-        }
-        return *this;
-    }
-#endif
-    static const ::google::protobuf::Descriptor * descriptor();
-    static const CommandResponse &                default_instance();
+  static void InitAsDefaultInstance();  // FOR INTERNAL USE ONLY
+  static inline const CommandResponse* internal_default_instance() {
+    return reinterpret_cast<const CommandResponse*>(
+               &_CommandResponse_default_instance_);
+  }
+  static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
+    4;
 
-    static void                           InitAsDefaultInstance(); // FOR INTERNAL USE ONLY
-    static inline const CommandResponse * internal_default_instance()
-    {
-        return reinterpret_cast<const CommandResponse *>(&_CommandResponse_default_instance_);
-    }
-    static PROTOBUF_CONSTEXPR int const kIndexInFileMessages = 4;
+  void Swap(CommandResponse* other);
+  friend void swap(CommandResponse& a, CommandResponse& b) {
+    a.Swap(&b);
+  }
 
-    void        Swap(CommandResponse * other);
-    friend void swap(CommandResponse & a, CommandResponse & b) { a.Swap(&b); }
+  // implements Message ----------------------------------------------
 
-    // implements Message ----------------------------------------------
+  inline CommandResponse* New() const PROTOBUF_FINAL { return New(NULL); }
 
-    inline CommandResponse * New() const PROTOBUF_FINAL { return New(NULL); }
+  CommandResponse* New(::google::protobuf::Arena* arena) const PROTOBUF_FINAL;
+  void CopyFrom(const ::google::protobuf::Message& from) PROTOBUF_FINAL;
+  void MergeFrom(const ::google::protobuf::Message& from) PROTOBUF_FINAL;
+  void CopyFrom(const CommandResponse& from);
+  void MergeFrom(const CommandResponse& from);
+  void Clear() PROTOBUF_FINAL;
+  bool IsInitialized() const PROTOBUF_FINAL;
 
-    CommandResponse * New(::google::protobuf::Arena * arena) const PROTOBUF_FINAL;
-    void              CopyFrom(const ::google::protobuf::Message & from) PROTOBUF_FINAL;
-    void              MergeFrom(const ::google::protobuf::Message & from) PROTOBUF_FINAL;
-    void              CopyFrom(const CommandResponse & from);
-    void              MergeFrom(const CommandResponse & from);
-    void              Clear() PROTOBUF_FINAL;
-    bool              IsInitialized() const PROTOBUF_FINAL;
+  size_t ByteSizeLong() const PROTOBUF_FINAL;
+  bool MergePartialFromCodedStream(
+      ::google::protobuf::io::CodedInputStream* input) PROTOBUF_FINAL;
+  void SerializeWithCachedSizes(
+      ::google::protobuf::io::CodedOutputStream* output) const PROTOBUF_FINAL;
+  ::google::protobuf::uint8* InternalSerializeWithCachedSizesToArray(
+      bool deterministic, ::google::protobuf::uint8* target) const PROTOBUF_FINAL;
+  int GetCachedSize() const PROTOBUF_FINAL { return _cached_size_; }
+  private:
+  void SharedCtor();
+  void SharedDtor();
+  void SetCachedSize(int size) const PROTOBUF_FINAL;
+  void InternalSwap(CommandResponse* other);
+  private:
+  inline ::google::protobuf::Arena* GetArenaNoVirtual() const {
+    return NULL;
+  }
+  inline void* MaybeArenaPtr() const {
+    return NULL;
+  }
+  public:
 
-    size_t                      ByteSizeLong() const PROTOBUF_FINAL;
-    bool                        MergePartialFromCodedStream(::google::protobuf::io::CodedInputStream * input) PROTOBUF_FINAL;
-    void                        SerializeWithCachedSizes(::google::protobuf::io::CodedOutputStream * output) const PROTOBUF_FINAL;
-    ::google::protobuf::uint8 * InternalSerializeWithCachedSizesToArray(bool                        deterministic,
-                                                                        ::google::protobuf::uint8 * target) const PROTOBUF_FINAL;
-    int                         GetCachedSize() const PROTOBUF_FINAL { return _cached_size_; }
+  ::google::protobuf::Metadata GetMetadata() const PROTOBUF_FINAL;
 
-private:
-    void SharedCtor();
-    void SharedDtor();
-    void SetCachedSize(int size) const PROTOBUF_FINAL;
-    void InternalSwap(CommandResponse * other);
+  // nested types ----------------------------------------------------
 
-private:
-    inline ::google::protobuf::Arena * GetArenaNoVirtual() const { return NULL; }
-    inline void *                      MaybeArenaPtr() const { return NULL; }
+  // accessors -------------------------------------------------------
 
-public:
-    ::google::protobuf::Metadata GetMetadata() const PROTOBUF_FINAL;
+  // .enginepb.CommandResponseHeader header = 1;
+  bool has_header() const;
+  void clear_header();
+  static const int kHeaderFieldNumber = 1;
+  const ::enginepb::CommandResponseHeader& header() const;
+  ::enginepb::CommandResponseHeader* release_header();
+  ::enginepb::CommandResponseHeader* mutable_header();
+  void set_allocated_header(::enginepb::CommandResponseHeader* header);
 
-    // nested types ----------------------------------------------------
+  // .raft_serverpb.RaftApplyState apply_state = 2;
+  bool has_apply_state() const;
+  void clear_apply_state();
+  static const int kApplyStateFieldNumber = 2;
+  const ::raft_serverpb::RaftApplyState& apply_state() const;
+  ::raft_serverpb::RaftApplyState* release_apply_state();
+  ::raft_serverpb::RaftApplyState* mutable_apply_state();
+  void set_allocated_apply_state(::raft_serverpb::RaftApplyState* apply_state);
 
-    // accessors -------------------------------------------------------
+  // uint64 applied_term = 3;
+  void clear_applied_term();
+  static const int kAppliedTermFieldNumber = 3;
+  ::google::protobuf::uint64 applied_term() const;
+  void set_applied_term(::google::protobuf::uint64 value);
 
-    // .enginepb.CommandResponseHeader header = 1;
-    bool                                      has_header() const;
-    void                                      clear_header();
-    static const int                          kHeaderFieldNumber = 1;
-    const ::enginepb::CommandResponseHeader & header() const;
-    ::enginepb::CommandResponseHeader *       release_header();
-    ::enginepb::CommandResponseHeader *       mutable_header();
-    void                                      set_allocated_header(::enginepb::CommandResponseHeader * header);
+  // @@protoc_insertion_point(class_scope:enginepb.CommandResponse)
+ private:
 
-    // .raft_serverpb.RaftApplyState apply_state = 2;
-    bool                                    has_apply_state() const;
-    void                                    clear_apply_state();
-    static const int                        kApplyStateFieldNumber = 2;
-    const ::raft_serverpb::RaftApplyState & apply_state() const;
-    ::raft_serverpb::RaftApplyState *       release_apply_state();
-    ::raft_serverpb::RaftApplyState *       mutable_apply_state();
-    void                                    set_allocated_apply_state(::raft_serverpb::RaftApplyState * apply_state);
-
-    // uint64 applied_term = 3;
-    void                       clear_applied_term();
-    static const int           kAppliedTermFieldNumber = 3;
-    ::google::protobuf::uint64 applied_term() const;
-    void                       set_applied_term(::google::protobuf::uint64 value);
-
-    // @@protoc_insertion_point(class_scope:enginepb.CommandResponse)
-private:
-    ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
-    ::enginepb::CommandResponseHeader *                     header_;
-    ::raft_serverpb::RaftApplyState *                       apply_state_;
-    ::google::protobuf::uint64                              applied_term_;
-    mutable int                                             _cached_size_;
-    friend struct ::protobuf_enginepb_2eproto::TableStruct;
-    friend void ::protobuf_enginepb_2eproto::InitDefaultsCommandResponseImpl();
+  ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
+  ::enginepb::CommandResponseHeader* header_;
+  ::raft_serverpb::RaftApplyState* apply_state_;
+  ::google::protobuf::uint64 applied_term_;
+  mutable int _cached_size_;
+  friend struct ::protobuf_enginepb_2eproto::TableStruct;
+  friend void ::protobuf_enginepb_2eproto::InitDefaultsCommandResponseImpl();
 };
 // -------------------------------------------------------------------
 
-class CommandResponseBatch
-    : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:enginepb.CommandResponseBatch) */
-{
-public:
-    CommandResponseBatch();
-    virtual ~CommandResponseBatch();
+class CommandResponseBatch : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:enginepb.CommandResponseBatch) */ {
+ public:
+  CommandResponseBatch();
+  virtual ~CommandResponseBatch();
 
-    CommandResponseBatch(const CommandResponseBatch & from);
+  CommandResponseBatch(const CommandResponseBatch& from);
 
-    inline CommandResponseBatch & operator=(const CommandResponseBatch & from)
-    {
-        CopyFrom(from);
-        return *this;
+  inline CommandResponseBatch& operator=(const CommandResponseBatch& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  #if LANG_CXX11
+  CommandResponseBatch(CommandResponseBatch&& from) noexcept
+    : CommandResponseBatch() {
+    *this = ::std::move(from);
+  }
+
+  inline CommandResponseBatch& operator=(CommandResponseBatch&& from) noexcept {
+    if (GetArenaNoVirtual() == from.GetArenaNoVirtual()) {
+      if (this != &from) InternalSwap(&from);
+    } else {
+      CopyFrom(from);
     }
-#if LANG_CXX11
-    CommandResponseBatch(CommandResponseBatch && from) noexcept : CommandResponseBatch() { *this = ::std::move(from); }
+    return *this;
+  }
+  #endif
+  static const ::google::protobuf::Descriptor* descriptor();
+  static const CommandResponseBatch& default_instance();
 
-    inline CommandResponseBatch & operator=(CommandResponseBatch && from) noexcept
-    {
-        if (GetArenaNoVirtual() == from.GetArenaNoVirtual())
-        {
-            if (this != &from)
-                InternalSwap(&from);
-        }
-        else
-        {
-            CopyFrom(from);
-        }
-        return *this;
-    }
-#endif
-    static const ::google::protobuf::Descriptor * descriptor();
-    static const CommandResponseBatch &           default_instance();
+  static void InitAsDefaultInstance();  // FOR INTERNAL USE ONLY
+  static inline const CommandResponseBatch* internal_default_instance() {
+    return reinterpret_cast<const CommandResponseBatch*>(
+               &_CommandResponseBatch_default_instance_);
+  }
+  static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
+    5;
 
-    static void                                InitAsDefaultInstance(); // FOR INTERNAL USE ONLY
-    static inline const CommandResponseBatch * internal_default_instance()
-    {
-        return reinterpret_cast<const CommandResponseBatch *>(&_CommandResponseBatch_default_instance_);
-    }
-    static PROTOBUF_CONSTEXPR int const kIndexInFileMessages = 5;
+  void Swap(CommandResponseBatch* other);
+  friend void swap(CommandResponseBatch& a, CommandResponseBatch& b) {
+    a.Swap(&b);
+  }
 
-    void        Swap(CommandResponseBatch * other);
-    friend void swap(CommandResponseBatch & a, CommandResponseBatch & b) { a.Swap(&b); }
+  // implements Message ----------------------------------------------
 
-    // implements Message ----------------------------------------------
+  inline CommandResponseBatch* New() const PROTOBUF_FINAL { return New(NULL); }
 
-    inline CommandResponseBatch * New() const PROTOBUF_FINAL { return New(NULL); }
+  CommandResponseBatch* New(::google::protobuf::Arena* arena) const PROTOBUF_FINAL;
+  void CopyFrom(const ::google::protobuf::Message& from) PROTOBUF_FINAL;
+  void MergeFrom(const ::google::protobuf::Message& from) PROTOBUF_FINAL;
+  void CopyFrom(const CommandResponseBatch& from);
+  void MergeFrom(const CommandResponseBatch& from);
+  void Clear() PROTOBUF_FINAL;
+  bool IsInitialized() const PROTOBUF_FINAL;
 
-    CommandResponseBatch * New(::google::protobuf::Arena * arena) const PROTOBUF_FINAL;
-    void                   CopyFrom(const ::google::protobuf::Message & from) PROTOBUF_FINAL;
-    void                   MergeFrom(const ::google::protobuf::Message & from) PROTOBUF_FINAL;
-    void                   CopyFrom(const CommandResponseBatch & from);
-    void                   MergeFrom(const CommandResponseBatch & from);
-    void                   Clear() PROTOBUF_FINAL;
-    bool                   IsInitialized() const PROTOBUF_FINAL;
+  size_t ByteSizeLong() const PROTOBUF_FINAL;
+  bool MergePartialFromCodedStream(
+      ::google::protobuf::io::CodedInputStream* input) PROTOBUF_FINAL;
+  void SerializeWithCachedSizes(
+      ::google::protobuf::io::CodedOutputStream* output) const PROTOBUF_FINAL;
+  ::google::protobuf::uint8* InternalSerializeWithCachedSizesToArray(
+      bool deterministic, ::google::protobuf::uint8* target) const PROTOBUF_FINAL;
+  int GetCachedSize() const PROTOBUF_FINAL { return _cached_size_; }
+  private:
+  void SharedCtor();
+  void SharedDtor();
+  void SetCachedSize(int size) const PROTOBUF_FINAL;
+  void InternalSwap(CommandResponseBatch* other);
+  private:
+  inline ::google::protobuf::Arena* GetArenaNoVirtual() const {
+    return NULL;
+  }
+  inline void* MaybeArenaPtr() const {
+    return NULL;
+  }
+  public:
 
-    size_t                      ByteSizeLong() const PROTOBUF_FINAL;
-    bool                        MergePartialFromCodedStream(::google::protobuf::io::CodedInputStream * input) PROTOBUF_FINAL;
-    void                        SerializeWithCachedSizes(::google::protobuf::io::CodedOutputStream * output) const PROTOBUF_FINAL;
-    ::google::protobuf::uint8 * InternalSerializeWithCachedSizesToArray(bool                        deterministic,
-                                                                        ::google::protobuf::uint8 * target) const PROTOBUF_FINAL;
-    int                         GetCachedSize() const PROTOBUF_FINAL { return _cached_size_; }
+  ::google::protobuf::Metadata GetMetadata() const PROTOBUF_FINAL;
 
-private:
-    void SharedCtor();
-    void SharedDtor();
-    void SetCachedSize(int size) const PROTOBUF_FINAL;
-    void InternalSwap(CommandResponseBatch * other);
+  // nested types ----------------------------------------------------
 
-private:
-    inline ::google::protobuf::Arena * GetArenaNoVirtual() const { return NULL; }
-    inline void *                      MaybeArenaPtr() const { return NULL; }
+  // accessors -------------------------------------------------------
 
-public:
-    ::google::protobuf::Metadata GetMetadata() const PROTOBUF_FINAL;
+  // repeated .enginepb.CommandResponse responses = 1;
+  int responses_size() const;
+  void clear_responses();
+  static const int kResponsesFieldNumber = 1;
+  const ::enginepb::CommandResponse& responses(int index) const;
+  ::enginepb::CommandResponse* mutable_responses(int index);
+  ::enginepb::CommandResponse* add_responses();
+  ::google::protobuf::RepeatedPtrField< ::enginepb::CommandResponse >*
+      mutable_responses();
+  const ::google::protobuf::RepeatedPtrField< ::enginepb::CommandResponse >&
+      responses() const;
 
-    // nested types ----------------------------------------------------
+  // @@protoc_insertion_point(class_scope:enginepb.CommandResponseBatch)
+ private:
 
-    // accessors -------------------------------------------------------
-
-    // repeated .enginepb.CommandResponse responses = 1;
-    int                                                                       responses_size() const;
-    void                                                                      clear_responses();
-    static const int                                                          kResponsesFieldNumber = 1;
-    const ::enginepb::CommandResponse &                                       responses(int index) const;
-    ::enginepb::CommandResponse *                                             mutable_responses(int index);
-    ::enginepb::CommandResponse *                                             add_responses();
-    ::google::protobuf::RepeatedPtrField<::enginepb::CommandResponse> *       mutable_responses();
-    const ::google::protobuf::RepeatedPtrField<::enginepb::CommandResponse> & responses() const;
-
-    // @@protoc_insertion_point(class_scope:enginepb.CommandResponseBatch)
-private:
-    ::google::protobuf::internal::InternalMetadataWithArena           _internal_metadata_;
-    ::google::protobuf::RepeatedPtrField<::enginepb::CommandResponse> responses_;
-    mutable int                                                       _cached_size_;
-    friend struct ::protobuf_enginepb_2eproto::TableStruct;
-    friend void ::protobuf_enginepb_2eproto::InitDefaultsCommandResponseBatchImpl();
+  ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
+  ::google::protobuf::RepeatedPtrField< ::enginepb::CommandResponse > responses_;
+  mutable int _cached_size_;
+  friend struct ::protobuf_enginepb_2eproto::TableStruct;
+  friend void ::protobuf_enginepb_2eproto::InitDefaultsCommandResponseBatchImpl();
 };
 // -------------------------------------------------------------------
 
-class SnapshotState : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:enginepb.SnapshotState) */
-{
-public:
-    SnapshotState();
-    virtual ~SnapshotState();
+class SnapshotState : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:enginepb.SnapshotState) */ {
+ public:
+  SnapshotState();
+  virtual ~SnapshotState();
 
-    SnapshotState(const SnapshotState & from);
+  SnapshotState(const SnapshotState& from);
 
-    inline SnapshotState & operator=(const SnapshotState & from)
-    {
-        CopyFrom(from);
-        return *this;
+  inline SnapshotState& operator=(const SnapshotState& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  #if LANG_CXX11
+  SnapshotState(SnapshotState&& from) noexcept
+    : SnapshotState() {
+    *this = ::std::move(from);
+  }
+
+  inline SnapshotState& operator=(SnapshotState&& from) noexcept {
+    if (GetArenaNoVirtual() == from.GetArenaNoVirtual()) {
+      if (this != &from) InternalSwap(&from);
+    } else {
+      CopyFrom(from);
     }
-#if LANG_CXX11
-    SnapshotState(SnapshotState && from) noexcept : SnapshotState() { *this = ::std::move(from); }
+    return *this;
+  }
+  #endif
+  static const ::google::protobuf::Descriptor* descriptor();
+  static const SnapshotState& default_instance();
 
-    inline SnapshotState & operator=(SnapshotState && from) noexcept
-    {
-        if (GetArenaNoVirtual() == from.GetArenaNoVirtual())
-        {
-            if (this != &from)
-                InternalSwap(&from);
-        }
-        else
-        {
-            CopyFrom(from);
-        }
-        return *this;
-    }
-#endif
-    static const ::google::protobuf::Descriptor * descriptor();
-    static const SnapshotState &                  default_instance();
+  static void InitAsDefaultInstance();  // FOR INTERNAL USE ONLY
+  static inline const SnapshotState* internal_default_instance() {
+    return reinterpret_cast<const SnapshotState*>(
+               &_SnapshotState_default_instance_);
+  }
+  static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
+    6;
 
-    static void                         InitAsDefaultInstance(); // FOR INTERNAL USE ONLY
-    static inline const SnapshotState * internal_default_instance()
-    {
-        return reinterpret_cast<const SnapshotState *>(&_SnapshotState_default_instance_);
-    }
-    static PROTOBUF_CONSTEXPR int const kIndexInFileMessages = 6;
+  void Swap(SnapshotState* other);
+  friend void swap(SnapshotState& a, SnapshotState& b) {
+    a.Swap(&b);
+  }
 
-    void        Swap(SnapshotState * other);
-    friend void swap(SnapshotState & a, SnapshotState & b) { a.Swap(&b); }
+  // implements Message ----------------------------------------------
 
-    // implements Message ----------------------------------------------
+  inline SnapshotState* New() const PROTOBUF_FINAL { return New(NULL); }
 
-    inline SnapshotState * New() const PROTOBUF_FINAL { return New(NULL); }
+  SnapshotState* New(::google::protobuf::Arena* arena) const PROTOBUF_FINAL;
+  void CopyFrom(const ::google::protobuf::Message& from) PROTOBUF_FINAL;
+  void MergeFrom(const ::google::protobuf::Message& from) PROTOBUF_FINAL;
+  void CopyFrom(const SnapshotState& from);
+  void MergeFrom(const SnapshotState& from);
+  void Clear() PROTOBUF_FINAL;
+  bool IsInitialized() const PROTOBUF_FINAL;
 
-    SnapshotState * New(::google::protobuf::Arena * arena) const PROTOBUF_FINAL;
-    void            CopyFrom(const ::google::protobuf::Message & from) PROTOBUF_FINAL;
-    void            MergeFrom(const ::google::protobuf::Message & from) PROTOBUF_FINAL;
-    void            CopyFrom(const SnapshotState & from);
-    void            MergeFrom(const SnapshotState & from);
-    void            Clear() PROTOBUF_FINAL;
-    bool            IsInitialized() const PROTOBUF_FINAL;
+  size_t ByteSizeLong() const PROTOBUF_FINAL;
+  bool MergePartialFromCodedStream(
+      ::google::protobuf::io::CodedInputStream* input) PROTOBUF_FINAL;
+  void SerializeWithCachedSizes(
+      ::google::protobuf::io::CodedOutputStream* output) const PROTOBUF_FINAL;
+  ::google::protobuf::uint8* InternalSerializeWithCachedSizesToArray(
+      bool deterministic, ::google::protobuf::uint8* target) const PROTOBUF_FINAL;
+  int GetCachedSize() const PROTOBUF_FINAL { return _cached_size_; }
+  private:
+  void SharedCtor();
+  void SharedDtor();
+  void SetCachedSize(int size) const PROTOBUF_FINAL;
+  void InternalSwap(SnapshotState* other);
+  private:
+  inline ::google::protobuf::Arena* GetArenaNoVirtual() const {
+    return NULL;
+  }
+  inline void* MaybeArenaPtr() const {
+    return NULL;
+  }
+  public:
 
-    size_t                      ByteSizeLong() const PROTOBUF_FINAL;
-    bool                        MergePartialFromCodedStream(::google::protobuf::io::CodedInputStream * input) PROTOBUF_FINAL;
-    void                        SerializeWithCachedSizes(::google::protobuf::io::CodedOutputStream * output) const PROTOBUF_FINAL;
-    ::google::protobuf::uint8 * InternalSerializeWithCachedSizesToArray(bool                        deterministic,
-                                                                        ::google::protobuf::uint8 * target) const PROTOBUF_FINAL;
-    int                         GetCachedSize() const PROTOBUF_FINAL { return _cached_size_; }
+  ::google::protobuf::Metadata GetMetadata() const PROTOBUF_FINAL;
 
-private:
-    void SharedCtor();
-    void SharedDtor();
-    void SetCachedSize(int size) const PROTOBUF_FINAL;
-    void InternalSwap(SnapshotState * other);
+  // nested types ----------------------------------------------------
 
-private:
-    inline ::google::protobuf::Arena * GetArenaNoVirtual() const { return NULL; }
-    inline void *                      MaybeArenaPtr() const { return NULL; }
+  // accessors -------------------------------------------------------
 
-public:
-    ::google::protobuf::Metadata GetMetadata() const PROTOBUF_FINAL;
+  // .metapb.Region region = 1;
+  bool has_region() const;
+  void clear_region();
+  static const int kRegionFieldNumber = 1;
+  const ::metapb::Region& region() const;
+  ::metapb::Region* release_region();
+  ::metapb::Region* mutable_region();
+  void set_allocated_region(::metapb::Region* region);
 
-    // nested types ----------------------------------------------------
+  // .metapb.Peer peer = 2;
+  bool has_peer() const;
+  void clear_peer();
+  static const int kPeerFieldNumber = 2;
+  const ::metapb::Peer& peer() const;
+  ::metapb::Peer* release_peer();
+  ::metapb::Peer* mutable_peer();
+  void set_allocated_peer(::metapb::Peer* peer);
 
-    // accessors -------------------------------------------------------
+  // .raft_serverpb.RaftApplyState apply_state = 3;
+  bool has_apply_state() const;
+  void clear_apply_state();
+  static const int kApplyStateFieldNumber = 3;
+  const ::raft_serverpb::RaftApplyState& apply_state() const;
+  ::raft_serverpb::RaftApplyState* release_apply_state();
+  ::raft_serverpb::RaftApplyState* mutable_apply_state();
+  void set_allocated_apply_state(::raft_serverpb::RaftApplyState* apply_state);
 
-    // .metapb.Region region = 1;
-    bool                     has_region() const;
-    void                     clear_region();
-    static const int         kRegionFieldNumber = 1;
-    const ::metapb::Region & region() const;
-    ::metapb::Region *       release_region();
-    ::metapb::Region *       mutable_region();
-    void                     set_allocated_region(::metapb::Region * region);
+  // @@protoc_insertion_point(class_scope:enginepb.SnapshotState)
+ private:
 
-    // .metapb.Peer peer = 2;
-    bool                   has_peer() const;
-    void                   clear_peer();
-    static const int       kPeerFieldNumber = 2;
-    const ::metapb::Peer & peer() const;
-    ::metapb::Peer *       release_peer();
-    ::metapb::Peer *       mutable_peer();
-    void                   set_allocated_peer(::metapb::Peer * peer);
-
-    // .raft_serverpb.RaftApplyState apply_state = 3;
-    bool                                    has_apply_state() const;
-    void                                    clear_apply_state();
-    static const int                        kApplyStateFieldNumber = 3;
-    const ::raft_serverpb::RaftApplyState & apply_state() const;
-    ::raft_serverpb::RaftApplyState *       release_apply_state();
-    ::raft_serverpb::RaftApplyState *       mutable_apply_state();
-    void                                    set_allocated_apply_state(::raft_serverpb::RaftApplyState * apply_state);
-
-    // @@protoc_insertion_point(class_scope:enginepb.SnapshotState)
-private:
-    ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
-    ::metapb::Region *                                      region_;
-    ::metapb::Peer *                                        peer_;
-    ::raft_serverpb::RaftApplyState *                       apply_state_;
-    mutable int                                             _cached_size_;
-    friend struct ::protobuf_enginepb_2eproto::TableStruct;
-    friend void ::protobuf_enginepb_2eproto::InitDefaultsSnapshotStateImpl();
+  ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
+  ::metapb::Region* region_;
+  ::metapb::Peer* peer_;
+  ::raft_serverpb::RaftApplyState* apply_state_;
+  mutable int _cached_size_;
+  friend struct ::protobuf_enginepb_2eproto::TableStruct;
+  friend void ::protobuf_enginepb_2eproto::InitDefaultsSnapshotStateImpl();
 };
 // -------------------------------------------------------------------
 
-class SnapshotData : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:enginepb.SnapshotData) */
-{
-public:
-    SnapshotData();
-    virtual ~SnapshotData();
+class SnapshotData : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:enginepb.SnapshotData) */ {
+ public:
+  SnapshotData();
+  virtual ~SnapshotData();
 
-    SnapshotData(const SnapshotData & from);
+  SnapshotData(const SnapshotData& from);
 
-    inline SnapshotData & operator=(const SnapshotData & from)
-    {
-        CopyFrom(from);
-        return *this;
+  inline SnapshotData& operator=(const SnapshotData& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  #if LANG_CXX11
+  SnapshotData(SnapshotData&& from) noexcept
+    : SnapshotData() {
+    *this = ::std::move(from);
+  }
+
+  inline SnapshotData& operator=(SnapshotData&& from) noexcept {
+    if (GetArenaNoVirtual() == from.GetArenaNoVirtual()) {
+      if (this != &from) InternalSwap(&from);
+    } else {
+      CopyFrom(from);
     }
-#if LANG_CXX11
-    SnapshotData(SnapshotData && from) noexcept : SnapshotData() { *this = ::std::move(from); }
+    return *this;
+  }
+  #endif
+  static const ::google::protobuf::Descriptor* descriptor();
+  static const SnapshotData& default_instance();
 
-    inline SnapshotData & operator=(SnapshotData && from) noexcept
-    {
-        if (GetArenaNoVirtual() == from.GetArenaNoVirtual())
-        {
-            if (this != &from)
-                InternalSwap(&from);
-        }
-        else
-        {
-            CopyFrom(from);
-        }
-        return *this;
-    }
-#endif
-    static const ::google::protobuf::Descriptor * descriptor();
-    static const SnapshotData &                   default_instance();
+  static void InitAsDefaultInstance();  // FOR INTERNAL USE ONLY
+  static inline const SnapshotData* internal_default_instance() {
+    return reinterpret_cast<const SnapshotData*>(
+               &_SnapshotData_default_instance_);
+  }
+  static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
+    7;
 
-    static void                        InitAsDefaultInstance(); // FOR INTERNAL USE ONLY
-    static inline const SnapshotData * internal_default_instance()
-    {
-        return reinterpret_cast<const SnapshotData *>(&_SnapshotData_default_instance_);
-    }
-    static PROTOBUF_CONSTEXPR int const kIndexInFileMessages = 7;
+  void Swap(SnapshotData* other);
+  friend void swap(SnapshotData& a, SnapshotData& b) {
+    a.Swap(&b);
+  }
 
-    void        Swap(SnapshotData * other);
-    friend void swap(SnapshotData & a, SnapshotData & b) { a.Swap(&b); }
+  // implements Message ----------------------------------------------
 
-    // implements Message ----------------------------------------------
+  inline SnapshotData* New() const PROTOBUF_FINAL { return New(NULL); }
 
-    inline SnapshotData * New() const PROTOBUF_FINAL { return New(NULL); }
+  SnapshotData* New(::google::protobuf::Arena* arena) const PROTOBUF_FINAL;
+  void CopyFrom(const ::google::protobuf::Message& from) PROTOBUF_FINAL;
+  void MergeFrom(const ::google::protobuf::Message& from) PROTOBUF_FINAL;
+  void CopyFrom(const SnapshotData& from);
+  void MergeFrom(const SnapshotData& from);
+  void Clear() PROTOBUF_FINAL;
+  bool IsInitialized() const PROTOBUF_FINAL;
 
-    SnapshotData * New(::google::protobuf::Arena * arena) const PROTOBUF_FINAL;
-    void           CopyFrom(const ::google::protobuf::Message & from) PROTOBUF_FINAL;
-    void           MergeFrom(const ::google::protobuf::Message & from) PROTOBUF_FINAL;
-    void           CopyFrom(const SnapshotData & from);
-    void           MergeFrom(const SnapshotData & from);
-    void           Clear() PROTOBUF_FINAL;
-    bool           IsInitialized() const PROTOBUF_FINAL;
+  size_t ByteSizeLong() const PROTOBUF_FINAL;
+  bool MergePartialFromCodedStream(
+      ::google::protobuf::io::CodedInputStream* input) PROTOBUF_FINAL;
+  void SerializeWithCachedSizes(
+      ::google::protobuf::io::CodedOutputStream* output) const PROTOBUF_FINAL;
+  ::google::protobuf::uint8* InternalSerializeWithCachedSizesToArray(
+      bool deterministic, ::google::protobuf::uint8* target) const PROTOBUF_FINAL;
+  int GetCachedSize() const PROTOBUF_FINAL { return _cached_size_; }
+  private:
+  void SharedCtor();
+  void SharedDtor();
+  void SetCachedSize(int size) const PROTOBUF_FINAL;
+  void InternalSwap(SnapshotData* other);
+  private:
+  inline ::google::protobuf::Arena* GetArenaNoVirtual() const {
+    return NULL;
+  }
+  inline void* MaybeArenaPtr() const {
+    return NULL;
+  }
+  public:
 
-    size_t                      ByteSizeLong() const PROTOBUF_FINAL;
-    bool                        MergePartialFromCodedStream(::google::protobuf::io::CodedInputStream * input) PROTOBUF_FINAL;
-    void                        SerializeWithCachedSizes(::google::protobuf::io::CodedOutputStream * output) const PROTOBUF_FINAL;
-    ::google::protobuf::uint8 * InternalSerializeWithCachedSizesToArray(bool                        deterministic,
-                                                                        ::google::protobuf::uint8 * target) const PROTOBUF_FINAL;
-    int                         GetCachedSize() const PROTOBUF_FINAL { return _cached_size_; }
+  ::google::protobuf::Metadata GetMetadata() const PROTOBUF_FINAL;
 
-private:
-    void SharedCtor();
-    void SharedDtor();
-    void SetCachedSize(int size) const PROTOBUF_FINAL;
-    void InternalSwap(SnapshotData * other);
+  // nested types ----------------------------------------------------
 
-private:
-    inline ::google::protobuf::Arena * GetArenaNoVirtual() const { return NULL; }
-    inline void *                      MaybeArenaPtr() const { return NULL; }
+  // accessors -------------------------------------------------------
 
-public:
-    ::google::protobuf::Metadata GetMetadata() const PROTOBUF_FINAL;
+  // repeated .raft_serverpb.KeyValue data = 3;
+  int data_size() const;
+  void clear_data();
+  static const int kDataFieldNumber = 3;
+  const ::raft_serverpb::KeyValue& data(int index) const;
+  ::raft_serverpb::KeyValue* mutable_data(int index);
+  ::raft_serverpb::KeyValue* add_data();
+  ::google::protobuf::RepeatedPtrField< ::raft_serverpb::KeyValue >*
+      mutable_data();
+  const ::google::protobuf::RepeatedPtrField< ::raft_serverpb::KeyValue >&
+      data() const;
 
-    // nested types ----------------------------------------------------
+  // string cf = 1;
+  void clear_cf();
+  static const int kCfFieldNumber = 1;
+  const ::std::string& cf() const;
+  void set_cf(const ::std::string& value);
+  #if LANG_CXX11
+  void set_cf(::std::string&& value);
+  #endif
+  void set_cf(const char* value);
+  void set_cf(const char* value, size_t size);
+  ::std::string* mutable_cf();
+  ::std::string* release_cf();
+  void set_allocated_cf(::std::string* cf);
 
-    // accessors -------------------------------------------------------
+  // uint32 checksum = 2;
+  void clear_checksum();
+  static const int kChecksumFieldNumber = 2;
+  ::google::protobuf::uint32 checksum() const;
+  void set_checksum(::google::protobuf::uint32 value);
 
-    // repeated .raft_serverpb.KeyValue data = 3;
-    int                                                                     data_size() const;
-    void                                                                    clear_data();
-    static const int                                                        kDataFieldNumber = 3;
-    const ::raft_serverpb::KeyValue &                                       data(int index) const;
-    ::raft_serverpb::KeyValue *                                             mutable_data(int index);
-    ::raft_serverpb::KeyValue *                                             add_data();
-    ::google::protobuf::RepeatedPtrField<::raft_serverpb::KeyValue> *       mutable_data();
-    const ::google::protobuf::RepeatedPtrField<::raft_serverpb::KeyValue> & data() const;
+  // @@protoc_insertion_point(class_scope:enginepb.SnapshotData)
+ private:
 
-    // string cf = 1;
-    void                  clear_cf();
-    static const int      kCfFieldNumber = 1;
-    const ::std::string & cf() const;
-    void                  set_cf(const ::std::string & value);
-#if LANG_CXX11
-    void set_cf(::std::string && value);
-#endif
-    void            set_cf(const char * value);
-    void            set_cf(const char * value, size_t size);
-    ::std::string * mutable_cf();
-    ::std::string * release_cf();
-    void            set_allocated_cf(::std::string * cf);
-
-    // uint32 checksum = 2;
-    void                       clear_checksum();
-    static const int           kChecksumFieldNumber = 2;
-    ::google::protobuf::uint32 checksum() const;
-    void                       set_checksum(::google::protobuf::uint32 value);
-
-    // @@protoc_insertion_point(class_scope:enginepb.SnapshotData)
-private:
-    ::google::protobuf::internal::InternalMetadataWithArena         _internal_metadata_;
-    ::google::protobuf::RepeatedPtrField<::raft_serverpb::KeyValue> data_;
-    ::google::protobuf::internal::ArenaStringPtr                    cf_;
-    ::google::protobuf::uint32                                      checksum_;
-    mutable int                                                     _cached_size_;
-    friend struct ::protobuf_enginepb_2eproto::TableStruct;
-    friend void ::protobuf_enginepb_2eproto::InitDefaultsSnapshotDataImpl();
+  ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
+  ::google::protobuf::RepeatedPtrField< ::raft_serverpb::KeyValue > data_;
+  ::google::protobuf::internal::ArenaStringPtr cf_;
+  ::google::protobuf::uint32 checksum_;
+  mutable int _cached_size_;
+  friend struct ::protobuf_enginepb_2eproto::TableStruct;
+  friend void ::protobuf_enginepb_2eproto::InitDefaultsSnapshotDataImpl();
 };
 // -------------------------------------------------------------------
 
-class SnapshotRequest : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:enginepb.SnapshotRequest) */
-{
-public:
-    SnapshotRequest();
-    virtual ~SnapshotRequest();
+class SnapshotRequest : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:enginepb.SnapshotRequest) */ {
+ public:
+  SnapshotRequest();
+  virtual ~SnapshotRequest();
 
-    SnapshotRequest(const SnapshotRequest & from);
+  SnapshotRequest(const SnapshotRequest& from);
 
-    inline SnapshotRequest & operator=(const SnapshotRequest & from)
-    {
-        CopyFrom(from);
-        return *this;
+  inline SnapshotRequest& operator=(const SnapshotRequest& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  #if LANG_CXX11
+  SnapshotRequest(SnapshotRequest&& from) noexcept
+    : SnapshotRequest() {
+    *this = ::std::move(from);
+  }
+
+  inline SnapshotRequest& operator=(SnapshotRequest&& from) noexcept {
+    if (GetArenaNoVirtual() == from.GetArenaNoVirtual()) {
+      if (this != &from) InternalSwap(&from);
+    } else {
+      CopyFrom(from);
     }
-#if LANG_CXX11
-    SnapshotRequest(SnapshotRequest && from) noexcept : SnapshotRequest() { *this = ::std::move(from); }
+    return *this;
+  }
+  #endif
+  static const ::google::protobuf::Descriptor* descriptor();
+  static const SnapshotRequest& default_instance();
 
-    inline SnapshotRequest & operator=(SnapshotRequest && from) noexcept
-    {
-        if (GetArenaNoVirtual() == from.GetArenaNoVirtual())
-        {
-            if (this != &from)
-                InternalSwap(&from);
-        }
-        else
-        {
-            CopyFrom(from);
-        }
-        return *this;
-    }
-#endif
-    static const ::google::protobuf::Descriptor * descriptor();
-    static const SnapshotRequest &                default_instance();
+  enum ChunkCase {
+    kState = 1,
+    kData = 2,
+    CHUNK_NOT_SET = 0,
+  };
 
-    enum ChunkCase
-    {
-        kState        = 1,
-        kData         = 2,
-        CHUNK_NOT_SET = 0,
-    };
+  static void InitAsDefaultInstance();  // FOR INTERNAL USE ONLY
+  static inline const SnapshotRequest* internal_default_instance() {
+    return reinterpret_cast<const SnapshotRequest*>(
+               &_SnapshotRequest_default_instance_);
+  }
+  static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
+    8;
 
-    static void                           InitAsDefaultInstance(); // FOR INTERNAL USE ONLY
-    static inline const SnapshotRequest * internal_default_instance()
-    {
-        return reinterpret_cast<const SnapshotRequest *>(&_SnapshotRequest_default_instance_);
-    }
-    static PROTOBUF_CONSTEXPR int const kIndexInFileMessages = 8;
+  void Swap(SnapshotRequest* other);
+  friend void swap(SnapshotRequest& a, SnapshotRequest& b) {
+    a.Swap(&b);
+  }
 
-    void        Swap(SnapshotRequest * other);
-    friend void swap(SnapshotRequest & a, SnapshotRequest & b) { a.Swap(&b); }
+  // implements Message ----------------------------------------------
 
-    // implements Message ----------------------------------------------
+  inline SnapshotRequest* New() const PROTOBUF_FINAL { return New(NULL); }
 
-    inline SnapshotRequest * New() const PROTOBUF_FINAL { return New(NULL); }
+  SnapshotRequest* New(::google::protobuf::Arena* arena) const PROTOBUF_FINAL;
+  void CopyFrom(const ::google::protobuf::Message& from) PROTOBUF_FINAL;
+  void MergeFrom(const ::google::protobuf::Message& from) PROTOBUF_FINAL;
+  void CopyFrom(const SnapshotRequest& from);
+  void MergeFrom(const SnapshotRequest& from);
+  void Clear() PROTOBUF_FINAL;
+  bool IsInitialized() const PROTOBUF_FINAL;
 
-    SnapshotRequest * New(::google::protobuf::Arena * arena) const PROTOBUF_FINAL;
-    void              CopyFrom(const ::google::protobuf::Message & from) PROTOBUF_FINAL;
-    void              MergeFrom(const ::google::protobuf::Message & from) PROTOBUF_FINAL;
-    void              CopyFrom(const SnapshotRequest & from);
-    void              MergeFrom(const SnapshotRequest & from);
-    void              Clear() PROTOBUF_FINAL;
-    bool              IsInitialized() const PROTOBUF_FINAL;
+  size_t ByteSizeLong() const PROTOBUF_FINAL;
+  bool MergePartialFromCodedStream(
+      ::google::protobuf::io::CodedInputStream* input) PROTOBUF_FINAL;
+  void SerializeWithCachedSizes(
+      ::google::protobuf::io::CodedOutputStream* output) const PROTOBUF_FINAL;
+  ::google::protobuf::uint8* InternalSerializeWithCachedSizesToArray(
+      bool deterministic, ::google::protobuf::uint8* target) const PROTOBUF_FINAL;
+  int GetCachedSize() const PROTOBUF_FINAL { return _cached_size_; }
+  private:
+  void SharedCtor();
+  void SharedDtor();
+  void SetCachedSize(int size) const PROTOBUF_FINAL;
+  void InternalSwap(SnapshotRequest* other);
+  private:
+  inline ::google::protobuf::Arena* GetArenaNoVirtual() const {
+    return NULL;
+  }
+  inline void* MaybeArenaPtr() const {
+    return NULL;
+  }
+  public:
 
-    size_t                      ByteSizeLong() const PROTOBUF_FINAL;
-    bool                        MergePartialFromCodedStream(::google::protobuf::io::CodedInputStream * input) PROTOBUF_FINAL;
-    void                        SerializeWithCachedSizes(::google::protobuf::io::CodedOutputStream * output) const PROTOBUF_FINAL;
-    ::google::protobuf::uint8 * InternalSerializeWithCachedSizesToArray(bool                        deterministic,
-                                                                        ::google::protobuf::uint8 * target) const PROTOBUF_FINAL;
-    int                         GetCachedSize() const PROTOBUF_FINAL { return _cached_size_; }
+  ::google::protobuf::Metadata GetMetadata() const PROTOBUF_FINAL;
 
-private:
-    void SharedCtor();
-    void SharedDtor();
-    void SetCachedSize(int size) const PROTOBUF_FINAL;
-    void InternalSwap(SnapshotRequest * other);
+  // nested types ----------------------------------------------------
 
-private:
-    inline ::google::protobuf::Arena * GetArenaNoVirtual() const { return NULL; }
-    inline void *                      MaybeArenaPtr() const { return NULL; }
+  // accessors -------------------------------------------------------
 
-public:
-    ::google::protobuf::Metadata GetMetadata() const PROTOBUF_FINAL;
+  // .enginepb.SnapshotState state = 1;
+  bool has_state() const;
+  void clear_state();
+  static const int kStateFieldNumber = 1;
+  const ::enginepb::SnapshotState& state() const;
+  ::enginepb::SnapshotState* release_state();
+  ::enginepb::SnapshotState* mutable_state();
+  void set_allocated_state(::enginepb::SnapshotState* state);
 
-    // nested types ----------------------------------------------------
+  // .enginepb.SnapshotData data = 2;
+  bool has_data() const;
+  void clear_data();
+  static const int kDataFieldNumber = 2;
+  const ::enginepb::SnapshotData& data() const;
+  ::enginepb::SnapshotData* release_data();
+  ::enginepb::SnapshotData* mutable_data();
+  void set_allocated_data(::enginepb::SnapshotData* data);
 
-    // accessors -------------------------------------------------------
+  ChunkCase chunk_case() const;
+  // @@protoc_insertion_point(class_scope:enginepb.SnapshotRequest)
+ private:
+  void set_has_state();
+  void set_has_data();
 
-    // .enginepb.SnapshotState state = 1;
-    bool                              has_state() const;
-    void                              clear_state();
-    static const int                  kStateFieldNumber = 1;
-    const ::enginepb::SnapshotState & state() const;
-    ::enginepb::SnapshotState *       release_state();
-    ::enginepb::SnapshotState *       mutable_state();
-    void                              set_allocated_state(::enginepb::SnapshotState * state);
+  inline bool has_chunk() const;
+  void clear_chunk();
+  inline void clear_has_chunk();
 
-    // .enginepb.SnapshotData data = 2;
-    bool                             has_data() const;
-    void                             clear_data();
-    static const int                 kDataFieldNumber = 2;
-    const ::enginepb::SnapshotData & data() const;
-    ::enginepb::SnapshotData *       release_data();
-    ::enginepb::SnapshotData *       mutable_data();
-    void                             set_allocated_data(::enginepb::SnapshotData * data);
+  ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
+  union ChunkUnion {
+    ChunkUnion() {}
+    ::enginepb::SnapshotState* state_;
+    ::enginepb::SnapshotData* data_;
+  } chunk_;
+  mutable int _cached_size_;
+  ::google::protobuf::uint32 _oneof_case_[1];
 
-    ChunkCase chunk_case() const;
-    // @@protoc_insertion_point(class_scope:enginepb.SnapshotRequest)
-private:
-    void set_has_state();
-    void set_has_data();
-
-    inline bool has_chunk() const;
-    void        clear_chunk();
-    inline void clear_has_chunk();
-
-    ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
-    union ChunkUnion
-    {
-        ChunkUnion() {}
-        ::enginepb::SnapshotState * state_;
-        ::enginepb::SnapshotData *  data_;
-    } chunk_;
-    mutable int                _cached_size_;
-    ::google::protobuf::uint32 _oneof_case_[1];
-
-    friend struct ::protobuf_enginepb_2eproto::TableStruct;
-    friend void ::protobuf_enginepb_2eproto::InitDefaultsSnapshotRequestImpl();
+  friend struct ::protobuf_enginepb_2eproto::TableStruct;
+  friend void ::protobuf_enginepb_2eproto::InitDefaultsSnapshotRequestImpl();
 };
 // -------------------------------------------------------------------
 
-class SnapshotDone : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:enginepb.SnapshotDone) */
-{
-public:
-    SnapshotDone();
-    virtual ~SnapshotDone();
+class SnapshotDone : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:enginepb.SnapshotDone) */ {
+ public:
+  SnapshotDone();
+  virtual ~SnapshotDone();
 
-    SnapshotDone(const SnapshotDone & from);
+  SnapshotDone(const SnapshotDone& from);
 
-    inline SnapshotDone & operator=(const SnapshotDone & from)
-    {
-        CopyFrom(from);
-        return *this;
+  inline SnapshotDone& operator=(const SnapshotDone& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  #if LANG_CXX11
+  SnapshotDone(SnapshotDone&& from) noexcept
+    : SnapshotDone() {
+    *this = ::std::move(from);
+  }
+
+  inline SnapshotDone& operator=(SnapshotDone&& from) noexcept {
+    if (GetArenaNoVirtual() == from.GetArenaNoVirtual()) {
+      if (this != &from) InternalSwap(&from);
+    } else {
+      CopyFrom(from);
     }
-#if LANG_CXX11
-    SnapshotDone(SnapshotDone && from) noexcept : SnapshotDone() { *this = ::std::move(from); }
+    return *this;
+  }
+  #endif
+  static const ::google::protobuf::Descriptor* descriptor();
+  static const SnapshotDone& default_instance();
 
-    inline SnapshotDone & operator=(SnapshotDone && from) noexcept
-    {
-        if (GetArenaNoVirtual() == from.GetArenaNoVirtual())
-        {
-            if (this != &from)
-                InternalSwap(&from);
-        }
-        else
-        {
-            CopyFrom(from);
-        }
-        return *this;
-    }
-#endif
-    static const ::google::protobuf::Descriptor * descriptor();
-    static const SnapshotDone &                   default_instance();
+  static void InitAsDefaultInstance();  // FOR INTERNAL USE ONLY
+  static inline const SnapshotDone* internal_default_instance() {
+    return reinterpret_cast<const SnapshotDone*>(
+               &_SnapshotDone_default_instance_);
+  }
+  static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
+    9;
 
-    static void                        InitAsDefaultInstance(); // FOR INTERNAL USE ONLY
-    static inline const SnapshotDone * internal_default_instance()
-    {
-        return reinterpret_cast<const SnapshotDone *>(&_SnapshotDone_default_instance_);
-    }
-    static PROTOBUF_CONSTEXPR int const kIndexInFileMessages = 9;
+  void Swap(SnapshotDone* other);
+  friend void swap(SnapshotDone& a, SnapshotDone& b) {
+    a.Swap(&b);
+  }
 
-    void        Swap(SnapshotDone * other);
-    friend void swap(SnapshotDone & a, SnapshotDone & b) { a.Swap(&b); }
+  // implements Message ----------------------------------------------
 
-    // implements Message ----------------------------------------------
+  inline SnapshotDone* New() const PROTOBUF_FINAL { return New(NULL); }
 
-    inline SnapshotDone * New() const PROTOBUF_FINAL { return New(NULL); }
+  SnapshotDone* New(::google::protobuf::Arena* arena) const PROTOBUF_FINAL;
+  void CopyFrom(const ::google::protobuf::Message& from) PROTOBUF_FINAL;
+  void MergeFrom(const ::google::protobuf::Message& from) PROTOBUF_FINAL;
+  void CopyFrom(const SnapshotDone& from);
+  void MergeFrom(const SnapshotDone& from);
+  void Clear() PROTOBUF_FINAL;
+  bool IsInitialized() const PROTOBUF_FINAL;
 
-    SnapshotDone * New(::google::protobuf::Arena * arena) const PROTOBUF_FINAL;
-    void           CopyFrom(const ::google::protobuf::Message & from) PROTOBUF_FINAL;
-    void           MergeFrom(const ::google::protobuf::Message & from) PROTOBUF_FINAL;
-    void           CopyFrom(const SnapshotDone & from);
-    void           MergeFrom(const SnapshotDone & from);
-    void           Clear() PROTOBUF_FINAL;
-    bool           IsInitialized() const PROTOBUF_FINAL;
+  size_t ByteSizeLong() const PROTOBUF_FINAL;
+  bool MergePartialFromCodedStream(
+      ::google::protobuf::io::CodedInputStream* input) PROTOBUF_FINAL;
+  void SerializeWithCachedSizes(
+      ::google::protobuf::io::CodedOutputStream* output) const PROTOBUF_FINAL;
+  ::google::protobuf::uint8* InternalSerializeWithCachedSizesToArray(
+      bool deterministic, ::google::protobuf::uint8* target) const PROTOBUF_FINAL;
+  int GetCachedSize() const PROTOBUF_FINAL { return _cached_size_; }
+  private:
+  void SharedCtor();
+  void SharedDtor();
+  void SetCachedSize(int size) const PROTOBUF_FINAL;
+  void InternalSwap(SnapshotDone* other);
+  private:
+  inline ::google::protobuf::Arena* GetArenaNoVirtual() const {
+    return NULL;
+  }
+  inline void* MaybeArenaPtr() const {
+    return NULL;
+  }
+  public:
 
-    size_t                      ByteSizeLong() const PROTOBUF_FINAL;
-    bool                        MergePartialFromCodedStream(::google::protobuf::io::CodedInputStream * input) PROTOBUF_FINAL;
-    void                        SerializeWithCachedSizes(::google::protobuf::io::CodedOutputStream * output) const PROTOBUF_FINAL;
-    ::google::protobuf::uint8 * InternalSerializeWithCachedSizesToArray(bool                        deterministic,
-                                                                        ::google::protobuf::uint8 * target) const PROTOBUF_FINAL;
-    int                         GetCachedSize() const PROTOBUF_FINAL { return _cached_size_; }
+  ::google::protobuf::Metadata GetMetadata() const PROTOBUF_FINAL;
 
-private:
-    void SharedCtor();
-    void SharedDtor();
-    void SetCachedSize(int size) const PROTOBUF_FINAL;
-    void InternalSwap(SnapshotDone * other);
+  // nested types ----------------------------------------------------
 
-private:
-    inline ::google::protobuf::Arena * GetArenaNoVirtual() const { return NULL; }
-    inline void *                      MaybeArenaPtr() const { return NULL; }
+  // accessors -------------------------------------------------------
 
-public:
-    ::google::protobuf::Metadata GetMetadata() const PROTOBUF_FINAL;
+  // @@protoc_insertion_point(class_scope:enginepb.SnapshotDone)
+ private:
 
-    // nested types ----------------------------------------------------
-
-    // accessors -------------------------------------------------------
-
-    // @@protoc_insertion_point(class_scope:enginepb.SnapshotDone)
-private:
-    ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
-    mutable int                                             _cached_size_;
-    friend struct ::protobuf_enginepb_2eproto::TableStruct;
-    friend void ::protobuf_enginepb_2eproto::InitDefaultsSnapshotDoneImpl();
+  ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
+  mutable int _cached_size_;
+  friend struct ::protobuf_enginepb_2eproto::TableStruct;
+  friend void ::protobuf_enginepb_2eproto::InitDefaultsSnapshotDoneImpl();
 };
 // ===================================================================
 
@@ -1257,154 +1294,132 @@ private:
 // ===================================================================
 
 #ifdef __GNUC__
-#pragma GCC diagnostic push
-#pragma GCC diagnostic ignored "-Wstrict-aliasing"
-#endif // __GNUC__
+  #pragma GCC diagnostic push
+  #pragma GCC diagnostic ignored "-Wstrict-aliasing"
+#endif  // __GNUC__
 // CommandRequestHeader
 
 // uint64 region_id = 1;
-inline void CommandRequestHeader::clear_region_id()
-{
-    region_id_ = GOOGLE_ULONGLONG(0);
+inline void CommandRequestHeader::clear_region_id() {
+  region_id_ = GOOGLE_ULONGLONG(0);
 }
-inline ::google::protobuf::uint64 CommandRequestHeader::region_id() const
-{
-    // @@protoc_insertion_point(field_get:enginepb.CommandRequestHeader.region_id)
-    return region_id_;
+inline ::google::protobuf::uint64 CommandRequestHeader::region_id() const {
+  // @@protoc_insertion_point(field_get:enginepb.CommandRequestHeader.region_id)
+  return region_id_;
 }
-inline void CommandRequestHeader::set_region_id(::google::protobuf::uint64 value)
-{
-
-    region_id_ = value;
-    // @@protoc_insertion_point(field_set:enginepb.CommandRequestHeader.region_id)
+inline void CommandRequestHeader::set_region_id(::google::protobuf::uint64 value) {
+  
+  region_id_ = value;
+  // @@protoc_insertion_point(field_set:enginepb.CommandRequestHeader.region_id)
 }
 
 // uint64 index = 2;
-inline void CommandRequestHeader::clear_index()
-{
-    index_ = GOOGLE_ULONGLONG(0);
+inline void CommandRequestHeader::clear_index() {
+  index_ = GOOGLE_ULONGLONG(0);
 }
-inline ::google::protobuf::uint64 CommandRequestHeader::index() const
-{
-    // @@protoc_insertion_point(field_get:enginepb.CommandRequestHeader.index)
-    return index_;
+inline ::google::protobuf::uint64 CommandRequestHeader::index() const {
+  // @@protoc_insertion_point(field_get:enginepb.CommandRequestHeader.index)
+  return index_;
 }
-inline void CommandRequestHeader::set_index(::google::protobuf::uint64 value)
-{
-
-    index_ = value;
-    // @@protoc_insertion_point(field_set:enginepb.CommandRequestHeader.index)
+inline void CommandRequestHeader::set_index(::google::protobuf::uint64 value) {
+  
+  index_ = value;
+  // @@protoc_insertion_point(field_set:enginepb.CommandRequestHeader.index)
 }
 
 // uint64 term = 3;
-inline void CommandRequestHeader::clear_term()
-{
-    term_ = GOOGLE_ULONGLONG(0);
+inline void CommandRequestHeader::clear_term() {
+  term_ = GOOGLE_ULONGLONG(0);
 }
-inline ::google::protobuf::uint64 CommandRequestHeader::term() const
-{
-    // @@protoc_insertion_point(field_get:enginepb.CommandRequestHeader.term)
-    return term_;
+inline ::google::protobuf::uint64 CommandRequestHeader::term() const {
+  // @@protoc_insertion_point(field_get:enginepb.CommandRequestHeader.term)
+  return term_;
 }
-inline void CommandRequestHeader::set_term(::google::protobuf::uint64 value)
-{
-
-    term_ = value;
-    // @@protoc_insertion_point(field_set:enginepb.CommandRequestHeader.term)
+inline void CommandRequestHeader::set_term(::google::protobuf::uint64 value) {
+  
+  term_ = value;
+  // @@protoc_insertion_point(field_set:enginepb.CommandRequestHeader.term)
 }
 
 // bool sync_log = 4;
-inline void CommandRequestHeader::clear_sync_log()
-{
-    sync_log_ = false;
+inline void CommandRequestHeader::clear_sync_log() {
+  sync_log_ = false;
 }
-inline bool CommandRequestHeader::sync_log() const
-{
-    // @@protoc_insertion_point(field_get:enginepb.CommandRequestHeader.sync_log)
-    return sync_log_;
+inline bool CommandRequestHeader::sync_log() const {
+  // @@protoc_insertion_point(field_get:enginepb.CommandRequestHeader.sync_log)
+  return sync_log_;
 }
-inline void CommandRequestHeader::set_sync_log(bool value)
-{
-
-    sync_log_ = value;
-    // @@protoc_insertion_point(field_set:enginepb.CommandRequestHeader.sync_log)
+inline void CommandRequestHeader::set_sync_log(bool value) {
+  
+  sync_log_ = value;
+  // @@protoc_insertion_point(field_set:enginepb.CommandRequestHeader.sync_log)
 }
 
 // bool destroy = 5;
-inline void CommandRequestHeader::clear_destroy()
-{
-    destroy_ = false;
+inline void CommandRequestHeader::clear_destroy() {
+  destroy_ = false;
 }
-inline bool CommandRequestHeader::destroy() const
-{
-    // @@protoc_insertion_point(field_get:enginepb.CommandRequestHeader.destroy)
-    return destroy_;
+inline bool CommandRequestHeader::destroy() const {
+  // @@protoc_insertion_point(field_get:enginepb.CommandRequestHeader.destroy)
+  return destroy_;
 }
-inline void CommandRequestHeader::set_destroy(bool value)
-{
-
-    destroy_ = value;
-    // @@protoc_insertion_point(field_set:enginepb.CommandRequestHeader.destroy)
+inline void CommandRequestHeader::set_destroy(bool value) {
+  
+  destroy_ = value;
+  // @@protoc_insertion_point(field_set:enginepb.CommandRequestHeader.destroy)
 }
 
 // bytes context = 6;
-inline void CommandRequestHeader::clear_context()
-{
-    context_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+inline void CommandRequestHeader::clear_context() {
+  context_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
-inline const ::std::string & CommandRequestHeader::context() const
-{
-    // @@protoc_insertion_point(field_get:enginepb.CommandRequestHeader.context)
-    return context_.GetNoArena();
+inline const ::std::string& CommandRequestHeader::context() const {
+  // @@protoc_insertion_point(field_get:enginepb.CommandRequestHeader.context)
+  return context_.GetNoArena();
 }
-inline void CommandRequestHeader::set_context(const ::std::string & value)
-{
-
-    context_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
-    // @@protoc_insertion_point(field_set:enginepb.CommandRequestHeader.context)
+inline void CommandRequestHeader::set_context(const ::std::string& value) {
+  
+  context_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
+  // @@protoc_insertion_point(field_set:enginepb.CommandRequestHeader.context)
 }
 #if LANG_CXX11
-inline void CommandRequestHeader::set_context(::std::string && value)
-{
-
-    context_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
-    // @@protoc_insertion_point(field_set_rvalue:enginepb.CommandRequestHeader.context)
+inline void CommandRequestHeader::set_context(::std::string&& value) {
+  
+  context_.SetNoArena(
+    &::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
+  // @@protoc_insertion_point(field_set_rvalue:enginepb.CommandRequestHeader.context)
 }
 #endif
-inline void CommandRequestHeader::set_context(const char * value)
-{
-    GOOGLE_DCHECK(value != NULL);
-
-    context_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
-    // @@protoc_insertion_point(field_set_char:enginepb.CommandRequestHeader.context)
+inline void CommandRequestHeader::set_context(const char* value) {
+  GOOGLE_DCHECK(value != NULL);
+  
+  context_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
+  // @@protoc_insertion_point(field_set_char:enginepb.CommandRequestHeader.context)
 }
-inline void CommandRequestHeader::set_context(const void * value, size_t size)
-{
-
-    context_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
-                        ::std::string(reinterpret_cast<const char *>(value), size));
-    // @@protoc_insertion_point(field_set_pointer:enginepb.CommandRequestHeader.context)
+inline void CommandRequestHeader::set_context(const void* value, size_t size) {
+  
+  context_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+      ::std::string(reinterpret_cast<const char*>(value), size));
+  // @@protoc_insertion_point(field_set_pointer:enginepb.CommandRequestHeader.context)
 }
-inline ::std::string * CommandRequestHeader::mutable_context()
-{
-
-    // @@protoc_insertion_point(field_mutable:enginepb.CommandRequestHeader.context)
-    return context_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+inline ::std::string* CommandRequestHeader::mutable_context() {
+  
+  // @@protoc_insertion_point(field_mutable:enginepb.CommandRequestHeader.context)
+  return context_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
-inline ::std::string * CommandRequestHeader::release_context()
-{
-    // @@protoc_insertion_point(field_release:enginepb.CommandRequestHeader.context)
-
-    return context_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+inline ::std::string* CommandRequestHeader::release_context() {
+  // @@protoc_insertion_point(field_release:enginepb.CommandRequestHeader.context)
+  
+  return context_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
-inline void CommandRequestHeader::set_allocated_context(::std::string * context)
-{
-    if (context != NULL) {}
-    else
-    {
-    }
-    context_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), context);
-    // @@protoc_insertion_point(field_set_allocated:enginepb.CommandRequestHeader.context)
+inline void CommandRequestHeader::set_allocated_context(::std::string* context) {
+  if (context != NULL) {
+    
+  } else {
+    
+  }
+  context_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), context);
+  // @@protoc_insertion_point(field_set_allocated:enginepb.CommandRequestHeader.context)
 }
 
 // -------------------------------------------------------------------
@@ -1412,196 +1427,168 @@ inline void CommandRequestHeader::set_allocated_context(::std::string * context)
 // CommandRequest
 
 // .enginepb.CommandRequestHeader header = 1;
-inline bool CommandRequest::has_header() const
-{
-    return this != internal_default_instance() && header_ != NULL;
+inline bool CommandRequest::has_header() const {
+  return this != internal_default_instance() && header_ != NULL;
 }
-inline void CommandRequest::clear_header()
-{
-    if (GetArenaNoVirtual() == NULL && header_ != NULL)
-    {
-        delete header_;
-    }
-    header_ = NULL;
+inline void CommandRequest::clear_header() {
+  if (GetArenaNoVirtual() == NULL && header_ != NULL) {
+    delete header_;
+  }
+  header_ = NULL;
 }
-inline const ::enginepb::CommandRequestHeader & CommandRequest::header() const
-{
-    const ::enginepb::CommandRequestHeader * p = header_;
-    // @@protoc_insertion_point(field_get:enginepb.CommandRequest.header)
-    return p != NULL ? *p
-                     : *reinterpret_cast<const ::enginepb::CommandRequestHeader *>(&::enginepb::_CommandRequestHeader_default_instance_);
+inline const ::enginepb::CommandRequestHeader& CommandRequest::header() const {
+  const ::enginepb::CommandRequestHeader* p = header_;
+  // @@protoc_insertion_point(field_get:enginepb.CommandRequest.header)
+  return p != NULL ? *p : *reinterpret_cast<const ::enginepb::CommandRequestHeader*>(
+      &::enginepb::_CommandRequestHeader_default_instance_);
 }
-inline ::enginepb::CommandRequestHeader * CommandRequest::release_header()
-{
-    // @@protoc_insertion_point(field_release:enginepb.CommandRequest.header)
-
-    ::enginepb::CommandRequestHeader * temp = header_;
-    header_                                 = NULL;
-    return temp;
+inline ::enginepb::CommandRequestHeader* CommandRequest::release_header() {
+  // @@protoc_insertion_point(field_release:enginepb.CommandRequest.header)
+  
+  ::enginepb::CommandRequestHeader* temp = header_;
+  header_ = NULL;
+  return temp;
 }
-inline ::enginepb::CommandRequestHeader * CommandRequest::mutable_header()
-{
-
-    if (header_ == NULL)
-    {
-        header_ = new ::enginepb::CommandRequestHeader;
-    }
-    // @@protoc_insertion_point(field_mutable:enginepb.CommandRequest.header)
-    return header_;
+inline ::enginepb::CommandRequestHeader* CommandRequest::mutable_header() {
+  
+  if (header_ == NULL) {
+    header_ = new ::enginepb::CommandRequestHeader;
+  }
+  // @@protoc_insertion_point(field_mutable:enginepb.CommandRequest.header)
+  return header_;
 }
-inline void CommandRequest::set_allocated_header(::enginepb::CommandRequestHeader * header)
-{
-    ::google::protobuf::Arena * message_arena = GetArenaNoVirtual();
-    if (message_arena == NULL)
-    {
-        delete header_;
+inline void CommandRequest::set_allocated_header(::enginepb::CommandRequestHeader* header) {
+  ::google::protobuf::Arena* message_arena = GetArenaNoVirtual();
+  if (message_arena == NULL) {
+    delete header_;
+  }
+  if (header) {
+    ::google::protobuf::Arena* submessage_arena = NULL;
+    if (message_arena != submessage_arena) {
+      header = ::google::protobuf::internal::GetOwnedMessage(
+          message_arena, header, submessage_arena);
     }
-    if (header)
-    {
-        ::google::protobuf::Arena * submessage_arena = NULL;
-        if (message_arena != submessage_arena)
-        {
-            header = ::google::protobuf::internal::GetOwnedMessage(message_arena, header, submessage_arena);
-        }
-    }
-    else
-    {
-    }
-    header_ = header;
-    // @@protoc_insertion_point(field_set_allocated:enginepb.CommandRequest.header)
+    
+  } else {
+    
+  }
+  header_ = header;
+  // @@protoc_insertion_point(field_set_allocated:enginepb.CommandRequest.header)
 }
 
 // repeated .raft_cmdpb.Request requests = 2;
-inline int CommandRequest::requests_size() const
-{
-    return requests_.size();
+inline int CommandRequest::requests_size() const {
+  return requests_.size();
 }
-inline const ::raft_cmdpb::Request & CommandRequest::requests(int index) const
-{
-    // @@protoc_insertion_point(field_get:enginepb.CommandRequest.requests)
-    return requests_.Get(index);
+inline const ::raft_cmdpb::Request& CommandRequest::requests(int index) const {
+  // @@protoc_insertion_point(field_get:enginepb.CommandRequest.requests)
+  return requests_.Get(index);
 }
-inline ::raft_cmdpb::Request * CommandRequest::mutable_requests(int index)
-{
-    // @@protoc_insertion_point(field_mutable:enginepb.CommandRequest.requests)
-    return requests_.Mutable(index);
+inline ::raft_cmdpb::Request* CommandRequest::mutable_requests(int index) {
+  // @@protoc_insertion_point(field_mutable:enginepb.CommandRequest.requests)
+  return requests_.Mutable(index);
 }
-inline ::raft_cmdpb::Request * CommandRequest::add_requests()
-{
-    // @@protoc_insertion_point(field_add:enginepb.CommandRequest.requests)
-    return requests_.Add();
+inline ::raft_cmdpb::Request* CommandRequest::add_requests() {
+  // @@protoc_insertion_point(field_add:enginepb.CommandRequest.requests)
+  return requests_.Add();
 }
-inline ::google::protobuf::RepeatedPtrField<::raft_cmdpb::Request> * CommandRequest::mutable_requests()
-{
-    // @@protoc_insertion_point(field_mutable_list:enginepb.CommandRequest.requests)
-    return &requests_;
+inline ::google::protobuf::RepeatedPtrField< ::raft_cmdpb::Request >*
+CommandRequest::mutable_requests() {
+  // @@protoc_insertion_point(field_mutable_list:enginepb.CommandRequest.requests)
+  return &requests_;
 }
-inline const ::google::protobuf::RepeatedPtrField<::raft_cmdpb::Request> & CommandRequest::requests() const
-{
-    // @@protoc_insertion_point(field_list:enginepb.CommandRequest.requests)
-    return requests_;
+inline const ::google::protobuf::RepeatedPtrField< ::raft_cmdpb::Request >&
+CommandRequest::requests() const {
+  // @@protoc_insertion_point(field_list:enginepb.CommandRequest.requests)
+  return requests_;
 }
 
 // .raft_cmdpb.AdminRequest admin_request = 3;
-inline bool CommandRequest::has_admin_request() const
-{
-    return this != internal_default_instance() && admin_request_ != NULL;
+inline bool CommandRequest::has_admin_request() const {
+  return this != internal_default_instance() && admin_request_ != NULL;
 }
-inline const ::raft_cmdpb::AdminRequest & CommandRequest::admin_request() const
-{
-    const ::raft_cmdpb::AdminRequest * p = admin_request_;
-    // @@protoc_insertion_point(field_get:enginepb.CommandRequest.admin_request)
-    return p != NULL ? *p : *reinterpret_cast<const ::raft_cmdpb::AdminRequest *>(&::raft_cmdpb::_AdminRequest_default_instance_);
+inline const ::raft_cmdpb::AdminRequest& CommandRequest::admin_request() const {
+  const ::raft_cmdpb::AdminRequest* p = admin_request_;
+  // @@protoc_insertion_point(field_get:enginepb.CommandRequest.admin_request)
+  return p != NULL ? *p : *reinterpret_cast<const ::raft_cmdpb::AdminRequest*>(
+      &::raft_cmdpb::_AdminRequest_default_instance_);
 }
-inline ::raft_cmdpb::AdminRequest * CommandRequest::release_admin_request()
-{
-    // @@protoc_insertion_point(field_release:enginepb.CommandRequest.admin_request)
-
-    ::raft_cmdpb::AdminRequest * temp = admin_request_;
-    admin_request_                    = NULL;
-    return temp;
+inline ::raft_cmdpb::AdminRequest* CommandRequest::release_admin_request() {
+  // @@protoc_insertion_point(field_release:enginepb.CommandRequest.admin_request)
+  
+  ::raft_cmdpb::AdminRequest* temp = admin_request_;
+  admin_request_ = NULL;
+  return temp;
 }
-inline ::raft_cmdpb::AdminRequest * CommandRequest::mutable_admin_request()
-{
-
-    if (admin_request_ == NULL)
-    {
-        admin_request_ = new ::raft_cmdpb::AdminRequest;
-    }
-    // @@protoc_insertion_point(field_mutable:enginepb.CommandRequest.admin_request)
-    return admin_request_;
+inline ::raft_cmdpb::AdminRequest* CommandRequest::mutable_admin_request() {
+  
+  if (admin_request_ == NULL) {
+    admin_request_ = new ::raft_cmdpb::AdminRequest;
+  }
+  // @@protoc_insertion_point(field_mutable:enginepb.CommandRequest.admin_request)
+  return admin_request_;
 }
-inline void CommandRequest::set_allocated_admin_request(::raft_cmdpb::AdminRequest * admin_request)
-{
-    ::google::protobuf::Arena * message_arena = GetArenaNoVirtual();
-    if (message_arena == NULL)
-    {
-        delete reinterpret_cast<::google::protobuf::MessageLite *>(admin_request_);
+inline void CommandRequest::set_allocated_admin_request(::raft_cmdpb::AdminRequest* admin_request) {
+  ::google::protobuf::Arena* message_arena = GetArenaNoVirtual();
+  if (message_arena == NULL) {
+    delete reinterpret_cast< ::google::protobuf::MessageLite*>(admin_request_);
+  }
+  if (admin_request) {
+    ::google::protobuf::Arena* submessage_arena = NULL;
+    if (message_arena != submessage_arena) {
+      admin_request = ::google::protobuf::internal::GetOwnedMessage(
+          message_arena, admin_request, submessage_arena);
     }
-    if (admin_request)
-    {
-        ::google::protobuf::Arena * submessage_arena = NULL;
-        if (message_arena != submessage_arena)
-        {
-            admin_request = ::google::protobuf::internal::GetOwnedMessage(message_arena, admin_request, submessage_arena);
-        }
-    }
-    else
-    {
-    }
-    admin_request_ = admin_request;
-    // @@protoc_insertion_point(field_set_allocated:enginepb.CommandRequest.admin_request)
+    
+  } else {
+    
+  }
+  admin_request_ = admin_request;
+  // @@protoc_insertion_point(field_set_allocated:enginepb.CommandRequest.admin_request)
 }
 
 // .raft_cmdpb.AdminResponse admin_response = 4;
-inline bool CommandRequest::has_admin_response() const
-{
-    return this != internal_default_instance() && admin_response_ != NULL;
+inline bool CommandRequest::has_admin_response() const {
+  return this != internal_default_instance() && admin_response_ != NULL;
 }
-inline const ::raft_cmdpb::AdminResponse & CommandRequest::admin_response() const
-{
-    const ::raft_cmdpb::AdminResponse * p = admin_response_;
-    // @@protoc_insertion_point(field_get:enginepb.CommandRequest.admin_response)
-    return p != NULL ? *p : *reinterpret_cast<const ::raft_cmdpb::AdminResponse *>(&::raft_cmdpb::_AdminResponse_default_instance_);
+inline const ::raft_cmdpb::AdminResponse& CommandRequest::admin_response() const {
+  const ::raft_cmdpb::AdminResponse* p = admin_response_;
+  // @@protoc_insertion_point(field_get:enginepb.CommandRequest.admin_response)
+  return p != NULL ? *p : *reinterpret_cast<const ::raft_cmdpb::AdminResponse*>(
+      &::raft_cmdpb::_AdminResponse_default_instance_);
 }
-inline ::raft_cmdpb::AdminResponse * CommandRequest::release_admin_response()
-{
-    // @@protoc_insertion_point(field_release:enginepb.CommandRequest.admin_response)
-
-    ::raft_cmdpb::AdminResponse * temp = admin_response_;
-    admin_response_                    = NULL;
-    return temp;
+inline ::raft_cmdpb::AdminResponse* CommandRequest::release_admin_response() {
+  // @@protoc_insertion_point(field_release:enginepb.CommandRequest.admin_response)
+  
+  ::raft_cmdpb::AdminResponse* temp = admin_response_;
+  admin_response_ = NULL;
+  return temp;
 }
-inline ::raft_cmdpb::AdminResponse * CommandRequest::mutable_admin_response()
-{
-
-    if (admin_response_ == NULL)
-    {
-        admin_response_ = new ::raft_cmdpb::AdminResponse;
-    }
-    // @@protoc_insertion_point(field_mutable:enginepb.CommandRequest.admin_response)
-    return admin_response_;
+inline ::raft_cmdpb::AdminResponse* CommandRequest::mutable_admin_response() {
+  
+  if (admin_response_ == NULL) {
+    admin_response_ = new ::raft_cmdpb::AdminResponse;
+  }
+  // @@protoc_insertion_point(field_mutable:enginepb.CommandRequest.admin_response)
+  return admin_response_;
 }
-inline void CommandRequest::set_allocated_admin_response(::raft_cmdpb::AdminResponse * admin_response)
-{
-    ::google::protobuf::Arena * message_arena = GetArenaNoVirtual();
-    if (message_arena == NULL)
-    {
-        delete reinterpret_cast<::google::protobuf::MessageLite *>(admin_response_);
+inline void CommandRequest::set_allocated_admin_response(::raft_cmdpb::AdminResponse* admin_response) {
+  ::google::protobuf::Arena* message_arena = GetArenaNoVirtual();
+  if (message_arena == NULL) {
+    delete reinterpret_cast< ::google::protobuf::MessageLite*>(admin_response_);
+  }
+  if (admin_response) {
+    ::google::protobuf::Arena* submessage_arena = NULL;
+    if (message_arena != submessage_arena) {
+      admin_response = ::google::protobuf::internal::GetOwnedMessage(
+          message_arena, admin_response, submessage_arena);
     }
-    if (admin_response)
-    {
-        ::google::protobuf::Arena * submessage_arena = NULL;
-        if (message_arena != submessage_arena)
-        {
-            admin_response = ::google::protobuf::internal::GetOwnedMessage(message_arena, admin_response, submessage_arena);
-        }
-    }
-    else
-    {
-    }
-    admin_response_ = admin_response;
-    // @@protoc_insertion_point(field_set_allocated:enginepb.CommandRequest.admin_response)
+    
+  } else {
+    
+  }
+  admin_response_ = admin_response;
+  // @@protoc_insertion_point(field_set_allocated:enginepb.CommandRequest.admin_response)
 }
 
 // -------------------------------------------------------------------
@@ -1609,38 +1596,33 @@ inline void CommandRequest::set_allocated_admin_response(::raft_cmdpb::AdminResp
 // CommandRequestBatch
 
 // repeated .enginepb.CommandRequest requests = 1;
-inline int CommandRequestBatch::requests_size() const
-{
-    return requests_.size();
+inline int CommandRequestBatch::requests_size() const {
+  return requests_.size();
 }
-inline void CommandRequestBatch::clear_requests()
-{
-    requests_.Clear();
+inline void CommandRequestBatch::clear_requests() {
+  requests_.Clear();
 }
-inline const ::enginepb::CommandRequest & CommandRequestBatch::requests(int index) const
-{
-    // @@protoc_insertion_point(field_get:enginepb.CommandRequestBatch.requests)
-    return requests_.Get(index);
+inline const ::enginepb::CommandRequest& CommandRequestBatch::requests(int index) const {
+  // @@protoc_insertion_point(field_get:enginepb.CommandRequestBatch.requests)
+  return requests_.Get(index);
 }
-inline ::enginepb::CommandRequest * CommandRequestBatch::mutable_requests(int index)
-{
-    // @@protoc_insertion_point(field_mutable:enginepb.CommandRequestBatch.requests)
-    return requests_.Mutable(index);
+inline ::enginepb::CommandRequest* CommandRequestBatch::mutable_requests(int index) {
+  // @@protoc_insertion_point(field_mutable:enginepb.CommandRequestBatch.requests)
+  return requests_.Mutable(index);
 }
-inline ::enginepb::CommandRequest * CommandRequestBatch::add_requests()
-{
-    // @@protoc_insertion_point(field_add:enginepb.CommandRequestBatch.requests)
-    return requests_.Add();
+inline ::enginepb::CommandRequest* CommandRequestBatch::add_requests() {
+  // @@protoc_insertion_point(field_add:enginepb.CommandRequestBatch.requests)
+  return requests_.Add();
 }
-inline ::google::protobuf::RepeatedPtrField<::enginepb::CommandRequest> * CommandRequestBatch::mutable_requests()
-{
-    // @@protoc_insertion_point(field_mutable_list:enginepb.CommandRequestBatch.requests)
-    return &requests_;
+inline ::google::protobuf::RepeatedPtrField< ::enginepb::CommandRequest >*
+CommandRequestBatch::mutable_requests() {
+  // @@protoc_insertion_point(field_mutable_list:enginepb.CommandRequestBatch.requests)
+  return &requests_;
 }
-inline const ::google::protobuf::RepeatedPtrField<::enginepb::CommandRequest> & CommandRequestBatch::requests() const
-{
-    // @@protoc_insertion_point(field_list:enginepb.CommandRequestBatch.requests)
-    return requests_;
+inline const ::google::protobuf::RepeatedPtrField< ::enginepb::CommandRequest >&
+CommandRequestBatch::requests() const {
+  // @@protoc_insertion_point(field_list:enginepb.CommandRequestBatch.requests)
+  return requests_;
 }
 
 // -------------------------------------------------------------------
@@ -1648,20 +1630,17 @@ inline const ::google::protobuf::RepeatedPtrField<::enginepb::CommandRequest> & 
 // CommandResponseHeader
 
 // uint64 region_id = 1;
-inline void CommandResponseHeader::clear_region_id()
-{
-    region_id_ = GOOGLE_ULONGLONG(0);
+inline void CommandResponseHeader::clear_region_id() {
+  region_id_ = GOOGLE_ULONGLONG(0);
 }
-inline ::google::protobuf::uint64 CommandResponseHeader::region_id() const
-{
-    // @@protoc_insertion_point(field_get:enginepb.CommandResponseHeader.region_id)
-    return region_id_;
+inline ::google::protobuf::uint64 CommandResponseHeader::region_id() const {
+  // @@protoc_insertion_point(field_get:enginepb.CommandResponseHeader.region_id)
+  return region_id_;
 }
-inline void CommandResponseHeader::set_region_id(::google::protobuf::uint64 value)
-{
-
-    region_id_ = value;
-    // @@protoc_insertion_point(field_set:enginepb.CommandResponseHeader.region_id)
+inline void CommandResponseHeader::set_region_id(::google::protobuf::uint64 value) {
+  
+  region_id_ = value;
+  // @@protoc_insertion_point(field_set:enginepb.CommandResponseHeader.region_id)
 }
 
 // -------------------------------------------------------------------
@@ -1669,131 +1648,111 @@ inline void CommandResponseHeader::set_region_id(::google::protobuf::uint64 valu
 // CommandResponse
 
 // .enginepb.CommandResponseHeader header = 1;
-inline bool CommandResponse::has_header() const
-{
-    return this != internal_default_instance() && header_ != NULL;
+inline bool CommandResponse::has_header() const {
+  return this != internal_default_instance() && header_ != NULL;
 }
-inline void CommandResponse::clear_header()
-{
-    if (GetArenaNoVirtual() == NULL && header_ != NULL)
-    {
-        delete header_;
-    }
-    header_ = NULL;
+inline void CommandResponse::clear_header() {
+  if (GetArenaNoVirtual() == NULL && header_ != NULL) {
+    delete header_;
+  }
+  header_ = NULL;
 }
-inline const ::enginepb::CommandResponseHeader & CommandResponse::header() const
-{
-    const ::enginepb::CommandResponseHeader * p = header_;
-    // @@protoc_insertion_point(field_get:enginepb.CommandResponse.header)
-    return p != NULL ? *p
-                     : *reinterpret_cast<const ::enginepb::CommandResponseHeader *>(&::enginepb::_CommandResponseHeader_default_instance_);
+inline const ::enginepb::CommandResponseHeader& CommandResponse::header() const {
+  const ::enginepb::CommandResponseHeader* p = header_;
+  // @@protoc_insertion_point(field_get:enginepb.CommandResponse.header)
+  return p != NULL ? *p : *reinterpret_cast<const ::enginepb::CommandResponseHeader*>(
+      &::enginepb::_CommandResponseHeader_default_instance_);
 }
-inline ::enginepb::CommandResponseHeader * CommandResponse::release_header()
-{
-    // @@protoc_insertion_point(field_release:enginepb.CommandResponse.header)
-
-    ::enginepb::CommandResponseHeader * temp = header_;
-    header_                                  = NULL;
-    return temp;
+inline ::enginepb::CommandResponseHeader* CommandResponse::release_header() {
+  // @@protoc_insertion_point(field_release:enginepb.CommandResponse.header)
+  
+  ::enginepb::CommandResponseHeader* temp = header_;
+  header_ = NULL;
+  return temp;
 }
-inline ::enginepb::CommandResponseHeader * CommandResponse::mutable_header()
-{
-
-    if (header_ == NULL)
-    {
-        header_ = new ::enginepb::CommandResponseHeader;
-    }
-    // @@protoc_insertion_point(field_mutable:enginepb.CommandResponse.header)
-    return header_;
+inline ::enginepb::CommandResponseHeader* CommandResponse::mutable_header() {
+  
+  if (header_ == NULL) {
+    header_ = new ::enginepb::CommandResponseHeader;
+  }
+  // @@protoc_insertion_point(field_mutable:enginepb.CommandResponse.header)
+  return header_;
 }
-inline void CommandResponse::set_allocated_header(::enginepb::CommandResponseHeader * header)
-{
-    ::google::protobuf::Arena * message_arena = GetArenaNoVirtual();
-    if (message_arena == NULL)
-    {
-        delete header_;
+inline void CommandResponse::set_allocated_header(::enginepb::CommandResponseHeader* header) {
+  ::google::protobuf::Arena* message_arena = GetArenaNoVirtual();
+  if (message_arena == NULL) {
+    delete header_;
+  }
+  if (header) {
+    ::google::protobuf::Arena* submessage_arena = NULL;
+    if (message_arena != submessage_arena) {
+      header = ::google::protobuf::internal::GetOwnedMessage(
+          message_arena, header, submessage_arena);
     }
-    if (header)
-    {
-        ::google::protobuf::Arena * submessage_arena = NULL;
-        if (message_arena != submessage_arena)
-        {
-            header = ::google::protobuf::internal::GetOwnedMessage(message_arena, header, submessage_arena);
-        }
-    }
-    else
-    {
-    }
-    header_ = header;
-    // @@protoc_insertion_point(field_set_allocated:enginepb.CommandResponse.header)
+    
+  } else {
+    
+  }
+  header_ = header;
+  // @@protoc_insertion_point(field_set_allocated:enginepb.CommandResponse.header)
 }
 
 // .raft_serverpb.RaftApplyState apply_state = 2;
-inline bool CommandResponse::has_apply_state() const
-{
-    return this != internal_default_instance() && apply_state_ != NULL;
+inline bool CommandResponse::has_apply_state() const {
+  return this != internal_default_instance() && apply_state_ != NULL;
 }
-inline const ::raft_serverpb::RaftApplyState & CommandResponse::apply_state() const
-{
-    const ::raft_serverpb::RaftApplyState * p = apply_state_;
-    // @@protoc_insertion_point(field_get:enginepb.CommandResponse.apply_state)
-    return p != NULL ? *p : *reinterpret_cast<const ::raft_serverpb::RaftApplyState *>(&::raft_serverpb::_RaftApplyState_default_instance_);
+inline const ::raft_serverpb::RaftApplyState& CommandResponse::apply_state() const {
+  const ::raft_serverpb::RaftApplyState* p = apply_state_;
+  // @@protoc_insertion_point(field_get:enginepb.CommandResponse.apply_state)
+  return p != NULL ? *p : *reinterpret_cast<const ::raft_serverpb::RaftApplyState*>(
+      &::raft_serverpb::_RaftApplyState_default_instance_);
 }
-inline ::raft_serverpb::RaftApplyState * CommandResponse::release_apply_state()
-{
-    // @@protoc_insertion_point(field_release:enginepb.CommandResponse.apply_state)
-
-    ::raft_serverpb::RaftApplyState * temp = apply_state_;
-    apply_state_                           = NULL;
-    return temp;
+inline ::raft_serverpb::RaftApplyState* CommandResponse::release_apply_state() {
+  // @@protoc_insertion_point(field_release:enginepb.CommandResponse.apply_state)
+  
+  ::raft_serverpb::RaftApplyState* temp = apply_state_;
+  apply_state_ = NULL;
+  return temp;
 }
-inline ::raft_serverpb::RaftApplyState * CommandResponse::mutable_apply_state()
-{
-
-    if (apply_state_ == NULL)
-    {
-        apply_state_ = new ::raft_serverpb::RaftApplyState;
-    }
-    // @@protoc_insertion_point(field_mutable:enginepb.CommandResponse.apply_state)
-    return apply_state_;
+inline ::raft_serverpb::RaftApplyState* CommandResponse::mutable_apply_state() {
+  
+  if (apply_state_ == NULL) {
+    apply_state_ = new ::raft_serverpb::RaftApplyState;
+  }
+  // @@protoc_insertion_point(field_mutable:enginepb.CommandResponse.apply_state)
+  return apply_state_;
 }
-inline void CommandResponse::set_allocated_apply_state(::raft_serverpb::RaftApplyState * apply_state)
-{
-    ::google::protobuf::Arena * message_arena = GetArenaNoVirtual();
-    if (message_arena == NULL)
-    {
-        delete reinterpret_cast<::google::protobuf::MessageLite *>(apply_state_);
+inline void CommandResponse::set_allocated_apply_state(::raft_serverpb::RaftApplyState* apply_state) {
+  ::google::protobuf::Arena* message_arena = GetArenaNoVirtual();
+  if (message_arena == NULL) {
+    delete reinterpret_cast< ::google::protobuf::MessageLite*>(apply_state_);
+  }
+  if (apply_state) {
+    ::google::protobuf::Arena* submessage_arena = NULL;
+    if (message_arena != submessage_arena) {
+      apply_state = ::google::protobuf::internal::GetOwnedMessage(
+          message_arena, apply_state, submessage_arena);
     }
-    if (apply_state)
-    {
-        ::google::protobuf::Arena * submessage_arena = NULL;
-        if (message_arena != submessage_arena)
-        {
-            apply_state = ::google::protobuf::internal::GetOwnedMessage(message_arena, apply_state, submessage_arena);
-        }
-    }
-    else
-    {
-    }
-    apply_state_ = apply_state;
-    // @@protoc_insertion_point(field_set_allocated:enginepb.CommandResponse.apply_state)
+    
+  } else {
+    
+  }
+  apply_state_ = apply_state;
+  // @@protoc_insertion_point(field_set_allocated:enginepb.CommandResponse.apply_state)
 }
 
 // uint64 applied_term = 3;
-inline void CommandResponse::clear_applied_term()
-{
-    applied_term_ = GOOGLE_ULONGLONG(0);
+inline void CommandResponse::clear_applied_term() {
+  applied_term_ = GOOGLE_ULONGLONG(0);
 }
-inline ::google::protobuf::uint64 CommandResponse::applied_term() const
-{
-    // @@protoc_insertion_point(field_get:enginepb.CommandResponse.applied_term)
-    return applied_term_;
+inline ::google::protobuf::uint64 CommandResponse::applied_term() const {
+  // @@protoc_insertion_point(field_get:enginepb.CommandResponse.applied_term)
+  return applied_term_;
 }
-inline void CommandResponse::set_applied_term(::google::protobuf::uint64 value)
-{
-
-    applied_term_ = value;
-    // @@protoc_insertion_point(field_set:enginepb.CommandResponse.applied_term)
+inline void CommandResponse::set_applied_term(::google::protobuf::uint64 value) {
+  
+  applied_term_ = value;
+  // @@protoc_insertion_point(field_set:enginepb.CommandResponse.applied_term)
 }
 
 // -------------------------------------------------------------------
@@ -1801,38 +1760,33 @@ inline void CommandResponse::set_applied_term(::google::protobuf::uint64 value)
 // CommandResponseBatch
 
 // repeated .enginepb.CommandResponse responses = 1;
-inline int CommandResponseBatch::responses_size() const
-{
-    return responses_.size();
+inline int CommandResponseBatch::responses_size() const {
+  return responses_.size();
 }
-inline void CommandResponseBatch::clear_responses()
-{
-    responses_.Clear();
+inline void CommandResponseBatch::clear_responses() {
+  responses_.Clear();
 }
-inline const ::enginepb::CommandResponse & CommandResponseBatch::responses(int index) const
-{
-    // @@protoc_insertion_point(field_get:enginepb.CommandResponseBatch.responses)
-    return responses_.Get(index);
+inline const ::enginepb::CommandResponse& CommandResponseBatch::responses(int index) const {
+  // @@protoc_insertion_point(field_get:enginepb.CommandResponseBatch.responses)
+  return responses_.Get(index);
 }
-inline ::enginepb::CommandResponse * CommandResponseBatch::mutable_responses(int index)
-{
-    // @@protoc_insertion_point(field_mutable:enginepb.CommandResponseBatch.responses)
-    return responses_.Mutable(index);
+inline ::enginepb::CommandResponse* CommandResponseBatch::mutable_responses(int index) {
+  // @@protoc_insertion_point(field_mutable:enginepb.CommandResponseBatch.responses)
+  return responses_.Mutable(index);
 }
-inline ::enginepb::CommandResponse * CommandResponseBatch::add_responses()
-{
-    // @@protoc_insertion_point(field_add:enginepb.CommandResponseBatch.responses)
-    return responses_.Add();
+inline ::enginepb::CommandResponse* CommandResponseBatch::add_responses() {
+  // @@protoc_insertion_point(field_add:enginepb.CommandResponseBatch.responses)
+  return responses_.Add();
 }
-inline ::google::protobuf::RepeatedPtrField<::enginepb::CommandResponse> * CommandResponseBatch::mutable_responses()
-{
-    // @@protoc_insertion_point(field_mutable_list:enginepb.CommandResponseBatch.responses)
-    return &responses_;
+inline ::google::protobuf::RepeatedPtrField< ::enginepb::CommandResponse >*
+CommandResponseBatch::mutable_responses() {
+  // @@protoc_insertion_point(field_mutable_list:enginepb.CommandResponseBatch.responses)
+  return &responses_;
 }
-inline const ::google::protobuf::RepeatedPtrField<::enginepb::CommandResponse> & CommandResponseBatch::responses() const
-{
-    // @@protoc_insertion_point(field_list:enginepb.CommandResponseBatch.responses)
-    return responses_;
+inline const ::google::protobuf::RepeatedPtrField< ::enginepb::CommandResponse >&
+CommandResponseBatch::responses() const {
+  // @@protoc_insertion_point(field_list:enginepb.CommandResponseBatch.responses)
+  return responses_;
 }
 
 // -------------------------------------------------------------------
@@ -1840,156 +1794,135 @@ inline const ::google::protobuf::RepeatedPtrField<::enginepb::CommandResponse> &
 // SnapshotState
 
 // .metapb.Region region = 1;
-inline bool SnapshotState::has_region() const
-{
-    return this != internal_default_instance() && region_ != NULL;
+inline bool SnapshotState::has_region() const {
+  return this != internal_default_instance() && region_ != NULL;
 }
-inline const ::metapb::Region & SnapshotState::region() const
-{
-    const ::metapb::Region * p = region_;
-    // @@protoc_insertion_point(field_get:enginepb.SnapshotState.region)
-    return p != NULL ? *p : *reinterpret_cast<const ::metapb::Region *>(&::metapb::_Region_default_instance_);
+inline const ::metapb::Region& SnapshotState::region() const {
+  const ::metapb::Region* p = region_;
+  // @@protoc_insertion_point(field_get:enginepb.SnapshotState.region)
+  return p != NULL ? *p : *reinterpret_cast<const ::metapb::Region*>(
+      &::metapb::_Region_default_instance_);
 }
-inline ::metapb::Region * SnapshotState::release_region()
-{
-    // @@protoc_insertion_point(field_release:enginepb.SnapshotState.region)
-
-    ::metapb::Region * temp = region_;
-    region_                 = NULL;
-    return temp;
+inline ::metapb::Region* SnapshotState::release_region() {
+  // @@protoc_insertion_point(field_release:enginepb.SnapshotState.region)
+  
+  ::metapb::Region* temp = region_;
+  region_ = NULL;
+  return temp;
 }
-inline ::metapb::Region * SnapshotState::mutable_region()
-{
-
-    if (region_ == NULL)
-    {
-        region_ = new ::metapb::Region;
-    }
-    // @@protoc_insertion_point(field_mutable:enginepb.SnapshotState.region)
-    return region_;
+inline ::metapb::Region* SnapshotState::mutable_region() {
+  
+  if (region_ == NULL) {
+    region_ = new ::metapb::Region;
+  }
+  // @@protoc_insertion_point(field_mutable:enginepb.SnapshotState.region)
+  return region_;
 }
-inline void SnapshotState::set_allocated_region(::metapb::Region * region)
-{
-    ::google::protobuf::Arena * message_arena = GetArenaNoVirtual();
-    if (message_arena == NULL)
-    {
-        delete reinterpret_cast<::google::protobuf::MessageLite *>(region_);
+inline void SnapshotState::set_allocated_region(::metapb::Region* region) {
+  ::google::protobuf::Arena* message_arena = GetArenaNoVirtual();
+  if (message_arena == NULL) {
+    delete reinterpret_cast< ::google::protobuf::MessageLite*>(region_);
+  }
+  if (region) {
+    ::google::protobuf::Arena* submessage_arena = NULL;
+    if (message_arena != submessage_arena) {
+      region = ::google::protobuf::internal::GetOwnedMessage(
+          message_arena, region, submessage_arena);
     }
-    if (region)
-    {
-        ::google::protobuf::Arena * submessage_arena = NULL;
-        if (message_arena != submessage_arena)
-        {
-            region = ::google::protobuf::internal::GetOwnedMessage(message_arena, region, submessage_arena);
-        }
-    }
-    else
-    {
-    }
-    region_ = region;
-    // @@protoc_insertion_point(field_set_allocated:enginepb.SnapshotState.region)
+    
+  } else {
+    
+  }
+  region_ = region;
+  // @@protoc_insertion_point(field_set_allocated:enginepb.SnapshotState.region)
 }
 
 // .metapb.Peer peer = 2;
-inline bool SnapshotState::has_peer() const
-{
-    return this != internal_default_instance() && peer_ != NULL;
+inline bool SnapshotState::has_peer() const {
+  return this != internal_default_instance() && peer_ != NULL;
 }
-inline const ::metapb::Peer & SnapshotState::peer() const
-{
-    const ::metapb::Peer * p = peer_;
-    // @@protoc_insertion_point(field_get:enginepb.SnapshotState.peer)
-    return p != NULL ? *p : *reinterpret_cast<const ::metapb::Peer *>(&::metapb::_Peer_default_instance_);
+inline const ::metapb::Peer& SnapshotState::peer() const {
+  const ::metapb::Peer* p = peer_;
+  // @@protoc_insertion_point(field_get:enginepb.SnapshotState.peer)
+  return p != NULL ? *p : *reinterpret_cast<const ::metapb::Peer*>(
+      &::metapb::_Peer_default_instance_);
 }
-inline ::metapb::Peer * SnapshotState::release_peer()
-{
-    // @@protoc_insertion_point(field_release:enginepb.SnapshotState.peer)
-
-    ::metapb::Peer * temp = peer_;
-    peer_                 = NULL;
-    return temp;
+inline ::metapb::Peer* SnapshotState::release_peer() {
+  // @@protoc_insertion_point(field_release:enginepb.SnapshotState.peer)
+  
+  ::metapb::Peer* temp = peer_;
+  peer_ = NULL;
+  return temp;
 }
-inline ::metapb::Peer * SnapshotState::mutable_peer()
-{
-
-    if (peer_ == NULL)
-    {
-        peer_ = new ::metapb::Peer;
-    }
-    // @@protoc_insertion_point(field_mutable:enginepb.SnapshotState.peer)
-    return peer_;
+inline ::metapb::Peer* SnapshotState::mutable_peer() {
+  
+  if (peer_ == NULL) {
+    peer_ = new ::metapb::Peer;
+  }
+  // @@protoc_insertion_point(field_mutable:enginepb.SnapshotState.peer)
+  return peer_;
 }
-inline void SnapshotState::set_allocated_peer(::metapb::Peer * peer)
-{
-    ::google::protobuf::Arena * message_arena = GetArenaNoVirtual();
-    if (message_arena == NULL)
-    {
-        delete reinterpret_cast<::google::protobuf::MessageLite *>(peer_);
+inline void SnapshotState::set_allocated_peer(::metapb::Peer* peer) {
+  ::google::protobuf::Arena* message_arena = GetArenaNoVirtual();
+  if (message_arena == NULL) {
+    delete reinterpret_cast< ::google::protobuf::MessageLite*>(peer_);
+  }
+  if (peer) {
+    ::google::protobuf::Arena* submessage_arena = NULL;
+    if (message_arena != submessage_arena) {
+      peer = ::google::protobuf::internal::GetOwnedMessage(
+          message_arena, peer, submessage_arena);
     }
-    if (peer)
-    {
-        ::google::protobuf::Arena * submessage_arena = NULL;
-        if (message_arena != submessage_arena)
-        {
-            peer = ::google::protobuf::internal::GetOwnedMessage(message_arena, peer, submessage_arena);
-        }
-    }
-    else
-    {
-    }
-    peer_ = peer;
-    // @@protoc_insertion_point(field_set_allocated:enginepb.SnapshotState.peer)
+    
+  } else {
+    
+  }
+  peer_ = peer;
+  // @@protoc_insertion_point(field_set_allocated:enginepb.SnapshotState.peer)
 }
 
 // .raft_serverpb.RaftApplyState apply_state = 3;
-inline bool SnapshotState::has_apply_state() const
-{
-    return this != internal_default_instance() && apply_state_ != NULL;
+inline bool SnapshotState::has_apply_state() const {
+  return this != internal_default_instance() && apply_state_ != NULL;
 }
-inline const ::raft_serverpb::RaftApplyState & SnapshotState::apply_state() const
-{
-    const ::raft_serverpb::RaftApplyState * p = apply_state_;
-    // @@protoc_insertion_point(field_get:enginepb.SnapshotState.apply_state)
-    return p != NULL ? *p : *reinterpret_cast<const ::raft_serverpb::RaftApplyState *>(&::raft_serverpb::_RaftApplyState_default_instance_);
+inline const ::raft_serverpb::RaftApplyState& SnapshotState::apply_state() const {
+  const ::raft_serverpb::RaftApplyState* p = apply_state_;
+  // @@protoc_insertion_point(field_get:enginepb.SnapshotState.apply_state)
+  return p != NULL ? *p : *reinterpret_cast<const ::raft_serverpb::RaftApplyState*>(
+      &::raft_serverpb::_RaftApplyState_default_instance_);
 }
-inline ::raft_serverpb::RaftApplyState * SnapshotState::release_apply_state()
-{
-    // @@protoc_insertion_point(field_release:enginepb.SnapshotState.apply_state)
-
-    ::raft_serverpb::RaftApplyState * temp = apply_state_;
-    apply_state_                           = NULL;
-    return temp;
+inline ::raft_serverpb::RaftApplyState* SnapshotState::release_apply_state() {
+  // @@protoc_insertion_point(field_release:enginepb.SnapshotState.apply_state)
+  
+  ::raft_serverpb::RaftApplyState* temp = apply_state_;
+  apply_state_ = NULL;
+  return temp;
 }
-inline ::raft_serverpb::RaftApplyState * SnapshotState::mutable_apply_state()
-{
-
-    if (apply_state_ == NULL)
-    {
-        apply_state_ = new ::raft_serverpb::RaftApplyState;
-    }
-    // @@protoc_insertion_point(field_mutable:enginepb.SnapshotState.apply_state)
-    return apply_state_;
+inline ::raft_serverpb::RaftApplyState* SnapshotState::mutable_apply_state() {
+  
+  if (apply_state_ == NULL) {
+    apply_state_ = new ::raft_serverpb::RaftApplyState;
+  }
+  // @@protoc_insertion_point(field_mutable:enginepb.SnapshotState.apply_state)
+  return apply_state_;
 }
-inline void SnapshotState::set_allocated_apply_state(::raft_serverpb::RaftApplyState * apply_state)
-{
-    ::google::protobuf::Arena * message_arena = GetArenaNoVirtual();
-    if (message_arena == NULL)
-    {
-        delete reinterpret_cast<::google::protobuf::MessageLite *>(apply_state_);
+inline void SnapshotState::set_allocated_apply_state(::raft_serverpb::RaftApplyState* apply_state) {
+  ::google::protobuf::Arena* message_arena = GetArenaNoVirtual();
+  if (message_arena == NULL) {
+    delete reinterpret_cast< ::google::protobuf::MessageLite*>(apply_state_);
+  }
+  if (apply_state) {
+    ::google::protobuf::Arena* submessage_arena = NULL;
+    if (message_arena != submessage_arena) {
+      apply_state = ::google::protobuf::internal::GetOwnedMessage(
+          message_arena, apply_state, submessage_arena);
     }
-    if (apply_state)
-    {
-        ::google::protobuf::Arena * submessage_arena = NULL;
-        if (message_arena != submessage_arena)
-        {
-            apply_state = ::google::protobuf::internal::GetOwnedMessage(message_arena, apply_state, submessage_arena);
-        }
-    }
-    else
-    {
-    }
-    apply_state_ = apply_state;
-    // @@protoc_insertion_point(field_set_allocated:enginepb.SnapshotState.apply_state)
+    
+  } else {
+    
+  }
+  apply_state_ = apply_state;
+  // @@protoc_insertion_point(field_set_allocated:enginepb.SnapshotState.apply_state)
 }
 
 // -------------------------------------------------------------------
@@ -1997,111 +1930,97 @@ inline void SnapshotState::set_allocated_apply_state(::raft_serverpb::RaftApplyS
 // SnapshotData
 
 // string cf = 1;
-inline void SnapshotData::clear_cf()
-{
-    cf_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+inline void SnapshotData::clear_cf() {
+  cf_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
-inline const ::std::string & SnapshotData::cf() const
-{
-    // @@protoc_insertion_point(field_get:enginepb.SnapshotData.cf)
-    return cf_.GetNoArena();
+inline const ::std::string& SnapshotData::cf() const {
+  // @@protoc_insertion_point(field_get:enginepb.SnapshotData.cf)
+  return cf_.GetNoArena();
 }
-inline void SnapshotData::set_cf(const ::std::string & value)
-{
-
-    cf_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
-    // @@protoc_insertion_point(field_set:enginepb.SnapshotData.cf)
+inline void SnapshotData::set_cf(const ::std::string& value) {
+  
+  cf_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
+  // @@protoc_insertion_point(field_set:enginepb.SnapshotData.cf)
 }
 #if LANG_CXX11
-inline void SnapshotData::set_cf(::std::string && value)
-{
-
-    cf_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
-    // @@protoc_insertion_point(field_set_rvalue:enginepb.SnapshotData.cf)
+inline void SnapshotData::set_cf(::std::string&& value) {
+  
+  cf_.SetNoArena(
+    &::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
+  // @@protoc_insertion_point(field_set_rvalue:enginepb.SnapshotData.cf)
 }
 #endif
-inline void SnapshotData::set_cf(const char * value)
-{
-    GOOGLE_DCHECK(value != NULL);
-
-    cf_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
-    // @@protoc_insertion_point(field_set_char:enginepb.SnapshotData.cf)
+inline void SnapshotData::set_cf(const char* value) {
+  GOOGLE_DCHECK(value != NULL);
+  
+  cf_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
+  // @@protoc_insertion_point(field_set_char:enginepb.SnapshotData.cf)
 }
-inline void SnapshotData::set_cf(const char * value, size_t size)
-{
-
-    cf_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
-                   ::std::string(reinterpret_cast<const char *>(value), size));
-    // @@protoc_insertion_point(field_set_pointer:enginepb.SnapshotData.cf)
+inline void SnapshotData::set_cf(const char* value, size_t size) {
+  
+  cf_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+      ::std::string(reinterpret_cast<const char*>(value), size));
+  // @@protoc_insertion_point(field_set_pointer:enginepb.SnapshotData.cf)
 }
-inline ::std::string * SnapshotData::mutable_cf()
-{
-
-    // @@protoc_insertion_point(field_mutable:enginepb.SnapshotData.cf)
-    return cf_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+inline ::std::string* SnapshotData::mutable_cf() {
+  
+  // @@protoc_insertion_point(field_mutable:enginepb.SnapshotData.cf)
+  return cf_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
-inline ::std::string * SnapshotData::release_cf()
-{
-    // @@protoc_insertion_point(field_release:enginepb.SnapshotData.cf)
-
-    return cf_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+inline ::std::string* SnapshotData::release_cf() {
+  // @@protoc_insertion_point(field_release:enginepb.SnapshotData.cf)
+  
+  return cf_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
-inline void SnapshotData::set_allocated_cf(::std::string * cf)
-{
-    if (cf != NULL) {}
-    else
-    {
-    }
-    cf_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), cf);
-    // @@protoc_insertion_point(field_set_allocated:enginepb.SnapshotData.cf)
+inline void SnapshotData::set_allocated_cf(::std::string* cf) {
+  if (cf != NULL) {
+    
+  } else {
+    
+  }
+  cf_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), cf);
+  // @@protoc_insertion_point(field_set_allocated:enginepb.SnapshotData.cf)
 }
 
 // uint32 checksum = 2;
-inline void SnapshotData::clear_checksum()
-{
-    checksum_ = 0u;
+inline void SnapshotData::clear_checksum() {
+  checksum_ = 0u;
 }
-inline ::google::protobuf::uint32 SnapshotData::checksum() const
-{
-    // @@protoc_insertion_point(field_get:enginepb.SnapshotData.checksum)
-    return checksum_;
+inline ::google::protobuf::uint32 SnapshotData::checksum() const {
+  // @@protoc_insertion_point(field_get:enginepb.SnapshotData.checksum)
+  return checksum_;
 }
-inline void SnapshotData::set_checksum(::google::protobuf::uint32 value)
-{
-
-    checksum_ = value;
-    // @@protoc_insertion_point(field_set:enginepb.SnapshotData.checksum)
+inline void SnapshotData::set_checksum(::google::protobuf::uint32 value) {
+  
+  checksum_ = value;
+  // @@protoc_insertion_point(field_set:enginepb.SnapshotData.checksum)
 }
 
 // repeated .raft_serverpb.KeyValue data = 3;
-inline int SnapshotData::data_size() const
-{
-    return data_.size();
+inline int SnapshotData::data_size() const {
+  return data_.size();
 }
-inline const ::raft_serverpb::KeyValue & SnapshotData::data(int index) const
-{
-    // @@protoc_insertion_point(field_get:enginepb.SnapshotData.data)
-    return data_.Get(index);
+inline const ::raft_serverpb::KeyValue& SnapshotData::data(int index) const {
+  // @@protoc_insertion_point(field_get:enginepb.SnapshotData.data)
+  return data_.Get(index);
 }
-inline ::raft_serverpb::KeyValue * SnapshotData::mutable_data(int index)
-{
-    // @@protoc_insertion_point(field_mutable:enginepb.SnapshotData.data)
-    return data_.Mutable(index);
+inline ::raft_serverpb::KeyValue* SnapshotData::mutable_data(int index) {
+  // @@protoc_insertion_point(field_mutable:enginepb.SnapshotData.data)
+  return data_.Mutable(index);
 }
-inline ::raft_serverpb::KeyValue * SnapshotData::add_data()
-{
-    // @@protoc_insertion_point(field_add:enginepb.SnapshotData.data)
-    return data_.Add();
+inline ::raft_serverpb::KeyValue* SnapshotData::add_data() {
+  // @@protoc_insertion_point(field_add:enginepb.SnapshotData.data)
+  return data_.Add();
 }
-inline ::google::protobuf::RepeatedPtrField<::raft_serverpb::KeyValue> * SnapshotData::mutable_data()
-{
-    // @@protoc_insertion_point(field_mutable_list:enginepb.SnapshotData.data)
-    return &data_;
+inline ::google::protobuf::RepeatedPtrField< ::raft_serverpb::KeyValue >*
+SnapshotData::mutable_data() {
+  // @@protoc_insertion_point(field_mutable_list:enginepb.SnapshotData.data)
+  return &data_;
 }
-inline const ::google::protobuf::RepeatedPtrField<::raft_serverpb::KeyValue> & SnapshotData::data() const
-{
-    // @@protoc_insertion_point(field_list:enginepb.SnapshotData.data)
-    return data_;
+inline const ::google::protobuf::RepeatedPtrField< ::raft_serverpb::KeyValue >&
+SnapshotData::data() const {
+  // @@protoc_insertion_point(field_list:enginepb.SnapshotData.data)
+  return data_;
 }
 
 // -------------------------------------------------------------------
@@ -2109,122 +2028,101 @@ inline const ::google::protobuf::RepeatedPtrField<::raft_serverpb::KeyValue> & S
 // SnapshotRequest
 
 // .enginepb.SnapshotState state = 1;
-inline bool SnapshotRequest::has_state() const
-{
-    return chunk_case() == kState;
+inline bool SnapshotRequest::has_state() const {
+  return chunk_case() == kState;
 }
-inline void SnapshotRequest::set_has_state()
-{
-    _oneof_case_[0] = kState;
+inline void SnapshotRequest::set_has_state() {
+  _oneof_case_[0] = kState;
 }
-inline void SnapshotRequest::clear_state()
-{
-    if (has_state())
-    {
-        delete chunk_.state_;
-        clear_has_chunk();
-    }
+inline void SnapshotRequest::clear_state() {
+  if (has_state()) {
+    delete chunk_.state_;
+    clear_has_chunk();
+  }
 }
-inline ::enginepb::SnapshotState * SnapshotRequest::release_state()
-{
-    // @@protoc_insertion_point(field_release:enginepb.SnapshotRequest.state)
-    if (has_state())
-    {
-        clear_has_chunk();
-        ::enginepb::SnapshotState * temp = chunk_.state_;
-        chunk_.state_                    = NULL;
-        return temp;
-    }
-    else
-    {
-        return NULL;
-    }
+inline ::enginepb::SnapshotState* SnapshotRequest::release_state() {
+  // @@protoc_insertion_point(field_release:enginepb.SnapshotRequest.state)
+  if (has_state()) {
+    clear_has_chunk();
+      ::enginepb::SnapshotState* temp = chunk_.state_;
+    chunk_.state_ = NULL;
+    return temp;
+  } else {
+    return NULL;
+  }
 }
-inline const ::enginepb::SnapshotState & SnapshotRequest::state() const
-{
-    // @@protoc_insertion_point(field_get:enginepb.SnapshotRequest.state)
-    return has_state() ? *chunk_.state_ : *reinterpret_cast<::enginepb::SnapshotState *>(&::enginepb::_SnapshotState_default_instance_);
+inline const ::enginepb::SnapshotState& SnapshotRequest::state() const {
+  // @@protoc_insertion_point(field_get:enginepb.SnapshotRequest.state)
+  return has_state()
+      ? *chunk_.state_
+      : *reinterpret_cast< ::enginepb::SnapshotState*>(&::enginepb::_SnapshotState_default_instance_);
 }
-inline ::enginepb::SnapshotState * SnapshotRequest::mutable_state()
-{
-    if (!has_state())
-    {
-        clear_chunk();
-        set_has_state();
-        chunk_.state_ = new ::enginepb::SnapshotState;
-    }
-    // @@protoc_insertion_point(field_mutable:enginepb.SnapshotRequest.state)
-    return chunk_.state_;
+inline ::enginepb::SnapshotState* SnapshotRequest::mutable_state() {
+  if (!has_state()) {
+    clear_chunk();
+    set_has_state();
+    chunk_.state_ = new ::enginepb::SnapshotState;
+  }
+  // @@protoc_insertion_point(field_mutable:enginepb.SnapshotRequest.state)
+  return chunk_.state_;
 }
 
 // .enginepb.SnapshotData data = 2;
-inline bool SnapshotRequest::has_data() const
-{
-    return chunk_case() == kData;
+inline bool SnapshotRequest::has_data() const {
+  return chunk_case() == kData;
 }
-inline void SnapshotRequest::set_has_data()
-{
-    _oneof_case_[0] = kData;
+inline void SnapshotRequest::set_has_data() {
+  _oneof_case_[0] = kData;
 }
-inline void SnapshotRequest::clear_data()
-{
-    if (has_data())
-    {
-        delete chunk_.data_;
-        clear_has_chunk();
-    }
+inline void SnapshotRequest::clear_data() {
+  if (has_data()) {
+    delete chunk_.data_;
+    clear_has_chunk();
+  }
 }
-inline ::enginepb::SnapshotData * SnapshotRequest::release_data()
-{
-    // @@protoc_insertion_point(field_release:enginepb.SnapshotRequest.data)
-    if (has_data())
-    {
-        clear_has_chunk();
-        ::enginepb::SnapshotData * temp = chunk_.data_;
-        chunk_.data_                    = NULL;
-        return temp;
-    }
-    else
-    {
-        return NULL;
-    }
+inline ::enginepb::SnapshotData* SnapshotRequest::release_data() {
+  // @@protoc_insertion_point(field_release:enginepb.SnapshotRequest.data)
+  if (has_data()) {
+    clear_has_chunk();
+      ::enginepb::SnapshotData* temp = chunk_.data_;
+    chunk_.data_ = NULL;
+    return temp;
+  } else {
+    return NULL;
+  }
 }
-inline const ::enginepb::SnapshotData & SnapshotRequest::data() const
-{
-    // @@protoc_insertion_point(field_get:enginepb.SnapshotRequest.data)
-    return has_data() ? *chunk_.data_ : *reinterpret_cast<::enginepb::SnapshotData *>(&::enginepb::_SnapshotData_default_instance_);
+inline const ::enginepb::SnapshotData& SnapshotRequest::data() const {
+  // @@protoc_insertion_point(field_get:enginepb.SnapshotRequest.data)
+  return has_data()
+      ? *chunk_.data_
+      : *reinterpret_cast< ::enginepb::SnapshotData*>(&::enginepb::_SnapshotData_default_instance_);
 }
-inline ::enginepb::SnapshotData * SnapshotRequest::mutable_data()
-{
-    if (!has_data())
-    {
-        clear_chunk();
-        set_has_data();
-        chunk_.data_ = new ::enginepb::SnapshotData;
-    }
-    // @@protoc_insertion_point(field_mutable:enginepb.SnapshotRequest.data)
-    return chunk_.data_;
+inline ::enginepb::SnapshotData* SnapshotRequest::mutable_data() {
+  if (!has_data()) {
+    clear_chunk();
+    set_has_data();
+    chunk_.data_ = new ::enginepb::SnapshotData;
+  }
+  // @@protoc_insertion_point(field_mutable:enginepb.SnapshotRequest.data)
+  return chunk_.data_;
 }
 
-inline bool SnapshotRequest::has_chunk() const
-{
-    return chunk_case() != CHUNK_NOT_SET;
+inline bool SnapshotRequest::has_chunk() const {
+  return chunk_case() != CHUNK_NOT_SET;
 }
-inline void SnapshotRequest::clear_has_chunk()
-{
-    _oneof_case_[0] = CHUNK_NOT_SET;
+inline void SnapshotRequest::clear_has_chunk() {
+  _oneof_case_[0] = CHUNK_NOT_SET;
 }
-inline SnapshotRequest::ChunkCase SnapshotRequest::chunk_case() const
-{
-    return SnapshotRequest::ChunkCase(_oneof_case_[0]);
+inline SnapshotRequest::ChunkCase SnapshotRequest::chunk_case() const {
+  return SnapshotRequest::ChunkCase(_oneof_case_[0]);
 }
 // -------------------------------------------------------------------
 
 // SnapshotDone
 
 #ifdef __GNUC__
-#pragma GCC diagnostic pop
-#endif // __GNUC__
+  #pragma GCC diagnostic pop
+#endif  // __GNUC__
 // -------------------------------------------------------------------
 
 // -------------------------------------------------------------------
@@ -2246,8 +2144,8 @@ inline SnapshotRequest::ChunkCase SnapshotRequest::chunk_case() const
 
 // @@protoc_insertion_point(namespace_scope)
 
-} // namespace enginepb
+}  // namespace enginepb
 
 // @@protoc_insertion_point(global_scope)
 
-#endif // PROTOBUF_enginepb_2eproto__INCLUDED
+#endif  // PROTOBUF_enginepb_2eproto__INCLUDED

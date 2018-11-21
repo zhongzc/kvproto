@@ -2,8 +2,8 @@
 // If you make any local change, they will be lost.
 // source: enginepb.proto
 
-#include "enginepb.grpc.pb.h"
 #include "enginepb.pb.h"
+#include "enginepb.grpc.pb.h"
 
 #include <grpc++/impl/codegen/async_stream.h>
 #include <grpc++/impl/codegen/async_unary_call.h>
@@ -13,108 +13,77 @@
 #include <grpc++/impl/codegen/rpc_service_method.h>
 #include <grpc++/impl/codegen/service_type.h>
 #include <grpc++/impl/codegen/sync_stream.h>
-namespace enginepb
-{
+namespace enginepb {
 
-static const char * Engine_method_names[] = {
-    "/enginepb.Engine/ApplyCommandBatch",
-    "/enginepb.Engine/ApplySnapshot",
+static const char* Engine_method_names[] = {
+  "/enginepb.Engine/ApplyCommandBatch",
+  "/enginepb.Engine/ApplySnapshot",
 };
 
-std::unique_ptr<Engine::Stub> Engine::NewStub(const std::shared_ptr<::grpc::ChannelInterface> & channel,
-                                              const ::grpc::StubOptions &                       options)
-{
-    (void)options;
-    std::unique_ptr<Engine::Stub> stub(new Engine::Stub(channel));
-    return stub;
+std::unique_ptr< Engine::Stub> Engine::NewStub(const std::shared_ptr< ::grpc::ChannelInterface>& channel, const ::grpc::StubOptions& options) {
+  (void)options;
+  std::unique_ptr< Engine::Stub> stub(new Engine::Stub(channel));
+  return stub;
 }
 
-Engine::Stub::Stub(const std::shared_ptr<::grpc::ChannelInterface> & channel)
-    : channel_(channel),
-      rpcmethod_ApplyCommandBatch_(Engine_method_names[0], ::grpc::internal::RpcMethod::BIDI_STREAMING, channel),
-      rpcmethod_ApplySnapshot_(Engine_method_names[1], ::grpc::internal::RpcMethod::CLIENT_STREAMING, channel)
-{
+Engine::Stub::Stub(const std::shared_ptr< ::grpc::ChannelInterface>& channel)
+  : channel_(channel), rpcmethod_ApplyCommandBatch_(Engine_method_names[0], ::grpc::internal::RpcMethod::BIDI_STREAMING, channel)
+  , rpcmethod_ApplySnapshot_(Engine_method_names[1], ::grpc::internal::RpcMethod::CLIENT_STREAMING, channel)
+  {}
+
+::grpc::ClientReaderWriter< ::enginepb::CommandRequestBatch, ::enginepb::CommandResponseBatch>* Engine::Stub::ApplyCommandBatchRaw(::grpc::ClientContext* context) {
+  return ::grpc::internal::ClientReaderWriterFactory< ::enginepb::CommandRequestBatch, ::enginepb::CommandResponseBatch>::Create(channel_.get(), rpcmethod_ApplyCommandBatch_, context);
 }
 
-::grpc::ClientReaderWriter<::enginepb::CommandRequestBatch, ::enginepb::CommandResponseBatch> *
-Engine::Stub::ApplyCommandBatchRaw(::grpc::ClientContext * context)
-{
-    return ::grpc::internal::ClientReaderWriterFactory<::enginepb::CommandRequestBatch, ::enginepb::CommandResponseBatch>::Create(
-        channel_.get(), rpcmethod_ApplyCommandBatch_, context);
+::grpc::ClientAsyncReaderWriter< ::enginepb::CommandRequestBatch, ::enginepb::CommandResponseBatch>* Engine::Stub::AsyncApplyCommandBatchRaw(::grpc::ClientContext* context, ::grpc::CompletionQueue* cq, void* tag) {
+  return ::grpc::internal::ClientAsyncReaderWriterFactory< ::enginepb::CommandRequestBatch, ::enginepb::CommandResponseBatch>::Create(channel_.get(), cq, rpcmethod_ApplyCommandBatch_, context, true, tag);
 }
 
-::grpc::ClientAsyncReaderWriter<::enginepb::CommandRequestBatch, ::enginepb::CommandResponseBatch> *
-Engine::Stub::AsyncApplyCommandBatchRaw(::grpc::ClientContext * context, ::grpc::CompletionQueue * cq, void * tag)
-{
-    return ::grpc::internal::ClientAsyncReaderWriterFactory<::enginepb::CommandRequestBatch, ::enginepb::CommandResponseBatch>::Create(
-        channel_.get(), cq, rpcmethod_ApplyCommandBatch_, context, true, tag);
+::grpc::ClientAsyncReaderWriter< ::enginepb::CommandRequestBatch, ::enginepb::CommandResponseBatch>* Engine::Stub::PrepareAsyncApplyCommandBatchRaw(::grpc::ClientContext* context, ::grpc::CompletionQueue* cq) {
+  return ::grpc::internal::ClientAsyncReaderWriterFactory< ::enginepb::CommandRequestBatch, ::enginepb::CommandResponseBatch>::Create(channel_.get(), cq, rpcmethod_ApplyCommandBatch_, context, false, nullptr);
 }
 
-::grpc::ClientAsyncReaderWriter<::enginepb::CommandRequestBatch, ::enginepb::CommandResponseBatch> *
-Engine::Stub::PrepareAsyncApplyCommandBatchRaw(::grpc::ClientContext * context, ::grpc::CompletionQueue * cq)
-{
-    return ::grpc::internal::ClientAsyncReaderWriterFactory<::enginepb::CommandRequestBatch, ::enginepb::CommandResponseBatch>::Create(
-        channel_.get(), cq, rpcmethod_ApplyCommandBatch_, context, false, nullptr);
+::grpc::ClientWriter< ::enginepb::SnapshotRequest>* Engine::Stub::ApplySnapshotRaw(::grpc::ClientContext* context, ::enginepb::SnapshotDone* response) {
+  return ::grpc::internal::ClientWriterFactory< ::enginepb::SnapshotRequest>::Create(channel_.get(), rpcmethod_ApplySnapshot_, context, response);
 }
 
-::grpc::ClientWriter<::enginepb::SnapshotRequest> * Engine::Stub::ApplySnapshotRaw(::grpc::ClientContext *    context,
-                                                                                   ::enginepb::SnapshotDone * response)
-{
-    return ::grpc::internal::ClientWriterFactory<::enginepb::SnapshotRequest>::Create(
-        channel_.get(), rpcmethod_ApplySnapshot_, context, response);
+::grpc::ClientAsyncWriter< ::enginepb::SnapshotRequest>* Engine::Stub::AsyncApplySnapshotRaw(::grpc::ClientContext* context, ::enginepb::SnapshotDone* response, ::grpc::CompletionQueue* cq, void* tag) {
+  return ::grpc::internal::ClientAsyncWriterFactory< ::enginepb::SnapshotRequest>::Create(channel_.get(), cq, rpcmethod_ApplySnapshot_, context, response, true, tag);
 }
 
-::grpc::ClientAsyncWriter<::enginepb::SnapshotRequest> * Engine::Stub::AsyncApplySnapshotRaw(::grpc::ClientContext *    context,
-                                                                                             ::enginepb::SnapshotDone * response,
-                                                                                             ::grpc::CompletionQueue *  cq,
-                                                                                             void *                     tag)
-{
-    return ::grpc::internal::ClientAsyncWriterFactory<::enginepb::SnapshotRequest>::Create(
-        channel_.get(), cq, rpcmethod_ApplySnapshot_, context, response, true, tag);
+::grpc::ClientAsyncWriter< ::enginepb::SnapshotRequest>* Engine::Stub::PrepareAsyncApplySnapshotRaw(::grpc::ClientContext* context, ::enginepb::SnapshotDone* response, ::grpc::CompletionQueue* cq) {
+  return ::grpc::internal::ClientAsyncWriterFactory< ::enginepb::SnapshotRequest>::Create(channel_.get(), cq, rpcmethod_ApplySnapshot_, context, response, false, nullptr);
 }
 
-::grpc::ClientAsyncWriter<::enginepb::SnapshotRequest> * Engine::Stub::PrepareAsyncApplySnapshotRaw(::grpc::ClientContext *    context,
-                                                                                                    ::enginepb::SnapshotDone * response,
-                                                                                                    ::grpc::CompletionQueue *  cq)
-{
-    return ::grpc::internal::ClientAsyncWriterFactory<::enginepb::SnapshotRequest>::Create(
-        channel_.get(), cq, rpcmethod_ApplySnapshot_, context, response, false, nullptr);
+Engine::Service::Service() {
+  AddMethod(new ::grpc::internal::RpcServiceMethod(
+      Engine_method_names[0],
+      ::grpc::internal::RpcMethod::BIDI_STREAMING,
+      new ::grpc::internal::BidiStreamingHandler< Engine::Service, ::enginepb::CommandRequestBatch, ::enginepb::CommandResponseBatch>(
+          std::mem_fn(&Engine::Service::ApplyCommandBatch), this)));
+  AddMethod(new ::grpc::internal::RpcServiceMethod(
+      Engine_method_names[1],
+      ::grpc::internal::RpcMethod::CLIENT_STREAMING,
+      new ::grpc::internal::ClientStreamingHandler< Engine::Service, ::enginepb::SnapshotRequest, ::enginepb::SnapshotDone>(
+          std::mem_fn(&Engine::Service::ApplySnapshot), this)));
 }
 
-Engine::Service::Service()
-{
-    AddMethod(new ::grpc::internal::RpcServiceMethod(
-        Engine_method_names[0],
-        ::grpc::internal::RpcMethod::BIDI_STREAMING,
-        new ::grpc::internal::BidiStreamingHandler<Engine::Service, ::enginepb::CommandRequestBatch, ::enginepb::CommandResponseBatch>(
-            std::mem_fn(&Engine::Service::ApplyCommandBatch), this)));
-    AddMethod(new ::grpc::internal::RpcServiceMethod(
-        Engine_method_names[1],
-        ::grpc::internal::RpcMethod::CLIENT_STREAMING,
-        new ::grpc::internal::ClientStreamingHandler<Engine::Service, ::enginepb::SnapshotRequest, ::enginepb::SnapshotDone>(
-            std::mem_fn(&Engine::Service::ApplySnapshot), this)));
+Engine::Service::~Service() {
 }
 
-Engine::Service::~Service() {}
-
-::grpc::Status
-Engine::Service::ApplyCommandBatch(::grpc::ServerContext *                                                                         context,
-                                   ::grpc::ServerReaderWriter<::enginepb::CommandResponseBatch, ::enginepb::CommandRequestBatch> * stream)
-{
-    (void)context;
-    (void)stream;
-    return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
+::grpc::Status Engine::Service::ApplyCommandBatch(::grpc::ServerContext* context, ::grpc::ServerReaderWriter< ::enginepb::CommandResponseBatch, ::enginepb::CommandRequestBatch>* stream) {
+  (void) context;
+  (void) stream;
+  return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
 }
 
-::grpc::Status Engine::Service::ApplySnapshot(::grpc::ServerContext *                             context,
-                                              ::grpc::ServerReader<::enginepb::SnapshotRequest> * reader,
-                                              ::enginepb::SnapshotDone *                          response)
-{
-    (void)context;
-    (void)reader;
-    (void)response;
-    return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
+::grpc::Status Engine::Service::ApplySnapshot(::grpc::ServerContext* context, ::grpc::ServerReader< ::enginepb::SnapshotRequest>* reader, ::enginepb::SnapshotDone* response) {
+  (void) context;
+  (void) reader;
+  (void) response;
+  return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
 }
 
 
-} // namespace enginepb
+}  // namespace enginepb
+
