@@ -755,11 +755,10 @@ void AddDescriptorsImpl() {
       "t\032\".import_kvpb.CleanupEngineResponse\"\000\022"
       "[\n\016CompactCluster\022\".import_kvpb.CompactC"
       "lusterRequest\032#.import_kvpb.CompactClust"
-      "erResponse\"\000B\032\n\030com.pingcap.tikv.kvproto"
-      "b\006proto3"
+      "erResponse\"\000B\022\n\020org.tikv.kvprotob\006proto3"
   };
   ::google::protobuf::DescriptorPool::InternalAddGeneratedFile(
-      descriptor, 1688);
+      descriptor, 1680);
   ::google::protobuf::MessageFactory::InternalRegisterGeneratedFile(
     "import_kvpb.proto", &protobuf_RegisterTypes);
   ::protobuf_import_5fsstpb_2eproto::AddDescriptors();

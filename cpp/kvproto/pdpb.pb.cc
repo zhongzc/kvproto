@@ -1972,6 +1972,7 @@ const ::google::protobuf::uint32 TableStruct::offsets[] GOOGLE_PROTOBUF_ATTRIBUT
   ~0u,  // no _weak_field_map_
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::pdpb::SyncRegionRequest, header_),
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::pdpb::SyncRegionRequest, member_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::pdpb::SyncRegionRequest, start_index_),
   ~0u,  // no _has_bits_
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::pdpb::SyncRegionResponse, _internal_metadata_),
   ~0u,  // no _extensions_
@@ -1979,6 +1980,7 @@ const ::google::protobuf::uint32 TableStruct::offsets[] GOOGLE_PROTOBUF_ATTRIBUT
   ~0u,  // no _weak_field_map_
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::pdpb::SyncRegionResponse, header_),
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::pdpb::SyncRegionResponse, regions_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::pdpb::SyncRegionResponse, start_index_),
 };
 static const ::google::protobuf::internal::MigrationSchema schemas[] GOOGLE_PROTOBUF_ATTRIBUTE_SECTION_VARIABLE(protodesc_cold) = {
   { 0, -1, sizeof(::pdpb::RequestHeader)},
@@ -2036,7 +2038,7 @@ static const ::google::protobuf::internal::MigrationSchema schemas[] GOOGLE_PROT
   { 389, -1, sizeof(::pdpb::UpdateGCSafePointRequest)},
   { 396, -1, sizeof(::pdpb::UpdateGCSafePointResponse)},
   { 403, -1, sizeof(::pdpb::SyncRegionRequest)},
-  { 410, -1, sizeof(::pdpb::SyncRegionResponse)},
+  { 411, -1, sizeof(::pdpb::SyncRegionResponse)},
 };
 
 static ::google::protobuf::Message const * const file_default_instances[] = {
@@ -2248,62 +2250,63 @@ void AddDescriptorsImpl() {
       "quest\022#\n\006header\030\001 \001(\0132\023.pdpb.RequestHead"
       "er\022\022\n\nsafe_point\030\002 \001(\004\"Y\n\031UpdateGCSafePo"
       "intResponse\022$\n\006header\030\001 \001(\0132\024.pdpb.Respo"
-      "nseHeader\022\026\n\016new_safe_point\030\002 \001(\004\"V\n\021Syn"
+      "nseHeader\022\026\n\016new_safe_point\030\002 \001(\004\"k\n\021Syn"
       "cRegionRequest\022#\n\006header\030\001 \001(\0132\023.pdpb.Re"
       "questHeader\022\034\n\006member\030\002 \001(\0132\014.pdpb.Membe"
-      "r\"[\n\022SyncRegionResponse\022$\n\006header\030\001 \001(\0132"
-      "\024.pdpb.ResponseHeader\022\037\n\007regions\030\002 \003(\0132\016"
-      ".metapb.Region*\177\n\tErrorType\022\006\n\002OK\020\000\022\013\n\007U"
-      "NKNOWN\020\001\022\024\n\020NOT_BOOTSTRAPPED\020\002\022\023\n\017STORE_"
-      "TOMBSTONE\020\003\022\030\n\024ALREADY_BOOTSTRAPPED\020\004\022\030\n"
-      "\024INCOMPATIBLE_VERSION\020\005*(\n\013CheckPolicy\022\010"
-      "\n\004SCAN\020\000\022\017\n\013APPROXIMATE\020\0012\205\r\n\002PD\022A\n\nGetM"
-      "embers\022\027.pdpb.GetMembersRequest\032\030.pdpb.G"
-      "etMembersResponse\"\000\0220\n\003Tso\022\020.pdpb.TsoReq"
-      "uest\032\021.pdpb.TsoResponse\"\000(\0010\001\022>\n\tBootstr"
-      "ap\022\026.pdpb.BootstrapRequest\032\027.pdpb.Bootst"
-      "rapResponse\"\000\022M\n\016IsBootstrapped\022\033.pdpb.I"
-      "sBootstrappedRequest\032\034.pdpb.IsBootstrapp"
-      "edResponse\"\000\0228\n\007AllocID\022\024.pdpb.AllocIDRe"
-      "quest\032\025.pdpb.AllocIDResponse\"\000\022;\n\010GetSto"
-      "re\022\025.pdpb.GetStoreRequest\032\026.pdpb.GetStor"
-      "eResponse\"\000\022;\n\010PutStore\022\025.pdpb.PutStoreR"
-      "equest\032\026.pdpb.PutStoreResponse\"\000\022G\n\014GetA"
-      "llStores\022\031.pdpb.GetAllStoresRequest\032\032.pd"
-      "pb.GetAllStoresResponse\"\000\022M\n\016StoreHeartb"
-      "eat\022\033.pdpb.StoreHeartbeatRequest\032\034.pdpb."
-      "StoreHeartbeatResponse\"\000\022T\n\017RegionHeartb"
-      "eat\022\034.pdpb.RegionHeartbeatRequest\032\035.pdpb"
-      ".RegionHeartbeatResponse\"\000(\0010\001\022>\n\tGetReg"
-      "ion\022\026.pdpb.GetRegionRequest\032\027.pdpb.GetRe"
-      "gionResponse\"\000\022B\n\rGetPrevRegion\022\026.pdpb.G"
-      "etRegionRequest\032\027.pdpb.GetRegionResponse"
-      "\"\000\022F\n\rGetRegionByID\022\032.pdpb.GetRegionByID"
-      "Request\032\027.pdpb.GetRegionResponse\"\000\022>\n\010As"
-      "kSplit\022\025.pdpb.AskSplitRequest\032\026.pdpb.Ask"
-      "SplitResponse\"\003\210\002\001\022G\n\013ReportSplit\022\030.pdpb"
-      ".ReportSplitRequest\032\031.pdpb.ReportSplitRe"
-      "sponse\"\003\210\002\001\022J\n\rAskBatchSplit\022\032.pdpb.AskB"
-      "atchSplitRequest\032\033.pdpb.AskBatchSplitRes"
-      "ponse\"\000\022S\n\020ReportBatchSplit\022\035.pdpb.Repor"
-      "tBatchSplitRequest\032\036.pdpb.ReportBatchSpl"
-      "itResponse\"\000\022S\n\020GetClusterConfig\022\035.pdpb."
-      "GetClusterConfigRequest\032\036.pdpb.GetCluste"
-      "rConfigResponse\"\000\022S\n\020PutClusterConfig\022\035."
-      "pdpb.PutClusterConfigRequest\032\036.pdpb.PutC"
-      "lusterConfigResponse\"\000\022J\n\rScatterRegion\022"
-      "\032.pdpb.ScatterRegionRequest\032\033.pdpb.Scatt"
-      "erRegionResponse\"\000\022M\n\016GetGCSafePoint\022\033.p"
-      "dpb.GetGCSafePointRequest\032\034.pdpb.GetGCSa"
-      "fePointResponse\"\000\022V\n\021UpdateGCSafePoint\022\036"
-      ".pdpb.UpdateGCSafePointRequest\032\037.pdpb.Up"
-      "dateGCSafePointResponse\"\000\022F\n\013SyncRegions"
-      "\022\027.pdpb.SyncRegionRequest\032\030.pdpb.SyncReg"
-      "ionResponse\"\000(\0010\001B\032\n\030com.pingcap.tikv.kv"
-      "protob\006proto3"
+      "r\022\023\n\013start_index\030\003 \001(\004\"p\n\022SyncRegionResp"
+      "onse\022$\n\006header\030\001 \001(\0132\024.pdpb.ResponseHead"
+      "er\022\037\n\007regions\030\002 \003(\0132\016.metapb.Region\022\023\n\013s"
+      "tart_index\030\003 \001(\004*\177\n\tErrorType\022\006\n\002OK\020\000\022\013\n"
+      "\007UNKNOWN\020\001\022\024\n\020NOT_BOOTSTRAPPED\020\002\022\023\n\017STOR"
+      "E_TOMBSTONE\020\003\022\030\n\024ALREADY_BOOTSTRAPPED\020\004\022"
+      "\030\n\024INCOMPATIBLE_VERSION\020\005*(\n\013CheckPolicy"
+      "\022\010\n\004SCAN\020\000\022\017\n\013APPROXIMATE\020\0012\205\r\n\002PD\022A\n\nGe"
+      "tMembers\022\027.pdpb.GetMembersRequest\032\030.pdpb"
+      ".GetMembersResponse\"\000\0220\n\003Tso\022\020.pdpb.TsoR"
+      "equest\032\021.pdpb.TsoResponse\"\000(\0010\001\022>\n\tBoots"
+      "trap\022\026.pdpb.BootstrapRequest\032\027.pdpb.Boot"
+      "strapResponse\"\000\022M\n\016IsBootstrapped\022\033.pdpb"
+      ".IsBootstrappedRequest\032\034.pdpb.IsBootstra"
+      "ppedResponse\"\000\0228\n\007AllocID\022\024.pdpb.AllocID"
+      "Request\032\025.pdpb.AllocIDResponse\"\000\022;\n\010GetS"
+      "tore\022\025.pdpb.GetStoreRequest\032\026.pdpb.GetSt"
+      "oreResponse\"\000\022;\n\010PutStore\022\025.pdpb.PutStor"
+      "eRequest\032\026.pdpb.PutStoreResponse\"\000\022G\n\014Ge"
+      "tAllStores\022\031.pdpb.GetAllStoresRequest\032\032."
+      "pdpb.GetAllStoresResponse\"\000\022M\n\016StoreHear"
+      "tbeat\022\033.pdpb.StoreHeartbeatRequest\032\034.pdp"
+      "b.StoreHeartbeatResponse\"\000\022T\n\017RegionHear"
+      "tbeat\022\034.pdpb.RegionHeartbeatRequest\032\035.pd"
+      "pb.RegionHeartbeatResponse\"\000(\0010\001\022>\n\tGetR"
+      "egion\022\026.pdpb.GetRegionRequest\032\027.pdpb.Get"
+      "RegionResponse\"\000\022B\n\rGetPrevRegion\022\026.pdpb"
+      ".GetRegionRequest\032\027.pdpb.GetRegionRespon"
+      "se\"\000\022F\n\rGetRegionByID\022\032.pdpb.GetRegionBy"
+      "IDRequest\032\027.pdpb.GetRegionResponse\"\000\022>\n\010"
+      "AskSplit\022\025.pdpb.AskSplitRequest\032\026.pdpb.A"
+      "skSplitResponse\"\003\210\002\001\022G\n\013ReportSplit\022\030.pd"
+      "pb.ReportSplitRequest\032\031.pdpb.ReportSplit"
+      "Response\"\003\210\002\001\022J\n\rAskBatchSplit\022\032.pdpb.As"
+      "kBatchSplitRequest\032\033.pdpb.AskBatchSplitR"
+      "esponse\"\000\022S\n\020ReportBatchSplit\022\035.pdpb.Rep"
+      "ortBatchSplitRequest\032\036.pdpb.ReportBatchS"
+      "plitResponse\"\000\022S\n\020GetClusterConfig\022\035.pdp"
+      "b.GetClusterConfigRequest\032\036.pdpb.GetClus"
+      "terConfigResponse\"\000\022S\n\020PutClusterConfig\022"
+      "\035.pdpb.PutClusterConfigRequest\032\036.pdpb.Pu"
+      "tClusterConfigResponse\"\000\022J\n\rScatterRegio"
+      "n\022\032.pdpb.ScatterRegionRequest\032\033.pdpb.Sca"
+      "tterRegionResponse\"\000\022M\n\016GetGCSafePoint\022\033"
+      ".pdpb.GetGCSafePointRequest\032\034.pdpb.GetGC"
+      "SafePointResponse\"\000\022V\n\021UpdateGCSafePoint"
+      "\022\036.pdpb.UpdateGCSafePointRequest\032\037.pdpb."
+      "UpdateGCSafePointResponse\"\000\022F\n\013SyncRegio"
+      "ns\022\027.pdpb.SyncRegionRequest\032\030.pdpb.SyncR"
+      "egionResponse\"\000(\0010\001B\022\n\020org.tikv.kvprotob"
+      "\006proto3"
   };
   ::google::protobuf::DescriptorPool::InternalAddGeneratedFile(
-      descriptor, 7213);
+      descriptor, 7247);
   ::google::protobuf::MessageFactory::InternalRegisterGeneratedFile(
     "pdpb.proto", &protobuf_RegisterTypes);
   ::protobuf_metapb_2eproto::AddDescriptors();
@@ -19362,6 +19365,7 @@ void SyncRegionRequest::InitAsDefaultInstance() {
 #if !defined(_MSC_VER) || _MSC_VER >= 1900
 const int SyncRegionRequest::kHeaderFieldNumber;
 const int SyncRegionRequest::kMemberFieldNumber;
+const int SyncRegionRequest::kStartIndexFieldNumber;
 #endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
 
 SyncRegionRequest::SyncRegionRequest()
@@ -19387,13 +19391,14 @@ SyncRegionRequest::SyncRegionRequest(const SyncRegionRequest& from)
   } else {
     member_ = NULL;
   }
+  start_index_ = from.start_index_;
   // @@protoc_insertion_point(copy_constructor:pdpb.SyncRegionRequest)
 }
 
 void SyncRegionRequest::SharedCtor() {
   ::memset(&header_, 0, static_cast<size_t>(
-      reinterpret_cast<char*>(&member_) -
-      reinterpret_cast<char*>(&header_)) + sizeof(member_));
+      reinterpret_cast<char*>(&start_index_) -
+      reinterpret_cast<char*>(&header_)) + sizeof(start_index_));
   _cached_size_ = 0;
 }
 
@@ -19444,6 +19449,7 @@ void SyncRegionRequest::Clear() {
     delete member_;
   }
   member_ = NULL;
+  start_index_ = GOOGLE_ULONGLONG(0);
   _internal_metadata_.Clear();
 }
 
@@ -19475,6 +19481,20 @@ bool SyncRegionRequest::MergePartialFromCodedStream(
             static_cast< ::google::protobuf::uint8>(18u /* 18 & 0xFF */)) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
                input, mutable_member()));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // uint64 start_index = 3;
+      case 3: {
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(24u /* 24 & 0xFF */)) {
+
+          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
+                   ::google::protobuf::uint64, ::google::protobuf::internal::WireFormatLite::TYPE_UINT64>(
+                 input, &start_index_)));
         } else {
           goto handle_unusual;
         }
@@ -19519,6 +19539,11 @@ void SyncRegionRequest::SerializeWithCachedSizes(
       2, *this->member_, output);
   }
 
+  // uint64 start_index = 3;
+  if (this->start_index() != 0) {
+    ::google::protobuf::internal::WireFormatLite::WriteUInt64(3, this->start_index(), output);
+  }
+
   if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
     ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
         (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()), output);
@@ -19545,6 +19570,11 @@ void SyncRegionRequest::SerializeWithCachedSizes(
     target = ::google::protobuf::internal::WireFormatLite::
       InternalWriteMessageToArray(
         2, *this->member_, deterministic, target);
+  }
+
+  // uint64 start_index = 3;
+  if (this->start_index() != 0) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteUInt64ToArray(3, this->start_index(), target);
   }
 
   if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
@@ -19576,6 +19606,13 @@ size_t SyncRegionRequest::ByteSizeLong() const {
     total_size += 1 +
       ::google::protobuf::internal::WireFormatLite::MessageSize(
         *this->member_);
+  }
+
+  // uint64 start_index = 3;
+  if (this->start_index() != 0) {
+    total_size += 1 +
+      ::google::protobuf::internal::WireFormatLite::UInt64Size(
+        this->start_index());
   }
 
   int cached_size = ::google::protobuf::internal::ToCachedSize(total_size);
@@ -19613,6 +19650,9 @@ void SyncRegionRequest::MergeFrom(const SyncRegionRequest& from) {
   if (from.has_member()) {
     mutable_member()->::pdpb::Member::MergeFrom(from.member());
   }
+  if (from.start_index() != 0) {
+    set_start_index(from.start_index());
+  }
 }
 
 void SyncRegionRequest::CopyFrom(const ::google::protobuf::Message& from) {
@@ -19641,6 +19681,7 @@ void SyncRegionRequest::InternalSwap(SyncRegionRequest* other) {
   using std::swap;
   swap(header_, other->header_);
   swap(member_, other->member_);
+  swap(start_index_, other->start_index_);
   _internal_metadata_.Swap(&other->_internal_metadata_);
   swap(_cached_size_, other->_cached_size_);
 }
@@ -19663,6 +19704,7 @@ void SyncRegionResponse::clear_regions() {
 #if !defined(_MSC_VER) || _MSC_VER >= 1900
 const int SyncRegionResponse::kHeaderFieldNumber;
 const int SyncRegionResponse::kRegionsFieldNumber;
+const int SyncRegionResponse::kStartIndexFieldNumber;
 #endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
 
 SyncRegionResponse::SyncRegionResponse()
@@ -19684,11 +19726,14 @@ SyncRegionResponse::SyncRegionResponse(const SyncRegionResponse& from)
   } else {
     header_ = NULL;
   }
+  start_index_ = from.start_index_;
   // @@protoc_insertion_point(copy_constructor:pdpb.SyncRegionResponse)
 }
 
 void SyncRegionResponse::SharedCtor() {
-  header_ = NULL;
+  ::memset(&header_, 0, static_cast<size_t>(
+      reinterpret_cast<char*>(&start_index_) -
+      reinterpret_cast<char*>(&header_)) + sizeof(start_index_));
   _cached_size_ = 0;
 }
 
@@ -19735,6 +19780,7 @@ void SyncRegionResponse::Clear() {
     delete header_;
   }
   header_ = NULL;
+  start_index_ = GOOGLE_ULONGLONG(0);
   _internal_metadata_.Clear();
 }
 
@@ -19765,6 +19811,20 @@ bool SyncRegionResponse::MergePartialFromCodedStream(
         if (static_cast< ::google::protobuf::uint8>(tag) ==
             static_cast< ::google::protobuf::uint8>(18u /* 18 & 0xFF */)) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(input, add_regions()));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // uint64 start_index = 3;
+      case 3: {
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(24u /* 24 & 0xFF */)) {
+
+          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
+                   ::google::protobuf::uint64, ::google::protobuf::internal::WireFormatLite::TYPE_UINT64>(
+                 input, &start_index_)));
         } else {
           goto handle_unusual;
         }
@@ -19810,6 +19870,11 @@ void SyncRegionResponse::SerializeWithCachedSizes(
       2, this->regions(static_cast<int>(i)), output);
   }
 
+  // uint64 start_index = 3;
+  if (this->start_index() != 0) {
+    ::google::protobuf::internal::WireFormatLite::WriteUInt64(3, this->start_index(), output);
+  }
+
   if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
     ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
         (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()), output);
@@ -19837,6 +19902,11 @@ void SyncRegionResponse::SerializeWithCachedSizes(
     target = ::google::protobuf::internal::WireFormatLite::
       InternalWriteMessageToArray(
         2, this->regions(static_cast<int>(i)), deterministic, target);
+  }
+
+  // uint64 start_index = 3;
+  if (this->start_index() != 0) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteUInt64ToArray(3, this->start_index(), target);
   }
 
   if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
@@ -19874,6 +19944,13 @@ size_t SyncRegionResponse::ByteSizeLong() const {
         *this->header_);
   }
 
+  // uint64 start_index = 3;
+  if (this->start_index() != 0) {
+    total_size += 1 +
+      ::google::protobuf::internal::WireFormatLite::UInt64Size(
+        this->start_index());
+  }
+
   int cached_size = ::google::protobuf::internal::ToCachedSize(total_size);
   GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
   _cached_size_ = cached_size;
@@ -19907,6 +19984,9 @@ void SyncRegionResponse::MergeFrom(const SyncRegionResponse& from) {
   if (from.has_header()) {
     mutable_header()->::pdpb::ResponseHeader::MergeFrom(from.header());
   }
+  if (from.start_index() != 0) {
+    set_start_index(from.start_index());
+  }
 }
 
 void SyncRegionResponse::CopyFrom(const ::google::protobuf::Message& from) {
@@ -19935,6 +20015,7 @@ void SyncRegionResponse::InternalSwap(SyncRegionResponse* other) {
   using std::swap;
   regions_.InternalSwap(&other->regions_);
   swap(header_, other->header_);
+  swap(start_index_, other->start_index_);
   _internal_metadata_.Swap(&other->_internal_metadata_);
   swap(_cached_size_, other->_cached_size_);
 }

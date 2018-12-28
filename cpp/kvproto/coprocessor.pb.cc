@@ -181,11 +181,11 @@ void AddDescriptorsImpl() {
       "\n\006locked\030\003 \001(\0132\021.kvrpcpb.LockInfo\022\023\n\013oth"
       "er_error\030\004 \001(\t\022$\n\005range\030\005 \001(\0132\025.coproces"
       "sor.KeyRange\022*\n\014exec_details\030\006 \001(\0132\024.kvr"
-      "pcpb.ExecDetailsB\032\n\030com.pingcap.tikv.kvp"
-      "rotob\006proto3"
+      "pcpb.ExecDetailsB\022\n\020org.tikv.kvprotob\006pr"
+      "oto3"
   };
   ::google::protobuf::DescriptorPool::InternalAddGeneratedFile(
-      descriptor, 452);
+      descriptor, 444);
   ::google::protobuf::MessageFactory::InternalRegisterGeneratedFile(
     "coprocessor.proto", &protobuf_RegisterTypes);
   ::protobuf_errorpb_2eproto::AddDescriptors();

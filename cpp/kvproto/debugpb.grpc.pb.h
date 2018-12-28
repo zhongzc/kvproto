@@ -6,15 +6,16 @@
 
 #include "debugpb.pb.h"
 
-#include <grpc++/impl/codegen/async_stream.h>
-#include <grpc++/impl/codegen/async_unary_call.h>
-#include <grpc++/impl/codegen/method_handler_impl.h>
-#include <grpc++/impl/codegen/proto_utils.h>
-#include <grpc++/impl/codegen/rpc_method.h>
-#include <grpc++/impl/codegen/service_type.h>
-#include <grpc++/impl/codegen/status.h>
-#include <grpc++/impl/codegen/stub_options.h>
-#include <grpc++/impl/codegen/sync_stream.h>
+#include <grpcpp/impl/codegen/async_generic_service.h>
+#include <grpcpp/impl/codegen/async_stream.h>
+#include <grpcpp/impl/codegen/async_unary_call.h>
+#include <grpcpp/impl/codegen/method_handler_impl.h>
+#include <grpcpp/impl/codegen/proto_utils.h>
+#include <grpcpp/impl/codegen/rpc_method.h>
+#include <grpcpp/impl/codegen/service_type.h>
+#include <grpcpp/impl/codegen/status.h>
+#include <grpcpp/impl/codegen/stub_options.h>
+#include <grpcpp/impl/codegen/sync_stream.h>
 
 namespace grpc {
 class CompletionQueue;
@@ -372,7 +373,7 @@ class Debug final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status Get(::grpc::ServerContext* context, const ::debugpb::GetRequest* request, ::debugpb::GetResponse* response) final override {
+    ::grpc::Status Get(::grpc::ServerContext* context, const ::debugpb::GetRequest* request, ::debugpb::GetResponse* response) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
@@ -392,7 +393,7 @@ class Debug final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status RaftLog(::grpc::ServerContext* context, const ::debugpb::RaftLogRequest* request, ::debugpb::RaftLogResponse* response) final override {
+    ::grpc::Status RaftLog(::grpc::ServerContext* context, const ::debugpb::RaftLogRequest* request, ::debugpb::RaftLogResponse* response) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
@@ -412,7 +413,7 @@ class Debug final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status RegionInfo(::grpc::ServerContext* context, const ::debugpb::RegionInfoRequest* request, ::debugpb::RegionInfoResponse* response) final override {
+    ::grpc::Status RegionInfo(::grpc::ServerContext* context, const ::debugpb::RegionInfoRequest* request, ::debugpb::RegionInfoResponse* response) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
@@ -432,7 +433,7 @@ class Debug final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status RegionSize(::grpc::ServerContext* context, const ::debugpb::RegionSizeRequest* request, ::debugpb::RegionSizeResponse* response) final override {
+    ::grpc::Status RegionSize(::grpc::ServerContext* context, const ::debugpb::RegionSizeRequest* request, ::debugpb::RegionSizeResponse* response) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
@@ -452,7 +453,7 @@ class Debug final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status ScanMvcc(::grpc::ServerContext* context, const ::debugpb::ScanMvccRequest* request, ::grpc::ServerWriter< ::debugpb::ScanMvccResponse>* writer) final override {
+    ::grpc::Status ScanMvcc(::grpc::ServerContext* context, const ::debugpb::ScanMvccRequest* request, ::grpc::ServerWriter< ::debugpb::ScanMvccResponse>* writer) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
@@ -472,7 +473,7 @@ class Debug final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status Compact(::grpc::ServerContext* context, const ::debugpb::CompactRequest* request, ::debugpb::CompactResponse* response) final override {
+    ::grpc::Status Compact(::grpc::ServerContext* context, const ::debugpb::CompactRequest* request, ::debugpb::CompactResponse* response) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
@@ -492,7 +493,7 @@ class Debug final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status InjectFailPoint(::grpc::ServerContext* context, const ::debugpb::InjectFailPointRequest* request, ::debugpb::InjectFailPointResponse* response) final override {
+    ::grpc::Status InjectFailPoint(::grpc::ServerContext* context, const ::debugpb::InjectFailPointRequest* request, ::debugpb::InjectFailPointResponse* response) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
@@ -512,7 +513,7 @@ class Debug final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status RecoverFailPoint(::grpc::ServerContext* context, const ::debugpb::RecoverFailPointRequest* request, ::debugpb::RecoverFailPointResponse* response) final override {
+    ::grpc::Status RecoverFailPoint(::grpc::ServerContext* context, const ::debugpb::RecoverFailPointRequest* request, ::debugpb::RecoverFailPointResponse* response) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
@@ -532,7 +533,7 @@ class Debug final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status ListFailPoints(::grpc::ServerContext* context, const ::debugpb::ListFailPointsRequest* request, ::debugpb::ListFailPointsResponse* response) final override {
+    ::grpc::Status ListFailPoints(::grpc::ServerContext* context, const ::debugpb::ListFailPointsRequest* request, ::debugpb::ListFailPointsResponse* response) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
@@ -552,7 +553,7 @@ class Debug final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status GetMetrics(::grpc::ServerContext* context, const ::debugpb::GetMetricsRequest* request, ::debugpb::GetMetricsResponse* response) final override {
+    ::grpc::Status GetMetrics(::grpc::ServerContext* context, const ::debugpb::GetMetricsRequest* request, ::debugpb::GetMetricsResponse* response) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
@@ -572,7 +573,7 @@ class Debug final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status CheckRegionConsistency(::grpc::ServerContext* context, const ::debugpb::RegionConsistencyCheckRequest* request, ::debugpb::RegionConsistencyCheckResponse* response) final override {
+    ::grpc::Status CheckRegionConsistency(::grpc::ServerContext* context, const ::debugpb::RegionConsistencyCheckRequest* request, ::debugpb::RegionConsistencyCheckResponse* response) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
@@ -592,7 +593,7 @@ class Debug final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status ModifyTikvConfig(::grpc::ServerContext* context, const ::debugpb::ModifyTikvConfigRequest* request, ::debugpb::ModifyTikvConfigResponse* response) final override {
+    ::grpc::Status ModifyTikvConfig(::grpc::ServerContext* context, const ::debugpb::ModifyTikvConfigRequest* request, ::debugpb::ModifyTikvConfigResponse* response) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
@@ -612,7 +613,7 @@ class Debug final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status GetRegionProperties(::grpc::ServerContext* context, const ::debugpb::GetRegionPropertiesRequest* request, ::debugpb::GetRegionPropertiesResponse* response) final override {
+    ::grpc::Status GetRegionProperties(::grpc::ServerContext* context, const ::debugpb::GetRegionPropertiesRequest* request, ::debugpb::GetRegionPropertiesResponse* response) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
@@ -633,7 +634,7 @@ class Debug final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status Get(::grpc::ServerContext* context, const ::debugpb::GetRequest* request, ::debugpb::GetResponse* response) final override {
+    ::grpc::Status Get(::grpc::ServerContext* context, const ::debugpb::GetRequest* request, ::debugpb::GetResponse* response) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
@@ -650,7 +651,7 @@ class Debug final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status RaftLog(::grpc::ServerContext* context, const ::debugpb::RaftLogRequest* request, ::debugpb::RaftLogResponse* response) final override {
+    ::grpc::Status RaftLog(::grpc::ServerContext* context, const ::debugpb::RaftLogRequest* request, ::debugpb::RaftLogResponse* response) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
@@ -667,7 +668,7 @@ class Debug final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status RegionInfo(::grpc::ServerContext* context, const ::debugpb::RegionInfoRequest* request, ::debugpb::RegionInfoResponse* response) final override {
+    ::grpc::Status RegionInfo(::grpc::ServerContext* context, const ::debugpb::RegionInfoRequest* request, ::debugpb::RegionInfoResponse* response) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
@@ -684,7 +685,7 @@ class Debug final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status RegionSize(::grpc::ServerContext* context, const ::debugpb::RegionSizeRequest* request, ::debugpb::RegionSizeResponse* response) final override {
+    ::grpc::Status RegionSize(::grpc::ServerContext* context, const ::debugpb::RegionSizeRequest* request, ::debugpb::RegionSizeResponse* response) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
@@ -701,7 +702,7 @@ class Debug final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status ScanMvcc(::grpc::ServerContext* context, const ::debugpb::ScanMvccRequest* request, ::grpc::ServerWriter< ::debugpb::ScanMvccResponse>* writer) final override {
+    ::grpc::Status ScanMvcc(::grpc::ServerContext* context, const ::debugpb::ScanMvccRequest* request, ::grpc::ServerWriter< ::debugpb::ScanMvccResponse>* writer) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
@@ -718,7 +719,7 @@ class Debug final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status Compact(::grpc::ServerContext* context, const ::debugpb::CompactRequest* request, ::debugpb::CompactResponse* response) final override {
+    ::grpc::Status Compact(::grpc::ServerContext* context, const ::debugpb::CompactRequest* request, ::debugpb::CompactResponse* response) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
@@ -735,7 +736,7 @@ class Debug final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status InjectFailPoint(::grpc::ServerContext* context, const ::debugpb::InjectFailPointRequest* request, ::debugpb::InjectFailPointResponse* response) final override {
+    ::grpc::Status InjectFailPoint(::grpc::ServerContext* context, const ::debugpb::InjectFailPointRequest* request, ::debugpb::InjectFailPointResponse* response) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
@@ -752,7 +753,7 @@ class Debug final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status RecoverFailPoint(::grpc::ServerContext* context, const ::debugpb::RecoverFailPointRequest* request, ::debugpb::RecoverFailPointResponse* response) final override {
+    ::grpc::Status RecoverFailPoint(::grpc::ServerContext* context, const ::debugpb::RecoverFailPointRequest* request, ::debugpb::RecoverFailPointResponse* response) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
@@ -769,7 +770,7 @@ class Debug final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status ListFailPoints(::grpc::ServerContext* context, const ::debugpb::ListFailPointsRequest* request, ::debugpb::ListFailPointsResponse* response) final override {
+    ::grpc::Status ListFailPoints(::grpc::ServerContext* context, const ::debugpb::ListFailPointsRequest* request, ::debugpb::ListFailPointsResponse* response) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
@@ -786,7 +787,7 @@ class Debug final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status GetMetrics(::grpc::ServerContext* context, const ::debugpb::GetMetricsRequest* request, ::debugpb::GetMetricsResponse* response) final override {
+    ::grpc::Status GetMetrics(::grpc::ServerContext* context, const ::debugpb::GetMetricsRequest* request, ::debugpb::GetMetricsResponse* response) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
@@ -803,7 +804,7 @@ class Debug final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status CheckRegionConsistency(::grpc::ServerContext* context, const ::debugpb::RegionConsistencyCheckRequest* request, ::debugpb::RegionConsistencyCheckResponse* response) final override {
+    ::grpc::Status CheckRegionConsistency(::grpc::ServerContext* context, const ::debugpb::RegionConsistencyCheckRequest* request, ::debugpb::RegionConsistencyCheckResponse* response) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
@@ -820,7 +821,7 @@ class Debug final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status ModifyTikvConfig(::grpc::ServerContext* context, const ::debugpb::ModifyTikvConfigRequest* request, ::debugpb::ModifyTikvConfigResponse* response) final override {
+    ::grpc::Status ModifyTikvConfig(::grpc::ServerContext* context, const ::debugpb::ModifyTikvConfigRequest* request, ::debugpb::ModifyTikvConfigResponse* response) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
@@ -837,9 +838,269 @@ class Debug final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status GetRegionProperties(::grpc::ServerContext* context, const ::debugpb::GetRegionPropertiesRequest* request, ::debugpb::GetRegionPropertiesResponse* response) final override {
+    ::grpc::Status GetRegionProperties(::grpc::ServerContext* context, const ::debugpb::GetRegionPropertiesRequest* request, ::debugpb::GetRegionPropertiesResponse* response) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
+    }
+  };
+  template <class BaseClass>
+  class WithRawMethod_Get : public BaseClass {
+   private:
+    void BaseClassMustBeDerivedFromService(const Service *service) {}
+   public:
+    WithRawMethod_Get() {
+      ::grpc::Service::MarkMethodRaw(0);
+    }
+    ~WithRawMethod_Get() override {
+      BaseClassMustBeDerivedFromService(this);
+    }
+    // disable synchronous version of this method
+    ::grpc::Status Get(::grpc::ServerContext* context, const ::debugpb::GetRequest* request, ::debugpb::GetResponse* response) override {
+      abort();
+      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
+    }
+    void RequestGet(::grpc::ServerContext* context, ::grpc::ByteBuffer* request, ::grpc::ServerAsyncResponseWriter< ::grpc::ByteBuffer>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
+      ::grpc::Service::RequestAsyncUnary(0, context, request, response, new_call_cq, notification_cq, tag);
+    }
+  };
+  template <class BaseClass>
+  class WithRawMethod_RaftLog : public BaseClass {
+   private:
+    void BaseClassMustBeDerivedFromService(const Service *service) {}
+   public:
+    WithRawMethod_RaftLog() {
+      ::grpc::Service::MarkMethodRaw(1);
+    }
+    ~WithRawMethod_RaftLog() override {
+      BaseClassMustBeDerivedFromService(this);
+    }
+    // disable synchronous version of this method
+    ::grpc::Status RaftLog(::grpc::ServerContext* context, const ::debugpb::RaftLogRequest* request, ::debugpb::RaftLogResponse* response) override {
+      abort();
+      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
+    }
+    void RequestRaftLog(::grpc::ServerContext* context, ::grpc::ByteBuffer* request, ::grpc::ServerAsyncResponseWriter< ::grpc::ByteBuffer>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
+      ::grpc::Service::RequestAsyncUnary(1, context, request, response, new_call_cq, notification_cq, tag);
+    }
+  };
+  template <class BaseClass>
+  class WithRawMethod_RegionInfo : public BaseClass {
+   private:
+    void BaseClassMustBeDerivedFromService(const Service *service) {}
+   public:
+    WithRawMethod_RegionInfo() {
+      ::grpc::Service::MarkMethodRaw(2);
+    }
+    ~WithRawMethod_RegionInfo() override {
+      BaseClassMustBeDerivedFromService(this);
+    }
+    // disable synchronous version of this method
+    ::grpc::Status RegionInfo(::grpc::ServerContext* context, const ::debugpb::RegionInfoRequest* request, ::debugpb::RegionInfoResponse* response) override {
+      abort();
+      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
+    }
+    void RequestRegionInfo(::grpc::ServerContext* context, ::grpc::ByteBuffer* request, ::grpc::ServerAsyncResponseWriter< ::grpc::ByteBuffer>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
+      ::grpc::Service::RequestAsyncUnary(2, context, request, response, new_call_cq, notification_cq, tag);
+    }
+  };
+  template <class BaseClass>
+  class WithRawMethod_RegionSize : public BaseClass {
+   private:
+    void BaseClassMustBeDerivedFromService(const Service *service) {}
+   public:
+    WithRawMethod_RegionSize() {
+      ::grpc::Service::MarkMethodRaw(3);
+    }
+    ~WithRawMethod_RegionSize() override {
+      BaseClassMustBeDerivedFromService(this);
+    }
+    // disable synchronous version of this method
+    ::grpc::Status RegionSize(::grpc::ServerContext* context, const ::debugpb::RegionSizeRequest* request, ::debugpb::RegionSizeResponse* response) override {
+      abort();
+      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
+    }
+    void RequestRegionSize(::grpc::ServerContext* context, ::grpc::ByteBuffer* request, ::grpc::ServerAsyncResponseWriter< ::grpc::ByteBuffer>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
+      ::grpc::Service::RequestAsyncUnary(3, context, request, response, new_call_cq, notification_cq, tag);
+    }
+  };
+  template <class BaseClass>
+  class WithRawMethod_ScanMvcc : public BaseClass {
+   private:
+    void BaseClassMustBeDerivedFromService(const Service *service) {}
+   public:
+    WithRawMethod_ScanMvcc() {
+      ::grpc::Service::MarkMethodRaw(4);
+    }
+    ~WithRawMethod_ScanMvcc() override {
+      BaseClassMustBeDerivedFromService(this);
+    }
+    // disable synchronous version of this method
+    ::grpc::Status ScanMvcc(::grpc::ServerContext* context, const ::debugpb::ScanMvccRequest* request, ::grpc::ServerWriter< ::debugpb::ScanMvccResponse>* writer) override {
+      abort();
+      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
+    }
+    void RequestScanMvcc(::grpc::ServerContext* context, ::grpc::ByteBuffer* request, ::grpc::ServerAsyncWriter< ::grpc::ByteBuffer>* writer, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
+      ::grpc::Service::RequestAsyncServerStreaming(4, context, request, writer, new_call_cq, notification_cq, tag);
+    }
+  };
+  template <class BaseClass>
+  class WithRawMethod_Compact : public BaseClass {
+   private:
+    void BaseClassMustBeDerivedFromService(const Service *service) {}
+   public:
+    WithRawMethod_Compact() {
+      ::grpc::Service::MarkMethodRaw(5);
+    }
+    ~WithRawMethod_Compact() override {
+      BaseClassMustBeDerivedFromService(this);
+    }
+    // disable synchronous version of this method
+    ::grpc::Status Compact(::grpc::ServerContext* context, const ::debugpb::CompactRequest* request, ::debugpb::CompactResponse* response) override {
+      abort();
+      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
+    }
+    void RequestCompact(::grpc::ServerContext* context, ::grpc::ByteBuffer* request, ::grpc::ServerAsyncResponseWriter< ::grpc::ByteBuffer>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
+      ::grpc::Service::RequestAsyncUnary(5, context, request, response, new_call_cq, notification_cq, tag);
+    }
+  };
+  template <class BaseClass>
+  class WithRawMethod_InjectFailPoint : public BaseClass {
+   private:
+    void BaseClassMustBeDerivedFromService(const Service *service) {}
+   public:
+    WithRawMethod_InjectFailPoint() {
+      ::grpc::Service::MarkMethodRaw(6);
+    }
+    ~WithRawMethod_InjectFailPoint() override {
+      BaseClassMustBeDerivedFromService(this);
+    }
+    // disable synchronous version of this method
+    ::grpc::Status InjectFailPoint(::grpc::ServerContext* context, const ::debugpb::InjectFailPointRequest* request, ::debugpb::InjectFailPointResponse* response) override {
+      abort();
+      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
+    }
+    void RequestInjectFailPoint(::grpc::ServerContext* context, ::grpc::ByteBuffer* request, ::grpc::ServerAsyncResponseWriter< ::grpc::ByteBuffer>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
+      ::grpc::Service::RequestAsyncUnary(6, context, request, response, new_call_cq, notification_cq, tag);
+    }
+  };
+  template <class BaseClass>
+  class WithRawMethod_RecoverFailPoint : public BaseClass {
+   private:
+    void BaseClassMustBeDerivedFromService(const Service *service) {}
+   public:
+    WithRawMethod_RecoverFailPoint() {
+      ::grpc::Service::MarkMethodRaw(7);
+    }
+    ~WithRawMethod_RecoverFailPoint() override {
+      BaseClassMustBeDerivedFromService(this);
+    }
+    // disable synchronous version of this method
+    ::grpc::Status RecoverFailPoint(::grpc::ServerContext* context, const ::debugpb::RecoverFailPointRequest* request, ::debugpb::RecoverFailPointResponse* response) override {
+      abort();
+      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
+    }
+    void RequestRecoverFailPoint(::grpc::ServerContext* context, ::grpc::ByteBuffer* request, ::grpc::ServerAsyncResponseWriter< ::grpc::ByteBuffer>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
+      ::grpc::Service::RequestAsyncUnary(7, context, request, response, new_call_cq, notification_cq, tag);
+    }
+  };
+  template <class BaseClass>
+  class WithRawMethod_ListFailPoints : public BaseClass {
+   private:
+    void BaseClassMustBeDerivedFromService(const Service *service) {}
+   public:
+    WithRawMethod_ListFailPoints() {
+      ::grpc::Service::MarkMethodRaw(8);
+    }
+    ~WithRawMethod_ListFailPoints() override {
+      BaseClassMustBeDerivedFromService(this);
+    }
+    // disable synchronous version of this method
+    ::grpc::Status ListFailPoints(::grpc::ServerContext* context, const ::debugpb::ListFailPointsRequest* request, ::debugpb::ListFailPointsResponse* response) override {
+      abort();
+      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
+    }
+    void RequestListFailPoints(::grpc::ServerContext* context, ::grpc::ByteBuffer* request, ::grpc::ServerAsyncResponseWriter< ::grpc::ByteBuffer>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
+      ::grpc::Service::RequestAsyncUnary(8, context, request, response, new_call_cq, notification_cq, tag);
+    }
+  };
+  template <class BaseClass>
+  class WithRawMethod_GetMetrics : public BaseClass {
+   private:
+    void BaseClassMustBeDerivedFromService(const Service *service) {}
+   public:
+    WithRawMethod_GetMetrics() {
+      ::grpc::Service::MarkMethodRaw(9);
+    }
+    ~WithRawMethod_GetMetrics() override {
+      BaseClassMustBeDerivedFromService(this);
+    }
+    // disable synchronous version of this method
+    ::grpc::Status GetMetrics(::grpc::ServerContext* context, const ::debugpb::GetMetricsRequest* request, ::debugpb::GetMetricsResponse* response) override {
+      abort();
+      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
+    }
+    void RequestGetMetrics(::grpc::ServerContext* context, ::grpc::ByteBuffer* request, ::grpc::ServerAsyncResponseWriter< ::grpc::ByteBuffer>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
+      ::grpc::Service::RequestAsyncUnary(9, context, request, response, new_call_cq, notification_cq, tag);
+    }
+  };
+  template <class BaseClass>
+  class WithRawMethod_CheckRegionConsistency : public BaseClass {
+   private:
+    void BaseClassMustBeDerivedFromService(const Service *service) {}
+   public:
+    WithRawMethod_CheckRegionConsistency() {
+      ::grpc::Service::MarkMethodRaw(10);
+    }
+    ~WithRawMethod_CheckRegionConsistency() override {
+      BaseClassMustBeDerivedFromService(this);
+    }
+    // disable synchronous version of this method
+    ::grpc::Status CheckRegionConsistency(::grpc::ServerContext* context, const ::debugpb::RegionConsistencyCheckRequest* request, ::debugpb::RegionConsistencyCheckResponse* response) override {
+      abort();
+      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
+    }
+    void RequestCheckRegionConsistency(::grpc::ServerContext* context, ::grpc::ByteBuffer* request, ::grpc::ServerAsyncResponseWriter< ::grpc::ByteBuffer>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
+      ::grpc::Service::RequestAsyncUnary(10, context, request, response, new_call_cq, notification_cq, tag);
+    }
+  };
+  template <class BaseClass>
+  class WithRawMethod_ModifyTikvConfig : public BaseClass {
+   private:
+    void BaseClassMustBeDerivedFromService(const Service *service) {}
+   public:
+    WithRawMethod_ModifyTikvConfig() {
+      ::grpc::Service::MarkMethodRaw(11);
+    }
+    ~WithRawMethod_ModifyTikvConfig() override {
+      BaseClassMustBeDerivedFromService(this);
+    }
+    // disable synchronous version of this method
+    ::grpc::Status ModifyTikvConfig(::grpc::ServerContext* context, const ::debugpb::ModifyTikvConfigRequest* request, ::debugpb::ModifyTikvConfigResponse* response) override {
+      abort();
+      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
+    }
+    void RequestModifyTikvConfig(::grpc::ServerContext* context, ::grpc::ByteBuffer* request, ::grpc::ServerAsyncResponseWriter< ::grpc::ByteBuffer>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
+      ::grpc::Service::RequestAsyncUnary(11, context, request, response, new_call_cq, notification_cq, tag);
+    }
+  };
+  template <class BaseClass>
+  class WithRawMethod_GetRegionProperties : public BaseClass {
+   private:
+    void BaseClassMustBeDerivedFromService(const Service *service) {}
+   public:
+    WithRawMethod_GetRegionProperties() {
+      ::grpc::Service::MarkMethodRaw(12);
+    }
+    ~WithRawMethod_GetRegionProperties() override {
+      BaseClassMustBeDerivedFromService(this);
+    }
+    // disable synchronous version of this method
+    ::grpc::Status GetRegionProperties(::grpc::ServerContext* context, const ::debugpb::GetRegionPropertiesRequest* request, ::debugpb::GetRegionPropertiesResponse* response) override {
+      abort();
+      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
+    }
+    void RequestGetRegionProperties(::grpc::ServerContext* context, ::grpc::ByteBuffer* request, ::grpc::ServerAsyncResponseWriter< ::grpc::ByteBuffer>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
+      ::grpc::Service::RequestAsyncUnary(12, context, request, response, new_call_cq, notification_cq, tag);
     }
   };
   template <class BaseClass>
@@ -855,7 +1116,7 @@ class Debug final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable regular version of this method
-    ::grpc::Status Get(::grpc::ServerContext* context, const ::debugpb::GetRequest* request, ::debugpb::GetResponse* response) final override {
+    ::grpc::Status Get(::grpc::ServerContext* context, const ::debugpb::GetRequest* request, ::debugpb::GetResponse* response) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
@@ -875,7 +1136,7 @@ class Debug final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable regular version of this method
-    ::grpc::Status RaftLog(::grpc::ServerContext* context, const ::debugpb::RaftLogRequest* request, ::debugpb::RaftLogResponse* response) final override {
+    ::grpc::Status RaftLog(::grpc::ServerContext* context, const ::debugpb::RaftLogRequest* request, ::debugpb::RaftLogResponse* response) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
@@ -895,7 +1156,7 @@ class Debug final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable regular version of this method
-    ::grpc::Status RegionInfo(::grpc::ServerContext* context, const ::debugpb::RegionInfoRequest* request, ::debugpb::RegionInfoResponse* response) final override {
+    ::grpc::Status RegionInfo(::grpc::ServerContext* context, const ::debugpb::RegionInfoRequest* request, ::debugpb::RegionInfoResponse* response) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
@@ -915,7 +1176,7 @@ class Debug final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable regular version of this method
-    ::grpc::Status RegionSize(::grpc::ServerContext* context, const ::debugpb::RegionSizeRequest* request, ::debugpb::RegionSizeResponse* response) final override {
+    ::grpc::Status RegionSize(::grpc::ServerContext* context, const ::debugpb::RegionSizeRequest* request, ::debugpb::RegionSizeResponse* response) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
@@ -935,7 +1196,7 @@ class Debug final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable regular version of this method
-    ::grpc::Status Compact(::grpc::ServerContext* context, const ::debugpb::CompactRequest* request, ::debugpb::CompactResponse* response) final override {
+    ::grpc::Status Compact(::grpc::ServerContext* context, const ::debugpb::CompactRequest* request, ::debugpb::CompactResponse* response) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
@@ -955,7 +1216,7 @@ class Debug final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable regular version of this method
-    ::grpc::Status InjectFailPoint(::grpc::ServerContext* context, const ::debugpb::InjectFailPointRequest* request, ::debugpb::InjectFailPointResponse* response) final override {
+    ::grpc::Status InjectFailPoint(::grpc::ServerContext* context, const ::debugpb::InjectFailPointRequest* request, ::debugpb::InjectFailPointResponse* response) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
@@ -975,7 +1236,7 @@ class Debug final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable regular version of this method
-    ::grpc::Status RecoverFailPoint(::grpc::ServerContext* context, const ::debugpb::RecoverFailPointRequest* request, ::debugpb::RecoverFailPointResponse* response) final override {
+    ::grpc::Status RecoverFailPoint(::grpc::ServerContext* context, const ::debugpb::RecoverFailPointRequest* request, ::debugpb::RecoverFailPointResponse* response) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
@@ -995,7 +1256,7 @@ class Debug final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable regular version of this method
-    ::grpc::Status ListFailPoints(::grpc::ServerContext* context, const ::debugpb::ListFailPointsRequest* request, ::debugpb::ListFailPointsResponse* response) final override {
+    ::grpc::Status ListFailPoints(::grpc::ServerContext* context, const ::debugpb::ListFailPointsRequest* request, ::debugpb::ListFailPointsResponse* response) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
@@ -1015,7 +1276,7 @@ class Debug final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable regular version of this method
-    ::grpc::Status GetMetrics(::grpc::ServerContext* context, const ::debugpb::GetMetricsRequest* request, ::debugpb::GetMetricsResponse* response) final override {
+    ::grpc::Status GetMetrics(::grpc::ServerContext* context, const ::debugpb::GetMetricsRequest* request, ::debugpb::GetMetricsResponse* response) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
@@ -1035,7 +1296,7 @@ class Debug final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable regular version of this method
-    ::grpc::Status CheckRegionConsistency(::grpc::ServerContext* context, const ::debugpb::RegionConsistencyCheckRequest* request, ::debugpb::RegionConsistencyCheckResponse* response) final override {
+    ::grpc::Status CheckRegionConsistency(::grpc::ServerContext* context, const ::debugpb::RegionConsistencyCheckRequest* request, ::debugpb::RegionConsistencyCheckResponse* response) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
@@ -1055,7 +1316,7 @@ class Debug final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable regular version of this method
-    ::grpc::Status ModifyTikvConfig(::grpc::ServerContext* context, const ::debugpb::ModifyTikvConfigRequest* request, ::debugpb::ModifyTikvConfigResponse* response) final override {
+    ::grpc::Status ModifyTikvConfig(::grpc::ServerContext* context, const ::debugpb::ModifyTikvConfigRequest* request, ::debugpb::ModifyTikvConfigResponse* response) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
@@ -1075,7 +1336,7 @@ class Debug final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable regular version of this method
-    ::grpc::Status GetRegionProperties(::grpc::ServerContext* context, const ::debugpb::GetRegionPropertiesRequest* request, ::debugpb::GetRegionPropertiesResponse* response) final override {
+    ::grpc::Status GetRegionProperties(::grpc::ServerContext* context, const ::debugpb::GetRegionPropertiesRequest* request, ::debugpb::GetRegionPropertiesResponse* response) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
@@ -1096,7 +1357,7 @@ class Debug final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable regular version of this method
-    ::grpc::Status ScanMvcc(::grpc::ServerContext* context, const ::debugpb::ScanMvccRequest* request, ::grpc::ServerWriter< ::debugpb::ScanMvccResponse>* writer) final override {
+    ::grpc::Status ScanMvcc(::grpc::ServerContext* context, const ::debugpb::ScanMvccRequest* request, ::grpc::ServerWriter< ::debugpb::ScanMvccResponse>* writer) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }

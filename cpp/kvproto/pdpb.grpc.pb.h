@@ -6,15 +6,16 @@
 
 #include "pdpb.pb.h"
 
-#include <grpc++/impl/codegen/async_stream.h>
-#include <grpc++/impl/codegen/async_unary_call.h>
-#include <grpc++/impl/codegen/method_handler_impl.h>
-#include <grpc++/impl/codegen/proto_utils.h>
-#include <grpc++/impl/codegen/rpc_method.h>
-#include <grpc++/impl/codegen/service_type.h>
-#include <grpc++/impl/codegen/status.h>
-#include <grpc++/impl/codegen/stub_options.h>
-#include <grpc++/impl/codegen/sync_stream.h>
+#include <grpcpp/impl/codegen/async_generic_service.h>
+#include <grpcpp/impl/codegen/async_stream.h>
+#include <grpcpp/impl/codegen/async_unary_call.h>
+#include <grpcpp/impl/codegen/method_handler_impl.h>
+#include <grpcpp/impl/codegen/proto_utils.h>
+#include <grpcpp/impl/codegen/rpc_method.h>
+#include <grpcpp/impl/codegen/service_type.h>
+#include <grpcpp/impl/codegen/status.h>
+#include <grpcpp/impl/codegen/stub_options.h>
+#include <grpcpp/impl/codegen/sync_stream.h>
 
 namespace grpc {
 class CompletionQueue;
@@ -543,7 +544,7 @@ class PD final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status GetMembers(::grpc::ServerContext* context, const ::pdpb::GetMembersRequest* request, ::pdpb::GetMembersResponse* response) final override {
+    ::grpc::Status GetMembers(::grpc::ServerContext* context, const ::pdpb::GetMembersRequest* request, ::pdpb::GetMembersResponse* response) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
@@ -563,7 +564,7 @@ class PD final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status Tso(::grpc::ServerContext* context, ::grpc::ServerReaderWriter< ::pdpb::TsoResponse, ::pdpb::TsoRequest>* stream) final override {
+    ::grpc::Status Tso(::grpc::ServerContext* context, ::grpc::ServerReaderWriter< ::pdpb::TsoResponse, ::pdpb::TsoRequest>* stream)  override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
@@ -583,7 +584,7 @@ class PD final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status Bootstrap(::grpc::ServerContext* context, const ::pdpb::BootstrapRequest* request, ::pdpb::BootstrapResponse* response) final override {
+    ::grpc::Status Bootstrap(::grpc::ServerContext* context, const ::pdpb::BootstrapRequest* request, ::pdpb::BootstrapResponse* response) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
@@ -603,7 +604,7 @@ class PD final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status IsBootstrapped(::grpc::ServerContext* context, const ::pdpb::IsBootstrappedRequest* request, ::pdpb::IsBootstrappedResponse* response) final override {
+    ::grpc::Status IsBootstrapped(::grpc::ServerContext* context, const ::pdpb::IsBootstrappedRequest* request, ::pdpb::IsBootstrappedResponse* response) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
@@ -623,7 +624,7 @@ class PD final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status AllocID(::grpc::ServerContext* context, const ::pdpb::AllocIDRequest* request, ::pdpb::AllocIDResponse* response) final override {
+    ::grpc::Status AllocID(::grpc::ServerContext* context, const ::pdpb::AllocIDRequest* request, ::pdpb::AllocIDResponse* response) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
@@ -643,7 +644,7 @@ class PD final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status GetStore(::grpc::ServerContext* context, const ::pdpb::GetStoreRequest* request, ::pdpb::GetStoreResponse* response) final override {
+    ::grpc::Status GetStore(::grpc::ServerContext* context, const ::pdpb::GetStoreRequest* request, ::pdpb::GetStoreResponse* response) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
@@ -663,7 +664,7 @@ class PD final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status PutStore(::grpc::ServerContext* context, const ::pdpb::PutStoreRequest* request, ::pdpb::PutStoreResponse* response) final override {
+    ::grpc::Status PutStore(::grpc::ServerContext* context, const ::pdpb::PutStoreRequest* request, ::pdpb::PutStoreResponse* response) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
@@ -683,7 +684,7 @@ class PD final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status GetAllStores(::grpc::ServerContext* context, const ::pdpb::GetAllStoresRequest* request, ::pdpb::GetAllStoresResponse* response) final override {
+    ::grpc::Status GetAllStores(::grpc::ServerContext* context, const ::pdpb::GetAllStoresRequest* request, ::pdpb::GetAllStoresResponse* response) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
@@ -703,7 +704,7 @@ class PD final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status StoreHeartbeat(::grpc::ServerContext* context, const ::pdpb::StoreHeartbeatRequest* request, ::pdpb::StoreHeartbeatResponse* response) final override {
+    ::grpc::Status StoreHeartbeat(::grpc::ServerContext* context, const ::pdpb::StoreHeartbeatRequest* request, ::pdpb::StoreHeartbeatResponse* response) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
@@ -723,7 +724,7 @@ class PD final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status RegionHeartbeat(::grpc::ServerContext* context, ::grpc::ServerReaderWriter< ::pdpb::RegionHeartbeatResponse, ::pdpb::RegionHeartbeatRequest>* stream) final override {
+    ::grpc::Status RegionHeartbeat(::grpc::ServerContext* context, ::grpc::ServerReaderWriter< ::pdpb::RegionHeartbeatResponse, ::pdpb::RegionHeartbeatRequest>* stream)  override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
@@ -743,7 +744,7 @@ class PD final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status GetRegion(::grpc::ServerContext* context, const ::pdpb::GetRegionRequest* request, ::pdpb::GetRegionResponse* response) final override {
+    ::grpc::Status GetRegion(::grpc::ServerContext* context, const ::pdpb::GetRegionRequest* request, ::pdpb::GetRegionResponse* response) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
@@ -763,7 +764,7 @@ class PD final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status GetPrevRegion(::grpc::ServerContext* context, const ::pdpb::GetRegionRequest* request, ::pdpb::GetRegionResponse* response) final override {
+    ::grpc::Status GetPrevRegion(::grpc::ServerContext* context, const ::pdpb::GetRegionRequest* request, ::pdpb::GetRegionResponse* response) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
@@ -783,7 +784,7 @@ class PD final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status GetRegionByID(::grpc::ServerContext* context, const ::pdpb::GetRegionByIDRequest* request, ::pdpb::GetRegionResponse* response) final override {
+    ::grpc::Status GetRegionByID(::grpc::ServerContext* context, const ::pdpb::GetRegionByIDRequest* request, ::pdpb::GetRegionResponse* response) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
@@ -803,7 +804,7 @@ class PD final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status AskSplit(::grpc::ServerContext* context, const ::pdpb::AskSplitRequest* request, ::pdpb::AskSplitResponse* response) final override {
+    ::grpc::Status AskSplit(::grpc::ServerContext* context, const ::pdpb::AskSplitRequest* request, ::pdpb::AskSplitResponse* response) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
@@ -823,7 +824,7 @@ class PD final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status ReportSplit(::grpc::ServerContext* context, const ::pdpb::ReportSplitRequest* request, ::pdpb::ReportSplitResponse* response) final override {
+    ::grpc::Status ReportSplit(::grpc::ServerContext* context, const ::pdpb::ReportSplitRequest* request, ::pdpb::ReportSplitResponse* response) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
@@ -843,7 +844,7 @@ class PD final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status AskBatchSplit(::grpc::ServerContext* context, const ::pdpb::AskBatchSplitRequest* request, ::pdpb::AskBatchSplitResponse* response) final override {
+    ::grpc::Status AskBatchSplit(::grpc::ServerContext* context, const ::pdpb::AskBatchSplitRequest* request, ::pdpb::AskBatchSplitResponse* response) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
@@ -863,7 +864,7 @@ class PD final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status ReportBatchSplit(::grpc::ServerContext* context, const ::pdpb::ReportBatchSplitRequest* request, ::pdpb::ReportBatchSplitResponse* response) final override {
+    ::grpc::Status ReportBatchSplit(::grpc::ServerContext* context, const ::pdpb::ReportBatchSplitRequest* request, ::pdpb::ReportBatchSplitResponse* response) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
@@ -883,7 +884,7 @@ class PD final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status GetClusterConfig(::grpc::ServerContext* context, const ::pdpb::GetClusterConfigRequest* request, ::pdpb::GetClusterConfigResponse* response) final override {
+    ::grpc::Status GetClusterConfig(::grpc::ServerContext* context, const ::pdpb::GetClusterConfigRequest* request, ::pdpb::GetClusterConfigResponse* response) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
@@ -903,7 +904,7 @@ class PD final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status PutClusterConfig(::grpc::ServerContext* context, const ::pdpb::PutClusterConfigRequest* request, ::pdpb::PutClusterConfigResponse* response) final override {
+    ::grpc::Status PutClusterConfig(::grpc::ServerContext* context, const ::pdpb::PutClusterConfigRequest* request, ::pdpb::PutClusterConfigResponse* response) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
@@ -923,7 +924,7 @@ class PD final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status ScatterRegion(::grpc::ServerContext* context, const ::pdpb::ScatterRegionRequest* request, ::pdpb::ScatterRegionResponse* response) final override {
+    ::grpc::Status ScatterRegion(::grpc::ServerContext* context, const ::pdpb::ScatterRegionRequest* request, ::pdpb::ScatterRegionResponse* response) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
@@ -943,7 +944,7 @@ class PD final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status GetGCSafePoint(::grpc::ServerContext* context, const ::pdpb::GetGCSafePointRequest* request, ::pdpb::GetGCSafePointResponse* response) final override {
+    ::grpc::Status GetGCSafePoint(::grpc::ServerContext* context, const ::pdpb::GetGCSafePointRequest* request, ::pdpb::GetGCSafePointResponse* response) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
@@ -963,7 +964,7 @@ class PD final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status UpdateGCSafePoint(::grpc::ServerContext* context, const ::pdpb::UpdateGCSafePointRequest* request, ::pdpb::UpdateGCSafePointResponse* response) final override {
+    ::grpc::Status UpdateGCSafePoint(::grpc::ServerContext* context, const ::pdpb::UpdateGCSafePointRequest* request, ::pdpb::UpdateGCSafePointResponse* response) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
@@ -983,7 +984,7 @@ class PD final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status SyncRegions(::grpc::ServerContext* context, ::grpc::ServerReaderWriter< ::pdpb::SyncRegionResponse, ::pdpb::SyncRegionRequest>* stream) final override {
+    ::grpc::Status SyncRegions(::grpc::ServerContext* context, ::grpc::ServerReaderWriter< ::pdpb::SyncRegionResponse, ::pdpb::SyncRegionRequest>* stream)  override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
@@ -1004,7 +1005,7 @@ class PD final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status GetMembers(::grpc::ServerContext* context, const ::pdpb::GetMembersRequest* request, ::pdpb::GetMembersResponse* response) final override {
+    ::grpc::Status GetMembers(::grpc::ServerContext* context, const ::pdpb::GetMembersRequest* request, ::pdpb::GetMembersResponse* response) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
@@ -1021,7 +1022,7 @@ class PD final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status Tso(::grpc::ServerContext* context, ::grpc::ServerReaderWriter< ::pdpb::TsoResponse, ::pdpb::TsoRequest>* stream) final override {
+    ::grpc::Status Tso(::grpc::ServerContext* context, ::grpc::ServerReaderWriter< ::pdpb::TsoResponse, ::pdpb::TsoRequest>* stream)  override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
@@ -1038,7 +1039,7 @@ class PD final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status Bootstrap(::grpc::ServerContext* context, const ::pdpb::BootstrapRequest* request, ::pdpb::BootstrapResponse* response) final override {
+    ::grpc::Status Bootstrap(::grpc::ServerContext* context, const ::pdpb::BootstrapRequest* request, ::pdpb::BootstrapResponse* response) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
@@ -1055,7 +1056,7 @@ class PD final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status IsBootstrapped(::grpc::ServerContext* context, const ::pdpb::IsBootstrappedRequest* request, ::pdpb::IsBootstrappedResponse* response) final override {
+    ::grpc::Status IsBootstrapped(::grpc::ServerContext* context, const ::pdpb::IsBootstrappedRequest* request, ::pdpb::IsBootstrappedResponse* response) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
@@ -1072,7 +1073,7 @@ class PD final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status AllocID(::grpc::ServerContext* context, const ::pdpb::AllocIDRequest* request, ::pdpb::AllocIDResponse* response) final override {
+    ::grpc::Status AllocID(::grpc::ServerContext* context, const ::pdpb::AllocIDRequest* request, ::pdpb::AllocIDResponse* response) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
@@ -1089,7 +1090,7 @@ class PD final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status GetStore(::grpc::ServerContext* context, const ::pdpb::GetStoreRequest* request, ::pdpb::GetStoreResponse* response) final override {
+    ::grpc::Status GetStore(::grpc::ServerContext* context, const ::pdpb::GetStoreRequest* request, ::pdpb::GetStoreResponse* response) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
@@ -1106,7 +1107,7 @@ class PD final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status PutStore(::grpc::ServerContext* context, const ::pdpb::PutStoreRequest* request, ::pdpb::PutStoreResponse* response) final override {
+    ::grpc::Status PutStore(::grpc::ServerContext* context, const ::pdpb::PutStoreRequest* request, ::pdpb::PutStoreResponse* response) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
@@ -1123,7 +1124,7 @@ class PD final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status GetAllStores(::grpc::ServerContext* context, const ::pdpb::GetAllStoresRequest* request, ::pdpb::GetAllStoresResponse* response) final override {
+    ::grpc::Status GetAllStores(::grpc::ServerContext* context, const ::pdpb::GetAllStoresRequest* request, ::pdpb::GetAllStoresResponse* response) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
@@ -1140,7 +1141,7 @@ class PD final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status StoreHeartbeat(::grpc::ServerContext* context, const ::pdpb::StoreHeartbeatRequest* request, ::pdpb::StoreHeartbeatResponse* response) final override {
+    ::grpc::Status StoreHeartbeat(::grpc::ServerContext* context, const ::pdpb::StoreHeartbeatRequest* request, ::pdpb::StoreHeartbeatResponse* response) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
@@ -1157,7 +1158,7 @@ class PD final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status RegionHeartbeat(::grpc::ServerContext* context, ::grpc::ServerReaderWriter< ::pdpb::RegionHeartbeatResponse, ::pdpb::RegionHeartbeatRequest>* stream) final override {
+    ::grpc::Status RegionHeartbeat(::grpc::ServerContext* context, ::grpc::ServerReaderWriter< ::pdpb::RegionHeartbeatResponse, ::pdpb::RegionHeartbeatRequest>* stream)  override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
@@ -1174,7 +1175,7 @@ class PD final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status GetRegion(::grpc::ServerContext* context, const ::pdpb::GetRegionRequest* request, ::pdpb::GetRegionResponse* response) final override {
+    ::grpc::Status GetRegion(::grpc::ServerContext* context, const ::pdpb::GetRegionRequest* request, ::pdpb::GetRegionResponse* response) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
@@ -1191,7 +1192,7 @@ class PD final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status GetPrevRegion(::grpc::ServerContext* context, const ::pdpb::GetRegionRequest* request, ::pdpb::GetRegionResponse* response) final override {
+    ::grpc::Status GetPrevRegion(::grpc::ServerContext* context, const ::pdpb::GetRegionRequest* request, ::pdpb::GetRegionResponse* response) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
@@ -1208,7 +1209,7 @@ class PD final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status GetRegionByID(::grpc::ServerContext* context, const ::pdpb::GetRegionByIDRequest* request, ::pdpb::GetRegionResponse* response) final override {
+    ::grpc::Status GetRegionByID(::grpc::ServerContext* context, const ::pdpb::GetRegionByIDRequest* request, ::pdpb::GetRegionResponse* response) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
@@ -1225,7 +1226,7 @@ class PD final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status AskSplit(::grpc::ServerContext* context, const ::pdpb::AskSplitRequest* request, ::pdpb::AskSplitResponse* response) final override {
+    ::grpc::Status AskSplit(::grpc::ServerContext* context, const ::pdpb::AskSplitRequest* request, ::pdpb::AskSplitResponse* response) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
@@ -1242,7 +1243,7 @@ class PD final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status ReportSplit(::grpc::ServerContext* context, const ::pdpb::ReportSplitRequest* request, ::pdpb::ReportSplitResponse* response) final override {
+    ::grpc::Status ReportSplit(::grpc::ServerContext* context, const ::pdpb::ReportSplitRequest* request, ::pdpb::ReportSplitResponse* response) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
@@ -1259,7 +1260,7 @@ class PD final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status AskBatchSplit(::grpc::ServerContext* context, const ::pdpb::AskBatchSplitRequest* request, ::pdpb::AskBatchSplitResponse* response) final override {
+    ::grpc::Status AskBatchSplit(::grpc::ServerContext* context, const ::pdpb::AskBatchSplitRequest* request, ::pdpb::AskBatchSplitResponse* response) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
@@ -1276,7 +1277,7 @@ class PD final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status ReportBatchSplit(::grpc::ServerContext* context, const ::pdpb::ReportBatchSplitRequest* request, ::pdpb::ReportBatchSplitResponse* response) final override {
+    ::grpc::Status ReportBatchSplit(::grpc::ServerContext* context, const ::pdpb::ReportBatchSplitRequest* request, ::pdpb::ReportBatchSplitResponse* response) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
@@ -1293,7 +1294,7 @@ class PD final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status GetClusterConfig(::grpc::ServerContext* context, const ::pdpb::GetClusterConfigRequest* request, ::pdpb::GetClusterConfigResponse* response) final override {
+    ::grpc::Status GetClusterConfig(::grpc::ServerContext* context, const ::pdpb::GetClusterConfigRequest* request, ::pdpb::GetClusterConfigResponse* response) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
@@ -1310,7 +1311,7 @@ class PD final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status PutClusterConfig(::grpc::ServerContext* context, const ::pdpb::PutClusterConfigRequest* request, ::pdpb::PutClusterConfigResponse* response) final override {
+    ::grpc::Status PutClusterConfig(::grpc::ServerContext* context, const ::pdpb::PutClusterConfigRequest* request, ::pdpb::PutClusterConfigResponse* response) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
@@ -1327,7 +1328,7 @@ class PD final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status ScatterRegion(::grpc::ServerContext* context, const ::pdpb::ScatterRegionRequest* request, ::pdpb::ScatterRegionResponse* response) final override {
+    ::grpc::Status ScatterRegion(::grpc::ServerContext* context, const ::pdpb::ScatterRegionRequest* request, ::pdpb::ScatterRegionResponse* response) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
@@ -1344,7 +1345,7 @@ class PD final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status GetGCSafePoint(::grpc::ServerContext* context, const ::pdpb::GetGCSafePointRequest* request, ::pdpb::GetGCSafePointResponse* response) final override {
+    ::grpc::Status GetGCSafePoint(::grpc::ServerContext* context, const ::pdpb::GetGCSafePointRequest* request, ::pdpb::GetGCSafePointResponse* response) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
@@ -1361,7 +1362,7 @@ class PD final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status UpdateGCSafePoint(::grpc::ServerContext* context, const ::pdpb::UpdateGCSafePointRequest* request, ::pdpb::UpdateGCSafePointResponse* response) final override {
+    ::grpc::Status UpdateGCSafePoint(::grpc::ServerContext* context, const ::pdpb::UpdateGCSafePointRequest* request, ::pdpb::UpdateGCSafePointResponse* response) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
@@ -1378,9 +1379,469 @@ class PD final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status SyncRegions(::grpc::ServerContext* context, ::grpc::ServerReaderWriter< ::pdpb::SyncRegionResponse, ::pdpb::SyncRegionRequest>* stream) final override {
+    ::grpc::Status SyncRegions(::grpc::ServerContext* context, ::grpc::ServerReaderWriter< ::pdpb::SyncRegionResponse, ::pdpb::SyncRegionRequest>* stream)  override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
+    }
+  };
+  template <class BaseClass>
+  class WithRawMethod_GetMembers : public BaseClass {
+   private:
+    void BaseClassMustBeDerivedFromService(const Service *service) {}
+   public:
+    WithRawMethod_GetMembers() {
+      ::grpc::Service::MarkMethodRaw(0);
+    }
+    ~WithRawMethod_GetMembers() override {
+      BaseClassMustBeDerivedFromService(this);
+    }
+    // disable synchronous version of this method
+    ::grpc::Status GetMembers(::grpc::ServerContext* context, const ::pdpb::GetMembersRequest* request, ::pdpb::GetMembersResponse* response) override {
+      abort();
+      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
+    }
+    void RequestGetMembers(::grpc::ServerContext* context, ::grpc::ByteBuffer* request, ::grpc::ServerAsyncResponseWriter< ::grpc::ByteBuffer>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
+      ::grpc::Service::RequestAsyncUnary(0, context, request, response, new_call_cq, notification_cq, tag);
+    }
+  };
+  template <class BaseClass>
+  class WithRawMethod_Tso : public BaseClass {
+   private:
+    void BaseClassMustBeDerivedFromService(const Service *service) {}
+   public:
+    WithRawMethod_Tso() {
+      ::grpc::Service::MarkMethodRaw(1);
+    }
+    ~WithRawMethod_Tso() override {
+      BaseClassMustBeDerivedFromService(this);
+    }
+    // disable synchronous version of this method
+    ::grpc::Status Tso(::grpc::ServerContext* context, ::grpc::ServerReaderWriter< ::pdpb::TsoResponse, ::pdpb::TsoRequest>* stream)  override {
+      abort();
+      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
+    }
+    void RequestTso(::grpc::ServerContext* context, ::grpc::ServerAsyncReaderWriter< ::grpc::ByteBuffer, ::grpc::ByteBuffer>* stream, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
+      ::grpc::Service::RequestAsyncBidiStreaming(1, context, stream, new_call_cq, notification_cq, tag);
+    }
+  };
+  template <class BaseClass>
+  class WithRawMethod_Bootstrap : public BaseClass {
+   private:
+    void BaseClassMustBeDerivedFromService(const Service *service) {}
+   public:
+    WithRawMethod_Bootstrap() {
+      ::grpc::Service::MarkMethodRaw(2);
+    }
+    ~WithRawMethod_Bootstrap() override {
+      BaseClassMustBeDerivedFromService(this);
+    }
+    // disable synchronous version of this method
+    ::grpc::Status Bootstrap(::grpc::ServerContext* context, const ::pdpb::BootstrapRequest* request, ::pdpb::BootstrapResponse* response) override {
+      abort();
+      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
+    }
+    void RequestBootstrap(::grpc::ServerContext* context, ::grpc::ByteBuffer* request, ::grpc::ServerAsyncResponseWriter< ::grpc::ByteBuffer>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
+      ::grpc::Service::RequestAsyncUnary(2, context, request, response, new_call_cq, notification_cq, tag);
+    }
+  };
+  template <class BaseClass>
+  class WithRawMethod_IsBootstrapped : public BaseClass {
+   private:
+    void BaseClassMustBeDerivedFromService(const Service *service) {}
+   public:
+    WithRawMethod_IsBootstrapped() {
+      ::grpc::Service::MarkMethodRaw(3);
+    }
+    ~WithRawMethod_IsBootstrapped() override {
+      BaseClassMustBeDerivedFromService(this);
+    }
+    // disable synchronous version of this method
+    ::grpc::Status IsBootstrapped(::grpc::ServerContext* context, const ::pdpb::IsBootstrappedRequest* request, ::pdpb::IsBootstrappedResponse* response) override {
+      abort();
+      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
+    }
+    void RequestIsBootstrapped(::grpc::ServerContext* context, ::grpc::ByteBuffer* request, ::grpc::ServerAsyncResponseWriter< ::grpc::ByteBuffer>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
+      ::grpc::Service::RequestAsyncUnary(3, context, request, response, new_call_cq, notification_cq, tag);
+    }
+  };
+  template <class BaseClass>
+  class WithRawMethod_AllocID : public BaseClass {
+   private:
+    void BaseClassMustBeDerivedFromService(const Service *service) {}
+   public:
+    WithRawMethod_AllocID() {
+      ::grpc::Service::MarkMethodRaw(4);
+    }
+    ~WithRawMethod_AllocID() override {
+      BaseClassMustBeDerivedFromService(this);
+    }
+    // disable synchronous version of this method
+    ::grpc::Status AllocID(::grpc::ServerContext* context, const ::pdpb::AllocIDRequest* request, ::pdpb::AllocIDResponse* response) override {
+      abort();
+      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
+    }
+    void RequestAllocID(::grpc::ServerContext* context, ::grpc::ByteBuffer* request, ::grpc::ServerAsyncResponseWriter< ::grpc::ByteBuffer>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
+      ::grpc::Service::RequestAsyncUnary(4, context, request, response, new_call_cq, notification_cq, tag);
+    }
+  };
+  template <class BaseClass>
+  class WithRawMethod_GetStore : public BaseClass {
+   private:
+    void BaseClassMustBeDerivedFromService(const Service *service) {}
+   public:
+    WithRawMethod_GetStore() {
+      ::grpc::Service::MarkMethodRaw(5);
+    }
+    ~WithRawMethod_GetStore() override {
+      BaseClassMustBeDerivedFromService(this);
+    }
+    // disable synchronous version of this method
+    ::grpc::Status GetStore(::grpc::ServerContext* context, const ::pdpb::GetStoreRequest* request, ::pdpb::GetStoreResponse* response) override {
+      abort();
+      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
+    }
+    void RequestGetStore(::grpc::ServerContext* context, ::grpc::ByteBuffer* request, ::grpc::ServerAsyncResponseWriter< ::grpc::ByteBuffer>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
+      ::grpc::Service::RequestAsyncUnary(5, context, request, response, new_call_cq, notification_cq, tag);
+    }
+  };
+  template <class BaseClass>
+  class WithRawMethod_PutStore : public BaseClass {
+   private:
+    void BaseClassMustBeDerivedFromService(const Service *service) {}
+   public:
+    WithRawMethod_PutStore() {
+      ::grpc::Service::MarkMethodRaw(6);
+    }
+    ~WithRawMethod_PutStore() override {
+      BaseClassMustBeDerivedFromService(this);
+    }
+    // disable synchronous version of this method
+    ::grpc::Status PutStore(::grpc::ServerContext* context, const ::pdpb::PutStoreRequest* request, ::pdpb::PutStoreResponse* response) override {
+      abort();
+      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
+    }
+    void RequestPutStore(::grpc::ServerContext* context, ::grpc::ByteBuffer* request, ::grpc::ServerAsyncResponseWriter< ::grpc::ByteBuffer>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
+      ::grpc::Service::RequestAsyncUnary(6, context, request, response, new_call_cq, notification_cq, tag);
+    }
+  };
+  template <class BaseClass>
+  class WithRawMethod_GetAllStores : public BaseClass {
+   private:
+    void BaseClassMustBeDerivedFromService(const Service *service) {}
+   public:
+    WithRawMethod_GetAllStores() {
+      ::grpc::Service::MarkMethodRaw(7);
+    }
+    ~WithRawMethod_GetAllStores() override {
+      BaseClassMustBeDerivedFromService(this);
+    }
+    // disable synchronous version of this method
+    ::grpc::Status GetAllStores(::grpc::ServerContext* context, const ::pdpb::GetAllStoresRequest* request, ::pdpb::GetAllStoresResponse* response) override {
+      abort();
+      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
+    }
+    void RequestGetAllStores(::grpc::ServerContext* context, ::grpc::ByteBuffer* request, ::grpc::ServerAsyncResponseWriter< ::grpc::ByteBuffer>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
+      ::grpc::Service::RequestAsyncUnary(7, context, request, response, new_call_cq, notification_cq, tag);
+    }
+  };
+  template <class BaseClass>
+  class WithRawMethod_StoreHeartbeat : public BaseClass {
+   private:
+    void BaseClassMustBeDerivedFromService(const Service *service) {}
+   public:
+    WithRawMethod_StoreHeartbeat() {
+      ::grpc::Service::MarkMethodRaw(8);
+    }
+    ~WithRawMethod_StoreHeartbeat() override {
+      BaseClassMustBeDerivedFromService(this);
+    }
+    // disable synchronous version of this method
+    ::grpc::Status StoreHeartbeat(::grpc::ServerContext* context, const ::pdpb::StoreHeartbeatRequest* request, ::pdpb::StoreHeartbeatResponse* response) override {
+      abort();
+      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
+    }
+    void RequestStoreHeartbeat(::grpc::ServerContext* context, ::grpc::ByteBuffer* request, ::grpc::ServerAsyncResponseWriter< ::grpc::ByteBuffer>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
+      ::grpc::Service::RequestAsyncUnary(8, context, request, response, new_call_cq, notification_cq, tag);
+    }
+  };
+  template <class BaseClass>
+  class WithRawMethod_RegionHeartbeat : public BaseClass {
+   private:
+    void BaseClassMustBeDerivedFromService(const Service *service) {}
+   public:
+    WithRawMethod_RegionHeartbeat() {
+      ::grpc::Service::MarkMethodRaw(9);
+    }
+    ~WithRawMethod_RegionHeartbeat() override {
+      BaseClassMustBeDerivedFromService(this);
+    }
+    // disable synchronous version of this method
+    ::grpc::Status RegionHeartbeat(::grpc::ServerContext* context, ::grpc::ServerReaderWriter< ::pdpb::RegionHeartbeatResponse, ::pdpb::RegionHeartbeatRequest>* stream)  override {
+      abort();
+      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
+    }
+    void RequestRegionHeartbeat(::grpc::ServerContext* context, ::grpc::ServerAsyncReaderWriter< ::grpc::ByteBuffer, ::grpc::ByteBuffer>* stream, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
+      ::grpc::Service::RequestAsyncBidiStreaming(9, context, stream, new_call_cq, notification_cq, tag);
+    }
+  };
+  template <class BaseClass>
+  class WithRawMethod_GetRegion : public BaseClass {
+   private:
+    void BaseClassMustBeDerivedFromService(const Service *service) {}
+   public:
+    WithRawMethod_GetRegion() {
+      ::grpc::Service::MarkMethodRaw(10);
+    }
+    ~WithRawMethod_GetRegion() override {
+      BaseClassMustBeDerivedFromService(this);
+    }
+    // disable synchronous version of this method
+    ::grpc::Status GetRegion(::grpc::ServerContext* context, const ::pdpb::GetRegionRequest* request, ::pdpb::GetRegionResponse* response) override {
+      abort();
+      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
+    }
+    void RequestGetRegion(::grpc::ServerContext* context, ::grpc::ByteBuffer* request, ::grpc::ServerAsyncResponseWriter< ::grpc::ByteBuffer>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
+      ::grpc::Service::RequestAsyncUnary(10, context, request, response, new_call_cq, notification_cq, tag);
+    }
+  };
+  template <class BaseClass>
+  class WithRawMethod_GetPrevRegion : public BaseClass {
+   private:
+    void BaseClassMustBeDerivedFromService(const Service *service) {}
+   public:
+    WithRawMethod_GetPrevRegion() {
+      ::grpc::Service::MarkMethodRaw(11);
+    }
+    ~WithRawMethod_GetPrevRegion() override {
+      BaseClassMustBeDerivedFromService(this);
+    }
+    // disable synchronous version of this method
+    ::grpc::Status GetPrevRegion(::grpc::ServerContext* context, const ::pdpb::GetRegionRequest* request, ::pdpb::GetRegionResponse* response) override {
+      abort();
+      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
+    }
+    void RequestGetPrevRegion(::grpc::ServerContext* context, ::grpc::ByteBuffer* request, ::grpc::ServerAsyncResponseWriter< ::grpc::ByteBuffer>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
+      ::grpc::Service::RequestAsyncUnary(11, context, request, response, new_call_cq, notification_cq, tag);
+    }
+  };
+  template <class BaseClass>
+  class WithRawMethod_GetRegionByID : public BaseClass {
+   private:
+    void BaseClassMustBeDerivedFromService(const Service *service) {}
+   public:
+    WithRawMethod_GetRegionByID() {
+      ::grpc::Service::MarkMethodRaw(12);
+    }
+    ~WithRawMethod_GetRegionByID() override {
+      BaseClassMustBeDerivedFromService(this);
+    }
+    // disable synchronous version of this method
+    ::grpc::Status GetRegionByID(::grpc::ServerContext* context, const ::pdpb::GetRegionByIDRequest* request, ::pdpb::GetRegionResponse* response) override {
+      abort();
+      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
+    }
+    void RequestGetRegionByID(::grpc::ServerContext* context, ::grpc::ByteBuffer* request, ::grpc::ServerAsyncResponseWriter< ::grpc::ByteBuffer>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
+      ::grpc::Service::RequestAsyncUnary(12, context, request, response, new_call_cq, notification_cq, tag);
+    }
+  };
+  template <class BaseClass>
+  class WithRawMethod_AskSplit : public BaseClass {
+   private:
+    void BaseClassMustBeDerivedFromService(const Service *service) {}
+   public:
+    WithRawMethod_AskSplit() {
+      ::grpc::Service::MarkMethodRaw(13);
+    }
+    ~WithRawMethod_AskSplit() override {
+      BaseClassMustBeDerivedFromService(this);
+    }
+    // disable synchronous version of this method
+    ::grpc::Status AskSplit(::grpc::ServerContext* context, const ::pdpb::AskSplitRequest* request, ::pdpb::AskSplitResponse* response) override {
+      abort();
+      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
+    }
+    void RequestAskSplit(::grpc::ServerContext* context, ::grpc::ByteBuffer* request, ::grpc::ServerAsyncResponseWriter< ::grpc::ByteBuffer>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
+      ::grpc::Service::RequestAsyncUnary(13, context, request, response, new_call_cq, notification_cq, tag);
+    }
+  };
+  template <class BaseClass>
+  class WithRawMethod_ReportSplit : public BaseClass {
+   private:
+    void BaseClassMustBeDerivedFromService(const Service *service) {}
+   public:
+    WithRawMethod_ReportSplit() {
+      ::grpc::Service::MarkMethodRaw(14);
+    }
+    ~WithRawMethod_ReportSplit() override {
+      BaseClassMustBeDerivedFromService(this);
+    }
+    // disable synchronous version of this method
+    ::grpc::Status ReportSplit(::grpc::ServerContext* context, const ::pdpb::ReportSplitRequest* request, ::pdpb::ReportSplitResponse* response) override {
+      abort();
+      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
+    }
+    void RequestReportSplit(::grpc::ServerContext* context, ::grpc::ByteBuffer* request, ::grpc::ServerAsyncResponseWriter< ::grpc::ByteBuffer>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
+      ::grpc::Service::RequestAsyncUnary(14, context, request, response, new_call_cq, notification_cq, tag);
+    }
+  };
+  template <class BaseClass>
+  class WithRawMethod_AskBatchSplit : public BaseClass {
+   private:
+    void BaseClassMustBeDerivedFromService(const Service *service) {}
+   public:
+    WithRawMethod_AskBatchSplit() {
+      ::grpc::Service::MarkMethodRaw(15);
+    }
+    ~WithRawMethod_AskBatchSplit() override {
+      BaseClassMustBeDerivedFromService(this);
+    }
+    // disable synchronous version of this method
+    ::grpc::Status AskBatchSplit(::grpc::ServerContext* context, const ::pdpb::AskBatchSplitRequest* request, ::pdpb::AskBatchSplitResponse* response) override {
+      abort();
+      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
+    }
+    void RequestAskBatchSplit(::grpc::ServerContext* context, ::grpc::ByteBuffer* request, ::grpc::ServerAsyncResponseWriter< ::grpc::ByteBuffer>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
+      ::grpc::Service::RequestAsyncUnary(15, context, request, response, new_call_cq, notification_cq, tag);
+    }
+  };
+  template <class BaseClass>
+  class WithRawMethod_ReportBatchSplit : public BaseClass {
+   private:
+    void BaseClassMustBeDerivedFromService(const Service *service) {}
+   public:
+    WithRawMethod_ReportBatchSplit() {
+      ::grpc::Service::MarkMethodRaw(16);
+    }
+    ~WithRawMethod_ReportBatchSplit() override {
+      BaseClassMustBeDerivedFromService(this);
+    }
+    // disable synchronous version of this method
+    ::grpc::Status ReportBatchSplit(::grpc::ServerContext* context, const ::pdpb::ReportBatchSplitRequest* request, ::pdpb::ReportBatchSplitResponse* response) override {
+      abort();
+      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
+    }
+    void RequestReportBatchSplit(::grpc::ServerContext* context, ::grpc::ByteBuffer* request, ::grpc::ServerAsyncResponseWriter< ::grpc::ByteBuffer>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
+      ::grpc::Service::RequestAsyncUnary(16, context, request, response, new_call_cq, notification_cq, tag);
+    }
+  };
+  template <class BaseClass>
+  class WithRawMethod_GetClusterConfig : public BaseClass {
+   private:
+    void BaseClassMustBeDerivedFromService(const Service *service) {}
+   public:
+    WithRawMethod_GetClusterConfig() {
+      ::grpc::Service::MarkMethodRaw(17);
+    }
+    ~WithRawMethod_GetClusterConfig() override {
+      BaseClassMustBeDerivedFromService(this);
+    }
+    // disable synchronous version of this method
+    ::grpc::Status GetClusterConfig(::grpc::ServerContext* context, const ::pdpb::GetClusterConfigRequest* request, ::pdpb::GetClusterConfigResponse* response) override {
+      abort();
+      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
+    }
+    void RequestGetClusterConfig(::grpc::ServerContext* context, ::grpc::ByteBuffer* request, ::grpc::ServerAsyncResponseWriter< ::grpc::ByteBuffer>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
+      ::grpc::Service::RequestAsyncUnary(17, context, request, response, new_call_cq, notification_cq, tag);
+    }
+  };
+  template <class BaseClass>
+  class WithRawMethod_PutClusterConfig : public BaseClass {
+   private:
+    void BaseClassMustBeDerivedFromService(const Service *service) {}
+   public:
+    WithRawMethod_PutClusterConfig() {
+      ::grpc::Service::MarkMethodRaw(18);
+    }
+    ~WithRawMethod_PutClusterConfig() override {
+      BaseClassMustBeDerivedFromService(this);
+    }
+    // disable synchronous version of this method
+    ::grpc::Status PutClusterConfig(::grpc::ServerContext* context, const ::pdpb::PutClusterConfigRequest* request, ::pdpb::PutClusterConfigResponse* response) override {
+      abort();
+      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
+    }
+    void RequestPutClusterConfig(::grpc::ServerContext* context, ::grpc::ByteBuffer* request, ::grpc::ServerAsyncResponseWriter< ::grpc::ByteBuffer>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
+      ::grpc::Service::RequestAsyncUnary(18, context, request, response, new_call_cq, notification_cq, tag);
+    }
+  };
+  template <class BaseClass>
+  class WithRawMethod_ScatterRegion : public BaseClass {
+   private:
+    void BaseClassMustBeDerivedFromService(const Service *service) {}
+   public:
+    WithRawMethod_ScatterRegion() {
+      ::grpc::Service::MarkMethodRaw(19);
+    }
+    ~WithRawMethod_ScatterRegion() override {
+      BaseClassMustBeDerivedFromService(this);
+    }
+    // disable synchronous version of this method
+    ::grpc::Status ScatterRegion(::grpc::ServerContext* context, const ::pdpb::ScatterRegionRequest* request, ::pdpb::ScatterRegionResponse* response) override {
+      abort();
+      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
+    }
+    void RequestScatterRegion(::grpc::ServerContext* context, ::grpc::ByteBuffer* request, ::grpc::ServerAsyncResponseWriter< ::grpc::ByteBuffer>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
+      ::grpc::Service::RequestAsyncUnary(19, context, request, response, new_call_cq, notification_cq, tag);
+    }
+  };
+  template <class BaseClass>
+  class WithRawMethod_GetGCSafePoint : public BaseClass {
+   private:
+    void BaseClassMustBeDerivedFromService(const Service *service) {}
+   public:
+    WithRawMethod_GetGCSafePoint() {
+      ::grpc::Service::MarkMethodRaw(20);
+    }
+    ~WithRawMethod_GetGCSafePoint() override {
+      BaseClassMustBeDerivedFromService(this);
+    }
+    // disable synchronous version of this method
+    ::grpc::Status GetGCSafePoint(::grpc::ServerContext* context, const ::pdpb::GetGCSafePointRequest* request, ::pdpb::GetGCSafePointResponse* response) override {
+      abort();
+      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
+    }
+    void RequestGetGCSafePoint(::grpc::ServerContext* context, ::grpc::ByteBuffer* request, ::grpc::ServerAsyncResponseWriter< ::grpc::ByteBuffer>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
+      ::grpc::Service::RequestAsyncUnary(20, context, request, response, new_call_cq, notification_cq, tag);
+    }
+  };
+  template <class BaseClass>
+  class WithRawMethod_UpdateGCSafePoint : public BaseClass {
+   private:
+    void BaseClassMustBeDerivedFromService(const Service *service) {}
+   public:
+    WithRawMethod_UpdateGCSafePoint() {
+      ::grpc::Service::MarkMethodRaw(21);
+    }
+    ~WithRawMethod_UpdateGCSafePoint() override {
+      BaseClassMustBeDerivedFromService(this);
+    }
+    // disable synchronous version of this method
+    ::grpc::Status UpdateGCSafePoint(::grpc::ServerContext* context, const ::pdpb::UpdateGCSafePointRequest* request, ::pdpb::UpdateGCSafePointResponse* response) override {
+      abort();
+      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
+    }
+    void RequestUpdateGCSafePoint(::grpc::ServerContext* context, ::grpc::ByteBuffer* request, ::grpc::ServerAsyncResponseWriter< ::grpc::ByteBuffer>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
+      ::grpc::Service::RequestAsyncUnary(21, context, request, response, new_call_cq, notification_cq, tag);
+    }
+  };
+  template <class BaseClass>
+  class WithRawMethod_SyncRegions : public BaseClass {
+   private:
+    void BaseClassMustBeDerivedFromService(const Service *service) {}
+   public:
+    WithRawMethod_SyncRegions() {
+      ::grpc::Service::MarkMethodRaw(22);
+    }
+    ~WithRawMethod_SyncRegions() override {
+      BaseClassMustBeDerivedFromService(this);
+    }
+    // disable synchronous version of this method
+    ::grpc::Status SyncRegions(::grpc::ServerContext* context, ::grpc::ServerReaderWriter< ::pdpb::SyncRegionResponse, ::pdpb::SyncRegionRequest>* stream)  override {
+      abort();
+      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
+    }
+    void RequestSyncRegions(::grpc::ServerContext* context, ::grpc::ServerAsyncReaderWriter< ::grpc::ByteBuffer, ::grpc::ByteBuffer>* stream, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
+      ::grpc::Service::RequestAsyncBidiStreaming(22, context, stream, new_call_cq, notification_cq, tag);
     }
   };
   template <class BaseClass>
@@ -1396,7 +1857,7 @@ class PD final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable regular version of this method
-    ::grpc::Status GetMembers(::grpc::ServerContext* context, const ::pdpb::GetMembersRequest* request, ::pdpb::GetMembersResponse* response) final override {
+    ::grpc::Status GetMembers(::grpc::ServerContext* context, const ::pdpb::GetMembersRequest* request, ::pdpb::GetMembersResponse* response) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
@@ -1416,7 +1877,7 @@ class PD final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable regular version of this method
-    ::grpc::Status Bootstrap(::grpc::ServerContext* context, const ::pdpb::BootstrapRequest* request, ::pdpb::BootstrapResponse* response) final override {
+    ::grpc::Status Bootstrap(::grpc::ServerContext* context, const ::pdpb::BootstrapRequest* request, ::pdpb::BootstrapResponse* response) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
@@ -1436,7 +1897,7 @@ class PD final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable regular version of this method
-    ::grpc::Status IsBootstrapped(::grpc::ServerContext* context, const ::pdpb::IsBootstrappedRequest* request, ::pdpb::IsBootstrappedResponse* response) final override {
+    ::grpc::Status IsBootstrapped(::grpc::ServerContext* context, const ::pdpb::IsBootstrappedRequest* request, ::pdpb::IsBootstrappedResponse* response) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
@@ -1456,7 +1917,7 @@ class PD final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable regular version of this method
-    ::grpc::Status AllocID(::grpc::ServerContext* context, const ::pdpb::AllocIDRequest* request, ::pdpb::AllocIDResponse* response) final override {
+    ::grpc::Status AllocID(::grpc::ServerContext* context, const ::pdpb::AllocIDRequest* request, ::pdpb::AllocIDResponse* response) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
@@ -1476,7 +1937,7 @@ class PD final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable regular version of this method
-    ::grpc::Status GetStore(::grpc::ServerContext* context, const ::pdpb::GetStoreRequest* request, ::pdpb::GetStoreResponse* response) final override {
+    ::grpc::Status GetStore(::grpc::ServerContext* context, const ::pdpb::GetStoreRequest* request, ::pdpb::GetStoreResponse* response) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
@@ -1496,7 +1957,7 @@ class PD final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable regular version of this method
-    ::grpc::Status PutStore(::grpc::ServerContext* context, const ::pdpb::PutStoreRequest* request, ::pdpb::PutStoreResponse* response) final override {
+    ::grpc::Status PutStore(::grpc::ServerContext* context, const ::pdpb::PutStoreRequest* request, ::pdpb::PutStoreResponse* response) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
@@ -1516,7 +1977,7 @@ class PD final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable regular version of this method
-    ::grpc::Status GetAllStores(::grpc::ServerContext* context, const ::pdpb::GetAllStoresRequest* request, ::pdpb::GetAllStoresResponse* response) final override {
+    ::grpc::Status GetAllStores(::grpc::ServerContext* context, const ::pdpb::GetAllStoresRequest* request, ::pdpb::GetAllStoresResponse* response) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
@@ -1536,7 +1997,7 @@ class PD final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable regular version of this method
-    ::grpc::Status StoreHeartbeat(::grpc::ServerContext* context, const ::pdpb::StoreHeartbeatRequest* request, ::pdpb::StoreHeartbeatResponse* response) final override {
+    ::grpc::Status StoreHeartbeat(::grpc::ServerContext* context, const ::pdpb::StoreHeartbeatRequest* request, ::pdpb::StoreHeartbeatResponse* response) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
@@ -1556,7 +2017,7 @@ class PD final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable regular version of this method
-    ::grpc::Status GetRegion(::grpc::ServerContext* context, const ::pdpb::GetRegionRequest* request, ::pdpb::GetRegionResponse* response) final override {
+    ::grpc::Status GetRegion(::grpc::ServerContext* context, const ::pdpb::GetRegionRequest* request, ::pdpb::GetRegionResponse* response) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
@@ -1576,7 +2037,7 @@ class PD final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable regular version of this method
-    ::grpc::Status GetPrevRegion(::grpc::ServerContext* context, const ::pdpb::GetRegionRequest* request, ::pdpb::GetRegionResponse* response) final override {
+    ::grpc::Status GetPrevRegion(::grpc::ServerContext* context, const ::pdpb::GetRegionRequest* request, ::pdpb::GetRegionResponse* response) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
@@ -1596,7 +2057,7 @@ class PD final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable regular version of this method
-    ::grpc::Status GetRegionByID(::grpc::ServerContext* context, const ::pdpb::GetRegionByIDRequest* request, ::pdpb::GetRegionResponse* response) final override {
+    ::grpc::Status GetRegionByID(::grpc::ServerContext* context, const ::pdpb::GetRegionByIDRequest* request, ::pdpb::GetRegionResponse* response) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
@@ -1616,7 +2077,7 @@ class PD final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable regular version of this method
-    ::grpc::Status AskSplit(::grpc::ServerContext* context, const ::pdpb::AskSplitRequest* request, ::pdpb::AskSplitResponse* response) final override {
+    ::grpc::Status AskSplit(::grpc::ServerContext* context, const ::pdpb::AskSplitRequest* request, ::pdpb::AskSplitResponse* response) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
@@ -1636,7 +2097,7 @@ class PD final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable regular version of this method
-    ::grpc::Status ReportSplit(::grpc::ServerContext* context, const ::pdpb::ReportSplitRequest* request, ::pdpb::ReportSplitResponse* response) final override {
+    ::grpc::Status ReportSplit(::grpc::ServerContext* context, const ::pdpb::ReportSplitRequest* request, ::pdpb::ReportSplitResponse* response) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
@@ -1656,7 +2117,7 @@ class PD final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable regular version of this method
-    ::grpc::Status AskBatchSplit(::grpc::ServerContext* context, const ::pdpb::AskBatchSplitRequest* request, ::pdpb::AskBatchSplitResponse* response) final override {
+    ::grpc::Status AskBatchSplit(::grpc::ServerContext* context, const ::pdpb::AskBatchSplitRequest* request, ::pdpb::AskBatchSplitResponse* response) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
@@ -1676,7 +2137,7 @@ class PD final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable regular version of this method
-    ::grpc::Status ReportBatchSplit(::grpc::ServerContext* context, const ::pdpb::ReportBatchSplitRequest* request, ::pdpb::ReportBatchSplitResponse* response) final override {
+    ::grpc::Status ReportBatchSplit(::grpc::ServerContext* context, const ::pdpb::ReportBatchSplitRequest* request, ::pdpb::ReportBatchSplitResponse* response) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
@@ -1696,7 +2157,7 @@ class PD final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable regular version of this method
-    ::grpc::Status GetClusterConfig(::grpc::ServerContext* context, const ::pdpb::GetClusterConfigRequest* request, ::pdpb::GetClusterConfigResponse* response) final override {
+    ::grpc::Status GetClusterConfig(::grpc::ServerContext* context, const ::pdpb::GetClusterConfigRequest* request, ::pdpb::GetClusterConfigResponse* response) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
@@ -1716,7 +2177,7 @@ class PD final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable regular version of this method
-    ::grpc::Status PutClusterConfig(::grpc::ServerContext* context, const ::pdpb::PutClusterConfigRequest* request, ::pdpb::PutClusterConfigResponse* response) final override {
+    ::grpc::Status PutClusterConfig(::grpc::ServerContext* context, const ::pdpb::PutClusterConfigRequest* request, ::pdpb::PutClusterConfigResponse* response) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
@@ -1736,7 +2197,7 @@ class PD final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable regular version of this method
-    ::grpc::Status ScatterRegion(::grpc::ServerContext* context, const ::pdpb::ScatterRegionRequest* request, ::pdpb::ScatterRegionResponse* response) final override {
+    ::grpc::Status ScatterRegion(::grpc::ServerContext* context, const ::pdpb::ScatterRegionRequest* request, ::pdpb::ScatterRegionResponse* response) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
@@ -1756,7 +2217,7 @@ class PD final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable regular version of this method
-    ::grpc::Status GetGCSafePoint(::grpc::ServerContext* context, const ::pdpb::GetGCSafePointRequest* request, ::pdpb::GetGCSafePointResponse* response) final override {
+    ::grpc::Status GetGCSafePoint(::grpc::ServerContext* context, const ::pdpb::GetGCSafePointRequest* request, ::pdpb::GetGCSafePointResponse* response) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
@@ -1776,7 +2237,7 @@ class PD final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable regular version of this method
-    ::grpc::Status UpdateGCSafePoint(::grpc::ServerContext* context, const ::pdpb::UpdateGCSafePointRequest* request, ::pdpb::UpdateGCSafePointResponse* response) final override {
+    ::grpc::Status UpdateGCSafePoint(::grpc::ServerContext* context, const ::pdpb::UpdateGCSafePointRequest* request, ::pdpb::UpdateGCSafePointResponse* response) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }

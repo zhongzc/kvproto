@@ -6763,12 +6763,19 @@ class SyncRegionRequest : public ::google::protobuf::Message /* @@protoc_inserti
   ::pdpb::Member* mutable_member();
   void set_allocated_member(::pdpb::Member* member);
 
+  // uint64 start_index = 3;
+  void clear_start_index();
+  static const int kStartIndexFieldNumber = 3;
+  ::google::protobuf::uint64 start_index() const;
+  void set_start_index(::google::protobuf::uint64 value);
+
   // @@protoc_insertion_point(class_scope:pdpb.SyncRegionRequest)
  private:
 
   ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
   ::pdpb::RequestHeader* header_;
   ::pdpb::Member* member_;
+  ::google::protobuf::uint64 start_index_;
   mutable int _cached_size_;
   friend struct ::protobuf_pdpb_2eproto::TableStruct;
   friend void ::protobuf_pdpb_2eproto::InitDefaultsSyncRegionRequestImpl();
@@ -6878,12 +6885,19 @@ class SyncRegionResponse : public ::google::protobuf::Message /* @@protoc_insert
   ::pdpb::ResponseHeader* mutable_header();
   void set_allocated_header(::pdpb::ResponseHeader* header);
 
+  // uint64 start_index = 3;
+  void clear_start_index();
+  static const int kStartIndexFieldNumber = 3;
+  ::google::protobuf::uint64 start_index() const;
+  void set_start_index(::google::protobuf::uint64 value);
+
   // @@protoc_insertion_point(class_scope:pdpb.SyncRegionResponse)
  private:
 
   ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
   ::google::protobuf::RepeatedPtrField< ::metapb::Region > regions_;
   ::pdpb::ResponseHeader* header_;
+  ::google::protobuf::uint64 start_index_;
   mutable int _cached_size_;
   friend struct ::protobuf_pdpb_2eproto::TableStruct;
   friend void ::protobuf_pdpb_2eproto::InitDefaultsSyncRegionResponseImpl();
@@ -11955,6 +11969,20 @@ inline void SyncRegionRequest::set_allocated_member(::pdpb::Member* member) {
   // @@protoc_insertion_point(field_set_allocated:pdpb.SyncRegionRequest.member)
 }
 
+// uint64 start_index = 3;
+inline void SyncRegionRequest::clear_start_index() {
+  start_index_ = GOOGLE_ULONGLONG(0);
+}
+inline ::google::protobuf::uint64 SyncRegionRequest::start_index() const {
+  // @@protoc_insertion_point(field_get:pdpb.SyncRegionRequest.start_index)
+  return start_index_;
+}
+inline void SyncRegionRequest::set_start_index(::google::protobuf::uint64 value) {
+  
+  start_index_ = value;
+  // @@protoc_insertion_point(field_set:pdpb.SyncRegionRequest.start_index)
+}
+
 // -------------------------------------------------------------------
 
 // SyncRegionResponse
@@ -12034,6 +12062,20 @@ inline const ::google::protobuf::RepeatedPtrField< ::metapb::Region >&
 SyncRegionResponse::regions() const {
   // @@protoc_insertion_point(field_list:pdpb.SyncRegionResponse.regions)
   return regions_;
+}
+
+// uint64 start_index = 3;
+inline void SyncRegionResponse::clear_start_index() {
+  start_index_ = GOOGLE_ULONGLONG(0);
+}
+inline ::google::protobuf::uint64 SyncRegionResponse::start_index() const {
+  // @@protoc_insertion_point(field_get:pdpb.SyncRegionResponse.start_index)
+  return start_index_;
+}
+inline void SyncRegionResponse::set_start_index(::google::protobuf::uint64 value) {
+  
+  start_index_ = value;
+  // @@protoc_insertion_point(field_set:pdpb.SyncRegionResponse.start_index)
 }
 
 #ifdef __GNUC__

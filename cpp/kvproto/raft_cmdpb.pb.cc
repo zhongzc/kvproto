@@ -90,6 +90,16 @@ class IngestSSTResponseDefaultTypeInternal {
   ::google::protobuf::internal::ExplicitlyConstructed<IngestSSTResponse>
       _instance;
 } _IngestSSTResponse_default_instance_;
+class ReadIndexRequestDefaultTypeInternal {
+ public:
+  ::google::protobuf::internal::ExplicitlyConstructed<ReadIndexRequest>
+      _instance;
+} _ReadIndexRequest_default_instance_;
+class ReadIndexResponseDefaultTypeInternal {
+ public:
+  ::google::protobuf::internal::ExplicitlyConstructed<ReadIndexResponse>
+      _instance;
+} _ReadIndexResponse_default_instance_;
 class RequestDefaultTypeInternal {
  public:
   ::google::protobuf::internal::ExplicitlyConstructed<Request>
@@ -548,6 +558,48 @@ void InitDefaultsIngestSSTResponse() {
   ::google::protobuf::GoogleOnceInit(&once, &InitDefaultsIngestSSTResponseImpl);
 }
 
+void InitDefaultsReadIndexRequestImpl() {
+  GOOGLE_PROTOBUF_VERIFY_VERSION;
+
+#ifdef GOOGLE_PROTOBUF_ENFORCE_UNIQUENESS
+  ::google::protobuf::internal::InitProtobufDefaultsForceUnique();
+#else
+  ::google::protobuf::internal::InitProtobufDefaults();
+#endif  // GOOGLE_PROTOBUF_ENFORCE_UNIQUENESS
+  {
+    void* ptr = &::raft_cmdpb::_ReadIndexRequest_default_instance_;
+    new (ptr) ::raft_cmdpb::ReadIndexRequest();
+    ::google::protobuf::internal::OnShutdownDestroyMessage(ptr);
+  }
+  ::raft_cmdpb::ReadIndexRequest::InitAsDefaultInstance();
+}
+
+void InitDefaultsReadIndexRequest() {
+  static GOOGLE_PROTOBUF_DECLARE_ONCE(once);
+  ::google::protobuf::GoogleOnceInit(&once, &InitDefaultsReadIndexRequestImpl);
+}
+
+void InitDefaultsReadIndexResponseImpl() {
+  GOOGLE_PROTOBUF_VERIFY_VERSION;
+
+#ifdef GOOGLE_PROTOBUF_ENFORCE_UNIQUENESS
+  ::google::protobuf::internal::InitProtobufDefaultsForceUnique();
+#else
+  ::google::protobuf::internal::InitProtobufDefaults();
+#endif  // GOOGLE_PROTOBUF_ENFORCE_UNIQUENESS
+  {
+    void* ptr = &::raft_cmdpb::_ReadIndexResponse_default_instance_;
+    new (ptr) ::raft_cmdpb::ReadIndexResponse();
+    ::google::protobuf::internal::OnShutdownDestroyMessage(ptr);
+  }
+  ::raft_cmdpb::ReadIndexResponse::InitAsDefaultInstance();
+}
+
+void InitDefaultsReadIndexResponse() {
+  static GOOGLE_PROTOBUF_DECLARE_ONCE(once);
+  ::google::protobuf::GoogleOnceInit(&once, &InitDefaultsReadIndexResponseImpl);
+}
+
 void InitDefaultsRequestImpl() {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
 
@@ -563,6 +615,7 @@ void InitDefaultsRequestImpl() {
   protobuf_raft_5fcmdpb_2eproto::InitDefaultsPrewriteRequest();
   protobuf_raft_5fcmdpb_2eproto::InitDefaultsDeleteRangeRequest();
   protobuf_raft_5fcmdpb_2eproto::InitDefaultsIngestSSTRequest();
+  protobuf_raft_5fcmdpb_2eproto::InitDefaultsReadIndexRequest();
   {
     void* ptr = &::raft_cmdpb::_Request_default_instance_;
     new (ptr) ::raft_cmdpb::Request();
@@ -591,6 +644,7 @@ void InitDefaultsResponseImpl() {
   protobuf_raft_5fcmdpb_2eproto::InitDefaultsPrewriteResponse();
   protobuf_raft_5fcmdpb_2eproto::InitDefaultsDeleteRangeResponse();
   protobuf_raft_5fcmdpb_2eproto::InitDefaultsIngestSSTResponse();
+  protobuf_raft_5fcmdpb_2eproto::InitDefaultsReadIndexResponse();
   {
     void* ptr = &::raft_cmdpb::_Response_default_instance_;
     new (ptr) ::raft_cmdpb::Response();
@@ -1279,7 +1333,7 @@ void InitDefaultsRaftCmdResponse() {
   ::google::protobuf::GoogleOnceInit(&once, &InitDefaultsRaftCmdResponseImpl);
 }
 
-::google::protobuf::Metadata file_level_metadata[46];
+::google::protobuf::Metadata file_level_metadata[48];
 const ::google::protobuf::EnumDescriptor* file_level_enum_descriptors[3];
 
 const ::google::protobuf::uint32 TableStruct::offsets[] GOOGLE_PROTOBUF_ATTRIBUTE_SECTION_VARIABLE(protodesc_cold) = {
@@ -1370,6 +1424,17 @@ const ::google::protobuf::uint32 TableStruct::offsets[] GOOGLE_PROTOBUF_ATTRIBUT
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
   ~0u,  // no _has_bits_
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::raft_cmdpb::ReadIndexRequest, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  ~0u,  // no _has_bits_
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::raft_cmdpb::ReadIndexResponse, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::raft_cmdpb::ReadIndexResponse, read_index_),
+  ~0u,  // no _has_bits_
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::raft_cmdpb::Request, _internal_metadata_),
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
@@ -1382,6 +1447,7 @@ const ::google::protobuf::uint32 TableStruct::offsets[] GOOGLE_PROTOBUF_ATTRIBUT
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::raft_cmdpb::Request, prewrite_),
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::raft_cmdpb::Request, delete_range_),
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::raft_cmdpb::Request, ingest_sst_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::raft_cmdpb::Request, read_index_),
   ~0u,  // no _has_bits_
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::raft_cmdpb::Response, _internal_metadata_),
   ~0u,  // no _extensions_
@@ -1395,6 +1461,7 @@ const ::google::protobuf::uint32 TableStruct::offsets[] GOOGLE_PROTOBUF_ATTRIBUT
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::raft_cmdpb::Response, prewrite_),
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::raft_cmdpb::Response, delte_range_),
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::raft_cmdpb::Response, ingest_sst_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::raft_cmdpb::Response, read_index_),
   ~0u,  // no _has_bits_
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::raft_cmdpb::ChangePeerRequest, _internal_metadata_),
   ~0u,  // no _extensions_
@@ -1631,38 +1698,40 @@ static const ::google::protobuf::internal::MigrationSchema schemas[] GOOGLE_PROT
   { 70, -1, sizeof(::raft_cmdpb::PrewriteResponse)},
   { 75, -1, sizeof(::raft_cmdpb::IngestSSTRequest)},
   { 81, -1, sizeof(::raft_cmdpb::IngestSSTResponse)},
-  { 86, -1, sizeof(::raft_cmdpb::Request)},
-  { 99, -1, sizeof(::raft_cmdpb::Response)},
-  { 112, -1, sizeof(::raft_cmdpb::ChangePeerRequest)},
-  { 119, -1, sizeof(::raft_cmdpb::ChangePeerResponse)},
-  { 125, -1, sizeof(::raft_cmdpb::SplitRequest)},
-  { 134, -1, sizeof(::raft_cmdpb::SplitResponse)},
-  { 141, -1, sizeof(::raft_cmdpb::BatchSplitRequest)},
-  { 148, -1, sizeof(::raft_cmdpb::BatchSplitResponse)},
-  { 154, -1, sizeof(::raft_cmdpb::CompactLogRequest)},
-  { 161, -1, sizeof(::raft_cmdpb::CompactLogResponse)},
-  { 166, -1, sizeof(::raft_cmdpb::TransferLeaderRequest)},
-  { 172, -1, sizeof(::raft_cmdpb::TransferLeaderResponse)},
-  { 177, -1, sizeof(::raft_cmdpb::VerifyHashRequest)},
-  { 184, -1, sizeof(::raft_cmdpb::VerifyHashResponse)},
-  { 189, -1, sizeof(::raft_cmdpb::PrepareMergeRequest)},
-  { 196, -1, sizeof(::raft_cmdpb::PrepareMergeResponse)},
-  { 201, -1, sizeof(::raft_cmdpb::CommitMergeRequest)},
-  { 209, -1, sizeof(::raft_cmdpb::CommitMergeResponse)},
-  { 214, -1, sizeof(::raft_cmdpb::RollbackMergeRequest)},
-  { 220, -1, sizeof(::raft_cmdpb::RollbackMergeResponse)},
-  { 225, -1, sizeof(::raft_cmdpb::AdminRequest)},
-  { 240, -1, sizeof(::raft_cmdpb::AdminResponse)},
-  { 255, -1, sizeof(::raft_cmdpb::RegionLeaderRequest)},
-  { 260, -1, sizeof(::raft_cmdpb::RegionLeaderResponse)},
-  { 266, -1, sizeof(::raft_cmdpb::RegionDetailRequest)},
-  { 271, -1, sizeof(::raft_cmdpb::RegionDetailResponse)},
-  { 278, -1, sizeof(::raft_cmdpb::StatusRequest)},
-  { 286, -1, sizeof(::raft_cmdpb::StatusResponse)},
-  { 294, -1, sizeof(::raft_cmdpb::RaftRequestHeader)},
-  { 306, -1, sizeof(::raft_cmdpb::RaftResponseHeader)},
-  { 314, -1, sizeof(::raft_cmdpb::RaftCmdRequest)},
-  { 323, -1, sizeof(::raft_cmdpb::RaftCmdResponse)},
+  { 86, -1, sizeof(::raft_cmdpb::ReadIndexRequest)},
+  { 91, -1, sizeof(::raft_cmdpb::ReadIndexResponse)},
+  { 97, -1, sizeof(::raft_cmdpb::Request)},
+  { 111, -1, sizeof(::raft_cmdpb::Response)},
+  { 125, -1, sizeof(::raft_cmdpb::ChangePeerRequest)},
+  { 132, -1, sizeof(::raft_cmdpb::ChangePeerResponse)},
+  { 138, -1, sizeof(::raft_cmdpb::SplitRequest)},
+  { 147, -1, sizeof(::raft_cmdpb::SplitResponse)},
+  { 154, -1, sizeof(::raft_cmdpb::BatchSplitRequest)},
+  { 161, -1, sizeof(::raft_cmdpb::BatchSplitResponse)},
+  { 167, -1, sizeof(::raft_cmdpb::CompactLogRequest)},
+  { 174, -1, sizeof(::raft_cmdpb::CompactLogResponse)},
+  { 179, -1, sizeof(::raft_cmdpb::TransferLeaderRequest)},
+  { 185, -1, sizeof(::raft_cmdpb::TransferLeaderResponse)},
+  { 190, -1, sizeof(::raft_cmdpb::VerifyHashRequest)},
+  { 197, -1, sizeof(::raft_cmdpb::VerifyHashResponse)},
+  { 202, -1, sizeof(::raft_cmdpb::PrepareMergeRequest)},
+  { 209, -1, sizeof(::raft_cmdpb::PrepareMergeResponse)},
+  { 214, -1, sizeof(::raft_cmdpb::CommitMergeRequest)},
+  { 222, -1, sizeof(::raft_cmdpb::CommitMergeResponse)},
+  { 227, -1, sizeof(::raft_cmdpb::RollbackMergeRequest)},
+  { 233, -1, sizeof(::raft_cmdpb::RollbackMergeResponse)},
+  { 238, -1, sizeof(::raft_cmdpb::AdminRequest)},
+  { 253, -1, sizeof(::raft_cmdpb::AdminResponse)},
+  { 268, -1, sizeof(::raft_cmdpb::RegionLeaderRequest)},
+  { 273, -1, sizeof(::raft_cmdpb::RegionLeaderResponse)},
+  { 279, -1, sizeof(::raft_cmdpb::RegionDetailRequest)},
+  { 284, -1, sizeof(::raft_cmdpb::RegionDetailResponse)},
+  { 291, -1, sizeof(::raft_cmdpb::StatusRequest)},
+  { 299, -1, sizeof(::raft_cmdpb::StatusResponse)},
+  { 307, -1, sizeof(::raft_cmdpb::RaftRequestHeader)},
+  { 319, -1, sizeof(::raft_cmdpb::RaftResponseHeader)},
+  { 327, -1, sizeof(::raft_cmdpb::RaftCmdRequest)},
+  { 336, -1, sizeof(::raft_cmdpb::RaftCmdResponse)},
 };
 
 static ::google::protobuf::Message const * const file_default_instances[] = {
@@ -1680,6 +1749,8 @@ static ::google::protobuf::Message const * const file_default_instances[] = {
   reinterpret_cast<const ::google::protobuf::Message*>(&::raft_cmdpb::_PrewriteResponse_default_instance_),
   reinterpret_cast<const ::google::protobuf::Message*>(&::raft_cmdpb::_IngestSSTRequest_default_instance_),
   reinterpret_cast<const ::google::protobuf::Message*>(&::raft_cmdpb::_IngestSSTResponse_default_instance_),
+  reinterpret_cast<const ::google::protobuf::Message*>(&::raft_cmdpb::_ReadIndexRequest_default_instance_),
+  reinterpret_cast<const ::google::protobuf::Message*>(&::raft_cmdpb::_ReadIndexResponse_default_instance_),
   reinterpret_cast<const ::google::protobuf::Message*>(&::raft_cmdpb::_Request_default_instance_),
   reinterpret_cast<const ::google::protobuf::Message*>(&::raft_cmdpb::_Response_default_instance_),
   reinterpret_cast<const ::google::protobuf::Message*>(&::raft_cmdpb::_ChangePeerRequest_default_instance_),
@@ -1730,7 +1801,7 @@ void protobuf_AssignDescriptorsOnce() {
 void protobuf_RegisterTypes(const ::std::string&) GOOGLE_PROTOBUF_ATTRIBUTE_COLD;
 void protobuf_RegisterTypes(const ::std::string&) {
   protobuf_AssignDescriptorsOnce();
-  ::google::protobuf::internal::RegisterAllTypes(file_level_metadata, 46);
+  ::google::protobuf::internal::RegisterAllTypes(file_level_metadata, 48);
 }
 
 void AddDescriptorsImpl() {
@@ -1751,121 +1822,125 @@ void AddDescriptorsImpl() {
       "\022\r\n\005value\030\002 \001(\014\022\014\n\004lock\030\003 \001(\014\"\022\n\020Prewrit"
       "eResponse\"6\n\020IngestSSTRequest\022\"\n\003sst\030\001 \001"
       "(\0132\025.import_sstpb.SSTMeta\"\023\n\021IngestSSTRe"
-      "sponse\"\343\002\n\007Request\022%\n\010cmd_type\030\001 \001(\0162\023.r"
-      "aft_cmdpb.CmdType\022#\n\003get\030\002 \001(\0132\026.raft_cm"
-      "dpb.GetRequest\022#\n\003put\030\004 \001(\0132\026.raft_cmdpb"
-      ".PutRequest\022)\n\006delete\030\005 \001(\0132\031.raft_cmdpb"
-      ".DeleteRequest\022%\n\004snap\030\006 \001(\0132\027.raft_cmdp"
-      "b.SnapRequest\022-\n\010prewrite\030\007 \001(\0132\033.raft_c"
-      "mdpb.PrewriteRequest\0224\n\014delete_range\030\010 \001"
-      "(\0132\036.raft_cmdpb.DeleteRangeRequest\0220\n\nin"
-      "gest_sst\030\t \001(\0132\034.raft_cmdpb.IngestSSTReq"
-      "uest\"\352\002\n\010Response\022%\n\010cmd_type\030\001 \001(\0162\023.ra"
-      "ft_cmdpb.CmdType\022$\n\003get\030\002 \001(\0132\027.raft_cmd"
-      "pb.GetResponse\022$\n\003put\030\004 \001(\0132\027.raft_cmdpb"
-      ".PutResponse\022*\n\006delete\030\005 \001(\0132\032.raft_cmdp"
-      "b.DeleteResponse\022&\n\004snap\030\006 \001(\0132\030.raft_cm"
-      "dpb.SnapResponse\022.\n\010prewrite\030\007 \001(\0132\034.raf"
-      "t_cmdpb.PrewriteResponse\0224\n\013delte_range\030"
-      "\010 \001(\0132\037.raft_cmdpb.DeleteRangeResponse\0221"
-      "\n\ningest_sst\030\t \001(\0132\035.raft_cmdpb.IngestSS"
-      "TResponse\"]\n\021ChangePeerRequest\022,\n\013change"
-      "_type\030\001 \001(\0162\027.eraftpb.ConfChangeType\022\032\n\004"
-      "peer\030\002 \001(\0132\014.metapb.Peer\"4\n\022ChangePeerRe"
-      "sponse\022\036\n\006region\030\001 \001(\0132\016.metapb.Region\"h"
-      "\n\014SplitRequest\022\021\n\tsplit_key\030\001 \001(\014\022\025\n\rnew"
-      "_region_id\030\002 \001(\004\022\024\n\014new_peer_ids\030\003 \003(\004\022\030"
-      "\n\014right_derive\030\004 \001(\010B\002\030\001\"L\n\rSplitRespons"
-      "e\022\034\n\004left\030\001 \001(\0132\016.metapb.Region\022\035\n\005right"
-      "\030\002 \001(\0132\016.metapb.Region\"U\n\021BatchSplitRequ"
-      "est\022*\n\010requests\030\001 \003(\0132\030.raft_cmdpb.Split"
-      "Request\022\024\n\014right_derive\030\002 \001(\010\"5\n\022BatchSp"
-      "litResponse\022\037\n\007regions\030\001 \003(\0132\016.metapb.Re"
-      "gion\"@\n\021CompactLogRequest\022\025\n\rcompact_ind"
-      "ex\030\001 \001(\004\022\024\n\014compact_term\030\002 \001(\004\"\024\n\022Compac"
-      "tLogResponse\"3\n\025TransferLeaderRequest\022\032\n"
-      "\004peer\030\001 \001(\0132\014.metapb.Peer\"\030\n\026TransferLea"
-      "derResponse\"0\n\021VerifyHashRequest\022\r\n\005inde"
-      "x\030\001 \001(\004\022\014\n\004hash\030\002 \001(\014\"\024\n\022VerifyHashRespo"
-      "nse\"H\n\023PrepareMergeRequest\022\021\n\tmin_index\030"
-      "\001 \001(\004\022\036\n\006target\030\002 \001(\0132\016.metapb.Region\"\026\n"
-      "\024PrepareMergeResponse\"e\n\022CommitMergeRequ"
-      "est\022\036\n\006source\030\001 \001(\0132\016.metapb.Region\022\016\n\006c"
-      "ommit\030\002 \001(\004\022\037\n\007entries\030\003 \003(\0132\016.eraftpb.E"
-      "ntry\"\025\n\023CommitMergeResponse\"&\n\024RollbackM"
-      "ergeRequest\022\016\n\006commit\030\001 \001(\004\"\027\n\025RollbackM"
-      "ergeResponse\"\226\004\n\014AdminRequest\022*\n\010cmd_typ"
-      "e\030\001 \001(\0162\030.raft_cmdpb.AdminCmdType\0222\n\013cha"
-      "nge_peer\030\002 \001(\0132\035.raft_cmdpb.ChangePeerRe"
-      "quest\022+\n\005split\030\003 \001(\0132\030.raft_cmdpb.SplitR"
-      "equestB\002\030\001\0222\n\013compact_log\030\004 \001(\0132\035.raft_c"
-      "mdpb.CompactLogRequest\022:\n\017transfer_leade"
-      "r\030\005 \001(\0132!.raft_cmdpb.TransferLeaderReque"
-      "st\0222\n\013verify_hash\030\006 \001(\0132\035.raft_cmdpb.Ver"
-      "ifyHashRequest\0226\n\rprepare_merge\030\007 \001(\0132\037."
-      "raft_cmdpb.PrepareMergeRequest\0224\n\014commit"
-      "_merge\030\010 \001(\0132\036.raft_cmdpb.CommitMergeReq"
-      "uest\0228\n\016rollback_merge\030\t \001(\0132 .raft_cmdp"
-      "b.RollbackMergeRequest\022-\n\006splits\030\n \001(\0132\035"
-      ".raft_cmdpb.BatchSplitRequest\"\240\004\n\rAdminR"
-      "esponse\022*\n\010cmd_type\030\001 \001(\0162\030.raft_cmdpb.A"
-      "dminCmdType\0223\n\013change_peer\030\002 \001(\0132\036.raft_"
-      "cmdpb.ChangePeerResponse\022,\n\005split\030\003 \001(\0132"
-      "\031.raft_cmdpb.SplitResponseB\002\030\001\0223\n\013compac"
-      "t_log\030\004 \001(\0132\036.raft_cmdpb.CompactLogRespo"
-      "nse\022;\n\017transfer_leader\030\005 \001(\0132\".raft_cmdp"
-      "b.TransferLeaderResponse\0223\n\013verify_hash\030"
-      "\006 \001(\0132\036.raft_cmdpb.VerifyHashResponse\0227\n"
-      "\rprepare_merge\030\007 \001(\0132 .raft_cmdpb.Prepar"
-      "eMergeResponse\0225\n\014commit_merge\030\010 \001(\0132\037.r"
-      "aft_cmdpb.CommitMergeResponse\0229\n\016rollbac"
-      "k_merge\030\t \001(\0132!.raft_cmdpb.RollbackMerge"
-      "Response\022.\n\006splits\030\n \001(\0132\036.raft_cmdpb.Ba"
-      "tchSplitResponse\"\025\n\023RegionLeaderRequest\""
-      "4\n\024RegionLeaderResponse\022\034\n\006leader\030\001 \001(\0132"
-      "\014.metapb.Peer\"\025\n\023RegionDetailRequest\"T\n\024"
-      "RegionDetailResponse\022\036\n\006region\030\001 \001(\0132\016.m"
-      "etapb.Region\022\034\n\006leader\030\002 \001(\0132\014.metapb.Pe"
-      "er\"\254\001\n\rStatusRequest\022+\n\010cmd_type\030\001 \001(\0162\031"
-      ".raft_cmdpb.StatusCmdType\0226\n\rregion_lead"
-      "er\030\002 \001(\0132\037.raft_cmdpb.RegionLeaderReques"
-      "t\0226\n\rregion_detail\030\003 \001(\0132\037.raft_cmdpb.Re"
-      "gionDetailRequest\"\257\001\n\016StatusResponse\022+\n\010"
-      "cmd_type\030\001 \001(\0162\031.raft_cmdpb.StatusCmdTyp"
-      "e\0227\n\rregion_leader\030\002 \001(\0132 .raft_cmdpb.Re"
-      "gionLeaderResponse\0227\n\rregion_detail\030\003 \001("
-      "\0132 .raft_cmdpb.RegionDetailResponse\"\260\001\n\021"
-      "RaftRequestHeader\022\021\n\tregion_id\030\001 \001(\004\022\032\n\004"
-      "peer\030\002 \001(\0132\014.metapb.Peer\022\023\n\013read_quorum\030"
-      "\003 \001(\010\022\014\n\004uuid\030\004 \001(\014\022)\n\014region_epoch\030\005 \001("
-      "\0132\023.metapb.RegionEpoch\022\014\n\004term\030\006 \001(\004\022\020\n\010"
-      "sync_log\030\007 \001(\010\"W\n\022RaftResponseHeader\022\035\n\005"
-      "error\030\001 \001(\0132\016.errorpb.Error\022\014\n\004uuid\030\002 \001("
-      "\014\022\024\n\014current_term\030\003 \001(\004\"\312\001\n\016RaftCmdReque"
-      "st\022-\n\006header\030\001 \001(\0132\035.raft_cmdpb.RaftRequ"
-      "estHeader\022%\n\010requests\030\002 \003(\0132\023.raft_cmdpb"
-      ".Request\022/\n\radmin_request\030\003 \001(\0132\030.raft_c"
-      "mdpb.AdminRequest\0221\n\016status_request\030\004 \001("
-      "\0132\031.raft_cmdpb.StatusRequest\"\322\001\n\017RaftCmd"
-      "Response\022.\n\006header\030\001 \001(\0132\036.raft_cmdpb.Ra"
-      "ftResponseHeader\022\'\n\tresponses\030\002 \003(\0132\024.ra"
-      "ft_cmdpb.Response\0221\n\016admin_response\030\003 \001("
-      "\0132\031.raft_cmdpb.AdminResponse\0223\n\017status_r"
-      "esponse\030\004 \001(\0132\032.raft_cmdpb.StatusRespons"
-      "e*l\n\007CmdType\022\013\n\007Invalid\020\000\022\007\n\003Get\020\001\022\007\n\003Pu"
-      "t\020\003\022\n\n\006Delete\020\004\022\010\n\004Snap\020\005\022\014\n\010Prewrite\020\006\022"
-      "\017\n\013DeleteRange\020\007\022\r\n\tIngestSST\020\010*\312\001\n\014Admi"
-      "nCmdType\022\020\n\014InvalidAdmin\020\000\022\016\n\nChangePeer"
-      "\020\001\022\r\n\005Split\020\002\032\002\010\001\022\016\n\nCompactLog\020\003\022\022\n\016Tra"
-      "nsferLeader\020\004\022\017\n\013ComputeHash\020\005\022\016\n\nVerify"
-      "Hash\020\006\022\020\n\014PrepareMerge\020\007\022\017\n\013CommitMerge\020"
-      "\010\022\021\n\rRollbackMerge\020\t\022\016\n\nBatchSplit\020\n*F\n\r"
-      "StatusCmdType\022\021\n\rInvalidStatus\020\000\022\020\n\014Regi"
-      "onLeader\020\001\022\020\n\014RegionDetail\020\002B\032\n\030com.ping"
-      "cap.tikv.kvprotob\006proto3"
+      "sponse\"\022\n\020ReadIndexRequest\"\'\n\021ReadIndexR"
+      "esponse\022\022\n\nread_index\030\001 \001(\004\"\225\003\n\007Request\022"
+      "%\n\010cmd_type\030\001 \001(\0162\023.raft_cmdpb.CmdType\022#"
+      "\n\003get\030\002 \001(\0132\026.raft_cmdpb.GetRequest\022#\n\003p"
+      "ut\030\004 \001(\0132\026.raft_cmdpb.PutRequest\022)\n\006dele"
+      "te\030\005 \001(\0132\031.raft_cmdpb.DeleteRequest\022%\n\004s"
+      "nap\030\006 \001(\0132\027.raft_cmdpb.SnapRequest\022-\n\010pr"
+      "ewrite\030\007 \001(\0132\033.raft_cmdpb.PrewriteReques"
+      "t\0224\n\014delete_range\030\010 \001(\0132\036.raft_cmdpb.Del"
+      "eteRangeRequest\0220\n\ningest_sst\030\t \001(\0132\034.ra"
+      "ft_cmdpb.IngestSSTRequest\0220\n\nread_index\030"
+      "\n \001(\0132\034.raft_cmdpb.ReadIndexRequest\"\235\003\n\010"
+      "Response\022%\n\010cmd_type\030\001 \001(\0162\023.raft_cmdpb."
+      "CmdType\022$\n\003get\030\002 \001(\0132\027.raft_cmdpb.GetRes"
+      "ponse\022$\n\003put\030\004 \001(\0132\027.raft_cmdpb.PutRespo"
+      "nse\022*\n\006delete\030\005 \001(\0132\032.raft_cmdpb.DeleteR"
+      "esponse\022&\n\004snap\030\006 \001(\0132\030.raft_cmdpb.SnapR"
+      "esponse\022.\n\010prewrite\030\007 \001(\0132\034.raft_cmdpb.P"
+      "rewriteResponse\0224\n\013delte_range\030\010 \001(\0132\037.r"
+      "aft_cmdpb.DeleteRangeResponse\0221\n\ningest_"
+      "sst\030\t \001(\0132\035.raft_cmdpb.IngestSSTResponse"
+      "\0221\n\nread_index\030\n \001(\0132\035.raft_cmdpb.ReadIn"
+      "dexResponse\"]\n\021ChangePeerRequest\022,\n\013chan"
+      "ge_type\030\001 \001(\0162\027.eraftpb.ConfChangeType\022\032"
+      "\n\004peer\030\002 \001(\0132\014.metapb.Peer\"4\n\022ChangePeer"
+      "Response\022\036\n\006region\030\001 \001(\0132\016.metapb.Region"
+      "\"h\n\014SplitRequest\022\021\n\tsplit_key\030\001 \001(\014\022\025\n\rn"
+      "ew_region_id\030\002 \001(\004\022\024\n\014new_peer_ids\030\003 \003(\004"
+      "\022\030\n\014right_derive\030\004 \001(\010B\002\030\001\"L\n\rSplitRespo"
+      "nse\022\034\n\004left\030\001 \001(\0132\016.metapb.Region\022\035\n\005rig"
+      "ht\030\002 \001(\0132\016.metapb.Region\"U\n\021BatchSplitRe"
+      "quest\022*\n\010requests\030\001 \003(\0132\030.raft_cmdpb.Spl"
+      "itRequest\022\024\n\014right_derive\030\002 \001(\010\"5\n\022Batch"
+      "SplitResponse\022\037\n\007regions\030\001 \003(\0132\016.metapb."
+      "Region\"@\n\021CompactLogRequest\022\025\n\rcompact_i"
+      "ndex\030\001 \001(\004\022\024\n\014compact_term\030\002 \001(\004\"\024\n\022Comp"
+      "actLogResponse\"3\n\025TransferLeaderRequest\022"
+      "\032\n\004peer\030\001 \001(\0132\014.metapb.Peer\"\030\n\026TransferL"
+      "eaderResponse\"0\n\021VerifyHashRequest\022\r\n\005in"
+      "dex\030\001 \001(\004\022\014\n\004hash\030\002 \001(\014\"\024\n\022VerifyHashRes"
+      "ponse\"H\n\023PrepareMergeRequest\022\021\n\tmin_inde"
+      "x\030\001 \001(\004\022\036\n\006target\030\002 \001(\0132\016.metapb.Region\""
+      "\026\n\024PrepareMergeResponse\"e\n\022CommitMergeRe"
+      "quest\022\036\n\006source\030\001 \001(\0132\016.metapb.Region\022\016\n"
+      "\006commit\030\002 \001(\004\022\037\n\007entries\030\003 \003(\0132\016.eraftpb"
+      ".Entry\"\025\n\023CommitMergeResponse\"&\n\024Rollbac"
+      "kMergeRequest\022\016\n\006commit\030\001 \001(\004\"\027\n\025Rollbac"
+      "kMergeResponse\"\226\004\n\014AdminRequest\022*\n\010cmd_t"
+      "ype\030\001 \001(\0162\030.raft_cmdpb.AdminCmdType\0222\n\013c"
+      "hange_peer\030\002 \001(\0132\035.raft_cmdpb.ChangePeer"
+      "Request\022+\n\005split\030\003 \001(\0132\030.raft_cmdpb.Spli"
+      "tRequestB\002\030\001\0222\n\013compact_log\030\004 \001(\0132\035.raft"
+      "_cmdpb.CompactLogRequest\022:\n\017transfer_lea"
+      "der\030\005 \001(\0132!.raft_cmdpb.TransferLeaderReq"
+      "uest\0222\n\013verify_hash\030\006 \001(\0132\035.raft_cmdpb.V"
+      "erifyHashRequest\0226\n\rprepare_merge\030\007 \001(\0132"
+      "\037.raft_cmdpb.PrepareMergeRequest\0224\n\014comm"
+      "it_merge\030\010 \001(\0132\036.raft_cmdpb.CommitMergeR"
+      "equest\0228\n\016rollback_merge\030\t \001(\0132 .raft_cm"
+      "dpb.RollbackMergeRequest\022-\n\006splits\030\n \001(\013"
+      "2\035.raft_cmdpb.BatchSplitRequest\"\240\004\n\rAdmi"
+      "nResponse\022*\n\010cmd_type\030\001 \001(\0162\030.raft_cmdpb"
+      ".AdminCmdType\0223\n\013change_peer\030\002 \001(\0132\036.raf"
+      "t_cmdpb.ChangePeerResponse\022,\n\005split\030\003 \001("
+      "\0132\031.raft_cmdpb.SplitResponseB\002\030\001\0223\n\013comp"
+      "act_log\030\004 \001(\0132\036.raft_cmdpb.CompactLogRes"
+      "ponse\022;\n\017transfer_leader\030\005 \001(\0132\".raft_cm"
+      "dpb.TransferLeaderResponse\0223\n\013verify_has"
+      "h\030\006 \001(\0132\036.raft_cmdpb.VerifyHashResponse\022"
+      "7\n\rprepare_merge\030\007 \001(\0132 .raft_cmdpb.Prep"
+      "areMergeResponse\0225\n\014commit_merge\030\010 \001(\0132\037"
+      ".raft_cmdpb.CommitMergeResponse\0229\n\016rollb"
+      "ack_merge\030\t \001(\0132!.raft_cmdpb.RollbackMer"
+      "geResponse\022.\n\006splits\030\n \001(\0132\036.raft_cmdpb."
+      "BatchSplitResponse\"\025\n\023RegionLeaderReques"
+      "t\"4\n\024RegionLeaderResponse\022\034\n\006leader\030\001 \001("
+      "\0132\014.metapb.Peer\"\025\n\023RegionDetailRequest\"T"
+      "\n\024RegionDetailResponse\022\036\n\006region\030\001 \001(\0132\016"
+      ".metapb.Region\022\034\n\006leader\030\002 \001(\0132\014.metapb."
+      "Peer\"\254\001\n\rStatusRequest\022+\n\010cmd_type\030\001 \001(\016"
+      "2\031.raft_cmdpb.StatusCmdType\0226\n\rregion_le"
+      "ader\030\002 \001(\0132\037.raft_cmdpb.RegionLeaderRequ"
+      "est\0226\n\rregion_detail\030\003 \001(\0132\037.raft_cmdpb."
+      "RegionDetailRequest\"\257\001\n\016StatusResponse\022+"
+      "\n\010cmd_type\030\001 \001(\0162\031.raft_cmdpb.StatusCmdT"
+      "ype\0227\n\rregion_leader\030\002 \001(\0132 .raft_cmdpb."
+      "RegionLeaderResponse\0227\n\rregion_detail\030\003 "
+      "\001(\0132 .raft_cmdpb.RegionDetailResponse\"\260\001"
+      "\n\021RaftRequestHeader\022\021\n\tregion_id\030\001 \001(\004\022\032"
+      "\n\004peer\030\002 \001(\0132\014.metapb.Peer\022\023\n\013read_quoru"
+      "m\030\003 \001(\010\022\014\n\004uuid\030\004 \001(\014\022)\n\014region_epoch\030\005 "
+      "\001(\0132\023.metapb.RegionEpoch\022\014\n\004term\030\006 \001(\004\022\020"
+      "\n\010sync_log\030\007 \001(\010\"W\n\022RaftResponseHeader\022\035"
+      "\n\005error\030\001 \001(\0132\016.errorpb.Error\022\014\n\004uuid\030\002 "
+      "\001(\014\022\024\n\014current_term\030\003 \001(\004\"\312\001\n\016RaftCmdReq"
+      "uest\022-\n\006header\030\001 \001(\0132\035.raft_cmdpb.RaftRe"
+      "questHeader\022%\n\010requests\030\002 \003(\0132\023.raft_cmd"
+      "pb.Request\022/\n\radmin_request\030\003 \001(\0132\030.raft"
+      "_cmdpb.AdminRequest\0221\n\016status_request\030\004 "
+      "\001(\0132\031.raft_cmdpb.StatusRequest\"\322\001\n\017RaftC"
+      "mdResponse\022.\n\006header\030\001 \001(\0132\036.raft_cmdpb."
+      "RaftResponseHeader\022\'\n\tresponses\030\002 \003(\0132\024."
+      "raft_cmdpb.Response\0221\n\016admin_response\030\003 "
+      "\001(\0132\031.raft_cmdpb.AdminResponse\0223\n\017status"
+      "_response\030\004 \001(\0132\032.raft_cmdpb.StatusRespo"
+      "nse*{\n\007CmdType\022\013\n\007Invalid\020\000\022\007\n\003Get\020\001\022\007\n\003"
+      "Put\020\003\022\n\n\006Delete\020\004\022\010\n\004Snap\020\005\022\014\n\010Prewrite\020"
+      "\006\022\017\n\013DeleteRange\020\007\022\r\n\tIngestSST\020\010\022\r\n\tRea"
+      "dIndex\020\t*\312\001\n\014AdminCmdType\022\020\n\014InvalidAdmi"
+      "n\020\000\022\016\n\nChangePeer\020\001\022\r\n\005Split\020\002\032\002\010\001\022\016\n\nCo"
+      "mpactLog\020\003\022\022\n\016TransferLeader\020\004\022\017\n\013Comput"
+      "eHash\020\005\022\016\n\nVerifyHash\020\006\022\020\n\014PrepareMerge\020"
+      "\007\022\017\n\013CommitMerge\020\010\022\021\n\rRollbackMerge\020\t\022\016\n"
+      "\nBatchSplit\020\n*F\n\rStatusCmdType\022\021\n\rInvali"
+      "dStatus\020\000\022\020\n\014RegionLeader\020\001\022\020\n\014RegionDet"
+      "ail\020\002B\022\n\020org.tikv.kvprotob\006proto3"
   };
   ::google::protobuf::DescriptorPool::InternalAddGeneratedFile(
-      descriptor, 5064);
+      descriptor, 5233);
   ::google::protobuf::MessageFactory::InternalRegisterGeneratedFile(
     "raft_cmdpb.proto", &protobuf_RegisterTypes);
   ::protobuf_metapb_2eproto::AddDescriptors();
@@ -1900,6 +1975,7 @@ bool CmdType_IsValid(int value) {
     case 6:
     case 7:
     case 8:
+    case 9:
       return true;
     default:
       return false;
@@ -5493,6 +5569,438 @@ void IngestSSTResponse::InternalSwap(IngestSSTResponse* other) {
 
 // ===================================================================
 
+void ReadIndexRequest::InitAsDefaultInstance() {
+}
+#if !defined(_MSC_VER) || _MSC_VER >= 1900
+#endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
+
+ReadIndexRequest::ReadIndexRequest()
+  : ::google::protobuf::Message(), _internal_metadata_(NULL) {
+  if (GOOGLE_PREDICT_TRUE(this != internal_default_instance())) {
+    ::protobuf_raft_5fcmdpb_2eproto::InitDefaultsReadIndexRequest();
+  }
+  SharedCtor();
+  // @@protoc_insertion_point(constructor:raft_cmdpb.ReadIndexRequest)
+}
+ReadIndexRequest::ReadIndexRequest(const ReadIndexRequest& from)
+  : ::google::protobuf::Message(),
+      _internal_metadata_(NULL),
+      _cached_size_(0) {
+  _internal_metadata_.MergeFrom(from._internal_metadata_);
+  // @@protoc_insertion_point(copy_constructor:raft_cmdpb.ReadIndexRequest)
+}
+
+void ReadIndexRequest::SharedCtor() {
+  _cached_size_ = 0;
+}
+
+ReadIndexRequest::~ReadIndexRequest() {
+  // @@protoc_insertion_point(destructor:raft_cmdpb.ReadIndexRequest)
+  SharedDtor();
+}
+
+void ReadIndexRequest::SharedDtor() {
+}
+
+void ReadIndexRequest::SetCachedSize(int size) const {
+  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
+  _cached_size_ = size;
+  GOOGLE_SAFE_CONCURRENT_WRITES_END();
+}
+const ::google::protobuf::Descriptor* ReadIndexRequest::descriptor() {
+  ::protobuf_raft_5fcmdpb_2eproto::protobuf_AssignDescriptorsOnce();
+  return ::protobuf_raft_5fcmdpb_2eproto::file_level_metadata[kIndexInFileMessages].descriptor;
+}
+
+const ReadIndexRequest& ReadIndexRequest::default_instance() {
+  ::protobuf_raft_5fcmdpb_2eproto::InitDefaultsReadIndexRequest();
+  return *internal_default_instance();
+}
+
+ReadIndexRequest* ReadIndexRequest::New(::google::protobuf::Arena* arena) const {
+  ReadIndexRequest* n = new ReadIndexRequest;
+  if (arena != NULL) {
+    arena->Own(n);
+  }
+  return n;
+}
+
+void ReadIndexRequest::Clear() {
+// @@protoc_insertion_point(message_clear_start:raft_cmdpb.ReadIndexRequest)
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  _internal_metadata_.Clear();
+}
+
+bool ReadIndexRequest::MergePartialFromCodedStream(
+    ::google::protobuf::io::CodedInputStream* input) {
+#define DO_(EXPRESSION) if (!GOOGLE_PREDICT_TRUE(EXPRESSION)) goto failure
+  ::google::protobuf::uint32 tag;
+  // @@protoc_insertion_point(parse_start:raft_cmdpb.ReadIndexRequest)
+  for (;;) {
+    ::std::pair< ::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
+    tag = p.first;
+    if (!p.second) goto handle_unusual;
+  handle_unusual:
+    if (tag == 0) {
+      goto success;
+    }
+    DO_(::google::protobuf::internal::WireFormat::SkipField(
+          input, tag, _internal_metadata_.mutable_unknown_fields()));
+  }
+success:
+  // @@protoc_insertion_point(parse_success:raft_cmdpb.ReadIndexRequest)
+  return true;
+failure:
+  // @@protoc_insertion_point(parse_failure:raft_cmdpb.ReadIndexRequest)
+  return false;
+#undef DO_
+}
+
+void ReadIndexRequest::SerializeWithCachedSizes(
+    ::google::protobuf::io::CodedOutputStream* output) const {
+  // @@protoc_insertion_point(serialize_start:raft_cmdpb.ReadIndexRequest)
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
+    ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
+        (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()), output);
+  }
+  // @@protoc_insertion_point(serialize_end:raft_cmdpb.ReadIndexRequest)
+}
+
+::google::protobuf::uint8* ReadIndexRequest::InternalSerializeWithCachedSizesToArray(
+    bool deterministic, ::google::protobuf::uint8* target) const {
+  (void)deterministic; // Unused
+  // @@protoc_insertion_point(serialize_to_array_start:raft_cmdpb.ReadIndexRequest)
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
+    target = ::google::protobuf::internal::WireFormat::SerializeUnknownFieldsToArray(
+        (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()), target);
+  }
+  // @@protoc_insertion_point(serialize_to_array_end:raft_cmdpb.ReadIndexRequest)
+  return target;
+}
+
+size_t ReadIndexRequest::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:raft_cmdpb.ReadIndexRequest)
+  size_t total_size = 0;
+
+  if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
+    total_size +=
+      ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(
+        (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()));
+  }
+  int cached_size = ::google::protobuf::internal::ToCachedSize(total_size);
+  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
+  _cached_size_ = cached_size;
+  GOOGLE_SAFE_CONCURRENT_WRITES_END();
+  return total_size;
+}
+
+void ReadIndexRequest::MergeFrom(const ::google::protobuf::Message& from) {
+// @@protoc_insertion_point(generalized_merge_from_start:raft_cmdpb.ReadIndexRequest)
+  GOOGLE_DCHECK_NE(&from, this);
+  const ReadIndexRequest* source =
+      ::google::protobuf::internal::DynamicCastToGenerated<const ReadIndexRequest>(
+          &from);
+  if (source == NULL) {
+  // @@protoc_insertion_point(generalized_merge_from_cast_fail:raft_cmdpb.ReadIndexRequest)
+    ::google::protobuf::internal::ReflectionOps::Merge(from, this);
+  } else {
+  // @@protoc_insertion_point(generalized_merge_from_cast_success:raft_cmdpb.ReadIndexRequest)
+    MergeFrom(*source);
+  }
+}
+
+void ReadIndexRequest::MergeFrom(const ReadIndexRequest& from) {
+// @@protoc_insertion_point(class_specific_merge_from_start:raft_cmdpb.ReadIndexRequest)
+  GOOGLE_DCHECK_NE(&from, this);
+  _internal_metadata_.MergeFrom(from._internal_metadata_);
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+}
+
+void ReadIndexRequest::CopyFrom(const ::google::protobuf::Message& from) {
+// @@protoc_insertion_point(generalized_copy_from_start:raft_cmdpb.ReadIndexRequest)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+void ReadIndexRequest::CopyFrom(const ReadIndexRequest& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:raft_cmdpb.ReadIndexRequest)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+bool ReadIndexRequest::IsInitialized() const {
+  return true;
+}
+
+void ReadIndexRequest::Swap(ReadIndexRequest* other) {
+  if (other == this) return;
+  InternalSwap(other);
+}
+void ReadIndexRequest::InternalSwap(ReadIndexRequest* other) {
+  using std::swap;
+  _internal_metadata_.Swap(&other->_internal_metadata_);
+  swap(_cached_size_, other->_cached_size_);
+}
+
+::google::protobuf::Metadata ReadIndexRequest::GetMetadata() const {
+  protobuf_raft_5fcmdpb_2eproto::protobuf_AssignDescriptorsOnce();
+  return ::protobuf_raft_5fcmdpb_2eproto::file_level_metadata[kIndexInFileMessages];
+}
+
+
+// ===================================================================
+
+void ReadIndexResponse::InitAsDefaultInstance() {
+}
+#if !defined(_MSC_VER) || _MSC_VER >= 1900
+const int ReadIndexResponse::kReadIndexFieldNumber;
+#endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
+
+ReadIndexResponse::ReadIndexResponse()
+  : ::google::protobuf::Message(), _internal_metadata_(NULL) {
+  if (GOOGLE_PREDICT_TRUE(this != internal_default_instance())) {
+    ::protobuf_raft_5fcmdpb_2eproto::InitDefaultsReadIndexResponse();
+  }
+  SharedCtor();
+  // @@protoc_insertion_point(constructor:raft_cmdpb.ReadIndexResponse)
+}
+ReadIndexResponse::ReadIndexResponse(const ReadIndexResponse& from)
+  : ::google::protobuf::Message(),
+      _internal_metadata_(NULL),
+      _cached_size_(0) {
+  _internal_metadata_.MergeFrom(from._internal_metadata_);
+  read_index_ = from.read_index_;
+  // @@protoc_insertion_point(copy_constructor:raft_cmdpb.ReadIndexResponse)
+}
+
+void ReadIndexResponse::SharedCtor() {
+  read_index_ = GOOGLE_ULONGLONG(0);
+  _cached_size_ = 0;
+}
+
+ReadIndexResponse::~ReadIndexResponse() {
+  // @@protoc_insertion_point(destructor:raft_cmdpb.ReadIndexResponse)
+  SharedDtor();
+}
+
+void ReadIndexResponse::SharedDtor() {
+}
+
+void ReadIndexResponse::SetCachedSize(int size) const {
+  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
+  _cached_size_ = size;
+  GOOGLE_SAFE_CONCURRENT_WRITES_END();
+}
+const ::google::protobuf::Descriptor* ReadIndexResponse::descriptor() {
+  ::protobuf_raft_5fcmdpb_2eproto::protobuf_AssignDescriptorsOnce();
+  return ::protobuf_raft_5fcmdpb_2eproto::file_level_metadata[kIndexInFileMessages].descriptor;
+}
+
+const ReadIndexResponse& ReadIndexResponse::default_instance() {
+  ::protobuf_raft_5fcmdpb_2eproto::InitDefaultsReadIndexResponse();
+  return *internal_default_instance();
+}
+
+ReadIndexResponse* ReadIndexResponse::New(::google::protobuf::Arena* arena) const {
+  ReadIndexResponse* n = new ReadIndexResponse;
+  if (arena != NULL) {
+    arena->Own(n);
+  }
+  return n;
+}
+
+void ReadIndexResponse::Clear() {
+// @@protoc_insertion_point(message_clear_start:raft_cmdpb.ReadIndexResponse)
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  read_index_ = GOOGLE_ULONGLONG(0);
+  _internal_metadata_.Clear();
+}
+
+bool ReadIndexResponse::MergePartialFromCodedStream(
+    ::google::protobuf::io::CodedInputStream* input) {
+#define DO_(EXPRESSION) if (!GOOGLE_PREDICT_TRUE(EXPRESSION)) goto failure
+  ::google::protobuf::uint32 tag;
+  // @@protoc_insertion_point(parse_start:raft_cmdpb.ReadIndexResponse)
+  for (;;) {
+    ::std::pair< ::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
+    tag = p.first;
+    if (!p.second) goto handle_unusual;
+    switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
+      // uint64 read_index = 1;
+      case 1: {
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(8u /* 8 & 0xFF */)) {
+
+          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
+                   ::google::protobuf::uint64, ::google::protobuf::internal::WireFormatLite::TYPE_UINT64>(
+                 input, &read_index_)));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      default: {
+      handle_unusual:
+        if (tag == 0) {
+          goto success;
+        }
+        DO_(::google::protobuf::internal::WireFormat::SkipField(
+              input, tag, _internal_metadata_.mutable_unknown_fields()));
+        break;
+      }
+    }
+  }
+success:
+  // @@protoc_insertion_point(parse_success:raft_cmdpb.ReadIndexResponse)
+  return true;
+failure:
+  // @@protoc_insertion_point(parse_failure:raft_cmdpb.ReadIndexResponse)
+  return false;
+#undef DO_
+}
+
+void ReadIndexResponse::SerializeWithCachedSizes(
+    ::google::protobuf::io::CodedOutputStream* output) const {
+  // @@protoc_insertion_point(serialize_start:raft_cmdpb.ReadIndexResponse)
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  // uint64 read_index = 1;
+  if (this->read_index() != 0) {
+    ::google::protobuf::internal::WireFormatLite::WriteUInt64(1, this->read_index(), output);
+  }
+
+  if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
+    ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
+        (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()), output);
+  }
+  // @@protoc_insertion_point(serialize_end:raft_cmdpb.ReadIndexResponse)
+}
+
+::google::protobuf::uint8* ReadIndexResponse::InternalSerializeWithCachedSizesToArray(
+    bool deterministic, ::google::protobuf::uint8* target) const {
+  (void)deterministic; // Unused
+  // @@protoc_insertion_point(serialize_to_array_start:raft_cmdpb.ReadIndexResponse)
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  // uint64 read_index = 1;
+  if (this->read_index() != 0) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteUInt64ToArray(1, this->read_index(), target);
+  }
+
+  if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
+    target = ::google::protobuf::internal::WireFormat::SerializeUnknownFieldsToArray(
+        (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()), target);
+  }
+  // @@protoc_insertion_point(serialize_to_array_end:raft_cmdpb.ReadIndexResponse)
+  return target;
+}
+
+size_t ReadIndexResponse::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:raft_cmdpb.ReadIndexResponse)
+  size_t total_size = 0;
+
+  if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
+    total_size +=
+      ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(
+        (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()));
+  }
+  // uint64 read_index = 1;
+  if (this->read_index() != 0) {
+    total_size += 1 +
+      ::google::protobuf::internal::WireFormatLite::UInt64Size(
+        this->read_index());
+  }
+
+  int cached_size = ::google::protobuf::internal::ToCachedSize(total_size);
+  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
+  _cached_size_ = cached_size;
+  GOOGLE_SAFE_CONCURRENT_WRITES_END();
+  return total_size;
+}
+
+void ReadIndexResponse::MergeFrom(const ::google::protobuf::Message& from) {
+// @@protoc_insertion_point(generalized_merge_from_start:raft_cmdpb.ReadIndexResponse)
+  GOOGLE_DCHECK_NE(&from, this);
+  const ReadIndexResponse* source =
+      ::google::protobuf::internal::DynamicCastToGenerated<const ReadIndexResponse>(
+          &from);
+  if (source == NULL) {
+  // @@protoc_insertion_point(generalized_merge_from_cast_fail:raft_cmdpb.ReadIndexResponse)
+    ::google::protobuf::internal::ReflectionOps::Merge(from, this);
+  } else {
+  // @@protoc_insertion_point(generalized_merge_from_cast_success:raft_cmdpb.ReadIndexResponse)
+    MergeFrom(*source);
+  }
+}
+
+void ReadIndexResponse::MergeFrom(const ReadIndexResponse& from) {
+// @@protoc_insertion_point(class_specific_merge_from_start:raft_cmdpb.ReadIndexResponse)
+  GOOGLE_DCHECK_NE(&from, this);
+  _internal_metadata_.MergeFrom(from._internal_metadata_);
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  if (from.read_index() != 0) {
+    set_read_index(from.read_index());
+  }
+}
+
+void ReadIndexResponse::CopyFrom(const ::google::protobuf::Message& from) {
+// @@protoc_insertion_point(generalized_copy_from_start:raft_cmdpb.ReadIndexResponse)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+void ReadIndexResponse::CopyFrom(const ReadIndexResponse& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:raft_cmdpb.ReadIndexResponse)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+bool ReadIndexResponse::IsInitialized() const {
+  return true;
+}
+
+void ReadIndexResponse::Swap(ReadIndexResponse* other) {
+  if (other == this) return;
+  InternalSwap(other);
+}
+void ReadIndexResponse::InternalSwap(ReadIndexResponse* other) {
+  using std::swap;
+  swap(read_index_, other->read_index_);
+  _internal_metadata_.Swap(&other->_internal_metadata_);
+  swap(_cached_size_, other->_cached_size_);
+}
+
+::google::protobuf::Metadata ReadIndexResponse::GetMetadata() const {
+  protobuf_raft_5fcmdpb_2eproto::protobuf_AssignDescriptorsOnce();
+  return ::protobuf_raft_5fcmdpb_2eproto::file_level_metadata[kIndexInFileMessages];
+}
+
+
+// ===================================================================
+
 void Request::InitAsDefaultInstance() {
   ::raft_cmdpb::_Request_default_instance_._instance.get_mutable()->get_ = const_cast< ::raft_cmdpb::GetRequest*>(
       ::raft_cmdpb::GetRequest::internal_default_instance());
@@ -5508,6 +6016,8 @@ void Request::InitAsDefaultInstance() {
       ::raft_cmdpb::DeleteRangeRequest::internal_default_instance());
   ::raft_cmdpb::_Request_default_instance_._instance.get_mutable()->ingest_sst_ = const_cast< ::raft_cmdpb::IngestSSTRequest*>(
       ::raft_cmdpb::IngestSSTRequest::internal_default_instance());
+  ::raft_cmdpb::_Request_default_instance_._instance.get_mutable()->read_index_ = const_cast< ::raft_cmdpb::ReadIndexRequest*>(
+      ::raft_cmdpb::ReadIndexRequest::internal_default_instance());
 }
 #if !defined(_MSC_VER) || _MSC_VER >= 1900
 const int Request::kCmdTypeFieldNumber;
@@ -5518,6 +6028,7 @@ const int Request::kSnapFieldNumber;
 const int Request::kPrewriteFieldNumber;
 const int Request::kDeleteRangeFieldNumber;
 const int Request::kIngestSstFieldNumber;
+const int Request::kReadIndexFieldNumber;
 #endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
 
 Request::Request()
@@ -5568,6 +6079,11 @@ Request::Request(const Request& from)
   } else {
     ingest_sst_ = NULL;
   }
+  if (from.has_read_index()) {
+    read_index_ = new ::raft_cmdpb::ReadIndexRequest(*from.read_index_);
+  } else {
+    read_index_ = NULL;
+  }
   cmd_type_ = from.cmd_type_;
   // @@protoc_insertion_point(copy_constructor:raft_cmdpb.Request)
 }
@@ -5592,6 +6108,7 @@ void Request::SharedDtor() {
   if (this != internal_default_instance()) delete prewrite_;
   if (this != internal_default_instance()) delete delete_range_;
   if (this != internal_default_instance()) delete ingest_sst_;
+  if (this != internal_default_instance()) delete read_index_;
 }
 
 void Request::SetCachedSize(int size) const {
@@ -5651,6 +6168,10 @@ void Request::Clear() {
     delete ingest_sst_;
   }
   ingest_sst_ = NULL;
+  if (GetArenaNoVirtual() == NULL && read_index_ != NULL) {
+    delete read_index_;
+  }
+  read_index_ = NULL;
   cmd_type_ = 0;
   _internal_metadata_.Clear();
 }
@@ -5764,6 +6285,18 @@ bool Request::MergePartialFromCodedStream(
         break;
       }
 
+      // .raft_cmdpb.ReadIndexRequest read_index = 10;
+      case 10: {
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(82u /* 82 & 0xFF */)) {
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
+               input, mutable_read_index()));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
       default: {
       handle_unusual:
         if (tag == 0) {
@@ -5838,6 +6371,12 @@ void Request::SerializeWithCachedSizes(
       9, *this->ingest_sst_, output);
   }
 
+  // .raft_cmdpb.ReadIndexRequest read_index = 10;
+  if (this->has_read_index()) {
+    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
+      10, *this->read_index_, output);
+  }
+
   if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
     ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
         (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()), output);
@@ -5907,6 +6446,13 @@ void Request::SerializeWithCachedSizes(
         9, *this->ingest_sst_, deterministic, target);
   }
 
+  // .raft_cmdpb.ReadIndexRequest read_index = 10;
+  if (this->has_read_index()) {
+    target = ::google::protobuf::internal::WireFormatLite::
+      InternalWriteMessageToArray(
+        10, *this->read_index_, deterministic, target);
+  }
+
   if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
     target = ::google::protobuf::internal::WireFormat::SerializeUnknownFieldsToArray(
         (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()), target);
@@ -5973,6 +6519,13 @@ size_t Request::ByteSizeLong() const {
         *this->ingest_sst_);
   }
 
+  // .raft_cmdpb.ReadIndexRequest read_index = 10;
+  if (this->has_read_index()) {
+    total_size += 1 +
+      ::google::protobuf::internal::WireFormatLite::MessageSize(
+        *this->read_index_);
+  }
+
   // .raft_cmdpb.CmdType cmd_type = 1;
   if (this->cmd_type() != 0) {
     total_size += 1 +
@@ -6029,6 +6582,9 @@ void Request::MergeFrom(const Request& from) {
   if (from.has_ingest_sst()) {
     mutable_ingest_sst()->::raft_cmdpb::IngestSSTRequest::MergeFrom(from.ingest_sst());
   }
+  if (from.has_read_index()) {
+    mutable_read_index()->::raft_cmdpb::ReadIndexRequest::MergeFrom(from.read_index());
+  }
   if (from.cmd_type() != 0) {
     set_cmd_type(from.cmd_type());
   }
@@ -6065,6 +6621,7 @@ void Request::InternalSwap(Request* other) {
   swap(prewrite_, other->prewrite_);
   swap(delete_range_, other->delete_range_);
   swap(ingest_sst_, other->ingest_sst_);
+  swap(read_index_, other->read_index_);
   swap(cmd_type_, other->cmd_type_);
   _internal_metadata_.Swap(&other->_internal_metadata_);
   swap(_cached_size_, other->_cached_size_);
@@ -6093,6 +6650,8 @@ void Response::InitAsDefaultInstance() {
       ::raft_cmdpb::DeleteRangeResponse::internal_default_instance());
   ::raft_cmdpb::_Response_default_instance_._instance.get_mutable()->ingest_sst_ = const_cast< ::raft_cmdpb::IngestSSTResponse*>(
       ::raft_cmdpb::IngestSSTResponse::internal_default_instance());
+  ::raft_cmdpb::_Response_default_instance_._instance.get_mutable()->read_index_ = const_cast< ::raft_cmdpb::ReadIndexResponse*>(
+      ::raft_cmdpb::ReadIndexResponse::internal_default_instance());
 }
 #if !defined(_MSC_VER) || _MSC_VER >= 1900
 const int Response::kCmdTypeFieldNumber;
@@ -6103,6 +6662,7 @@ const int Response::kSnapFieldNumber;
 const int Response::kPrewriteFieldNumber;
 const int Response::kDelteRangeFieldNumber;
 const int Response::kIngestSstFieldNumber;
+const int Response::kReadIndexFieldNumber;
 #endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
 
 Response::Response()
@@ -6153,6 +6713,11 @@ Response::Response(const Response& from)
   } else {
     ingest_sst_ = NULL;
   }
+  if (from.has_read_index()) {
+    read_index_ = new ::raft_cmdpb::ReadIndexResponse(*from.read_index_);
+  } else {
+    read_index_ = NULL;
+  }
   cmd_type_ = from.cmd_type_;
   // @@protoc_insertion_point(copy_constructor:raft_cmdpb.Response)
 }
@@ -6177,6 +6742,7 @@ void Response::SharedDtor() {
   if (this != internal_default_instance()) delete prewrite_;
   if (this != internal_default_instance()) delete delte_range_;
   if (this != internal_default_instance()) delete ingest_sst_;
+  if (this != internal_default_instance()) delete read_index_;
 }
 
 void Response::SetCachedSize(int size) const {
@@ -6236,6 +6802,10 @@ void Response::Clear() {
     delete ingest_sst_;
   }
   ingest_sst_ = NULL;
+  if (GetArenaNoVirtual() == NULL && read_index_ != NULL) {
+    delete read_index_;
+  }
+  read_index_ = NULL;
   cmd_type_ = 0;
   _internal_metadata_.Clear();
 }
@@ -6349,6 +6919,18 @@ bool Response::MergePartialFromCodedStream(
         break;
       }
 
+      // .raft_cmdpb.ReadIndexResponse read_index = 10;
+      case 10: {
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(82u /* 82 & 0xFF */)) {
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
+               input, mutable_read_index()));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
       default: {
       handle_unusual:
         if (tag == 0) {
@@ -6423,6 +7005,12 @@ void Response::SerializeWithCachedSizes(
       9, *this->ingest_sst_, output);
   }
 
+  // .raft_cmdpb.ReadIndexResponse read_index = 10;
+  if (this->has_read_index()) {
+    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
+      10, *this->read_index_, output);
+  }
+
   if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
     ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
         (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()), output);
@@ -6492,6 +7080,13 @@ void Response::SerializeWithCachedSizes(
         9, *this->ingest_sst_, deterministic, target);
   }
 
+  // .raft_cmdpb.ReadIndexResponse read_index = 10;
+  if (this->has_read_index()) {
+    target = ::google::protobuf::internal::WireFormatLite::
+      InternalWriteMessageToArray(
+        10, *this->read_index_, deterministic, target);
+  }
+
   if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
     target = ::google::protobuf::internal::WireFormat::SerializeUnknownFieldsToArray(
         (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()), target);
@@ -6558,6 +7153,13 @@ size_t Response::ByteSizeLong() const {
         *this->ingest_sst_);
   }
 
+  // .raft_cmdpb.ReadIndexResponse read_index = 10;
+  if (this->has_read_index()) {
+    total_size += 1 +
+      ::google::protobuf::internal::WireFormatLite::MessageSize(
+        *this->read_index_);
+  }
+
   // .raft_cmdpb.CmdType cmd_type = 1;
   if (this->cmd_type() != 0) {
     total_size += 1 +
@@ -6614,6 +7216,9 @@ void Response::MergeFrom(const Response& from) {
   if (from.has_ingest_sst()) {
     mutable_ingest_sst()->::raft_cmdpb::IngestSSTResponse::MergeFrom(from.ingest_sst());
   }
+  if (from.has_read_index()) {
+    mutable_read_index()->::raft_cmdpb::ReadIndexResponse::MergeFrom(from.read_index());
+  }
   if (from.cmd_type() != 0) {
     set_cmd_type(from.cmd_type());
   }
@@ -6650,6 +7255,7 @@ void Response::InternalSwap(Response* other) {
   swap(prewrite_, other->prewrite_);
   swap(delte_range_, other->delte_range_);
   swap(ingest_sst_, other->ingest_sst_);
+  swap(read_index_, other->read_index_);
   swap(cmd_type_, other->cmd_type_);
   _internal_metadata_.Swap(&other->_internal_metadata_);
   swap(_cached_size_, other->_cached_size_);

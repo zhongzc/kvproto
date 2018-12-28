@@ -584,11 +584,18 @@ class CommandResponseHeader : public ::google::protobuf::Message /* @@protoc_ins
   ::google::protobuf::uint64 region_id() const;
   void set_region_id(::google::protobuf::uint64 value);
 
+  // bool destroyed = 2;
+  void clear_destroyed();
+  static const int kDestroyedFieldNumber = 2;
+  bool destroyed() const;
+  void set_destroyed(bool value);
+
   // @@protoc_insertion_point(class_scope:enginepb.CommandResponseHeader)
  private:
 
   ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
   ::google::protobuf::uint64 region_id_;
+  bool destroyed_;
   mutable int _cached_size_;
   friend struct ::protobuf_enginepb_2eproto::TableStruct;
   friend void ::protobuf_enginepb_2eproto::InitDefaultsCommandResponseHeaderImpl();
@@ -1641,6 +1648,20 @@ inline void CommandResponseHeader::set_region_id(::google::protobuf::uint64 valu
   
   region_id_ = value;
   // @@protoc_insertion_point(field_set:enginepb.CommandResponseHeader.region_id)
+}
+
+// bool destroyed = 2;
+inline void CommandResponseHeader::clear_destroyed() {
+  destroyed_ = false;
+}
+inline bool CommandResponseHeader::destroyed() const {
+  // @@protoc_insertion_point(field_get:enginepb.CommandResponseHeader.destroyed)
+  return destroyed_;
+}
+inline void CommandResponseHeader::set_destroyed(bool value) {
+  
+  destroyed_ = value;
+  // @@protoc_insertion_point(field_set:enginepb.CommandResponseHeader.destroyed)
 }
 
 // -------------------------------------------------------------------

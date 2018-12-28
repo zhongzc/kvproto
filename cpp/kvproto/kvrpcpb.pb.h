@@ -39,7 +39,7 @@ namespace protobuf_kvrpcpb_2eproto {
 struct TableStruct {
   static const ::google::protobuf::internal::ParseTableField entries[];
   static const ::google::protobuf::internal::AuxillaryParseTableField aux[];
-  static const ::google::protobuf::internal::ParseTable schema[66];
+  static const ::google::protobuf::internal::ParseTable schema[68];
   static const ::google::protobuf::internal::FieldMetadata field_metadata[];
   static const ::google::protobuf::internal::SerializationTable serialization_table[];
   static const ::google::protobuf::uint32 offsets[];
@@ -177,6 +177,10 @@ void InitDefaultsUnsafeDestroyRangeRequestImpl();
 void InitDefaultsUnsafeDestroyRangeRequest();
 void InitDefaultsUnsafeDestroyRangeResponseImpl();
 void InitDefaultsUnsafeDestroyRangeResponse();
+void InitDefaultsReadIndexRequestImpl();
+void InitDefaultsReadIndexRequest();
+void InitDefaultsReadIndexResponseImpl();
+void InitDefaultsReadIndexResponse();
 inline void InitDefaults() {
   InitDefaultsLockInfo();
   InitDefaultsKeyError();
@@ -244,6 +248,8 @@ inline void InitDefaults() {
   InitDefaultsSplitRegionResponse();
   InitDefaultsUnsafeDestroyRangeRequest();
   InitDefaultsUnsafeDestroyRangeResponse();
+  InitDefaultsReadIndexRequest();
+  InitDefaultsReadIndexResponse();
 }
 }  // namespace protobuf_kvrpcpb_2eproto
 namespace kvrpcpb {
@@ -403,6 +409,12 @@ extern RawScanRequestDefaultTypeInternal _RawScanRequest_default_instance_;
 class RawScanResponse;
 class RawScanResponseDefaultTypeInternal;
 extern RawScanResponseDefaultTypeInternal _RawScanResponse_default_instance_;
+class ReadIndexRequest;
+class ReadIndexRequestDefaultTypeInternal;
+extern ReadIndexRequestDefaultTypeInternal _ReadIndexRequest_default_instance_;
+class ReadIndexResponse;
+class ReadIndexResponseDefaultTypeInternal;
+extern ReadIndexResponseDefaultTypeInternal _ReadIndexResponse_default_instance_;
 class ResolveLockRequest;
 class ResolveLockRequestDefaultTypeInternal;
 extern ResolveLockRequestDefaultTypeInternal _ResolveLockRequest_default_instance_;
@@ -1891,6 +1903,20 @@ class ScanRequest : public ::google::protobuf::Message /* @@protoc_insertion_poi
   ::std::string* release_start_key();
   void set_allocated_start_key(::std::string* start_key);
 
+  // bytes end_key = 7;
+  void clear_end_key();
+  static const int kEndKeyFieldNumber = 7;
+  const ::std::string& end_key() const;
+  void set_end_key(const ::std::string& value);
+  #if LANG_CXX11
+  void set_end_key(::std::string&& value);
+  #endif
+  void set_end_key(const char* value);
+  void set_end_key(const void* value, size_t size);
+  ::std::string* mutable_end_key();
+  ::std::string* release_end_key();
+  void set_allocated_end_key(::std::string* end_key);
+
   // .kvrpcpb.Context context = 1;
   bool has_context() const;
   void clear_context();
@@ -1929,6 +1955,7 @@ class ScanRequest : public ::google::protobuf::Message /* @@protoc_insertion_poi
 
   ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
   ::google::protobuf::internal::ArenaStringPtr start_key_;
+  ::google::protobuf::internal::ArenaStringPtr end_key_;
   ::kvrpcpb::Context* context_;
   ::google::protobuf::uint64 version_;
   ::google::protobuf::uint32 limit_;
@@ -6779,6 +6806,20 @@ class RawScanRequest : public ::google::protobuf::Message /* @@protoc_insertion_
   ::std::string* release_cf();
   void set_allocated_cf(::std::string* cf);
 
+  // bytes end_key = 7;
+  void clear_end_key();
+  static const int kEndKeyFieldNumber = 7;
+  const ::std::string& end_key() const;
+  void set_end_key(const ::std::string& value);
+  #if LANG_CXX11
+  void set_end_key(::std::string&& value);
+  #endif
+  void set_end_key(const char* value);
+  void set_end_key(const void* value, size_t size);
+  ::std::string* mutable_end_key();
+  ::std::string* release_end_key();
+  void set_allocated_end_key(::std::string* end_key);
+
   // .kvrpcpb.Context context = 1;
   bool has_context() const;
   void clear_context();
@@ -6800,15 +6841,23 @@ class RawScanRequest : public ::google::protobuf::Message /* @@protoc_insertion_
   bool key_only() const;
   void set_key_only(bool value);
 
+  // bool reverse = 6;
+  void clear_reverse();
+  static const int kReverseFieldNumber = 6;
+  bool reverse() const;
+  void set_reverse(bool value);
+
   // @@protoc_insertion_point(class_scope:kvrpcpb.RawScanRequest)
  private:
 
   ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
   ::google::protobuf::internal::ArenaStringPtr start_key_;
   ::google::protobuf::internal::ArenaStringPtr cf_;
+  ::google::protobuf::internal::ArenaStringPtr end_key_;
   ::kvrpcpb::Context* context_;
   ::google::protobuf::uint32 limit_;
   bool key_only_;
+  bool reverse_;
   mutable int _cached_size_;
   friend struct ::protobuf_kvrpcpb_2eproto::TableStruct;
   friend void ::protobuf_kvrpcpb_2eproto::InitDefaultsRawScanRequestImpl();
@@ -7181,6 +7230,12 @@ class RawBatchScanRequest : public ::google::protobuf::Message /* @@protoc_inser
   bool key_only() const;
   void set_key_only(bool value);
 
+  // bool reverse = 6;
+  void clear_reverse();
+  static const int kReverseFieldNumber = 6;
+  bool reverse() const;
+  void set_reverse(bool value);
+
   // @@protoc_insertion_point(class_scope:kvrpcpb.RawBatchScanRequest)
  private:
 
@@ -7190,6 +7245,7 @@ class RawBatchScanRequest : public ::google::protobuf::Message /* @@protoc_inser
   ::kvrpcpb::Context* context_;
   ::google::protobuf::uint32 each_limit_;
   bool key_only_;
+  bool reverse_;
   mutable int _cached_size_;
   friend struct ::protobuf_kvrpcpb_2eproto::TableStruct;
   friend void ::protobuf_kvrpcpb_2eproto::InitDefaultsRawBatchScanRequestImpl();
@@ -8798,6 +8854,217 @@ class UnsafeDestroyRangeResponse : public ::google::protobuf::Message /* @@proto
   friend struct ::protobuf_kvrpcpb_2eproto::TableStruct;
   friend void ::protobuf_kvrpcpb_2eproto::InitDefaultsUnsafeDestroyRangeResponseImpl();
 };
+// -------------------------------------------------------------------
+
+class ReadIndexRequest : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:kvrpcpb.ReadIndexRequest) */ {
+ public:
+  ReadIndexRequest();
+  virtual ~ReadIndexRequest();
+
+  ReadIndexRequest(const ReadIndexRequest& from);
+
+  inline ReadIndexRequest& operator=(const ReadIndexRequest& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  #if LANG_CXX11
+  ReadIndexRequest(ReadIndexRequest&& from) noexcept
+    : ReadIndexRequest() {
+    *this = ::std::move(from);
+  }
+
+  inline ReadIndexRequest& operator=(ReadIndexRequest&& from) noexcept {
+    if (GetArenaNoVirtual() == from.GetArenaNoVirtual()) {
+      if (this != &from) InternalSwap(&from);
+    } else {
+      CopyFrom(from);
+    }
+    return *this;
+  }
+  #endif
+  static const ::google::protobuf::Descriptor* descriptor();
+  static const ReadIndexRequest& default_instance();
+
+  static void InitAsDefaultInstance();  // FOR INTERNAL USE ONLY
+  static inline const ReadIndexRequest* internal_default_instance() {
+    return reinterpret_cast<const ReadIndexRequest*>(
+               &_ReadIndexRequest_default_instance_);
+  }
+  static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
+    66;
+
+  void Swap(ReadIndexRequest* other);
+  friend void swap(ReadIndexRequest& a, ReadIndexRequest& b) {
+    a.Swap(&b);
+  }
+
+  // implements Message ----------------------------------------------
+
+  inline ReadIndexRequest* New() const PROTOBUF_FINAL { return New(NULL); }
+
+  ReadIndexRequest* New(::google::protobuf::Arena* arena) const PROTOBUF_FINAL;
+  void CopyFrom(const ::google::protobuf::Message& from) PROTOBUF_FINAL;
+  void MergeFrom(const ::google::protobuf::Message& from) PROTOBUF_FINAL;
+  void CopyFrom(const ReadIndexRequest& from);
+  void MergeFrom(const ReadIndexRequest& from);
+  void Clear() PROTOBUF_FINAL;
+  bool IsInitialized() const PROTOBUF_FINAL;
+
+  size_t ByteSizeLong() const PROTOBUF_FINAL;
+  bool MergePartialFromCodedStream(
+      ::google::protobuf::io::CodedInputStream* input) PROTOBUF_FINAL;
+  void SerializeWithCachedSizes(
+      ::google::protobuf::io::CodedOutputStream* output) const PROTOBUF_FINAL;
+  ::google::protobuf::uint8* InternalSerializeWithCachedSizesToArray(
+      bool deterministic, ::google::protobuf::uint8* target) const PROTOBUF_FINAL;
+  int GetCachedSize() const PROTOBUF_FINAL { return _cached_size_; }
+  private:
+  void SharedCtor();
+  void SharedDtor();
+  void SetCachedSize(int size) const PROTOBUF_FINAL;
+  void InternalSwap(ReadIndexRequest* other);
+  private:
+  inline ::google::protobuf::Arena* GetArenaNoVirtual() const {
+    return NULL;
+  }
+  inline void* MaybeArenaPtr() const {
+    return NULL;
+  }
+  public:
+
+  ::google::protobuf::Metadata GetMetadata() const PROTOBUF_FINAL;
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  // .kvrpcpb.Context context = 1;
+  bool has_context() const;
+  void clear_context();
+  static const int kContextFieldNumber = 1;
+  const ::kvrpcpb::Context& context() const;
+  ::kvrpcpb::Context* release_context();
+  ::kvrpcpb::Context* mutable_context();
+  void set_allocated_context(::kvrpcpb::Context* context);
+
+  // @@protoc_insertion_point(class_scope:kvrpcpb.ReadIndexRequest)
+ private:
+
+  ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
+  ::kvrpcpb::Context* context_;
+  mutable int _cached_size_;
+  friend struct ::protobuf_kvrpcpb_2eproto::TableStruct;
+  friend void ::protobuf_kvrpcpb_2eproto::InitDefaultsReadIndexRequestImpl();
+};
+// -------------------------------------------------------------------
+
+class ReadIndexResponse : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:kvrpcpb.ReadIndexResponse) */ {
+ public:
+  ReadIndexResponse();
+  virtual ~ReadIndexResponse();
+
+  ReadIndexResponse(const ReadIndexResponse& from);
+
+  inline ReadIndexResponse& operator=(const ReadIndexResponse& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  #if LANG_CXX11
+  ReadIndexResponse(ReadIndexResponse&& from) noexcept
+    : ReadIndexResponse() {
+    *this = ::std::move(from);
+  }
+
+  inline ReadIndexResponse& operator=(ReadIndexResponse&& from) noexcept {
+    if (GetArenaNoVirtual() == from.GetArenaNoVirtual()) {
+      if (this != &from) InternalSwap(&from);
+    } else {
+      CopyFrom(from);
+    }
+    return *this;
+  }
+  #endif
+  static const ::google::protobuf::Descriptor* descriptor();
+  static const ReadIndexResponse& default_instance();
+
+  static void InitAsDefaultInstance();  // FOR INTERNAL USE ONLY
+  static inline const ReadIndexResponse* internal_default_instance() {
+    return reinterpret_cast<const ReadIndexResponse*>(
+               &_ReadIndexResponse_default_instance_);
+  }
+  static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
+    67;
+
+  void Swap(ReadIndexResponse* other);
+  friend void swap(ReadIndexResponse& a, ReadIndexResponse& b) {
+    a.Swap(&b);
+  }
+
+  // implements Message ----------------------------------------------
+
+  inline ReadIndexResponse* New() const PROTOBUF_FINAL { return New(NULL); }
+
+  ReadIndexResponse* New(::google::protobuf::Arena* arena) const PROTOBUF_FINAL;
+  void CopyFrom(const ::google::protobuf::Message& from) PROTOBUF_FINAL;
+  void MergeFrom(const ::google::protobuf::Message& from) PROTOBUF_FINAL;
+  void CopyFrom(const ReadIndexResponse& from);
+  void MergeFrom(const ReadIndexResponse& from);
+  void Clear() PROTOBUF_FINAL;
+  bool IsInitialized() const PROTOBUF_FINAL;
+
+  size_t ByteSizeLong() const PROTOBUF_FINAL;
+  bool MergePartialFromCodedStream(
+      ::google::protobuf::io::CodedInputStream* input) PROTOBUF_FINAL;
+  void SerializeWithCachedSizes(
+      ::google::protobuf::io::CodedOutputStream* output) const PROTOBUF_FINAL;
+  ::google::protobuf::uint8* InternalSerializeWithCachedSizesToArray(
+      bool deterministic, ::google::protobuf::uint8* target) const PROTOBUF_FINAL;
+  int GetCachedSize() const PROTOBUF_FINAL { return _cached_size_; }
+  private:
+  void SharedCtor();
+  void SharedDtor();
+  void SetCachedSize(int size) const PROTOBUF_FINAL;
+  void InternalSwap(ReadIndexResponse* other);
+  private:
+  inline ::google::protobuf::Arena* GetArenaNoVirtual() const {
+    return NULL;
+  }
+  inline void* MaybeArenaPtr() const {
+    return NULL;
+  }
+  public:
+
+  ::google::protobuf::Metadata GetMetadata() const PROTOBUF_FINAL;
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  // .errorpb.Error region_error = 1;
+  bool has_region_error() const;
+  void clear_region_error();
+  static const int kRegionErrorFieldNumber = 1;
+  const ::errorpb::Error& region_error() const;
+  ::errorpb::Error* release_region_error();
+  ::errorpb::Error* mutable_region_error();
+  void set_allocated_region_error(::errorpb::Error* region_error);
+
+  // uint64 read_index = 2;
+  void clear_read_index();
+  static const int kReadIndexFieldNumber = 2;
+  ::google::protobuf::uint64 read_index() const;
+  void set_read_index(::google::protobuf::uint64 value);
+
+  // @@protoc_insertion_point(class_scope:kvrpcpb.ReadIndexResponse)
+ private:
+
+  ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
+  ::errorpb::Error* region_error_;
+  ::google::protobuf::uint64 read_index_;
+  mutable int _cached_size_;
+  friend struct ::protobuf_kvrpcpb_2eproto::TableStruct;
+  friend void ::protobuf_kvrpcpb_2eproto::InitDefaultsReadIndexResponseImpl();
+};
 // ===================================================================
 
 
@@ -10250,6 +10517,59 @@ inline void ScanRequest::set_reverse(bool value) {
   
   reverse_ = value;
   // @@protoc_insertion_point(field_set:kvrpcpb.ScanRequest.reverse)
+}
+
+// bytes end_key = 7;
+inline void ScanRequest::clear_end_key() {
+  end_key_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline const ::std::string& ScanRequest::end_key() const {
+  // @@protoc_insertion_point(field_get:kvrpcpb.ScanRequest.end_key)
+  return end_key_.GetNoArena();
+}
+inline void ScanRequest::set_end_key(const ::std::string& value) {
+  
+  end_key_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
+  // @@protoc_insertion_point(field_set:kvrpcpb.ScanRequest.end_key)
+}
+#if LANG_CXX11
+inline void ScanRequest::set_end_key(::std::string&& value) {
+  
+  end_key_.SetNoArena(
+    &::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
+  // @@protoc_insertion_point(field_set_rvalue:kvrpcpb.ScanRequest.end_key)
+}
+#endif
+inline void ScanRequest::set_end_key(const char* value) {
+  GOOGLE_DCHECK(value != NULL);
+  
+  end_key_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
+  // @@protoc_insertion_point(field_set_char:kvrpcpb.ScanRequest.end_key)
+}
+inline void ScanRequest::set_end_key(const void* value, size_t size) {
+  
+  end_key_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+      ::std::string(reinterpret_cast<const char*>(value), size));
+  // @@protoc_insertion_point(field_set_pointer:kvrpcpb.ScanRequest.end_key)
+}
+inline ::std::string* ScanRequest::mutable_end_key() {
+  
+  // @@protoc_insertion_point(field_mutable:kvrpcpb.ScanRequest.end_key)
+  return end_key_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline ::std::string* ScanRequest::release_end_key() {
+  // @@protoc_insertion_point(field_release:kvrpcpb.ScanRequest.end_key)
+  
+  return end_key_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline void ScanRequest::set_allocated_end_key(::std::string* end_key) {
+  if (end_key != NULL) {
+    
+  } else {
+    
+  }
+  end_key_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), end_key);
+  // @@protoc_insertion_point(field_set_allocated:kvrpcpb.ScanRequest.end_key)
 }
 
 // -------------------------------------------------------------------
@@ -15044,6 +15364,73 @@ inline void RawScanRequest::set_allocated_cf(::std::string* cf) {
   // @@protoc_insertion_point(field_set_allocated:kvrpcpb.RawScanRequest.cf)
 }
 
+// bool reverse = 6;
+inline void RawScanRequest::clear_reverse() {
+  reverse_ = false;
+}
+inline bool RawScanRequest::reverse() const {
+  // @@protoc_insertion_point(field_get:kvrpcpb.RawScanRequest.reverse)
+  return reverse_;
+}
+inline void RawScanRequest::set_reverse(bool value) {
+  
+  reverse_ = value;
+  // @@protoc_insertion_point(field_set:kvrpcpb.RawScanRequest.reverse)
+}
+
+// bytes end_key = 7;
+inline void RawScanRequest::clear_end_key() {
+  end_key_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline const ::std::string& RawScanRequest::end_key() const {
+  // @@protoc_insertion_point(field_get:kvrpcpb.RawScanRequest.end_key)
+  return end_key_.GetNoArena();
+}
+inline void RawScanRequest::set_end_key(const ::std::string& value) {
+  
+  end_key_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
+  // @@protoc_insertion_point(field_set:kvrpcpb.RawScanRequest.end_key)
+}
+#if LANG_CXX11
+inline void RawScanRequest::set_end_key(::std::string&& value) {
+  
+  end_key_.SetNoArena(
+    &::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
+  // @@protoc_insertion_point(field_set_rvalue:kvrpcpb.RawScanRequest.end_key)
+}
+#endif
+inline void RawScanRequest::set_end_key(const char* value) {
+  GOOGLE_DCHECK(value != NULL);
+  
+  end_key_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
+  // @@protoc_insertion_point(field_set_char:kvrpcpb.RawScanRequest.end_key)
+}
+inline void RawScanRequest::set_end_key(const void* value, size_t size) {
+  
+  end_key_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+      ::std::string(reinterpret_cast<const char*>(value), size));
+  // @@protoc_insertion_point(field_set_pointer:kvrpcpb.RawScanRequest.end_key)
+}
+inline ::std::string* RawScanRequest::mutable_end_key() {
+  
+  // @@protoc_insertion_point(field_mutable:kvrpcpb.RawScanRequest.end_key)
+  return end_key_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline ::std::string* RawScanRequest::release_end_key() {
+  // @@protoc_insertion_point(field_release:kvrpcpb.RawScanRequest.end_key)
+  
+  return end_key_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline void RawScanRequest::set_allocated_end_key(::std::string* end_key) {
+  if (end_key != NULL) {
+    
+  } else {
+    
+  }
+  end_key_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), end_key);
+  // @@protoc_insertion_point(field_set_allocated:kvrpcpb.RawScanRequest.end_key)
+}
+
 // -------------------------------------------------------------------
 
 // RawScanResponse
@@ -15395,6 +15782,20 @@ inline void RawBatchScanRequest::set_allocated_cf(::std::string* cf) {
   }
   cf_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), cf);
   // @@protoc_insertion_point(field_set_allocated:kvrpcpb.RawBatchScanRequest.cf)
+}
+
+// bool reverse = 6;
+inline void RawBatchScanRequest::clear_reverse() {
+  reverse_ = false;
+}
+inline bool RawBatchScanRequest::reverse() const {
+  // @@protoc_insertion_point(field_get:kvrpcpb.RawBatchScanRequest.reverse)
+  return reverse_;
+}
+inline void RawBatchScanRequest::set_reverse(bool value) {
+  
+  reverse_ = value;
+  // @@protoc_insertion_point(field_set:kvrpcpb.RawBatchScanRequest.reverse)
 }
 
 // -------------------------------------------------------------------
@@ -16931,9 +17332,129 @@ inline void UnsafeDestroyRangeResponse::set_allocated_error(::std::string* error
   // @@protoc_insertion_point(field_set_allocated:kvrpcpb.UnsafeDestroyRangeResponse.error)
 }
 
+// -------------------------------------------------------------------
+
+// ReadIndexRequest
+
+// .kvrpcpb.Context context = 1;
+inline bool ReadIndexRequest::has_context() const {
+  return this != internal_default_instance() && context_ != NULL;
+}
+inline void ReadIndexRequest::clear_context() {
+  if (GetArenaNoVirtual() == NULL && context_ != NULL) {
+    delete context_;
+  }
+  context_ = NULL;
+}
+inline const ::kvrpcpb::Context& ReadIndexRequest::context() const {
+  const ::kvrpcpb::Context* p = context_;
+  // @@protoc_insertion_point(field_get:kvrpcpb.ReadIndexRequest.context)
+  return p != NULL ? *p : *reinterpret_cast<const ::kvrpcpb::Context*>(
+      &::kvrpcpb::_Context_default_instance_);
+}
+inline ::kvrpcpb::Context* ReadIndexRequest::release_context() {
+  // @@protoc_insertion_point(field_release:kvrpcpb.ReadIndexRequest.context)
+  
+  ::kvrpcpb::Context* temp = context_;
+  context_ = NULL;
+  return temp;
+}
+inline ::kvrpcpb::Context* ReadIndexRequest::mutable_context() {
+  
+  if (context_ == NULL) {
+    context_ = new ::kvrpcpb::Context;
+  }
+  // @@protoc_insertion_point(field_mutable:kvrpcpb.ReadIndexRequest.context)
+  return context_;
+}
+inline void ReadIndexRequest::set_allocated_context(::kvrpcpb::Context* context) {
+  ::google::protobuf::Arena* message_arena = GetArenaNoVirtual();
+  if (message_arena == NULL) {
+    delete context_;
+  }
+  if (context) {
+    ::google::protobuf::Arena* submessage_arena = NULL;
+    if (message_arena != submessage_arena) {
+      context = ::google::protobuf::internal::GetOwnedMessage(
+          message_arena, context, submessage_arena);
+    }
+    
+  } else {
+    
+  }
+  context_ = context;
+  // @@protoc_insertion_point(field_set_allocated:kvrpcpb.ReadIndexRequest.context)
+}
+
+// -------------------------------------------------------------------
+
+// ReadIndexResponse
+
+// .errorpb.Error region_error = 1;
+inline bool ReadIndexResponse::has_region_error() const {
+  return this != internal_default_instance() && region_error_ != NULL;
+}
+inline const ::errorpb::Error& ReadIndexResponse::region_error() const {
+  const ::errorpb::Error* p = region_error_;
+  // @@protoc_insertion_point(field_get:kvrpcpb.ReadIndexResponse.region_error)
+  return p != NULL ? *p : *reinterpret_cast<const ::errorpb::Error*>(
+      &::errorpb::_Error_default_instance_);
+}
+inline ::errorpb::Error* ReadIndexResponse::release_region_error() {
+  // @@protoc_insertion_point(field_release:kvrpcpb.ReadIndexResponse.region_error)
+  
+  ::errorpb::Error* temp = region_error_;
+  region_error_ = NULL;
+  return temp;
+}
+inline ::errorpb::Error* ReadIndexResponse::mutable_region_error() {
+  
+  if (region_error_ == NULL) {
+    region_error_ = new ::errorpb::Error;
+  }
+  // @@protoc_insertion_point(field_mutable:kvrpcpb.ReadIndexResponse.region_error)
+  return region_error_;
+}
+inline void ReadIndexResponse::set_allocated_region_error(::errorpb::Error* region_error) {
+  ::google::protobuf::Arena* message_arena = GetArenaNoVirtual();
+  if (message_arena == NULL) {
+    delete reinterpret_cast< ::google::protobuf::MessageLite*>(region_error_);
+  }
+  if (region_error) {
+    ::google::protobuf::Arena* submessage_arena = NULL;
+    if (message_arena != submessage_arena) {
+      region_error = ::google::protobuf::internal::GetOwnedMessage(
+          message_arena, region_error, submessage_arena);
+    }
+    
+  } else {
+    
+  }
+  region_error_ = region_error;
+  // @@protoc_insertion_point(field_set_allocated:kvrpcpb.ReadIndexResponse.region_error)
+}
+
+// uint64 read_index = 2;
+inline void ReadIndexResponse::clear_read_index() {
+  read_index_ = GOOGLE_ULONGLONG(0);
+}
+inline ::google::protobuf::uint64 ReadIndexResponse::read_index() const {
+  // @@protoc_insertion_point(field_get:kvrpcpb.ReadIndexResponse.read_index)
+  return read_index_;
+}
+inline void ReadIndexResponse::set_read_index(::google::protobuf::uint64 value) {
+  
+  read_index_ = value;
+  // @@protoc_insertion_point(field_set:kvrpcpb.ReadIndexResponse.read_index)
+}
+
 #ifdef __GNUC__
   #pragma GCC diagnostic pop
 #endif  // __GNUC__
+// -------------------------------------------------------------------
+
+// -------------------------------------------------------------------
+
 // -------------------------------------------------------------------
 
 // -------------------------------------------------------------------

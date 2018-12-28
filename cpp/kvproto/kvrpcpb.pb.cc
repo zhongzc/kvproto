@@ -350,6 +350,16 @@ class UnsafeDestroyRangeResponseDefaultTypeInternal {
   ::google::protobuf::internal::ExplicitlyConstructed<UnsafeDestroyRangeResponse>
       _instance;
 } _UnsafeDestroyRangeResponse_default_instance_;
+class ReadIndexRequestDefaultTypeInternal {
+ public:
+  ::google::protobuf::internal::ExplicitlyConstructed<ReadIndexRequest>
+      _instance;
+} _ReadIndexRequest_default_instance_;
+class ReadIndexResponseDefaultTypeInternal {
+ public:
+  ::google::protobuf::internal::ExplicitlyConstructed<ReadIndexResponse>
+      _instance;
+} _ReadIndexResponse_default_instance_;
 }  // namespace kvrpcpb
 namespace protobuf_kvrpcpb_2eproto {
 void InitDefaultsLockInfoImpl() {
@@ -1820,7 +1830,51 @@ void InitDefaultsUnsafeDestroyRangeResponse() {
   ::google::protobuf::GoogleOnceInit(&once, &InitDefaultsUnsafeDestroyRangeResponseImpl);
 }
 
-::google::protobuf::Metadata file_level_metadata[66];
+void InitDefaultsReadIndexRequestImpl() {
+  GOOGLE_PROTOBUF_VERIFY_VERSION;
+
+#ifdef GOOGLE_PROTOBUF_ENFORCE_UNIQUENESS
+  ::google::protobuf::internal::InitProtobufDefaultsForceUnique();
+#else
+  ::google::protobuf::internal::InitProtobufDefaults();
+#endif  // GOOGLE_PROTOBUF_ENFORCE_UNIQUENESS
+  protobuf_kvrpcpb_2eproto::InitDefaultsContext();
+  {
+    void* ptr = &::kvrpcpb::_ReadIndexRequest_default_instance_;
+    new (ptr) ::kvrpcpb::ReadIndexRequest();
+    ::google::protobuf::internal::OnShutdownDestroyMessage(ptr);
+  }
+  ::kvrpcpb::ReadIndexRequest::InitAsDefaultInstance();
+}
+
+void InitDefaultsReadIndexRequest() {
+  static GOOGLE_PROTOBUF_DECLARE_ONCE(once);
+  ::google::protobuf::GoogleOnceInit(&once, &InitDefaultsReadIndexRequestImpl);
+}
+
+void InitDefaultsReadIndexResponseImpl() {
+  GOOGLE_PROTOBUF_VERIFY_VERSION;
+
+#ifdef GOOGLE_PROTOBUF_ENFORCE_UNIQUENESS
+  ::google::protobuf::internal::InitProtobufDefaultsForceUnique();
+#else
+  ::google::protobuf::internal::InitProtobufDefaults();
+#endif  // GOOGLE_PROTOBUF_ENFORCE_UNIQUENESS
+  protobuf_errorpb_2eproto::InitDefaultsError();
+  {
+    void* ptr = &::kvrpcpb::_ReadIndexResponse_default_instance_;
+    new (ptr) ::kvrpcpb::ReadIndexResponse();
+    ::google::protobuf::internal::OnShutdownDestroyMessage(ptr);
+  }
+  ::kvrpcpb::ReadIndexResponse::InitAsDefaultInstance();
+}
+
+void InitDefaultsReadIndexResponse() {
+  static GOOGLE_PROTOBUF_DECLARE_ONCE(once);
+  ::google::protobuf::GoogleOnceInit(&once, &InitDefaultsReadIndexResponseImpl);
+}
+
+::google::protobuf::Metadata file_level_metadata[68];
 const ::google::protobuf::EnumDescriptor* file_level_enum_descriptors[3];
 
 const ::google::protobuf::uint32 TableStruct::offsets[] GOOGLE_PROTOBUF_ATTRIBUTE_SECTION_VARIABLE(protodesc_cold) = {
@@ -1922,6 +1976,7 @@ const ::google::protobuf::uint32 TableStruct::offsets[] GOOGLE_PROTOBUF_ATTRIBUT
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::kvrpcpb::ScanRequest, version_),
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::kvrpcpb::ScanRequest, key_only_),
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::kvrpcpb::ScanRequest, reverse_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::kvrpcpb::ScanRequest, end_key_),
   ~0u,  // no _has_bits_
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::kvrpcpb::KvPair, _internal_metadata_),
   ~0u,  // no _extensions_
@@ -2226,6 +2281,8 @@ const ::google::protobuf::uint32 TableStruct::offsets[] GOOGLE_PROTOBUF_ATTRIBUT
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::kvrpcpb::RawScanRequest, limit_),
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::kvrpcpb::RawScanRequest, key_only_),
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::kvrpcpb::RawScanRequest, cf_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::kvrpcpb::RawScanRequest, reverse_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::kvrpcpb::RawScanRequest, end_key_),
   ~0u,  // no _has_bits_
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::kvrpcpb::RawScanResponse, _internal_metadata_),
   ~0u,  // no _extensions_
@@ -2250,6 +2307,7 @@ const ::google::protobuf::uint32 TableStruct::offsets[] GOOGLE_PROTOBUF_ATTRIBUT
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::kvrpcpb::RawBatchScanRequest, each_limit_),
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::kvrpcpb::RawBatchScanRequest, key_only_),
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::kvrpcpb::RawBatchScanRequest, cf_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::kvrpcpb::RawBatchScanRequest, reverse_),
   ~0u,  // no _has_bits_
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::kvrpcpb::RawBatchScanResponse, _internal_metadata_),
   ~0u,  // no _extensions_
@@ -2351,6 +2409,19 @@ const ::google::protobuf::uint32 TableStruct::offsets[] GOOGLE_PROTOBUF_ATTRIBUT
   ~0u,  // no _weak_field_map_
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::kvrpcpb::UnsafeDestroyRangeResponse, region_error_),
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::kvrpcpb::UnsafeDestroyRangeResponse, error_),
+  ~0u,  // no _has_bits_
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::kvrpcpb::ReadIndexRequest, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::kvrpcpb::ReadIndexRequest, context_),
+  ~0u,  // no _has_bits_
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::kvrpcpb::ReadIndexResponse, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::kvrpcpb::ReadIndexResponse, region_error_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::kvrpcpb::ReadIndexResponse, read_index_),
 };
 static const ::google::protobuf::internal::MigrationSchema schemas[] GOOGLE_PROTOBUF_ATTRIBUTE_SECTION_VARIABLE(protodesc_cold) = {
   { 0, -1, sizeof(::kvrpcpb::LockInfo)},
@@ -2364,61 +2435,63 @@ static const ::google::protobuf::internal::MigrationSchema schemas[] GOOGLE_PROT
   { 71, -1, sizeof(::kvrpcpb::GetRequest)},
   { 79, -1, sizeof(::kvrpcpb::GetResponse)},
   { 87, -1, sizeof(::kvrpcpb::ScanRequest)},
-  { 98, -1, sizeof(::kvrpcpb::KvPair)},
-  { 106, -1, sizeof(::kvrpcpb::ScanResponse)},
-  { 113, -1, sizeof(::kvrpcpb::Mutation)},
-  { 121, -1, sizeof(::kvrpcpb::PrewriteRequest)},
-  { 132, -1, sizeof(::kvrpcpb::PrewriteResponse)},
-  { 139, -1, sizeof(::kvrpcpb::CommitRequest)},
-  { 148, -1, sizeof(::kvrpcpb::CommitResponse)},
-  { 155, -1, sizeof(::kvrpcpb::ImportRequest)},
-  { 162, -1, sizeof(::kvrpcpb::ImportResponse)},
-  { 169, -1, sizeof(::kvrpcpb::BatchRollbackRequest)},
-  { 177, -1, sizeof(::kvrpcpb::BatchRollbackResponse)},
-  { 184, -1, sizeof(::kvrpcpb::CleanupRequest)},
-  { 192, -1, sizeof(::kvrpcpb::CleanupResponse)},
-  { 200, -1, sizeof(::kvrpcpb::BatchGetRequest)},
-  { 208, -1, sizeof(::kvrpcpb::BatchGetResponse)},
-  { 215, -1, sizeof(::kvrpcpb::ScanLockRequest)},
-  { 224, -1, sizeof(::kvrpcpb::ScanLockResponse)},
-  { 232, -1, sizeof(::kvrpcpb::TxnInfo)},
-  { 239, -1, sizeof(::kvrpcpb::ResolveLockRequest)},
-  { 248, -1, sizeof(::kvrpcpb::ResolveLockResponse)},
-  { 255, -1, sizeof(::kvrpcpb::GCRequest)},
-  { 262, -1, sizeof(::kvrpcpb::GCResponse)},
-  { 269, -1, sizeof(::kvrpcpb::RawGetRequest)},
-  { 277, -1, sizeof(::kvrpcpb::RawGetResponse)},
-  { 285, -1, sizeof(::kvrpcpb::RawPutRequest)},
-  { 294, -1, sizeof(::kvrpcpb::RawPutResponse)},
-  { 301, -1, sizeof(::kvrpcpb::RawBatchPutRequest)},
-  { 309, -1, sizeof(::kvrpcpb::RawBatchPutResponse)},
-  { 316, -1, sizeof(::kvrpcpb::RawBatchGetRequest)},
-  { 324, -1, sizeof(::kvrpcpb::RawBatchGetResponse)},
-  { 331, -1, sizeof(::kvrpcpb::RawDeleteRequest)},
-  { 339, -1, sizeof(::kvrpcpb::RawDeleteResponse)},
-  { 346, -1, sizeof(::kvrpcpb::RawBatchDeleteRequest)},
-  { 354, -1, sizeof(::kvrpcpb::RawBatchDeleteResponse)},
-  { 361, -1, sizeof(::kvrpcpb::DeleteRangeRequest)},
-  { 369, -1, sizeof(::kvrpcpb::DeleteRangeResponse)},
-  { 376, -1, sizeof(::kvrpcpb::RawDeleteRangeRequest)},
-  { 385, -1, sizeof(::kvrpcpb::RawDeleteRangeResponse)},
-  { 392, -1, sizeof(::kvrpcpb::RawScanRequest)},
-  { 402, -1, sizeof(::kvrpcpb::RawScanResponse)},
-  { 409, -1, sizeof(::kvrpcpb::KeyRange)},
-  { 416, -1, sizeof(::kvrpcpb::RawBatchScanRequest)},
-  { 426, -1, sizeof(::kvrpcpb::RawBatchScanResponse)},
-  { 433, -1, sizeof(::kvrpcpb::MvccWrite)},
-  { 442, -1, sizeof(::kvrpcpb::MvccValue)},
-  { 449, -1, sizeof(::kvrpcpb::MvccLock)},
-  { 458, -1, sizeof(::kvrpcpb::MvccInfo)},
-  { 466, -1, sizeof(::kvrpcpb::MvccGetByKeyRequest)},
-  { 473, -1, sizeof(::kvrpcpb::MvccGetByKeyResponse)},
-  { 481, -1, sizeof(::kvrpcpb::MvccGetByStartTsRequest)},
-  { 488, -1, sizeof(::kvrpcpb::MvccGetByStartTsResponse)},
-  { 497, -1, sizeof(::kvrpcpb::SplitRegionRequest)},
-  { 504, -1, sizeof(::kvrpcpb::SplitRegionResponse)},
-  { 512, -1, sizeof(::kvrpcpb::UnsafeDestroyRangeRequest)},
-  { 520, -1, sizeof(::kvrpcpb::UnsafeDestroyRangeResponse)},
+  { 99, -1, sizeof(::kvrpcpb::KvPair)},
+  { 107, -1, sizeof(::kvrpcpb::ScanResponse)},
+  { 114, -1, sizeof(::kvrpcpb::Mutation)},
+  { 122, -1, sizeof(::kvrpcpb::PrewriteRequest)},
+  { 133, -1, sizeof(::kvrpcpb::PrewriteResponse)},
+  { 140, -1, sizeof(::kvrpcpb::CommitRequest)},
+  { 149, -1, sizeof(::kvrpcpb::CommitResponse)},
+  { 156, -1, sizeof(::kvrpcpb::ImportRequest)},
+  { 163, -1, sizeof(::kvrpcpb::ImportResponse)},
+  { 170, -1, sizeof(::kvrpcpb::BatchRollbackRequest)},
+  { 178, -1, sizeof(::kvrpcpb::BatchRollbackResponse)},
+  { 185, -1, sizeof(::kvrpcpb::CleanupRequest)},
+  { 193, -1, sizeof(::kvrpcpb::CleanupResponse)},
+  { 201, -1, sizeof(::kvrpcpb::BatchGetRequest)},
+  { 209, -1, sizeof(::kvrpcpb::BatchGetResponse)},
+  { 216, -1, sizeof(::kvrpcpb::ScanLockRequest)},
+  { 225, -1, sizeof(::kvrpcpb::ScanLockResponse)},
+  { 233, -1, sizeof(::kvrpcpb::TxnInfo)},
+  { 240, -1, sizeof(::kvrpcpb::ResolveLockRequest)},
+  { 249, -1, sizeof(::kvrpcpb::ResolveLockResponse)},
+  { 256, -1, sizeof(::kvrpcpb::GCRequest)},
+  { 263, -1, sizeof(::kvrpcpb::GCResponse)},
+  { 270, -1, sizeof(::kvrpcpb::RawGetRequest)},
+  { 278, -1, sizeof(::kvrpcpb::RawGetResponse)},
+  { 286, -1, sizeof(::kvrpcpb::RawPutRequest)},
+  { 295, -1, sizeof(::kvrpcpb::RawPutResponse)},
+  { 302, -1, sizeof(::kvrpcpb::RawBatchPutRequest)},
+  { 310, -1, sizeof(::kvrpcpb::RawBatchPutResponse)},
+  { 317, -1, sizeof(::kvrpcpb::RawBatchGetRequest)},
+  { 325, -1, sizeof(::kvrpcpb::RawBatchGetResponse)},
+  { 332, -1, sizeof(::kvrpcpb::RawDeleteRequest)},
+  { 340, -1, sizeof(::kvrpcpb::RawDeleteResponse)},
+  { 347, -1, sizeof(::kvrpcpb::RawBatchDeleteRequest)},
+  { 355, -1, sizeof(::kvrpcpb::RawBatchDeleteResponse)},
+  { 362, -1, sizeof(::kvrpcpb::DeleteRangeRequest)},
+  { 370, -1, sizeof(::kvrpcpb::DeleteRangeResponse)},
+  { 377, -1, sizeof(::kvrpcpb::RawDeleteRangeRequest)},
+  { 386, -1, sizeof(::kvrpcpb::RawDeleteRangeResponse)},
+  { 393, -1, sizeof(::kvrpcpb::RawScanRequest)},
+  { 405, -1, sizeof(::kvrpcpb::RawScanResponse)},
+  { 412, -1, sizeof(::kvrpcpb::KeyRange)},
+  { 419, -1, sizeof(::kvrpcpb::RawBatchScanRequest)},
+  { 430, -1, sizeof(::kvrpcpb::RawBatchScanResponse)},
+  { 437, -1, sizeof(::kvrpcpb::MvccWrite)},
+  { 446, -1, sizeof(::kvrpcpb::MvccValue)},
+  { 453, -1, sizeof(::kvrpcpb::MvccLock)},
+  { 462, -1, sizeof(::kvrpcpb::MvccInfo)},
+  { 470, -1, sizeof(::kvrpcpb::MvccGetByKeyRequest)},
+  { 477, -1, sizeof(::kvrpcpb::MvccGetByKeyResponse)},
+  { 485, -1, sizeof(::kvrpcpb::MvccGetByStartTsRequest)},
+  { 492, -1, sizeof(::kvrpcpb::MvccGetByStartTsResponse)},
+  { 501, -1, sizeof(::kvrpcpb::SplitRegionRequest)},
+  { 508, -1, sizeof(::kvrpcpb::SplitRegionResponse)},
+  { 516, -1, sizeof(::kvrpcpb::UnsafeDestroyRangeRequest)},
+  { 524, -1, sizeof(::kvrpcpb::UnsafeDestroyRangeResponse)},
+  { 531, -1, sizeof(::kvrpcpb::ReadIndexRequest)},
+  { 537, -1, sizeof(::kvrpcpb::ReadIndexResponse)},
 };
 
 static ::google::protobuf::Message const * const file_default_instances[] = {
@@ -2488,6 +2561,8 @@ static ::google::protobuf::Message const * const file_default_instances[] = {
   reinterpret_cast<const ::google::protobuf::Message*>(&::kvrpcpb::_SplitRegionResponse_default_instance_),
   reinterpret_cast<const ::google::protobuf::Message*>(&::kvrpcpb::_UnsafeDestroyRangeRequest_default_instance_),
   reinterpret_cast<const ::google::protobuf::Message*>(&::kvrpcpb::_UnsafeDestroyRangeResponse_default_instance_),
+  reinterpret_cast<const ::google::protobuf::Message*>(&::kvrpcpb::_ReadIndexRequest_default_instance_),
+  reinterpret_cast<const ::google::protobuf::Message*>(&::kvrpcpb::_ReadIndexResponse_default_instance_),
 };
 
 void protobuf_AssignDescriptors() {
@@ -2506,7 +2581,7 @@ void protobuf_AssignDescriptorsOnce() {
 void protobuf_RegisterTypes(const ::std::string&) GOOGLE_PROTOBUF_ATTRIBUTE_COLD;
 void protobuf_RegisterTypes(const ::std::string&) {
   protobuf_AssignDescriptorsOnce();
-  ::google::protobuf::internal::RegisterAllTypes(file_level_metadata, 66);
+  ::google::protobuf::internal::RegisterAllTypes(file_level_metadata, 68);
 }
 
 void AddDescriptorsImpl() {
@@ -2540,145 +2615,149 @@ void AddDescriptorsImpl() {
       ".kvrpcpb.Context\022\013\n\003key\030\002 \001(\014\022\017\n\007version"
       "\030\003 \001(\004\"d\n\013GetResponse\022$\n\014region_error\030\001 "
       "\001(\0132\016.errorpb.Error\022 \n\005error\030\002 \001(\0132\021.kvr"
-      "pcpb.KeyError\022\r\n\005value\030\003 \001(\014\"\206\001\n\013ScanReq"
+      "pcpb.KeyError\022\r\n\005value\030\003 \001(\014\"\227\001\n\013ScanReq"
       "uest\022!\n\007context\030\001 \001(\0132\020.kvrpcpb.Context\022"
       "\021\n\tstart_key\030\002 \001(\014\022\r\n\005limit\030\003 \001(\r\022\017\n\007ver"
       "sion\030\004 \001(\004\022\020\n\010key_only\030\005 \001(\010\022\017\n\007reverse\030"
-      "\006 \001(\010\"F\n\006KvPair\022 \n\005error\030\001 \001(\0132\021.kvrpcpb"
-      ".KeyError\022\013\n\003key\030\002 \001(\014\022\r\n\005value\030\003 \001(\014\"T\n"
-      "\014ScanResponse\022$\n\014region_error\030\001 \001(\0132\016.er"
-      "rorpb.Error\022\036\n\005pairs\030\002 \003(\0132\017.kvrpcpb.KvP"
-      "air\"\?\n\010Mutation\022\027\n\002op\030\001 \001(\0162\013.kvrpcpb.Op"
-      "\022\013\n\003key\030\002 \001(\014\022\r\n\005value\030\003 \001(\014\"\270\001\n\017Prewrit"
-      "eRequest\022!\n\007context\030\001 \001(\0132\020.kvrpcpb.Cont"
-      "ext\022$\n\tmutations\030\002 \003(\0132\021.kvrpcpb.Mutatio"
-      "n\022\024\n\014primary_lock\030\003 \001(\014\022\025\n\rstart_version"
-      "\030\004 \001(\004\022\020\n\010lock_ttl\030\005 \001(\004\022\035\n\025skip_constra"
-      "int_check\030\006 \001(\010\"[\n\020PrewriteResponse\022$\n\014r"
-      "egion_error\030\001 \001(\0132\016.errorpb.Error\022!\n\006err"
-      "ors\030\002 \003(\0132\021.kvrpcpb.KeyError\"}\n\rCommitRe"
-      "quest\022!\n\007context\030\001 \001(\0132\020.kvrpcpb.Context"
-      "\022\025\n\rstart_version\030\002 \001(\004\022\014\n\004keys\030\003 \003(\014\022\026\n"
-      "\016commit_version\030\004 \001(\004J\004\010\005\020\006R\006binlog\"X\n\016C"
-      "ommitResponse\022$\n\014region_error\030\001 \001(\0132\016.er"
+      "\006 \001(\010\022\017\n\007end_key\030\007 \001(\014\"F\n\006KvPair\022 \n\005erro"
+      "r\030\001 \001(\0132\021.kvrpcpb.KeyError\022\013\n\003key\030\002 \001(\014\022"
+      "\r\n\005value\030\003 \001(\014\"T\n\014ScanResponse\022$\n\014region"
+      "_error\030\001 \001(\0132\016.errorpb.Error\022\036\n\005pairs\030\002 "
+      "\003(\0132\017.kvrpcpb.KvPair\"\?\n\010Mutation\022\027\n\002op\030\001"
+      " \001(\0162\013.kvrpcpb.Op\022\013\n\003key\030\002 \001(\014\022\r\n\005value\030"
+      "\003 \001(\014\"\270\001\n\017PrewriteRequest\022!\n\007context\030\001 \001"
+      "(\0132\020.kvrpcpb.Context\022$\n\tmutations\030\002 \003(\0132"
+      "\021.kvrpcpb.Mutation\022\024\n\014primary_lock\030\003 \001(\014"
+      "\022\025\n\rstart_version\030\004 \001(\004\022\020\n\010lock_ttl\030\005 \001("
+      "\004\022\035\n\025skip_constraint_check\030\006 \001(\010\"[\n\020Prew"
+      "riteResponse\022$\n\014region_error\030\001 \001(\0132\016.err"
+      "orpb.Error\022!\n\006errors\030\002 \003(\0132\021.kvrpcpb.Key"
+      "Error\"}\n\rCommitRequest\022!\n\007context\030\001 \001(\0132"
+      "\020.kvrpcpb.Context\022\025\n\rstart_version\030\002 \001(\004"
+      "\022\014\n\004keys\030\003 \003(\014\022\026\n\016commit_version\030\004 \001(\004J\004"
+      "\010\005\020\006R\006binlog\"X\n\016CommitResponse\022$\n\014region"
+      "_error\030\001 \001(\0132\016.errorpb.Error\022 \n\005error\030\002 "
+      "\001(\0132\021.kvrpcpb.KeyError\"M\n\rImportRequest\022"
+      "$\n\tmutations\030\001 \003(\0132\021.kvrpcpb.Mutation\022\026\n"
+      "\016commit_version\030\002 \001(\004\"E\n\016ImportResponse\022"
+      "$\n\014region_error\030\001 \001(\0132\016.errorpb.Error\022\r\n"
+      "\005error\030\002 \001(\t\"^\n\024BatchRollbackRequest\022!\n\007"
+      "context\030\001 \001(\0132\020.kvrpcpb.Context\022\025\n\rstart"
+      "_version\030\002 \001(\004\022\014\n\004keys\030\003 \003(\014\"_\n\025BatchRol"
+      "lbackResponse\022$\n\014region_error\030\001 \001(\0132\016.er"
       "rorpb.Error\022 \n\005error\030\002 \001(\0132\021.kvrpcpb.Key"
-      "Error\"M\n\rImportRequest\022$\n\tmutations\030\001 \003("
-      "\0132\021.kvrpcpb.Mutation\022\026\n\016commit_version\030\002"
-      " \001(\004\"E\n\016ImportResponse\022$\n\014region_error\030\001"
-      " \001(\0132\016.errorpb.Error\022\r\n\005error\030\002 \001(\t\"^\n\024B"
-      "atchRollbackRequest\022!\n\007context\030\001 \001(\0132\020.k"
-      "vrpcpb.Context\022\025\n\rstart_version\030\002 \001(\004\022\014\n"
-      "\004keys\030\003 \003(\014\"_\n\025BatchRollbackResponse\022$\n\014"
-      "region_error\030\001 \001(\0132\016.errorpb.Error\022 \n\005er"
-      "ror\030\002 \001(\0132\021.kvrpcpb.KeyError\"W\n\016CleanupR"
-      "equest\022!\n\007context\030\001 \001(\0132\020.kvrpcpb.Contex"
-      "t\022\013\n\003key\030\002 \001(\014\022\025\n\rstart_version\030\003 \001(\004\"q\n"
-      "\017CleanupResponse\022$\n\014region_error\030\001 \001(\0132\016"
-      ".errorpb.Error\022 \n\005error\030\002 \001(\0132\021.kvrpcpb."
-      "KeyError\022\026\n\016commit_version\030\003 \001(\004\"S\n\017Batc"
-      "hGetRequest\022!\n\007context\030\001 \001(\0132\020.kvrpcpb.C"
-      "ontext\022\014\n\004keys\030\002 \003(\014\022\017\n\007version\030\003 \001(\004\"X\n"
-      "\020BatchGetResponse\022$\n\014region_error\030\001 \001(\0132"
-      "\016.errorpb.Error\022\036\n\005pairs\030\002 \003(\0132\017.kvrpcpb"
-      ".KvPair\"k\n\017ScanLockRequest\022!\n\007context\030\001 "
-      "\001(\0132\020.kvrpcpb.Context\022\023\n\013max_version\030\002 \001"
-      "(\004\022\021\n\tstart_key\030\003 \001(\014\022\r\n\005limit\030\004 \001(\r\"|\n\020"
-      "ScanLockResponse\022$\n\014region_error\030\001 \001(\0132\016"
-      ".errorpb.Error\022 \n\005error\030\002 \001(\0132\021.kvrpcpb."
-      "KeyError\022 \n\005locks\030\003 \003(\0132\021.kvrpcpb.LockIn"
-      "fo\"&\n\007TxnInfo\022\013\n\003txn\030\001 \001(\004\022\016\n\006status\030\002 \001"
-      "(\004\"\213\001\n\022ResolveLockRequest\022!\n\007context\030\001 \001"
-      "(\0132\020.kvrpcpb.Context\022\025\n\rstart_version\030\002 "
-      "\001(\004\022\026\n\016commit_version\030\003 \001(\004\022#\n\ttxn_infos"
-      "\030\004 \003(\0132\020.kvrpcpb.TxnInfo\"]\n\023ResolveLockR"
-      "esponse\022$\n\014region_error\030\001 \001(\0132\016.errorpb."
-      "Error\022 \n\005error\030\002 \001(\0132\021.kvrpcpb.KeyError\""
-      "B\n\tGCRequest\022!\n\007context\030\001 \001(\0132\020.kvrpcpb."
-      "Context\022\022\n\nsafe_point\030\002 \001(\004\"T\n\nGCRespons"
-      "e\022$\n\014region_error\030\001 \001(\0132\016.errorpb.Error\022"
-      " \n\005error\030\002 \001(\0132\021.kvrpcpb.KeyError\"K\n\rRaw"
-      "GetRequest\022!\n\007context\030\001 \001(\0132\020.kvrpcpb.Co"
-      "ntext\022\013\n\003key\030\002 \001(\014\022\n\n\002cf\030\003 \001(\t\"T\n\016RawGet"
-      "Response\022$\n\014region_error\030\001 \001(\0132\016.errorpb"
-      ".Error\022\r\n\005error\030\002 \001(\t\022\r\n\005value\030\003 \001(\014\"Z\n\r"
-      "RawPutRequest\022!\n\007context\030\001 \001(\0132\020.kvrpcpb"
-      ".Context\022\013\n\003key\030\002 \001(\014\022\r\n\005value\030\003 \001(\014\022\n\n\002"
-      "cf\030\004 \001(\t\"E\n\016RawPutResponse\022$\n\014region_err"
-      "or\030\001 \001(\0132\016.errorpb.Error\022\r\n\005error\030\002 \001(\t\""
-      "c\n\022RawBatchPutRequest\022!\n\007context\030\001 \001(\0132\020"
-      ".kvrpcpb.Context\022\036\n\005pairs\030\002 \003(\0132\017.kvrpcp"
-      "b.KvPair\022\n\n\002cf\030\003 \001(\t\"J\n\023RawBatchPutRespo"
+      "Error\"W\n\016CleanupRequest\022!\n\007context\030\001 \001(\013"
+      "2\020.kvrpcpb.Context\022\013\n\003key\030\002 \001(\014\022\025\n\rstart"
+      "_version\030\003 \001(\004\"q\n\017CleanupResponse\022$\n\014reg"
+      "ion_error\030\001 \001(\0132\016.errorpb.Error\022 \n\005error"
+      "\030\002 \001(\0132\021.kvrpcpb.KeyError\022\026\n\016commit_vers"
+      "ion\030\003 \001(\004\"S\n\017BatchGetRequest\022!\n\007context\030"
+      "\001 \001(\0132\020.kvrpcpb.Context\022\014\n\004keys\030\002 \003(\014\022\017\n"
+      "\007version\030\003 \001(\004\"X\n\020BatchGetResponse\022$\n\014re"
+      "gion_error\030\001 \001(\0132\016.errorpb.Error\022\036\n\005pair"
+      "s\030\002 \003(\0132\017.kvrpcpb.KvPair\"k\n\017ScanLockRequ"
+      "est\022!\n\007context\030\001 \001(\0132\020.kvrpcpb.Context\022\023"
+      "\n\013max_version\030\002 \001(\004\022\021\n\tstart_key\030\003 \001(\014\022\r"
+      "\n\005limit\030\004 \001(\r\"|\n\020ScanLockResponse\022$\n\014reg"
+      "ion_error\030\001 \001(\0132\016.errorpb.Error\022 \n\005error"
+      "\030\002 \001(\0132\021.kvrpcpb.KeyError\022 \n\005locks\030\003 \003(\013"
+      "2\021.kvrpcpb.LockInfo\"&\n\007TxnInfo\022\013\n\003txn\030\001 "
+      "\001(\004\022\016\n\006status\030\002 \001(\004\"\213\001\n\022ResolveLockReque"
+      "st\022!\n\007context\030\001 \001(\0132\020.kvrpcpb.Context\022\025\n"
+      "\rstart_version\030\002 \001(\004\022\026\n\016commit_version\030\003"
+      " \001(\004\022#\n\ttxn_infos\030\004 \003(\0132\020.kvrpcpb.TxnInf"
+      "o\"]\n\023ResolveLockResponse\022$\n\014region_error"
+      "\030\001 \001(\0132\016.errorpb.Error\022 \n\005error\030\002 \001(\0132\021."
+      "kvrpcpb.KeyError\"B\n\tGCRequest\022!\n\007context"
+      "\030\001 \001(\0132\020.kvrpcpb.Context\022\022\n\nsafe_point\030\002"
+      " \001(\004\"T\n\nGCResponse\022$\n\014region_error\030\001 \001(\013"
+      "2\016.errorpb.Error\022 \n\005error\030\002 \001(\0132\021.kvrpcp"
+      "b.KeyError\"K\n\rRawGetRequest\022!\n\007context\030\001"
+      " \001(\0132\020.kvrpcpb.Context\022\013\n\003key\030\002 \001(\014\022\n\n\002c"
+      "f\030\003 \001(\t\"T\n\016RawGetResponse\022$\n\014region_erro"
+      "r\030\001 \001(\0132\016.errorpb.Error\022\r\n\005error\030\002 \001(\t\022\r"
+      "\n\005value\030\003 \001(\014\"Z\n\rRawPutRequest\022!\n\007contex"
+      "t\030\001 \001(\0132\020.kvrpcpb.Context\022\013\n\003key\030\002 \001(\014\022\r"
+      "\n\005value\030\003 \001(\014\022\n\n\002cf\030\004 \001(\t\"E\n\016RawPutRespo"
       "nse\022$\n\014region_error\030\001 \001(\0132\016.errorpb.Erro"
-      "r\022\r\n\005error\030\002 \001(\t\"Q\n\022RawBatchGetRequest\022!"
-      "\n\007context\030\001 \001(\0132\020.kvrpcpb.Context\022\014\n\004key"
-      "s\030\002 \003(\014\022\n\n\002cf\030\003 \001(\t\"[\n\023RawBatchGetRespon"
-      "se\022$\n\014region_error\030\001 \001(\0132\016.errorpb.Error"
-      "\022\036\n\005pairs\030\002 \003(\0132\017.kvrpcpb.KvPair\"N\n\020RawD"
-      "eleteRequest\022!\n\007context\030\001 \001(\0132\020.kvrpcpb."
-      "Context\022\013\n\003key\030\002 \001(\014\022\n\n\002cf\030\003 \001(\t\"H\n\021RawD"
-      "eleteResponse\022$\n\014region_error\030\001 \001(\0132\016.er"
-      "rorpb.Error\022\r\n\005error\030\002 \001(\t\"T\n\025RawBatchDe"
-      "leteRequest\022!\n\007context\030\001 \001(\0132\020.kvrpcpb.C"
-      "ontext\022\014\n\004keys\030\002 \003(\014\022\n\n\002cf\030\003 \001(\t\"M\n\026RawB"
-      "atchDeleteResponse\022$\n\014region_error\030\001 \001(\013"
-      "2\016.errorpb.Error\022\r\n\005error\030\002 \001(\t\"[\n\022Delet"
-      "eRangeRequest\022!\n\007context\030\001 \001(\0132\020.kvrpcpb"
-      ".Context\022\021\n\tstart_key\030\002 \001(\014\022\017\n\007end_key\030\003"
-      " \001(\014\"J\n\023DeleteRangeResponse\022$\n\014region_er"
-      "ror\030\001 \001(\0132\016.errorpb.Error\022\r\n\005error\030\002 \001(\t"
-      "\"j\n\025RawDeleteRangeRequest\022!\n\007context\030\001 \001"
-      "(\0132\020.kvrpcpb.Context\022\021\n\tstart_key\030\002 \001(\014\022"
-      "\017\n\007end_key\030\003 \001(\014\022\n\n\002cf\030\004 \001(\t\"M\n\026RawDelet"
-      "eRangeResponse\022$\n\014region_error\030\001 \001(\0132\016.e"
-      "rrorpb.Error\022\r\n\005error\030\002 \001(\t\"s\n\016RawScanRe"
-      "quest\022!\n\007context\030\001 \001(\0132\020.kvrpcpb.Context"
-      "\022\021\n\tstart_key\030\002 \001(\014\022\r\n\005limit\030\003 \001(\r\022\020\n\010ke"
-      "y_only\030\004 \001(\010\022\n\n\002cf\030\005 \001(\t\"U\n\017RawScanRespo"
-      "nse\022$\n\014region_error\030\001 \001(\0132\016.errorpb.Erro"
-      "r\022\034\n\003kvs\030\002 \003(\0132\017.kvrpcpb.KvPair\".\n\010KeyRa"
-      "nge\022\021\n\tstart_key\030\001 \001(\014\022\017\n\007end_key\030\002 \001(\014\""
-      "\215\001\n\023RawBatchScanRequest\022!\n\007context\030\001 \001(\013"
-      "2\020.kvrpcpb.Context\022!\n\006ranges\030\002 \003(\0132\021.kvr"
-      "pcpb.KeyRange\022\022\n\neach_limit\030\003 \001(\r\022\020\n\010key"
-      "_only\030\004 \001(\010\022\n\n\002cf\030\005 \001(\t\"Z\n\024RawBatchScanR"
-      "esponse\022$\n\014region_error\030\001 \001(\0132\016.errorpb."
-      "Error\022\034\n\003kvs\030\002 \003(\0132\017.kvrpcpb.KvPair\"`\n\tM"
-      "vccWrite\022\031\n\004type\030\001 \001(\0162\013.kvrpcpb.Op\022\020\n\010s"
-      "tart_ts\030\002 \001(\004\022\021\n\tcommit_ts\030\003 \001(\004\022\023\n\013shor"
-      "t_value\030\004 \001(\014\",\n\tMvccValue\022\020\n\010start_ts\030\001"
-      " \001(\004\022\r\n\005value\030\002 \001(\014\"]\n\010MvccLock\022\031\n\004type\030"
-      "\001 \001(\0162\013.kvrpcpb.Op\022\020\n\010start_ts\030\002 \001(\004\022\017\n\007"
-      "primary\030\003 \001(\014\022\023\n\013short_value\030\004 \001(\014\"s\n\010Mv"
-      "ccInfo\022\037\n\004lock\030\001 \001(\0132\021.kvrpcpb.MvccLock\022"
-      "\"\n\006writes\030\002 \003(\0132\022.kvrpcpb.MvccWrite\022\"\n\006v"
-      "alues\030\003 \003(\0132\022.kvrpcpb.MvccValue\"E\n\023MvccG"
-      "etByKeyRequest\022!\n\007context\030\001 \001(\0132\020.kvrpcp"
-      "b.Context\022\013\n\003key\030\002 \001(\014\"l\n\024MvccGetByKeyRe"
-      "sponse\022$\n\014region_error\030\001 \001(\0132\016.errorpb.E"
-      "rror\022\r\n\005error\030\002 \001(\t\022\037\n\004info\030\003 \001(\0132\021.kvrp"
-      "cpb.MvccInfo\"N\n\027MvccGetByStartTsRequest\022"
-      "!\n\007context\030\001 \001(\0132\020.kvrpcpb.Context\022\020\n\010st"
-      "art_ts\030\002 \001(\004\"}\n\030MvccGetByStartTsResponse"
-      "\022$\n\014region_error\030\001 \001(\0132\016.errorpb.Error\022\r"
-      "\n\005error\030\002 \001(\t\022\013\n\003key\030\003 \001(\014\022\037\n\004info\030\004 \001(\013"
-      "2\021.kvrpcpb.MvccInfo\"J\n\022SplitRegionReques"
-      "t\022!\n\007context\030\001 \001(\0132\020.kvrpcpb.Context\022\021\n\t"
-      "split_key\030\002 \001(\014\"x\n\023SplitRegionResponse\022$"
-      "\n\014region_error\030\001 \001(\0132\016.errorpb.Error\022\034\n\004"
-      "left\030\002 \001(\0132\016.metapb.Region\022\035\n\005right\030\003 \001("
-      "\0132\016.metapb.Region\"b\n\031UnsafeDestroyRangeR"
-      "equest\022!\n\007context\030\001 \001(\0132\020.kvrpcpb.Contex"
-      "t\022\021\n\tstart_key\030\002 \001(\014\022\017\n\007end_key\030\003 \001(\014\"Q\n"
-      "\032UnsafeDestroyRangeResponse\022$\n\014region_er"
-      "ror\030\001 \001(\0132\016.errorpb.Error\022\r\n\005error\030\002 \001(\t"
-      "*+\n\nCommandPri\022\n\n\006Normal\020\000\022\007\n\003Low\020\001\022\010\n\004H"
-      "igh\020\002* \n\016IsolationLevel\022\006\n\002SI\020\000\022\006\n\002RC\020\001*"
-      ".\n\002Op\022\007\n\003Put\020\000\022\007\n\003Del\020\001\022\010\n\004Lock\020\002\022\014\n\010Rol"
-      "lback\020\003B\032\n\030com.pingcap.tikv.kvprotob\006pro"
-      "to3"
+      "r\022\r\n\005error\030\002 \001(\t\"c\n\022RawBatchPutRequest\022!"
+      "\n\007context\030\001 \001(\0132\020.kvrpcpb.Context\022\036\n\005pai"
+      "rs\030\002 \003(\0132\017.kvrpcpb.KvPair\022\n\n\002cf\030\003 \001(\t\"J\n"
+      "\023RawBatchPutResponse\022$\n\014region_error\030\001 \001"
+      "(\0132\016.errorpb.Error\022\r\n\005error\030\002 \001(\t\"Q\n\022Raw"
+      "BatchGetRequest\022!\n\007context\030\001 \001(\0132\020.kvrpc"
+      "pb.Context\022\014\n\004keys\030\002 \003(\014\022\n\n\002cf\030\003 \001(\t\"[\n\023"
+      "RawBatchGetResponse\022$\n\014region_error\030\001 \001("
+      "\0132\016.errorpb.Error\022\036\n\005pairs\030\002 \003(\0132\017.kvrpc"
+      "pb.KvPair\"N\n\020RawDeleteRequest\022!\n\007context"
+      "\030\001 \001(\0132\020.kvrpcpb.Context\022\013\n\003key\030\002 \001(\014\022\n\n"
+      "\002cf\030\003 \001(\t\"H\n\021RawDeleteResponse\022$\n\014region"
+      "_error\030\001 \001(\0132\016.errorpb.Error\022\r\n\005error\030\002 "
+      "\001(\t\"T\n\025RawBatchDeleteRequest\022!\n\007context\030"
+      "\001 \001(\0132\020.kvrpcpb.Context\022\014\n\004keys\030\002 \003(\014\022\n\n"
+      "\002cf\030\003 \001(\t\"M\n\026RawBatchDeleteResponse\022$\n\014r"
+      "egion_error\030\001 \001(\0132\016.errorpb.Error\022\r\n\005err"
+      "or\030\002 \001(\t\"[\n\022DeleteRangeRequest\022!\n\007contex"
+      "t\030\001 \001(\0132\020.kvrpcpb.Context\022\021\n\tstart_key\030\002"
+      " \001(\014\022\017\n\007end_key\030\003 \001(\014\"J\n\023DeleteRangeResp"
+      "onse\022$\n\014region_error\030\001 \001(\0132\016.errorpb.Err"
+      "or\022\r\n\005error\030\002 \001(\t\"j\n\025RawDeleteRangeReque"
+      "st\022!\n\007context\030\001 \001(\0132\020.kvrpcpb.Context\022\021\n"
+      "\tstart_key\030\002 \001(\014\022\017\n\007end_key\030\003 \001(\014\022\n\n\002cf\030"
+      "\004 \001(\t\"M\n\026RawDeleteRangeResponse\022$\n\014regio"
+      "n_error\030\001 \001(\0132\016.errorpb.Error\022\r\n\005error\030\002"
+      " \001(\t\"\225\001\n\016RawScanRequest\022!\n\007context\030\001 \001(\013"
+      "2\020.kvrpcpb.Context\022\021\n\tstart_key\030\002 \001(\014\022\r\n"
+      "\005limit\030\003 \001(\r\022\020\n\010key_only\030\004 \001(\010\022\n\n\002cf\030\005 \001"
+      "(\t\022\017\n\007reverse\030\006 \001(\010\022\017\n\007end_key\030\007 \001(\014\"U\n\017"
+      "RawScanResponse\022$\n\014region_error\030\001 \001(\0132\016."
+      "errorpb.Error\022\034\n\003kvs\030\002 \003(\0132\017.kvrpcpb.KvP"
+      "air\".\n\010KeyRange\022\021\n\tstart_key\030\001 \001(\014\022\017\n\007en"
+      "d_key\030\002 \001(\014\"\236\001\n\023RawBatchScanRequest\022!\n\007c"
+      "ontext\030\001 \001(\0132\020.kvrpcpb.Context\022!\n\006ranges"
+      "\030\002 \003(\0132\021.kvrpcpb.KeyRange\022\022\n\neach_limit\030"
+      "\003 \001(\r\022\020\n\010key_only\030\004 \001(\010\022\n\n\002cf\030\005 \001(\t\022\017\n\007r"
+      "everse\030\006 \001(\010\"Z\n\024RawBatchScanResponse\022$\n\014"
+      "region_error\030\001 \001(\0132\016.errorpb.Error\022\034\n\003kv"
+      "s\030\002 \003(\0132\017.kvrpcpb.KvPair\"`\n\tMvccWrite\022\031\n"
+      "\004type\030\001 \001(\0162\013.kvrpcpb.Op\022\020\n\010start_ts\030\002 \001"
+      "(\004\022\021\n\tcommit_ts\030\003 \001(\004\022\023\n\013short_value\030\004 \001"
+      "(\014\",\n\tMvccValue\022\020\n\010start_ts\030\001 \001(\004\022\r\n\005val"
+      "ue\030\002 \001(\014\"]\n\010MvccLock\022\031\n\004type\030\001 \001(\0162\013.kvr"
+      "pcpb.Op\022\020\n\010start_ts\030\002 \001(\004\022\017\n\007primary\030\003 \001"
+      "(\014\022\023\n\013short_value\030\004 \001(\014\"s\n\010MvccInfo\022\037\n\004l"
+      "ock\030\001 \001(\0132\021.kvrpcpb.MvccLock\022\"\n\006writes\030\002"
+      " \003(\0132\022.kvrpcpb.MvccWrite\022\"\n\006values\030\003 \003(\013"
+      "2\022.kvrpcpb.MvccValue\"E\n\023MvccGetByKeyRequ"
+      "est\022!\n\007context\030\001 \001(\0132\020.kvrpcpb.Context\022\013"
+      "\n\003key\030\002 \001(\014\"l\n\024MvccGetByKeyResponse\022$\n\014r"
+      "egion_error\030\001 \001(\0132\016.errorpb.Error\022\r\n\005err"
+      "or\030\002 \001(\t\022\037\n\004info\030\003 \001(\0132\021.kvrpcpb.MvccInf"
+      "o\"N\n\027MvccGetByStartTsRequest\022!\n\007context\030"
+      "\001 \001(\0132\020.kvrpcpb.Context\022\020\n\010start_ts\030\002 \001("
+      "\004\"}\n\030MvccGetByStartTsResponse\022$\n\014region_"
+      "error\030\001 \001(\0132\016.errorpb.Error\022\r\n\005error\030\002 \001"
+      "(\t\022\013\n\003key\030\003 \001(\014\022\037\n\004info\030\004 \001(\0132\021.kvrpcpb."
+      "MvccInfo\"J\n\022SplitRegionRequest\022!\n\007contex"
+      "t\030\001 \001(\0132\020.kvrpcpb.Context\022\021\n\tsplit_key\030\002"
+      " \001(\014\"x\n\023SplitRegionResponse\022$\n\014region_er"
+      "ror\030\001 \001(\0132\016.errorpb.Error\022\034\n\004left\030\002 \001(\0132"
+      "\016.metapb.Region\022\035\n\005right\030\003 \001(\0132\016.metapb."
+      "Region\"b\n\031UnsafeDestroyRangeRequest\022!\n\007c"
+      "ontext\030\001 \001(\0132\020.kvrpcpb.Context\022\021\n\tstart_"
+      "key\030\002 \001(\014\022\017\n\007end_key\030\003 \001(\014\"Q\n\032UnsafeDest"
+      "royRangeResponse\022$\n\014region_error\030\001 \001(\0132\016"
+      ".errorpb.Error\022\r\n\005error\030\002 \001(\t\"5\n\020ReadInd"
+      "exRequest\022!\n\007context\030\001 \001(\0132\020.kvrpcpb.Con"
+      "text\"M\n\021ReadIndexResponse\022$\n\014region_erro"
+      "r\030\001 \001(\0132\016.errorpb.Error\022\022\n\nread_index\030\002 "
+      "\001(\004*+\n\nCommandPri\022\n\n\006Normal\020\000\022\007\n\003Low\020\001\022\010"
+      "\n\004High\020\002* \n\016IsolationLevel\022\006\n\002SI\020\000\022\006\n\002RC"
+      "\020\001*.\n\002Op\022\007\n\003Put\020\000\022\007\n\003Del\020\001\022\010\n\004Lock\020\002\022\014\n\010"
+      "Rollback\020\003B\022\n\020org.tikv.kvprotob\006proto3"
   };
   ::google::protobuf::DescriptorPool::InternalAddGeneratedFile(
-      descriptor, 6523);
+      descriptor, 6718);
   ::google::protobuf::MessageFactory::InternalRegisterGeneratedFile(
     "kvrpcpb.proto", &protobuf_RegisterTypes);
   ::protobuf_metapb_2eproto::AddDescriptors();
@@ -6406,6 +6485,7 @@ const int ScanRequest::kLimitFieldNumber;
 const int ScanRequest::kVersionFieldNumber;
 const int ScanRequest::kKeyOnlyFieldNumber;
 const int ScanRequest::kReverseFieldNumber;
+const int ScanRequest::kEndKeyFieldNumber;
 #endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
 
 ScanRequest::ScanRequest()
@@ -6425,6 +6505,10 @@ ScanRequest::ScanRequest(const ScanRequest& from)
   if (from.start_key().size() > 0) {
     start_key_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.start_key_);
   }
+  end_key_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  if (from.end_key().size() > 0) {
+    end_key_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.end_key_);
+  }
   if (from.has_context()) {
     context_ = new ::kvrpcpb::Context(*from.context_);
   } else {
@@ -6438,6 +6522,7 @@ ScanRequest::ScanRequest(const ScanRequest& from)
 
 void ScanRequest::SharedCtor() {
   start_key_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  end_key_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
   ::memset(&context_, 0, static_cast<size_t>(
       reinterpret_cast<char*>(&reverse_) -
       reinterpret_cast<char*>(&context_)) + sizeof(reverse_));
@@ -6451,6 +6536,7 @@ ScanRequest::~ScanRequest() {
 
 void ScanRequest::SharedDtor() {
   start_key_.DestroyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  end_key_.DestroyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
   if (this != internal_default_instance()) delete context_;
 }
 
@@ -6484,6 +6570,7 @@ void ScanRequest::Clear() {
   (void) cached_has_bits;
 
   start_key_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  end_key_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
   if (GetArenaNoVirtual() == NULL && context_ != NULL) {
     delete context_;
   }
@@ -6584,6 +6671,18 @@ bool ScanRequest::MergePartialFromCodedStream(
         break;
       }
 
+      // bytes end_key = 7;
+      case 7: {
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(58u /* 58 & 0xFF */)) {
+          DO_(::google::protobuf::internal::WireFormatLite::ReadBytes(
+                input, this->mutable_end_key()));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
       default: {
       handle_unusual:
         if (tag == 0) {
@@ -6642,6 +6741,12 @@ void ScanRequest::SerializeWithCachedSizes(
     ::google::protobuf::internal::WireFormatLite::WriteBool(6, this->reverse(), output);
   }
 
+  // bytes end_key = 7;
+  if (this->end_key().size() > 0) {
+    ::google::protobuf::internal::WireFormatLite::WriteBytesMaybeAliased(
+      7, this->end_key(), output);
+  }
+
   if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
     ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
         (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()), output);
@@ -6690,6 +6795,13 @@ void ScanRequest::SerializeWithCachedSizes(
     target = ::google::protobuf::internal::WireFormatLite::WriteBoolToArray(6, this->reverse(), target);
   }
 
+  // bytes end_key = 7;
+  if (this->end_key().size() > 0) {
+    target =
+      ::google::protobuf::internal::WireFormatLite::WriteBytesToArray(
+        7, this->end_key(), target);
+  }
+
   if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
     target = ::google::protobuf::internal::WireFormat::SerializeUnknownFieldsToArray(
         (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()), target);
@@ -6712,6 +6824,13 @@ size_t ScanRequest::ByteSizeLong() const {
     total_size += 1 +
       ::google::protobuf::internal::WireFormatLite::BytesSize(
         this->start_key());
+  }
+
+  // bytes end_key = 7;
+  if (this->end_key().size() > 0) {
+    total_size += 1 +
+      ::google::protobuf::internal::WireFormatLite::BytesSize(
+        this->end_key());
   }
 
   // .kvrpcpb.Context context = 1;
@@ -6778,6 +6897,10 @@ void ScanRequest::MergeFrom(const ScanRequest& from) {
 
     start_key_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.start_key_);
   }
+  if (from.end_key().size() > 0) {
+
+    end_key_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.end_key_);
+  }
   if (from.has_context()) {
     mutable_context()->::kvrpcpb::Context::MergeFrom(from.context());
   }
@@ -6820,6 +6943,7 @@ void ScanRequest::Swap(ScanRequest* other) {
 void ScanRequest::InternalSwap(ScanRequest* other) {
   using std::swap;
   start_key_.Swap(&other->start_key_);
+  end_key_.Swap(&other->end_key_);
   swap(context_, other->context_);
   swap(version_, other->version_);
   swap(limit_, other->limit_);
@@ -19424,6 +19548,8 @@ const int RawScanRequest::kStartKeyFieldNumber;
 const int RawScanRequest::kLimitFieldNumber;
 const int RawScanRequest::kKeyOnlyFieldNumber;
 const int RawScanRequest::kCfFieldNumber;
+const int RawScanRequest::kReverseFieldNumber;
+const int RawScanRequest::kEndKeyFieldNumber;
 #endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
 
 RawScanRequest::RawScanRequest()
@@ -19447,23 +19573,28 @@ RawScanRequest::RawScanRequest(const RawScanRequest& from)
   if (from.cf().size() > 0) {
     cf_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.cf_);
   }
+  end_key_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  if (from.end_key().size() > 0) {
+    end_key_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.end_key_);
+  }
   if (from.has_context()) {
     context_ = new ::kvrpcpb::Context(*from.context_);
   } else {
     context_ = NULL;
   }
   ::memcpy(&limit_, &from.limit_,
-    static_cast<size_t>(reinterpret_cast<char*>(&key_only_) -
-    reinterpret_cast<char*>(&limit_)) + sizeof(key_only_));
+    static_cast<size_t>(reinterpret_cast<char*>(&reverse_) -
+    reinterpret_cast<char*>(&limit_)) + sizeof(reverse_));
   // @@protoc_insertion_point(copy_constructor:kvrpcpb.RawScanRequest)
 }
 
 void RawScanRequest::SharedCtor() {
   start_key_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
   cf_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  end_key_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
   ::memset(&context_, 0, static_cast<size_t>(
-      reinterpret_cast<char*>(&key_only_) -
-      reinterpret_cast<char*>(&context_)) + sizeof(key_only_));
+      reinterpret_cast<char*>(&reverse_) -
+      reinterpret_cast<char*>(&context_)) + sizeof(reverse_));
   _cached_size_ = 0;
 }
 
@@ -19475,6 +19606,7 @@ RawScanRequest::~RawScanRequest() {
 void RawScanRequest::SharedDtor() {
   start_key_.DestroyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
   cf_.DestroyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  end_key_.DestroyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
   if (this != internal_default_instance()) delete context_;
 }
 
@@ -19509,13 +19641,14 @@ void RawScanRequest::Clear() {
 
   start_key_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
   cf_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  end_key_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
   if (GetArenaNoVirtual() == NULL && context_ != NULL) {
     delete context_;
   }
   context_ = NULL;
   ::memset(&limit_, 0, static_cast<size_t>(
-      reinterpret_cast<char*>(&key_only_) -
-      reinterpret_cast<char*>(&limit_)) + sizeof(key_only_));
+      reinterpret_cast<char*>(&reverse_) -
+      reinterpret_cast<char*>(&limit_)) + sizeof(reverse_));
   _internal_metadata_.Clear();
 }
 
@@ -19597,6 +19730,32 @@ bool RawScanRequest::MergePartialFromCodedStream(
         break;
       }
 
+      // bool reverse = 6;
+      case 6: {
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(48u /* 48 & 0xFF */)) {
+
+          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
+                   bool, ::google::protobuf::internal::WireFormatLite::TYPE_BOOL>(
+                 input, &reverse_)));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // bytes end_key = 7;
+      case 7: {
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(58u /* 58 & 0xFF */)) {
+          DO_(::google::protobuf::internal::WireFormatLite::ReadBytes(
+                input, this->mutable_end_key()));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
       default: {
       handle_unusual:
         if (tag == 0) {
@@ -19655,6 +19814,17 @@ void RawScanRequest::SerializeWithCachedSizes(
       5, this->cf(), output);
   }
 
+  // bool reverse = 6;
+  if (this->reverse() != 0) {
+    ::google::protobuf::internal::WireFormatLite::WriteBool(6, this->reverse(), output);
+  }
+
+  // bytes end_key = 7;
+  if (this->end_key().size() > 0) {
+    ::google::protobuf::internal::WireFormatLite::WriteBytesMaybeAliased(
+      7, this->end_key(), output);
+  }
+
   if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
     ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
         (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()), output);
@@ -19704,6 +19874,18 @@ void RawScanRequest::SerializeWithCachedSizes(
         5, this->cf(), target);
   }
 
+  // bool reverse = 6;
+  if (this->reverse() != 0) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteBoolToArray(6, this->reverse(), target);
+  }
+
+  // bytes end_key = 7;
+  if (this->end_key().size() > 0) {
+    target =
+      ::google::protobuf::internal::WireFormatLite::WriteBytesToArray(
+        7, this->end_key(), target);
+  }
+
   if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
     target = ::google::protobuf::internal::WireFormat::SerializeUnknownFieldsToArray(
         (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()), target);
@@ -19735,6 +19917,13 @@ size_t RawScanRequest::ByteSizeLong() const {
         this->cf());
   }
 
+  // bytes end_key = 7;
+  if (this->end_key().size() > 0) {
+    total_size += 1 +
+      ::google::protobuf::internal::WireFormatLite::BytesSize(
+        this->end_key());
+  }
+
   // .kvrpcpb.Context context = 1;
   if (this->has_context()) {
     total_size += 1 +
@@ -19751,6 +19940,11 @@ size_t RawScanRequest::ByteSizeLong() const {
 
   // bool key_only = 4;
   if (this->key_only() != 0) {
+    total_size += 1 + 1;
+  }
+
+  // bool reverse = 6;
+  if (this->reverse() != 0) {
     total_size += 1 + 1;
   }
 
@@ -19791,6 +19985,10 @@ void RawScanRequest::MergeFrom(const RawScanRequest& from) {
 
     cf_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.cf_);
   }
+  if (from.end_key().size() > 0) {
+
+    end_key_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.end_key_);
+  }
   if (from.has_context()) {
     mutable_context()->::kvrpcpb::Context::MergeFrom(from.context());
   }
@@ -19799,6 +19997,9 @@ void RawScanRequest::MergeFrom(const RawScanRequest& from) {
   }
   if (from.key_only() != 0) {
     set_key_only(from.key_only());
+  }
+  if (from.reverse() != 0) {
+    set_reverse(from.reverse());
   }
 }
 
@@ -19828,9 +20029,11 @@ void RawScanRequest::InternalSwap(RawScanRequest* other) {
   using std::swap;
   start_key_.Swap(&other->start_key_);
   cf_.Swap(&other->cf_);
+  end_key_.Swap(&other->end_key_);
   swap(context_, other->context_);
   swap(limit_, other->limit_);
   swap(key_only_, other->key_only_);
+  swap(reverse_, other->reverse_);
   _internal_metadata_.Swap(&other->_internal_metadata_);
   swap(_cached_size_, other->_cached_size_);
 }
@@ -20439,6 +20642,7 @@ const int RawBatchScanRequest::kRangesFieldNumber;
 const int RawBatchScanRequest::kEachLimitFieldNumber;
 const int RawBatchScanRequest::kKeyOnlyFieldNumber;
 const int RawBatchScanRequest::kCfFieldNumber;
+const int RawBatchScanRequest::kReverseFieldNumber;
 #endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
 
 RawBatchScanRequest::RawBatchScanRequest()
@@ -20465,16 +20669,16 @@ RawBatchScanRequest::RawBatchScanRequest(const RawBatchScanRequest& from)
     context_ = NULL;
   }
   ::memcpy(&each_limit_, &from.each_limit_,
-    static_cast<size_t>(reinterpret_cast<char*>(&key_only_) -
-    reinterpret_cast<char*>(&each_limit_)) + sizeof(key_only_));
+    static_cast<size_t>(reinterpret_cast<char*>(&reverse_) -
+    reinterpret_cast<char*>(&each_limit_)) + sizeof(reverse_));
   // @@protoc_insertion_point(copy_constructor:kvrpcpb.RawBatchScanRequest)
 }
 
 void RawBatchScanRequest::SharedCtor() {
   cf_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
   ::memset(&context_, 0, static_cast<size_t>(
-      reinterpret_cast<char*>(&key_only_) -
-      reinterpret_cast<char*>(&context_)) + sizeof(key_only_));
+      reinterpret_cast<char*>(&reverse_) -
+      reinterpret_cast<char*>(&context_)) + sizeof(reverse_));
   _cached_size_ = 0;
 }
 
@@ -20524,8 +20728,8 @@ void RawBatchScanRequest::Clear() {
   }
   context_ = NULL;
   ::memset(&each_limit_, 0, static_cast<size_t>(
-      reinterpret_cast<char*>(&key_only_) -
-      reinterpret_cast<char*>(&each_limit_)) + sizeof(key_only_));
+      reinterpret_cast<char*>(&reverse_) -
+      reinterpret_cast<char*>(&each_limit_)) + sizeof(reverse_));
   _internal_metadata_.Clear();
 }
 
@@ -20606,6 +20810,20 @@ bool RawBatchScanRequest::MergePartialFromCodedStream(
         break;
       }
 
+      // bool reverse = 6;
+      case 6: {
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(48u /* 48 & 0xFF */)) {
+
+          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
+                   bool, ::google::protobuf::internal::WireFormatLite::TYPE_BOOL>(
+                 input, &reverse_)));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
       default: {
       handle_unusual:
         if (tag == 0) {
@@ -20665,6 +20883,11 @@ void RawBatchScanRequest::SerializeWithCachedSizes(
       5, this->cf(), output);
   }
 
+  // bool reverse = 6;
+  if (this->reverse() != 0) {
+    ::google::protobuf::internal::WireFormatLite::WriteBool(6, this->reverse(), output);
+  }
+
   if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
     ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
         (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()), output);
@@ -20713,6 +20936,11 @@ void RawBatchScanRequest::SerializeWithCachedSizes(
     target =
       ::google::protobuf::internal::WireFormatLite::WriteStringToArray(
         5, this->cf(), target);
+  }
+
+  // bool reverse = 6;
+  if (this->reverse() != 0) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteBoolToArray(6, this->reverse(), target);
   }
 
   if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
@@ -20769,6 +20997,11 @@ size_t RawBatchScanRequest::ByteSizeLong() const {
     total_size += 1 + 1;
   }
 
+  // bool reverse = 6;
+  if (this->reverse() != 0) {
+    total_size += 1 + 1;
+  }
+
   int cached_size = ::google::protobuf::internal::ToCachedSize(total_size);
   GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
   _cached_size_ = cached_size;
@@ -20812,6 +21045,9 @@ void RawBatchScanRequest::MergeFrom(const RawBatchScanRequest& from) {
   if (from.key_only() != 0) {
     set_key_only(from.key_only());
   }
+  if (from.reverse() != 0) {
+    set_reverse(from.reverse());
+  }
 }
 
 void RawBatchScanRequest::CopyFrom(const ::google::protobuf::Message& from) {
@@ -20843,6 +21079,7 @@ void RawBatchScanRequest::InternalSwap(RawBatchScanRequest* other) {
   swap(context_, other->context_);
   swap(each_limit_, other->each_limit_);
   swap(key_only_, other->key_only_);
+  swap(reverse_, other->reverse_);
   _internal_metadata_.Swap(&other->_internal_metadata_);
   swap(_cached_size_, other->_cached_size_);
 }
@@ -25162,6 +25399,550 @@ void UnsafeDestroyRangeResponse::InternalSwap(UnsafeDestroyRangeResponse* other)
 }
 
 ::google::protobuf::Metadata UnsafeDestroyRangeResponse::GetMetadata() const {
+  protobuf_kvrpcpb_2eproto::protobuf_AssignDescriptorsOnce();
+  return ::protobuf_kvrpcpb_2eproto::file_level_metadata[kIndexInFileMessages];
+}
+
+
+// ===================================================================
+
+void ReadIndexRequest::InitAsDefaultInstance() {
+  ::kvrpcpb::_ReadIndexRequest_default_instance_._instance.get_mutable()->context_ = const_cast< ::kvrpcpb::Context*>(
+      ::kvrpcpb::Context::internal_default_instance());
+}
+#if !defined(_MSC_VER) || _MSC_VER >= 1900
+const int ReadIndexRequest::kContextFieldNumber;
+#endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
+
+ReadIndexRequest::ReadIndexRequest()
+  : ::google::protobuf::Message(), _internal_metadata_(NULL) {
+  if (GOOGLE_PREDICT_TRUE(this != internal_default_instance())) {
+    ::protobuf_kvrpcpb_2eproto::InitDefaultsReadIndexRequest();
+  }
+  SharedCtor();
+  // @@protoc_insertion_point(constructor:kvrpcpb.ReadIndexRequest)
+}
+ReadIndexRequest::ReadIndexRequest(const ReadIndexRequest& from)
+  : ::google::protobuf::Message(),
+      _internal_metadata_(NULL),
+      _cached_size_(0) {
+  _internal_metadata_.MergeFrom(from._internal_metadata_);
+  if (from.has_context()) {
+    context_ = new ::kvrpcpb::Context(*from.context_);
+  } else {
+    context_ = NULL;
+  }
+  // @@protoc_insertion_point(copy_constructor:kvrpcpb.ReadIndexRequest)
+}
+
+void ReadIndexRequest::SharedCtor() {
+  context_ = NULL;
+  _cached_size_ = 0;
+}
+
+ReadIndexRequest::~ReadIndexRequest() {
+  // @@protoc_insertion_point(destructor:kvrpcpb.ReadIndexRequest)
+  SharedDtor();
+}
+
+void ReadIndexRequest::SharedDtor() {
+  if (this != internal_default_instance()) delete context_;
+}
+
+void ReadIndexRequest::SetCachedSize(int size) const {
+  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
+  _cached_size_ = size;
+  GOOGLE_SAFE_CONCURRENT_WRITES_END();
+}
+const ::google::protobuf::Descriptor* ReadIndexRequest::descriptor() {
+  ::protobuf_kvrpcpb_2eproto::protobuf_AssignDescriptorsOnce();
+  return ::protobuf_kvrpcpb_2eproto::file_level_metadata[kIndexInFileMessages].descriptor;
+}
+
+const ReadIndexRequest& ReadIndexRequest::default_instance() {
+  ::protobuf_kvrpcpb_2eproto::InitDefaultsReadIndexRequest();
+  return *internal_default_instance();
+}
+
+ReadIndexRequest* ReadIndexRequest::New(::google::protobuf::Arena* arena) const {
+  ReadIndexRequest* n = new ReadIndexRequest;
+  if (arena != NULL) {
+    arena->Own(n);
+  }
+  return n;
+}
+
+void ReadIndexRequest::Clear() {
+// @@protoc_insertion_point(message_clear_start:kvrpcpb.ReadIndexRequest)
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  if (GetArenaNoVirtual() == NULL && context_ != NULL) {
+    delete context_;
+  }
+  context_ = NULL;
+  _internal_metadata_.Clear();
+}
+
+bool ReadIndexRequest::MergePartialFromCodedStream(
+    ::google::protobuf::io::CodedInputStream* input) {
+#define DO_(EXPRESSION) if (!GOOGLE_PREDICT_TRUE(EXPRESSION)) goto failure
+  ::google::protobuf::uint32 tag;
+  // @@protoc_insertion_point(parse_start:kvrpcpb.ReadIndexRequest)
+  for (;;) {
+    ::std::pair< ::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
+    tag = p.first;
+    if (!p.second) goto handle_unusual;
+    switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
+      // .kvrpcpb.Context context = 1;
+      case 1: {
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(10u /* 10 & 0xFF */)) {
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
+               input, mutable_context()));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      default: {
+      handle_unusual:
+        if (tag == 0) {
+          goto success;
+        }
+        DO_(::google::protobuf::internal::WireFormat::SkipField(
+              input, tag, _internal_metadata_.mutable_unknown_fields()));
+        break;
+      }
+    }
+  }
+success:
+  // @@protoc_insertion_point(parse_success:kvrpcpb.ReadIndexRequest)
+  return true;
+failure:
+  // @@protoc_insertion_point(parse_failure:kvrpcpb.ReadIndexRequest)
+  return false;
+#undef DO_
+}
+
+void ReadIndexRequest::SerializeWithCachedSizes(
+    ::google::protobuf::io::CodedOutputStream* output) const {
+  // @@protoc_insertion_point(serialize_start:kvrpcpb.ReadIndexRequest)
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  // .kvrpcpb.Context context = 1;
+  if (this->has_context()) {
+    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
+      1, *this->context_, output);
+  }
+
+  if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
+    ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
+        (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()), output);
+  }
+  // @@protoc_insertion_point(serialize_end:kvrpcpb.ReadIndexRequest)
+}
+
+::google::protobuf::uint8* ReadIndexRequest::InternalSerializeWithCachedSizesToArray(
+    bool deterministic, ::google::protobuf::uint8* target) const {
+  (void)deterministic; // Unused
+  // @@protoc_insertion_point(serialize_to_array_start:kvrpcpb.ReadIndexRequest)
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  // .kvrpcpb.Context context = 1;
+  if (this->has_context()) {
+    target = ::google::protobuf::internal::WireFormatLite::
+      InternalWriteMessageToArray(
+        1, *this->context_, deterministic, target);
+  }
+
+  if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
+    target = ::google::protobuf::internal::WireFormat::SerializeUnknownFieldsToArray(
+        (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()), target);
+  }
+  // @@protoc_insertion_point(serialize_to_array_end:kvrpcpb.ReadIndexRequest)
+  return target;
+}
+
+size_t ReadIndexRequest::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:kvrpcpb.ReadIndexRequest)
+  size_t total_size = 0;
+
+  if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
+    total_size +=
+      ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(
+        (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()));
+  }
+  // .kvrpcpb.Context context = 1;
+  if (this->has_context()) {
+    total_size += 1 +
+      ::google::protobuf::internal::WireFormatLite::MessageSize(
+        *this->context_);
+  }
+
+  int cached_size = ::google::protobuf::internal::ToCachedSize(total_size);
+  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
+  _cached_size_ = cached_size;
+  GOOGLE_SAFE_CONCURRENT_WRITES_END();
+  return total_size;
+}
+
+void ReadIndexRequest::MergeFrom(const ::google::protobuf::Message& from) {
+// @@protoc_insertion_point(generalized_merge_from_start:kvrpcpb.ReadIndexRequest)
+  GOOGLE_DCHECK_NE(&from, this);
+  const ReadIndexRequest* source =
+      ::google::protobuf::internal::DynamicCastToGenerated<const ReadIndexRequest>(
+          &from);
+  if (source == NULL) {
+  // @@protoc_insertion_point(generalized_merge_from_cast_fail:kvrpcpb.ReadIndexRequest)
+    ::google::protobuf::internal::ReflectionOps::Merge(from, this);
+  } else {
+  // @@protoc_insertion_point(generalized_merge_from_cast_success:kvrpcpb.ReadIndexRequest)
+    MergeFrom(*source);
+  }
+}
+
+void ReadIndexRequest::MergeFrom(const ReadIndexRequest& from) {
+// @@protoc_insertion_point(class_specific_merge_from_start:kvrpcpb.ReadIndexRequest)
+  GOOGLE_DCHECK_NE(&from, this);
+  _internal_metadata_.MergeFrom(from._internal_metadata_);
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  if (from.has_context()) {
+    mutable_context()->::kvrpcpb::Context::MergeFrom(from.context());
+  }
+}
+
+void ReadIndexRequest::CopyFrom(const ::google::protobuf::Message& from) {
+// @@protoc_insertion_point(generalized_copy_from_start:kvrpcpb.ReadIndexRequest)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+void ReadIndexRequest::CopyFrom(const ReadIndexRequest& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:kvrpcpb.ReadIndexRequest)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+bool ReadIndexRequest::IsInitialized() const {
+  return true;
+}
+
+void ReadIndexRequest::Swap(ReadIndexRequest* other) {
+  if (other == this) return;
+  InternalSwap(other);
+}
+void ReadIndexRequest::InternalSwap(ReadIndexRequest* other) {
+  using std::swap;
+  swap(context_, other->context_);
+  _internal_metadata_.Swap(&other->_internal_metadata_);
+  swap(_cached_size_, other->_cached_size_);
+}
+
+::google::protobuf::Metadata ReadIndexRequest::GetMetadata() const {
+  protobuf_kvrpcpb_2eproto::protobuf_AssignDescriptorsOnce();
+  return ::protobuf_kvrpcpb_2eproto::file_level_metadata[kIndexInFileMessages];
+}
+
+
+// ===================================================================
+
+void ReadIndexResponse::InitAsDefaultInstance() {
+  ::kvrpcpb::_ReadIndexResponse_default_instance_._instance.get_mutable()->region_error_ = const_cast< ::errorpb::Error*>(
+      ::errorpb::Error::internal_default_instance());
+}
+void ReadIndexResponse::clear_region_error() {
+  if (GetArenaNoVirtual() == NULL && region_error_ != NULL) {
+    delete region_error_;
+  }
+  region_error_ = NULL;
+}
+#if !defined(_MSC_VER) || _MSC_VER >= 1900
+const int ReadIndexResponse::kRegionErrorFieldNumber;
+const int ReadIndexResponse::kReadIndexFieldNumber;
+#endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
+
+ReadIndexResponse::ReadIndexResponse()
+  : ::google::protobuf::Message(), _internal_metadata_(NULL) {
+  if (GOOGLE_PREDICT_TRUE(this != internal_default_instance())) {
+    ::protobuf_kvrpcpb_2eproto::InitDefaultsReadIndexResponse();
+  }
+  SharedCtor();
+  // @@protoc_insertion_point(constructor:kvrpcpb.ReadIndexResponse)
+}
+ReadIndexResponse::ReadIndexResponse(const ReadIndexResponse& from)
+  : ::google::protobuf::Message(),
+      _internal_metadata_(NULL),
+      _cached_size_(0) {
+  _internal_metadata_.MergeFrom(from._internal_metadata_);
+  if (from.has_region_error()) {
+    region_error_ = new ::errorpb::Error(*from.region_error_);
+  } else {
+    region_error_ = NULL;
+  }
+  read_index_ = from.read_index_;
+  // @@protoc_insertion_point(copy_constructor:kvrpcpb.ReadIndexResponse)
+}
+
+void ReadIndexResponse::SharedCtor() {
+  ::memset(&region_error_, 0, static_cast<size_t>(
+      reinterpret_cast<char*>(&read_index_) -
+      reinterpret_cast<char*>(&region_error_)) + sizeof(read_index_));
+  _cached_size_ = 0;
+}
+
+ReadIndexResponse::~ReadIndexResponse() {
+  // @@protoc_insertion_point(destructor:kvrpcpb.ReadIndexResponse)
+  SharedDtor();
+}
+
+void ReadIndexResponse::SharedDtor() {
+  if (this != internal_default_instance()) delete region_error_;
+}
+
+void ReadIndexResponse::SetCachedSize(int size) const {
+  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
+  _cached_size_ = size;
+  GOOGLE_SAFE_CONCURRENT_WRITES_END();
+}
+const ::google::protobuf::Descriptor* ReadIndexResponse::descriptor() {
+  ::protobuf_kvrpcpb_2eproto::protobuf_AssignDescriptorsOnce();
+  return ::protobuf_kvrpcpb_2eproto::file_level_metadata[kIndexInFileMessages].descriptor;
+}
+
+const ReadIndexResponse& ReadIndexResponse::default_instance() {
+  ::protobuf_kvrpcpb_2eproto::InitDefaultsReadIndexResponse();
+  return *internal_default_instance();
+}
+
+ReadIndexResponse* ReadIndexResponse::New(::google::protobuf::Arena* arena) const {
+  ReadIndexResponse* n = new ReadIndexResponse;
+  if (arena != NULL) {
+    arena->Own(n);
+  }
+  return n;
+}
+
+void ReadIndexResponse::Clear() {
+// @@protoc_insertion_point(message_clear_start:kvrpcpb.ReadIndexResponse)
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  if (GetArenaNoVirtual() == NULL && region_error_ != NULL) {
+    delete region_error_;
+  }
+  region_error_ = NULL;
+  read_index_ = GOOGLE_ULONGLONG(0);
+  _internal_metadata_.Clear();
+}
+
+bool ReadIndexResponse::MergePartialFromCodedStream(
+    ::google::protobuf::io::CodedInputStream* input) {
+#define DO_(EXPRESSION) if (!GOOGLE_PREDICT_TRUE(EXPRESSION)) goto failure
+  ::google::protobuf::uint32 tag;
+  // @@protoc_insertion_point(parse_start:kvrpcpb.ReadIndexResponse)
+  for (;;) {
+    ::std::pair< ::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
+    tag = p.first;
+    if (!p.second) goto handle_unusual;
+    switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
+      // .errorpb.Error region_error = 1;
+      case 1: {
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(10u /* 10 & 0xFF */)) {
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
+               input, mutable_region_error()));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // uint64 read_index = 2;
+      case 2: {
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(16u /* 16 & 0xFF */)) {
+
+          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
+                   ::google::protobuf::uint64, ::google::protobuf::internal::WireFormatLite::TYPE_UINT64>(
+                 input, &read_index_)));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      default: {
+      handle_unusual:
+        if (tag == 0) {
+          goto success;
+        }
+        DO_(::google::protobuf::internal::WireFormat::SkipField(
+              input, tag, _internal_metadata_.mutable_unknown_fields()));
+        break;
+      }
+    }
+  }
+success:
+  // @@protoc_insertion_point(parse_success:kvrpcpb.ReadIndexResponse)
+  return true;
+failure:
+  // @@protoc_insertion_point(parse_failure:kvrpcpb.ReadIndexResponse)
+  return false;
+#undef DO_
+}
+
+void ReadIndexResponse::SerializeWithCachedSizes(
+    ::google::protobuf::io::CodedOutputStream* output) const {
+  // @@protoc_insertion_point(serialize_start:kvrpcpb.ReadIndexResponse)
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  // .errorpb.Error region_error = 1;
+  if (this->has_region_error()) {
+    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
+      1, *this->region_error_, output);
+  }
+
+  // uint64 read_index = 2;
+  if (this->read_index() != 0) {
+    ::google::protobuf::internal::WireFormatLite::WriteUInt64(2, this->read_index(), output);
+  }
+
+  if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
+    ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
+        (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()), output);
+  }
+  // @@protoc_insertion_point(serialize_end:kvrpcpb.ReadIndexResponse)
+}
+
+::google::protobuf::uint8* ReadIndexResponse::InternalSerializeWithCachedSizesToArray(
+    bool deterministic, ::google::protobuf::uint8* target) const {
+  (void)deterministic; // Unused
+  // @@protoc_insertion_point(serialize_to_array_start:kvrpcpb.ReadIndexResponse)
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  // .errorpb.Error region_error = 1;
+  if (this->has_region_error()) {
+    target = ::google::protobuf::internal::WireFormatLite::
+      InternalWriteMessageToArray(
+        1, *this->region_error_, deterministic, target);
+  }
+
+  // uint64 read_index = 2;
+  if (this->read_index() != 0) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteUInt64ToArray(2, this->read_index(), target);
+  }
+
+  if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
+    target = ::google::protobuf::internal::WireFormat::SerializeUnknownFieldsToArray(
+        (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()), target);
+  }
+  // @@protoc_insertion_point(serialize_to_array_end:kvrpcpb.ReadIndexResponse)
+  return target;
+}
+
+size_t ReadIndexResponse::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:kvrpcpb.ReadIndexResponse)
+  size_t total_size = 0;
+
+  if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
+    total_size +=
+      ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(
+        (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()));
+  }
+  // .errorpb.Error region_error = 1;
+  if (this->has_region_error()) {
+    total_size += 1 +
+      ::google::protobuf::internal::WireFormatLite::MessageSize(
+        *this->region_error_);
+  }
+
+  // uint64 read_index = 2;
+  if (this->read_index() != 0) {
+    total_size += 1 +
+      ::google::protobuf::internal::WireFormatLite::UInt64Size(
+        this->read_index());
+  }
+
+  int cached_size = ::google::protobuf::internal::ToCachedSize(total_size);
+  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
+  _cached_size_ = cached_size;
+  GOOGLE_SAFE_CONCURRENT_WRITES_END();
+  return total_size;
+}
+
+void ReadIndexResponse::MergeFrom(const ::google::protobuf::Message& from) {
+// @@protoc_insertion_point(generalized_merge_from_start:kvrpcpb.ReadIndexResponse)
+  GOOGLE_DCHECK_NE(&from, this);
+  const ReadIndexResponse* source =
+      ::google::protobuf::internal::DynamicCastToGenerated<const ReadIndexResponse>(
+          &from);
+  if (source == NULL) {
+  // @@protoc_insertion_point(generalized_merge_from_cast_fail:kvrpcpb.ReadIndexResponse)
+    ::google::protobuf::internal::ReflectionOps::Merge(from, this);
+  } else {
+  // @@protoc_insertion_point(generalized_merge_from_cast_success:kvrpcpb.ReadIndexResponse)
+    MergeFrom(*source);
+  }
+}
+
+void ReadIndexResponse::MergeFrom(const ReadIndexResponse& from) {
+// @@protoc_insertion_point(class_specific_merge_from_start:kvrpcpb.ReadIndexResponse)
+  GOOGLE_DCHECK_NE(&from, this);
+  _internal_metadata_.MergeFrom(from._internal_metadata_);
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  if (from.has_region_error()) {
+    mutable_region_error()->::errorpb::Error::MergeFrom(from.region_error());
+  }
+  if (from.read_index() != 0) {
+    set_read_index(from.read_index());
+  }
+}
+
+void ReadIndexResponse::CopyFrom(const ::google::protobuf::Message& from) {
+// @@protoc_insertion_point(generalized_copy_from_start:kvrpcpb.ReadIndexResponse)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+void ReadIndexResponse::CopyFrom(const ReadIndexResponse& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:kvrpcpb.ReadIndexResponse)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+bool ReadIndexResponse::IsInitialized() const {
+  return true;
+}
+
+void ReadIndexResponse::Swap(ReadIndexResponse* other) {
+  if (other == this) return;
+  InternalSwap(other);
+}
+void ReadIndexResponse::InternalSwap(ReadIndexResponse* other) {
+  using std::swap;
+  swap(region_error_, other->region_error_);
+  swap(read_index_, other->read_index_);
+  _internal_metadata_.Swap(&other->_internal_metadata_);
+  swap(_cached_size_, other->_cached_size_);
+}
+
+::google::protobuf::Metadata ReadIndexResponse::GetMetadata() const {
   protobuf_kvrpcpb_2eproto::protobuf_AssignDescriptorsOnce();
   return ::protobuf_kvrpcpb_2eproto::file_level_metadata[kIndexInFileMessages];
 }

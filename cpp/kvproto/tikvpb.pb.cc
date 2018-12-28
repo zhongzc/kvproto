@@ -48,7 +48,7 @@ void AddDescriptorsImpl() {
   InitDefaults();
   static const char descriptor[] GOOGLE_PROTOBUF_ATTRIBUTE_SECTION_VARIABLE(protodesc_cold) = {
       "\n\014tikvpb.proto\022\006tikvpb\032\021coprocessor.prot"
-      "o\032\rkvrpcpb.proto\032\023raft_serverpb.proto2\223\020"
+      "o\032\rkvrpcpb.proto\032\023raft_serverpb.proto2\331\020"
       "\n\004Tikv\0224\n\005KvGet\022\023.kvrpcpb.GetRequest\032\024.k"
       "vrpcpb.GetResponse\"\000\0227\n\006KvScan\022\024.kvrpcpb"
       ".ScanRequest\032\025.kvrpcpb.ScanResponse\"\000\022C\n"
@@ -96,15 +96,17 @@ void AddDescriptorsImpl() {
       "apshot\022\034.raft_serverpb.SnapshotChunk\032\023.r"
       "aft_serverpb.Done\"\000(\001\022J\n\013SplitRegion\022\033.k"
       "vrpcpb.SplitRegionRequest\032\034.kvrpcpb.Spli"
-      "tRegionResponse\"\000\022M\n\014MvccGetByKey\022\034.kvrp"
-      "cpb.MvccGetByKeyRequest\032\035.kvrpcpb.MvccGe"
-      "tByKeyResponse\"\000\022Y\n\020MvccGetByStartTs\022 .k"
-      "vrpcpb.MvccGetByStartTsRequest\032!.kvrpcpb"
-      ".MvccGetByStartTsResponse\"\000B\032\n\030com.pingc"
-      "ap.tikv.kvprotob\006proto3"
+      "tRegionResponse\"\000\022D\n\tReadIndex\022\031.kvrpcpb"
+      ".ReadIndexRequest\032\032.kvrpcpb.ReadIndexRes"
+      "ponse\"\000\022M\n\014MvccGetByKey\022\034.kvrpcpb.MvccGe"
+      "tByKeyRequest\032\035.kvrpcpb.MvccGetByKeyResp"
+      "onse\"\000\022Y\n\020MvccGetByStartTs\022 .kvrpcpb.Mvc"
+      "cGetByStartTsRequest\032!.kvrpcpb.MvccGetBy"
+      "StartTsResponse\"\000B\022\n\020org.tikv.kvprotob\006p"
+      "roto3"
   };
   ::google::protobuf::DescriptorPool::InternalAddGeneratedFile(
-      descriptor, 2183);
+      descriptor, 2245);
   ::google::protobuf::MessageFactory::InternalRegisterGeneratedFile(
     "tikvpb.proto", &protobuf_RegisterTypes);
   ::protobuf_coprocessor_2eproto::AddDescriptors();

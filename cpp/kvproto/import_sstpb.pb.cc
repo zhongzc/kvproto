@@ -438,11 +438,11 @@ void AddDescriptorsImpl() {
       "\033.import_sstpb.IngestRequest\032\034.import_ss"
       "tpb.IngestResponse\"\000\022H\n\007Compact\022\034.import"
       "_sstpb.CompactRequest\032\035.import_sstpb.Com"
-      "pactResponse\"\000B\032\n\030com.pingcap.tikv.kvpro"
-      "tob\006proto3"
+      "pactResponse\"\000B\022\n\020org.tikv.kvprotob\006prot"
+      "o3"
   };
   ::google::protobuf::DescriptorPool::InternalAddGeneratedFile(
-      descriptor, 1090);
+      descriptor, 1082);
   ::google::protobuf::MessageFactory::InternalRegisterGeneratedFile(
     "import_sstpb.proto", &protobuf_RegisterTypes);
   ::protobuf_metapb_2eproto::AddDescriptors();

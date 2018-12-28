@@ -6,15 +6,16 @@
 
 #include "import_kvpb.pb.h"
 
-#include <grpc++/impl/codegen/async_stream.h>
-#include <grpc++/impl/codegen/async_unary_call.h>
-#include <grpc++/impl/codegen/method_handler_impl.h>
-#include <grpc++/impl/codegen/proto_utils.h>
-#include <grpc++/impl/codegen/rpc_method.h>
-#include <grpc++/impl/codegen/service_type.h>
-#include <grpc++/impl/codegen/status.h>
-#include <grpc++/impl/codegen/stub_options.h>
-#include <grpc++/impl/codegen/sync_stream.h>
+#include <grpcpp/impl/codegen/async_generic_service.h>
+#include <grpcpp/impl/codegen/async_stream.h>
+#include <grpcpp/impl/codegen/async_unary_call.h>
+#include <grpcpp/impl/codegen/method_handler_impl.h>
+#include <grpcpp/impl/codegen/proto_utils.h>
+#include <grpcpp/impl/codegen/rpc_method.h>
+#include <grpcpp/impl/codegen/service_type.h>
+#include <grpcpp/impl/codegen/status.h>
+#include <grpcpp/impl/codegen/stub_options.h>
+#include <grpcpp/impl/codegen/sync_stream.h>
 
 namespace grpc {
 class CompletionQueue;
@@ -239,7 +240,7 @@ class ImportKV final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status SwitchMode(::grpc::ServerContext* context, const ::import_kvpb::SwitchModeRequest* request, ::import_kvpb::SwitchModeResponse* response) final override {
+    ::grpc::Status SwitchMode(::grpc::ServerContext* context, const ::import_kvpb::SwitchModeRequest* request, ::import_kvpb::SwitchModeResponse* response) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
@@ -259,7 +260,7 @@ class ImportKV final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status OpenEngine(::grpc::ServerContext* context, const ::import_kvpb::OpenEngineRequest* request, ::import_kvpb::OpenEngineResponse* response) final override {
+    ::grpc::Status OpenEngine(::grpc::ServerContext* context, const ::import_kvpb::OpenEngineRequest* request, ::import_kvpb::OpenEngineResponse* response) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
@@ -279,7 +280,7 @@ class ImportKV final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status WriteEngine(::grpc::ServerContext* context, ::grpc::ServerReader< ::import_kvpb::WriteEngineRequest>* reader, ::import_kvpb::WriteEngineResponse* response) final override {
+    ::grpc::Status WriteEngine(::grpc::ServerContext* context, ::grpc::ServerReader< ::import_kvpb::WriteEngineRequest>* reader, ::import_kvpb::WriteEngineResponse* response) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
@@ -299,7 +300,7 @@ class ImportKV final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status CloseEngine(::grpc::ServerContext* context, const ::import_kvpb::CloseEngineRequest* request, ::import_kvpb::CloseEngineResponse* response) final override {
+    ::grpc::Status CloseEngine(::grpc::ServerContext* context, const ::import_kvpb::CloseEngineRequest* request, ::import_kvpb::CloseEngineResponse* response) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
@@ -319,7 +320,7 @@ class ImportKV final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status ImportEngine(::grpc::ServerContext* context, const ::import_kvpb::ImportEngineRequest* request, ::import_kvpb::ImportEngineResponse* response) final override {
+    ::grpc::Status ImportEngine(::grpc::ServerContext* context, const ::import_kvpb::ImportEngineRequest* request, ::import_kvpb::ImportEngineResponse* response) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
@@ -339,7 +340,7 @@ class ImportKV final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status CleanupEngine(::grpc::ServerContext* context, const ::import_kvpb::CleanupEngineRequest* request, ::import_kvpb::CleanupEngineResponse* response) final override {
+    ::grpc::Status CleanupEngine(::grpc::ServerContext* context, const ::import_kvpb::CleanupEngineRequest* request, ::import_kvpb::CleanupEngineResponse* response) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
@@ -359,7 +360,7 @@ class ImportKV final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status CompactCluster(::grpc::ServerContext* context, const ::import_kvpb::CompactClusterRequest* request, ::import_kvpb::CompactClusterResponse* response) final override {
+    ::grpc::Status CompactCluster(::grpc::ServerContext* context, const ::import_kvpb::CompactClusterRequest* request, ::import_kvpb::CompactClusterResponse* response) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
@@ -380,7 +381,7 @@ class ImportKV final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status SwitchMode(::grpc::ServerContext* context, const ::import_kvpb::SwitchModeRequest* request, ::import_kvpb::SwitchModeResponse* response) final override {
+    ::grpc::Status SwitchMode(::grpc::ServerContext* context, const ::import_kvpb::SwitchModeRequest* request, ::import_kvpb::SwitchModeResponse* response) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
@@ -397,7 +398,7 @@ class ImportKV final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status OpenEngine(::grpc::ServerContext* context, const ::import_kvpb::OpenEngineRequest* request, ::import_kvpb::OpenEngineResponse* response) final override {
+    ::grpc::Status OpenEngine(::grpc::ServerContext* context, const ::import_kvpb::OpenEngineRequest* request, ::import_kvpb::OpenEngineResponse* response) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
@@ -414,7 +415,7 @@ class ImportKV final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status WriteEngine(::grpc::ServerContext* context, ::grpc::ServerReader< ::import_kvpb::WriteEngineRequest>* reader, ::import_kvpb::WriteEngineResponse* response) final override {
+    ::grpc::Status WriteEngine(::grpc::ServerContext* context, ::grpc::ServerReader< ::import_kvpb::WriteEngineRequest>* reader, ::import_kvpb::WriteEngineResponse* response) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
@@ -431,7 +432,7 @@ class ImportKV final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status CloseEngine(::grpc::ServerContext* context, const ::import_kvpb::CloseEngineRequest* request, ::import_kvpb::CloseEngineResponse* response) final override {
+    ::grpc::Status CloseEngine(::grpc::ServerContext* context, const ::import_kvpb::CloseEngineRequest* request, ::import_kvpb::CloseEngineResponse* response) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
@@ -448,7 +449,7 @@ class ImportKV final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status ImportEngine(::grpc::ServerContext* context, const ::import_kvpb::ImportEngineRequest* request, ::import_kvpb::ImportEngineResponse* response) final override {
+    ::grpc::Status ImportEngine(::grpc::ServerContext* context, const ::import_kvpb::ImportEngineRequest* request, ::import_kvpb::ImportEngineResponse* response) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
@@ -465,7 +466,7 @@ class ImportKV final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status CleanupEngine(::grpc::ServerContext* context, const ::import_kvpb::CleanupEngineRequest* request, ::import_kvpb::CleanupEngineResponse* response) final override {
+    ::grpc::Status CleanupEngine(::grpc::ServerContext* context, const ::import_kvpb::CleanupEngineRequest* request, ::import_kvpb::CleanupEngineResponse* response) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
@@ -482,9 +483,149 @@ class ImportKV final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status CompactCluster(::grpc::ServerContext* context, const ::import_kvpb::CompactClusterRequest* request, ::import_kvpb::CompactClusterResponse* response) final override {
+    ::grpc::Status CompactCluster(::grpc::ServerContext* context, const ::import_kvpb::CompactClusterRequest* request, ::import_kvpb::CompactClusterResponse* response) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
+    }
+  };
+  template <class BaseClass>
+  class WithRawMethod_SwitchMode : public BaseClass {
+   private:
+    void BaseClassMustBeDerivedFromService(const Service *service) {}
+   public:
+    WithRawMethod_SwitchMode() {
+      ::grpc::Service::MarkMethodRaw(0);
+    }
+    ~WithRawMethod_SwitchMode() override {
+      BaseClassMustBeDerivedFromService(this);
+    }
+    // disable synchronous version of this method
+    ::grpc::Status SwitchMode(::grpc::ServerContext* context, const ::import_kvpb::SwitchModeRequest* request, ::import_kvpb::SwitchModeResponse* response) override {
+      abort();
+      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
+    }
+    void RequestSwitchMode(::grpc::ServerContext* context, ::grpc::ByteBuffer* request, ::grpc::ServerAsyncResponseWriter< ::grpc::ByteBuffer>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
+      ::grpc::Service::RequestAsyncUnary(0, context, request, response, new_call_cq, notification_cq, tag);
+    }
+  };
+  template <class BaseClass>
+  class WithRawMethod_OpenEngine : public BaseClass {
+   private:
+    void BaseClassMustBeDerivedFromService(const Service *service) {}
+   public:
+    WithRawMethod_OpenEngine() {
+      ::grpc::Service::MarkMethodRaw(1);
+    }
+    ~WithRawMethod_OpenEngine() override {
+      BaseClassMustBeDerivedFromService(this);
+    }
+    // disable synchronous version of this method
+    ::grpc::Status OpenEngine(::grpc::ServerContext* context, const ::import_kvpb::OpenEngineRequest* request, ::import_kvpb::OpenEngineResponse* response) override {
+      abort();
+      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
+    }
+    void RequestOpenEngine(::grpc::ServerContext* context, ::grpc::ByteBuffer* request, ::grpc::ServerAsyncResponseWriter< ::grpc::ByteBuffer>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
+      ::grpc::Service::RequestAsyncUnary(1, context, request, response, new_call_cq, notification_cq, tag);
+    }
+  };
+  template <class BaseClass>
+  class WithRawMethod_WriteEngine : public BaseClass {
+   private:
+    void BaseClassMustBeDerivedFromService(const Service *service) {}
+   public:
+    WithRawMethod_WriteEngine() {
+      ::grpc::Service::MarkMethodRaw(2);
+    }
+    ~WithRawMethod_WriteEngine() override {
+      BaseClassMustBeDerivedFromService(this);
+    }
+    // disable synchronous version of this method
+    ::grpc::Status WriteEngine(::grpc::ServerContext* context, ::grpc::ServerReader< ::import_kvpb::WriteEngineRequest>* reader, ::import_kvpb::WriteEngineResponse* response) override {
+      abort();
+      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
+    }
+    void RequestWriteEngine(::grpc::ServerContext* context, ::grpc::ServerAsyncReader< ::grpc::ByteBuffer, ::grpc::ByteBuffer>* reader, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
+      ::grpc::Service::RequestAsyncClientStreaming(2, context, reader, new_call_cq, notification_cq, tag);
+    }
+  };
+  template <class BaseClass>
+  class WithRawMethod_CloseEngine : public BaseClass {
+   private:
+    void BaseClassMustBeDerivedFromService(const Service *service) {}
+   public:
+    WithRawMethod_CloseEngine() {
+      ::grpc::Service::MarkMethodRaw(3);
+    }
+    ~WithRawMethod_CloseEngine() override {
+      BaseClassMustBeDerivedFromService(this);
+    }
+    // disable synchronous version of this method
+    ::grpc::Status CloseEngine(::grpc::ServerContext* context, const ::import_kvpb::CloseEngineRequest* request, ::import_kvpb::CloseEngineResponse* response) override {
+      abort();
+      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
+    }
+    void RequestCloseEngine(::grpc::ServerContext* context, ::grpc::ByteBuffer* request, ::grpc::ServerAsyncResponseWriter< ::grpc::ByteBuffer>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
+      ::grpc::Service::RequestAsyncUnary(3, context, request, response, new_call_cq, notification_cq, tag);
+    }
+  };
+  template <class BaseClass>
+  class WithRawMethod_ImportEngine : public BaseClass {
+   private:
+    void BaseClassMustBeDerivedFromService(const Service *service) {}
+   public:
+    WithRawMethod_ImportEngine() {
+      ::grpc::Service::MarkMethodRaw(4);
+    }
+    ~WithRawMethod_ImportEngine() override {
+      BaseClassMustBeDerivedFromService(this);
+    }
+    // disable synchronous version of this method
+    ::grpc::Status ImportEngine(::grpc::ServerContext* context, const ::import_kvpb::ImportEngineRequest* request, ::import_kvpb::ImportEngineResponse* response) override {
+      abort();
+      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
+    }
+    void RequestImportEngine(::grpc::ServerContext* context, ::grpc::ByteBuffer* request, ::grpc::ServerAsyncResponseWriter< ::grpc::ByteBuffer>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
+      ::grpc::Service::RequestAsyncUnary(4, context, request, response, new_call_cq, notification_cq, tag);
+    }
+  };
+  template <class BaseClass>
+  class WithRawMethod_CleanupEngine : public BaseClass {
+   private:
+    void BaseClassMustBeDerivedFromService(const Service *service) {}
+   public:
+    WithRawMethod_CleanupEngine() {
+      ::grpc::Service::MarkMethodRaw(5);
+    }
+    ~WithRawMethod_CleanupEngine() override {
+      BaseClassMustBeDerivedFromService(this);
+    }
+    // disable synchronous version of this method
+    ::grpc::Status CleanupEngine(::grpc::ServerContext* context, const ::import_kvpb::CleanupEngineRequest* request, ::import_kvpb::CleanupEngineResponse* response) override {
+      abort();
+      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
+    }
+    void RequestCleanupEngine(::grpc::ServerContext* context, ::grpc::ByteBuffer* request, ::grpc::ServerAsyncResponseWriter< ::grpc::ByteBuffer>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
+      ::grpc::Service::RequestAsyncUnary(5, context, request, response, new_call_cq, notification_cq, tag);
+    }
+  };
+  template <class BaseClass>
+  class WithRawMethod_CompactCluster : public BaseClass {
+   private:
+    void BaseClassMustBeDerivedFromService(const Service *service) {}
+   public:
+    WithRawMethod_CompactCluster() {
+      ::grpc::Service::MarkMethodRaw(6);
+    }
+    ~WithRawMethod_CompactCluster() override {
+      BaseClassMustBeDerivedFromService(this);
+    }
+    // disable synchronous version of this method
+    ::grpc::Status CompactCluster(::grpc::ServerContext* context, const ::import_kvpb::CompactClusterRequest* request, ::import_kvpb::CompactClusterResponse* response) override {
+      abort();
+      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
+    }
+    void RequestCompactCluster(::grpc::ServerContext* context, ::grpc::ByteBuffer* request, ::grpc::ServerAsyncResponseWriter< ::grpc::ByteBuffer>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
+      ::grpc::Service::RequestAsyncUnary(6, context, request, response, new_call_cq, notification_cq, tag);
     }
   };
   template <class BaseClass>
@@ -500,7 +641,7 @@ class ImportKV final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable regular version of this method
-    ::grpc::Status SwitchMode(::grpc::ServerContext* context, const ::import_kvpb::SwitchModeRequest* request, ::import_kvpb::SwitchModeResponse* response) final override {
+    ::grpc::Status SwitchMode(::grpc::ServerContext* context, const ::import_kvpb::SwitchModeRequest* request, ::import_kvpb::SwitchModeResponse* response) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
@@ -520,7 +661,7 @@ class ImportKV final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable regular version of this method
-    ::grpc::Status OpenEngine(::grpc::ServerContext* context, const ::import_kvpb::OpenEngineRequest* request, ::import_kvpb::OpenEngineResponse* response) final override {
+    ::grpc::Status OpenEngine(::grpc::ServerContext* context, const ::import_kvpb::OpenEngineRequest* request, ::import_kvpb::OpenEngineResponse* response) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
@@ -540,7 +681,7 @@ class ImportKV final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable regular version of this method
-    ::grpc::Status CloseEngine(::grpc::ServerContext* context, const ::import_kvpb::CloseEngineRequest* request, ::import_kvpb::CloseEngineResponse* response) final override {
+    ::grpc::Status CloseEngine(::grpc::ServerContext* context, const ::import_kvpb::CloseEngineRequest* request, ::import_kvpb::CloseEngineResponse* response) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
@@ -560,7 +701,7 @@ class ImportKV final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable regular version of this method
-    ::grpc::Status ImportEngine(::grpc::ServerContext* context, const ::import_kvpb::ImportEngineRequest* request, ::import_kvpb::ImportEngineResponse* response) final override {
+    ::grpc::Status ImportEngine(::grpc::ServerContext* context, const ::import_kvpb::ImportEngineRequest* request, ::import_kvpb::ImportEngineResponse* response) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
@@ -580,7 +721,7 @@ class ImportKV final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable regular version of this method
-    ::grpc::Status CleanupEngine(::grpc::ServerContext* context, const ::import_kvpb::CleanupEngineRequest* request, ::import_kvpb::CleanupEngineResponse* response) final override {
+    ::grpc::Status CleanupEngine(::grpc::ServerContext* context, const ::import_kvpb::CleanupEngineRequest* request, ::import_kvpb::CleanupEngineResponse* response) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
@@ -600,7 +741,7 @@ class ImportKV final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable regular version of this method
-    ::grpc::Status CompactCluster(::grpc::ServerContext* context, const ::import_kvpb::CompactClusterRequest* request, ::import_kvpb::CompactClusterResponse* response) final override {
+    ::grpc::Status CompactCluster(::grpc::ServerContext* context, const ::import_kvpb::CompactClusterRequest* request, ::import_kvpb::CompactClusterResponse* response) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }

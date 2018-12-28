@@ -41,7 +41,7 @@ namespace protobuf_raft_5fcmdpb_2eproto {
 struct TableStruct {
   static const ::google::protobuf::internal::ParseTableField entries[];
   static const ::google::protobuf::internal::AuxillaryParseTableField aux[];
-  static const ::google::protobuf::internal::ParseTable schema[46];
+  static const ::google::protobuf::internal::ParseTable schema[48];
   static const ::google::protobuf::internal::FieldMetadata field_metadata[];
   static const ::google::protobuf::internal::SerializationTable serialization_table[];
   static const ::google::protobuf::uint32 offsets[];
@@ -75,6 +75,10 @@ void InitDefaultsIngestSSTRequestImpl();
 void InitDefaultsIngestSSTRequest();
 void InitDefaultsIngestSSTResponseImpl();
 void InitDefaultsIngestSSTResponse();
+void InitDefaultsReadIndexRequestImpl();
+void InitDefaultsReadIndexRequest();
+void InitDefaultsReadIndexResponseImpl();
+void InitDefaultsReadIndexResponse();
 void InitDefaultsRequestImpl();
 void InitDefaultsRequest();
 void InitDefaultsResponseImpl();
@@ -154,6 +158,8 @@ inline void InitDefaults() {
   InitDefaultsPrewriteResponse();
   InitDefaultsIngestSSTRequest();
   InitDefaultsIngestSSTResponse();
+  InitDefaultsReadIndexRequest();
+  InitDefaultsReadIndexResponse();
   InitDefaultsRequest();
   InitDefaultsResponse();
   InitDefaultsChangePeerRequest();
@@ -273,6 +279,12 @@ extern RaftRequestHeaderDefaultTypeInternal _RaftRequestHeader_default_instance_
 class RaftResponseHeader;
 class RaftResponseHeaderDefaultTypeInternal;
 extern RaftResponseHeaderDefaultTypeInternal _RaftResponseHeader_default_instance_;
+class ReadIndexRequest;
+class ReadIndexRequestDefaultTypeInternal;
+extern ReadIndexRequestDefaultTypeInternal _ReadIndexRequest_default_instance_;
+class ReadIndexResponse;
+class ReadIndexResponseDefaultTypeInternal;
+extern ReadIndexResponseDefaultTypeInternal _ReadIndexResponse_default_instance_;
 class RegionDetailRequest;
 class RegionDetailRequestDefaultTypeInternal;
 extern RegionDetailRequestDefaultTypeInternal _RegionDetailRequest_default_instance_;
@@ -339,12 +351,13 @@ enum CmdType {
   Prewrite = 6,
   DeleteRange = 7,
   IngestSST = 8,
+  ReadIndex = 9,
   CmdType_INT_MIN_SENTINEL_DO_NOT_USE_ = ::google::protobuf::kint32min,
   CmdType_INT_MAX_SENTINEL_DO_NOT_USE_ = ::google::protobuf::kint32max
 };
 bool CmdType_IsValid(int value);
 const CmdType CmdType_MIN = Invalid;
-const CmdType CmdType_MAX = IngestSST;
+const CmdType CmdType_MAX = ReadIndex;
 const int CmdType_ARRAYSIZE = CmdType_MAX + 1;
 
 const ::google::protobuf::EnumDescriptor* CmdType_descriptor();
@@ -1929,6 +1942,197 @@ class IngestSSTResponse : public ::google::protobuf::Message /* @@protoc_inserti
 };
 // -------------------------------------------------------------------
 
+class ReadIndexRequest : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:raft_cmdpb.ReadIndexRequest) */ {
+ public:
+  ReadIndexRequest();
+  virtual ~ReadIndexRequest();
+
+  ReadIndexRequest(const ReadIndexRequest& from);
+
+  inline ReadIndexRequest& operator=(const ReadIndexRequest& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  #if LANG_CXX11
+  ReadIndexRequest(ReadIndexRequest&& from) noexcept
+    : ReadIndexRequest() {
+    *this = ::std::move(from);
+  }
+
+  inline ReadIndexRequest& operator=(ReadIndexRequest&& from) noexcept {
+    if (GetArenaNoVirtual() == from.GetArenaNoVirtual()) {
+      if (this != &from) InternalSwap(&from);
+    } else {
+      CopyFrom(from);
+    }
+    return *this;
+  }
+  #endif
+  static const ::google::protobuf::Descriptor* descriptor();
+  static const ReadIndexRequest& default_instance();
+
+  static void InitAsDefaultInstance();  // FOR INTERNAL USE ONLY
+  static inline const ReadIndexRequest* internal_default_instance() {
+    return reinterpret_cast<const ReadIndexRequest*>(
+               &_ReadIndexRequest_default_instance_);
+  }
+  static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
+    14;
+
+  void Swap(ReadIndexRequest* other);
+  friend void swap(ReadIndexRequest& a, ReadIndexRequest& b) {
+    a.Swap(&b);
+  }
+
+  // implements Message ----------------------------------------------
+
+  inline ReadIndexRequest* New() const PROTOBUF_FINAL { return New(NULL); }
+
+  ReadIndexRequest* New(::google::protobuf::Arena* arena) const PROTOBUF_FINAL;
+  void CopyFrom(const ::google::protobuf::Message& from) PROTOBUF_FINAL;
+  void MergeFrom(const ::google::protobuf::Message& from) PROTOBUF_FINAL;
+  void CopyFrom(const ReadIndexRequest& from);
+  void MergeFrom(const ReadIndexRequest& from);
+  void Clear() PROTOBUF_FINAL;
+  bool IsInitialized() const PROTOBUF_FINAL;
+
+  size_t ByteSizeLong() const PROTOBUF_FINAL;
+  bool MergePartialFromCodedStream(
+      ::google::protobuf::io::CodedInputStream* input) PROTOBUF_FINAL;
+  void SerializeWithCachedSizes(
+      ::google::protobuf::io::CodedOutputStream* output) const PROTOBUF_FINAL;
+  ::google::protobuf::uint8* InternalSerializeWithCachedSizesToArray(
+      bool deterministic, ::google::protobuf::uint8* target) const PROTOBUF_FINAL;
+  int GetCachedSize() const PROTOBUF_FINAL { return _cached_size_; }
+  private:
+  void SharedCtor();
+  void SharedDtor();
+  void SetCachedSize(int size) const PROTOBUF_FINAL;
+  void InternalSwap(ReadIndexRequest* other);
+  private:
+  inline ::google::protobuf::Arena* GetArenaNoVirtual() const {
+    return NULL;
+  }
+  inline void* MaybeArenaPtr() const {
+    return NULL;
+  }
+  public:
+
+  ::google::protobuf::Metadata GetMetadata() const PROTOBUF_FINAL;
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  // @@protoc_insertion_point(class_scope:raft_cmdpb.ReadIndexRequest)
+ private:
+
+  ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
+  mutable int _cached_size_;
+  friend struct ::protobuf_raft_5fcmdpb_2eproto::TableStruct;
+  friend void ::protobuf_raft_5fcmdpb_2eproto::InitDefaultsReadIndexRequestImpl();
+};
+// -------------------------------------------------------------------
+
+class ReadIndexResponse : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:raft_cmdpb.ReadIndexResponse) */ {
+ public:
+  ReadIndexResponse();
+  virtual ~ReadIndexResponse();
+
+  ReadIndexResponse(const ReadIndexResponse& from);
+
+  inline ReadIndexResponse& operator=(const ReadIndexResponse& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  #if LANG_CXX11
+  ReadIndexResponse(ReadIndexResponse&& from) noexcept
+    : ReadIndexResponse() {
+    *this = ::std::move(from);
+  }
+
+  inline ReadIndexResponse& operator=(ReadIndexResponse&& from) noexcept {
+    if (GetArenaNoVirtual() == from.GetArenaNoVirtual()) {
+      if (this != &from) InternalSwap(&from);
+    } else {
+      CopyFrom(from);
+    }
+    return *this;
+  }
+  #endif
+  static const ::google::protobuf::Descriptor* descriptor();
+  static const ReadIndexResponse& default_instance();
+
+  static void InitAsDefaultInstance();  // FOR INTERNAL USE ONLY
+  static inline const ReadIndexResponse* internal_default_instance() {
+    return reinterpret_cast<const ReadIndexResponse*>(
+               &_ReadIndexResponse_default_instance_);
+  }
+  static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
+    15;
+
+  void Swap(ReadIndexResponse* other);
+  friend void swap(ReadIndexResponse& a, ReadIndexResponse& b) {
+    a.Swap(&b);
+  }
+
+  // implements Message ----------------------------------------------
+
+  inline ReadIndexResponse* New() const PROTOBUF_FINAL { return New(NULL); }
+
+  ReadIndexResponse* New(::google::protobuf::Arena* arena) const PROTOBUF_FINAL;
+  void CopyFrom(const ::google::protobuf::Message& from) PROTOBUF_FINAL;
+  void MergeFrom(const ::google::protobuf::Message& from) PROTOBUF_FINAL;
+  void CopyFrom(const ReadIndexResponse& from);
+  void MergeFrom(const ReadIndexResponse& from);
+  void Clear() PROTOBUF_FINAL;
+  bool IsInitialized() const PROTOBUF_FINAL;
+
+  size_t ByteSizeLong() const PROTOBUF_FINAL;
+  bool MergePartialFromCodedStream(
+      ::google::protobuf::io::CodedInputStream* input) PROTOBUF_FINAL;
+  void SerializeWithCachedSizes(
+      ::google::protobuf::io::CodedOutputStream* output) const PROTOBUF_FINAL;
+  ::google::protobuf::uint8* InternalSerializeWithCachedSizesToArray(
+      bool deterministic, ::google::protobuf::uint8* target) const PROTOBUF_FINAL;
+  int GetCachedSize() const PROTOBUF_FINAL { return _cached_size_; }
+  private:
+  void SharedCtor();
+  void SharedDtor();
+  void SetCachedSize(int size) const PROTOBUF_FINAL;
+  void InternalSwap(ReadIndexResponse* other);
+  private:
+  inline ::google::protobuf::Arena* GetArenaNoVirtual() const {
+    return NULL;
+  }
+  inline void* MaybeArenaPtr() const {
+    return NULL;
+  }
+  public:
+
+  ::google::protobuf::Metadata GetMetadata() const PROTOBUF_FINAL;
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  // uint64 read_index = 1;
+  void clear_read_index();
+  static const int kReadIndexFieldNumber = 1;
+  ::google::protobuf::uint64 read_index() const;
+  void set_read_index(::google::protobuf::uint64 value);
+
+  // @@protoc_insertion_point(class_scope:raft_cmdpb.ReadIndexResponse)
+ private:
+
+  ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
+  ::google::protobuf::uint64 read_index_;
+  mutable int _cached_size_;
+  friend struct ::protobuf_raft_5fcmdpb_2eproto::TableStruct;
+  friend void ::protobuf_raft_5fcmdpb_2eproto::InitDefaultsReadIndexResponseImpl();
+};
+// -------------------------------------------------------------------
+
 class Request : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:raft_cmdpb.Request) */ {
  public:
   Request();
@@ -1964,7 +2168,7 @@ class Request : public ::google::protobuf::Message /* @@protoc_insertion_point(c
                &_Request_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    14;
+    16;
 
   void Swap(Request* other);
   friend void swap(Request& a, Request& b) {
@@ -2074,6 +2278,15 @@ class Request : public ::google::protobuf::Message /* @@protoc_insertion_point(c
   ::raft_cmdpb::IngestSSTRequest* mutable_ingest_sst();
   void set_allocated_ingest_sst(::raft_cmdpb::IngestSSTRequest* ingest_sst);
 
+  // .raft_cmdpb.ReadIndexRequest read_index = 10;
+  bool has_read_index() const;
+  void clear_read_index();
+  static const int kReadIndexFieldNumber = 10;
+  const ::raft_cmdpb::ReadIndexRequest& read_index() const;
+  ::raft_cmdpb::ReadIndexRequest* release_read_index();
+  ::raft_cmdpb::ReadIndexRequest* mutable_read_index();
+  void set_allocated_read_index(::raft_cmdpb::ReadIndexRequest* read_index);
+
   // .raft_cmdpb.CmdType cmd_type = 1;
   void clear_cmd_type();
   static const int kCmdTypeFieldNumber = 1;
@@ -2091,6 +2304,7 @@ class Request : public ::google::protobuf::Message /* @@protoc_insertion_point(c
   ::raft_cmdpb::PrewriteRequest* prewrite_;
   ::raft_cmdpb::DeleteRangeRequest* delete_range_;
   ::raft_cmdpb::IngestSSTRequest* ingest_sst_;
+  ::raft_cmdpb::ReadIndexRequest* read_index_;
   int cmd_type_;
   mutable int _cached_size_;
   friend struct ::protobuf_raft_5fcmdpb_2eproto::TableStruct;
@@ -2133,7 +2347,7 @@ class Response : public ::google::protobuf::Message /* @@protoc_insertion_point(
                &_Response_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    15;
+    17;
 
   void Swap(Response* other);
   friend void swap(Response& a, Response& b) {
@@ -2243,6 +2457,15 @@ class Response : public ::google::protobuf::Message /* @@protoc_insertion_point(
   ::raft_cmdpb::IngestSSTResponse* mutable_ingest_sst();
   void set_allocated_ingest_sst(::raft_cmdpb::IngestSSTResponse* ingest_sst);
 
+  // .raft_cmdpb.ReadIndexResponse read_index = 10;
+  bool has_read_index() const;
+  void clear_read_index();
+  static const int kReadIndexFieldNumber = 10;
+  const ::raft_cmdpb::ReadIndexResponse& read_index() const;
+  ::raft_cmdpb::ReadIndexResponse* release_read_index();
+  ::raft_cmdpb::ReadIndexResponse* mutable_read_index();
+  void set_allocated_read_index(::raft_cmdpb::ReadIndexResponse* read_index);
+
   // .raft_cmdpb.CmdType cmd_type = 1;
   void clear_cmd_type();
   static const int kCmdTypeFieldNumber = 1;
@@ -2260,6 +2483,7 @@ class Response : public ::google::protobuf::Message /* @@protoc_insertion_point(
   ::raft_cmdpb::PrewriteResponse* prewrite_;
   ::raft_cmdpb::DeleteRangeResponse* delte_range_;
   ::raft_cmdpb::IngestSSTResponse* ingest_sst_;
+  ::raft_cmdpb::ReadIndexResponse* read_index_;
   int cmd_type_;
   mutable int _cached_size_;
   friend struct ::protobuf_raft_5fcmdpb_2eproto::TableStruct;
@@ -2302,7 +2526,7 @@ class ChangePeerRequest : public ::google::protobuf::Message /* @@protoc_inserti
                &_ChangePeerRequest_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    16;
+    18;
 
   void Swap(ChangePeerRequest* other);
   friend void swap(ChangePeerRequest& a, ChangePeerRequest& b) {
@@ -2411,7 +2635,7 @@ class ChangePeerResponse : public ::google::protobuf::Message /* @@protoc_insert
                &_ChangePeerResponse_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    17;
+    19;
 
   void Swap(ChangePeerResponse* other);
   friend void swap(ChangePeerResponse& a, ChangePeerResponse& b) {
@@ -2513,7 +2737,7 @@ class SplitRequest : public ::google::protobuf::Message /* @@protoc_insertion_po
                &_SplitRequest_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    18;
+    20;
 
   void Swap(SplitRequest* other);
   friend void swap(SplitRequest& a, SplitRequest& b) {
@@ -2648,7 +2872,7 @@ class SplitResponse : public ::google::protobuf::Message /* @@protoc_insertion_p
                &_SplitResponse_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    19;
+    21;
 
   void Swap(SplitResponse* other);
   friend void swap(SplitResponse& a, SplitResponse& b) {
@@ -2760,7 +2984,7 @@ class BatchSplitRequest : public ::google::protobuf::Message /* @@protoc_inserti
                &_BatchSplitRequest_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    20;
+    22;
 
   void Swap(BatchSplitRequest* other);
   friend void swap(BatchSplitRequest& a, BatchSplitRequest& b) {
@@ -2872,7 +3096,7 @@ class BatchSplitResponse : public ::google::protobuf::Message /* @@protoc_insert
                &_BatchSplitResponse_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    21;
+    23;
 
   void Swap(BatchSplitResponse* other);
   friend void swap(BatchSplitResponse& a, BatchSplitResponse& b) {
@@ -2977,7 +3201,7 @@ class CompactLogRequest : public ::google::protobuf::Message /* @@protoc_inserti
                &_CompactLogRequest_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    22;
+    24;
 
   void Swap(CompactLogRequest* other);
   friend void swap(CompactLogRequest& a, CompactLogRequest& b) {
@@ -3083,7 +3307,7 @@ class CompactLogResponse : public ::google::protobuf::Message /* @@protoc_insert
                &_CompactLogResponse_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    23;
+    25;
 
   void Swap(CompactLogResponse* other);
   friend void swap(CompactLogResponse& a, CompactLogResponse& b) {
@@ -3175,7 +3399,7 @@ class TransferLeaderRequest : public ::google::protobuf::Message /* @@protoc_ins
                &_TransferLeaderRequest_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    24;
+    26;
 
   void Swap(TransferLeaderRequest* other);
   friend void swap(TransferLeaderRequest& a, TransferLeaderRequest& b) {
@@ -3277,7 +3501,7 @@ class TransferLeaderResponse : public ::google::protobuf::Message /* @@protoc_in
                &_TransferLeaderResponse_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    25;
+    27;
 
   void Swap(TransferLeaderResponse* other);
   friend void swap(TransferLeaderResponse& a, TransferLeaderResponse& b) {
@@ -3369,7 +3593,7 @@ class VerifyHashRequest : public ::google::protobuf::Message /* @@protoc_inserti
                &_VerifyHashRequest_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    26;
+    28;
 
   void Swap(VerifyHashRequest* other);
   friend void swap(VerifyHashRequest& a, VerifyHashRequest& b) {
@@ -3483,7 +3707,7 @@ class VerifyHashResponse : public ::google::protobuf::Message /* @@protoc_insert
                &_VerifyHashResponse_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    27;
+    29;
 
   void Swap(VerifyHashResponse* other);
   friend void swap(VerifyHashResponse& a, VerifyHashResponse& b) {
@@ -3575,7 +3799,7 @@ class PrepareMergeRequest : public ::google::protobuf::Message /* @@protoc_inser
                &_PrepareMergeRequest_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    28;
+    30;
 
   void Swap(PrepareMergeRequest* other);
   friend void swap(PrepareMergeRequest& a, PrepareMergeRequest& b) {
@@ -3684,7 +3908,7 @@ class PrepareMergeResponse : public ::google::protobuf::Message /* @@protoc_inse
                &_PrepareMergeResponse_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    29;
+    31;
 
   void Swap(PrepareMergeResponse* other);
   friend void swap(PrepareMergeResponse& a, PrepareMergeResponse& b) {
@@ -3776,7 +4000,7 @@ class CommitMergeRequest : public ::google::protobuf::Message /* @@protoc_insert
                &_CommitMergeRequest_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    30;
+    32;
 
   void Swap(CommitMergeRequest* other);
   friend void swap(CommitMergeRequest& a, CommitMergeRequest& b) {
@@ -3898,7 +4122,7 @@ class CommitMergeResponse : public ::google::protobuf::Message /* @@protoc_inser
                &_CommitMergeResponse_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    31;
+    33;
 
   void Swap(CommitMergeResponse* other);
   friend void swap(CommitMergeResponse& a, CommitMergeResponse& b) {
@@ -3990,7 +4214,7 @@ class RollbackMergeRequest : public ::google::protobuf::Message /* @@protoc_inse
                &_RollbackMergeRequest_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    32;
+    34;
 
   void Swap(RollbackMergeRequest* other);
   friend void swap(RollbackMergeRequest& a, RollbackMergeRequest& b) {
@@ -4089,7 +4313,7 @@ class RollbackMergeResponse : public ::google::protobuf::Message /* @@protoc_ins
                &_RollbackMergeResponse_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    33;
+    35;
 
   void Swap(RollbackMergeResponse* other);
   friend void swap(RollbackMergeResponse& a, RollbackMergeResponse& b) {
@@ -4181,7 +4405,7 @@ class AdminRequest : public ::google::protobuf::Message /* @@protoc_insertion_po
                &_AdminRequest_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    34;
+    36;
 
   void Swap(AdminRequest* other);
   friend void swap(AdminRequest& a, AdminRequest& b) {
@@ -4370,7 +4594,7 @@ class AdminResponse : public ::google::protobuf::Message /* @@protoc_insertion_p
                &_AdminResponse_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    35;
+    37;
 
   void Swap(AdminResponse* other);
   friend void swap(AdminResponse& a, AdminResponse& b) {
@@ -4559,7 +4783,7 @@ class RegionLeaderRequest : public ::google::protobuf::Message /* @@protoc_inser
                &_RegionLeaderRequest_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    36;
+    38;
 
   void Swap(RegionLeaderRequest* other);
   friend void swap(RegionLeaderRequest& a, RegionLeaderRequest& b) {
@@ -4651,7 +4875,7 @@ class RegionLeaderResponse : public ::google::protobuf::Message /* @@protoc_inse
                &_RegionLeaderResponse_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    37;
+    39;
 
   void Swap(RegionLeaderResponse* other);
   friend void swap(RegionLeaderResponse& a, RegionLeaderResponse& b) {
@@ -4753,7 +4977,7 @@ class RegionDetailRequest : public ::google::protobuf::Message /* @@protoc_inser
                &_RegionDetailRequest_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    38;
+    40;
 
   void Swap(RegionDetailRequest* other);
   friend void swap(RegionDetailRequest& a, RegionDetailRequest& b) {
@@ -4845,7 +5069,7 @@ class RegionDetailResponse : public ::google::protobuf::Message /* @@protoc_inse
                &_RegionDetailResponse_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    39;
+    41;
 
   void Swap(RegionDetailResponse* other);
   friend void swap(RegionDetailResponse& a, RegionDetailResponse& b) {
@@ -4957,7 +5181,7 @@ class StatusRequest : public ::google::protobuf::Message /* @@protoc_insertion_p
                &_StatusRequest_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    40;
+    42;
 
   void Swap(StatusRequest* other);
   friend void swap(StatusRequest& a, StatusRequest& b) {
@@ -5076,7 +5300,7 @@ class StatusResponse : public ::google::protobuf::Message /* @@protoc_insertion_
                &_StatusResponse_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    41;
+    43;
 
   void Swap(StatusResponse* other);
   friend void swap(StatusResponse& a, StatusResponse& b) {
@@ -5195,7 +5419,7 @@ class RaftRequestHeader : public ::google::protobuf::Message /* @@protoc_inserti
                &_RaftRequestHeader_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    42;
+    44;
 
   void Swap(RaftRequestHeader* other);
   friend void swap(RaftRequestHeader& a, RaftRequestHeader& b) {
@@ -5350,7 +5574,7 @@ class RaftResponseHeader : public ::google::protobuf::Message /* @@protoc_insert
                &_RaftResponseHeader_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    43;
+    45;
 
   void Swap(RaftResponseHeader* other);
   friend void swap(RaftResponseHeader& a, RaftResponseHeader& b) {
@@ -5474,7 +5698,7 @@ class RaftCmdRequest : public ::google::protobuf::Message /* @@protoc_insertion_
                &_RaftCmdRequest_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    44;
+    46;
 
   void Swap(RaftCmdRequest* other);
   friend void swap(RaftCmdRequest& a, RaftCmdRequest& b) {
@@ -5609,7 +5833,7 @@ class RaftCmdResponse : public ::google::protobuf::Message /* @@protoc_insertion
                &_RaftCmdResponse_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    45;
+    47;
 
   void Swap(RaftCmdResponse* other);
   friend void swap(RaftCmdResponse& a, RaftCmdResponse& b) {
@@ -6602,6 +6826,28 @@ inline void IngestSSTRequest::set_allocated_sst(::import_sstpb::SSTMeta* sst) {
 
 // -------------------------------------------------------------------
 
+// ReadIndexRequest
+
+// -------------------------------------------------------------------
+
+// ReadIndexResponse
+
+// uint64 read_index = 1;
+inline void ReadIndexResponse::clear_read_index() {
+  read_index_ = GOOGLE_ULONGLONG(0);
+}
+inline ::google::protobuf::uint64 ReadIndexResponse::read_index() const {
+  // @@protoc_insertion_point(field_get:raft_cmdpb.ReadIndexResponse.read_index)
+  return read_index_;
+}
+inline void ReadIndexResponse::set_read_index(::google::protobuf::uint64 value) {
+  
+  read_index_ = value;
+  // @@protoc_insertion_point(field_set:raft_cmdpb.ReadIndexResponse.read_index)
+}
+
+// -------------------------------------------------------------------
+
 // Request
 
 // .raft_cmdpb.CmdType cmd_type = 1;
@@ -6966,6 +7212,56 @@ inline void Request::set_allocated_ingest_sst(::raft_cmdpb::IngestSSTRequest* in
   }
   ingest_sst_ = ingest_sst;
   // @@protoc_insertion_point(field_set_allocated:raft_cmdpb.Request.ingest_sst)
+}
+
+// .raft_cmdpb.ReadIndexRequest read_index = 10;
+inline bool Request::has_read_index() const {
+  return this != internal_default_instance() && read_index_ != NULL;
+}
+inline void Request::clear_read_index() {
+  if (GetArenaNoVirtual() == NULL && read_index_ != NULL) {
+    delete read_index_;
+  }
+  read_index_ = NULL;
+}
+inline const ::raft_cmdpb::ReadIndexRequest& Request::read_index() const {
+  const ::raft_cmdpb::ReadIndexRequest* p = read_index_;
+  // @@protoc_insertion_point(field_get:raft_cmdpb.Request.read_index)
+  return p != NULL ? *p : *reinterpret_cast<const ::raft_cmdpb::ReadIndexRequest*>(
+      &::raft_cmdpb::_ReadIndexRequest_default_instance_);
+}
+inline ::raft_cmdpb::ReadIndexRequest* Request::release_read_index() {
+  // @@protoc_insertion_point(field_release:raft_cmdpb.Request.read_index)
+  
+  ::raft_cmdpb::ReadIndexRequest* temp = read_index_;
+  read_index_ = NULL;
+  return temp;
+}
+inline ::raft_cmdpb::ReadIndexRequest* Request::mutable_read_index() {
+  
+  if (read_index_ == NULL) {
+    read_index_ = new ::raft_cmdpb::ReadIndexRequest;
+  }
+  // @@protoc_insertion_point(field_mutable:raft_cmdpb.Request.read_index)
+  return read_index_;
+}
+inline void Request::set_allocated_read_index(::raft_cmdpb::ReadIndexRequest* read_index) {
+  ::google::protobuf::Arena* message_arena = GetArenaNoVirtual();
+  if (message_arena == NULL) {
+    delete read_index_;
+  }
+  if (read_index) {
+    ::google::protobuf::Arena* submessage_arena = NULL;
+    if (message_arena != submessage_arena) {
+      read_index = ::google::protobuf::internal::GetOwnedMessage(
+          message_arena, read_index, submessage_arena);
+    }
+    
+  } else {
+    
+  }
+  read_index_ = read_index;
+  // @@protoc_insertion_point(field_set_allocated:raft_cmdpb.Request.read_index)
 }
 
 // -------------------------------------------------------------------
@@ -7334,6 +7630,56 @@ inline void Response::set_allocated_ingest_sst(::raft_cmdpb::IngestSSTResponse* 
   }
   ingest_sst_ = ingest_sst;
   // @@protoc_insertion_point(field_set_allocated:raft_cmdpb.Response.ingest_sst)
+}
+
+// .raft_cmdpb.ReadIndexResponse read_index = 10;
+inline bool Response::has_read_index() const {
+  return this != internal_default_instance() && read_index_ != NULL;
+}
+inline void Response::clear_read_index() {
+  if (GetArenaNoVirtual() == NULL && read_index_ != NULL) {
+    delete read_index_;
+  }
+  read_index_ = NULL;
+}
+inline const ::raft_cmdpb::ReadIndexResponse& Response::read_index() const {
+  const ::raft_cmdpb::ReadIndexResponse* p = read_index_;
+  // @@protoc_insertion_point(field_get:raft_cmdpb.Response.read_index)
+  return p != NULL ? *p : *reinterpret_cast<const ::raft_cmdpb::ReadIndexResponse*>(
+      &::raft_cmdpb::_ReadIndexResponse_default_instance_);
+}
+inline ::raft_cmdpb::ReadIndexResponse* Response::release_read_index() {
+  // @@protoc_insertion_point(field_release:raft_cmdpb.Response.read_index)
+  
+  ::raft_cmdpb::ReadIndexResponse* temp = read_index_;
+  read_index_ = NULL;
+  return temp;
+}
+inline ::raft_cmdpb::ReadIndexResponse* Response::mutable_read_index() {
+  
+  if (read_index_ == NULL) {
+    read_index_ = new ::raft_cmdpb::ReadIndexResponse;
+  }
+  // @@protoc_insertion_point(field_mutable:raft_cmdpb.Response.read_index)
+  return read_index_;
+}
+inline void Response::set_allocated_read_index(::raft_cmdpb::ReadIndexResponse* read_index) {
+  ::google::protobuf::Arena* message_arena = GetArenaNoVirtual();
+  if (message_arena == NULL) {
+    delete read_index_;
+  }
+  if (read_index) {
+    ::google::protobuf::Arena* submessage_arena = NULL;
+    if (message_arena != submessage_arena) {
+      read_index = ::google::protobuf::internal::GetOwnedMessage(
+          message_arena, read_index, submessage_arena);
+    }
+    
+  } else {
+    
+  }
+  read_index_ = read_index;
+  // @@protoc_insertion_point(field_set_allocated:raft_cmdpb.Response.read_index)
 }
 
 // -------------------------------------------------------------------
@@ -10083,6 +10429,10 @@ inline void RaftCmdResponse::set_allocated_status_response(::raft_cmdpb::StatusR
 #ifdef __GNUC__
   #pragma GCC diagnostic pop
 #endif  // __GNUC__
+// -------------------------------------------------------------------
+
+// -------------------------------------------------------------------
+
 // -------------------------------------------------------------------
 
 // -------------------------------------------------------------------

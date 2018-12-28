@@ -1145,11 +1145,11 @@ void AddDescriptorsImpl() {
       "t\032!.debugpb.ModifyTikvConfigResponse\"\000\022b"
       "\n\023GetRegionProperties\022#.debugpb.GetRegio"
       "nPropertiesRequest\032$.debugpb.GetRegionPr"
-      "opertiesResponse\"\000B\032\n\030com.pingcap.tikv.k"
-      "vprotob\006proto3"
+      "opertiesResponse\"\000B\022\n\020org.tikv.kvprotob\006"
+      "proto3"
   };
   ::google::protobuf::DescriptorPool::InternalAddGeneratedFile(
-      descriptor, 3174);
+      descriptor, 3166);
   ::google::protobuf::MessageFactory::InternalRegisterGeneratedFile(
     "debugpb.proto", &protobuf_RegisterTypes);
   ::protobuf_eraftpb_2eproto::AddDescriptors();

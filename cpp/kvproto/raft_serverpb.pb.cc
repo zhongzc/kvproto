@@ -567,11 +567,10 @@ void AddDescriptorsImpl() {
       "\0132\016.metapb.Region\022.\n\013merge_state\030\003 \001(\0132\031"
       ".raft_serverpb.MergeState*A\n\tPeerState\022\n"
       "\n\006Normal\020\000\022\014\n\010Applying\020\001\022\r\n\tTombstone\020\002\022"
-      "\013\n\007Merging\020\003B\032\n\030com.pingcap.tikv.kvproto"
-      "b\006proto3"
+      "\013\n\007Merging\020\003B\022\n\020org.tikv.kvprotob\006proto3"
   };
   ::google::protobuf::DescriptorPool::InternalAddGeneratedFile(
-      descriptor, 1368);
+      descriptor, 1360);
   ::google::protobuf::MessageFactory::InternalRegisterGeneratedFile(
     "raft_serverpb.proto", &protobuf_RegisterTypes);
   ::protobuf_eraftpb_2eproto::AddDescriptors();

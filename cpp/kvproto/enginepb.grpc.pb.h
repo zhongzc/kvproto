@@ -6,15 +6,16 @@
 
 #include "enginepb.pb.h"
 
-#include <grpc++/impl/codegen/async_stream.h>
-#include <grpc++/impl/codegen/async_unary_call.h>
-#include <grpc++/impl/codegen/method_handler_impl.h>
-#include <grpc++/impl/codegen/proto_utils.h>
-#include <grpc++/impl/codegen/rpc_method.h>
-#include <grpc++/impl/codegen/service_type.h>
-#include <grpc++/impl/codegen/status.h>
-#include <grpc++/impl/codegen/stub_options.h>
-#include <grpc++/impl/codegen/sync_stream.h>
+#include <grpcpp/impl/codegen/async_generic_service.h>
+#include <grpcpp/impl/codegen/async_stream.h>
+#include <grpcpp/impl/codegen/async_unary_call.h>
+#include <grpcpp/impl/codegen/method_handler_impl.h>
+#include <grpcpp/impl/codegen/proto_utils.h>
+#include <grpcpp/impl/codegen/rpc_method.h>
+#include <grpcpp/impl/codegen/service_type.h>
+#include <grpcpp/impl/codegen/status.h>
+#include <grpcpp/impl/codegen/stub_options.h>
+#include <grpcpp/impl/codegen/sync_stream.h>
 
 namespace grpc {
 class CompletionQueue;
@@ -113,7 +114,7 @@ class Engine final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status ApplyCommandBatch(::grpc::ServerContext* context, ::grpc::ServerReaderWriter< ::enginepb::CommandResponseBatch, ::enginepb::CommandRequestBatch>* stream) final override {
+    ::grpc::Status ApplyCommandBatch(::grpc::ServerContext* context, ::grpc::ServerReaderWriter< ::enginepb::CommandResponseBatch, ::enginepb::CommandRequestBatch>* stream)  override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
@@ -133,7 +134,7 @@ class Engine final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status ApplySnapshot(::grpc::ServerContext* context, ::grpc::ServerReader< ::enginepb::SnapshotRequest>* reader, ::enginepb::SnapshotDone* response) final override {
+    ::grpc::Status ApplySnapshot(::grpc::ServerContext* context, ::grpc::ServerReader< ::enginepb::SnapshotRequest>* reader, ::enginepb::SnapshotDone* response) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
@@ -154,7 +155,7 @@ class Engine final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status ApplyCommandBatch(::grpc::ServerContext* context, ::grpc::ServerReaderWriter< ::enginepb::CommandResponseBatch, ::enginepb::CommandRequestBatch>* stream) final override {
+    ::grpc::Status ApplyCommandBatch(::grpc::ServerContext* context, ::grpc::ServerReaderWriter< ::enginepb::CommandResponseBatch, ::enginepb::CommandRequestBatch>* stream)  override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
@@ -171,9 +172,49 @@ class Engine final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status ApplySnapshot(::grpc::ServerContext* context, ::grpc::ServerReader< ::enginepb::SnapshotRequest>* reader, ::enginepb::SnapshotDone* response) final override {
+    ::grpc::Status ApplySnapshot(::grpc::ServerContext* context, ::grpc::ServerReader< ::enginepb::SnapshotRequest>* reader, ::enginepb::SnapshotDone* response) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
+    }
+  };
+  template <class BaseClass>
+  class WithRawMethod_ApplyCommandBatch : public BaseClass {
+   private:
+    void BaseClassMustBeDerivedFromService(const Service *service) {}
+   public:
+    WithRawMethod_ApplyCommandBatch() {
+      ::grpc::Service::MarkMethodRaw(0);
+    }
+    ~WithRawMethod_ApplyCommandBatch() override {
+      BaseClassMustBeDerivedFromService(this);
+    }
+    // disable synchronous version of this method
+    ::grpc::Status ApplyCommandBatch(::grpc::ServerContext* context, ::grpc::ServerReaderWriter< ::enginepb::CommandResponseBatch, ::enginepb::CommandRequestBatch>* stream)  override {
+      abort();
+      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
+    }
+    void RequestApplyCommandBatch(::grpc::ServerContext* context, ::grpc::ServerAsyncReaderWriter< ::grpc::ByteBuffer, ::grpc::ByteBuffer>* stream, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
+      ::grpc::Service::RequestAsyncBidiStreaming(0, context, stream, new_call_cq, notification_cq, tag);
+    }
+  };
+  template <class BaseClass>
+  class WithRawMethod_ApplySnapshot : public BaseClass {
+   private:
+    void BaseClassMustBeDerivedFromService(const Service *service) {}
+   public:
+    WithRawMethod_ApplySnapshot() {
+      ::grpc::Service::MarkMethodRaw(1);
+    }
+    ~WithRawMethod_ApplySnapshot() override {
+      BaseClassMustBeDerivedFromService(this);
+    }
+    // disable synchronous version of this method
+    ::grpc::Status ApplySnapshot(::grpc::ServerContext* context, ::grpc::ServerReader< ::enginepb::SnapshotRequest>* reader, ::enginepb::SnapshotDone* response) override {
+      abort();
+      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
+    }
+    void RequestApplySnapshot(::grpc::ServerContext* context, ::grpc::ServerAsyncReader< ::grpc::ByteBuffer, ::grpc::ByteBuffer>* reader, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
+      ::grpc::Service::RequestAsyncClientStreaming(1, context, reader, new_call_cq, notification_cq, tag);
     }
   };
   typedef Service StreamedUnaryService;

@@ -297,10 +297,24 @@ class StoreNotMatch : public ::google::protobuf::Message /* @@protoc_insertion_p
 
   // accessors -------------------------------------------------------
 
+  // uint64 request_store_id = 1;
+  void clear_request_store_id();
+  static const int kRequestStoreIdFieldNumber = 1;
+  ::google::protobuf::uint64 request_store_id() const;
+  void set_request_store_id(::google::protobuf::uint64 value);
+
+  // uint64 actual_store_id = 2;
+  void clear_actual_store_id();
+  static const int kActualStoreIdFieldNumber = 2;
+  ::google::protobuf::uint64 actual_store_id() const;
+  void set_actual_store_id(::google::protobuf::uint64 value);
+
   // @@protoc_insertion_point(class_scope:errorpb.StoreNotMatch)
  private:
 
   ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
+  ::google::protobuf::uint64 request_store_id_;
+  ::google::protobuf::uint64 actual_store_id_;
   mutable int _cached_size_;
   friend struct ::protobuf_errorpb_2eproto::TableStruct;
   friend void ::protobuf_errorpb_2eproto::InitDefaultsStoreNotMatchImpl();
@@ -1224,6 +1238,34 @@ inline void NotLeader::set_allocated_leader(::metapb::Peer* leader) {
 // -------------------------------------------------------------------
 
 // StoreNotMatch
+
+// uint64 request_store_id = 1;
+inline void StoreNotMatch::clear_request_store_id() {
+  request_store_id_ = GOOGLE_ULONGLONG(0);
+}
+inline ::google::protobuf::uint64 StoreNotMatch::request_store_id() const {
+  // @@protoc_insertion_point(field_get:errorpb.StoreNotMatch.request_store_id)
+  return request_store_id_;
+}
+inline void StoreNotMatch::set_request_store_id(::google::protobuf::uint64 value) {
+  
+  request_store_id_ = value;
+  // @@protoc_insertion_point(field_set:errorpb.StoreNotMatch.request_store_id)
+}
+
+// uint64 actual_store_id = 2;
+inline void StoreNotMatch::clear_actual_store_id() {
+  actual_store_id_ = GOOGLE_ULONGLONG(0);
+}
+inline ::google::protobuf::uint64 StoreNotMatch::actual_store_id() const {
+  // @@protoc_insertion_point(field_get:errorpb.StoreNotMatch.actual_store_id)
+  return actual_store_id_;
+}
+inline void StoreNotMatch::set_actual_store_id(::google::protobuf::uint64 value) {
+  
+  actual_store_id_ = value;
+  // @@protoc_insertion_point(field_set:errorpb.StoreNotMatch.actual_store_id)
+}
 
 // -------------------------------------------------------------------
 

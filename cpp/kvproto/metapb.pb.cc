@@ -288,11 +288,10 @@ void AddDescriptorsImpl() {
       " \003(\0132\014.metapb.Peer\"8\n\004Peer\022\n\n\002id\030\001 \001(\004\022\020"
       "\n\010store_id\030\002 \001(\004\022\022\n\nis_learner\030\003 \001(\010*0\n\n"
       "StoreState\022\006\n\002Up\020\000\022\013\n\007Offline\020\001\022\r\n\tTombs"
-      "tone\020\002B\032\n\030com.pingcap.tikv.kvprotob\006prot"
-      "o3"
+      "tone\020\002B\022\n\020org.tikv.kvprotob\006proto3"
   };
   ::google::protobuf::DescriptorPool::InternalAddGeneratedFile(
-      descriptor, 562);
+      descriptor, 554);
   ::google::protobuf::MessageFactory::InternalRegisterGeneratedFile(
     "metapb.proto", &protobuf_RegisterTypes);
 }

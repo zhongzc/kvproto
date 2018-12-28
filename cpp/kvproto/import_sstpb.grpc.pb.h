@@ -6,15 +6,16 @@
 
 #include "import_sstpb.pb.h"
 
-#include <grpc++/impl/codegen/async_stream.h>
-#include <grpc++/impl/codegen/async_unary_call.h>
-#include <grpc++/impl/codegen/method_handler_impl.h>
-#include <grpc++/impl/codegen/proto_utils.h>
-#include <grpc++/impl/codegen/rpc_method.h>
-#include <grpc++/impl/codegen/service_type.h>
-#include <grpc++/impl/codegen/status.h>
-#include <grpc++/impl/codegen/stub_options.h>
-#include <grpc++/impl/codegen/sync_stream.h>
+#include <grpcpp/impl/codegen/async_generic_service.h>
+#include <grpcpp/impl/codegen/async_stream.h>
+#include <grpcpp/impl/codegen/async_unary_call.h>
+#include <grpcpp/impl/codegen/method_handler_impl.h>
+#include <grpcpp/impl/codegen/proto_utils.h>
+#include <grpcpp/impl/codegen/rpc_method.h>
+#include <grpcpp/impl/codegen/service_type.h>
+#include <grpcpp/impl/codegen/status.h>
+#include <grpcpp/impl/codegen/stub_options.h>
+#include <grpcpp/impl/codegen/sync_stream.h>
 
 namespace grpc {
 class CompletionQueue;
@@ -170,7 +171,7 @@ class ImportSST final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status SwitchMode(::grpc::ServerContext* context, const ::import_sstpb::SwitchModeRequest* request, ::import_sstpb::SwitchModeResponse* response) final override {
+    ::grpc::Status SwitchMode(::grpc::ServerContext* context, const ::import_sstpb::SwitchModeRequest* request, ::import_sstpb::SwitchModeResponse* response) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
@@ -190,7 +191,7 @@ class ImportSST final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status Upload(::grpc::ServerContext* context, ::grpc::ServerReader< ::import_sstpb::UploadRequest>* reader, ::import_sstpb::UploadResponse* response) final override {
+    ::grpc::Status Upload(::grpc::ServerContext* context, ::grpc::ServerReader< ::import_sstpb::UploadRequest>* reader, ::import_sstpb::UploadResponse* response) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
@@ -210,7 +211,7 @@ class ImportSST final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status Ingest(::grpc::ServerContext* context, const ::import_sstpb::IngestRequest* request, ::import_sstpb::IngestResponse* response) final override {
+    ::grpc::Status Ingest(::grpc::ServerContext* context, const ::import_sstpb::IngestRequest* request, ::import_sstpb::IngestResponse* response) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
@@ -230,7 +231,7 @@ class ImportSST final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status Compact(::grpc::ServerContext* context, const ::import_sstpb::CompactRequest* request, ::import_sstpb::CompactResponse* response) final override {
+    ::grpc::Status Compact(::grpc::ServerContext* context, const ::import_sstpb::CompactRequest* request, ::import_sstpb::CompactResponse* response) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
@@ -251,7 +252,7 @@ class ImportSST final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status SwitchMode(::grpc::ServerContext* context, const ::import_sstpb::SwitchModeRequest* request, ::import_sstpb::SwitchModeResponse* response) final override {
+    ::grpc::Status SwitchMode(::grpc::ServerContext* context, const ::import_sstpb::SwitchModeRequest* request, ::import_sstpb::SwitchModeResponse* response) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
@@ -268,7 +269,7 @@ class ImportSST final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status Upload(::grpc::ServerContext* context, ::grpc::ServerReader< ::import_sstpb::UploadRequest>* reader, ::import_sstpb::UploadResponse* response) final override {
+    ::grpc::Status Upload(::grpc::ServerContext* context, ::grpc::ServerReader< ::import_sstpb::UploadRequest>* reader, ::import_sstpb::UploadResponse* response) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
@@ -285,7 +286,7 @@ class ImportSST final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status Ingest(::grpc::ServerContext* context, const ::import_sstpb::IngestRequest* request, ::import_sstpb::IngestResponse* response) final override {
+    ::grpc::Status Ingest(::grpc::ServerContext* context, const ::import_sstpb::IngestRequest* request, ::import_sstpb::IngestResponse* response) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
@@ -302,9 +303,89 @@ class ImportSST final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status Compact(::grpc::ServerContext* context, const ::import_sstpb::CompactRequest* request, ::import_sstpb::CompactResponse* response) final override {
+    ::grpc::Status Compact(::grpc::ServerContext* context, const ::import_sstpb::CompactRequest* request, ::import_sstpb::CompactResponse* response) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
+    }
+  };
+  template <class BaseClass>
+  class WithRawMethod_SwitchMode : public BaseClass {
+   private:
+    void BaseClassMustBeDerivedFromService(const Service *service) {}
+   public:
+    WithRawMethod_SwitchMode() {
+      ::grpc::Service::MarkMethodRaw(0);
+    }
+    ~WithRawMethod_SwitchMode() override {
+      BaseClassMustBeDerivedFromService(this);
+    }
+    // disable synchronous version of this method
+    ::grpc::Status SwitchMode(::grpc::ServerContext* context, const ::import_sstpb::SwitchModeRequest* request, ::import_sstpb::SwitchModeResponse* response) override {
+      abort();
+      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
+    }
+    void RequestSwitchMode(::grpc::ServerContext* context, ::grpc::ByteBuffer* request, ::grpc::ServerAsyncResponseWriter< ::grpc::ByteBuffer>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
+      ::grpc::Service::RequestAsyncUnary(0, context, request, response, new_call_cq, notification_cq, tag);
+    }
+  };
+  template <class BaseClass>
+  class WithRawMethod_Upload : public BaseClass {
+   private:
+    void BaseClassMustBeDerivedFromService(const Service *service) {}
+   public:
+    WithRawMethod_Upload() {
+      ::grpc::Service::MarkMethodRaw(1);
+    }
+    ~WithRawMethod_Upload() override {
+      BaseClassMustBeDerivedFromService(this);
+    }
+    // disable synchronous version of this method
+    ::grpc::Status Upload(::grpc::ServerContext* context, ::grpc::ServerReader< ::import_sstpb::UploadRequest>* reader, ::import_sstpb::UploadResponse* response) override {
+      abort();
+      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
+    }
+    void RequestUpload(::grpc::ServerContext* context, ::grpc::ServerAsyncReader< ::grpc::ByteBuffer, ::grpc::ByteBuffer>* reader, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
+      ::grpc::Service::RequestAsyncClientStreaming(1, context, reader, new_call_cq, notification_cq, tag);
+    }
+  };
+  template <class BaseClass>
+  class WithRawMethod_Ingest : public BaseClass {
+   private:
+    void BaseClassMustBeDerivedFromService(const Service *service) {}
+   public:
+    WithRawMethod_Ingest() {
+      ::grpc::Service::MarkMethodRaw(2);
+    }
+    ~WithRawMethod_Ingest() override {
+      BaseClassMustBeDerivedFromService(this);
+    }
+    // disable synchronous version of this method
+    ::grpc::Status Ingest(::grpc::ServerContext* context, const ::import_sstpb::IngestRequest* request, ::import_sstpb::IngestResponse* response) override {
+      abort();
+      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
+    }
+    void RequestIngest(::grpc::ServerContext* context, ::grpc::ByteBuffer* request, ::grpc::ServerAsyncResponseWriter< ::grpc::ByteBuffer>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
+      ::grpc::Service::RequestAsyncUnary(2, context, request, response, new_call_cq, notification_cq, tag);
+    }
+  };
+  template <class BaseClass>
+  class WithRawMethod_Compact : public BaseClass {
+   private:
+    void BaseClassMustBeDerivedFromService(const Service *service) {}
+   public:
+    WithRawMethod_Compact() {
+      ::grpc::Service::MarkMethodRaw(3);
+    }
+    ~WithRawMethod_Compact() override {
+      BaseClassMustBeDerivedFromService(this);
+    }
+    // disable synchronous version of this method
+    ::grpc::Status Compact(::grpc::ServerContext* context, const ::import_sstpb::CompactRequest* request, ::import_sstpb::CompactResponse* response) override {
+      abort();
+      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
+    }
+    void RequestCompact(::grpc::ServerContext* context, ::grpc::ByteBuffer* request, ::grpc::ServerAsyncResponseWriter< ::grpc::ByteBuffer>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
+      ::grpc::Service::RequestAsyncUnary(3, context, request, response, new_call_cq, notification_cq, tag);
     }
   };
   template <class BaseClass>
@@ -320,7 +401,7 @@ class ImportSST final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable regular version of this method
-    ::grpc::Status SwitchMode(::grpc::ServerContext* context, const ::import_sstpb::SwitchModeRequest* request, ::import_sstpb::SwitchModeResponse* response) final override {
+    ::grpc::Status SwitchMode(::grpc::ServerContext* context, const ::import_sstpb::SwitchModeRequest* request, ::import_sstpb::SwitchModeResponse* response) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
@@ -340,7 +421,7 @@ class ImportSST final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable regular version of this method
-    ::grpc::Status Ingest(::grpc::ServerContext* context, const ::import_sstpb::IngestRequest* request, ::import_sstpb::IngestResponse* response) final override {
+    ::grpc::Status Ingest(::grpc::ServerContext* context, const ::import_sstpb::IngestRequest* request, ::import_sstpb::IngestResponse* response) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
@@ -360,7 +441,7 @@ class ImportSST final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable regular version of this method
-    ::grpc::Status Compact(::grpc::ServerContext* context, const ::import_sstpb::CompactRequest* request, ::import_sstpb::CompactResponse* response) final override {
+    ::grpc::Status Compact(::grpc::ServerContext* context, const ::import_sstpb::CompactRequest* request, ::import_sstpb::CompactResponse* response) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }

@@ -281,6 +281,8 @@ const ::google::protobuf::uint32 TableStruct::offsets[] GOOGLE_PROTOBUF_ATTRIBUT
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::errorpb::StoreNotMatch, request_store_id_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::errorpb::StoreNotMatch, actual_store_id_),
   ~0u,  // no _has_bits_
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::errorpb::RegionNotFound, _internal_metadata_),
   ~0u,  // no _extensions_
@@ -339,13 +341,13 @@ const ::google::protobuf::uint32 TableStruct::offsets[] GOOGLE_PROTOBUF_ATTRIBUT
 static const ::google::protobuf::internal::MigrationSchema schemas[] GOOGLE_PROTOBUF_ATTRIBUTE_SECTION_VARIABLE(protodesc_cold) = {
   { 0, -1, sizeof(::errorpb::NotLeader)},
   { 7, -1, sizeof(::errorpb::StoreNotMatch)},
-  { 12, -1, sizeof(::errorpb::RegionNotFound)},
-  { 18, -1, sizeof(::errorpb::KeyNotInRegion)},
-  { 27, -1, sizeof(::errorpb::StaleEpoch)},
-  { 33, -1, sizeof(::errorpb::ServerIsBusy)},
-  { 40, -1, sizeof(::errorpb::StaleCommand)},
-  { 45, -1, sizeof(::errorpb::RaftEntryTooLarge)},
-  { 52, -1, sizeof(::errorpb::Error)},
+  { 14, -1, sizeof(::errorpb::RegionNotFound)},
+  { 20, -1, sizeof(::errorpb::KeyNotInRegion)},
+  { 29, -1, sizeof(::errorpb::StaleEpoch)},
+  { 35, -1, sizeof(::errorpb::ServerIsBusy)},
+  { 42, -1, sizeof(::errorpb::StaleCommand)},
+  { 47, -1, sizeof(::errorpb::RaftEntryTooLarge)},
+  { 54, -1, sizeof(::errorpb::Error)},
 };
 
 static ::google::protobuf::Message const * const file_default_instances[] = {
@@ -384,29 +386,30 @@ void AddDescriptorsImpl() {
   static const char descriptor[] GOOGLE_PROTOBUF_ATTRIBUTE_SECTION_VARIABLE(protodesc_cold) = {
       "\n\rerrorpb.proto\022\007errorpb\032\014metapb.proto\"<"
       "\n\tNotLeader\022\021\n\tregion_id\030\001 \001(\004\022\034\n\006leader"
-      "\030\002 \001(\0132\014.metapb.Peer\"\017\n\rStoreNotMatch\"#\n"
-      "\016RegionNotFound\022\021\n\tregion_id\030\001 \001(\004\"T\n\016Ke"
-      "yNotInRegion\022\013\n\003key\030\001 \001(\014\022\021\n\tregion_id\030\002"
-      " \001(\004\022\021\n\tstart_key\030\003 \001(\014\022\017\n\007end_key\030\004 \001(\014"
-      "\"1\n\nStaleEpoch\022#\n\013new_regions\030\001 \003(\0132\016.me"
-      "tapb.Region\"2\n\014ServerIsBusy\022\016\n\006reason\030\001 "
-      "\001(\t\022\022\n\nbackoff_ms\030\002 \001(\004\"\016\n\014StaleCommand\""
-      ":\n\021RaftEntryTooLarge\022\021\n\tregion_id\030\001 \001(\004\022"
-      "\022\n\nentry_size\030\002 \001(\004\"\231\003\n\005Error\022\017\n\007message"
-      "\030\001 \001(\t\022&\n\nnot_leader\030\002 \001(\0132\022.errorpb.Not"
-      "Leader\0221\n\020region_not_found\030\003 \001(\0132\027.error"
-      "pb.RegionNotFound\0222\n\021key_not_in_region\030\004"
-      " \001(\0132\027.errorpb.KeyNotInRegion\022(\n\013stale_e"
-      "poch\030\005 \001(\0132\023.errorpb.StaleEpoch\022-\n\016serve"
-      "r_is_busy\030\006 \001(\0132\025.errorpb.ServerIsBusy\022,"
-      "\n\rstale_command\030\007 \001(\0132\025.errorpb.StaleCom"
-      "mand\022/\n\017store_not_match\030\010 \001(\0132\026.errorpb."
-      "StoreNotMatch\0228\n\024raft_entry_too_large\030\t "
-      "\001(\0132\032.errorpb.RaftEntryTooLargeB\032\n\030com.p"
-      "ingcap.tikv.kvprotob\006proto3"
+      "\030\002 \001(\0132\014.metapb.Peer\"B\n\rStoreNotMatch\022\030\n"
+      "\020request_store_id\030\001 \001(\004\022\027\n\017actual_store_"
+      "id\030\002 \001(\004\"#\n\016RegionNotFound\022\021\n\tregion_id\030"
+      "\001 \001(\004\"T\n\016KeyNotInRegion\022\013\n\003key\030\001 \001(\014\022\021\n\t"
+      "region_id\030\002 \001(\004\022\021\n\tstart_key\030\003 \001(\014\022\017\n\007en"
+      "d_key\030\004 \001(\014\"1\n\nStaleEpoch\022#\n\013new_regions"
+      "\030\001 \003(\0132\016.metapb.Region\"2\n\014ServerIsBusy\022\016"
+      "\n\006reason\030\001 \001(\t\022\022\n\nbackoff_ms\030\002 \001(\004\"\016\n\014St"
+      "aleCommand\":\n\021RaftEntryTooLarge\022\021\n\tregio"
+      "n_id\030\001 \001(\004\022\022\n\nentry_size\030\002 \001(\004\"\231\003\n\005Error"
+      "\022\017\n\007message\030\001 \001(\t\022&\n\nnot_leader\030\002 \001(\0132\022."
+      "errorpb.NotLeader\0221\n\020region_not_found\030\003 "
+      "\001(\0132\027.errorpb.RegionNotFound\0222\n\021key_not_"
+      "in_region\030\004 \001(\0132\027.errorpb.KeyNotInRegion"
+      "\022(\n\013stale_epoch\030\005 \001(\0132\023.errorpb.StaleEpo"
+      "ch\022-\n\016server_is_busy\030\006 \001(\0132\025.errorpb.Ser"
+      "verIsBusy\022,\n\rstale_command\030\007 \001(\0132\025.error"
+      "pb.StaleCommand\022/\n\017store_not_match\030\010 \001(\013"
+      "2\026.errorpb.StoreNotMatch\0228\n\024raft_entry_t"
+      "oo_large\030\t \001(\0132\032.errorpb.RaftEntryTooLar"
+      "geB\022\n\020org.tikv.kvprotob\006proto3"
   };
   ::google::protobuf::DescriptorPool::InternalAddGeneratedFile(
-      descriptor, 867);
+      descriptor, 910);
   ::google::protobuf::MessageFactory::InternalRegisterGeneratedFile(
     "errorpb.proto", &protobuf_RegisterTypes);
   ::protobuf_metapb_2eproto::AddDescriptors();
@@ -725,6 +728,8 @@ void NotLeader::InternalSwap(NotLeader* other) {
 void StoreNotMatch::InitAsDefaultInstance() {
 }
 #if !defined(_MSC_VER) || _MSC_VER >= 1900
+const int StoreNotMatch::kRequestStoreIdFieldNumber;
+const int StoreNotMatch::kActualStoreIdFieldNumber;
 #endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
 
 StoreNotMatch::StoreNotMatch()
@@ -740,10 +745,16 @@ StoreNotMatch::StoreNotMatch(const StoreNotMatch& from)
       _internal_metadata_(NULL),
       _cached_size_(0) {
   _internal_metadata_.MergeFrom(from._internal_metadata_);
+  ::memcpy(&request_store_id_, &from.request_store_id_,
+    static_cast<size_t>(reinterpret_cast<char*>(&actual_store_id_) -
+    reinterpret_cast<char*>(&request_store_id_)) + sizeof(actual_store_id_));
   // @@protoc_insertion_point(copy_constructor:errorpb.StoreNotMatch)
 }
 
 void StoreNotMatch::SharedCtor() {
+  ::memset(&request_store_id_, 0, static_cast<size_t>(
+      reinterpret_cast<char*>(&actual_store_id_) -
+      reinterpret_cast<char*>(&request_store_id_)) + sizeof(actual_store_id_));
   _cached_size_ = 0;
 }
 
@@ -784,6 +795,9 @@ void StoreNotMatch::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
+  ::memset(&request_store_id_, 0, static_cast<size_t>(
+      reinterpret_cast<char*>(&actual_store_id_) -
+      reinterpret_cast<char*>(&request_store_id_)) + sizeof(actual_store_id_));
   _internal_metadata_.Clear();
 }
 
@@ -796,12 +810,45 @@ bool StoreNotMatch::MergePartialFromCodedStream(
     ::std::pair< ::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
     tag = p.first;
     if (!p.second) goto handle_unusual;
-  handle_unusual:
-    if (tag == 0) {
-      goto success;
+    switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
+      // uint64 request_store_id = 1;
+      case 1: {
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(8u /* 8 & 0xFF */)) {
+
+          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
+                   ::google::protobuf::uint64, ::google::protobuf::internal::WireFormatLite::TYPE_UINT64>(
+                 input, &request_store_id_)));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // uint64 actual_store_id = 2;
+      case 2: {
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(16u /* 16 & 0xFF */)) {
+
+          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
+                   ::google::protobuf::uint64, ::google::protobuf::internal::WireFormatLite::TYPE_UINT64>(
+                 input, &actual_store_id_)));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      default: {
+      handle_unusual:
+        if (tag == 0) {
+          goto success;
+        }
+        DO_(::google::protobuf::internal::WireFormat::SkipField(
+              input, tag, _internal_metadata_.mutable_unknown_fields()));
+        break;
+      }
     }
-    DO_(::google::protobuf::internal::WireFormat::SkipField(
-          input, tag, _internal_metadata_.mutable_unknown_fields()));
   }
 success:
   // @@protoc_insertion_point(parse_success:errorpb.StoreNotMatch)
@@ -818,6 +865,16 @@ void StoreNotMatch::SerializeWithCachedSizes(
   ::google::protobuf::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
+  // uint64 request_store_id = 1;
+  if (this->request_store_id() != 0) {
+    ::google::protobuf::internal::WireFormatLite::WriteUInt64(1, this->request_store_id(), output);
+  }
+
+  // uint64 actual_store_id = 2;
+  if (this->actual_store_id() != 0) {
+    ::google::protobuf::internal::WireFormatLite::WriteUInt64(2, this->actual_store_id(), output);
+  }
+
   if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
     ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
         (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()), output);
@@ -831,6 +888,16 @@ void StoreNotMatch::SerializeWithCachedSizes(
   // @@protoc_insertion_point(serialize_to_array_start:errorpb.StoreNotMatch)
   ::google::protobuf::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
+
+  // uint64 request_store_id = 1;
+  if (this->request_store_id() != 0) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteUInt64ToArray(1, this->request_store_id(), target);
+  }
+
+  // uint64 actual_store_id = 2;
+  if (this->actual_store_id() != 0) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteUInt64ToArray(2, this->actual_store_id(), target);
+  }
 
   if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
     target = ::google::protobuf::internal::WireFormat::SerializeUnknownFieldsToArray(
@@ -849,6 +916,20 @@ size_t StoreNotMatch::ByteSizeLong() const {
       ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(
         (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()));
   }
+  // uint64 request_store_id = 1;
+  if (this->request_store_id() != 0) {
+    total_size += 1 +
+      ::google::protobuf::internal::WireFormatLite::UInt64Size(
+        this->request_store_id());
+  }
+
+  // uint64 actual_store_id = 2;
+  if (this->actual_store_id() != 0) {
+    total_size += 1 +
+      ::google::protobuf::internal::WireFormatLite::UInt64Size(
+        this->actual_store_id());
+  }
+
   int cached_size = ::google::protobuf::internal::ToCachedSize(total_size);
   GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
   _cached_size_ = cached_size;
@@ -878,6 +959,12 @@ void StoreNotMatch::MergeFrom(const StoreNotMatch& from) {
   ::google::protobuf::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
+  if (from.request_store_id() != 0) {
+    set_request_store_id(from.request_store_id());
+  }
+  if (from.actual_store_id() != 0) {
+    set_actual_store_id(from.actual_store_id());
+  }
 }
 
 void StoreNotMatch::CopyFrom(const ::google::protobuf::Message& from) {
@@ -904,6 +991,8 @@ void StoreNotMatch::Swap(StoreNotMatch* other) {
 }
 void StoreNotMatch::InternalSwap(StoreNotMatch* other) {
   using std::swap;
+  swap(request_store_id_, other->request_store_id_);
+  swap(actual_store_id_, other->actual_store_id_);
   _internal_metadata_.Swap(&other->_internal_metadata_);
   swap(_cached_size_, other->_cached_size_);
 }

@@ -5,14 +5,14 @@
 #include "tikvpb.pb.h"
 #include "tikvpb.grpc.pb.h"
 
-#include <grpc++/impl/codegen/async_stream.h>
-#include <grpc++/impl/codegen/async_unary_call.h>
-#include <grpc++/impl/codegen/channel_interface.h>
-#include <grpc++/impl/codegen/client_unary_call.h>
-#include <grpc++/impl/codegen/method_handler_impl.h>
-#include <grpc++/impl/codegen/rpc_service_method.h>
-#include <grpc++/impl/codegen/service_type.h>
-#include <grpc++/impl/codegen/sync_stream.h>
+#include <grpcpp/impl/codegen/async_stream.h>
+#include <grpcpp/impl/codegen/async_unary_call.h>
+#include <grpcpp/impl/codegen/channel_interface.h>
+#include <grpcpp/impl/codegen/client_unary_call.h>
+#include <grpcpp/impl/codegen/method_handler_impl.h>
+#include <grpcpp/impl/codegen/rpc_service_method.h>
+#include <grpcpp/impl/codegen/service_type.h>
+#include <grpcpp/impl/codegen/sync_stream.h>
 namespace tikvpb {
 
 static const char* Tikv_method_names[] = {
@@ -43,6 +43,7 @@ static const char* Tikv_method_names[] = {
   "/tikvpb.Tikv/Raft",
   "/tikvpb.Tikv/Snapshot",
   "/tikvpb.Tikv/SplitRegion",
+  "/tikvpb.Tikv/ReadIndex",
   "/tikvpb.Tikv/MvccGetByKey",
   "/tikvpb.Tikv/MvccGetByStartTs",
 };
@@ -81,8 +82,9 @@ Tikv::Stub::Stub(const std::shared_ptr< ::grpc::ChannelInterface>& channel)
   , rpcmethod_Raft_(Tikv_method_names[24], ::grpc::internal::RpcMethod::CLIENT_STREAMING, channel)
   , rpcmethod_Snapshot_(Tikv_method_names[25], ::grpc::internal::RpcMethod::CLIENT_STREAMING, channel)
   , rpcmethod_SplitRegion_(Tikv_method_names[26], ::grpc::internal::RpcMethod::NORMAL_RPC, channel)
-  , rpcmethod_MvccGetByKey_(Tikv_method_names[27], ::grpc::internal::RpcMethod::NORMAL_RPC, channel)
-  , rpcmethod_MvccGetByStartTs_(Tikv_method_names[28], ::grpc::internal::RpcMethod::NORMAL_RPC, channel)
+  , rpcmethod_ReadIndex_(Tikv_method_names[27], ::grpc::internal::RpcMethod::NORMAL_RPC, channel)
+  , rpcmethod_MvccGetByKey_(Tikv_method_names[28], ::grpc::internal::RpcMethod::NORMAL_RPC, channel)
+  , rpcmethod_MvccGetByStartTs_(Tikv_method_names[29], ::grpc::internal::RpcMethod::NORMAL_RPC, channel)
   {}
 
 ::grpc::Status Tikv::Stub::KvGet(::grpc::ClientContext* context, const ::kvrpcpb::GetRequest& request, ::kvrpcpb::GetResponse* response) {
@@ -409,6 +411,18 @@ Tikv::Stub::Stub(const std::shared_ptr< ::grpc::ChannelInterface>& channel)
   return ::grpc::internal::ClientAsyncResponseReaderFactory< ::kvrpcpb::SplitRegionResponse>::Create(channel_.get(), cq, rpcmethod_SplitRegion_, context, request, false);
 }
 
+::grpc::Status Tikv::Stub::ReadIndex(::grpc::ClientContext* context, const ::kvrpcpb::ReadIndexRequest& request, ::kvrpcpb::ReadIndexResponse* response) {
+  return ::grpc::internal::BlockingUnaryCall(channel_.get(), rpcmethod_ReadIndex_, context, request, response);
+}
+
+::grpc::ClientAsyncResponseReader< ::kvrpcpb::ReadIndexResponse>* Tikv::Stub::AsyncReadIndexRaw(::grpc::ClientContext* context, const ::kvrpcpb::ReadIndexRequest& request, ::grpc::CompletionQueue* cq) {
+  return ::grpc::internal::ClientAsyncResponseReaderFactory< ::kvrpcpb::ReadIndexResponse>::Create(channel_.get(), cq, rpcmethod_ReadIndex_, context, request, true);
+}
+
+::grpc::ClientAsyncResponseReader< ::kvrpcpb::ReadIndexResponse>* Tikv::Stub::PrepareAsyncReadIndexRaw(::grpc::ClientContext* context, const ::kvrpcpb::ReadIndexRequest& request, ::grpc::CompletionQueue* cq) {
+  return ::grpc::internal::ClientAsyncResponseReaderFactory< ::kvrpcpb::ReadIndexResponse>::Create(channel_.get(), cq, rpcmethod_ReadIndex_, context, request, false);
+}
+
 ::grpc::Status Tikv::Stub::MvccGetByKey(::grpc::ClientContext* context, const ::kvrpcpb::MvccGetByKeyRequest& request, ::kvrpcpb::MvccGetByKeyResponse* response) {
   return ::grpc::internal::BlockingUnaryCall(channel_.get(), rpcmethod_MvccGetByKey_, context, request, response);
 }
@@ -572,10 +586,15 @@ Tikv::Service::Service() {
   AddMethod(new ::grpc::internal::RpcServiceMethod(
       Tikv_method_names[27],
       ::grpc::internal::RpcMethod::NORMAL_RPC,
+      new ::grpc::internal::RpcMethodHandler< Tikv::Service, ::kvrpcpb::ReadIndexRequest, ::kvrpcpb::ReadIndexResponse>(
+          std::mem_fn(&Tikv::Service::ReadIndex), this)));
+  AddMethod(new ::grpc::internal::RpcServiceMethod(
+      Tikv_method_names[28],
+      ::grpc::internal::RpcMethod::NORMAL_RPC,
       new ::grpc::internal::RpcMethodHandler< Tikv::Service, ::kvrpcpb::MvccGetByKeyRequest, ::kvrpcpb::MvccGetByKeyResponse>(
           std::mem_fn(&Tikv::Service::MvccGetByKey), this)));
   AddMethod(new ::grpc::internal::RpcServiceMethod(
-      Tikv_method_names[28],
+      Tikv_method_names[29],
       ::grpc::internal::RpcMethod::NORMAL_RPC,
       new ::grpc::internal::RpcMethodHandler< Tikv::Service, ::kvrpcpb::MvccGetByStartTsRequest, ::kvrpcpb::MvccGetByStartTsResponse>(
           std::mem_fn(&Tikv::Service::MvccGetByStartTs), this)));
@@ -767,6 +786,13 @@ Tikv::Service::~Service() {
 }
 
 ::grpc::Status Tikv::Service::SplitRegion(::grpc::ServerContext* context, const ::kvrpcpb::SplitRegionRequest* request, ::kvrpcpb::SplitRegionResponse* response) {
+  (void) context;
+  (void) request;
+  (void) response;
+  return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
+}
+
+::grpc::Status Tikv::Service::ReadIndex(::grpc::ServerContext* context, const ::kvrpcpb::ReadIndexRequest* request, ::kvrpcpb::ReadIndexResponse* response) {
   (void) context;
   (void) request;
   (void) response;
