@@ -2589,6 +2589,18 @@ class GetRegionResponse : public ::google::protobuf::Message /* @@protoc_inserti
 
   // accessors -------------------------------------------------------
 
+  // repeated .metapb.Peer slaves = 4;
+  int slaves_size() const;
+  void clear_slaves();
+  static const int kSlavesFieldNumber = 4;
+  const ::metapb::Peer& slaves(int index) const;
+  ::metapb::Peer* mutable_slaves(int index);
+  ::metapb::Peer* add_slaves();
+  ::google::protobuf::RepeatedPtrField< ::metapb::Peer >*
+      mutable_slaves();
+  const ::google::protobuf::RepeatedPtrField< ::metapb::Peer >&
+      slaves() const;
+
   // .pdpb.ResponseHeader header = 1;
   bool has_header() const;
   void clear_header();
@@ -2620,6 +2632,7 @@ class GetRegionResponse : public ::google::protobuf::Message /* @@protoc_inserti
  private:
 
   ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
+  ::google::protobuf::RepeatedPtrField< ::metapb::Peer > slaves_;
   ::pdpb::ResponseHeader* header_;
   ::metapb::Region* region_;
   ::metapb::Peer* leader_;
@@ -8424,6 +8437,33 @@ inline void GetRegionResponse::set_allocated_leader(::metapb::Peer* leader) {
   }
   leader_ = leader;
   // @@protoc_insertion_point(field_set_allocated:pdpb.GetRegionResponse.leader)
+}
+
+// repeated .metapb.Peer slaves = 4;
+inline int GetRegionResponse::slaves_size() const {
+  return slaves_.size();
+}
+inline const ::metapb::Peer& GetRegionResponse::slaves(int index) const {
+  // @@protoc_insertion_point(field_get:pdpb.GetRegionResponse.slaves)
+  return slaves_.Get(index);
+}
+inline ::metapb::Peer* GetRegionResponse::mutable_slaves(int index) {
+  // @@protoc_insertion_point(field_mutable:pdpb.GetRegionResponse.slaves)
+  return slaves_.Mutable(index);
+}
+inline ::metapb::Peer* GetRegionResponse::add_slaves() {
+  // @@protoc_insertion_point(field_add:pdpb.GetRegionResponse.slaves)
+  return slaves_.Add();
+}
+inline ::google::protobuf::RepeatedPtrField< ::metapb::Peer >*
+GetRegionResponse::mutable_slaves() {
+  // @@protoc_insertion_point(field_mutable_list:pdpb.GetRegionResponse.slaves)
+  return &slaves_;
+}
+inline const ::google::protobuf::RepeatedPtrField< ::metapb::Peer >&
+GetRegionResponse::slaves() const {
+  // @@protoc_insertion_point(field_list:pdpb.GetRegionResponse.slaves)
+  return slaves_;
 }
 
 // -------------------------------------------------------------------

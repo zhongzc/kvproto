@@ -1699,6 +1699,7 @@ const ::google::protobuf::uint32 TableStruct::offsets[] GOOGLE_PROTOBUF_ATTRIBUT
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::pdpb::GetRegionResponse, header_),
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::pdpb::GetRegionResponse, region_),
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::pdpb::GetRegionResponse, leader_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::pdpb::GetRegionResponse, slaves_),
   ~0u,  // no _has_bits_
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::pdpb::GetRegionByIDRequest, _internal_metadata_),
   ~0u,  // no _extensions_
@@ -2003,42 +2004,42 @@ static const ::google::protobuf::internal::MigrationSchema schemas[] GOOGLE_PROT
   { 115, -1, sizeof(::pdpb::GetAllStoresResponse)},
   { 122, -1, sizeof(::pdpb::GetRegionRequest)},
   { 129, -1, sizeof(::pdpb::GetRegionResponse)},
-  { 137, -1, sizeof(::pdpb::GetRegionByIDRequest)},
-  { 144, -1, sizeof(::pdpb::GetClusterConfigRequest)},
-  { 150, -1, sizeof(::pdpb::GetClusterConfigResponse)},
-  { 157, -1, sizeof(::pdpb::PutClusterConfigRequest)},
-  { 164, -1, sizeof(::pdpb::PutClusterConfigResponse)},
-  { 170, -1, sizeof(::pdpb::Member)},
-  { 180, -1, sizeof(::pdpb::GetMembersRequest)},
-  { 186, -1, sizeof(::pdpb::GetMembersResponse)},
-  { 195, -1, sizeof(::pdpb::PeerStats)},
-  { 202, -1, sizeof(::pdpb::RegionHeartbeatRequest)},
-  { 219, -1, sizeof(::pdpb::ChangePeer)},
-  { 226, -1, sizeof(::pdpb::TransferLeader)},
-  { 232, -1, sizeof(::pdpb::Merge)},
-  { 238, -1, sizeof(::pdpb::SplitRegion)},
-  { 244, -1, sizeof(::pdpb::RegionHeartbeatResponse)},
-  { 257, -1, sizeof(::pdpb::AskSplitRequest)},
-  { 264, -1, sizeof(::pdpb::AskSplitResponse)},
-  { 272, -1, sizeof(::pdpb::ReportSplitRequest)},
-  { 280, -1, sizeof(::pdpb::ReportSplitResponse)},
-  { 286, -1, sizeof(::pdpb::AskBatchSplitRequest)},
-  { 294, -1, sizeof(::pdpb::SplitID)},
-  { 301, -1, sizeof(::pdpb::AskBatchSplitResponse)},
-  { 308, -1, sizeof(::pdpb::ReportBatchSplitRequest)},
-  { 315, -1, sizeof(::pdpb::ReportBatchSplitResponse)},
-  { 321, -1, sizeof(::pdpb::TimeInterval)},
-  { 328, -1, sizeof(::pdpb::StoreStats)},
-  { 348, -1, sizeof(::pdpb::StoreHeartbeatRequest)},
-  { 355, -1, sizeof(::pdpb::StoreHeartbeatResponse)},
-  { 361, -1, sizeof(::pdpb::ScatterRegionRequest)},
-  { 370, -1, sizeof(::pdpb::ScatterRegionResponse)},
-  { 376, -1, sizeof(::pdpb::GetGCSafePointRequest)},
-  { 382, -1, sizeof(::pdpb::GetGCSafePointResponse)},
-  { 389, -1, sizeof(::pdpb::UpdateGCSafePointRequest)},
-  { 396, -1, sizeof(::pdpb::UpdateGCSafePointResponse)},
-  { 403, -1, sizeof(::pdpb::SyncRegionRequest)},
-  { 411, -1, sizeof(::pdpb::SyncRegionResponse)},
+  { 138, -1, sizeof(::pdpb::GetRegionByIDRequest)},
+  { 145, -1, sizeof(::pdpb::GetClusterConfigRequest)},
+  { 151, -1, sizeof(::pdpb::GetClusterConfigResponse)},
+  { 158, -1, sizeof(::pdpb::PutClusterConfigRequest)},
+  { 165, -1, sizeof(::pdpb::PutClusterConfigResponse)},
+  { 171, -1, sizeof(::pdpb::Member)},
+  { 181, -1, sizeof(::pdpb::GetMembersRequest)},
+  { 187, -1, sizeof(::pdpb::GetMembersResponse)},
+  { 196, -1, sizeof(::pdpb::PeerStats)},
+  { 203, -1, sizeof(::pdpb::RegionHeartbeatRequest)},
+  { 220, -1, sizeof(::pdpb::ChangePeer)},
+  { 227, -1, sizeof(::pdpb::TransferLeader)},
+  { 233, -1, sizeof(::pdpb::Merge)},
+  { 239, -1, sizeof(::pdpb::SplitRegion)},
+  { 245, -1, sizeof(::pdpb::RegionHeartbeatResponse)},
+  { 258, -1, sizeof(::pdpb::AskSplitRequest)},
+  { 265, -1, sizeof(::pdpb::AskSplitResponse)},
+  { 273, -1, sizeof(::pdpb::ReportSplitRequest)},
+  { 281, -1, sizeof(::pdpb::ReportSplitResponse)},
+  { 287, -1, sizeof(::pdpb::AskBatchSplitRequest)},
+  { 295, -1, sizeof(::pdpb::SplitID)},
+  { 302, -1, sizeof(::pdpb::AskBatchSplitResponse)},
+  { 309, -1, sizeof(::pdpb::ReportBatchSplitRequest)},
+  { 316, -1, sizeof(::pdpb::ReportBatchSplitResponse)},
+  { 322, -1, sizeof(::pdpb::TimeInterval)},
+  { 329, -1, sizeof(::pdpb::StoreStats)},
+  { 349, -1, sizeof(::pdpb::StoreHeartbeatRequest)},
+  { 356, -1, sizeof(::pdpb::StoreHeartbeatResponse)},
+  { 362, -1, sizeof(::pdpb::ScatterRegionRequest)},
+  { 371, -1, sizeof(::pdpb::ScatterRegionResponse)},
+  { 377, -1, sizeof(::pdpb::GetGCSafePointRequest)},
+  { 383, -1, sizeof(::pdpb::GetGCSafePointResponse)},
+  { 390, -1, sizeof(::pdpb::UpdateGCSafePointRequest)},
+  { 397, -1, sizeof(::pdpb::UpdateGCSafePointResponse)},
+  { 404, -1, sizeof(::pdpb::SyncRegionRequest)},
+  { 412, -1, sizeof(::pdpb::SyncRegionResponse)},
 };
 
 static ::google::protobuf::Message const * const file_default_instances[] = {
@@ -2157,156 +2158,156 @@ void AddDescriptorsImpl() {
       "\0132\024.pdpb.ResponseHeader\022\035\n\006stores\030\002 \003(\0132"
       "\r.metapb.Store\"K\n\020GetRegionRequest\022#\n\006he"
       "ader\030\001 \001(\0132\023.pdpb.RequestHeader\022\022\n\nregio"
-      "n_key\030\002 \001(\014\"w\n\021GetRegionResponse\022$\n\006head"
-      "er\030\001 \001(\0132\024.pdpb.ResponseHeader\022\036\n\006region"
-      "\030\002 \001(\0132\016.metapb.Region\022\034\n\006leader\030\003 \001(\0132\014"
-      ".metapb.Peer\"N\n\024GetRegionByIDRequest\022#\n\006"
-      "header\030\001 \001(\0132\023.pdpb.RequestHeader\022\021\n\treg"
-      "ion_id\030\002 \001(\004\">\n\027GetClusterConfigRequest\022"
-      "#\n\006header\030\001 \001(\0132\023.pdpb.RequestHeader\"b\n\030"
-      "GetClusterConfigResponse\022$\n\006header\030\001 \001(\013"
-      "2\024.pdpb.ResponseHeader\022 \n\007cluster\030\002 \001(\0132"
-      "\017.metapb.Cluster\"`\n\027PutClusterConfigRequ"
-      "est\022#\n\006header\030\001 \001(\0132\023.pdpb.RequestHeader"
-      "\022 \n\007cluster\030\002 \001(\0132\017.metapb.Cluster\"@\n\030Pu"
-      "tClusterConfigResponse\022$\n\006header\030\001 \001(\0132\024"
-      ".pdpb.ResponseHeader\"j\n\006Member\022\014\n\004name\030\001"
-      " \001(\t\022\021\n\tmember_id\030\002 \001(\004\022\021\n\tpeer_urls\030\003 \003"
-      "(\t\022\023\n\013client_urls\030\004 \003(\t\022\027\n\017leader_priori"
-      "ty\030\005 \001(\005\"8\n\021GetMembersRequest\022#\n\006header\030"
-      "\001 \001(\0132\023.pdpb.RequestHeader\"\232\001\n\022GetMember"
-      "sResponse\022$\n\006header\030\001 \001(\0132\024.pdpb.Respons"
-      "eHeader\022\035\n\007members\030\002 \003(\0132\014.pdpb.Member\022\034"
-      "\n\006leader\030\003 \001(\0132\014.pdpb.Member\022!\n\013etcd_lea"
-      "der\030\004 \001(\0132\014.pdpb.Member\"=\n\tPeerStats\022\032\n\004"
-      "peer\030\001 \001(\0132\014.metapb.Peer\022\024\n\014down_seconds"
-      "\030\002 \001(\004\"\371\002\n\026RegionHeartbeatRequest\022#\n\006hea"
-      "der\030\001 \001(\0132\023.pdpb.RequestHeader\022\036\n\006region"
-      "\030\002 \001(\0132\016.metapb.Region\022\034\n\006leader\030\003 \001(\0132\014"
-      ".metapb.Peer\022#\n\ndown_peers\030\004 \003(\0132\017.pdpb."
-      "PeerStats\022#\n\rpending_peers\030\005 \003(\0132\014.metap"
-      "b.Peer\022\025\n\rbytes_written\030\006 \001(\004\022\022\n\nbytes_r"
-      "ead\030\007 \001(\004\022\024\n\014keys_written\030\010 \001(\004\022\021\n\tkeys_"
-      "read\030\t \001(\004\022\030\n\020approximate_size\030\n \001(\004\022$\n\010"
-      "interval\030\014 \001(\0132\022.pdpb.TimeInterval\022\030\n\020ap"
-      "proximate_keys\030\r \001(\004J\004\010\013\020\014\"V\n\nChangePeer"
-      "\022\032\n\004peer\030\001 \001(\0132\014.metapb.Peer\022,\n\013change_t"
-      "ype\030\002 \001(\0162\027.eraftpb.ConfChangeType\",\n\016Tr"
-      "ansferLeader\022\032\n\004peer\030\001 \001(\0132\014.metapb.Peer"
-      "\"\'\n\005Merge\022\036\n\006target\030\001 \001(\0132\016.metapb.Regio"
-      "n\"0\n\013SplitRegion\022!\n\006policy\030\001 \001(\0162\021.pdpb."
-      "CheckPolicy\"\273\002\n\027RegionHeartbeatResponse\022"
-      "$\n\006header\030\001 \001(\0132\024.pdpb.ResponseHeader\022%\n"
-      "\013change_peer\030\002 \001(\0132\020.pdpb.ChangePeer\022-\n\017"
-      "transfer_leader\030\003 \001(\0132\024.pdpb.TransferLea"
-      "der\022\021\n\tregion_id\030\004 \001(\004\022)\n\014region_epoch\030\005"
-      " \001(\0132\023.metapb.RegionEpoch\022!\n\013target_peer"
-      "\030\006 \001(\0132\014.metapb.Peer\022\032\n\005merge\030\007 \001(\0132\013.pd"
-      "pb.Merge\022\'\n\014split_region\030\010 \001(\0132\021.pdpb.Sp"
-      "litRegion\"V\n\017AskSplitRequest\022#\n\006header\030\001"
-      " \001(\0132\023.pdpb.RequestHeader\022\036\n\006region\030\002 \001("
-      "\0132\016.metapb.Region\"e\n\020AskSplitResponse\022$\n"
-      "\006header\030\001 \001(\0132\024.pdpb.ResponseHeader\022\025\n\rn"
-      "ew_region_id\030\002 \001(\004\022\024\n\014new_peer_ids\030\003 \003(\004"
-      "\"v\n\022ReportSplitRequest\022#\n\006header\030\001 \001(\0132\023"
-      ".pdpb.RequestHeader\022\034\n\004left\030\002 \001(\0132\016.meta"
-      "pb.Region\022\035\n\005right\030\003 \001(\0132\016.metapb.Region"
-      "\";\n\023ReportSplitResponse\022$\n\006header\030\001 \001(\0132"
-      "\024.pdpb.ResponseHeader\"p\n\024AskBatchSplitRe"
-      "quest\022#\n\006header\030\001 \001(\0132\023.pdpb.RequestHead"
-      "er\022\036\n\006region\030\002 \001(\0132\016.metapb.Region\022\023\n\013sp"
-      "lit_count\030\003 \001(\r\"6\n\007SplitID\022\025\n\rnew_region"
-      "_id\030\001 \001(\004\022\024\n\014new_peer_ids\030\002 \003(\004\"Y\n\025AskBa"
-      "tchSplitResponse\022$\n\006header\030\001 \001(\0132\024.pdpb."
-      "ResponseHeader\022\032\n\003ids\030\002 \003(\0132\r.pdpb.Split"
-      "ID\"_\n\027ReportBatchSplitRequest\022#\n\006header\030"
-      "\001 \001(\0132\023.pdpb.RequestHeader\022\037\n\007regions\030\002 "
-      "\003(\0132\016.metapb.Region\"@\n\030ReportBatchSplitR"
+      "n_key\030\002 \001(\014\"\225\001\n\021GetRegionResponse\022$\n\006hea"
+      "der\030\001 \001(\0132\024.pdpb.ResponseHeader\022\036\n\006regio"
+      "n\030\002 \001(\0132\016.metapb.Region\022\034\n\006leader\030\003 \001(\0132"
+      "\014.metapb.Peer\022\034\n\006slaves\030\004 \003(\0132\014.metapb.P"
+      "eer\"N\n\024GetRegionByIDRequest\022#\n\006header\030\001 "
+      "\001(\0132\023.pdpb.RequestHeader\022\021\n\tregion_id\030\002 "
+      "\001(\004\">\n\027GetClusterConfigRequest\022#\n\006header"
+      "\030\001 \001(\0132\023.pdpb.RequestHeader\"b\n\030GetCluste"
+      "rConfigResponse\022$\n\006header\030\001 \001(\0132\024.pdpb.R"
+      "esponseHeader\022 \n\007cluster\030\002 \001(\0132\017.metapb."
+      "Cluster\"`\n\027PutClusterConfigRequest\022#\n\006he"
+      "ader\030\001 \001(\0132\023.pdpb.RequestHeader\022 \n\007clust"
+      "er\030\002 \001(\0132\017.metapb.Cluster\"@\n\030PutClusterC"
+      "onfigResponse\022$\n\006header\030\001 \001(\0132\024.pdpb.Res"
+      "ponseHeader\"j\n\006Member\022\014\n\004name\030\001 \001(\t\022\021\n\tm"
+      "ember_id\030\002 \001(\004\022\021\n\tpeer_urls\030\003 \003(\t\022\023\n\013cli"
+      "ent_urls\030\004 \003(\t\022\027\n\017leader_priority\030\005 \001(\005\""
+      "8\n\021GetMembersRequest\022#\n\006header\030\001 \001(\0132\023.p"
+      "dpb.RequestHeader\"\232\001\n\022GetMembersResponse"
+      "\022$\n\006header\030\001 \001(\0132\024.pdpb.ResponseHeader\022\035"
+      "\n\007members\030\002 \003(\0132\014.pdpb.Member\022\034\n\006leader\030"
+      "\003 \001(\0132\014.pdpb.Member\022!\n\013etcd_leader\030\004 \001(\013"
+      "2\014.pdpb.Member\"=\n\tPeerStats\022\032\n\004peer\030\001 \001("
+      "\0132\014.metapb.Peer\022\024\n\014down_seconds\030\002 \001(\004\"\371\002"
+      "\n\026RegionHeartbeatRequest\022#\n\006header\030\001 \001(\013"
+      "2\023.pdpb.RequestHeader\022\036\n\006region\030\002 \001(\0132\016."
+      "metapb.Region\022\034\n\006leader\030\003 \001(\0132\014.metapb.P"
+      "eer\022#\n\ndown_peers\030\004 \003(\0132\017.pdpb.PeerStats"
+      "\022#\n\rpending_peers\030\005 \003(\0132\014.metapb.Peer\022\025\n"
+      "\rbytes_written\030\006 \001(\004\022\022\n\nbytes_read\030\007 \001(\004"
+      "\022\024\n\014keys_written\030\010 \001(\004\022\021\n\tkeys_read\030\t \001("
+      "\004\022\030\n\020approximate_size\030\n \001(\004\022$\n\010interval\030"
+      "\014 \001(\0132\022.pdpb.TimeInterval\022\030\n\020approximate"
+      "_keys\030\r \001(\004J\004\010\013\020\014\"V\n\nChangePeer\022\032\n\004peer\030"
+      "\001 \001(\0132\014.metapb.Peer\022,\n\013change_type\030\002 \001(\016"
+      "2\027.eraftpb.ConfChangeType\",\n\016TransferLea"
+      "der\022\032\n\004peer\030\001 \001(\0132\014.metapb.Peer\"\'\n\005Merge"
+      "\022\036\n\006target\030\001 \001(\0132\016.metapb.Region\"0\n\013Spli"
+      "tRegion\022!\n\006policy\030\001 \001(\0162\021.pdpb.CheckPoli"
+      "cy\"\273\002\n\027RegionHeartbeatResponse\022$\n\006header"
+      "\030\001 \001(\0132\024.pdpb.ResponseHeader\022%\n\013change_p"
+      "eer\030\002 \001(\0132\020.pdpb.ChangePeer\022-\n\017transfer_"
+      "leader\030\003 \001(\0132\024.pdpb.TransferLeader\022\021\n\tre"
+      "gion_id\030\004 \001(\004\022)\n\014region_epoch\030\005 \001(\0132\023.me"
+      "tapb.RegionEpoch\022!\n\013target_peer\030\006 \001(\0132\014."
+      "metapb.Peer\022\032\n\005merge\030\007 \001(\0132\013.pdpb.Merge\022"
+      "\'\n\014split_region\030\010 \001(\0132\021.pdpb.SplitRegion"
+      "\"V\n\017AskSplitRequest\022#\n\006header\030\001 \001(\0132\023.pd"
+      "pb.RequestHeader\022\036\n\006region\030\002 \001(\0132\016.metap"
+      "b.Region\"e\n\020AskSplitResponse\022$\n\006header\030\001"
+      " \001(\0132\024.pdpb.ResponseHeader\022\025\n\rnew_region"
+      "_id\030\002 \001(\004\022\024\n\014new_peer_ids\030\003 \003(\004\"v\n\022Repor"
+      "tSplitRequest\022#\n\006header\030\001 \001(\0132\023.pdpb.Req"
+      "uestHeader\022\034\n\004left\030\002 \001(\0132\016.metapb.Region"
+      "\022\035\n\005right\030\003 \001(\0132\016.metapb.Region\";\n\023Repor"
+      "tSplitResponse\022$\n\006header\030\001 \001(\0132\024.pdpb.Re"
+      "sponseHeader\"p\n\024AskBatchSplitRequest\022#\n\006"
+      "header\030\001 \001(\0132\023.pdpb.RequestHeader\022\036\n\006reg"
+      "ion\030\002 \001(\0132\016.metapb.Region\022\023\n\013split_count"
+      "\030\003 \001(\r\"6\n\007SplitID\022\025\n\rnew_region_id\030\001 \001(\004"
+      "\022\024\n\014new_peer_ids\030\002 \003(\004\"Y\n\025AskBatchSplitR"
       "esponse\022$\n\006header\030\001 \001(\0132\024.pdpb.ResponseH"
-      "eader\">\n\014TimeInterval\022\027\n\017start_timestamp"
-      "\030\001 \001(\004\022\025\n\rend_timestamp\030\002 \001(\004\"\342\002\n\nStoreS"
-      "tats\022\020\n\010store_id\030\001 \001(\004\022\020\n\010capacity\030\002 \001(\004"
-      "\022\021\n\tavailable\030\003 \001(\004\022\024\n\014region_count\030\004 \001("
-      "\r\022\032\n\022sending_snap_count\030\005 \001(\r\022\034\n\024receivi"
-      "ng_snap_count\030\006 \001(\r\022\022\n\nstart_time\030\007 \001(\r\022"
-      "\033\n\023applying_snap_count\030\010 \001(\r\022\017\n\007is_busy\030"
-      "\t \001(\010\022\021\n\tused_size\030\n \001(\004\022\025\n\rbytes_writte"
-      "n\030\013 \001(\004\022\024\n\014keys_written\030\014 \001(\004\022\022\n\nbytes_r"
-      "ead\030\r \001(\004\022\021\n\tkeys_read\030\016 \001(\004\022$\n\010interval"
-      "\030\017 \001(\0132\022.pdpb.TimeInterval\"]\n\025StoreHeart"
-      "beatRequest\022#\n\006header\030\001 \001(\0132\023.pdpb.Reque"
-      "stHeader\022\037\n\005stats\030\002 \001(\0132\020.pdpb.StoreStat"
-      "s\">\n\026StoreHeartbeatResponse\022$\n\006header\030\001 "
-      "\001(\0132\024.pdpb.ResponseHeader\"\214\001\n\024ScatterReg"
-      "ionRequest\022#\n\006header\030\001 \001(\0132\023.pdpb.Reques"
-      "tHeader\022\021\n\tregion_id\030\002 \001(\004\022\036\n\006region\030\003 \001"
-      "(\0132\016.metapb.Region\022\034\n\006leader\030\004 \001(\0132\014.met"
-      "apb.Peer\"=\n\025ScatterRegionResponse\022$\n\006hea"
-      "der\030\001 \001(\0132\024.pdpb.ResponseHeader\"<\n\025GetGC"
-      "SafePointRequest\022#\n\006header\030\001 \001(\0132\023.pdpb."
-      "RequestHeader\"R\n\026GetGCSafePointResponse\022"
-      "$\n\006header\030\001 \001(\0132\024.pdpb.ResponseHeader\022\022\n"
-      "\nsafe_point\030\002 \001(\004\"S\n\030UpdateGCSafePointRe"
+      "eader\022\032\n\003ids\030\002 \003(\0132\r.pdpb.SplitID\"_\n\027Rep"
+      "ortBatchSplitRequest\022#\n\006header\030\001 \001(\0132\023.p"
+      "dpb.RequestHeader\022\037\n\007regions\030\002 \003(\0132\016.met"
+      "apb.Region\"@\n\030ReportBatchSplitResponse\022$"
+      "\n\006header\030\001 \001(\0132\024.pdpb.ResponseHeader\">\n\014"
+      "TimeInterval\022\027\n\017start_timestamp\030\001 \001(\004\022\025\n"
+      "\rend_timestamp\030\002 \001(\004\"\342\002\n\nStoreStats\022\020\n\010s"
+      "tore_id\030\001 \001(\004\022\020\n\010capacity\030\002 \001(\004\022\021\n\tavail"
+      "able\030\003 \001(\004\022\024\n\014region_count\030\004 \001(\r\022\032\n\022send"
+      "ing_snap_count\030\005 \001(\r\022\034\n\024receiving_snap_c"
+      "ount\030\006 \001(\r\022\022\n\nstart_time\030\007 \001(\r\022\033\n\023applyi"
+      "ng_snap_count\030\010 \001(\r\022\017\n\007is_busy\030\t \001(\010\022\021\n\t"
+      "used_size\030\n \001(\004\022\025\n\rbytes_written\030\013 \001(\004\022\024"
+      "\n\014keys_written\030\014 \001(\004\022\022\n\nbytes_read\030\r \001(\004"
+      "\022\021\n\tkeys_read\030\016 \001(\004\022$\n\010interval\030\017 \001(\0132\022."
+      "pdpb.TimeInterval\"]\n\025StoreHeartbeatReque"
+      "st\022#\n\006header\030\001 \001(\0132\023.pdpb.RequestHeader\022"
+      "\037\n\005stats\030\002 \001(\0132\020.pdpb.StoreStats\">\n\026Stor"
+      "eHeartbeatResponse\022$\n\006header\030\001 \001(\0132\024.pdp"
+      "b.ResponseHeader\"\214\001\n\024ScatterRegionReques"
+      "t\022#\n\006header\030\001 \001(\0132\023.pdpb.RequestHeader\022\021"
+      "\n\tregion_id\030\002 \001(\004\022\036\n\006region\030\003 \001(\0132\016.meta"
+      "pb.Region\022\034\n\006leader\030\004 \001(\0132\014.metapb.Peer\""
+      "=\n\025ScatterRegionResponse\022$\n\006header\030\001 \001(\013"
+      "2\024.pdpb.ResponseHeader\"<\n\025GetGCSafePoint"
+      "Request\022#\n\006header\030\001 \001(\0132\023.pdpb.RequestHe"
+      "ader\"R\n\026GetGCSafePointResponse\022$\n\006header"
+      "\030\001 \001(\0132\024.pdpb.ResponseHeader\022\022\n\nsafe_poi"
+      "nt\030\002 \001(\004\"S\n\030UpdateGCSafePointRequest\022#\n\006"
+      "header\030\001 \001(\0132\023.pdpb.RequestHeader\022\022\n\nsaf"
+      "e_point\030\002 \001(\004\"Y\n\031UpdateGCSafePointRespon"
+      "se\022$\n\006header\030\001 \001(\0132\024.pdpb.ResponseHeader"
+      "\022\026\n\016new_safe_point\030\002 \001(\004\"k\n\021SyncRegionRe"
       "quest\022#\n\006header\030\001 \001(\0132\023.pdpb.RequestHead"
-      "er\022\022\n\nsafe_point\030\002 \001(\004\"Y\n\031UpdateGCSafePo"
-      "intResponse\022$\n\006header\030\001 \001(\0132\024.pdpb.Respo"
-      "nseHeader\022\026\n\016new_safe_point\030\002 \001(\004\"k\n\021Syn"
-      "cRegionRequest\022#\n\006header\030\001 \001(\0132\023.pdpb.Re"
-      "questHeader\022\034\n\006member\030\002 \001(\0132\014.pdpb.Membe"
-      "r\022\023\n\013start_index\030\003 \001(\004\"p\n\022SyncRegionResp"
-      "onse\022$\n\006header\030\001 \001(\0132\024.pdpb.ResponseHead"
-      "er\022\037\n\007regions\030\002 \003(\0132\016.metapb.Region\022\023\n\013s"
-      "tart_index\030\003 \001(\004*\177\n\tErrorType\022\006\n\002OK\020\000\022\013\n"
-      "\007UNKNOWN\020\001\022\024\n\020NOT_BOOTSTRAPPED\020\002\022\023\n\017STOR"
-      "E_TOMBSTONE\020\003\022\030\n\024ALREADY_BOOTSTRAPPED\020\004\022"
-      "\030\n\024INCOMPATIBLE_VERSION\020\005*(\n\013CheckPolicy"
-      "\022\010\n\004SCAN\020\000\022\017\n\013APPROXIMATE\020\0012\205\r\n\002PD\022A\n\nGe"
-      "tMembers\022\027.pdpb.GetMembersRequest\032\030.pdpb"
-      ".GetMembersResponse\"\000\0220\n\003Tso\022\020.pdpb.TsoR"
-      "equest\032\021.pdpb.TsoResponse\"\000(\0010\001\022>\n\tBoots"
-      "trap\022\026.pdpb.BootstrapRequest\032\027.pdpb.Boot"
-      "strapResponse\"\000\022M\n\016IsBootstrapped\022\033.pdpb"
-      ".IsBootstrappedRequest\032\034.pdpb.IsBootstra"
-      "ppedResponse\"\000\0228\n\007AllocID\022\024.pdpb.AllocID"
-      "Request\032\025.pdpb.AllocIDResponse\"\000\022;\n\010GetS"
-      "tore\022\025.pdpb.GetStoreRequest\032\026.pdpb.GetSt"
-      "oreResponse\"\000\022;\n\010PutStore\022\025.pdpb.PutStor"
-      "eRequest\032\026.pdpb.PutStoreResponse\"\000\022G\n\014Ge"
-      "tAllStores\022\031.pdpb.GetAllStoresRequest\032\032."
-      "pdpb.GetAllStoresResponse\"\000\022M\n\016StoreHear"
-      "tbeat\022\033.pdpb.StoreHeartbeatRequest\032\034.pdp"
-      "b.StoreHeartbeatResponse\"\000\022T\n\017RegionHear"
-      "tbeat\022\034.pdpb.RegionHeartbeatRequest\032\035.pd"
-      "pb.RegionHeartbeatResponse\"\000(\0010\001\022>\n\tGetR"
-      "egion\022\026.pdpb.GetRegionRequest\032\027.pdpb.Get"
-      "RegionResponse\"\000\022B\n\rGetPrevRegion\022\026.pdpb"
-      ".GetRegionRequest\032\027.pdpb.GetRegionRespon"
-      "se\"\000\022F\n\rGetRegionByID\022\032.pdpb.GetRegionBy"
-      "IDRequest\032\027.pdpb.GetRegionResponse\"\000\022>\n\010"
-      "AskSplit\022\025.pdpb.AskSplitRequest\032\026.pdpb.A"
-      "skSplitResponse\"\003\210\002\001\022G\n\013ReportSplit\022\030.pd"
-      "pb.ReportSplitRequest\032\031.pdpb.ReportSplit"
-      "Response\"\003\210\002\001\022J\n\rAskBatchSplit\022\032.pdpb.As"
-      "kBatchSplitRequest\032\033.pdpb.AskBatchSplitR"
-      "esponse\"\000\022S\n\020ReportBatchSplit\022\035.pdpb.Rep"
-      "ortBatchSplitRequest\032\036.pdpb.ReportBatchS"
-      "plitResponse\"\000\022S\n\020GetClusterConfig\022\035.pdp"
-      "b.GetClusterConfigRequest\032\036.pdpb.GetClus"
-      "terConfigResponse\"\000\022S\n\020PutClusterConfig\022"
-      "\035.pdpb.PutClusterConfigRequest\032\036.pdpb.Pu"
-      "tClusterConfigResponse\"\000\022J\n\rScatterRegio"
-      "n\022\032.pdpb.ScatterRegionRequest\032\033.pdpb.Sca"
-      "tterRegionResponse\"\000\022M\n\016GetGCSafePoint\022\033"
-      ".pdpb.GetGCSafePointRequest\032\034.pdpb.GetGC"
-      "SafePointResponse\"\000\022V\n\021UpdateGCSafePoint"
-      "\022\036.pdpb.UpdateGCSafePointRequest\032\037.pdpb."
-      "UpdateGCSafePointResponse\"\000\022F\n\013SyncRegio"
-      "ns\022\027.pdpb.SyncRegionRequest\032\030.pdpb.SyncR"
-      "egionResponse\"\000(\0010\001B\022\n\020org.tikv.kvprotob"
-      "\006proto3"
+      "er\022\034\n\006member\030\002 \001(\0132\014.pdpb.Member\022\023\n\013star"
+      "t_index\030\003 \001(\004\"p\n\022SyncRegionResponse\022$\n\006h"
+      "eader\030\001 \001(\0132\024.pdpb.ResponseHeader\022\037\n\007reg"
+      "ions\030\002 \003(\0132\016.metapb.Region\022\023\n\013start_inde"
+      "x\030\003 \001(\004*\177\n\tErrorType\022\006\n\002OK\020\000\022\013\n\007UNKNOWN\020"
+      "\001\022\024\n\020NOT_BOOTSTRAPPED\020\002\022\023\n\017STORE_TOMBSTO"
+      "NE\020\003\022\030\n\024ALREADY_BOOTSTRAPPED\020\004\022\030\n\024INCOMP"
+      "ATIBLE_VERSION\020\005*(\n\013CheckPolicy\022\010\n\004SCAN\020"
+      "\000\022\017\n\013APPROXIMATE\020\0012\205\r\n\002PD\022A\n\nGetMembers\022"
+      "\027.pdpb.GetMembersRequest\032\030.pdpb.GetMembe"
+      "rsResponse\"\000\0220\n\003Tso\022\020.pdpb.TsoRequest\032\021."
+      "pdpb.TsoResponse\"\000(\0010\001\022>\n\tBootstrap\022\026.pd"
+      "pb.BootstrapRequest\032\027.pdpb.BootstrapResp"
+      "onse\"\000\022M\n\016IsBootstrapped\022\033.pdpb.IsBootst"
+      "rappedRequest\032\034.pdpb.IsBootstrappedRespo"
+      "nse\"\000\0228\n\007AllocID\022\024.pdpb.AllocIDRequest\032\025"
+      ".pdpb.AllocIDResponse\"\000\022;\n\010GetStore\022\025.pd"
+      "pb.GetStoreRequest\032\026.pdpb.GetStoreRespon"
+      "se\"\000\022;\n\010PutStore\022\025.pdpb.PutStoreRequest\032"
+      "\026.pdpb.PutStoreResponse\"\000\022G\n\014GetAllStore"
+      "s\022\031.pdpb.GetAllStoresRequest\032\032.pdpb.GetA"
+      "llStoresResponse\"\000\022M\n\016StoreHeartbeat\022\033.p"
+      "dpb.StoreHeartbeatRequest\032\034.pdpb.StoreHe"
+      "artbeatResponse\"\000\022T\n\017RegionHeartbeat\022\034.p"
+      "dpb.RegionHeartbeatRequest\032\035.pdpb.Region"
+      "HeartbeatResponse\"\000(\0010\001\022>\n\tGetRegion\022\026.p"
+      "dpb.GetRegionRequest\032\027.pdpb.GetRegionRes"
+      "ponse\"\000\022B\n\rGetPrevRegion\022\026.pdpb.GetRegio"
+      "nRequest\032\027.pdpb.GetRegionResponse\"\000\022F\n\rG"
+      "etRegionByID\022\032.pdpb.GetRegionByIDRequest"
+      "\032\027.pdpb.GetRegionResponse\"\000\022>\n\010AskSplit\022"
+      "\025.pdpb.AskSplitRequest\032\026.pdpb.AskSplitRe"
+      "sponse\"\003\210\002\001\022G\n\013ReportSplit\022\030.pdpb.Report"
+      "SplitRequest\032\031.pdpb.ReportSplitResponse\""
+      "\003\210\002\001\022J\n\rAskBatchSplit\022\032.pdpb.AskBatchSpl"
+      "itRequest\032\033.pdpb.AskBatchSplitResponse\"\000"
+      "\022S\n\020ReportBatchSplit\022\035.pdpb.ReportBatchS"
+      "plitRequest\032\036.pdpb.ReportBatchSplitRespo"
+      "nse\"\000\022S\n\020GetClusterConfig\022\035.pdpb.GetClus"
+      "terConfigRequest\032\036.pdpb.GetClusterConfig"
+      "Response\"\000\022S\n\020PutClusterConfig\022\035.pdpb.Pu"
+      "tClusterConfigRequest\032\036.pdpb.PutClusterC"
+      "onfigResponse\"\000\022J\n\rScatterRegion\022\032.pdpb."
+      "ScatterRegionRequest\032\033.pdpb.ScatterRegio"
+      "nResponse\"\000\022M\n\016GetGCSafePoint\022\033.pdpb.Get"
+      "GCSafePointRequest\032\034.pdpb.GetGCSafePoint"
+      "Response\"\000\022V\n\021UpdateGCSafePoint\022\036.pdpb.U"
+      "pdateGCSafePointRequest\032\037.pdpb.UpdateGCS"
+      "afePointResponse\"\000\022F\n\013SyncRegions\022\027.pdpb"
+      ".SyncRegionRequest\032\030.pdpb.SyncRegionResp"
+      "onse\"\000(\0010\001B\022\n\020org.tikv.kvprotob\006proto3"
   };
   ::google::protobuf::DescriptorPool::InternalAddGeneratedFile(
-      descriptor, 7247);
+      descriptor, 7278);
   ::google::protobuf::MessageFactory::InternalRegisterGeneratedFile(
     "pdpb.proto", &protobuf_RegisterTypes);
   ::protobuf_metapb_2eproto::AddDescriptors();
@@ -7782,10 +7783,14 @@ void GetRegionResponse::clear_leader() {
   }
   leader_ = NULL;
 }
+void GetRegionResponse::clear_slaves() {
+  slaves_.Clear();
+}
 #if !defined(_MSC_VER) || _MSC_VER >= 1900
 const int GetRegionResponse::kHeaderFieldNumber;
 const int GetRegionResponse::kRegionFieldNumber;
 const int GetRegionResponse::kLeaderFieldNumber;
+const int GetRegionResponse::kSlavesFieldNumber;
 #endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
 
 GetRegionResponse::GetRegionResponse()
@@ -7799,6 +7804,7 @@ GetRegionResponse::GetRegionResponse()
 GetRegionResponse::GetRegionResponse(const GetRegionResponse& from)
   : ::google::protobuf::Message(),
       _internal_metadata_(NULL),
+      slaves_(from.slaves_),
       _cached_size_(0) {
   _internal_metadata_.MergeFrom(from._internal_metadata_);
   if (from.has_header()) {
@@ -7866,6 +7872,7 @@ void GetRegionResponse::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
+  slaves_.Clear();
   if (GetArenaNoVirtual() == NULL && header_ != NULL) {
     delete header_;
   }
@@ -7927,6 +7934,17 @@ bool GetRegionResponse::MergePartialFromCodedStream(
         break;
       }
 
+      // repeated .metapb.Peer slaves = 4;
+      case 4: {
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(34u /* 34 & 0xFF */)) {
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(input, add_slaves()));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
       default: {
       handle_unusual:
         if (tag == 0) {
@@ -7971,6 +7989,13 @@ void GetRegionResponse::SerializeWithCachedSizes(
       3, *this->leader_, output);
   }
 
+  // repeated .metapb.Peer slaves = 4;
+  for (unsigned int i = 0,
+      n = static_cast<unsigned int>(this->slaves_size()); i < n; i++) {
+    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
+      4, this->slaves(static_cast<int>(i)), output);
+  }
+
   if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
     ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
         (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()), output);
@@ -8006,6 +8031,14 @@ void GetRegionResponse::SerializeWithCachedSizes(
         3, *this->leader_, deterministic, target);
   }
 
+  // repeated .metapb.Peer slaves = 4;
+  for (unsigned int i = 0,
+      n = static_cast<unsigned int>(this->slaves_size()); i < n; i++) {
+    target = ::google::protobuf::internal::WireFormatLite::
+      InternalWriteMessageToArray(
+        4, this->slaves(static_cast<int>(i)), deterministic, target);
+  }
+
   if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
     target = ::google::protobuf::internal::WireFormat::SerializeUnknownFieldsToArray(
         (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()), target);
@@ -8023,6 +8056,17 @@ size_t GetRegionResponse::ByteSizeLong() const {
       ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(
         (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()));
   }
+  // repeated .metapb.Peer slaves = 4;
+  {
+    unsigned int count = static_cast<unsigned int>(this->slaves_size());
+    total_size += 1UL * count;
+    for (unsigned int i = 0; i < count; i++) {
+      total_size +=
+        ::google::protobuf::internal::WireFormatLite::MessageSize(
+          this->slaves(static_cast<int>(i)));
+    }
+  }
+
   // .pdpb.ResponseHeader header = 1;
   if (this->has_header()) {
     total_size += 1 +
@@ -8073,6 +8117,7 @@ void GetRegionResponse::MergeFrom(const GetRegionResponse& from) {
   ::google::protobuf::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
+  slaves_.MergeFrom(from.slaves_);
   if (from.has_header()) {
     mutable_header()->::pdpb::ResponseHeader::MergeFrom(from.header());
   }
@@ -8108,6 +8153,7 @@ void GetRegionResponse::Swap(GetRegionResponse* other) {
 }
 void GetRegionResponse::InternalSwap(GetRegionResponse* other) {
   using std::swap;
+  slaves_.InternalSwap(&other->slaves_);
   swap(header_, other->header_);
   swap(region_, other->region_);
   swap(leader_, other->leader_);
