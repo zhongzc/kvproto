@@ -11,3 +11,7 @@ _vendor/pkg
 Cargo.lock
 .vscode
 _tools
+
+cpp/kvproto/*.h
+cpp/kvproto/*.cpp
+
