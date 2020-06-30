@@ -39,6 +39,8 @@ message Request {
 }
 
 message Response {
+    reserved 10; reserved "spans";
+
     bytes data = 1 [(gogoproto.customtype) = "github.com/pingcap/kvproto/pkg/sharedbytes.SharedBytes", (gogoproto.nullable) = false];
     errorpb.Error region_error = 2;
     kvrpcpb.LockInfo locked = 3;
@@ -49,7 +51,7 @@ message Response {
     bool is_cache_hit = 7;
     uint64 cache_last_version = 8;
     bool can_be_cached = 9;
-    repeated span.SpanSet spans = 10;
+    span.TraceDetail trace_detail = 11;
 }
 
 message RegionInfo {

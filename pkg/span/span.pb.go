@@ -22,6 +22,116 @@ var _ = math.Inf
 // proto package needs to be updated.
 const _ = proto.ProtoPackageIsVersion2 // please upgrade the proto package
 
+type TraceDetail struct {
+	SpanSets             []*SpanSet     `protobuf:"bytes,1,rep,name=span_sets,json=spanSets" json:"span_sets,omitempty"`
+	RemoteTraces         []*RemoteTrace `protobuf:"bytes,2,rep,name=remote_traces,json=remoteTraces" json:"remote_traces,omitempty"`
+	XXX_NoUnkeyedLiteral struct{}       `json:"-"`
+	XXX_unrecognized     []byte         `json:"-"`
+	XXX_sizecache        int32          `json:"-"`
+}
+
+func (m *TraceDetail) Reset()         { *m = TraceDetail{} }
+func (m *TraceDetail) String() string { return proto.CompactTextString(m) }
+func (*TraceDetail) ProtoMessage()    {}
+func (*TraceDetail) Descriptor() ([]byte, []int) {
+	return fileDescriptor_span_a2f353ab394d0140, []int{0}
+}
+func (m *TraceDetail) XXX_Unmarshal(b []byte) error {
+	return m.Unmarshal(b)
+}
+func (m *TraceDetail) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
+	if deterministic {
+		return xxx_messageInfo_TraceDetail.Marshal(b, m, deterministic)
+	} else {
+		b = b[:cap(b)]
+		n, err := m.MarshalTo(b)
+		if err != nil {
+			return nil, err
+		}
+		return b[:n], nil
+	}
+}
+func (dst *TraceDetail) XXX_Merge(src proto.Message) {
+	xxx_messageInfo_TraceDetail.Merge(dst, src)
+}
+func (m *TraceDetail) XXX_Size() int {
+	return m.Size()
+}
+func (m *TraceDetail) XXX_DiscardUnknown() {
+	xxx_messageInfo_TraceDetail.DiscardUnknown(m)
+}
+
+var xxx_messageInfo_TraceDetail proto.InternalMessageInfo
+
+func (m *TraceDetail) GetSpanSets() []*SpanSet {
+	if m != nil {
+		return m.SpanSets
+	}
+	return nil
+}
+
+func (m *TraceDetail) GetRemoteTraces() []*RemoteTrace {
+	if m != nil {
+		return m.RemoteTraces
+	}
+	return nil
+}
+
+type RemoteTrace struct {
+	LocalParentId        uint64       `protobuf:"varint,1,opt,name=local_parent_id,json=localParentId,proto3" json:"local_parent_id,omitempty"`
+	TraceDetail          *TraceDetail `protobuf:"bytes,2,opt,name=trace_detail,json=traceDetail" json:"trace_detail,omitempty"`
+	XXX_NoUnkeyedLiteral struct{}     `json:"-"`
+	XXX_unrecognized     []byte       `json:"-"`
+	XXX_sizecache        int32        `json:"-"`
+}
+
+func (m *RemoteTrace) Reset()         { *m = RemoteTrace{} }
+func (m *RemoteTrace) String() string { return proto.CompactTextString(m) }
+func (*RemoteTrace) ProtoMessage()    {}
+func (*RemoteTrace) Descriptor() ([]byte, []int) {
+	return fileDescriptor_span_a2f353ab394d0140, []int{1}
+}
+func (m *RemoteTrace) XXX_Unmarshal(b []byte) error {
+	return m.Unmarshal(b)
+}
+func (m *RemoteTrace) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
+	if deterministic {
+		return xxx_messageInfo_RemoteTrace.Marshal(b, m, deterministic)
+	} else {
+		b = b[:cap(b)]
+		n, err := m.MarshalTo(b)
+		if err != nil {
+			return nil, err
+		}
+		return b[:n], nil
+	}
+}
+func (dst *RemoteTrace) XXX_Merge(src proto.Message) {
+	xxx_messageInfo_RemoteTrace.Merge(dst, src)
+}
+func (m *RemoteTrace) XXX_Size() int {
+	return m.Size()
+}
+func (m *RemoteTrace) XXX_DiscardUnknown() {
+	xxx_messageInfo_RemoteTrace.DiscardUnknown(m)
+}
+
+var xxx_messageInfo_RemoteTrace proto.InternalMessageInfo
+
+func (m *RemoteTrace) GetLocalParentId() uint64 {
+	if m != nil {
+		return m.LocalParentId
+	}
+	return 0
+}
+
+func (m *RemoteTrace) GetTraceDetail() *TraceDetail {
+	if m != nil {
+		return m.TraceDetail
+	}
+	return nil
+}
+
 type SpanSet struct {
 	StartTimeNs          uint64   `protobuf:"varint,1,opt,name=start_time_ns,json=startTimeNs,proto3" json:"start_time_ns,omitempty"`
 	CyclesPerSec         uint64   `protobuf:"varint,2,opt,name=cycles_per_sec,json=cyclesPerSec,proto3" json:"cycles_per_sec,omitempty"`
@@ -36,7 +146,7 @@ func (m *SpanSet) Reset()         { *m = SpanSet{} }
 func (m *SpanSet) String() string { return proto.CompactTextString(m) }
 func (*SpanSet) ProtoMessage()    {}
 func (*SpanSet) Descriptor() ([]byte, []int) {
-	return fileDescriptor_span_65a1ec609e5ab604, []int{0}
+	return fileDescriptor_span_a2f353ab394d0140, []int{2}
 }
 func (m *SpanSet) XXX_Unmarshal(b []byte) error {
 	return m.Unmarshal(b)
@@ -103,7 +213,7 @@ func (m *Root) Reset()         { *m = Root{} }
 func (m *Root) String() string { return proto.CompactTextString(m) }
 func (*Root) ProtoMessage()    {}
 func (*Root) Descriptor() ([]byte, []int) {
-	return fileDescriptor_span_65a1ec609e5ab604, []int{1}
+	return fileDescriptor_span_a2f353ab394d0140, []int{3}
 }
 func (m *Root) XXX_Unmarshal(b []byte) error {
 	return m.Unmarshal(b)
@@ -143,7 +253,7 @@ func (m *Parent) Reset()         { *m = Parent{} }
 func (m *Parent) String() string { return proto.CompactTextString(m) }
 func (*Parent) ProtoMessage()    {}
 func (*Parent) Descriptor() ([]byte, []int) {
-	return fileDescriptor_span_65a1ec609e5ab604, []int{2}
+	return fileDescriptor_span_a2f353ab394d0140, []int{4}
 }
 func (m *Parent) XXX_Unmarshal(b []byte) error {
 	return m.Unmarshal(b)
@@ -190,7 +300,7 @@ func (m *Continue) Reset()         { *m = Continue{} }
 func (m *Continue) String() string { return proto.CompactTextString(m) }
 func (*Continue) ProtoMessage()    {}
 func (*Continue) Descriptor() ([]byte, []int) {
-	return fileDescriptor_span_65a1ec609e5ab604, []int{3}
+	return fileDescriptor_span_a2f353ab394d0140, []int{5}
 }
 func (m *Continue) XXX_Unmarshal(b []byte) error {
 	return m.Unmarshal(b)
@@ -241,7 +351,7 @@ func (m *Link) Reset()         { *m = Link{} }
 func (m *Link) String() string { return proto.CompactTextString(m) }
 func (*Link) ProtoMessage()    {}
 func (*Link) Descriptor() ([]byte, []int) {
-	return fileDescriptor_span_65a1ec609e5ab604, []int{4}
+	return fileDescriptor_span_a2f353ab394d0140, []int{6}
 }
 func (m *Link) XXX_Unmarshal(b []byte) error {
 	return m.Unmarshal(b)
@@ -426,7 +536,7 @@ func (m *Span) Reset()         { *m = Span{} }
 func (m *Span) String() string { return proto.CompactTextString(m) }
 func (*Span) ProtoMessage()    {}
 func (*Span) Descriptor() ([]byte, []int) {
-	return fileDescriptor_span_65a1ec609e5ab604, []int{5}
+	return fileDescriptor_span_a2f353ab394d0140, []int{7}
 }
 func (m *Span) XXX_Unmarshal(b []byte) error {
 	return m.Unmarshal(b)
@@ -491,6 +601,8 @@ func (m *Span) GetEvent() uint32 {
 }
 
 func init() {
+	proto.RegisterType((*TraceDetail)(nil), "span.TraceDetail")
+	proto.RegisterType((*RemoteTrace)(nil), "span.RemoteTrace")
 	proto.RegisterType((*SpanSet)(nil), "span.SpanSet")
 	proto.RegisterType((*Root)(nil), "span.Root")
 	proto.RegisterType((*Parent)(nil), "span.Parent")
@@ -498,6 +610,87 @@ func init() {
 	proto.RegisterType((*Link)(nil), "span.Link")
 	proto.RegisterType((*Span)(nil), "span.Span")
 }
+func (m *TraceDetail) Marshal() (dAtA []byte, err error) {
+	size := m.Size()
+	dAtA = make([]byte, size)
+	n, err := m.MarshalTo(dAtA)
+	if err != nil {
+		return nil, err
+	}
+	return dAtA[:n], nil
+}
+
+func (m *TraceDetail) MarshalTo(dAtA []byte) (int, error) {
+	var i int
+	_ = i
+	var l int
+	_ = l
+	if len(m.SpanSets) > 0 {
+		for _, msg := range m.SpanSets {
+			dAtA[i] = 0xa
+			i++
+			i = encodeVarintSpan(dAtA, i, uint64(msg.Size()))
+			n, err := msg.MarshalTo(dAtA[i:])
+			if err != nil {
+				return 0, err
+			}
+			i += n
+		}
+	}
+	if len(m.RemoteTraces) > 0 {
+		for _, msg := range m.RemoteTraces {
+			dAtA[i] = 0x12
+			i++
+			i = encodeVarintSpan(dAtA, i, uint64(msg.Size()))
+			n, err := msg.MarshalTo(dAtA[i:])
+			if err != nil {
+				return 0, err
+			}
+			i += n
+		}
+	}
+	if m.XXX_unrecognized != nil {
+		i += copy(dAtA[i:], m.XXX_unrecognized)
+	}
+	return i, nil
+}
+
+func (m *RemoteTrace) Marshal() (dAtA []byte, err error) {
+	size := m.Size()
+	dAtA = make([]byte, size)
+	n, err := m.MarshalTo(dAtA)
+	if err != nil {
+		return nil, err
+	}
+	return dAtA[:n], nil
+}
+
+func (m *RemoteTrace) MarshalTo(dAtA []byte) (int, error) {
+	var i int
+	_ = i
+	var l int
+	_ = l
+	if m.LocalParentId != 0 {
+		dAtA[i] = 0x8
+		i++
+		i = encodeVarintSpan(dAtA, i, uint64(m.LocalParentId))
+	}
+	if m.TraceDetail != nil {
+		dAtA[i] = 0x12
+		i++
+		i = encodeVarintSpan(dAtA, i, uint64(m.TraceDetail.Size()))
+		n1, err := m.TraceDetail.MarshalTo(dAtA[i:])
+		if err != nil {
+			return 0, err
+		}
+		i += n1
+	}
+	if m.XXX_unrecognized != nil {
+		i += copy(dAtA[i:], m.XXX_unrecognized)
+	}
+	return i, nil
+}
+
 func (m *SpanSet) Marshal() (dAtA []byte, err error) {
 	size := m.Size()
 	dAtA = make([]byte, size)
@@ -635,11 +828,11 @@ func (m *Link) MarshalTo(dAtA []byte) (int, error) {
 	var l int
 	_ = l
 	if m.Link != nil {
-		nn1, err := m.Link.MarshalTo(dAtA[i:])
+		nn2, err := m.Link.MarshalTo(dAtA[i:])
 		if err != nil {
 			return 0, err
 		}
-		i += nn1
+		i += nn2
 	}
 	if m.XXX_unrecognized != nil {
 		i += copy(dAtA[i:], m.XXX_unrecognized)
@@ -653,11 +846,11 @@ func (m *Link_Root) MarshalTo(dAtA []byte) (int, error) {
 		dAtA[i] = 0xa
 		i++
 		i = encodeVarintSpan(dAtA, i, uint64(m.Root.Size()))
-		n2, err := m.Root.MarshalTo(dAtA[i:])
+		n3, err := m.Root.MarshalTo(dAtA[i:])
 		if err != nil {
 			return 0, err
 		}
-		i += n2
+		i += n3
 	}
 	return i, nil
 }
@@ -667,11 +860,11 @@ func (m *Link_Parent) MarshalTo(dAtA []byte) (int, error) {
 		dAtA[i] = 0x12
 		i++
 		i = encodeVarintSpan(dAtA, i, uint64(m.Parent.Size()))
-		n3, err := m.Parent.MarshalTo(dAtA[i:])
+		n4, err := m.Parent.MarshalTo(dAtA[i:])
 		if err != nil {
 			return 0, err
 		}
-		i += n3
+		i += n4
 	}
 	return i, nil
 }
@@ -681,11 +874,11 @@ func (m *Link_Continue) MarshalTo(dAtA []byte) (int, error) {
 		dAtA[i] = 0x1a
 		i++
 		i = encodeVarintSpan(dAtA, i, uint64(m.Continue.Size()))
-		n4, err := m.Continue.MarshalTo(dAtA[i:])
+		n5, err := m.Continue.MarshalTo(dAtA[i:])
 		if err != nil {
 			return 0, err
 		}
-		i += n4
+		i += n5
 	}
 	return i, nil
 }
@@ -713,11 +906,11 @@ func (m *Span) MarshalTo(dAtA []byte) (int, error) {
 		dAtA[i] = 0x12
 		i++
 		i = encodeVarintSpan(dAtA, i, uint64(m.Link.Size()))
-		n5, err := m.Link.MarshalTo(dAtA[i:])
+		n6, err := m.Link.MarshalTo(dAtA[i:])
 		if err != nil {
 			return 0, err
 		}
-		i += n5
+		i += n6
 	}
 	if m.BeginCycles != 0 {
 		dAtA[i] = 0x18
@@ -749,6 +942,43 @@ func encodeVarintSpan(dAtA []byte, offset int, v uint64) int {
 	dAtA[offset] = uint8(v)
 	return offset + 1
 }
+func (m *TraceDetail) Size() (n int) {
+	var l int
+	_ = l
+	if len(m.SpanSets) > 0 {
+		for _, e := range m.SpanSets {
+			l = e.Size()
+			n += 1 + l + sovSpan(uint64(l))
+		}
+	}
+	if len(m.RemoteTraces) > 0 {
+		for _, e := range m.RemoteTraces {
+			l = e.Size()
+			n += 1 + l + sovSpan(uint64(l))
+		}
+	}
+	if m.XXX_unrecognized != nil {
+		n += len(m.XXX_unrecognized)
+	}
+	return n
+}
+
+func (m *RemoteTrace) Size() (n int) {
+	var l int
+	_ = l
+	if m.LocalParentId != 0 {
+		n += 1 + sovSpan(uint64(m.LocalParentId))
+	}
+	if m.TraceDetail != nil {
+		l = m.TraceDetail.Size()
+		n += 1 + l + sovSpan(uint64(l))
+	}
+	if m.XXX_unrecognized != nil {
+		n += len(m.XXX_unrecognized)
+	}
+	return n
+}
+
 func (m *SpanSet) Size() (n int) {
 	var l int
 	_ = l
@@ -882,6 +1112,222 @@ func sovSpan(x uint64) (n int) {
 }
 func sozSpan(x uint64) (n int) {
 	return sovSpan(uint64((x << 1) ^ uint64((int64(x) >> 63))))
+}
+func (m *TraceDetail) Unmarshal(dAtA []byte) error {
+	l := len(dAtA)
+	iNdEx := 0
+	for iNdEx < l {
+		preIndex := iNdEx
+		var wire uint64
+		for shift := uint(0); ; shift += 7 {
+			if shift >= 64 {
+				return ErrIntOverflowSpan
+			}
+			if iNdEx >= l {
+				return io.ErrUnexpectedEOF
+			}
+			b := dAtA[iNdEx]
+			iNdEx++
+			wire |= (uint64(b) & 0x7F) << shift
+			if b < 0x80 {
+				break
+			}
+		}
+		fieldNum := int32(wire >> 3)
+		wireType := int(wire & 0x7)
+		if wireType == 4 {
+			return fmt.Errorf("proto: TraceDetail: wiretype end group for non-group")
+		}
+		if fieldNum <= 0 {
+			return fmt.Errorf("proto: TraceDetail: illegal tag %d (wire type %d)", fieldNum, wire)
+		}
+		switch fieldNum {
+		case 1:
+			if wireType != 2 {
+				return fmt.Errorf("proto: wrong wireType = %d for field SpanSets", wireType)
+			}
+			var msglen int
+			for shift := uint(0); ; shift += 7 {
+				if shift >= 64 {
+					return ErrIntOverflowSpan
+				}
+				if iNdEx >= l {
+					return io.ErrUnexpectedEOF
+				}
+				b := dAtA[iNdEx]
+				iNdEx++
+				msglen |= (int(b) & 0x7F) << shift
+				if b < 0x80 {
+					break
+				}
+			}
+			if msglen < 0 {
+				return ErrInvalidLengthSpan
+			}
+			postIndex := iNdEx + msglen
+			if postIndex > l {
+				return io.ErrUnexpectedEOF
+			}
+			m.SpanSets = append(m.SpanSets, &SpanSet{})
+			if err := m.SpanSets[len(m.SpanSets)-1].Unmarshal(dAtA[iNdEx:postIndex]); err != nil {
+				return err
+			}
+			iNdEx = postIndex
+		case 2:
+			if wireType != 2 {
+				return fmt.Errorf("proto: wrong wireType = %d for field RemoteTraces", wireType)
+			}
+			var msglen int
+			for shift := uint(0); ; shift += 7 {
+				if shift >= 64 {
+					return ErrIntOverflowSpan
+				}
+				if iNdEx >= l {
+					return io.ErrUnexpectedEOF
+				}
+				b := dAtA[iNdEx]
+				iNdEx++
+				msglen |= (int(b) & 0x7F) << shift
+				if b < 0x80 {
+					break
+				}
+			}
+			if msglen < 0 {
+				return ErrInvalidLengthSpan
+			}
+			postIndex := iNdEx + msglen
+			if postIndex > l {
+				return io.ErrUnexpectedEOF
+			}
+			m.RemoteTraces = append(m.RemoteTraces, &RemoteTrace{})
+			if err := m.RemoteTraces[len(m.RemoteTraces)-1].Unmarshal(dAtA[iNdEx:postIndex]); err != nil {
+				return err
+			}
+			iNdEx = postIndex
+		default:
+			iNdEx = preIndex
+			skippy, err := skipSpan(dAtA[iNdEx:])
+			if err != nil {
+				return err
+			}
+			if skippy < 0 {
+				return ErrInvalidLengthSpan
+			}
+			if (iNdEx + skippy) > l {
+				return io.ErrUnexpectedEOF
+			}
+			m.XXX_unrecognized = append(m.XXX_unrecognized, dAtA[iNdEx:iNdEx+skippy]...)
+			iNdEx += skippy
+		}
+	}
+
+	if iNdEx > l {
+		return io.ErrUnexpectedEOF
+	}
+	return nil
+}
+func (m *RemoteTrace) Unmarshal(dAtA []byte) error {
+	l := len(dAtA)
+	iNdEx := 0
+	for iNdEx < l {
+		preIndex := iNdEx
+		var wire uint64
+		for shift := uint(0); ; shift += 7 {
+			if shift >= 64 {
+				return ErrIntOverflowSpan
+			}
+			if iNdEx >= l {
+				return io.ErrUnexpectedEOF
+			}
+			b := dAtA[iNdEx]
+			iNdEx++
+			wire |= (uint64(b) & 0x7F) << shift
+			if b < 0x80 {
+				break
+			}
+		}
+		fieldNum := int32(wire >> 3)
+		wireType := int(wire & 0x7)
+		if wireType == 4 {
+			return fmt.Errorf("proto: RemoteTrace: wiretype end group for non-group")
+		}
+		if fieldNum <= 0 {
+			return fmt.Errorf("proto: RemoteTrace: illegal tag %d (wire type %d)", fieldNum, wire)
+		}
+		switch fieldNum {
+		case 1:
+			if wireType != 0 {
+				return fmt.Errorf("proto: wrong wireType = %d for field LocalParentId", wireType)
+			}
+			m.LocalParentId = 0
+			for shift := uint(0); ; shift += 7 {
+				if shift >= 64 {
+					return ErrIntOverflowSpan
+				}
+				if iNdEx >= l {
+					return io.ErrUnexpectedEOF
+				}
+				b := dAtA[iNdEx]
+				iNdEx++
+				m.LocalParentId |= (uint64(b) & 0x7F) << shift
+				if b < 0x80 {
+					break
+				}
+			}
+		case 2:
+			if wireType != 2 {
+				return fmt.Errorf("proto: wrong wireType = %d for field TraceDetail", wireType)
+			}
+			var msglen int
+			for shift := uint(0); ; shift += 7 {
+				if shift >= 64 {
+					return ErrIntOverflowSpan
+				}
+				if iNdEx >= l {
+					return io.ErrUnexpectedEOF
+				}
+				b := dAtA[iNdEx]
+				iNdEx++
+				msglen |= (int(b) & 0x7F) << shift
+				if b < 0x80 {
+					break
+				}
+			}
+			if msglen < 0 {
+				return ErrInvalidLengthSpan
+			}
+			postIndex := iNdEx + msglen
+			if postIndex > l {
+				return io.ErrUnexpectedEOF
+			}
+			if m.TraceDetail == nil {
+				m.TraceDetail = &TraceDetail{}
+			}
+			if err := m.TraceDetail.Unmarshal(dAtA[iNdEx:postIndex]); err != nil {
+				return err
+			}
+			iNdEx = postIndex
+		default:
+			iNdEx = preIndex
+			skippy, err := skipSpan(dAtA[iNdEx:])
+			if err != nil {
+				return err
+			}
+			if skippy < 0 {
+				return ErrInvalidLengthSpan
+			}
+			if (iNdEx + skippy) > l {
+				return io.ErrUnexpectedEOF
+			}
+			m.XXX_unrecognized = append(m.XXX_unrecognized, dAtA[iNdEx:iNdEx+skippy]...)
+			iNdEx += skippy
+		}
+	}
+
+	if iNdEx > l {
+		return io.ErrUnexpectedEOF
+	}
+	return nil
 }
 func (m *SpanSet) Unmarshal(dAtA []byte) error {
 	l := len(dAtA)
@@ -1625,31 +2071,37 @@ var (
 	ErrIntOverflowSpan   = fmt.Errorf("proto: integer overflow")
 )
 
-func init() { proto.RegisterFile("span.proto", fileDescriptor_span_65a1ec609e5ab604) }
+func init() { proto.RegisterFile("span.proto", fileDescriptor_span_a2f353ab394d0140) }
 
-var fileDescriptor_span_65a1ec609e5ab604 = []byte{
-	// 354 bytes of a gzipped FileDescriptorProto
-	0x1f, 0x8b, 0x08, 0x00, 0x00, 0x00, 0x00, 0x00, 0x02, 0xff, 0x64, 0x92, 0xc1, 0x4a, 0xf3, 0x40,
-	0x14, 0x85, 0x33, 0xed, 0x34, 0x7f, 0xff, 0x9b, 0xb6, 0xc8, 0xe0, 0x22, 0x08, 0x86, 0x18, 0x44,
-	0xba, 0x90, 0x2e, 0xea, 0x1b, 0xb4, 0x9b, 0x2e, 0x44, 0xca, 0xd4, 0x7d, 0x48, 0x93, 0x8b, 0x0c,
-	0x6d, 0x27, 0x21, 0x19, 0x05, 0x5f, 0xc0, 0xa5, 0x6b, 0xc1, 0x17, 0x72, 0xe9, 0x23, 0x48, 0x7d,
-	0x11, 0xc9, 0x9d, 0x69, 0x17, 0xba, 0x4b, 0xce, 0x39, 0xdc, 0xef, 0xdc, 0xcb, 0x00, 0x34, 0x55,
-	0xa6, 0x27, 0x55, 0x5d, 0x9a, 0x52, 0xf0, 0xf6, 0x3b, 0x79, 0x67, 0xf0, 0x6f, 0x55, 0x65, 0x7a,
-	0x85, 0x46, 0x24, 0x30, 0x6c, 0x4c, 0x56, 0x9b, 0xd4, 0xa8, 0x1d, 0xa6, 0xba, 0x09, 0x59, 0xcc,
-	0xc6, 0x5c, 0x06, 0x24, 0xde, 0xab, 0x1d, 0xde, 0x35, 0xe2, 0x12, 0x46, 0xf9, 0x73, 0xbe, 0xc5,
-	0x26, 0xad, 0xb0, 0x4e, 0x1b, 0xcc, 0xc3, 0x0e, 0x85, 0x06, 0x56, 0x5d, 0x62, 0xbd, 0xc2, 0x5c,
-	0xc4, 0xd0, 0x6b, 0xa7, 0x37, 0x61, 0x37, 0xee, 0x8e, 0x83, 0x29, 0x4c, 0x88, 0xdb, 0x72, 0xa4,
-	0x35, 0x68, 0x4e, 0x8d, 0x99, 0xc1, 0x23, 0x8c, 0xbb, 0x39, 0xa4, 0x5a, 0x5a, 0xe2, 0x03, 0x97,
-	0x65, 0x69, 0x92, 0x10, 0xfc, 0x65, 0x56, 0xa3, 0x36, 0x62, 0x04, 0x1d, 0x55, 0xb8, 0x62, 0x1d,
-	0x55, 0x24, 0x67, 0xd0, 0x9f, 0x97, 0xda, 0x28, 0xfd, 0x88, 0x7f, 0xbc, 0x17, 0x06, 0xfc, 0x56,
-	0xe9, 0x8d, 0x88, 0x81, 0xd7, 0x65, 0x69, 0xc8, 0x3a, 0xb6, 0x69, 0x07, 0x2f, 0x3c, 0x49, 0x8e,
-	0xb8, 0x02, 0xbf, 0x22, 0x00, 0xad, 0x13, 0x4c, 0x07, 0x36, 0x63, 0xa1, 0x0b, 0x4f, 0x3a, 0x57,
-	0x5c, 0x43, 0x3f, 0x77, 0xb8, 0xb0, 0x4b, 0xc9, 0x91, 0x4d, 0x1e, 0x4a, 0x2c, 0x3c, 0x79, 0x4c,
-	0xcc, 0x7c, 0xe0, 0x5b, 0xa5, 0x37, 0xc9, 0x2b, 0x03, 0xde, 0x2e, 0xff, 0xbb, 0xa1, 0x88, 0x6c,
-	0xc0, 0x41, 0x5d, 0xb1, 0xb6, 0xb2, 0x24, 0x5d, 0x5c, 0xc0, 0x60, 0x8d, 0x0f, 0x4a, 0xa7, 0xf6,
-	0xba, 0x84, 0xe4, 0x32, 0x20, 0x6d, 0x4e, 0x92, 0x38, 0x07, 0x40, 0x5d, 0x1c, 0x02, 0xf6, 0x88,
-	0xff, 0x51, 0x17, 0xce, 0x3e, 0x85, 0x1e, 0x3e, 0xb5, 0x7b, 0xf5, 0x62, 0x36, 0x1e, 0x4a, 0xfb,
-	0x33, 0x3b, 0xf9, 0xd8, 0x47, 0xec, 0x73, 0x1f, 0xb1, 0xaf, 0x7d, 0xc4, 0xde, 0xbe, 0x23, 0x6f,
-	0xed, 0xd3, 0xa3, 0xb8, 0xf9, 0x09, 0x00, 0x00, 0xff, 0xff, 0xdb, 0x3d, 0xb9, 0x99, 0x22, 0x02,
-	0x00, 0x00,
+var fileDescriptor_span_a2f353ab394d0140 = []byte{
+	// 453 bytes of a gzipped FileDescriptorProto
+	0x1f, 0x8b, 0x08, 0x00, 0x00, 0x00, 0x00, 0x00, 0x02, 0xff, 0x64, 0x52, 0xd1, 0x8a, 0xd3, 0x40,
+	0x14, 0xed, 0xb4, 0xd3, 0xd8, 0xbd, 0x49, 0xaa, 0x0e, 0x3e, 0x04, 0xc1, 0x10, 0x83, 0x2c, 0x45,
+	0x64, 0x1f, 0x54, 0xfc, 0x80, 0x5d, 0x1f, 0x2a, 0x88, 0x2c, 0xd3, 0x7d, 0x1f, 0xb2, 0xc9, 0x45,
+	0x42, 0xd3, 0x49, 0x9c, 0x19, 0x05, 0x7f, 0xc0, 0x47, 0x9f, 0x05, 0x7f, 0xc8, 0x47, 0x3f, 0x41,
+	0xea, 0x8f, 0x48, 0xee, 0xcc, 0xb6, 0x8b, 0xfb, 0x36, 0xf7, 0x9c, 0x93, 0x7b, 0xce, 0x3d, 0x04,
+	0xc0, 0x0e, 0x95, 0x3e, 0x1b, 0x4c, 0xef, 0x7a, 0xc1, 0xc7, 0x77, 0xf9, 0x09, 0xe2, 0x2b, 0x53,
+	0xd5, 0xf8, 0x16, 0x5d, 0xd5, 0x76, 0xe2, 0x39, 0x9c, 0x8c, 0xb0, 0xb2, 0xe8, 0x6c, 0xc6, 0x8a,
+	0xd9, 0x2a, 0x7e, 0x99, 0x9e, 0xd1, 0x47, 0x9b, 0xa1, 0xd2, 0x1b, 0x74, 0x72, 0x61, 0xfd, 0xc3,
+	0x8a, 0x37, 0x90, 0x1a, 0xdc, 0xf5, 0x0e, 0x95, 0x1b, 0x37, 0xd8, 0x6c, 0x4a, 0xfa, 0x87, 0x5e,
+	0x2f, 0x89, 0xa2, 0xdd, 0x32, 0x31, 0xc7, 0xc1, 0x96, 0x5b, 0x88, 0x6f, 0x91, 0xe2, 0x14, 0xee,
+	0x77, 0x7d, 0x5d, 0x75, 0x6a, 0xa8, 0x0c, 0x6a, 0xa7, 0xda, 0x26, 0x63, 0x05, 0x5b, 0x71, 0x99,
+	0x12, 0x7c, 0x49, 0xe8, 0xbb, 0x46, 0xbc, 0x86, 0x84, 0x7c, 0x54, 0x43, 0x51, 0xb3, 0x69, 0xc1,
+	0x8e, 0x6e, 0xb7, 0x6e, 0x90, 0xb1, 0x3b, 0x0e, 0xe5, 0x4f, 0x06, 0xf7, 0x42, 0x74, 0x51, 0x42,
+	0x6a, 0x5d, 0x65, 0x9c, 0x72, 0xed, 0x0e, 0x95, 0xb6, 0xc1, 0x27, 0x26, 0xf0, 0xaa, 0xdd, 0xe1,
+	0x07, 0x2b, 0x9e, 0xc1, 0xb2, 0xfe, 0x5a, 0x77, 0x68, 0xd5, 0x80, 0x46, 0x59, 0xac, 0xc9, 0x87,
+	0xcb, 0xc4, 0xa3, 0x97, 0x68, 0x36, 0x58, 0x8b, 0x02, 0xe6, 0xa3, 0xad, 0xcd, 0x66, 0x74, 0x32,
+	0x1c, 0x2b, 0x92, 0x9e, 0xa0, 0x3d, 0x06, 0xab, 0xb1, 0x9c, 0x60, 0xc6, 0xc3, 0x1e, 0x42, 0xbd,
+	0x5b, 0x19, 0x01, 0x97, 0x7d, 0xef, 0xca, 0x0c, 0x22, 0x7f, 0xa7, 0x58, 0xc2, 0xf4, 0x50, 0xc0,
+	0xb4, 0x6d, 0xca, 0xc7, 0xb0, 0xb8, 0xe8, 0xb5, 0x6b, 0xf5, 0x67, 0xbc, 0xc3, 0x7d, 0x63, 0xc0,
+	0xdf, 0xb7, 0x7a, 0x2b, 0x0a, 0xe0, 0xa6, 0xef, 0x1d, 0x51, 0x87, 0x34, 0xe3, 0xe2, 0xf5, 0x44,
+	0x12, 0x23, 0x4e, 0x21, 0xf2, 0xf5, 0x86, 0xda, 0x12, 0xaf, 0xf1, 0xa6, 0xeb, 0x89, 0x0c, 0xac,
+	0x78, 0x01, 0x8b, 0x3a, 0xd8, 0x65, 0x33, 0x52, 0x2e, 0xbd, 0xf2, 0x26, 0xc4, 0x7a, 0x22, 0x0f,
+	0x8a, 0xf3, 0x08, 0x78, 0xd7, 0xea, 0x6d, 0xf9, 0x9d, 0x01, 0x1f, 0x8f, 0xff, 0x3f, 0xa1, 0xc8,
+	0xbd, 0x20, 0x98, 0x86, 0x60, 0x63, 0x64, 0x49, 0xb8, 0x78, 0x0a, 0xc9, 0x35, 0x7e, 0x6c, 0xb5,
+	0xf2, 0xed, 0x92, 0x25, 0x97, 0x31, 0x61, 0x17, 0x04, 0x89, 0x27, 0x00, 0xa8, 0x9b, 0x1b, 0x81,
+	0x2f, 0xf1, 0x04, 0x75, 0x13, 0xe8, 0x47, 0x30, 0xc7, 0x2f, 0xe3, 0x5d, 0xf3, 0x82, 0xad, 0x52,
+	0xe9, 0x87, 0xf3, 0x07, 0xbf, 0xf6, 0x39, 0xfb, 0xbd, 0xcf, 0xd9, 0x9f, 0x7d, 0xce, 0x7e, 0xfc,
+	0xcd, 0x27, 0xd7, 0x11, 0xfd, 0xf4, 0xaf, 0xfe, 0x05, 0x00, 0x00, 0xff, 0xff, 0x9f, 0xd2, 0xa0,
+	0xf9, 0x02, 0x03, 0x00, 0x00,
 }

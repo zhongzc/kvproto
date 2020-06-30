@@ -1,6 +1,16 @@
 syntax = "proto3";
 package span;
 
+message TraceDetail {
+	repeated SpanSet span_sets = 1;
+	repeated RemoteTrace remote_traces = 2;
+}
+
+message RemoteTrace {
+	uint64 local_parent_id = 1;
+	TraceDetail trace_detail = 2;
+}
+
 message SpanSet {
     uint64 start_time_ns = 1;
     uint64 cycles_per_sec = 2;
