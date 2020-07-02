@@ -5,6 +5,7 @@ import "metapb.proto";
 import "errorpb.proto";
 import "gogoproto/gogo.proto";
 import "rustproto.proto";
+// import "span.proto";
 
 option (gogoproto.marshaler_all) = true;
 option (gogoproto.sizer_all) = true;
@@ -36,6 +37,7 @@ message GetResponse {
     bytes value = 3;
     // True if the key does not exist in the database.
     bool not_found = 4;
+//    repeated span.SpanSet span_sets = 5;
 }
 
 // Scan fetches values for a range of keys; it is part of the transaction with
