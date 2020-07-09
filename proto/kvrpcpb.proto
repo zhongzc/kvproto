@@ -37,7 +37,7 @@ message GetResponse {
     bytes value = 3;
     // True if the key does not exist in the database.
     bool not_found = 4;
-    repeated span.SpanSet span_sets = 5;
+    bytes span_results = 6;
 }
 
 // Scan fetches values for a range of keys; it is part of the transaction with
