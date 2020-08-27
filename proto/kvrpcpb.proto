@@ -697,7 +697,8 @@ message MvccGetByStartTsResponse {
 message TraceContext {
     bool is_trace_enabled = 1;
     uint64 trace_id = 2;
-    uint64 parent_span_id = 3;
+    uint32 span_prefix = 3;
+    uint64 parent_span_id = 4;
 }
 
 // Helper messages.
