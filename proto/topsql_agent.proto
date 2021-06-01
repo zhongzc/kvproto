@@ -16,7 +16,7 @@ option java_package = "org.tikv.kvproto";
 // TopSQLAgent is the persistent agent service for TopSQL records
 service TopSQLAgent {
   // CollectTikv is called periodically (e.g. per minute) to save the in-memory TopSQL records
-  rpc CollectTikv(stream CPUTimeRequestTikv) returns (google.protobuf.Empty) {}
+  rpc CollectTikv(stream CPUTimeRequestTikv) returns (CPUTimeResponseTikv) {}
 }
 
 message CPUTimeRequestTikv {
@@ -24,3 +24,5 @@ message CPUTimeRequestTikv {
   repeated uint32 cpu_time_ms_list = 2;  // this can be greater than 1000 when counting concurrent running SQL queries
   bytes payload = 3;  // the specific encoding is opaque to tikv-server
 }
+
+message CPUTimeResponseTikv {}
