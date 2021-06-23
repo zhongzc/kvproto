@@ -1106,9 +1106,8 @@ message CheckLeaderResponse {
 
 message TraceContext {
     bool enable = 1;
-    uint32 span_id_prefix = 2;
-    uint64 trace_id = 3;
-    uint64 root_parent_span_id = 4;
+    uint64 trace_id = 2;
+    uint64 parent_span_id = 3;
 }
 
 message TraceDetail {
@@ -1117,11 +1116,8 @@ message TraceDetail {
     // SpanSet represents spans collected from one node.
     message SpanSet {
         NodeType node_type = 1;
-        uint32 span_id_prefix = 2;
-        uint64 trace_id = 3;
-        uint64 root_parent_span_id = 4;
-
-        repeated Span spans = 5;
+        uint64 trace_id = 2;
+        repeated Span spans = 3;
     }
 
     enum NodeType {
@@ -1133,8 +1129,8 @@ message TraceDetail {
     }
 
     message Span {
-        uint32 id = 1;
-        uint32 parent_id = 2;
+        uint64 id = 1;
+        uint64 parent_id = 2;
         uint64 begin_unix_time_ns = 3;
         uint64 duration_ns = 4;
         string event = 5;
